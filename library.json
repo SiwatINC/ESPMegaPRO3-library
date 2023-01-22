@@ -1,0 +1,28 @@
+{
+    "name": "ESPMegaPROR3",
+    "version": "1.0.0",
+    "description": "Hardware Library for Siwat INC ESPMegaPRO R3",
+    "keywords": "espmega,espmegapro",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/SiwatINC/ESPMegaPRO3-library"
+    },
+    "authors":
+    [
+      {
+        "name": "Siwat Sirichai",
+        "email": "siwat@siwatinc.com",
+        "url": "https://siwatinc.com",
+        "maintainer": true
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://siwatinc.com/",
+    "dependencies": {
+      "adafruit/Adafruit PWM Servo Driver Library": "^2.4.1",
+      "robtillaart/PCF8574": "^0.3.7"
+    },
+    "frameworks": "arduino",
+    "platforms": "espressif32"
+  }
