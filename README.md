@@ -1,1 +1,1 @@
-# ESPMegaPRO3-library
+#PlatformIO library for ESPMega PRO (R3)
