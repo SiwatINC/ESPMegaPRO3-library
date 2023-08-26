@@ -5,7 +5,7 @@ uint8_t inputBufferB;
 
 PCF8574 inputBankA(INPUT_BANK_A_ADDRESS);
 PCF8574 inputBankB(INPUT_BANK_B_ADDRESS);
-Adafruit_PWMServoDriver pwmBank = Adafruit_PWMServoDriver(0x5F);
+Adafruit_PWMServoDriver pwmBank = Adafruit_PWMServoDriver(PWM_BANK_ADDRESS);
 
 void ESPMega_begin()
 {
@@ -15,7 +15,13 @@ void ESPMega_begin()
     inputBankB.begin();
     pwmBank.begin();
 
+    // ESPMegaPRO v3 use the PWMBank to drive Half Bridge
+    // Push Pull Output is required.
+    pwmBank.setOutputMode(true); 
+
     #ifdef USE_INTERRUPT
+    pinMode(INPUT_BANK_A_INTERRUPT, INPUT_PULLUP);
+    pinMode(INPUT_BANK_B_INTERRUPT, INPUT_PULLUP);
     attachInterrupt(digitalPinToInterrupt(INPUT_BANK_A_INTERRUPT),refreshInputBankA,FALLING);
     attachInterrupt(digitalPinToInterrupt(INPUT_BANK_B_INTERRUPT),refreshInputBankB,FALLING);
     #endif

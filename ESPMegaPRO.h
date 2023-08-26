@@ -6,14 +6,15 @@
 #include <Adafruit_PWMServoDriver.h>
 #include <PCF8574.h>
 
-#define INPUT_BANK_A_ADDRESS 0x20
-#define INPUT_BANK_B_ADDRESS 0x21
+#define INPUT_BANK_A_ADDRESS 0x21
+#define INPUT_BANK_B_ADDRESS 0x22
+#define PWM_BANK_ADDRESS 0x5F
 #define OUTPUT_BANK_ADDRESS 0x21
 #define EEPROM_ADDRESS 0x22
 
 //#define USE_INTERRUPT
-//#define INPUT_BANK_A_INTERRUPT 35
-//#define INPUT_BANK_B_INTERRUPT 39
+#define INPUT_BANK_A_INTERRUPT 36
+#define INPUT_BANK_B_INTERRUPT 39
 
 /**
  * Initiate ESPMega PRO Internal Components
