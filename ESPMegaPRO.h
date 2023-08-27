@@ -1,16 +1,26 @@
 #ifndef ESPMEGA
 #define ESPMEGA
-
+#define ANALOG_CARD_ENABLE
 #include <Arduino.h>
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 #include <PCF8574.h>
+#ifdef ANALOG_CARD_ENABLE
+#include <Adafruit_ADS1X15.h>
+#include <MCP4725.h>
+#endif
 
 #define INPUT_BANK_A_ADDRESS 0x21
 #define INPUT_BANK_B_ADDRESS 0x22
 #define PWM_BANK_ADDRESS 0x5F
 #define OUTPUT_BANK_ADDRESS 0x21
 #define EEPROM_ADDRESS 0x22
+#define ANALOG_INPUT_BANK_A_ADDRESS 0x48
+#define ANALOG_INPUT_BANK_B_ADDRESS 0x49
+#define DAC0_ADDRESS 0x60
+#define DAC1_ADDRESS 0x61
+#define DAC2_ADDRESS 0x62
+#define DAC3_ADDRESS 0x63
 
 //#define USE_INTERRUPT
 #define INPUT_BANK_A_INTERRUPT 36
@@ -58,5 +68,23 @@ void ESPMega_analogWrite(int id, int value);
 void ESPMega_digitalWrite(int id, bool value);
 void IRAM_ATTR refreshInputBankA();
 void IRAM_ATTR refreshInputBankB();
+
+#ifdef ANALOG_CARD_ENABLE
+/**
+ * Read one of the ESPMega Analog Card's Analog Input pins (A0-A7)
+ * 
+ * @param id The number of the pin to be read
+ * @return The value of the pin (0-4095)
+*/
+int16_t ESPMega_analogRead(int id);
+/**
+ * Write a True Analog Signal to one of the ESPMega Analog Card's
+ * Analog Output pins (AO0-AO3)
+ * 
+ * @param id The number of the pin to write to
+ * @param value the analog value of the pin (0-4095)
+*/
+void ESPMega_dacWrite(int id, int value);
+#endif
 
 #endif
