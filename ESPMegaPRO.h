@@ -8,23 +8,28 @@
 #ifdef ANALOG_CARD_ENABLE
 #include <Adafruit_ADS1X15.h>
 #include <MCP4725.h>
+#include <I2C_eeprom.h>
+#include <SparkFunDS1307RTC.h>
 #endif
 
 #define INPUT_BANK_A_ADDRESS 0x21
 #define INPUT_BANK_B_ADDRESS 0x22
 #define PWM_BANK_ADDRESS 0x5F
-#define OUTPUT_BANK_ADDRESS 0x21
-#define EEPROM_ADDRESS 0x22
+#define RTC_ADDRESS 0x68
 #define ANALOG_INPUT_BANK_A_ADDRESS 0x48
 #define ANALOG_INPUT_BANK_B_ADDRESS 0x49
 #define DAC0_ADDRESS 0x60
 #define DAC1_ADDRESS 0x61
 #define DAC2_ADDRESS 0x62
 #define DAC3_ADDRESS 0x63
+#define EEPROM_ADDRESS 0x70
+
+#define ESPMega_RTC rtc
 
 //#define USE_INTERRUPT
 #define INPUT_BANK_A_INTERRUPT 36
 #define INPUT_BANK_B_INTERRUPT 39
+extern I2C_eeprom ESPMega_EEPROM;
 
 /**
  * Initiate ESPMega PRO Internal Components

@@ -6,6 +6,7 @@ uint8_t inputBufferB;
 PCF8574 inputBankA(INPUT_BANK_A_ADDRESS);
 PCF8574 inputBankB(INPUT_BANK_B_ADDRESS);
 Adafruit_PWMServoDriver pwmBank = Adafruit_PWMServoDriver(PWM_BANK_ADDRESS);
+I2C_eeprom ESPMega_EEPROM(EEPROM_ADDRESS);
 #ifdef ANALOG_CARD_ENABLE
 Adafruit_ADS1115 analogInputBankA;
 Adafruit_ADS1115 analogInputBankB;
@@ -18,11 +19,11 @@ MCP4725 DAC3(DAC3_ADDRESS);
 void ESPMega_begin()
 {
     Wire.begin(14, 33);
-
     inputBankA.begin();
     inputBankB.begin();
     pwmBank.begin();
-
+    ESPMega_RTC.begin();
+    ESPMega_EEPROM.begin();
     // ESPMegaPRO v3 use the PWMBank to drive Half Bridge
     // Push Pull Output is required.
     pwmBank.setOutputMode(true);
@@ -56,23 +57,28 @@ bool ESPMega_digitalRead(int id)
         refreshInputBankA(); // Only poll if interrupt is not enabled
 #endif
 
-        return ((inputBufferA >> id) & 1); // Extract bit from buffer
+        return ((inputBufferA >> (7 - id)) & 1); // Extract bit from buffer
     }
     if (id >= 8 && id <= 15)
     {
-        id -= 8;
 
 #ifndef USE_INTERRUPT
         refreshInputBankB(); // Only poll if interrupt is not enabled
 #endif
-
-        return ((inputBufferB >> id) & 1); // Extract bit from buffer
+        if (id >= 8 && id <= 11)
+            return ((inputBufferB >> (15 - id)) & 1); // Extract bit from buffer
+        else if (id >= 12 && id <= 15)
+            return ((inputBufferB >> (id - 12)) & 1);
     }
     return false;
 }
 
 void ESPMega_analogWrite(int id, int value)
 {
+    if (id >= 0 && id <= 7)
+        id += 8;
+    else if (id >= 8 && id <= 15)
+        id -= 8;
     pwmBank.setPin(id, value);
 }
 
@@ -98,12 +104,13 @@ void IRAM_ATTR refreshInputBankB()
 int16_t ESPMega_analogRead(int id)
 {
     if (id >= 0 && id <= 3)
-        return analogInputBankA.readADC_SingleEnded(3-id);
+        return analogInputBankA.readADC_SingleEnded(3 - id);
     else if (id >= 4 && id <= 7)
-        return analogInputBankB.readADC_SingleEnded(7-id);
+        return analogInputBankB.readADC_SingleEnded(7 - id);
     return 0;
 }
-void ESPMega_dacWrite(int id, int value) {
+void ESPMega_dacWrite(int id, int value)
+{
     switch (id)
     {
     case 0:
@@ -114,7 +121,7 @@ void ESPMega_dacWrite(int id, int value) {
         break;
     case 2:
         DAC2.setValue(value);
-        break;    
+        break;
     case 3:
         DAC3.setValue(value);
         break;
@@ -122,4 +129,25 @@ void ESPMega_dacWrite(int id, int value) {
         break;
     }
 }
+
+/* void ESPMega_rtcNTPUpdate()
+{
+    ntpTimeClient.update();
+    if (ntpTimeClient.updated())
+    {
+        int day = ntpTimeClient.getDay();
+        int month = ntpTimeClient.getMonth();
+        int year = ntpTimeClient.getYear();
+        int hours = ntpTimeClient.getHours();
+        int minutes = ntpTimeClient.getMinutes();
+        int seconds = ntpTimeClient.getSeconds();
+        ESPMega_RTC.setYear(year);
+        ESPMega_RTC.setMonth(month);
+        ESPMega_RTC.setDay(day);
+        ESPMega_RTC.setHour(hours);
+        ESPMega_RTC.setMinute(minutes);
+        ESPMega_RTC.setSecond(seconds);
+    }
+} */
+
 #endif
