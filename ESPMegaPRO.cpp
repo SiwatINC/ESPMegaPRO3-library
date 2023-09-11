@@ -6,7 +6,7 @@ uint8_t inputBufferB;
 PCF8574 inputBankA(INPUT_BANK_A_ADDRESS);
 PCF8574 inputBankB(INPUT_BANK_B_ADDRESS);
 Adafruit_PWMServoDriver pwmBank = Adafruit_PWMServoDriver(PWM_BANK_ADDRESS);
-I2C_eeprom ESPMega_EEPROM(EEPROM_ADDRESS);
+I2C_eeprom ESPMega_EEPROM(EEPROM_ADDRESS,I2C_DEVICESIZE_24LC512);
 #ifdef ANALOG_CARD_ENABLE
 Adafruit_ADS1115 analogInputBankA;
 Adafruit_ADS1115 analogInputBankB;

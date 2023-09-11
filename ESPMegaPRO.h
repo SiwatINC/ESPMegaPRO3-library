@@ -22,7 +22,7 @@
 #define DAC1_ADDRESS 0x61
 #define DAC2_ADDRESS 0x62
 #define DAC3_ADDRESS 0x63
-#define EEPROM_ADDRESS 0x70
+#define EEPROM_ADDRESS 0x5A
 
 #define ESPMega_RTC rtc
 
