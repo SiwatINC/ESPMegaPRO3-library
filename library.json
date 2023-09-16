@@ -1,6 +1,6 @@
 {
     "name": "ESPMegaPROR3",
-    "version": "1.1.7",
+    "version": "1.2.0",
     "description": "Hardware Library for Siwat INC ESPMegaPRO R3",
     "keywords": "espmega,espmegapro",
     "repository":
@@ -28,7 +28,8 @@
       "arduino-libraries/Arduino_BuiltIn": "^1.0.0",
       "SPI": "^2.0.0",
       "robtillaart/I2C_EEPROM": "^1.7.3",
-      "sparkfun/SparkFun DS1307 Real-Time Clock (RTC)": "^1.0.1"
+      "paulstoffregen/Time": "^1.6.1",
+      "paulstoffregen/DS1307RTC": "0.0.0-alpha+sha.c2590c0033"
     },
     "frameworks": "arduino",
     "platforms": "espressif32"
