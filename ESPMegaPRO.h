@@ -5,12 +5,13 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 #include <PCF8574.h>
-#ifdef ANALOG_CARD_ENABLE
-#include <Adafruit_ADS1X15.h>
-#include <MCP4725.h>
 #include <I2C_eeprom.h>
 #include <TimeLib.h>
 #include <DS1307RTC.h>
+#include <time.h>
+#ifdef ANALOG_CARD_ENABLE
+#include <Adafruit_ADS1X15.h>
+#include <MCP4725.h>
 #endif
 
 #define INPUT_BANK_A_ADDRESS 0x21
@@ -23,12 +24,13 @@
 #define DAC1_ADDRESS 0x61
 #define DAC2_ADDRESS 0x62
 #define DAC3_ADDRESS 0x63
-#define EEPROM_ADDRESS 0x70
+#define EEPROM_ADDRESS 0x5A
 
 //#define USE_INTERRUPT
 #define INPUT_BANK_A_INTERRUPT 36
 #define INPUT_BANK_B_INTERRUPT 39
 extern I2C_eeprom ESPMega_EEPROM;
+#define ESPMega_configNTP configTime
 struct rtctime_t {
     uint8_t hours;
     uint8_t minutes;
@@ -98,6 +100,14 @@ rtctime_t ESPMega_getTime();
  * @param year Years in AD
 */
 void ESPMega_setTime(int hours,int minutes, int seconds, int day, int month, int year);
+
+/**
+ * Update the onboard RTC's time
+ * by using time from the NTP server
+ * configured with ESPMega_configNTP();
+ * @return true when updated successfully.
+*/
+bool ESPMega_updateTimeFromNTP();
 
 #ifdef ANALOG_CARD_ENABLE
 /**

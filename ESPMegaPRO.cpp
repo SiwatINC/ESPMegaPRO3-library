@@ -100,7 +100,8 @@ void IRAM_ATTR refreshInputBankB()
     inputBufferB = inputBankB.read8();
 }
 
-rtctime_t ESPMega_getTime() {
+rtctime_t ESPMega_getTime()
+{
     tmElements_t timeElement;
     RTC.read(timeElement);
     rtctime_t time;
@@ -109,18 +110,19 @@ rtctime_t ESPMega_getTime() {
     time.seconds = timeElement.Second;
     time.day = timeElement.Day;
     time.month = timeElement.Month;
-    time.year = timeElement.Year+1970;
+    time.year = timeElement.Year + 1970;
     return time;
 }
 
-void ESPMega_setTime(int hours,int minutes, int seconds, int day, int month, int year) {
+void ESPMega_setTime(int hours, int minutes, int seconds, int day, int month, int year)
+{
     tmElements_t timeElement;
     timeElement.Hour = hours;
     timeElement.Minute = minutes;
     timeElement.Second = seconds;
     timeElement.Day = day;
     timeElement.Month = month;
-    timeElement.Year = year-1970;
+    timeElement.Year = year - 1970;
     RTC.write(timeElement);
 }
 
@@ -154,24 +156,23 @@ void ESPMega_dacWrite(int id, int value)
     }
 }
 
-/* void ESPMega_rtcNTPUpdate()
+bool ESPMega_updateTimeFromNTP()
 {
-    ntpTimeClient.update();
-    if (ntpTimeClient.updated())
+    struct tm timeinfo;
+    if (getLocalTime(&timeinfo))
     {
-        int day = ntpTimeClient.getDay();
-        int month = ntpTimeClient.getMonth();
-        int year = ntpTimeClient.getYear();
-        int hours = ntpTimeClient.getHours();
-        int minutes = ntpTimeClient.getMinutes();
-        int seconds = ntpTimeClient.getSeconds();
-        ESPMega_RTC.setYear(year);
-        ESPMega_RTC.setMonth(month);
-        ESPMega_RTC.setDay(day);
-        ESPMega_RTC.setHour(hours);
-        ESPMega_RTC.setMinute(minutes);
-        ESPMega_RTC.setSecond(seconds);
+        rtctime_t rtctime = ESPMega_getTime();
+        if (rtctime.hours != timeinfo.tm_hour || rtctime.minutes != timeinfo.tm_min ||
+            rtctime.seconds != timeinfo.tm_sec || rtctime.day != timeinfo.tm_mday ||
+            rtctime.month != timeinfo.tm_mon + 1 || rtctime.year != timeinfo.tm_year + 1900)
+        {
+            ESPMega_setTime(timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec,
+                            timeinfo.tm_mday, timeinfo.tm_mon + 1, timeinfo.tm_year + 1900);
+            
+        }
+        return true;
     }
-} */
+    return false;
+}
 
 #endif
