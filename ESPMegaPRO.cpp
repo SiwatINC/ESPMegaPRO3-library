@@ -6,7 +6,8 @@ uint8_t inputBufferB;
 PCF8574 inputBankA(INPUT_BANK_A_ADDRESS);
 PCF8574 inputBankB(INPUT_BANK_B_ADDRESS);
 Adafruit_PWMServoDriver pwmBank = Adafruit_PWMServoDriver(PWM_BANK_ADDRESS);
-I2C_eeprom ESPMega_EEPROM(EEPROM_ADDRESS,I2C_DEVICESIZE_24LC512);
+I2C_eeprom ESPMega_EEPROM(EEPROM_ADDRESS);
+
 #ifdef ANALOG_CARD_ENABLE
 Adafruit_ADS1115 analogInputBankA;
 Adafruit_ADS1115 analogInputBankB;
@@ -22,7 +23,6 @@ void ESPMega_begin()
     inputBankA.begin();
     inputBankB.begin();
     pwmBank.begin();
-    ESPMega_RTC.begin();
     ESPMega_EEPROM.begin();
     // ESPMegaPRO v3 use the PWMBank to drive Half Bridge
     // Push Pull Output is required.
@@ -98,6 +98,30 @@ void IRAM_ATTR refreshInputBankA()
 void IRAM_ATTR refreshInputBankB()
 {
     inputBufferB = inputBankB.read8();
+}
+
+rtctime_t ESPMega_getTime() {
+    tmElements_t timeElement;
+    RTC.read(timeElement);
+    rtctime_t time;
+    time.hours = timeElement.Hour;
+    time.minutes = timeElement.Minute;
+    time.seconds = timeElement.Second;
+    time.day = timeElement.Day;
+    time.month = timeElement.Month;
+    time.year = timeElement.Year+1970;
+    return time;
+}
+
+void ESPMega_setTime(int hours,int minutes, int seconds, int day, int month, int year) {
+    tmElements_t timeElement;
+    timeElement.Hour = hours;
+    timeElement.Minute = minutes;
+    timeElement.Second = seconds;
+    timeElement.Day = day;
+    timeElement.Month = month;
+    timeElement.Year = year-1970;
+    RTC.write(timeElement);
 }
 
 #ifdef ANALOG_CARD_ENABLE

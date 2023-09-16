@@ -9,7 +9,8 @@
 #include <Adafruit_ADS1X15.h>
 #include <MCP4725.h>
 #include <I2C_eeprom.h>
-#include <SparkFunDS1307RTC.h>
+#include <TimeLib.h>
+#include <DS1307RTC.h>
 #endif
 
 #define INPUT_BANK_A_ADDRESS 0x21
@@ -22,14 +23,20 @@
 #define DAC1_ADDRESS 0x61
 #define DAC2_ADDRESS 0x62
 #define DAC3_ADDRESS 0x63
-#define EEPROM_ADDRESS 0x5A
-
-#define ESPMega_RTC rtc
+#define EEPROM_ADDRESS 0x70
 
 //#define USE_INTERRUPT
 #define INPUT_BANK_A_INTERRUPT 36
 #define INPUT_BANK_B_INTERRUPT 39
 extern I2C_eeprom ESPMega_EEPROM;
+struct rtctime_t {
+    uint8_t hours;
+    uint8_t minutes;
+    uint8_t seconds;
+    uint8_t day;
+    uint8_t month;
+    uint16_t year;
+};
 
 /**
  * Initiate ESPMega PRO Internal Components
@@ -73,6 +80,24 @@ void ESPMega_analogWrite(int id, int value);
 void ESPMega_digitalWrite(int id, bool value);
 void IRAM_ATTR refreshInputBankA();
 void IRAM_ATTR refreshInputBankB();
+
+/**
+ * Get time from the onboard RTC as a struct
+ * 
+ * @return Time Element Struct
+*/
+rtctime_t ESPMega_getTime();
+/**
+ * Set the onboard RTC's time
+ * 
+ * @param hours
+ * @param minutes
+ * @param seconds
+ * @param day Day of the month
+ * @param month Month in numerical form
+ * @param year Years in AD
+*/
+void ESPMega_setTime(int hours,int minutes, int seconds, int day, int month, int year);
 
 #ifdef ANALOG_CARD_ENABLE
 /**
