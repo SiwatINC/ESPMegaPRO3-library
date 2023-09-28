@@ -5,7 +5,7 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 #include <PCF8574.h>
-#include <I2C_eeprom.h>
+#include <FRAM.h>
 #include <TimeLib.h>
 #include <DS1307RTC.h>
 #include <time.h>
@@ -24,12 +24,12 @@
 #define DAC1_ADDRESS 0x61
 #define DAC2_ADDRESS 0x62
 #define DAC3_ADDRESS 0x63
-#define EEPROM_ADDRESS 0x5A
+#define FRAM_ADDRESS 0x56
 
 //#define USE_INTERRUPT
 #define INPUT_BANK_A_INTERRUPT 36
 #define INPUT_BANK_B_INTERRUPT 39
-extern I2C_eeprom ESPMega_EEPROM;
+extern FRAM ESPMega_FRAM;
 #define ESPMega_configNTP configTime
 struct rtctime_t {
     uint8_t hours;
