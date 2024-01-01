@@ -1,0 +1,176 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<form method="POST" action="#" enctype="multipart/form-data" id="upload_form">
+  <h1>ESPMega PRO</h1>
+  <h3>Device Information</h3>
+  <p style="text-align: left">
+    Hostname
+    <span style="float: right">$(hostname)$</span>
+  </p>
+  <p style="text-align: left">
+    IP Address
+    <span style="float: right">$(ip_address)$</span>
+  </p>
+  <p style="text-align: left">
+    MAC Address
+    <span style="float: right">$(mac_address)$</span>
+  </p>
+  <p style="text-align: left">
+    Device
+    <span style="float: right">$(model)$</span>
+  </p>
+  <p style="text-align: left">
+    API Server
+    <span style="float: right">$(mqtt_connection_string)$</span>
+  </p>
+  <p style="text-align: left">
+    API Endpoint
+    <span style="float: right">$(base_topic)$</span>
+  </p>
+  <p style="text-align: left">
+    Centrally Managed
+    <span style="float: right">$(mqtt_connected)$</span>
+  </p>
+  <button type="button" class="conf" onclick="window.location.href='config'">Settings</button><br /><br />
+  <hr>
+  <h3>Upload Software Package</h3>
+  <input type="file" name="update" id="file" onchange="sub(this)" style="display: none" />
+  <label id="file-input" for="file">Choose file...</label>
+  <input type="submit" class="btn" value="Program" /><br /><br />
+  <div id="prg"></div>
+  <br />
+  <div id="prgbar">
+    <div id="bar"></div>
+  </div>
+  <br />
+  <b>SIWAT SYSTEM 2023</b>
+</form>
+<script>
+  function sub(obj) {
+    var fileName = obj.value.split("\\");
+    document.getElementById("file-input").innerHTML =
+      "   " + fileName[fileName.length - 1];
+  }
+  $("form").submit(function (e) {
+    e.preventDefault();
+    var form = $("#upload_form")[0];
+    var data = new FormData(form);
+    $.ajax({
+      url: "/ota_update",
+      type: "POST",
+      data: data,
+      contentType: false,
+      processData: false,
+      xhr: function () {
+        var xhr = new window.XMLHttpRequest();
+        xhr.upload.addEventListener(
+          "progress",
+          function (evt) {
+            if (evt.lengthComputable) {
+              var per = evt.loaded / evt.total;
+              if (Math.round(per * 100) < 100) {
+                $("#prg").html("Updating . . . (" + Math.round(per * 100) + "%)");
+              }
+              else {
+                $("#prg").html("Update Completed, Rebooting . . .");
+              }
+              $("#bar").css("width", Math.round(per * 100) + "%");
+            }
+          },
+          false
+        );
+        return xhr;
+      },
+      success: function (d, s) {
+        console.log("success!");
+      },
+      error: function (a, b, c) { },
+    });
+  });
+</script>
+<style>
+  hr {
+    display: block;
+    color: #aaaaaa;
+    background-color: #aaaaaa;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 0px;
+    height: 3px;
+  }
+
+  #file-input,
+  input {
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    margin: 10px auto;
+    font-size: 15px;
+  }
+
+  input {
+    background: #f1f1f1;
+    border: 0;
+    padding: 0 15px;
+  }
+
+  body {
+    background-image: url("https://fs.siwatsystem.com/arona_bg.png");
+    background-size: cover;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #777;
+  }
+
+  #file-input {
+    background-color: #CCCCCC;
+    color: #5E5E5E;
+    padding: 0;
+    border: 1px solid #ddd;
+    line-height: 44px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+  }
+
+  #bar,
+  #prgbar {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+  }
+
+  #bar {
+    background-color: #29CD1F;
+    width: 0%;
+    height: 10px;
+  }
+
+  form {
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 258px;
+    margin: 75px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .btn {
+    background: #CA3D3D;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .conf {
+    background: #417df3;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    margin: 10px auto;
+    font-size: 15px;
+    border: 0;
+  }
+</style>
