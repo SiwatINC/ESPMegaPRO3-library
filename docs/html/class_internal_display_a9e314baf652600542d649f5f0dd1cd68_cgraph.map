@@ -1,0 +1,6 @@
+<map id="InternalDisplay::bindInputCard" name="InternalDisplay::bindInputCard">
+<area shape="rect" id="node1" title="Set the input card to be be shown on the input page." alt="" coords="5,42,224,69"/>
+<area shape="rect" id="node2" href="$class_digital_input_card.html#a0de99f06d2d41a752026486008ea2261" title="Register a callback function to be called when a pin changes." alt="" coords="296,5,483,47"/>
+<area shape="rect" id="node3" href="$class_internal_display.html#a9ee706c80f56dd8e5088f282c467b146" title="Unbind the input card from the display." alt="" coords="272,71,507,98"/>
+<area shape="rect" id="node4" href="$class_digital_input_card.html#ad6fb5a8020c323520cd4748c9dc01448" title="Unregister a callback function." alt="" coords="555,64,757,105"/>
+</map>

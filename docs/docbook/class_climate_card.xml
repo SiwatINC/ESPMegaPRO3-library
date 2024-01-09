@@ -1,0 +1,978 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_climate_card" xml:lang="en-US">
+<title>ClimateCard Class Reference</title>
+<indexterm><primary>ClimateCard</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_climate_card">ClimateCard</link> class is a class for controlling an air conditioner. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ClimateCard.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for ClimateCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ClimateCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_climate_card_1a4abb72ecf8f3c175130155a248822ab5">ClimateCard</link> (uint8_t ir_pin, <link linkend="_struct_air_conditioner">AirConditioner</link> ac, uint8_t sensor_type, uint8_t sensor_pin)</para>
+
+<para>Construct a new <link linkend="_class_climate_card">ClimateCard</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_class_climate_card_1a9b4b6fd707c9f507243f0d5dc5b3d854">ClimateCard</link> (uint8_t ir_pin, <link linkend="_struct_air_conditioner">AirConditioner</link> ac)</para>
+
+<para>Construct a new <link linkend="_class_climate_card">ClimateCard</link> object. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_card_1a25ee785ee45b87262a3af07cae01023e"/><link linkend="_class_climate_card_1a25ee785ee45b87262a3af07cae01023e">~ClimateCard</link> ()</para>
+
+<para>The destructor of the <link linkend="_class_climate_card">ClimateCard</link> class. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_climate_card_1aa0649398f58b7093250875c1202711fc">begin</link> ()</para>
+
+<para>Initialize the <link linkend="_class_climate_card">ClimateCard</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8">loop</link> ()</para>
+
+<para>Loop function of the <link linkend="_class_climate_card">ClimateCard</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1a87ce688cdf3b1acd7526968d599b5422">bindFRAM</link> (FRAM *fram, uint16_t fram_address)</para>
+
+<para>bind FRAM memory to the <link linkend="_class_climate_card">ClimateCard</link> object at the specified address. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1aa00bb77607d324938e83a0527344e4ef">setFRAMAutoSave</link> (bool autoSave)</para>
+
+<para>Set whether the state should be automatically saved to FRAM memory. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0">saveStateToFRAM</link> ()</para>
+
+<para>Save the state to FRAM memory. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1a09f550e371c3836bee9e01bf795e7557">loadStateFromFRAM</link> ()</para>
+
+<para>Load the state from FRAM memory. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1afb279e4b037b42d6056a1a224548511c">setTemperature</link> (uint8_t temperature)</para>
+
+<para>Set the temperature of the air conditioner. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_climate_card_1a0877f36123ed2fdfe41677bdbac320be">getTemperature</link> ()</para>
+
+<para>Get the temperature of the air conditioner. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d">setMode</link> (uint8_t mode)</para>
+
+<para>Set the mode of the air conditioner. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6">setModeByName</link> (const char *mode_name)</para>
+
+<para>Set mode by name. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_climate_card_1a8a9c0eb63c2e92a01fc39715c1876509">getMode</link> ()</para>
+
+<para>Get the mode of the air conditioner. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_class_climate_card_1a4eae69055d00724777be2b70ea99a6f3">getModeName</link> ()</para>
+
+<para>Get the name of the current mode. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1af3649bf5137e950b16073da4ae266a5b">setFanSpeed</link> (uint8_t fan_speed)</para>
+
+<para>Set the fan speed of the air conditioner. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1a745658695c2ad4aac7be116ddba8bee7">setFanSpeedByName</link> (const char *fan_speed_name)</para>
+
+<para>Set fan speed by name. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_climate_card_1a119c0d4369efb88eab7c99f45b7a62af">getFanSpeed</link> ()</para>
+
+<para>Get the fan speed of the air conditioner. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356">getFanSpeedName</link> ()</para>
+
+<para>Get the name of the current fan speed. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df">getRoomTemperature</link> ()</para>
+
+<para>Get the room temperature in degrees Celsius. </para>
+</listitem>
+            <listitem><para>float <link linkend="_class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185">getHumidity</link> ()</para>
+
+<para>Get the humidity in percent. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b">getSensorType</link> ()</para>
+
+<para>Get the type of the sensor connected to the card. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_climate_card_1a2b15582430d577bfa8f07983c5ecaf22">registerChangeCallback</link> (std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; callback)</para>
+
+<para>Register a callback function that will be called when the state of the air conditioner changes. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_climate_card_1ab95d86d1fc8f2d1f19324f1161afbcaf">registerSensorCallback</link> (std::function&lt; void(float, float)&gt; callback)</para>
+
+<para>Register a callback function that will be called when the sensor data changes. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1a15d887d1b211d461edd0835d0104f7c7">unregisterChangeCallback</link> (uint8_t handler)</para>
+
+<para>Unregister a callback function. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_card_1a13d422d72f933de45cde16477de623ad">unregisterSensorCallback</link> (uint8_t handler)</para>
+
+<para>Unregister a sensor callback function. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_climate_card_1a651b1cbd6da6281cfba68e5852e9a597">getType</link> ()</para>
+
+<para>Get the type of the card. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_climate_card">ClimateCard</link> class is a class for controlling an air conditioner. </para>
+
+
+
+<para>This class allows you to control an air conditioner using an IR LED. It is meant to be used with the ESPMega Climate Card.</para>
+
+<para><note><title>Note</title>
+
+<para>You can also use a DHT22 or DS18B20 temperature sensor to get the room temperature (and humidity if using a DHT22). Although, this is optional. </para>
+</note>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_climate_card_1a4abb72ecf8f3c175130155a248822ab5"/>    <section>
+    <title>ClimateCard()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ClimateCard</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>ClimateCard</secondary></indexterm>
+<para><computeroutput>ClimateCard::ClimateCard (uint8_t ir_pin, <link linkend="_struct_air_conditioner">AirConditioner</link> ac, uint8_t sensor_type, uint8_t sensor_pin)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_climate_card">ClimateCard</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ir_pin</entry>
+                                <entry>
+<para>The GPIO pin number of the IR transmitter. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>ac</entry>
+                                <entry>
+<para>The <link linkend="_struct_air_conditioner">AirConditioner</link> object that represents the air conditioner. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sensor_type</entry>
+                                <entry>
+<para>The type of the sensor connected to the card. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>sensor_pin</entry>
+                                <entry>
+<para>The GPIO pin number of the sensor. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_climate_card_1a9b4b6fd707c9f507243f0d5dc5b3d854"/>    <section>
+    <title>ClimateCard()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ClimateCard</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>ClimateCard</secondary></indexterm>
+<para><computeroutput>ClimateCard::ClimateCard (uint8_t ir_pin, <link linkend="_struct_air_conditioner">AirConditioner</link> ac)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_climate_card">ClimateCard</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ir_pin</entry>
+                                <entry>
+<para>The GPIO pin number of the IR transmitter. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>ac</entry>
+                                <entry>
+<para>The <link linkend="_struct_air_conditioner">AirConditioner</link> object that represents the air conditioner.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This constructor can be used when no sensor is connected to the card. </para>
+</note>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_climate_card_1aa0649398f58b7093250875c1202711fc"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool ClimateCard::begin ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initialize the <link linkend="_class_climate_card">ClimateCard</link> object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true if initialization was successful. </para>
+
+<para>false if initialization failed. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_climate_card_1a87ce688cdf3b1acd7526968d599b5422"/>    <section>
+    <title>bindFRAM()</title>
+<indexterm><primary>bindFRAM</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>bindFRAM</secondary></indexterm>
+<para><computeroutput>void ClimateCard::bindFRAM (FRAM * fram, uint16_t fram_address)</computeroutput></para><para>
+
+<para>bind FRAM memory to the <link linkend="_class_climate_card">ClimateCard</link> object at the specified address. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function must be called before calling <link linkend="_class_climate_card_1a09f550e371c3836bee9e01bf795e7557">loadStateFromFRAM()</link> or <link linkend="_class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0">saveStateToFRAM()</link>. </para>
+
+<para>This card takes up 3 bytes of FRAM memory.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fram</entry>
+                                <entry>
+<para>The FRAM object. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>fram_address</entry>
+                                <entry>
+<para>The starting address of the card in FRAM memory. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_climate_card_1a119c0d4369efb88eab7c99f45b7a62af"/>    <section>
+    <title>getFanSpeed()</title>
+<indexterm><primary>getFanSpeed</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getFanSpeed</secondary></indexterm>
+<para><computeroutput>uint8_t ClimateCard::getFanSpeed ( )</computeroutput></para><para>
+
+<para>Get the fan speed of the air conditioner. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The fan speed of the air conditioner. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356"/>    <section>
+    <title>getFanSpeedName()</title>
+<indexterm><primary>getFanSpeedName</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getFanSpeedName</secondary></indexterm>
+<para><computeroutput>char * ClimateCard::getFanSpeedName ( )</computeroutput></para><para>
+
+<para>Get the name of the current fan speed. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The name of the current fan speed. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_ab300cdd889f3fc7bd9bc03857d137356_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185"/>    <section>
+    <title>getHumidity()</title>
+<indexterm><primary>getHumidity</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getHumidity</secondary></indexterm>
+<para><computeroutput>float ClimateCard::getHumidity ( )</computeroutput></para><para>
+
+<para>Get the humidity in percent. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The humidity. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a734fbf0f3471bd0bcbd1f7c24e273185_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a8a9c0eb63c2e92a01fc39715c1876509"/>    <section>
+    <title>getMode()</title>
+<indexterm><primary>getMode</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getMode</secondary></indexterm>
+<para><computeroutput>uint8_t ClimateCard::getMode ( )</computeroutput></para><para>
+
+<para>Get the mode of the air conditioner. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The mode of the air conditioner. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a4eae69055d00724777be2b70ea99a6f3"/>    <section>
+    <title>getModeName()</title>
+<indexterm><primary>getModeName</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getModeName</secondary></indexterm>
+<para><computeroutput>char * ClimateCard::getModeName ( )</computeroutput></para><para>
+
+<para>Get the name of the current mode. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The name of the current mode. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a4eae69055d00724777be2b70ea99a6f3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df"/>    <section>
+    <title>getRoomTemperature()</title>
+<indexterm><primary>getRoomTemperature</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getRoomTemperature</secondary></indexterm>
+<para><computeroutput>float ClimateCard::getRoomTemperature ( )</computeroutput></para><para>
+
+<para>Get the room temperature in degrees Celsius. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The room temperature. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a975cea4b22a9fa43c23e5e62c21596df_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b"/>    <section>
+    <title>getSensorType()</title>
+<indexterm><primary>getSensorType</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getSensorType</secondary></indexterm>
+<para><computeroutput>uint8_t ClimateCard::getSensorType ( )</computeroutput></para><para>
+
+<para>Get the type of the sensor connected to the card. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The type of the sensor connected to the card. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a2780cd2ee3c06dadda775c9e38de3e2b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a0877f36123ed2fdfe41677bdbac320be"/>    <section>
+    <title>getTemperature()</title>
+<indexterm><primary>getTemperature</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getTemperature</secondary></indexterm>
+<para><computeroutput>uint8_t ClimateCard::getTemperature ( )</computeroutput></para><para>
+
+<para>Get the temperature of the air conditioner. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The temperature of the air conditioner. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a0877f36123ed2fdfe41677bdbac320be_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a651b1cbd6da6281cfba68e5852e9a597"/>    <section>
+    <title>getType()</title>
+<indexterm><primary>getType</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>getType</secondary></indexterm>
+<para><computeroutput>uint8_t ClimateCard::getType ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Get the type of the card. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The handler of the callback function. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_climate_card_1a09f550e371c3836bee9e01bf795e7557"/>    <section>
+    <title>loadStateFromFRAM()</title>
+<indexterm><primary>loadStateFromFRAM</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>loadStateFromFRAM</secondary></indexterm>
+<para><computeroutput>void ClimateCard::loadStateFromFRAM ( )</computeroutput></para><para>
+
+<para>Load the state from FRAM memory. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function has no effect if <link linkend="_class_climate_card_1a87ce688cdf3b1acd7526968d599b5422">bindFRAM()</link> has not been called. </para>
+</note>
+</para>
+    </section><anchor xml:id="_class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void ClimateCard::loop ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Loop function of the <link linkend="_class_climate_card">ClimateCard</link> class. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>When this card is installed in an ESPMega, this function is called automatically by the ESPMega class. </para>
+</note>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_climate_card_1a2b15582430d577bfa8f07983c5ecaf22"/>    <section>
+    <title>registerChangeCallback()</title>
+<indexterm><primary>registerChangeCallback</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>registerChangeCallback</secondary></indexterm>
+<para><computeroutput>uint8_t ClimateCard::registerChangeCallback (std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; callback)</computeroutput></para><para>
+
+<para>Register a callback function that will be called when the state of the air conditioner changes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function to register.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>uint8_t The handler of the callback function. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a2b15582430d577bfa8f07983c5ecaf22_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1ab95d86d1fc8f2d1f19324f1161afbcaf"/>    <section>
+    <title>registerSensorCallback()</title>
+<indexterm><primary>registerSensorCallback</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>registerSensorCallback</secondary></indexterm>
+<para><computeroutput>uint8_t ClimateCard::registerSensorCallback (std::function&lt; void(float, float)&gt; callback)</computeroutput></para><para>
+
+<para>Register a callback function that will be called when the sensor data changes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function to register.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handler of the callback function </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0"/>    <section>
+    <title>saveStateToFRAM()</title>
+<indexterm><primary>saveStateToFRAM</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>saveStateToFRAM</secondary></indexterm>
+<para><computeroutput>void ClimateCard::saveStateToFRAM ( )</computeroutput></para><para>
+
+<para>Save the state to FRAM memory. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function has no effect if <link linkend="_class_climate_card_1a87ce688cdf3b1acd7526968d599b5422">bindFRAM()</link> has not been called. </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_ab5993cfca1e2f691bdd613e58e0800e0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1af3649bf5137e950b16073da4ae266a5b"/>    <section>
+    <title>setFanSpeed()</title>
+<indexterm><primary>setFanSpeed</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>setFanSpeed</secondary></indexterm>
+<para><computeroutput>void ClimateCard::setFanSpeed (uint8_t fan_speed)</computeroutput></para><para>
+
+<para>Set the fan speed of the air conditioner. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>If the fan speed is out of range, it will be set to 0. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fan_speed</entry>
+                                <entry>
+<para>The fan speed to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_af3649bf5137e950b16073da4ae266a5b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_af3649bf5137e950b16073da4ae266a5b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a745658695c2ad4aac7be116ddba8bee7"/>    <section>
+    <title>setFanSpeedByName()</title>
+<indexterm><primary>setFanSpeedByName</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>setFanSpeedByName</secondary></indexterm>
+<para><computeroutput>void ClimateCard::setFanSpeedByName (const char * fan_speed_name)</computeroutput></para><para>
+
+<para>Set fan speed by name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fan_speed_name</entry>
+                                <entry>
+<para>The name of the fan speed to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>If the fan speed is not found, the function will not do anything. </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a745658695c2ad4aac7be116ddba8bee7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1aa00bb77607d324938e83a0527344e4ef"/>    <section>
+    <title>setFRAMAutoSave()</title>
+<indexterm><primary>setFRAMAutoSave</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>setFRAMAutoSave</secondary></indexterm>
+<para><computeroutput>void ClimateCard::setFRAMAutoSave (bool autoSave)</computeroutput></para><para>
+
+<para>Set whether the state should be automatically saved to FRAM memory. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function has no effect if <link linkend="_class_climate_card_1a87ce688cdf3b1acd7526968d599b5422">bindFRAM()</link> has not been called. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>autoSave</entry>
+                                <entry>
+<para>Whether the state should be automatically saved to FRAM memory. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d"/>    <section>
+    <title>setMode()</title>
+<indexterm><primary>setMode</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>setMode</secondary></indexterm>
+<para><computeroutput>void ClimateCard::setMode (uint8_t mode)</computeroutput></para><para>
+
+<para>Set the mode of the air conditioner. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>If the mode is out of range, it will be set to 0. </para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>mode</entry>
+                                <entry>
+<para>The mode to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_ad9ba9dfc23dccc0d9b32ca101257a54d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_ad9ba9dfc23dccc0d9b32ca101257a54d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6"/>    <section>
+    <title>setModeByName()</title>
+<indexterm><primary>setModeByName</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>setModeByName</secondary></indexterm>
+<para><computeroutput>void ClimateCard::setModeByName (const char * mode_name)</computeroutput></para><para>
+
+<para>Set mode by name. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>mode_name</entry>
+                                <entry>
+<para>The name of the mode to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>If the mode is not found, the function will not do anything. </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a2780d9bb76438ddd00fa8beb418583f6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1afb279e4b037b42d6056a1a224548511c"/>    <section>
+    <title>setTemperature()</title>
+<indexterm><primary>setTemperature</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>setTemperature</secondary></indexterm>
+<para><computeroutput>void ClimateCard::setTemperature (uint8_t temperature)</computeroutput></para><para>
+
+<para>Set the temperature of the air conditioner. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>temperature</entry>
+                                <entry>
+<para>The temperature to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>If the temperature is out of range, it will be set to its respective maximum or minimum. </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_afb279e4b037b42d6056a1a224548511c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a15d887d1b211d461edd0835d0104f7c7"/>    <section>
+    <title>unregisterChangeCallback()</title>
+<indexterm><primary>unregisterChangeCallback</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>unregisterChangeCallback</secondary></indexterm>
+<para><computeroutput>void ClimateCard::unregisterChangeCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregister a callback function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler of the callback function to unregister. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_card_a15d887d1b211d461edd0835d0104f7c7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_card_1a13d422d72f933de45cde16477de623ad"/>    <section>
+    <title>unregisterSensorCallback()</title>
+<indexterm><primary>unregisterSensorCallback</primary><secondary>ClimateCard</secondary></indexterm>
+<indexterm><primary>ClimateCard</primary><secondary>unregisterSensorCallback</secondary></indexterm>
+<para><computeroutput>void ClimateCard::unregisterSensorCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregister a sensor callback function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler of the callback function to unregister. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp/home/siwat/ESPMegaPRO3-library/<link linkend="__climate_card_8cpp">ClimateCard.cpp</link></section>
+</section>

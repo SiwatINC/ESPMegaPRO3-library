@@ -1,0 +1,5 @@
+<map id="ClimateCard::unregisterChangeCallback" name="ClimateCard::unregisterChangeCallback">
+<area shape="rect" id="node1" title="Unregister a callback function." alt="" coords="592,5,819,47"/>
+<area shape="rect" id="node2" href="$class_internal_display.html#af952dea8b4a4d74314d3ed6260fba7c6" title="Unbind the climate card from the display." alt="" coords="291,13,544,39"/>
+<area shape="rect" id="node3" href="$class_internal_display.html#aff819b7e2625b4af2b6fbd44f46c89f2" title="Set the climate card to be be shown on the AC page." alt="" coords="5,13,243,39"/>
+</map>

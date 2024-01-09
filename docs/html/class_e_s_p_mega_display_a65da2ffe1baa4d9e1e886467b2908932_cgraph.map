@@ -1,0 +1,6 @@
+<map id="ESPMegaDisplay::processSerialCommand" name="ESPMegaDisplay::processSerialCommand">
+<area shape="rect" id="node1" title="Processes the received serial command." alt="" coords="5,71,231,112"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a6f0c3ec00e8a7d52cf9572ebe54ef367" title="Checks if the received payload is valid." alt="" coords="291,5,492,47"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_display.html#a50fbc6fa94f8e88ba1d008543a2c7535" title="Processes the page report event payload." alt="" coords="282,71,501,112"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_display.html#af7ca531b96d9a70d75b60c7acd5e0c70" title="Processes the touch event payload." alt="" coords="279,136,504,177"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="ESPMegaDisplay::payloadIsValid" name="ESPMegaDisplay::payloadIsValid">
+<area shape="rect" id="node1" title="Checks if the received payload is valid." alt="" coords="549,61,751,103"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a65da2ffe1baa4d9e1e886467b2908932" title="Processes the received serial command." alt="" coords="276,17,501,59"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_display.html#a152ac85f3b883e5866ad303b8c53dc9c" title="Waits for a valid payload from the display adapter." alt="" coords="279,93,498,135"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_display.html#ada566f9769dd3c06391e5845dc7adc92" title="Receives and processes serial commands from the display adapter." alt="" coords="5,5,228,47"/>
+<area shape="rect" id="node5" href="$class_e_s_p_mega_display.html#a72fe852174fb83d438cbc7ea70a9ec6f" title="Gets the value of a number component from the display." alt="" coords="11,71,222,98"/>
+<area shape="rect" id="node6" href="$class_e_s_p_mega_display.html#a69bf78095709e4d36d7ceef987909dfe" title="Gets the value of a string component from the display." alt="" coords="18,122,215,149"/>
+<area shape="rect" id="node7" href="$class_e_s_p_mega_display.html#aa9ee805cf25d3f70b98ff650da742e9a" title="Gets the value of a number component from the display and stores it in a buffer." alt="" coords="18,173,215,215"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="AnalogCard::setDACValue" name="AnalogCard::setDACValue">
+<area shape="rect" id="node1" title="Sets the value of the specified DAC pin." alt="" coords="5,5,195,32"/>
+<area shape="rect" id="node2" href="$class_analog_card.html#a121c84a174bcc6756e82538cfe19477a" title="Sends data to the specified DAC pin." alt="" coords="243,5,452,32"/>
+</map>

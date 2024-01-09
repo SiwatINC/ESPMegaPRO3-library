@@ -1,0 +1,4 @@
+<map id="ClimateCard::setFanSpeed" name="ClimateCard::setFanSpeed">
+<area shape="rect" id="node1" title="Set the fan speed of the air conditioner." alt="" coords="247,13,440,39"/>
+<area shape="rect" id="node2" href="$class_climate_card.html#a745658695c2ad4aac7be116ddba8bee7" title="Set fan speed by name." alt="" coords="5,5,199,47"/>
+</map>

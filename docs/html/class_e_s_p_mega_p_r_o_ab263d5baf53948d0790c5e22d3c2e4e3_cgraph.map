@@ -1,0 +1,5 @@
+<map id="ESPMegaPRO::updateTimeFromNTP" name="ESPMegaPRO::updateTimeFromNTP">
+<area shape="rect" id="node1" title="Updates the internal RTC from NTP." alt="" coords="5,31,260,57"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_p_r_o.html#aa2c6607c5b3b4c4662549173b1998a7f" title="Gets the current time from the internal RTC." alt="" coords="308,5,479,32"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_p_r_o.html#a456cfbdb9987a2e90e6f0eabeae42b83" title="Sets the current time of the internal RTC." alt="" coords="308,56,479,83"/>
+</map>

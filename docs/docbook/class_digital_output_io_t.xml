@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_digital_output_io_t" xml:lang="en-US">
+<title>DigitalOutputIoT Class Reference</title>
+<indexterm><primary>DigitalOutputIoT</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> class is a class interfacing with the Digital Output Card through MQTT. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;DigitalOutputIoT.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for DigitalOutputIoT:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for DigitalOutputIoT:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_digital_output_io_t_1a6c619c09a8c325f1931e14d1cab14e20"/><link linkend="_class_digital_output_io_t_1a6c619c09a8c325f1931e14d1cab14e20">DigitalOutputIoT</link> ()</para>
+
+<para>Create a new <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> object. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_output_io_t_1ada967432a1efd635565e06b18e63449e"/><link linkend="_class_digital_output_io_t_1ada967432a1efd635565e06b18e63449e">~DigitalOutputIoT</link> ()</para>
+
+<para>Destroy the <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_digital_output_io_t_1a7360bb6922c644e1898cc0d2b2bb2373">begin</link> (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> *card, PubSubClient *mqtt, char *base_topic)</para>
+
+<para>Initialize the <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_io_t_1aea7aa08507f13b49e142532d728f074b">handleMqttMessage</link> (char *topic, char *payload)</para>
+
+<para>Handle the MQTT messages for the <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> card. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_output_io_t_1a5ea97114ef576a05c2ace8bced6be2f8"/>void <link linkend="_class_digital_output_io_t_1a5ea97114ef576a05c2ace8bced6be2f8">publishDigitalOutputs</link> ()</para>
+
+<para>Publish the state of all digital outputs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_io_t_1a254ad82d5f263d8d335e8007fcea9061">publishDigitalOutput</link> (uint8_t pin)</para>
+
+<para>Publish the state and value of the specified digital output. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_io_t_1a186d8a94e312afc13c61dae4d31cd633">publishDigitalOutputState</link> (uint8_t pin)</para>
+
+<para>Publish the state of the specified digital output. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_io_t_1a99cb645e8ef895b893ba128f0bd54726">publishDigitalOutputValue</link> (uint8_t pin)</para>
+
+<para>Publish the value of the specified digital output. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_io_t_1a7aef0880d159a3dcf6590c7b567ac1b1">setDigitalOutputsPublishEnabled</link> (bool enabled)</para>
+
+<para>Enable/disable publishing of digital outputs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_io_t_1a1aeb4b1e36da7aec99808971f1d95cbf">handleValueChange</link> (uint8_t pin, bool state, uint16_t value)</para>
+
+<para>Handle the value change of a pin. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_io_t_1a9330dd4073df5a61f68fdf5825de26e0">publishReport</link> ()</para>
+
+<para>Publish all digital outputs. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_output_io_t_1aeffef9a2e359f4dd9a2c81c8ae478dd8"/>void <link linkend="_class_digital_output_io_t_1aeffef9a2e359f4dd9a2c81c8ae478dd8">subscribe</link> ()</para>
+
+<para>Subscribe to the MQTT topics used by the <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_io_t_1af3d97141417b3539138ed824ea05990f">loop</link> ()</para>
+
+<para>The main loop for the <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> object. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_digital_output_io_t_1ae351ff6afcef3d1e6739222523ed7173">getType</link> ()</para>
+
+<para>Get the type of the IoT component. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> class is a class interfacing with the Digital Output Card through MQTT. </para>
+
+
+
+<para><warning><title>Warning</title>
+
+<para>You should not instantiate this class directly, instead use ESPMegaIO&apos;s registerCard function. </para>
+</warning>
+</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_digital_output_io_t_1a7360bb6922c644e1898cc0d2b2bb2373"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool DigitalOutputIoT::begin (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> * card, PubSubClient * mqtt, char * base_topic)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initialize the <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> object. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>ALthough this function can be called inside the main program, it is recommended to use <link linkend="_class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450">ESPMegaPRO::installCard()</link> instead</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>card_id</entry>
+                                <entry>
+<para>The id of the card </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>card</entry>
+                                <entry>
+<para>The card object </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt</entry>
+                                <entry>
+<para>The PubSubClient object </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>base_topic</entry>
+                                <entry>
+<para>The base topic of the card </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the initialization is successful, false otherwise </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a7360bb6922c644e1898cc0d2b2bb2373_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1ae351ff6afcef3d1e6739222523ed7173"/>    <section>
+    <title>getType()</title>
+<indexterm><primary>getType</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>getType</secondary></indexterm>
+<para><computeroutput>uint8_t DigitalOutputIoT::getType ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Get the type of the IoT component. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The type of the IoT component </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1aea7aa08507f13b49e142532d728f074b"/>    <section>
+    <title>handleMqttMessage()</title>
+<indexterm><primary>handleMqttMessage</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>handleMqttMessage</secondary></indexterm>
+<para><computeroutput>void DigitalOutputIoT::handleMqttMessage (char * topic, char * payload)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handle the MQTT messages for the <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> card. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic of the message </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The payload of the message </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1a1aeb4b1e36da7aec99808971f1d95cbf"/>    <section>
+    <title>handleValueChange()</title>
+<indexterm><primary>handleValueChange</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>handleValueChange</secondary></indexterm>
+<para><computeroutput>void DigitalOutputIoT::handleValueChange (uint8_t pin, bool state, uint16_t value)</computeroutput></para><para>
+
+<para>Handle the value change of a pin. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is registered as a callback function with the <link linkend="_class_digital_output_card">DigitalOutputCard</link> object</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin that changed </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>state</entry>
+                                <entry>
+<para>The new state of the pin </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The new value of the pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a1aeb4b1e36da7aec99808971f1d95cbf_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a1aeb4b1e36da7aec99808971f1d95cbf_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1af3d97141417b3539138ed824ea05990f"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void DigitalOutputIoT::loop ( )</computeroutput></para><para>
+
+<para>The main loop for the <link linkend="_class_digital_output_io_t">DigitalOutputIoT</link> object. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is not used, it is only here to implement the <link linkend="_class_io_t_component">IoTComponent</link> interface </para>
+</note>
+</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1a254ad82d5f263d8d335e8007fcea9061"/>    <section>
+    <title>publishDigitalOutput()</title>
+<indexterm><primary>publishDigitalOutput</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>publishDigitalOutput</secondary></indexterm>
+<para><computeroutput>void DigitalOutputIoT::publishDigitalOutput (uint8_t pin)</computeroutput></para><para>
+
+<para>Publish the state and value of the specified digital output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to publish </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a254ad82d5f263d8d335e8007fcea9061_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a254ad82d5f263d8d335e8007fcea9061_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1a186d8a94e312afc13c61dae4d31cd633"/>    <section>
+    <title>publishDigitalOutputState()</title>
+<indexterm><primary>publishDigitalOutputState</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>publishDigitalOutputState</secondary></indexterm>
+<para><computeroutput>void DigitalOutputIoT::publishDigitalOutputState (uint8_t pin)</computeroutput></para><para>
+
+<para>Publish the state of the specified digital output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to publish </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a186d8a94e312afc13c61dae4d31cd633_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a186d8a94e312afc13c61dae4d31cd633_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1a99cb645e8ef895b893ba128f0bd54726"/>    <section>
+    <title>publishDigitalOutputValue()</title>
+<indexterm><primary>publishDigitalOutputValue</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>publishDigitalOutputValue</secondary></indexterm>
+<para><computeroutput>void DigitalOutputIoT::publishDigitalOutputValue (uint8_t pin)</computeroutput></para><para>
+
+<para>Publish the value of the specified digital output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to publish </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a99cb645e8ef895b893ba128f0bd54726_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a99cb645e8ef895b893ba128f0bd54726_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1a9330dd4073df5a61f68fdf5825de26e0"/>    <section>
+    <title>publishReport()</title>
+<indexterm><primary>publishReport</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>publishReport</secondary></indexterm>
+<para><computeroutput>void DigitalOutputIoT::publishReport ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Publish all digital outputs. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is called by the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object </para>
+</note>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_io_t_a9330dd4073df5a61f68fdf5825de26e0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_io_t_1a7aef0880d159a3dcf6590c7b567ac1b1"/>    <section>
+    <title>setDigitalOutputsPublishEnabled()</title>
+<indexterm><primary>setDigitalOutputsPublishEnabled</primary><secondary>DigitalOutputIoT</secondary></indexterm>
+<indexterm><primary>DigitalOutputIoT</primary><secondary>setDigitalOutputsPublishEnabled</secondary></indexterm>
+<para><computeroutput>void DigitalOutputIoT::setDigitalOutputsPublishEnabled (bool enabled)</computeroutput></para><para>
+
+<para>Enable/disable publishing of digital outputs. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>enabled</entry>
+                                <entry>
+<para>True to enable publishing, false to disable publishing </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp</section>
+</section>

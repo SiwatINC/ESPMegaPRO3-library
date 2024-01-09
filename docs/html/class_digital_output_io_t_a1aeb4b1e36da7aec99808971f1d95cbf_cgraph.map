@@ -1,0 +1,8 @@
+<map id="DigitalOutputIoT::handleValueChange" name="DigitalOutputIoT::handleValueChange">
+<area shape="rect" id="node1" title="Handle the value change of a pin." alt="" coords="5,39,185,80"/>
+<area shape="rect" id="node2" href="$class_digital_output_io_t.html#a254ad82d5f263d8d335e8007fcea9061" title="Publish the state and value of the specified digital output." alt="" coords="233,39,416,80"/>
+<area shape="rect" id="node3" href="$class_digital_output_io_t.html#a186d8a94e312afc13c61dae4d31cd633" title="Publish the state of the specified digital output." alt="" coords="464,5,647,47"/>
+<area shape="rect" id="node5" href="$class_digital_output_io_t.html#a99cb645e8ef895b893ba128f0bd54726" title="Publish the value of the specified digital output." alt="" coords="464,71,647,112"/>
+<area shape="rect" id="node4" href="$class_digital_output_card.html#a3e239d57c39cb82cff4aca6455f01d6f" title="Get the state of the specified pin." alt="" coords="695,5,841,47"/>
+<area shape="rect" id="node6" href="$class_digital_output_card.html#ae160653dd5ec2bdbce0327af77669d87" title="Get the pwm value of the specified pin." alt="" coords="695,71,841,112"/>
+</map>

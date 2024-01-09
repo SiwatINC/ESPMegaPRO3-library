@@ -1,0 +1,6 @@
+<map id="ESPMegaDisplay::waitForValidPayload" name="ESPMegaDisplay::waitForValidPayload">
+<area shape="rect" id="node1" title="Waits for a valid payload from the display adapter." alt="" coords="264,49,483,90"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a72fe852174fb83d438cbc7ea70a9ec6f" title="Gets the value of a number component from the display." alt="" coords="5,5,216,32"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_display.html#a69bf78095709e4d36d7ceef987909dfe" title="Gets the value of a string component from the display." alt="" coords="12,56,209,83"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_display.html#aa9ee805cf25d3f70b98ff650da742e9a" title="Gets the value of a number component from the display and stores it in a buffer." alt="" coords="12,107,209,149"/>
+</map>

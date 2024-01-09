@@ -1,0 +1,7 @@
+<map id="ESPMegaDisplay::getStringToBuffer" name="ESPMegaDisplay::getStringToBuffer">
+<area shape="rect" id="node1" title="Gets the value of a number component from the display and stores it in a buffer." alt="" coords="5,39,203,80"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a8bfb30429f6e11f4719480bfc6f83d72" title="Sends stop bytes to the display adapter." alt="" coords="261,5,459,47"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_display.html#a152ac85f3b883e5866ad303b8c53dc9c" title="Waits for a valid payload from the display adapter." alt="" coords="251,71,469,112"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_display.html#a6f0c3ec00e8a7d52cf9572ebe54ef367" title="Checks if the received payload is valid." alt="" coords="528,37,729,79"/>
+<area shape="rect" id="node5" href="$class_e_s_p_mega_display.html#ae442963a5ed99212bba46c41f3b7b215" title="Receives and processes serial commands from the display adapter." alt="" coords="517,103,740,144"/>
+</map>

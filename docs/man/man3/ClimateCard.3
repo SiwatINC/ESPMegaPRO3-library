@@ -1,0 +1,501 @@
+.TH "ClimateCard" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClimateCard \- The \fBClimateCard\fP class is a class for controlling an air conditioner\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ClimateCard\&.hpp>\fP
+.PP
+Inherits \fBExpansionCard\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClimateCard\fP (uint8_t ir_pin, \fBAirConditioner\fP ac, uint8_t sensor_type, uint8_t sensor_pin)"
+.br
+.RI "Construct a new \fBClimateCard\fP object\&. "
+.ti -1c
+.RI "\fBClimateCard\fP (uint8_t ir_pin, \fBAirConditioner\fP ac)"
+.br
+.RI "Construct a new \fBClimateCard\fP object\&. "
+.ti -1c
+.RI "\fB~ClimateCard\fP ()"
+.br
+.RI "The destructor of the \fBClimateCard\fP class\&. "
+.ti -1c
+.RI "bool \fBbegin\fP ()"
+.br
+.RI "Initialize the \fBClimateCard\fP object\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "Loop function of the \fBClimateCard\fP class\&. "
+.ti -1c
+.RI "void \fBbindFRAM\fP (FRAM *fram, uint16_t fram_address)"
+.br
+.RI "bind FRAM memory to the \fBClimateCard\fP object at the specified address\&. "
+.ti -1c
+.RI "void \fBsetFRAMAutoSave\fP (bool autoSave)"
+.br
+.RI "Set whether the state should be automatically saved to FRAM memory\&. "
+.ti -1c
+.RI "void \fBsaveStateToFRAM\fP ()"
+.br
+.RI "Save the state to FRAM memory\&. "
+.ti -1c
+.RI "void \fBloadStateFromFRAM\fP ()"
+.br
+.RI "Load the state from FRAM memory\&. "
+.ti -1c
+.RI "void \fBsetTemperature\fP (uint8_t temperature)"
+.br
+.RI "Set the temperature of the air conditioner\&. "
+.ti -1c
+.RI "uint8_t \fBgetTemperature\fP ()"
+.br
+.RI "Get the temperature of the air conditioner\&. "
+.ti -1c
+.RI "void \fBsetMode\fP (uint8_t mode)"
+.br
+.RI "Set the mode of the air conditioner\&. "
+.ti -1c
+.RI "void \fBsetModeByName\fP (const char *mode_name)"
+.br
+.RI "Set mode by name\&. "
+.ti -1c
+.RI "uint8_t \fBgetMode\fP ()"
+.br
+.RI "Get the mode of the air conditioner\&. "
+.ti -1c
+.RI "char * \fBgetModeName\fP ()"
+.br
+.RI "Get the name of the current mode\&. "
+.ti -1c
+.RI "void \fBsetFanSpeed\fP (uint8_t fan_speed)"
+.br
+.RI "Set the fan speed of the air conditioner\&. "
+.ti -1c
+.RI "void \fBsetFanSpeedByName\fP (const char *fan_speed_name)"
+.br
+.RI "Set fan speed by name\&. "
+.ti -1c
+.RI "uint8_t \fBgetFanSpeed\fP ()"
+.br
+.RI "Get the fan speed of the air conditioner\&. "
+.ti -1c
+.RI "char * \fBgetFanSpeedName\fP ()"
+.br
+.RI "Get the name of the current fan speed\&. "
+.ti -1c
+.RI "float \fBgetRoomTemperature\fP ()"
+.br
+.RI "Get the room temperature in degrees Celsius\&. "
+.ti -1c
+.RI "float \fBgetHumidity\fP ()"
+.br
+.RI "Get the humidity in percent\&. "
+.ti -1c
+.RI "uint8_t \fBgetSensorType\fP ()"
+.br
+.RI "Get the type of the sensor connected to the card\&. "
+.ti -1c
+.RI "uint8_t \fBregisterChangeCallback\fP (std::function< void(uint8_t, uint8_t, uint8_t)> callback)"
+.br
+.RI "Register a callback function that will be called when the state of the air conditioner changes\&. "
+.ti -1c
+.RI "uint8_t \fBregisterSensorCallback\fP (std::function< void(float, float)> callback)"
+.br
+.RI "Register a callback function that will be called when the sensor data changes\&. "
+.ti -1c
+.RI "void \fBunregisterChangeCallback\fP (uint8_t handler)"
+.br
+.RI "Unregister a callback function\&. "
+.ti -1c
+.RI "void \fBunregisterSensorCallback\fP (uint8_t handler)"
+.br
+.RI "Unregister a sensor callback function\&. "
+.ti -1c
+.RI "uint8_t \fBgetType\fP ()"
+.br
+.RI "Get the type of the card\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBClimateCard\fP class is a class for controlling an air conditioner\&. 
+
+This class allows you to control an air conditioner using an IR LED\&. It is meant to be used with the ESPMega Climate Card\&.
+.PP
+\fBNote\fP
+.RS 4
+You can also use a DHT22 or DS18B20 temperature sensor to get the room temperature (and humidity if using a DHT22)\&. Although, this is optional\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ClimateCard::ClimateCard (uint8_t ir_pin, \fBAirConditioner\fP ac, uint8_t sensor_type, uint8_t sensor_pin)"
+
+.PP
+Construct a new \fBClimateCard\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIir_pin\fP The GPIO pin number of the IR transmitter\&. 
+.br
+\fIac\fP The \fBAirConditioner\fP object that represents the air conditioner\&. 
+.br
+\fIsensor_type\fP The type of the sensor connected to the card\&. 
+.br
+\fIsensor_pin\fP The GPIO pin number of the sensor\&. 
+.RE
+.PP
+
+.SS "ClimateCard::ClimateCard (uint8_t ir_pin, \fBAirConditioner\fP ac)"
+
+.PP
+Construct a new \fBClimateCard\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIir_pin\fP The GPIO pin number of the IR transmitter\&. 
+.br
+\fIac\fP The \fBAirConditioner\fP object that represents the air conditioner\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This constructor can be used when no sensor is connected to the card\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ClimateCard::begin ()\fC [virtual]\fP"
+
+.PP
+Initialize the \fBClimateCard\fP object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+true if initialization was successful\&. 
+.PP
+false if initialization failed\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "void ClimateCard::bindFRAM (FRAM * fram, uint16_t fram_address)"
+
+.PP
+bind FRAM memory to the \fBClimateCard\fP object at the specified address\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function must be called before calling \fBloadStateFromFRAM()\fP or \fBsaveStateToFRAM()\fP\&. 
+.PP
+This card takes up 3 bytes of FRAM memory\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIfram\fP The FRAM object\&. 
+.br
+\fIfram_address\fP The starting address of the card in FRAM memory\&. 
+.RE
+.PP
+
+.SS "uint8_t ClimateCard::getFanSpeed ()"
+
+.PP
+Get the fan speed of the air conditioner\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The fan speed of the air conditioner\&. 
+.RE
+.PP
+
+.SS "char * ClimateCard::getFanSpeedName ()"
+
+.PP
+Get the name of the current fan speed\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The name of the current fan speed\&. 
+.RE
+.PP
+
+.SS "float ClimateCard::getHumidity ()"
+
+.PP
+Get the humidity in percent\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The humidity\&. 
+.RE
+.PP
+
+.SS "uint8_t ClimateCard::getMode ()"
+
+.PP
+Get the mode of the air conditioner\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The mode of the air conditioner\&. 
+.RE
+.PP
+
+.SS "char * ClimateCard::getModeName ()"
+
+.PP
+Get the name of the current mode\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The name of the current mode\&. 
+.RE
+.PP
+
+.SS "float ClimateCard::getRoomTemperature ()"
+
+.PP
+Get the room temperature in degrees Celsius\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The room temperature\&. 
+.RE
+.PP
+
+.SS "uint8_t ClimateCard::getSensorType ()"
+
+.PP
+Get the type of the sensor connected to the card\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The type of the sensor connected to the card\&. 
+.RE
+.PP
+
+.SS "uint8_t ClimateCard::getTemperature ()"
+
+.PP
+Get the temperature of the air conditioner\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The temperature of the air conditioner\&. 
+.RE
+.PP
+
+.SS "uint8_t ClimateCard::getType ()\fC [virtual]\fP"
+
+.PP
+Get the type of the card\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The handler of the callback function\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "void ClimateCard::loadStateFromFRAM ()"
+
+.PP
+Load the state from FRAM memory\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function has no effect if \fBbindFRAM()\fP has not been called\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::loop ()\fC [virtual]\fP"
+
+.PP
+Loop function of the \fBClimateCard\fP class\&. 
+.PP
+\fBNote\fP
+.RS 4
+When this card is installed in an ESPMega, this function is called automatically by the ESPMega class\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "uint8_t ClimateCard::registerChangeCallback (std::function< void(uint8_t, uint8_t, uint8_t)> callback)"
+
+.PP
+Register a callback function that will be called when the state of the air conditioner changes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function to register\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+uint8_t The handler of the callback function\&. 
+.RE
+.PP
+
+.SS "uint8_t ClimateCard::registerSensorCallback (std::function< void(float, float)> callback)"
+
+.PP
+Register a callback function that will be called when the sensor data changes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function to register\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handler of the callback function 
+.RE
+.PP
+
+.SS "void ClimateCard::saveStateToFRAM ()"
+
+.PP
+Save the state to FRAM memory\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function has no effect if \fBbindFRAM()\fP has not been called\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::setFanSpeed (uint8_t fan_speed)"
+
+.PP
+Set the fan speed of the air conditioner\&. 
+.PP
+\fBNote\fP
+.RS 4
+If the fan speed is out of range, it will be set to 0\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIfan_speed\fP The fan speed to set\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::setFanSpeedByName (const char * fan_speed_name)"
+
+.PP
+Set fan speed by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfan_speed_name\fP The name of the fan speed to set\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+If the fan speed is not found, the function will not do anything\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::setFRAMAutoSave (bool autoSave)"
+
+.PP
+Set whether the state should be automatically saved to FRAM memory\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function has no effect if \fBbindFRAM()\fP has not been called\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIautoSave\fP Whether the state should be automatically saved to FRAM memory\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::setMode (uint8_t mode)"
+
+.PP
+Set the mode of the air conditioner\&. 
+.PP
+\fBNote\fP
+.RS 4
+If the mode is out of range, it will be set to 0\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP The mode to set\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::setModeByName (const char * mode_name)"
+
+.PP
+Set mode by name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImode_name\fP The name of the mode to set\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+If the mode is not found, the function will not do anything\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::setTemperature (uint8_t temperature)"
+
+.PP
+Set the temperature of the air conditioner\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemperature\fP The temperature to set\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+If the temperature is out of range, it will be set to its respective maximum or minimum\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::unregisterChangeCallback (uint8_t handler)"
+
+.PP
+Unregister a callback function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler of the callback function to unregister\&. 
+.RE
+.PP
+
+.SS "void ClimateCard::unregisterSensorCallback (uint8_t handler)"
+
+.PP
+Unregister a sensor callback function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler of the callback function to unregister\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

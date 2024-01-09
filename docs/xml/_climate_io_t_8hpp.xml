@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_climate_io_t_8hpp" kind="file" language="C++">
+    <compoundname>ClimateIoT.hpp</compoundname>
+    <includes refid="_io_t_component_8hpp" local="no">IoTComponent.hpp</includes>
+    <includes refid="_expansion_card_8hpp" local="no">ExpansionCard.hpp</includes>
+    <includes refid="_climate_card_8hpp" local="no">ClimateCard.hpp</includes>
+    <includedby refid="_climate_io_t_8cpp" local="no">/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp</includedby>
+    <includedby refid="_e_s_p_mega_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>OneWire.h</label>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>PubSubClient.h</label>
+      </node>
+      <node id="6">
+        <label>esp_log.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IoTComponent.hpp</label>
+        <link refid="_io_t_component_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>driver/rmt.h</label>
+      </node>
+      <node id="7">
+        <label>ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="12">
+        <label>dhtnew.h</label>
+      </node>
+      <node id="11">
+        <label>DS18B20.h</label>
+      </node>
+      <node id="9">
+        <label>FRAM.h</label>
+      </node>
+      <node id="3">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</label>
+        <link refid="_e_s_p_mega_web_server_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_climate_io_t" prot="public">ClimateIoT</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_climate_io_t_8hpp_1a140016b06389d8e376f3954a0803d0dc" prot="public" static="no">
+        <name>AC_MODE_REPORT_TOPIC</name>
+        <initializer>&quot;mode&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="7" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_io_t_8hpp_1a9d07178fa04cebcd48aa9a4bfab255d0" prot="public" static="no">
+        <name>AC_MODE_SET_TOPIC</name>
+        <initializer>&quot;set/mode&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="8" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_io_t_8hpp_1a5ef65b2ae97c56ae59dddf620b11b0fe" prot="public" static="no">
+        <name>AC_TEMPERATURE_REPORT_TOPIC</name>
+        <initializer>&quot;temperature&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="9" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_io_t_8hpp_1a4ba331f1b95956d33051eb6b66d0fd45" prot="public" static="no">
+        <name>AC_TEMPERATURE_SET_TOPIC</name>
+        <initializer>&quot;set/temperature&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="10" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_io_t_8hpp_1a25e24fde94aa1d2a7872eda3a97c8fdf" prot="public" static="no">
+        <name>AC_FAN_SPEED_REPORT_TOPIC</name>
+        <initializer>&quot;fan_speed&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="11" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_io_t_8hpp_1ae6bb0b9f6737722a8eb70498bd30558c" prot="public" static="no">
+        <name>AC_FAN_SPEED_SET_TOPIC</name>
+        <initializer>&quot;set/fan_speed&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="12" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_io_t_8hpp_1a55e40c74410f0309ef640598bb1319a4" prot="public" static="no">
+        <name>AC_ROOM_TEMPERATURE_REPORT_TOPIC</name>
+        <initializer>&quot;room_temperature&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="13" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_io_t_8hpp_1a15573531909c201da7a10e6c8afdf4dd" prot="public" static="no">
+        <name>AC_HUMIDITY_REPORT_TOPIC</name>
+        <initializer>&quot;humidity&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="14" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_io_t_8hpp_1af1fd0e2d0dc160805198820c379574da" prot="public" static="no">
+        <name>AC_REQUEST_STATE_TOPIC</name>
+        <initializer>&quot;request_state&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="15" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;IoTComponent.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ExpansionCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ClimateCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MQTT<sp/>Topics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_MODE_REPORT_TOPIC<sp/>&quot;mode&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_MODE_SET_TOPIC<sp/>&quot;set/mode&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_TEMPERATURE_REPORT_TOPIC<sp/>&quot;temperature&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_TEMPERATURE_SET_TOPIC<sp/>&quot;set/temperature&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_FAN_SPEED_REPORT_TOPIC<sp/>&quot;fan_speed&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_FAN_SPEED_SET_TOPIC<sp/>&quot;set/fan_speed&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_ROOM_TEMPERATURE_REPORT_TOPIC<sp/>&quot;room_temperature&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_HUMIDITY_REPORT_TOPIC<sp/>&quot;humidity&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_REQUEST_STATE_TOPIC<sp/>&quot;request_state&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_climate_io_t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_climate_io_t" kindref="compound">ClimateIoT</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_io_t_component" kindref="compound">IoTComponent</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_io_t" kindref="compound">ClimateIoT</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_io_t_1a54535f32b8bda07e5295bcda18b311fe" kindref="member">~ClimateIoT</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b" kindref="member">begin</ref>(uint8_t<sp/>card_id,<sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref><sp/>*card,<sp/>PubSubClient<sp/>*mqtt,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*base_topic);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a3ca9eea384da622be06cf56a3d264aff" kindref="member">handleMqttMessage</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" kindref="member">publishClimate</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876" kindref="member">publishClimateTemperature</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e" kindref="member">publishClimateMode</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46" kindref="member">publishClimateFanSpeed</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" kindref="member">publishSensor</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" kindref="member">publishRoomTemperature</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" kindref="member">publishHumidity</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a0098ee608786b6cea97f50a6602a1026" kindref="member">handleStateChange</ref>(uint8_t<sp/>temperature,<sp/>uint8_t<sp/>mode,<sp/>uint8_t<sp/>fan_speed);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6" kindref="member">handleSensorUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temperature,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>humidity);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1" kindref="member">handleAirConditionerUpdate</ref>(uint8_t<sp/>mode,<sp/>uint8_t<sp/>fan_speed,<sp/>uint8_t<sp/>temperature);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526" kindref="member">publishReport</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aa450a354851fbc82b54e32f3ffd9d359" kindref="member">subscribe</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1afe6cc8ae2063d700c5a7d5554aad2cd1" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_climate_io_t_1a488320647faf79d26fdf8f0ea406f315" kindref="member">getType</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card" kindref="compound">ClimateCard</ref><sp/>*card;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>processSetTemperatureMessage(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload,<sp/>uint8_t<sp/>topic_length);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>processSetModeMessage(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload,<sp/>uint8_t<sp/>topic_length);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>processSetFanSpeedMessage(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload,<sp/>uint8_t<sp/>topic_length);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>processRequestStateMessage(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload,<sp/>uint8_t<sp/>topic_length);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp"/>
+  </compounddef>
+</doxygen>

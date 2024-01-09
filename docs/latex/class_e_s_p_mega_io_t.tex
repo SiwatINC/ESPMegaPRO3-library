@@ -1,0 +1,820 @@
+\hypertarget{class_e_s_p_mega_io_t}{}\doxysection{ESPMega\+IoT Class Reference}
+\label{class_e_s_p_mega_io_t}\index{ESPMegaIoT@{ESPMegaIoT}}
+
+
+The \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} class is a class that is used to interface with the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} IoT module.  
+
+
+
+
+{\ttfamily \#include $<$ESPMega\+Io\+T.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_e_s_p_mega_io_t_affa7c3b532147b2c485f5c3113f0a8a3}{ESPMega\+IoT}} ()
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a2e59b40473015d237898b93aef5631b9}\label{class_e_s_p_mega_io_t_a2e59b40473015d237898b93aef5631b9}} 
+\mbox{\hyperlink{class_e_s_p_mega_io_t_a2e59b40473015d237898b93aef5631b9}{$\sim$\+ESPMega\+IoT}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a12baf9ad36896f400c5c77fa7a32d3de}{intr\+\_\+begin}} (\mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$cards\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Begin the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a260083ed6e8710b7321f18942ad6eef8}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The main loop for the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_ae7323d1d3ff23494b68a748c1eb57891}{register\+Card}} (uint8\+\_\+t card\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Register an existing card for use with IoT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a11e8435455ffecc362eb4de09087d43a}{unregister\+Card}} (uint8\+\_\+t card\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Unregister a card. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_aba6676558bdfe8123028cbe3cf924eab}\label{class_e_s_p_mega_io_t_aba6676558bdfe8123028cbe3cf924eab}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_aba6676558bdfe8123028cbe3cf924eab}{publish\+Card}} (uint8\+\_\+t card\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Publish all cards\textquotesingle{}s reports. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a740ea6dc48ae78b87d48afc39f00d992}{publish\+Relative}} (char $\ast$topic, char $\ast$payload)
+\begin{DoxyCompactList}\small\item\em Publish a message relative to the base topic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a98e8c822491c06be6823328e133507a1}{subscribe\+Relative}} (char $\ast$topic)
+\begin{DoxyCompactList}\small\item\em Subscribe to a topic relative to the base topic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a098f74442df4c0b5059f0d94921c64f5}{subscribe}} (char $\ast$topic)
+\begin{DoxyCompactList}\small\item\em Subscribe to a topic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a30629a0c025c0f20d84ab8ff7a9c437f}{unsubscribe\+From\+Topic}} (char $\ast$topic)
+\begin{DoxyCompactList}\small\item\em Unsubscribe from a topic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_ac90fb46005eeb8528bc6f7108d4a7c06}{connect\+To\+Wifi}} (char $\ast$ssid, char $\ast$password)
+\begin{DoxyCompactList}\small\item\em Connect to a wifi network. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_af7728b5bfaf7cb4849c127b739dda575}{connect\+To\+Wifi}} (char $\ast$ssid)
+\begin{DoxyCompactList}\small\item\em Connect to a unsecured wifi network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a4e382d99e13bafc5937e774cc14d6227}\label{class_e_s_p_mega_io_t_a4e382d99e13bafc5937e774cc14d6227}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a4e382d99e13bafc5937e774cc14d6227}{disconnect\+From\+Wifi}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from the wifi network. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_io_t_a8c18fddf81218ea5c69bca2eb064167f}{wifi\+Connected}} ()
+\begin{DoxyCompactList}\small\item\em Check if the wifi is connected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a2a167a8e30202a4fc34141595b795492}\label{class_e_s_p_mega_io_t_a2a167a8e30202a4fc34141595b795492}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a2a167a8e30202a4fc34141595b795492}{ethernet\+Begin}} ()
+\begin{DoxyCompactList}\small\item\em Begin the ethernet interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a02bd57229c6f8b3f163c21bb6ae78414}\label{class_e_s_p_mega_io_t_a02bd57229c6f8b3f163c21bb6ae78414}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a02bd57229c6f8b3f163c21bb6ae78414}{load\+Network\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Load the network config from FRAM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_aec0e8b4a584d9cdccec777bd981726ba}\label{class_e_s_p_mega_io_t_aec0e8b4a584d9cdccec777bd981726ba}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_aec0e8b4a584d9cdccec777bd981726ba}{save\+Network\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Save the network config to FRAM. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_network_config}{Network\+Config}} $\ast$ \mbox{\hyperlink{class_e_s_p_mega_io_t_ab0ee8902014f9d08c97f0ffe11f66133}{get\+Network\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Get the network config. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_mqtt_config}{Mqtt\+Config}} $\ast$ \mbox{\hyperlink{class_e_s_p_mega_io_t_a831d8c372ae931eeaabbe999dad27e5c}{get\+Mqtt\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Get the MQTT config. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a16b33cc73cccefd62577dca8f015ee43}{set\+Mqtt\+Config}} (\mbox{\hyperlink{struct_mqtt_config}{Mqtt\+Config}} mqtt\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Set the MQTT config. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ae03cab69f4e68d829611ed5399ba1c3b}\label{class_e_s_p_mega_io_t_ae03cab69f4e68d829611ed5399ba1c3b}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_ae03cab69f4e68d829611ed5399ba1c3b}{save\+Mqtt\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Save the MQTT config to FRAM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a2c3f8fa952d6a1e008b4b15990f9a2e7}\label{class_e_s_p_mega_io_t_a2c3f8fa952d6a1e008b4b15990f9a2e7}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a2c3f8fa952d6a1e008b4b15990f9a2e7}{load\+Mqtt\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Load the MQTT config from FRAM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_aea329bb2d424ea758be8f8502655dfc3}\label{class_e_s_p_mega_io_t_aea329bb2d424ea758be8f8502655dfc3}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_aea329bb2d424ea758be8f8502655dfc3}{connect\+Network}} ()
+\begin{DoxyCompactList}\small\item\em Connect to the network using the current config. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a426932179c2d84864e3b1fb269723fc6}{set\+Network\+Config}} (\mbox{\hyperlink{struct_network_config}{Network\+Config}} network\+\_\+config)
+\begin{DoxyCompactList}\small\item\em Set the network config. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a6a1f92a8f3ca5ce73e93851f18892cb4}\label{class_e_s_p_mega_io_t_a6a1f92a8f3ca5ce73e93851f18892cb4}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a6a1f92a8f3ca5ce73e93851f18892cb4}{connect\+To\+Mqtt}} ()
+\begin{DoxyCompactList}\small\item\em Connect to MQTT with the current config. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_io_t_a0dc0ebc659c880d5b17c85f341987535}{connect\+To\+Mqtt}} (char $\ast$client\+\_\+id, char $\ast$mqtt\+\_\+server, uint16\+\_\+t mqtt\+\_\+port, char $\ast$mqtt\+\_\+user, char $\ast$mqtt\+\_\+password)
+\begin{DoxyCompactList}\small\item\em Connect to a MQTT broker with authentication. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_io_t_a6033a2b376f85c2f912f77e9af0a1a2a}{connect\+To\+Mqtt}} (char $\ast$client\+\_\+id, char $\ast$mqtt\+\_\+server, uint16\+\_\+t mqtt\+\_\+port)
+\begin{DoxyCompactList}\small\item\em Connect to a MQTT broker without authentication. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_io_t_af9365947904e2fe67965db7c12164eac}{mqtt\+Connected}} ()
+\begin{DoxyCompactList}\small\item\em Check if the MQTT is connected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a634dfa685dd2e7d5c0a442d4a85c3e1a}\label{class_e_s_p_mega_io_t_a634dfa685dd2e7d5c0a442d4a85c3e1a}} 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a634dfa685dd2e7d5c0a442d4a85c3e1a}{disconnect\+From\+Mqtt}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from the MQTT broker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_ae70528fc480706a1e7aeed202c40736e}{publish}} (const char $\ast$topic, const char $\ast$payload)
+\begin{DoxyCompactList}\small\item\em Publish a message to a topic. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_e_s_p_mega_io_t_aedcb19a15a935777f1ccc51f24b7c07d}{register\+Mqtt\+Callback}} (std\+::function$<$ void(char $\ast$, char $\ast$)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Register a callback for MQTT messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a9a8ef4e5e7b98c0b77e339a5b4b847cf}{unregister\+Mqtt\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregister a callback. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_e_s_p_mega_io_t_abb24084f6a8a448b4f6aea35bd4c7679}{register\+Relative\+Mqtt\+Callback}} (std\+::function$<$ void(char $\ast$, char $\ast$)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Register a callback for MQTT messages relative to the base topic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a34be62570b94a256c2cda7f354cc9909}{unregister\+Relative\+Mqtt\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregister a relative MQTT callback. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_e_s_p_mega_io_t_adabafbe2c88bf37b3a90e0e1373ab752}{register\+Subscribe\+Callback}} (std\+::function$<$ void(void)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Register a function to be called when the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object is subscribing to topics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a0816eddc3a7bfd7685959a8cc6dec129}{unregister\+Subscribe\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregister a subscribe callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a92e3a81d45a4389e5945c46486182e9b}{set\+Base\+Topic}} (char $\ast$base\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Set the base topic for the IoT. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_a2da8aec25ea170e5974f786798191fcb}{bind\+Ethernet\+Interface}} (ETHClass $\ast$ethernet\+Iface)
+\begin{DoxyCompactList}\small\item\em Bind an ethernet interface to the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_io_t_acb0b6d3616f924ae793981f8653b142f}{network\+Connected}} ()
+\begin{DoxyCompactList}\small\item\em Check if the network is connected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_io_t_afd192a63876d86300086522e701905de}{bind\+FRAM}} (FRAM $\ast$fram)
+\begin{DoxyCompactList}\small\item\em Bind a FRAM object to the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_io_t_component}{Io\+TComponent}} $\ast$ \mbox{\hyperlink{class_e_s_p_mega_io_t_a667661f7ed0bcd013561c3f5d637a4fd}{get\+Component}} (uint8\+\_\+t card\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}} object for a card. \end{DoxyCompactList}\item 
+IPAddress \mbox{\hyperlink{class_e_s_p_mega_io_t_ae6aad5ece3729e612352e2256e44bbec}{get\+ETHIp}} ()
+\begin{DoxyCompactList}\small\item\em Get the Ethernet IP Address. \end{DoxyCompactList}\item 
+IPAddress \mbox{\hyperlink{class_e_s_p_mega_io_t_ae0f8dc4901511ccd52cb81409bc50574}{get\+Wifi\+Ip}} ()
+\begin{DoxyCompactList}\small\item\em Get the Wifi IP address. \end{DoxyCompactList}\item 
+IPAddress \mbox{\hyperlink{class_e_s_p_mega_io_t_a6fa8479ba86d6cafb32a82cbde94cdb0}{get\+Ip}} ()
+\begin{DoxyCompactList}\small\item\em Get the IP address of the currently active network interface. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_e_s_p_mega_io_t_a3ed44db4c8d69dc8f9f611acfeb609cf}{get\+ETHMac}} ()
+\begin{DoxyCompactList}\small\item\em Get the MAC Address of the Ethernet interface. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_e_s_p_mega_io_t_ae6bb7062882ac48df2f4ea98618e5e30}{get\+Wifi\+Mac}} ()
+\begin{DoxyCompactList}\small\item\em Get the MAC Address of the Wifi interface. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_e_s_p_mega_io_t_ac2c1a59d86f1c8ca3c76ec4870614163}{get\+Mac}} ()
+\begin{DoxyCompactList}\small\item\em Get the MAC Address of the currently active network interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} class is a class that is used to interface with the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} IoT module. 
+
+This class allows you to register IoT components and interface with them through MQTT. This class also manages the network and MQTT connections for you. Supports both Wi\+Fi and Ethernet. Also allows you to save and load network and MQTT configurations to and from FRAM. Also provides MQTT helpers for publishing and subscribing to topics. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_affa7c3b532147b2c485f5c3113f0a8a3}\label{class_e_s_p_mega_io_t_affa7c3b532147b2c485f5c3113f0a8a3}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!ESPMegaIoT@{ESPMegaIoT}}
+\index{ESPMegaIoT@{ESPMegaIoT}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{ESPMegaIoT()}{ESPMegaIoT()}}
+{\footnotesize\ttfamily ESPMega\+Io\+T\+::\+ESPMega\+IoT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. 
+
+\begin{DoxyNote}{Note}
+You shold not create this object directly, Instead, you should use the ESPMega\+PRO\+::iot object 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a2da8aec25ea170e5974f786798191fcb}\label{class_e_s_p_mega_io_t_a2da8aec25ea170e5974f786798191fcb}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!bindEthernetInterface@{bindEthernetInterface}}
+\index{bindEthernetInterface@{bindEthernetInterface}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{bindEthernetInterface()}{bindEthernetInterface()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::bind\+Ethernet\+Interface (\begin{DoxyParamCaption}\item[{ETHClass $\ast$}]{ethernet\+Iface }\end{DoxyParamCaption})}
+
+
+
+Bind an ethernet interface to the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ethernet\+Iface} & The ethernet interface to bind (ETH for \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} R3) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_afd192a63876d86300086522e701905de}\label{class_e_s_p_mega_io_t_afd192a63876d86300086522e701905de}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!bindFRAM@{bindFRAM}}
+\index{bindFRAM@{bindFRAM}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{bindFRAM()}{bindFRAM()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::bind\+FRAM (\begin{DoxyParamCaption}\item[{FRAM $\ast$}]{fram }\end{DoxyParamCaption})}
+
+
+
+Bind a FRAM object to the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. 
+
+\begin{DoxyNote}{Note}
+This class is hardcode to use the FRAM address 34-\/300
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em fram} & The FRAM object to bind \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_afd192a63876d86300086522e701905de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a6033a2b376f85c2f912f77e9af0a1a2a}\label{class_e_s_p_mega_io_t_a6033a2b376f85c2f912f77e9af0a1a2a}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!connectToMqtt@{connectToMqtt}}
+\index{connectToMqtt@{connectToMqtt}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{connectToMqtt()}{connectToMqtt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool ESPMega\+Io\+T\+::connect\+To\+Mqtt (\begin{DoxyParamCaption}\item[{char $\ast$}]{client\+\_\+id,  }\item[{char $\ast$}]{mqtt\+\_\+server,  }\item[{uint16\+\_\+t}]{mqtt\+\_\+port }\end{DoxyParamCaption})}
+
+
+
+Connect to a MQTT broker without authentication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+\_\+id} & The client id to use \\
+\hline
+{\em mqtt\+\_\+server} & The MQTT server to connect to \\
+\hline
+{\em mqtt\+\_\+port} & The MQTT port to connect to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the connection is successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a0dc0ebc659c880d5b17c85f341987535}\label{class_e_s_p_mega_io_t_a0dc0ebc659c880d5b17c85f341987535}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!connectToMqtt@{connectToMqtt}}
+\index{connectToMqtt@{connectToMqtt}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{connectToMqtt()}{connectToMqtt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool ESPMega\+Io\+T\+::connect\+To\+Mqtt (\begin{DoxyParamCaption}\item[{char $\ast$}]{client\+\_\+id,  }\item[{char $\ast$}]{mqtt\+\_\+server,  }\item[{uint16\+\_\+t}]{mqtt\+\_\+port,  }\item[{char $\ast$}]{mqtt\+\_\+user,  }\item[{char $\ast$}]{mqtt\+\_\+password }\end{DoxyParamCaption})}
+
+
+
+Connect to a MQTT broker with authentication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+\_\+id} & The client id to use \\
+\hline
+{\em mqtt\+\_\+server} & The MQTT server to connect to \\
+\hline
+{\em mqtt\+\_\+port} & The MQTT port to connect to \\
+\hline
+{\em mqtt\+\_\+user} & The MQTT username to use \\
+\hline
+{\em mqtt\+\_\+password} & The MQTT password to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the connection is successful, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_af7728b5bfaf7cb4849c127b739dda575}\label{class_e_s_p_mega_io_t_af7728b5bfaf7cb4849c127b739dda575}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!connectToWifi@{connectToWifi}}
+\index{connectToWifi@{connectToWifi}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{connectToWifi()}{connectToWifi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::connect\+To\+Wifi (\begin{DoxyParamCaption}\item[{char $\ast$}]{ssid }\end{DoxyParamCaption})}
+
+
+
+Connect to a unsecured wifi network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ssid} & The SSID of the wifi network \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ac90fb46005eeb8528bc6f7108d4a7c06}\label{class_e_s_p_mega_io_t_ac90fb46005eeb8528bc6f7108d4a7c06}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!connectToWifi@{connectToWifi}}
+\index{connectToWifi@{connectToWifi}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{connectToWifi()}{connectToWifi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::connect\+To\+Wifi (\begin{DoxyParamCaption}\item[{char $\ast$}]{ssid,  }\item[{char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+Connect to a wifi network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ssid} & The SSID of the wifi network \\
+\hline
+{\em password} & The password of the wifi network \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_ac90fb46005eeb8528bc6f7108d4a7c06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a667661f7ed0bcd013561c3f5d637a4fd}\label{class_e_s_p_mega_io_t_a667661f7ed0bcd013561c3f5d637a4fd}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}} $\ast$ ESPMega\+Io\+T\+::get\+Component (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get the \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}} object for a card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card\+\_\+id} & The id of the card \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}} object for the card 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ae6aad5ece3729e612352e2256e44bbec}\label{class_e_s_p_mega_io_t_ae6aad5ece3729e612352e2256e44bbec}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getETHIp@{getETHIp}}
+\index{getETHIp@{getETHIp}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getETHIp()}{getETHIp()}}
+{\footnotesize\ttfamily IPAddress ESPMega\+Io\+T\+::get\+ETHIp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Ethernet IP Address. 
+
+\begin{DoxyReturn}{Returns}
+The Ethernet IP Address 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_e_s_p_mega_io_t_ae6aad5ece3729e612352e2256e44bbec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a3ed44db4c8d69dc8f9f611acfeb609cf}\label{class_e_s_p_mega_io_t_a3ed44db4c8d69dc8f9f611acfeb609cf}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getETHMac@{getETHMac}}
+\index{getETHMac@{getETHMac}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getETHMac()}{getETHMac()}}
+{\footnotesize\ttfamily String ESPMega\+Io\+T\+::get\+ETHMac (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the MAC Address of the Ethernet interface. 
+
+\begin{DoxyReturn}{Returns}
+The MAC Address of the Ethernet interface 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_a3ed44db4c8d69dc8f9f611acfeb609cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a6fa8479ba86d6cafb32a82cbde94cdb0}\label{class_e_s_p_mega_io_t_a6fa8479ba86d6cafb32a82cbde94cdb0}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getIp@{getIp}}
+\index{getIp@{getIp}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getIp()}{getIp()}}
+{\footnotesize\ttfamily IPAddress ESPMega\+Io\+T\+::get\+Ip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the IP address of the currently active network interface. 
+
+\begin{DoxyReturn}{Returns}
+The IP address of the currently active network interface 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_e_s_p_mega_io_t_a6fa8479ba86d6cafb32a82cbde94cdb0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ac2c1a59d86f1c8ca3c76ec4870614163}\label{class_e_s_p_mega_io_t_ac2c1a59d86f1c8ca3c76ec4870614163}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getMac@{getMac}}
+\index{getMac@{getMac}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getMac()}{getMac()}}
+{\footnotesize\ttfamily String ESPMega\+Io\+T\+::get\+Mac (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the MAC Address of the currently active network interface. 
+
+\begin{DoxyReturn}{Returns}
+The MAC Address of the currently active network interface 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_ac2c1a59d86f1c8ca3c76ec4870614163_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a831d8c372ae931eeaabbe999dad27e5c}\label{class_e_s_p_mega_io_t_a831d8c372ae931eeaabbe999dad27e5c}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getMqttConfig@{getMqttConfig}}
+\index{getMqttConfig@{getMqttConfig}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getMqttConfig()}{getMqttConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_mqtt_config}{Mqtt\+Config}} $\ast$ ESPMega\+Io\+T\+::get\+Mqtt\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the MQTT config. 
+
+\begin{DoxyWarning}{Warning}
+You should not modify the returned struct directly
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+The MQTT config struct 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_a831d8c372ae931eeaabbe999dad27e5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ab0ee8902014f9d08c97f0ffe11f66133}\label{class_e_s_p_mega_io_t_ab0ee8902014f9d08c97f0ffe11f66133}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getNetworkConfig@{getNetworkConfig}}
+\index{getNetworkConfig@{getNetworkConfig}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getNetworkConfig()}{getNetworkConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_network_config}{Network\+Config}} $\ast$ ESPMega\+Io\+T\+::get\+Network\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the network config. 
+
+\begin{DoxyWarning}{Warning}
+You should not modify the returned struct directly
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+The network config struct 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_ab0ee8902014f9d08c97f0ffe11f66133_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ae0f8dc4901511ccd52cb81409bc50574}\label{class_e_s_p_mega_io_t_ae0f8dc4901511ccd52cb81409bc50574}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getWifiIp@{getWifiIp}}
+\index{getWifiIp@{getWifiIp}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getWifiIp()}{getWifiIp()}}
+{\footnotesize\ttfamily IPAddress ESPMega\+Io\+T\+::get\+Wifi\+Ip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Wifi IP address. 
+
+\begin{DoxyReturn}{Returns}
+The Wifi IP address 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_e_s_p_mega_io_t_ae0f8dc4901511ccd52cb81409bc50574_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ae6bb7062882ac48df2f4ea98618e5e30}\label{class_e_s_p_mega_io_t_ae6bb7062882ac48df2f4ea98618e5e30}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!getWifiMac@{getWifiMac}}
+\index{getWifiMac@{getWifiMac}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{getWifiMac()}{getWifiMac()}}
+{\footnotesize\ttfamily String ESPMega\+Io\+T\+::get\+Wifi\+Mac (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the MAC Address of the Wifi interface. 
+
+\begin{DoxyReturn}{Returns}
+The MAC Address of the Wifi interface 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_ae6bb7062882ac48df2f4ea98618e5e30_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a12baf9ad36896f400c5c77fa7a32d3de}\label{class_e_s_p_mega_io_t_a12baf9ad36896f400c5c77fa7a32d3de}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!intr\_begin@{intr\_begin}}
+\index{intr\_begin@{intr\_begin}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{intr\_begin()}{intr\_begin()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::intr\+\_\+begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$}]{cards\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Begin the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cards} & The array of \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} objects \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_a12baf9ad36896f400c5c77fa7a32d3de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a260083ed6e8710b7321f18942ad6eef8}\label{class_e_s_p_mega_io_t_a260083ed6e8710b7321f18942ad6eef8}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!loop@{loop}}
+\index{loop@{loop}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main loop for the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object. 
+
+\begin{DoxyNote}{Note}
+Normally you should not call this function, Instead, you should call \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a7bd135e51c69c802aaacda4cf016e599}{ESPMega\+PRO\+::loop()}} 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_e_s_p_mega_io_t_a260083ed6e8710b7321f18942ad6eef8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_af9365947904e2fe67965db7c12164eac}\label{class_e_s_p_mega_io_t_af9365947904e2fe67965db7c12164eac}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!mqttConnected@{mqttConnected}}
+\index{mqttConnected@{mqttConnected}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{mqttConnected()}{mqttConnected()}}
+{\footnotesize\ttfamily bool ESPMega\+Io\+T\+::mqtt\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the MQTT is connected. 
+
+\begin{DoxyReturn}{Returns}
+True if the MQTT is connected, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_acb0b6d3616f924ae793981f8653b142f}\label{class_e_s_p_mega_io_t_acb0b6d3616f924ae793981f8653b142f}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!networkConnected@{networkConnected}}
+\index{networkConnected@{networkConnected}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{networkConnected()}{networkConnected()}}
+{\footnotesize\ttfamily bool ESPMega\+Io\+T\+::network\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the network is connected. 
+
+\begin{DoxyReturn}{Returns}
+True if the network is connected, false otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_io_t_acb0b6d3616f924ae793981f8653b142f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ae70528fc480706a1e7aeed202c40736e}\label{class_e_s_p_mega_io_t_ae70528fc480706a1e7aeed202c40736e}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!publish@{publish}}
+\index{publish@{publish}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::publish (\begin{DoxyParamCaption}\item[{const char $\ast$}]{topic,  }\item[{const char $\ast$}]{payload }\end{DoxyParamCaption})}
+
+
+
+Publish a message to a topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic to publish to \\
+\hline
+{\em payload} & The payload to publish \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a740ea6dc48ae78b87d48afc39f00d992}\label{class_e_s_p_mega_io_t_a740ea6dc48ae78b87d48afc39f00d992}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!publishRelative@{publishRelative}}
+\index{publishRelative@{publishRelative}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{publishRelative()}{publishRelative()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::publish\+Relative (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload }\end{DoxyParamCaption})}
+
+
+
+Publish a message relative to the base topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic to publish to \\
+\hline
+{\em payload} & The payload to publish \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_ae7323d1d3ff23494b68a748c1eb57891}\label{class_e_s_p_mega_io_t_ae7323d1d3ff23494b68a748c1eb57891}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!registerCard@{registerCard}}
+\index{registerCard@{registerCard}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{registerCard()}{registerCard()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::register\+Card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Register an existing card for use with IoT. 
+
+This function registers an existing card for use with IoT The card should be installed using \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a7064148ad97cdb5fc871789fbf2ba450}{ESPMega\+PRO\+::install\+Card()}} before calling this function
+
+
+\begin{DoxyParams}{Parameters}
+{\em card\+\_\+id} & The id of the card \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_aedcb19a15a935777f1ccc51f24b7c07d}\label{class_e_s_p_mega_io_t_aedcb19a15a935777f1ccc51f24b7c07d}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!registerMqttCallback@{registerMqttCallback}}
+\index{registerMqttCallback@{registerMqttCallback}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{registerMqttCallback()}{registerMqttCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t ESPMega\+Io\+T\+::register\+Mqtt\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(char $\ast$, char $\ast$)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Register a callback for MQTT messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler for the callback 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_abb24084f6a8a448b4f6aea35bd4c7679}\label{class_e_s_p_mega_io_t_abb24084f6a8a448b4f6aea35bd4c7679}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!registerRelativeMqttCallback@{registerRelativeMqttCallback}}
+\index{registerRelativeMqttCallback@{registerRelativeMqttCallback}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{registerRelativeMqttCallback()}{registerRelativeMqttCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t ESPMega\+Io\+T\+::register\+Relative\+Mqtt\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(char $\ast$, char $\ast$)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Register a callback for MQTT messages relative to the base topic. 
+
+The message\textquotesingle{}s base topic will be removed before calling the callback
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler for the callback 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_adabafbe2c88bf37b3a90e0e1373ab752}\label{class_e_s_p_mega_io_t_adabafbe2c88bf37b3a90e0e1373ab752}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!registerSubscribeCallback@{registerSubscribeCallback}}
+\index{registerSubscribeCallback@{registerSubscribeCallback}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{registerSubscribeCallback()}{registerSubscribeCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t ESPMega\+Io\+T\+::register\+Subscribe\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(void)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Register a function to be called when the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object is subscribing to topics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler for the callback 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a92e3a81d45a4389e5945c46486182e9b}\label{class_e_s_p_mega_io_t_a92e3a81d45a4389e5945c46486182e9b}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!setBaseTopic@{setBaseTopic}}
+\index{setBaseTopic@{setBaseTopic}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{setBaseTopic()}{setBaseTopic()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::set\+Base\+Topic (\begin{DoxyParamCaption}\item[{char $\ast$}]{base\+\_\+topic }\end{DoxyParamCaption})}
+
+
+
+Set the base topic for the IoT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+\_\+topic} & The base topic \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a16b33cc73cccefd62577dca8f015ee43}\label{class_e_s_p_mega_io_t_a16b33cc73cccefd62577dca8f015ee43}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!setMqttConfig@{setMqttConfig}}
+\index{setMqttConfig@{setMqttConfig}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{setMqttConfig()}{setMqttConfig()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::set\+Mqtt\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_mqtt_config}{Mqtt\+Config}}}]{mqtt\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Set the MQTT config. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mqtt\+\_\+config} & The MQTT config struct \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a426932179c2d84864e3b1fb269723fc6}\label{class_e_s_p_mega_io_t_a426932179c2d84864e3b1fb269723fc6}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!setNetworkConfig@{setNetworkConfig}}
+\index{setNetworkConfig@{setNetworkConfig}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{setNetworkConfig()}{setNetworkConfig()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::set\+Network\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_network_config}{Network\+Config}}}]{network\+\_\+config }\end{DoxyParamCaption})}
+
+
+
+Set the network config. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em network\+\_\+config} & The network config struct \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a098f74442df4c0b5059f0d94921c64f5}\label{class_e_s_p_mega_io_t_a098f74442df4c0b5059f0d94921c64f5}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::subscribe (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic }\end{DoxyParamCaption})}
+
+
+
+Subscribe to a topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic to subscribe to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a98e8c822491c06be6823328e133507a1}\label{class_e_s_p_mega_io_t_a98e8c822491c06be6823328e133507a1}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!subscribeRelative@{subscribeRelative}}
+\index{subscribeRelative@{subscribeRelative}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{subscribeRelative()}{subscribeRelative()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::subscribe\+Relative (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic }\end{DoxyParamCaption})}
+
+
+
+Subscribe to a topic relative to the base topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic to subscribe to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a11e8435455ffecc362eb4de09087d43a}\label{class_e_s_p_mega_io_t_a11e8435455ffecc362eb4de09087d43a}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!unregisterCard@{unregisterCard}}
+\index{unregisterCard@{unregisterCard}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{unregisterCard()}{unregisterCard()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::unregister\+Card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Unregister a card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card\+\_\+id} & The id of the card \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a9a8ef4e5e7b98c0b77e339a5b4b847cf}\label{class_e_s_p_mega_io_t_a9a8ef4e5e7b98c0b77e339a5b4b847cf}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!unregisterMqttCallback@{unregisterMqttCallback}}
+\index{unregisterMqttCallback@{unregisterMqttCallback}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{unregisterMqttCallback()}{unregisterMqttCallback()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::unregister\+Mqtt\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregister a callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler of the callback \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a34be62570b94a256c2cda7f354cc9909}\label{class_e_s_p_mega_io_t_a34be62570b94a256c2cda7f354cc9909}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!unregisterRelativeMqttCallback@{unregisterRelativeMqttCallback}}
+\index{unregisterRelativeMqttCallback@{unregisterRelativeMqttCallback}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{unregisterRelativeMqttCallback()}{unregisterRelativeMqttCallback()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::unregister\+Relative\+Mqtt\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregister a relative MQTT callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler of the callback \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a0816eddc3a7bfd7685959a8cc6dec129}\label{class_e_s_p_mega_io_t_a0816eddc3a7bfd7685959a8cc6dec129}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!unregisterSubscribeCallback@{unregisterSubscribeCallback}}
+\index{unregisterSubscribeCallback@{unregisterSubscribeCallback}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{unregisterSubscribeCallback()}{unregisterSubscribeCallback()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::unregister\+Subscribe\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregister a subscribe callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler of the callback \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a30629a0c025c0f20d84ab8ff7a9c437f}\label{class_e_s_p_mega_io_t_a30629a0c025c0f20d84ab8ff7a9c437f}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!unsubscribeFromTopic@{unsubscribeFromTopic}}
+\index{unsubscribeFromTopic@{unsubscribeFromTopic}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{unsubscribeFromTopic()}{unsubscribeFromTopic()}}
+{\footnotesize\ttfamily void ESPMega\+Io\+T\+::unsubscribe\+From\+Topic (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic }\end{DoxyParamCaption})}
+
+
+
+Unsubscribe from a topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic to unsubscribe from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_io_t_a8c18fddf81218ea5c69bca2eb064167f}\label{class_e_s_p_mega_io_t_a8c18fddf81218ea5c69bca2eb064167f}} 
+\index{ESPMegaIoT@{ESPMegaIoT}!wifiConnected@{wifiConnected}}
+\index{wifiConnected@{wifiConnected}!ESPMegaIoT@{ESPMegaIoT}}
+\doxysubsubsection{\texorpdfstring{wifiConnected()}{wifiConnected()}}
+{\footnotesize\ttfamily bool ESPMega\+Io\+T\+::wifi\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Check if the wifi is connected. 
+
+\begin{DoxyReturn}{Returns}
+True if the wifi is connected, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/ESPMega\+Io\+T.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/ESPMega\+Io\+T.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+Example \`{}\`{}\`{} \#include \char`\"{}\+ESPMega\+PRO.\+h\char`\"{}
+
+void setup() \{ ESPMega\+\_\+begin(); // Must be called first in setup
+
+ESPMega\+\_\+analog\+Write(5,2048) // Write PWM value of 2048 to pin 5 \}
+
+void loop() \{ ESPMega\+\_\+loop(); //\+Must be called in loop
+
+bool pin9 = ESPMega\+\_\+digital\+Read(9) // Read Digital Input Pin 9 ESPMega\+\_\+digital\+Write(9,pin9) // Mirror Input Pin 9 to Output Pin 9 \} 

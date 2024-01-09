@@ -1,0 +1,647 @@
+\hypertarget{class_e_s_p_mega_display}{}\doxysection{ESPMega\+Display Class Reference}
+\label{class_e_s_p_mega_display}\index{ESPMegaDisplay@{ESPMegaDisplay}}
+
+
+The \mbox{\hyperlink{class_e_s_p_mega_display}{ESPMega\+Display}} class is a class for controlling the \mbox{\hyperlink{class_e_s_p_mega_display}{ESPMega\+Display}}.  
+
+
+
+
+{\ttfamily \#include $<$ESPMega\+Display.\+hpp$>$}
+
+
+
+Inheritance diagram for ESPMega\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_e_s_p_mega_display__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_e_s_p_mega_display_a4360083078b2ece774a0ec1c400aa72a}{ESPMega\+Display}} (Hardware\+Serial $\ast$display\+Adapter)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{class_e_s_p_mega_display}{ESPMega\+Display}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_adfd6642f84055724abf6549aa4ed463a}\label{class_e_s_p_mega_display_adfd6642f84055724abf6549aa4ed463a}} 
+void \mbox{\hyperlink{class_e_s_p_mega_display_adfd6642f84055724abf6549aa4ed463a}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_a465333c65fdbdbd62f6a8982b03ecf3e}\label{class_e_s_p_mega_display_a465333c65fdbdbd62f6a8982b03ecf3e}} 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a465333c65fdbdbd62f6a8982b03ecf3e}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The main loop function of the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_a073d4f8a7da95b9b4acd963ab20dbca9}\label{class_e_s_p_mega_display_a073d4f8a7da95b9b4acd963ab20dbca9}} 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a073d4f8a7da95b9b4acd963ab20dbca9}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Restarts the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a22cc6197c8f23767525f82157f6772fa}{set\+Brightness}} (int value)
+\begin{DoxyCompactList}\small\item\em Sets the brightness of the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_adb6d1860150abc6b5ef20ed0e61b2ba2}{set\+Volume}} (int value)
+\begin{DoxyCompactList}\small\item\em Sets the volume of the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a66059d32f493fba86c55e092bbf248bb}{jump\+To\+Page}} (int page)
+\begin{DoxyCompactList}\small\item\em Jumps to the specified page on the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a5374292e7c2a0eec289de7c2130e0ac9}{set\+String}} (const char $\ast$component, const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Sets the value of a string component on the display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a76be0c9c5099711323d30ee429a8133a}{set\+Number}} (const char $\ast$component, int value)
+\begin{DoxyCompactList}\small\item\em Sets the value of a number component on the display. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{class_e_s_p_mega_display_a69bf78095709e4d36d7ceef987909dfe}{get\+String}} (const char $\ast$component)
+\begin{DoxyCompactList}\small\item\em Gets the value of a string component from the display. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_display_aa9ee805cf25d3f70b98ff650da742e9a}{get\+String\+To\+Buffer}} (const char $\ast$component, char $\ast$buffer, uint8\+\_\+t buffer\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Gets the value of a number component from the display and stores it in a buffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_e_s_p_mega_display_a72fe852174fb83d438cbc7ea70a9ec6f}{get\+Number}} (const char $\ast$component)
+\begin{DoxyCompactList}\small\item\em Gets the value of a number component from the display. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_e_s_p_mega_display_ab4bc0794bffbe4dea647649e1b41c07d}{register\+Touch\+Callback}} (std\+::function$<$ void(uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback function for touch events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a0060a66f442a2fc13b16e7294b0e2faf}{unregister\+Touch\+Callback}} (uint16\+\_\+t handle)
+\begin{DoxyCompactList}\small\item\em Unregisters a callback function for touch events. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_e_s_p_mega_display_a435fef88a91a498503250f95d72f30ab}{register\+Page\+Change\+Callback}} (std\+::function$<$ void(uint8\+\_\+t)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback function for page change events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_aa129bc1acd35b13fa2777a14ebee61b7}{unregister\+Page\+Change\+Callback}} (uint16\+\_\+t handle)
+\begin{DoxyCompactList}\small\item\em Unregisters a callback function for page change events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_display_ae442963a5ed99212bba46c41f3b7b215}{recieve\+Serial\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Receives and processes serial commands from the display adapter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_display_ada566f9769dd3c06391e5845dc7adc92}{recieve\+Serial\+Command}} (bool process)
+\begin{DoxyCompactList}\small\item\em Receives and processes serial commands from the display adapter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a65da2ffe1baa4d9e1e886467b2908932}{process\+Serial\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Processes the received serial command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_af7ca531b96d9a70d75b60c7acd5e0c70}{process\+Touch\+Payload}} ()
+\begin{DoxyCompactList}\small\item\em Processes the touch event payload. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a50fbc6fa94f8e88ba1d008543a2c7535}{process\+Page\+Report\+Payload}} ()
+\begin{DoxyCompactList}\small\item\em Processes the page report event payload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_a8bfb30429f6e11f4719480bfc6f83d72}\label{class_e_s_p_mega_display_a8bfb30429f6e11f4719480bfc6f83d72}} 
+void \mbox{\hyperlink{class_e_s_p_mega_display_a8bfb30429f6e11f4719480bfc6f83d72}{send\+Stop\+Bytes}} ()
+\begin{DoxyCompactList}\small\item\em Sends stop bytes to the display adapter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_display_af56f2fad9fa8c4a75ef52f967953d5da}{send\+Command}} (char $\ast$command)
+\begin{DoxyCompactList}\small\item\em Sends a command to the display adapter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_display_a6f0c3ec00e8a7d52cf9572ebe54ef367}{payload\+Is\+Valid}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the received payload is valid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_display_a152ac85f3b883e5866ad303b8c53dc9c}{wait\+For\+Valid\+Payload}} (uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Waits for a valid payload from the display adapter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_aba3f1486492ec4c48937c62234717b8b}\label{class_e_s_p_mega_display_aba3f1486492ec4c48937c62234717b8b}} 
+uint8\+\_\+t {\bfseries current\+Page}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_ad48219cdaf6da8ce2228f801626a5687}\label{class_e_s_p_mega_display_ad48219cdaf6da8ce2228f801626a5687}} 
+uint8\+\_\+t {\bfseries rx\+\_\+buffer\+\_\+index}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_a334d707f1d7289255773076eaac2bb14}\label{class_e_s_p_mega_display_a334d707f1d7289255773076eaac2bb14}} 
+char {\bfseries rx\+\_\+buffer} \mbox{[}256\mbox{]}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_a2e9835362d046e53c5717ee5c247ea36}\label{class_e_s_p_mega_display_a2e9835362d046e53c5717ee5c247ea36}} 
+char {\bfseries tx\+\_\+buffer} \mbox{[}256\mbox{]}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_a6ccab68e98c5dc32d4d3bc4ca10d81bc}\label{class_e_s_p_mega_display_a6ccab68e98c5dc32d4d3bc4ca10d81bc}} 
+Hardware\+Serial $\ast$ {\bfseries display\+Adapter}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_ab2e0e290d9ba1b8d2aaea4924a6c0295}\label{class_e_s_p_mega_display_ab2e0e290d9ba1b8d2aaea4924a6c0295}} 
+std\+::map$<$ uint16\+\_\+t, std\+::function$<$ void(uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)$>$ $>$ {\bfseries touch\+\_\+callbacks}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_display_a56fd8793813104acdd2af0ab0968b198}\label{class_e_s_p_mega_display_a56fd8793813104acdd2af0ab0968b198}} 
+std\+::map$<$ uint16\+\_\+t, std\+::function$<$ void(uint8\+\_\+t)$>$ $>$ {\bfseries page\+\_\+change\+\_\+callbacks}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_e_s_p_mega_display}{ESPMega\+Display}} class is a class for controlling the \mbox{\hyperlink{class_e_s_p_mega_display}{ESPMega\+Display}}. 
+
+\begin{DoxyNote}{Note}
+The \mbox{\hyperlink{class_e_s_p_mega_display}{ESPMega\+Display}} is a UART controlled display. 
+
+Connect the Display\textquotesingle{}s TX pin to the ESPMega\textquotesingle{}s RX pin and the Display\textquotesingle{}s RX pin to the ESPMega\textquotesingle{}s TX pin. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a4360083078b2ece774a0ec1c400aa72a}\label{class_e_s_p_mega_display_a4360083078b2ece774a0ec1c400aa72a}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!ESPMegaDisplay@{ESPMegaDisplay}}
+\index{ESPMegaDisplay@{ESPMegaDisplay}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{ESPMegaDisplay()}{ESPMegaDisplay()}}
+{\footnotesize\ttfamily ESPMega\+Display\+::\+ESPMega\+Display (\begin{DoxyParamCaption}\item[{Hardware\+Serial $\ast$}]{display\+Adapter }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{class_e_s_p_mega_display}{ESPMega\+Display}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Adapter} & The serial adapter connected to the display. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a72fe852174fb83d438cbc7ea70a9ec6f}\label{class_e_s_p_mega_display_a72fe852174fb83d438cbc7ea70a9ec6f}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!getNumber@{getNumber}}
+\index{getNumber@{getNumber}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{getNumber()}{getNumber()}}
+{\footnotesize\ttfamily uint32\+\_\+t ESPMega\+Display\+::get\+Number (\begin{DoxyParamCaption}\item[{const char $\ast$}]{component }\end{DoxyParamCaption})}
+
+
+
+Gets the value of a number component from the display. 
+
+\begin{DoxyWarning}{Warning}
+This function is blocking. 
+
+If the display does not respond or is not connected, this function will block for up to DISPLAY\+\_\+\+FETCH\+\_\+\+RETRY\+\_\+\+COUNT $\ast$ DISPLAY\+\_\+\+FETCH\+\_\+\+TIMEOUT milliseconds. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em component} & The component name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the number component. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a72fe852174fb83d438cbc7ea70a9ec6f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a69bf78095709e4d36d7ceef987909dfe}\label{class_e_s_p_mega_display_a69bf78095709e4d36d7ceef987909dfe}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!getString@{getString}}
+\index{getString@{getString}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{getString()}{getString()}}
+{\footnotesize\ttfamily const char $\ast$ ESPMega\+Display\+::get\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{component }\end{DoxyParamCaption})}
+
+
+
+Gets the value of a string component from the display. 
+
+\begin{DoxyWarning}{Warning}
+This function is blocking. 
+
+If the display does not respond or is not connected, this function will block for up to DISPLAY\+\_\+\+FETCH\+\_\+\+RETRY\+\_\+\+COUNT $\ast$ DISPLAY\+\_\+\+FETCH\+\_\+\+TIMEOUT milliseconds. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em component} & The component name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the string component. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The returned char array must be freed after use. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a69bf78095709e4d36d7ceef987909dfe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_aa9ee805cf25d3f70b98ff650da742e9a}\label{class_e_s_p_mega_display_aa9ee805cf25d3f70b98ff650da742e9a}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!getStringToBuffer@{getStringToBuffer}}
+\index{getStringToBuffer@{getStringToBuffer}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{getStringToBuffer()}{getStringToBuffer()}}
+{\footnotesize\ttfamily bool ESPMega\+Display\+::get\+String\+To\+Buffer (\begin{DoxyParamCaption}\item[{const char $\ast$}]{component,  }\item[{char $\ast$}]{buffer,  }\item[{uint8\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Gets the value of a number component from the display and stores it in a buffer. 
+
+\begin{DoxyWarning}{Warning}
+This function is blocking. 
+
+If the display does not respond or is not connected, this function will block for up to DISPLAY\+\_\+\+FETCH\+\_\+\+RETRY\+\_\+\+COUNT $\ast$ DISPLAY\+\_\+\+FETCH\+\_\+\+TIMEOUT milliseconds. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em component} & The component name. \\
+\hline
+{\em buffer} & The buffer to store the value. \\
+\hline
+{\em buffer\+\_\+size} & The size of the buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value is successfully stored in the buffer, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_aa9ee805cf25d3f70b98ff650da742e9a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a66059d32f493fba86c55e092bbf248bb}\label{class_e_s_p_mega_display_a66059d32f493fba86c55e092bbf248bb}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!jumpToPage@{jumpToPage}}
+\index{jumpToPage@{jumpToPage}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{jumpToPage()}{jumpToPage()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::jump\+To\+Page (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption})}
+
+
+
+Jumps to the specified page on the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em page} & The page number to jump to. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a66059d32f493fba86c55e092bbf248bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a66059d32f493fba86c55e092bbf248bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a6f0c3ec00e8a7d52cf9572ebe54ef367}\label{class_e_s_p_mega_display_a6f0c3ec00e8a7d52cf9572ebe54ef367}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!payloadIsValid@{payloadIsValid}}
+\index{payloadIsValid@{payloadIsValid}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{payloadIsValid()}{payloadIsValid()}}
+{\footnotesize\ttfamily bool ESPMega\+Display\+::payload\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks if the received payload is valid. 
+
+\begin{DoxyReturn}{Returns}
+True if the payload is valid, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a6f0c3ec00e8a7d52cf9572ebe54ef367_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a50fbc6fa94f8e88ba1d008543a2c7535}\label{class_e_s_p_mega_display_a50fbc6fa94f8e88ba1d008543a2c7535}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!processPageReportPayload@{processPageReportPayload}}
+\index{processPageReportPayload@{processPageReportPayload}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{processPageReportPayload()}{processPageReportPayload()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::process\+Page\+Report\+Payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Processes the page report event payload. 
+
+\begin{DoxyNote}{Note}
+This function interacts directly with the rx\+\_\+buffer. 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a50fbc6fa94f8e88ba1d008543a2c7535_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a65da2ffe1baa4d9e1e886467b2908932}\label{class_e_s_p_mega_display_a65da2ffe1baa4d9e1e886467b2908932}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!processSerialCommand@{processSerialCommand}}
+\index{processSerialCommand@{processSerialCommand}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{processSerialCommand()}{processSerialCommand()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::process\+Serial\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Processes the received serial command. 
+
+\begin{DoxyNote}{Note}
+This function interacts directly with the rx\+\_\+buffer. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a65da2ffe1baa4d9e1e886467b2908932_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a65da2ffe1baa4d9e1e886467b2908932_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_af7ca531b96d9a70d75b60c7acd5e0c70}\label{class_e_s_p_mega_display_af7ca531b96d9a70d75b60c7acd5e0c70}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!processTouchPayload@{processTouchPayload}}
+\index{processTouchPayload@{processTouchPayload}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{processTouchPayload()}{processTouchPayload()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::process\+Touch\+Payload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Processes the touch event payload. 
+
+\begin{DoxyNote}{Note}
+This function interacts directly with the rx\+\_\+buffer. 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_af7ca531b96d9a70d75b60c7acd5e0c70_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_ae442963a5ed99212bba46c41f3b7b215}\label{class_e_s_p_mega_display_ae442963a5ed99212bba46c41f3b7b215}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!recieveSerialCommand@{recieveSerialCommand}}
+\index{recieveSerialCommand@{recieveSerialCommand}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{recieveSerialCommand()}{recieveSerialCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool ESPMega\+Display\+::recieve\+Serial\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Receives and processes serial commands from the display adapter. 
+
+\begin{DoxyReturn}{Returns}
+True if data is received, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_ae442963a5ed99212bba46c41f3b7b215_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_ada566f9769dd3c06391e5845dc7adc92}\label{class_e_s_p_mega_display_ada566f9769dd3c06391e5845dc7adc92}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!recieveSerialCommand@{recieveSerialCommand}}
+\index{recieveSerialCommand@{recieveSerialCommand}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{recieveSerialCommand()}{recieveSerialCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool ESPMega\+Display\+::recieve\+Serial\+Command (\begin{DoxyParamCaption}\item[{bool}]{process }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Receives and processes serial commands from the display adapter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process} & Flag indicating whether to process the received commands. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if data is received, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_ada566f9769dd3c06391e5845dc7adc92_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a435fef88a91a498503250f95d72f30ab}\label{class_e_s_p_mega_display_a435fef88a91a498503250f95d72f30ab}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!registerPageChangeCallback@{registerPageChangeCallback}}
+\index{registerPageChangeCallback@{registerPageChangeCallback}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{registerPageChangeCallback()}{registerPageChangeCallback()}}
+{\footnotesize\ttfamily uint16\+\_\+t ESPMega\+Display\+::register\+Page\+Change\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(uint8\+\_\+t)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Registers a callback function for page change events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handle of the callback function. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a435fef88a91a498503250f95d72f30ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_ab4bc0794bffbe4dea647649e1b41c07d}\label{class_e_s_p_mega_display_ab4bc0794bffbe4dea647649e1b41c07d}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!registerTouchCallback@{registerTouchCallback}}
+\index{registerTouchCallback@{registerTouchCallback}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{registerTouchCallback()}{registerTouchCallback()}}
+{\footnotesize\ttfamily uint16\+\_\+t ESPMega\+Display\+::register\+Touch\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Registers a callback function for touch events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handle of the callback function. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_ab4bc0794bffbe4dea647649e1b41c07d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_af56f2fad9fa8c4a75ef52f967953d5da}\label{class_e_s_p_mega_display_af56f2fad9fa8c4a75ef52f967953d5da}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!sendCommand@{sendCommand}}
+\index{sendCommand@{sendCommand}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{sendCommand()}{sendCommand()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::send\+Command (\begin{DoxyParamCaption}\item[{char $\ast$}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sends a command to the display adapter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & The command to send. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_af56f2fad9fa8c4a75ef52f967953d5da_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a22cc6197c8f23767525f82157f6772fa}\label{class_e_s_p_mega_display_a22cc6197c8f23767525f82157f6772fa}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!setBrightness@{setBrightness}}
+\index{setBrightness@{setBrightness}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{setBrightness()}{setBrightness()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::set\+Brightness (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the brightness of the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The brightness value. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a22cc6197c8f23767525f82157f6772fa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a76be0c9c5099711323d30ee429a8133a}\label{class_e_s_p_mega_display_a76be0c9c5099711323d30ee429a8133a}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!setNumber@{setNumber}}
+\index{setNumber@{setNumber}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{setNumber()}{setNumber()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::set\+Number (\begin{DoxyParamCaption}\item[{const char $\ast$}]{component,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of a number component on the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & The component name. \\
+\hline
+{\em value} & The value to set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a76be0c9c5099711323d30ee429a8133a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a5374292e7c2a0eec289de7c2130e0ac9}\label{class_e_s_p_mega_display_a5374292e7c2a0eec289de7c2130e0ac9}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!setString@{setString}}
+\index{setString@{setString}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{setString()}{setString()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::set\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{component,  }\item[{const char $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of a string component on the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & The component name. \\
+\hline
+{\em value} & The value to set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a5374292e7c2a0eec289de7c2130e0ac9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_adb6d1860150abc6b5ef20ed0e61b2ba2}\label{class_e_s_p_mega_display_adb6d1860150abc6b5ef20ed0e61b2ba2}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::set\+Volume (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the volume of the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The volume value. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_adb6d1860150abc6b5ef20ed0e61b2ba2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_display_aa129bc1acd35b13fa2777a14ebee61b7}\label{class_e_s_p_mega_display_aa129bc1acd35b13fa2777a14ebee61b7}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!unregisterPageChangeCallback@{unregisterPageChangeCallback}}
+\index{unregisterPageChangeCallback@{unregisterPageChangeCallback}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{unregisterPageChangeCallback()}{unregisterPageChangeCallback()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::unregister\+Page\+Change\+Callback (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{handle }\end{DoxyParamCaption})}
+
+
+
+Unregisters a callback function for page change events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & The handle of the callback function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a0060a66f442a2fc13b16e7294b0e2faf}\label{class_e_s_p_mega_display_a0060a66f442a2fc13b16e7294b0e2faf}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!unregisterTouchCallback@{unregisterTouchCallback}}
+\index{unregisterTouchCallback@{unregisterTouchCallback}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{unregisterTouchCallback()}{unregisterTouchCallback()}}
+{\footnotesize\ttfamily void ESPMega\+Display\+::unregister\+Touch\+Callback (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{handle }\end{DoxyParamCaption})}
+
+
+
+Unregisters a callback function for touch events. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & The handle of the callback function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_display_a152ac85f3b883e5866ad303b8c53dc9c}\label{class_e_s_p_mega_display_a152ac85f3b883e5866ad303b8c53dc9c}} 
+\index{ESPMegaDisplay@{ESPMegaDisplay}!waitForValidPayload@{waitForValidPayload}}
+\index{waitForValidPayload@{waitForValidPayload}!ESPMegaDisplay@{ESPMegaDisplay}}
+\doxysubsubsection{\texorpdfstring{waitForValidPayload()}{waitForValidPayload()}}
+{\footnotesize\ttfamily bool ESPMega\+Display\+::wait\+For\+Valid\+Payload (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Waits for a valid payload from the display adapter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout} & The timeout value in milliseconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid payload is received, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a152ac85f3b883e5866ad303b8c53dc9c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_display_a152ac85f3b883e5866ad303b8c53dc9c_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/ESPMega\+Display.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/ESPMega\+Display.\+cpp\end{DoxyCompactItemize}

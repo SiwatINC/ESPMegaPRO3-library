@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_mqtt_config" kind="struct" language="C++" prot="public">
+    <compoundname>MqttConfig</compoundname>
+    <includes refid="_e_s_p_mega_io_t_8hpp" local="no">ESPMegaIoT.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char MqttConfig::mqtt_server[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>mqtt_server</name>
+        <briefdescription>
+<para>The MQTT server address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="53" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" compoundref="_e_s_p_mega_io_t_8cpp" startline="622" endline="634">ESPMegaIoT::connectToMqtt</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" compoundref="_e_s_p_mega_io_t_8cpp" startline="593" endline="604">ESPMegaIoT::loadMqttConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" compoundref="_e_s_p_mega_io_t_8cpp" startline="609" endline="617">ESPMegaIoT::saveMqttConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_mqtt_config_1a8c562630896777b8521621f553935a49" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t MqttConfig::mqtt_port</definition>
+        <argsstring></argsstring>
+        <name>mqtt_port</name>
+        <briefdescription>
+<para>The MQTT server port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="54" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" compoundref="_e_s_p_mega_io_t_8cpp" startline="622" endline="634">ESPMegaIoT::connectToMqtt</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" compoundref="_e_s_p_mega_io_t_8cpp" startline="593" endline="604">ESPMegaIoT::loadMqttConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" compoundref="_e_s_p_mega_io_t_8cpp" startline="609" endline="617">ESPMegaIoT::saveMqttConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char MqttConfig::mqtt_user[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>mqtt_user</name>
+        <briefdescription>
+<para>The MQTT username, even if mqtt_useauth is false, this should be set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="55" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" compoundref="_e_s_p_mega_io_t_8cpp" startline="622" endline="634">ESPMegaIoT::connectToMqtt</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" compoundref="_e_s_p_mega_io_t_8cpp" startline="593" endline="604">ESPMegaIoT::loadMqttConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" compoundref="_e_s_p_mega_io_t_8cpp" startline="609" endline="617">ESPMegaIoT::saveMqttConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char MqttConfig::mqtt_password[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>mqtt_password</name>
+        <briefdescription>
+<para>The MQTT password, even if mqtt_useauth is false, this should be set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="56" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" compoundref="_e_s_p_mega_io_t_8cpp" startline="622" endline="634">ESPMegaIoT::connectToMqtt</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" compoundref="_e_s_p_mega_io_t_8cpp" startline="593" endline="604">ESPMegaIoT::loadMqttConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" compoundref="_e_s_p_mega_io_t_8cpp" startline="609" endline="617">ESPMegaIoT::saveMqttConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MqttConfig::mqtt_useauth</definition>
+        <argsstring></argsstring>
+        <name>mqtt_useauth</name>
+        <briefdescription>
+<para>Whether to use MQTT authentication, if false, mqtt_user and mqtt_password will be ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="57" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" compoundref="_e_s_p_mega_io_t_8cpp" startline="622" endline="634">ESPMegaIoT::connectToMqtt</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" compoundref="_e_s_p_mega_io_t_8cpp" startline="593" endline="604">ESPMegaIoT::loadMqttConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" compoundref="_e_s_p_mega_io_t_8cpp" startline="609" endline="617">ESPMegaIoT::saveMqttConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char MqttConfig::base_topic[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>base_topic</name>
+        <briefdescription>
+<para>The base topic for the MQTT messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="58" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" compoundref="_e_s_p_mega_io_t_8cpp" startline="593" endline="604">ESPMegaIoT::loadMqttConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a740ea6dc48ae78b87d48afc39f00d992" compoundref="_e_s_p_mega_io_t_8cpp" startline="491" endline="497">ESPMegaIoT::publishRelative</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1ae7323d1d3ff23494b68a748c1eb57891" compoundref="_e_s_p_mega_io_t_8cpp" startline="119" endline="171">ESPMegaIoT::registerCard</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" compoundref="_e_s_p_mega_io_t_8cpp" startline="609" endline="617">ESPMegaIoT::saveMqttConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a92e3a81d45a4389e5945c46486182e9b" compoundref="_e_s_p_mega_io_t_8cpp" startline="73" endline="77">ESPMegaIoT::setBaseTopic</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a16b33cc73cccefd62577dca8f015ee43" compoundref="_e_s_p_mega_io_t_8cpp" startline="665" endline="669">ESPMegaIoT::setMqttConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a98e8c822491c06be6823328e133507a1" compoundref="_e_s_p_mega_io_t_8cpp" startline="504" endline="510">ESPMegaIoT::subscribeRelative</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The MQTT configuration struct. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This struct will be saved to FRAM when calling saveMqttConfig </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="51" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="52" bodyend="59"/>
+    <listofallmembers>
+      <member refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" prot="public" virt="non-virtual"><scope>MqttConfig</scope><name>base_topic</name></member>
+      <member refid="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" prot="public" virt="non-virtual"><scope>MqttConfig</scope><name>mqtt_password</name></member>
+      <member refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" prot="public" virt="non-virtual"><scope>MqttConfig</scope><name>mqtt_port</name></member>
+      <member refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" prot="public" virt="non-virtual"><scope>MqttConfig</scope><name>mqtt_server</name></member>
+      <member refid="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" prot="public" virt="non-virtual"><scope>MqttConfig</scope><name>mqtt_useauth</name></member>
+      <member refid="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" prot="public" virt="non-virtual"><scope>MqttConfig</scope><name>mqtt_user</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

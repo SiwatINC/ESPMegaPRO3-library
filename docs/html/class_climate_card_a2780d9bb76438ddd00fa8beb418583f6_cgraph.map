@@ -1,0 +1,5 @@
+<map id="ClimateCard::setModeByName" name="ClimateCard::setModeByName">
+<area shape="rect" id="node1" title="Set mode by name." alt="" coords="5,5,228,32"/>
+<area shape="rect" id="node2" href="$class_climate_card.html#ad9ba9dfc23dccc0d9b32ca101257a54d" title="Set the mode of the air conditioner." alt="" coords="276,5,443,32"/>
+<area shape="rect" id="node3" href="$class_climate_card.html#ab5993cfca1e2f691bdd613e58e0800e0" title="Save the state to FRAM memory." alt="" coords="491,5,719,32"/>
+</map>

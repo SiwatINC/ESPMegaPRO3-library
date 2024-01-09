@@ -1,0 +1,10 @@
+<map id="InternalDisplay::begin" name="InternalDisplay::begin">
+<area shape="rect" id="node1" title="Initialize the Internal Display." alt="" coords="5,136,169,163"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_io_t.html#a831d8c372ae931eeaabbe999dad27e5c" title="Get the MQTT config." alt="" coords="230,5,431,32"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_io_t.html#ab0ee8902014f9d08c97f0ffe11f66133" title="Get the network config." alt="" coords="217,56,444,83"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_display.html#a66059d32f493fba86c55e092bbf248bb" title="Jumps to the specified page on the display." alt="" coords="223,107,439,133"/>
+<area shape="rect" id="node6" href="$class_e_s_p_mega_display.html#a435fef88a91a498503250f95d72f30ab" title="Registers a callback function for page change events." alt="" coords="237,158,425,199"/>
+<area shape="rect" id="node7" href="$class_e_s_p_mega_display.html#ab4bc0794bffbe4dea647649e1b41c07d" title="Registers a callback function for touch events." alt="" coords="237,223,425,265"/>
+<area shape="rect" id="node8" href="$class_e_s_p_mega_display.html#a073d4f8a7da95b9b4acd963ab20dbca9" title="Restarts the display." alt="" coords="245,289,416,316"/>
+<area shape="rect" id="node5" href="$class_e_s_p_mega_display.html#a8bfb30429f6e11f4719480bfc6f83d72" title="Sends stop bytes to the display adapter." alt="" coords="492,191,691,233"/>
+</map>

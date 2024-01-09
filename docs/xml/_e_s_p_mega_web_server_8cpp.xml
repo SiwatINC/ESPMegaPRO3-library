@@ -1,0 +1,634 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_e_s_p_mega_web_server_8cpp" kind="file" language="C++">
+    <compoundname>ESPMegaWebServer.cpp</compoundname>
+    <includes refid="_e_s_p_mega_web_server_8hpp" local="no">ESPMegaWebServer.hpp</includes>
+    <incdepgraph>
+      <node id="36">
+        <label>config_html.h</label>
+        <link refid="config__html_8h_source"/>
+      </node>
+      <node id="3">
+        <label>FS.h</label>
+      </node>
+      <node id="17">
+        <label>DigitalInputCard.hpp</label>
+        <link refid="_digital_input_card_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Adafruit_ADS1X15.h</label>
+      </node>
+      <node id="26">
+        <label>OneWire.h</label>
+      </node>
+      <node id="19">
+        <label>DigitalInputIoT.hpp</label>
+        <link refid="_digital_input_io_t_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>all_html.h</label>
+        <link refid="all__html_8h_source"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>map</label>
+      </node>
+      <node id="23">
+        <label>DigitalOutputIoT.hpp</label>
+        <link refid="_digital_output_io_t_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>PubSubClient.h</label>
+      </node>
+      <node id="4">
+        <label>ESPAsyncWebServer.h</label>
+      </node>
+      <node id="16">
+        <label>esp_log.h</label>
+      </node>
+      <node id="29">
+        <label>ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>IoTComponent.hpp</label>
+        <link refid="_io_t_component_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</label>
+        <link refid="_e_s_p_mega_web_server_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>ArduinoJson.h</label>
+      </node>
+      <node id="37">
+        <label>ota_html.h</label>
+        <link refid="ota__html_8h_source"/>
+      </node>
+      <node id="25">
+        <label>driver/rmt.h</label>
+      </node>
+      <node id="24">
+        <label>ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>AsyncJson.h</label>
+      </node>
+      <node id="7">
+        <label>Arduino.h</label>
+      </node>
+      <node id="32">
+        <label>Update.h</label>
+      </node>
+      <node id="22">
+        <label>Adafruit_PWMServoDriver.h</label>
+      </node>
+      <node id="30">
+        <label>ETH.h</label>
+      </node>
+      <node id="10">
+        <label>MCP4725.h</label>
+      </node>
+      <node id="28">
+        <label>dhtnew.h</label>
+      </node>
+      <node id="5">
+        <label>ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>AnalogIoT.hpp</label>
+        <link refid="_analog_io_t_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>AnalogCard.hpp</label>
+        <link refid="_analog_card_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>DigitalOutputCard.hpp</label>
+        <link refid="_digital_output_card_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>DS18B20.h</label>
+      </node>
+      <node id="20">
+        <label>FRAM.h</label>
+      </node>
+      <node id="2">
+        <label>ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>PCF8574.h</label>
+      </node>
+      <node id="31">
+        <label>WiFi.h</label>
+      </node>
+      <node id="6">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Implementation file for the <ref refid="class_e_s_p_mega_web_server" kindref="compound">ESPMegaWebServer</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains the implementation of the <ref refid="class_e_s_p_mega_web_server" kindref="compound">ESPMegaWebServer</ref> class, which is responsible for handling web server functionality for the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> firmware. The <ref refid="class_e_s_p_mega_web_server" kindref="compound">ESPMegaWebServer</ref> class provides methods for starting the web server, handling HTTP requests, and managing credentials and configurations. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ESPMegaWebServer.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3" refkind="member"><highlight class="normal"><ref refid="class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3" kindref="member">ESPMegaWebServer::ESPMegaWebServer</ref>(uint16_t<sp/>port,<sp/><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref><sp/>*iot)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;port<sp/>=<sp/>port;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;iot<sp/>=<sp/>iot;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;server<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AsyncWebServer(port);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;saveConfigHandler<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>AsyncCallbackJsonWebHandler(</highlight><highlight class="stringliteral">&quot;/save_config&quot;</highlight><highlight class="normal">,<sp/>std::bind(&amp;ESPMegaWebServer::saveConfigJSONHandler,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1,<sp/>std::placeholders::_2));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_e_s_p_mega_web_server_1accf7cb756ec0141017c449468e3acdbd" refkind="member"><highlight class="normal"><ref refid="class_e_s_p_mega_web_server_1accf7cb756ec0141017c449468e3acdbd" kindref="member">ESPMegaWebServer::~ESPMegaWebServer</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>this-&gt;server;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" kindref="member">ESPMegaWebServer::begin</ref>()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf" kindref="member">loadCredentialsFromFRAM</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;server-&gt;begin();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedDashboardHandler<sp/>=<sp/>std::bind(&amp;ESPMegaWebServer::dashboardHandler,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;server-&gt;on(</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>bindedDashboardHandler);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedConfigHandler<sp/>=<sp/>std::bind(&amp;ESPMegaWebServer::configHandler,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;server-&gt;on(</highlight><highlight class="stringliteral">&quot;/config&quot;</highlight><highlight class="normal">,<sp/>HTTP_GET,<sp/>bindedConfigHandler);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;server-&gt;addHandler(saveConfigHandler);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedOtaRequestHandler<sp/>=<sp/>std::bind(&amp;ESPMegaWebServer::otaRequestHandler,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedOtaUploadHandler<sp/>=<sp/>std::bind(&amp;ESPMegaWebServer::otaUploadHandler,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1,<sp/>std::placeholders::_2,<sp/>std::placeholders::_3,<sp/>std::placeholders::_4,<sp/>std::placeholders::_5,<sp/>std::placeholders::_6);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;server-&gt;on(</highlight><highlight class="stringliteral">&quot;/ota_update&quot;</highlight><highlight class="normal">,<sp/>HTTP_POST,<sp/>bindedOtaRequestHandler,<sp/>bindedOtaUploadHandler);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_e_s_p_mega_web_server_1ac2390697ddcc99604eed00a785dd2a4b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server_1ac2390697ddcc99604eed00a785dd2a4b" kindref="member">ESPMegaWebServer::loop</ref>()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>AsyncWebServer<sp/>doesn&apos;t<sp/>have<sp/>a<sp/>loop<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_e_s_p_mega_web_server_1adb3781890cee6513b494d27b18e6f5ff" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server_1adb3781890cee6513b494d27b18e6f5ff" kindref="member">ESPMegaWebServer::bindFRAM</ref>(FRAM<sp/>*fram)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram<sp/>=<sp/>fram;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf" kindref="member">ESPMegaWebServer::loadCredentialsFromFRAM</ref>()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram-&gt;read(301,<sp/>(uint8_t<sp/>*)this-&gt;webUsername,<sp/>32);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram-&gt;read(333,<sp/>(uint8_t<sp/>*)this-&gt;webPassword,<sp/>32);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verify<sp/>if<sp/>credentials<sp/>are<sp/>valid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>valid<sp/>username<sp/>and<sp/>password<sp/>is<sp/>null<sp/>terminated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Scan<sp/>for<sp/>null<sp/>terminator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>validUsername<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>validPassword<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>32;<sp/>i++)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;webUsername[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>validUsername<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>32;<sp/>i++)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;webPassword[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>validPassword<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!validUsername<sp/>||<sp/>!validPassword)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095" kindref="member">resetCredentials</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>valid<sp/>username<sp/>and<sp/>password<sp/>is<sp/>at<sp/>least<sp/>1<sp/>character<sp/>long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strlen(this-&gt;webUsername)<sp/>==<sp/>0<sp/>||<sp/>strlen(this-&gt;webPassword)<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095" kindref="member">resetCredentials</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530" kindref="member">ESPMegaWebServer::saveCredentialsToFRAM</ref>()</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram-&gt;write(301,<sp/>(uint8_t<sp/>*)this-&gt;webUsername,<sp/>32);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram-&gt;write(333,<sp/>(uint8_t<sp/>*)this-&gt;webPassword,<sp/>32);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095" kindref="member">ESPMegaWebServer::resetCredentials</ref>()</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>default<sp/>username<sp/>and<sp/>password<sp/>is<sp/>&quot;admin&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(this-&gt;webUsername,<sp/></highlight><highlight class="stringliteral">&quot;admin&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(this-&gt;webPassword,<sp/></highlight><highlight class="stringliteral">&quot;admin&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530" kindref="member">saveCredentialsToFRAM</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_e_s_p_mega_web_server_1a9a51eef8c5a27d0a8147d10a64b0a762" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="class_e_s_p_mega_web_server_1a9a51eef8c5a27d0a8147d10a64b0a762" kindref="member">ESPMegaWebServer::getWebUsername</ref>()</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;webUsername;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="class_e_s_p_mega_web_server_1a44f59352c6202fbf4172ea5ab72ef1d0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="class_e_s_p_mega_web_server_1a44f59352c6202fbf4172ea5ab72ef1d0" kindref="member">ESPMegaWebServer::getWebPassword</ref>()</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;webPassword;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="class_e_s_p_mega_web_server_1a9c7298ea1f25f41f4742302f1f91a89b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server_1a9c7298ea1f25f41f4742302f1f91a89b" kindref="member">ESPMegaWebServer::setWebUsername</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*username)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(this-&gt;webUsername,<sp/>username);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="class_e_s_p_mega_web_server_1add17e20b33d97076a26e6bfe3d664db0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server_1add17e20b33d97076a26e6bfe3d664db0" kindref="member">ESPMegaWebServer::setWebPassword</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(this-&gt;webPassword,<sp/>password);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMegaWebServer::dashboardHandler(AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!request-&gt;authenticate(this-&gt;webUsername,<sp/>this-&gt;webPassword))</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>request-&gt;requestAuthentication();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedDashboardProcessor<sp/>=<sp/>std::bind(&amp;ESPMegaWebServer::dashboardProcessor,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/html&quot;</highlight><highlight class="normal">,<sp/>ota_html,<sp/>bindedDashboardProcessor);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">String<sp/>ESPMegaWebServer::dashboardProcessor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;var)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;hostname&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1ab0ee8902014f9d08c97f0ffe11f66133" kindref="member">getNetworkConfig</ref>()-&gt;<ref refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" kindref="member">hostname</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ip_address&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0" kindref="member">getIp</ref>().toString();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;mac_address&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163" kindref="member">getMac</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;model&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(</highlight><highlight class="stringliteral">&quot;ESPMega<sp/>PRO<sp/>R3.3c&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;mqtt_connection_string&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref><sp/>*mqttConfig<sp/>=<sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c" kindref="member">getMqttConfig</ref>();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>connectionString;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connectionString<sp/>+=<sp/>mqttConfig-&gt;<ref refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" kindref="member">mqtt_server</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connectionString<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>connectionString<sp/>+=<sp/>mqttConfig-&gt;<ref refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" kindref="member">mqtt_port</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>connectionString;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;base_topic&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c" kindref="member">getMqttConfig</ref>()-&gt;<ref refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" kindref="member">base_topic</ref>);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;mqtt_connected&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1af9365947904e2fe67965db7c12164eac" kindref="member">mqttConnected</ref>()<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;Connected&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Standalone&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMegaWebServer::configHandler(AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!request-&gt;authenticate(this-&gt;webUsername,<sp/>this-&gt;webPassword))</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>request-&gt;requestAuthentication();</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedConfigProcessor<sp/>=<sp/>std::bind(&amp;ESPMegaWebServer::configProcessor,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>request-&gt;send_P(200,<sp/></highlight><highlight class="stringliteral">&quot;text/html&quot;</highlight><highlight class="normal">,<sp/>config_html,<sp/>bindedConfigProcessor);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal">String<sp/>ESPMegaWebServer::configProcessor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;var)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref><sp/>*mqttConfig<sp/>=<sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c" kindref="member">getMqttConfig</ref>();</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref><sp/>*networkConfig<sp/>=<sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1ab0ee8902014f9d08c97f0ffe11f66133" kindref="member">getNetworkConfig</ref>();</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ip_address&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>networkConfig-&gt;<ref refid="struct_network_config_1a0176904843001d1f2435ac52ca040ede" kindref="member">ip</ref>.toString();</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;netmask&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>networkConfig-&gt;<ref refid="struct_network_config_1a18dd746c622cb7a38da58ca94ff31657" kindref="member">subnet</ref>.toString();</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;gateway&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>networkConfig-&gt;<ref refid="struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41" kindref="member">gateway</ref>.toString();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;dns&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>networkConfig-&gt;<ref refid="struct_network_config_1a2706b2e04d704496b2202e476fa9635c" kindref="member">dns1</ref>.toString();</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;hostname&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(networkConfig-&gt;<ref refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" kindref="member">hostname</ref>);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;bms_ip&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(mqttConfig-&gt;<ref refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" kindref="member">mqtt_server</ref>);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;bms_port&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(mqttConfig-&gt;<ref refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" kindref="member">mqtt_port</ref>);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;bms_useauth&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mqttConfig-&gt;<ref refid="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" kindref="member">mqtt_useauth</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;checked=\&quot;checked\&quot;&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;bms_username&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(mqttConfig-&gt;<ref refid="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" kindref="member">mqtt_user</ref>);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;bms_password&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(mqttConfig-&gt;<ref refid="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" kindref="member">mqtt_password</ref>);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;bms_endpoint&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(mqttConfig-&gt;<ref refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" kindref="member">base_topic</ref>);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;web_username&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(this-&gt;webUsername);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(var<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;web_password&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String(this-&gt;webPassword);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMegaWebServer::otaRequestHandler(AsyncWebServerRequest<sp/>*request)</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prepare<sp/>to<sp/>receive<sp/>firmware</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!request-&gt;authenticate(this-&gt;webUsername,<sp/>this-&gt;webPassword))</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>request-&gt;requestAuthentication();</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>AsyncWebServerResponse<sp/>*response<sp/>=<sp/>request-&gt;beginResponse(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/>(Update.hasError())<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;FAIL&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>response-&gt;addHeader(</highlight><highlight class="stringliteral">&quot;Connection&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;close&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>request-&gt;send(response);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Restart<sp/>ESPMega</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP.restart();</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMegaWebServer::otaUploadHandler(AsyncWebServerRequest<sp/>*request,<sp/>String<sp/>filename,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index,<sp/>uint8_t<sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Receive<sp/>firmware</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!request-&gt;authenticate(this-&gt;webUsername,<sp/>this-&gt;webPassword))</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>request-&gt;requestAuthentication();</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OTA<sp/>Update<sp/>Start&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!Update.begin(UPDATE_SIZE_UNKNOWN))</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="comment">//<sp/>start<sp/>with<sp/>max<sp/>available<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OTA<sp/>Update<sp/>Start<sp/>Error&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Update.printError(Serial);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Update.write(data,<sp/>len)<sp/>!=<sp/>len)</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OTA<sp/>Update<sp/>Write<sp/>Error&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Update.printError(Serial);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OTA<sp/>Update<sp/>Write<sp/>Success:<sp/>%uB&quot;</highlight><highlight class="normal">,<sp/>index<sp/>+<sp/>len);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">final</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Update.end(</highlight><highlight class="keyword">true</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight><highlight class="comment">//<sp/>true<sp/>to<sp/>set<sp/>the<sp/>size<sp/>to<sp/>the<sp/>current<sp/>progress</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OTA<sp/>Update<sp/>Success:<sp/>%uB&quot;</highlight><highlight class="normal">,<sp/>index<sp/>+<sp/>len);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OTA<sp/>Update<sp/>End<sp/>Error&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Update.printError(Serial);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="400"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMegaWebServer::saveConfigJSONHandler(AsyncWebServerRequest<sp/>*request,<sp/>JsonVariant<sp/>&amp;json)</highlight></codeline>
+<codeline lineno="409"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Saving<sp/>config&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/>JsonObject<sp/>root<sp/>=<sp/>json.as&lt;JsonObject&gt;();</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Network<sp/>Config</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref><sp/>networkConfig;</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/>networkConfig.<ref refid="struct_network_config_1a9884b31dba672d1f24636fb64a55d38a" kindref="member">useStaticIp</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>networkConfig.useWifi<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/>ip;</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Checking<sp/>IP<sp/>Address&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ip.fromString(root[</highlight><highlight class="stringliteral">&quot;ip_address&quot;</highlight><highlight class="normal">].as&lt;String&gt;()))</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>Config<sp/>IP<sp/>Address&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request-&gt;send(400,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>IP<sp/>Address&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>networkConfig.ip<sp/>=<sp/>ip;</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Checking<sp/>Netmask&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ip.fromString(root[</highlight><highlight class="stringliteral">&quot;netmask&quot;</highlight><highlight class="normal">].as&lt;String&gt;()))</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>Config<sp/>Netmask&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request-&gt;send(400,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>Netmask&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/>networkConfig.subnet<sp/>=<sp/>ip;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Checking<sp/>Gateway&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ip.fromString(root[</highlight><highlight class="stringliteral">&quot;gateway&quot;</highlight><highlight class="normal">].as&lt;String&gt;()))</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>Config<sp/>Gateway&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request-&gt;send(400,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>Gateway&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/>networkConfig.gateway<sp/>=<sp/>ip;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Checking<sp/>DNS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ip.fromString(root[</highlight><highlight class="stringliteral">&quot;dns&quot;</highlight><highlight class="normal">].as&lt;String&gt;()))</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>Config<sp/>DNS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request-&gt;send(400,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>DNS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/>networkConfig.dns1<sp/>=<sp/>ip;</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>Hostname&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(networkConfig.hostname,<sp/>root[</highlight><highlight class="stringliteral">&quot;hostname&quot;</highlight><highlight class="normal">].as&lt;String&gt;().c_str());</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MQTT<sp/>Config</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref><sp/>mqttConfig;</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>MQTT<sp/>Server&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(mqttConfig.<ref refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" kindref="member">mqtt_server</ref>,<sp/>root[</highlight><highlight class="stringliteral">&quot;bms_ip&quot;</highlight><highlight class="normal">].as&lt;String&gt;().c_str());</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Checking<sp/>MQTT<sp/>Port&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>mqttPort<sp/>=<sp/>root[</highlight><highlight class="stringliteral">&quot;bms_port&quot;</highlight><highlight class="normal">].as&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;();</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mqttConfig.<ref refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" kindref="member">mqtt_port</ref><sp/>&lt;=<sp/>0<sp/>||<sp/>mqttConfig.<ref refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" kindref="member">mqtt_port</ref><sp/>&gt;<sp/>65535)</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>Config<sp/>MQTT<sp/>Port&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>request-&gt;send(400,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>MQTT<sp/>Port&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/>mqttConfig.<ref refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" kindref="member">mqtt_port</ref><sp/>=<sp/>mqttPort;</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Checking<sp/>MQTT<sp/>Use<sp/>Auth&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/>mqttConfig.<ref refid="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" kindref="member">mqtt_useauth</ref><sp/>=<sp/>root[</highlight><highlight class="stringliteral">&quot;bms_useauth&quot;</highlight><highlight class="normal">].as&lt;</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&gt;();</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>MQTT<sp/>Username&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(mqttConfig.<ref refid="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" kindref="member">mqtt_user</ref>,<sp/>root[</highlight><highlight class="stringliteral">&quot;bms_username&quot;</highlight><highlight class="normal">].as&lt;String&gt;().c_str());</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>MQTT<sp/>Password&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(mqttConfig.<ref refid="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" kindref="member">mqtt_password</ref>,<sp/>root[</highlight><highlight class="stringliteral">&quot;bms_password&quot;</highlight><highlight class="normal">].as&lt;String&gt;().c_str());</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>MQTT<sp/>Base<sp/>Topic&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(mqttConfig.<ref refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" kindref="member">base_topic</ref>,<sp/>root[</highlight><highlight class="stringliteral">&quot;bms_endpoint&quot;</highlight><highlight class="normal">].as&lt;String&gt;().c_str());</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Web<sp/>Server<sp/>Config</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>Web<sp/>Username&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(this-&gt;webUsername,<sp/>root[</highlight><highlight class="stringliteral">&quot;web_username&quot;</highlight><highlight class="normal">].as&lt;String&gt;().c_str());</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Setting<sp/>Web<sp/>Password&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(this-&gt;webPassword,<sp/>root[</highlight><highlight class="stringliteral">&quot;web_password&quot;</highlight><highlight class="normal">].as&lt;String&gt;().c_str());</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Commit<sp/>changes<sp/>to<sp/>FRAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Committing<sp/>Network<sp/>Config<sp/>to<sp/>FRAM&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1a426932179c2d84864e3b1fb269723fc6" kindref="member">setNetworkConfig</ref>(networkConfig);</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" kindref="member">saveNetworkConfig</ref>();</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Committing<sp/>MQTT<sp/>Config<sp/>to<sp/>FRAM&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1a16b33cc73cccefd62577dca8f015ee43" kindref="member">setMqttConfig</ref>(mqttConfig);</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" kindref="member">saveMqttConfig</ref>();</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Committing<sp/>Web<sp/>Server<sp/>Config<sp/>to<sp/>FRAM&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530" kindref="member">saveCredentialsToFRAM</ref>();</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaWebServer&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Config<sp/>saved&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>response</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/>request-&gt;send(200,<sp/></highlight><highlight class="stringliteral">&quot;text/plain&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP.restart();</highlight></codeline>
+<codeline lineno="507"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="514" refid="class_e_s_p_mega_web_server_1a6f09ae056c6ecd1641bb30b272e2eb37" refkind="member"><highlight class="normal">AsyncWebServer<sp/>*<ref refid="class_e_s_p_mega_web_server_1a6f09ae056c6ecd1641bb30b272e2eb37" kindref="member">ESPMegaWebServer::getServer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;server;</highlight></codeline>
+<codeline lineno="516"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp"/>
+  </compounddef>
+</doxygen>

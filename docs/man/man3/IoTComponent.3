@@ -1,0 +1,97 @@
+.TH "IoTComponent" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IoTComponent \- The \fBIoTComponent\fP class is a base class that is used to interface with an expansion card through MQTT\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IoTComponent\&.hpp>\fP
+.PP
+Inherited by \fBAnalogIoT\fP, \fBClimateIoT\fP, \fBDigitalInputIoT\fP, and \fBDigitalOutputIoT\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBbegin\fP (uint8_t card_id, \fBExpansionCard\fP *card, PubSubClient *mqtt, char *base_topic)"
+.br
+.ti -1c
+.RI "virtual void \fBhandleMqttMessage\fP (char *topic, char *payload)"
+.br
+.ti -1c
+.RI "void \fBsetMqttClient\fP (PubSubClient *mqtt)"
+.br
+.ti -1c
+.RI "virtual void \fBpublishReport\fP ()"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBgetType\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBsubscribe\fP ()"
+.br
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpublishRelative\fP (const char *topic, const char *payload)"
+.br
+.ti -1c
+.RI "void \fBsubscribeRelative\fP (const char *topic)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "char * \fBbase_topic\fP"
+.br
+.ti -1c
+.RI "PubSubClient * \fBmqtt\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBcard_id\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBIoTComponent\fP class is a base class that is used to interface with an expansion card through MQTT\&. 
+
+In order to create a new \fBIoTComponent\fP, you should create a new class that inherits from this class\&. Your class should implement the following functions:
+.IP "\(bu" 2
+begin() : Initialize the component, record the card id, \fBExpansionCard\fP object, the PubSubClient object and the base topic
+.IP "\(bu" 2
+handleMqttMessage() : Handle the MQTT messages for the component
+.IP "\(bu" 2
+publishReport() : Publish all the reports for the component
+.IP "\(bu" 2
+getType() : Get the type of the component, This should return the underlying \fBExpansionCard\fP type
+.IP "\(bu" 2
+subscribe() : Subscribe to the MQTT topics used by the component
+.IP "\(bu" 2
+loop() : A function that is called in the main loop
+.PP
+.PP
+Additionally, the inherited class will have access to these helper functions:
+.IP "\(bu" 2
+publishRelative() : Publish a message to a topic relative to the base topic and the card id
+.IP "\(bu" 2
+subscribeRelative() : Subscribe to a topic relative to the base topic and the card id
+.PP
+.PP
+\fBWarning\fP
+.RS 4
+This class is abstract and should not be instantiated directly\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

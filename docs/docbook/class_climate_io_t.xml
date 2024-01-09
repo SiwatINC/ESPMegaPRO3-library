@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_climate_io_t" xml:lang="en-US">
+<title>ClimateIoT Class Reference</title>
+<indexterm><primary>ClimateIoT</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_climate_io_t">ClimateIoT</link> class is a class for connecting the Climate Card to the IoT module. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ClimateIoT.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for ClimateIoT:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_io_t__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ClimateIoT:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_io_t__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1a54535f32b8bda07e5295bcda18b311fe"/><link linkend="_class_climate_io_t_1a54535f32b8bda07e5295bcda18b311fe">~ClimateIoT</link> ()</para>
+
+<para>Destructor for the <link linkend="_class_climate_io_t">ClimateIoT</link> class. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b">begin</link> (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> *card, PubSubClient *mqtt, char *base_topic)</para>
+
+<para>Initializes the <link linkend="_class_climate_io_t">ClimateIoT</link> component. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_io_t_1a3ca9eea384da622be06cf56a3d264aff">handleMqttMessage</link> (char *topic, char *payload)</para>
+
+<para>Handles MQTT messages for the <link linkend="_class_climate_io_t">ClimateIoT</link> component. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da"/>void <link linkend="_class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da">publishClimate</link> ()</para>
+
+<para>Publishes the climate data (temperature, mode, fan speed) to the MQTT broker. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876"/>void <link linkend="_class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876">publishClimateTemperature</link> ()</para>
+
+<para>Publishes the temperature of the air conditioner to the MQTT broker. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e"/>void <link linkend="_class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e">publishClimateMode</link> ()</para>
+
+<para>Publishes the mode of the air conditioner to the MQTT broker. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46"/>void <link linkend="_class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46">publishClimateFanSpeed</link> ()</para>
+
+<para>Publishes the fan speed of the air conditioner to the MQTT broker. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1a15060120ec8d458d023cf63174caf018"/>void <link linkend="_class_climate_io_t_1a15060120ec8d458d023cf63174caf018">publishSensor</link> ()</para>
+
+<para>Publishes the temperature and humidity of the room to the MQTT broker. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1a0552877211038ed07b697af151d6dcec"/>void <link linkend="_class_climate_io_t_1a0552877211038ed07b697af151d6dcec">publishRoomTemperature</link> ()</para>
+
+<para>Publishes the room temperature to the MQTT broker. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056"/>void <link linkend="_class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056">publishHumidity</link> ()</para>
+
+<para>Publishes the humidity of the room to the MQTT broker. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_io_t_1a0098ee608786b6cea97f50a6602a1026">handleStateChange</link> (uint8_t temperature, uint8_t mode, uint8_t fan_speed)</para>
+
+<para>Handle Air Conditioner state change. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6">handleSensorUpdate</link> (float temperature, float humidity)</para>
+
+<para>This function is a callback function registered with the Climate card to be called when the sensor data is updated. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1">handleAirConditionerUpdate</link> (uint8_t mode, uint8_t fan_speed, uint8_t temperature)</para>
+
+<para>This function is a callback function registered with the Climate card to be called when the air conditioner state is updated. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1aa418416d349122f67b5df4c980dd3526"/>void <link linkend="_class_climate_io_t_1aa418416d349122f67b5df4c980dd3526">publishReport</link> ()</para>
+
+<para>Publishes the climate and sensor data to the MQTT broker. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_climate_io_t_1aa450a354851fbc82b54e32f3ffd9d359"/>void <link linkend="_class_climate_io_t_1aa450a354851fbc82b54e32f3ffd9d359">subscribe</link> ()</para>
+
+<para>Subscribes to MQTT topics. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_climate_io_t_1afe6cc8ae2063d700c5a7d5554aad2cd1">loop</link> ()</para>
+
+<para>The loop function for the <link linkend="_class_climate_io_t">ClimateIoT</link> component. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_climate_io_t_1a488320647faf79d26fdf8f0ea406f315">getType</link> ()</para>
+
+<para>Returns the type of the expansion card. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_climate_io_t">ClimateIoT</link> class is a class for connecting the Climate Card to the IoT module. </para>
+
+
+
+<para>This function allows you to control the Climate Card using MQTT.</para>
+
+<para><warning><title>Warning</title>
+
+<para>You should not instantiate this class directly, instead use <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link>&apos;s registerCard function. </para>
+</warning>
+</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>ClimateIoT</secondary></indexterm>
+<indexterm><primary>ClimateIoT</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool ClimateIoT::begin (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> * card, PubSubClient * mqtt, char * base_topic)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_climate_io_t">ClimateIoT</link> component. </para>
+</para>
+
+<para>This function sets the MQTT client, base topic, card ID, and card pointer. It also registers the sensor and air conditioner update callbacks.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>card_id</entry>
+                                <entry>
+<para>The ID of the expansion card. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>card</entry>
+                                <entry>
+<para>A pointer to the <link linkend="_class_expansion_card">ExpansionCard</link> object. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt</entry>
+                                <entry>
+<para>A pointer to the PubSubClient object. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>base_topic</entry>
+                                <entry>
+<para>The base topic for MQTT communication. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the initialization is successful, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_io_t_aad3d146120fb6390867d2900b7fe0f6b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_io_t_1a488320647faf79d26fdf8f0ea406f315"/>    <section>
+    <title>getType()</title>
+<indexterm><primary>getType</primary><secondary>ClimateIoT</secondary></indexterm>
+<indexterm><primary>ClimateIoT</primary><secondary>getType</secondary></indexterm>
+<para><computeroutput>uint8_t ClimateIoT::getType ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Returns the type of the expansion card. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The type of the expansion card. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+    </section><anchor xml:id="_class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1"/>    <section>
+    <title>handleAirConditionerUpdate()</title>
+<indexterm><primary>handleAirConditionerUpdate</primary><secondary>ClimateIoT</secondary></indexterm>
+<indexterm><primary>ClimateIoT</primary><secondary>handleAirConditionerUpdate</secondary></indexterm>
+<para><computeroutput>void ClimateIoT::handleAirConditionerUpdate (uint8_t mode, uint8_t fan_speed, uint8_t temperature)</computeroutput></para><para>
+
+<para>This function is a callback function registered with the Climate card to be called when the air conditioner state is updated. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>mode</entry>
+                                <entry>
+<para>The mode of the air conditioner. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>fan_speed</entry>
+                                <entry>
+<para>The fan speed of the air conditioner. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>temperature</entry>
+                                <entry>
+<para>The temperature of the air conditioner. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_io_t_ae9838e9774728052ba52526b89bf5da1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_io_t_ae9838e9774728052ba52526b89bf5da1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_io_t_1a3ca9eea384da622be06cf56a3d264aff"/>    <section>
+    <title>handleMqttMessage()</title>
+<indexterm><primary>handleMqttMessage</primary><secondary>ClimateIoT</secondary></indexterm>
+<indexterm><primary>ClimateIoT</primary><secondary>handleMqttMessage</secondary></indexterm>
+<para><computeroutput>void ClimateIoT::handleMqttMessage (char * topic, char * payload)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handles MQTT messages for the <link linkend="_class_climate_io_t">ClimateIoT</link> component. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The trimmed topic of the MQTT message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The null-terminated payload of the MQTT message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+    </section><anchor xml:id="_class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6"/>    <section>
+    <title>handleSensorUpdate()</title>
+<indexterm><primary>handleSensorUpdate</primary><secondary>ClimateIoT</secondary></indexterm>
+<indexterm><primary>ClimateIoT</primary><secondary>handleSensorUpdate</secondary></indexterm>
+<para><computeroutput>void ClimateIoT::handleSensorUpdate (float temperature, float humidity)</computeroutput></para><para>
+
+<para>This function is a callback function registered with the Climate card to be called when the sensor data is updated. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>temperature</entry>
+                                <entry>
+<para>The room temperature. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>humidity</entry>
+                                <entry>
+<para>The room humidity.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>The temperature and humidity are not used in this function but are required by the <link linkend="_class_climate_card">ClimateCard</link> class to match the signature of the callback function. </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_io_t_a2516d6d2a9e2be4365617a3c0577a8b6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_io_t_a2516d6d2a9e2be4365617a3c0577a8b6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_io_t_1a0098ee608786b6cea97f50a6602a1026"/>    <section>
+    <title>handleStateChange()</title>
+<indexterm><primary>handleStateChange</primary><secondary>ClimateIoT</secondary></indexterm>
+<indexterm><primary>ClimateIoT</primary><secondary>handleStateChange</secondary></indexterm>
+<para><computeroutput>void ClimateIoT::handleStateChange (uint8_t temperature, uint8_t mode, uint8_t fan_speed)</computeroutput></para><para>
+
+<para>Handle Air Conditioner state change. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is called by the underlying <link linkend="_class_climate_card">ClimateCard</link> object and is not meant to be called manually.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>temperature</entry>
+                                <entry>
+<para>Temperature of the air conditioner </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mode</entry>
+                                <entry>
+<para>Mode of the air conditioner </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>fan_speed</entry>
+                                <entry>
+<para>Fan speed of the air conditioner </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_climate_io_t_a0098ee608786b6cea97f50a6602a1026_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_climate_io_t_1afe6cc8ae2063d700c5a7d5554aad2cd1"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>ClimateIoT</secondary></indexterm>
+<indexterm><primary>ClimateIoT</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void ClimateIoT::loop ( )</computeroutput></para><para>
+
+<para>The loop function for the <link linkend="_class_climate_io_t">ClimateIoT</link> component. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function does nothing. </para>
+</note>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp</section>
+</section>

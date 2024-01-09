@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_578bdd115b5202c2f6aedcca9bacc73c" kind="dir">
+    <compoundname>/home/siwat/ESPMegaPRO3-library</compoundname>
+    <innerfile refid="all__html_8h">all_html.h</innerfile>
+    <innerfile refid="_analog_card_8cpp">AnalogCard.cpp</innerfile>
+    <innerfile refid="_analog_card_8hpp">AnalogCard.hpp</innerfile>
+    <innerfile refid="_analog_io_t_8cpp">AnalogIoT.cpp</innerfile>
+    <innerfile refid="_analog_io_t_8hpp">AnalogIoT.hpp</innerfile>
+    <innerfile refid="_climate_card_8cpp">ClimateCard.cpp</innerfile>
+    <innerfile refid="_climate_card_8hpp">ClimateCard.hpp</innerfile>
+    <innerfile refid="_climate_io_t_8cpp">ClimateIoT.cpp</innerfile>
+    <innerfile refid="_climate_io_t_8hpp">ClimateIoT.hpp</innerfile>
+    <innerfile refid="config__html_8h">config_html.h</innerfile>
+    <innerfile refid="_digital_input_card_8cpp">DigitalInputCard.cpp</innerfile>
+    <innerfile refid="_digital_input_card_8hpp">DigitalInputCard.hpp</innerfile>
+    <innerfile refid="_digital_input_io_t_8cpp">DigitalInputIoT.cpp</innerfile>
+    <innerfile refid="_digital_input_io_t_8hpp">DigitalInputIoT.hpp</innerfile>
+    <innerfile refid="_digital_output_card_8cpp">DigitalOutputCard.cpp</innerfile>
+    <innerfile refid="_digital_output_card_8hpp">DigitalOutputCard.hpp</innerfile>
+    <innerfile refid="_digital_output_io_t_8cpp">DigitalOutputIoT.cpp</innerfile>
+    <innerfile refid="_digital_output_io_t_8hpp">DigitalOutputIoT.hpp</innerfile>
+    <innerfile refid="_e_s_p_mega_display_8cpp">ESPMegaDisplay.cpp</innerfile>
+    <innerfile refid="_e_s_p_mega_display_8hpp">ESPMegaDisplay.hpp</innerfile>
+    <innerfile refid="_e_s_p_mega_io_t_8cpp">ESPMegaIoT.cpp</innerfile>
+    <innerfile refid="_e_s_p_mega_io_t_8hpp">ESPMegaIoT.hpp</innerfile>
+    <innerfile refid="_e_s_p_mega_p_r_o_8cpp">ESPMegaPRO.cpp</innerfile>
+    <innerfile refid="_e_s_p_mega_p_r_o_8h">ESPMegaPRO.h</innerfile>
+    <innerfile refid="_e_s_p_mega_pro_o_s_8cpp">ESPMegaProOS.cpp</innerfile>
+    <innerfile refid="_e_s_p_mega_pro_o_s_8hpp">ESPMegaProOS.hpp</innerfile>
+    <innerfile refid="_e_s_p_mega_t_c_p_8hpp">ESPMegaTCP.hpp</innerfile>
+    <innerfile refid="_e_s_p_mega_web_server_8cpp">ESPMegaWebServer.cpp</innerfile>
+    <innerfile refid="_e_s_p_mega_web_server_8hpp">ESPMegaWebServer.hpp</innerfile>
+    <innerfile refid="_expansion_card_8hpp">ExpansionCard.hpp</innerfile>
+    <innerfile refid="_internal_display_8cpp">InternalDisplay.cpp</innerfile>
+    <innerfile refid="_internal_display_8hpp">InternalDisplay.hpp</innerfile>
+    <innerfile refid="_io_t_component_8cpp">IoTComponent.cpp</innerfile>
+    <innerfile refid="_io_t_component_8hpp">IoTComponent.hpp</innerfile>
+    <innerfile refid="ota__html_8h">ota_html.h</innerfile>
+    <innerfile refid="_time_structure_8hpp">TimeStructure.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/siwat/ESPMegaPRO3-library/"/>
+  </compounddef>
+</doxygen>

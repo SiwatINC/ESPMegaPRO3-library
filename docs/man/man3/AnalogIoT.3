@@ -1,0 +1,468 @@
+.TH "AnalogIoT" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnalogIoT \- The \fBAnalogIoT\fP class is a class for connecting the Analog Card to the IoT module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AnalogIoT\&.hpp>\fP
+.PP
+Inherits \fBIoTComponent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAnalogIoT\fP ()"
+.br
+.RI "Default constructor for the \fBAnalogIoT\fP class\&. "
+.ti -1c
+.RI "\fB~AnalogIoT\fP ()"
+.br
+.RI "Default destructor for the \fBAnalogIoT\fP class\&. "
+.ti -1c
+.RI "bool \fBbegin\fP (uint8_t card_id, \fBExpansionCard\fP *card, PubSubClient *mqtt, char *base_topic)"
+.br
+.RI "Initializes the \fBAnalogIoT\fP object\&. "
+.ti -1c
+.RI "void \fBhandleMqttMessage\fP (char *topic, char *payload)"
+.br
+.RI "Publishes the state of all DACs\&. "
+.ti -1c
+.RI "void \fBhandleDACChange\fP (uint8_t pin, uint16_t value)"
+.br
+.RI "Publishes the state of a DAC\&. "
+.ti -1c
+.RI "void \fBpublishADCs\fP ()"
+.br
+.RI "Publishes the state of all DACs\&. "
+.ti -1c
+.RI "void \fBpublishADC\fP (uint8_t pin)"
+.br
+.RI "Publishes the state of a DAC\&. "
+.ti -1c
+.RI "void \fBpublishDACs\fP ()"
+.br
+.RI "Publishes the state of all DACs\&. "
+.ti -1c
+.RI "void \fBpublishDAC\fP (uint8_t pin)"
+.br
+.RI "Publishes the state of a DAC\&. "
+.ti -1c
+.RI "void \fBpublishDACState\fP (uint8_t pin)"
+.br
+.RI "Publishes the state of a DAC\&. "
+.ti -1c
+.RI "void \fBpublishDACValue\fP (uint8_t pin)"
+.br
+.RI "Publishes the value of a DAC\&. "
+.ti -1c
+.RI "void \fBsetADCsPublishInterval\fP (uint32_t interval)"
+.br
+.RI "Sets the interval at which the state of all DACs is published\&. "
+.ti -1c
+.RI "void \fBsetADCsPublishEnabled\fP (bool enabled)"
+.br
+.RI "Sets whether the state of all DACs is published\&. "
+.ti -1c
+.RI "uint8_t \fBregisterADCConversionCallback\fP (std::function< void(uint8_t, uint16_t)> callback)"
+.br
+.RI "Registers a callback for handling ADC conversions\&. "
+.ti -1c
+.RI "void \fBunregisterADCConversionCallback\fP (uint8_t handler)"
+.br
+.RI "Unregisters a callback for handling ADC conversions\&. "
+.ti -1c
+.RI "void \fBsetADCConversionInterval\fP (uint8_t pin, uint16_t interval)"
+.br
+.RI "Sets the interval at which the value of an ADC channel is read\&. "
+.ti -1c
+.RI "void \fBsetADCConversionEnabled\fP (uint8_t pin, bool enabled)"
+.br
+.RI "Enables or disables the periodic reading of the value of an ADC channel\&. "
+.ti -1c
+.RI "bool \fBprocessADCSetConversionIntervalMessage\fP (char *topic, char *payload, uint8_t topic_length)"
+.br
+.RI "Processes a message received on the MQTT topic for setting the state of a DAC\&. "
+.ti -1c
+.RI "bool \fBprocessADCSetConversionEnabledMessage\fP (char *topic, char *payload, uint8_t topic_length)"
+.br
+.RI "Processes a message received on the MQTT topic for setting the value of a DAC\&. "
+.ti -1c
+.RI "bool \fBprocessDACSetStateMessage\fP (char *topic, char *payload, uint8_t topic_length)"
+.br
+.RI "Processes a message received on the MQTT topic for setting the state of a DAC\&. "
+.ti -1c
+.RI "bool \fBprocessDACSetValueMessage\fP (char *topic, char *payload, uint8_t topic_length)"
+.br
+.RI "Processes a message received on the MQTT topic for setting the value of a DAC\&. "
+.ti -1c
+.RI "bool \fBprocessRequestStateMessage\fP (char *topic, char *payload, uint8_t topic_length)"
+.br
+.RI "Processes a message received on the MQTT topic for requesting the state of all DACs\&. "
+.ti -1c
+.RI "void \fBpublishReport\fP ()"
+.br
+.RI "Publishes the state of all DACs\&. "
+.ti -1c
+.RI "void \fBsubscribe\fP ()"
+.br
+.RI "Subscribes to all MQTT topics used by the \fBAnalogIoT\fP object\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBgetType\fP ()"
+.br
+.RI "Gets the type of the card\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBAnalogIoT\fP class is a class for connecting the Analog Card to the IoT module\&. 
+
+This function allows you to control the Analog Card using MQTT\&.
+.PP
+\fBWarning\fP
+.RS 4
+You should not instantiate this class directly, instead use \fBESPMegaIoT\fP's registerCard function\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AnalogIoT::AnalogIoT ()"
+
+.PP
+Default constructor for the \fBAnalogIoT\fP class\&. This constructor initializes the \fBAnalogIoT\fP object and sets up the ADC conversion callbacks\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool AnalogIoT::begin (uint8_t card_id, \fBExpansionCard\fP * card, PubSubClient * mqtt, char * base_topic)\fC [virtual]\fP"
+
+.PP
+Initializes the \fBAnalogIoT\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcard_id\fP The ID of the card\&. 
+.br
+\fIcard\fP A pointer to the card object\&. 
+.br
+\fImqtt\fP A pointer to the MQTT client object\&. 
+.br
+\fIbase_topic\fP The base MQTT topic\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the initialization was successful, false otherwise\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function can be called from the main program but it is recommended to use \fBESPMegaIoT\fP to initialize the IoT Components\&. This function initializes the \fBAnalogIoT\fP object and registers the callbacks for handling DAC changes\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "uint8_t AnalogIoT::getType ()\fC [virtual]\fP"
+
+.PP
+Gets the type of the card\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The type of the card\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void AnalogIoT::handleDACChange (uint8_t pin, uint16_t value)"
+
+.PP
+Publishes the state of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin of the DAC\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::handleMqttMessage (char * topic, char * payload)\fC [virtual]\fP"
+
+.PP
+Publishes the state of all DACs\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is called when a request state message is received\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "bool AnalogIoT::processADCSetConversionEnabledMessage (char * topic, char * payload, uint8_t topic_length)"
+
+.PP
+Processes a message received on the MQTT topic for setting the value of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic of the message\&. 
+.br
+\fIpayload\fP The payload of the message\&. 
+.br
+\fItopic_length\fP The length of the topic\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function is not meant to be called from user code\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the message was processed, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool AnalogIoT::processADCSetConversionIntervalMessage (char * topic, char * payload, uint8_t topic_length)"
+
+.PP
+Processes a message received on the MQTT topic for setting the state of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic of the message\&. 
+.br
+\fIpayload\fP The payload of the message\&. 
+.br
+\fItopic_length\fP The length of the topic\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function is not meant to be called from user code\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the message was processed, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool AnalogIoT::processDACSetStateMessage (char * topic, char * payload, uint8_t topic_length)"
+
+.PP
+Processes a message received on the MQTT topic for setting the state of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic of the message\&. 
+.br
+\fIpayload\fP The payload of the message\&. 
+.br
+\fItopic_length\fP The length of the topic\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function is not meant to be called from user code\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the message was processed, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool AnalogIoT::processDACSetValueMessage (char * topic, char * payload, uint8_t topic_length)"
+
+.PP
+Processes a message received on the MQTT topic for setting the value of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic of the message\&. 
+.br
+\fIpayload\fP The payload of the message\&. 
+.br
+\fItopic_length\fP The length of the topic\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function is not meant to be called from user code\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the message was processed, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool AnalogIoT::processRequestStateMessage (char * topic, char * payload, uint8_t topic_length)"
+
+.PP
+Processes a message received on the MQTT topic for requesting the state of all DACs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic of the message\&. 
+.br
+\fIpayload\fP The payload of the message\&. 
+.br
+\fItopic_length\fP The length of the topic\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function is not meant to be called from user code\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the message was processed, false otherwise\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::publishADC (uint8_t pin)"
+
+.PP
+Publishes the state of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin of the DAC\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::publishDAC (uint8_t pin)"
+
+.PP
+Publishes the state of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin of the DAC\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::publishDACState (uint8_t pin)"
+
+.PP
+Publishes the state of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin of the DAC\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::publishDACValue (uint8_t pin)"
+
+.PP
+Publishes the value of a DAC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin of the DAC\&. 
+.RE
+.PP
+
+.SS "uint8_t AnalogIoT::registerADCConversionCallback (std::function< void(uint8_t, uint16_t)> callback)"
+
+.PP
+Registers a callback for handling ADC conversions\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handler of the callback\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::setADCConversionEnabled (uint8_t pin, bool enabled)"
+
+.PP
+Enables or disables the periodic reading of the value of an ADC channel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin of the ADC channel\&. 
+.br
+\fIenabled\fP True if the value of the ADC channel should be read, false otherwise\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::setADCConversionInterval (uint8_t pin, uint16_t interval)"
+
+.PP
+Sets the interval at which the value of an ADC channel is read\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin of the ADC channel\&. 
+.br
+\fIinterval\fP The interval in milliseconds\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::setADCsPublishEnabled (bool enabled)"
+
+.PP
+Sets whether the state of all DACs is published\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenabled\fP True if the state of all DACs should be published, false otherwise\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::setADCsPublishInterval (uint32_t interval)"
+
+.PP
+Sets the interval at which the state of all DACs is published\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinterval\fP The interval in milliseconds\&. 
+.RE
+.PP
+
+.SS "void AnalogIoT::subscribe ()\fC [virtual]\fP"
+
+.PP
+Subscribes to all MQTT topics used by the \fBAnalogIoT\fP object\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is called when the MQTT client connects\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void AnalogIoT::unregisterADCConversionCallback (uint8_t handler)"
+
+.PP
+Unregisters a callback for handling ADC conversions\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler of the callback\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

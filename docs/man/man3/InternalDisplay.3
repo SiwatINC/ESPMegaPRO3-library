@@ -1,0 +1,151 @@
+.TH "InternalDisplay" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InternalDisplay \- The internal display of the \fBESPMegaPRO\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <InternalDisplay\&.hpp>\fP
+.PP
+Inherits \fBESPMegaDisplay\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInternalDisplay\fP (HardwareSerial *displayAdapter)"
+.br
+.RI "Create a new Internal Display object\&. "
+.ti -1c
+.RI "void \fBbegin\fP (\fBESPMegaIoT\fP *iot, std::function< \fBrtctime_t\fP()> getRtcTime)"
+.br
+.RI "Initialize the Internal Display\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The main loop of the Internal Display\&. "
+.ti -1c
+.RI "void \fBbindInputCard\fP (\fBDigitalInputCard\fP *inputCard)"
+.br
+.RI "Set the input card to be be shown on the input page\&. "
+.ti -1c
+.RI "void \fBbindOutputCard\fP (\fBDigitalOutputCard\fP *outputCard)"
+.br
+.RI "Set the output card to be be shown on the output page\&. "
+.ti -1c
+.RI "void \fBbindClimateCard\fP (\fBClimateCard\fP *climateCard)"
+.br
+.RI "Set the climate card to be be shown on the AC page\&. "
+.ti -1c
+.RI "void \fBunbindInputCard\fP ()"
+.br
+.RI "Unbind the input card from the display\&. "
+.ti -1c
+.RI "void \fBunbindOutputCard\fP ()"
+.br
+.RI "Unbind the output card from the display\&. "
+.ti -1c
+.RI "void \fBunbindClimateCard\fP ()"
+.br
+.RI "Unbind the climate card from the display\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The internal display of the \fBESPMegaPRO\fP\&. 
+
+This is the display that is installed on some \fBESPMegaPRO\fP Chassis\&. It is a 3\&.5" TFT LCD with a resistive touch screen\&.
+.PP
+You can use this display to monitor the status of the \fBESPMegaPRO\fP and also to control the various components of the \fBESPMegaPRO\fP\&.
+.PP
+If you are using a custom display, you need to create a class that inherits from \fBESPMegaDisplay\fP and implement the methods in that class, you may refer to this class for reference\&.
+.PP
+\fBNote\fP
+.RS 4
+This class is automatically instantiated by the \fBESPMegaPRO\fP and can be accessed via the \fCdisplay\fP variable\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "InternalDisplay::InternalDisplay (HardwareSerial * displayAdapter)"
+
+.PP
+Create a new Internal Display object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdisplayAdapter\fP The HardwareSerial object that is connected to the display 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void InternalDisplay::begin (\fBESPMegaIoT\fP * iot, std::function< \fBrtctime_t\fP()> getRtcTime)"
+
+.PP
+Initialize the Internal Display\&. 
+.PP
+\fBNote\fP
+.RS 4
+You should not call this function directly, instead use ESPMegaIoT::enableInternalDisplay()
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIiot\fP The \fBESPMegaIoT\fP object 
+.br
+\fIgetRtcTime\fP A function that returns the current time 
+.RE
+.PP
+
+.SS "void InternalDisplay::bindClimateCard (\fBClimateCard\fP * climateCard)"
+
+.PP
+Set the climate card to be be shown on the AC page\&. This assume that your ClimeateCard has the mode and fan speed names in the following order: mode: [off, fan_only, cool] fan_speed: [auto, low, medium, high]
+.PP
+\fBParameters\fP
+.RS 4
+\fIclimateCard\fP The climate card object to be shown 
+.RE
+.PP
+
+.SS "void InternalDisplay::bindInputCard (\fBDigitalInputCard\fP * inputCard)"
+
+.PP
+Set the input card to be be shown on the input page\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIinputCard\fP The input card object to be shown 
+.RE
+.PP
+
+.SS "void InternalDisplay::bindOutputCard (\fBDigitalOutputCard\fP * outputCard)"
+
+.PP
+Set the output card to be be shown on the output page\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoutputCard\fP The output card object to be shown 
+.RE
+.PP
+
+.SS "void InternalDisplay::loop ()"
+
+.PP
+The main loop of the Internal Display\&. 
+.PP
+\fBNote\fP
+.RS 4
+You should not call this function directly, instead use ESPMega::loop() 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

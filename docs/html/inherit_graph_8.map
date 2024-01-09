@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_io_t_component.html" title="The IoTComponent class is a base class that is used to interface with an expansion card through MQTT." alt="" coords="5,81,121,108"/>
+<area shape="rect" id="node2" href="$class_analog_io_t.html" title="The AnalogIoT class is a class for connecting the Analog Card to the IoT module." alt="" coords="191,5,277,32"/>
+<area shape="rect" id="node3" href="$class_climate_io_t.html" title="The ClimateIoT class is a class for connecting the Climate Card to the IoT module." alt="" coords="187,56,281,83"/>
+<area shape="rect" id="node4" href="$class_digital_input_io_t.html" title="The DigitalInputIoT class is a class for connecting the Digital Input Card to the IoT module." alt="" coords="175,107,293,133"/>
+<area shape="rect" id="node5" href="$class_digital_output_io_t.html" title="The DigitalOutputIoT class is a class interfacing with the Digital Output Card through MQTT." alt="" coords="169,157,299,184"/>
+</map>

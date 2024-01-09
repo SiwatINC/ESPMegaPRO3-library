@@ -1,0 +1,659 @@
+\hypertarget{class_climate_card}{}\doxysection{Climate\+Card Class Reference}
+\label{class_climate_card}\index{ClimateCard@{ClimateCard}}
+
+
+The \mbox{\hyperlink{class_climate_card}{Climate\+Card}} class is a class for controlling an air conditioner.  
+
+
+
+
+{\ttfamily \#include $<$Climate\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Climate\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_climate_card__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Climate\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_climate_card__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_climate_card_a4abb72ecf8f3c175130155a248822ab5}{Climate\+Card}} (uint8\+\_\+t ir\+\_\+pin, \mbox{\hyperlink{struct_air_conditioner}{Air\+Conditioner}} ac, uint8\+\_\+t sensor\+\_\+type, uint8\+\_\+t sensor\+\_\+pin)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_climate_card_a9b4b6fd707c9f507243f0d5dc5b3d854}{Climate\+Card}} (uint8\+\_\+t ir\+\_\+pin, \mbox{\hyperlink{struct_air_conditioner}{Air\+Conditioner}} ac)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_card_a25ee785ee45b87262a3af07cae01023e}\label{class_climate_card_a25ee785ee45b87262a3af07cae01023e}} 
+\mbox{\hyperlink{class_climate_card_a25ee785ee45b87262a3af07cae01023e}{$\sim$\+Climate\+Card}} ()
+\begin{DoxyCompactList}\small\item\em The destructor of the \mbox{\hyperlink{class_climate_card}{Climate\+Card}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_climate_card_aa0649398f58b7093250875c1202711fc}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_ab03908a04c55282a920a5c648b5f7fc8}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Loop function of the \mbox{\hyperlink{class_climate_card}{Climate\+Card}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_a87ce688cdf3b1acd7526968d599b5422}{bind\+FRAM}} (FRAM $\ast$fram, uint16\+\_\+t fram\+\_\+address)
+\begin{DoxyCompactList}\small\item\em bind FRAM memory to the \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object at the specified address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_aa00bb77607d324938e83a0527344e4ef}{set\+FRAMAuto\+Save}} (bool auto\+Save)
+\begin{DoxyCompactList}\small\item\em Set whether the state should be automatically saved to FRAM memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_ab5993cfca1e2f691bdd613e58e0800e0}{save\+State\+To\+FRAM}} ()
+\begin{DoxyCompactList}\small\item\em Save the state to FRAM memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_a09f550e371c3836bee9e01bf795e7557}{load\+State\+From\+FRAM}} ()
+\begin{DoxyCompactList}\small\item\em Load the state from FRAM memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_afb279e4b037b42d6056a1a224548511c}{set\+Temperature}} (uint8\+\_\+t temperature)
+\begin{DoxyCompactList}\small\item\em Set the temperature of the air conditioner. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_climate_card_a0877f36123ed2fdfe41677bdbac320be}{get\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Get the temperature of the air conditioner. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_ad9ba9dfc23dccc0d9b32ca101257a54d}{set\+Mode}} (uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set the mode of the air conditioner. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_a2780d9bb76438ddd00fa8beb418583f6}{set\+Mode\+By\+Name}} (const char $\ast$mode\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set mode by name. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_climate_card_a8a9c0eb63c2e92a01fc39715c1876509}{get\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Get the mode of the air conditioner. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_climate_card_a4eae69055d00724777be2b70ea99a6f3}{get\+Mode\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the current mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_af3649bf5137e950b16073da4ae266a5b}{set\+Fan\+Speed}} (uint8\+\_\+t fan\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Set the fan speed of the air conditioner. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_a745658695c2ad4aac7be116ddba8bee7}{set\+Fan\+Speed\+By\+Name}} (const char $\ast$fan\+\_\+speed\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set fan speed by name. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_climate_card_a119c0d4369efb88eab7c99f45b7a62af}{get\+Fan\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em Get the fan speed of the air conditioner. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_climate_card_ab300cdd889f3fc7bd9bc03857d137356}{get\+Fan\+Speed\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the current fan speed. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_climate_card_a975cea4b22a9fa43c23e5e62c21596df}{get\+Room\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Get the room temperature in degrees Celsius. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_climate_card_a734fbf0f3471bd0bcbd1f7c24e273185}{get\+Humidity}} ()
+\begin{DoxyCompactList}\small\item\em Get the humidity in percent. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_climate_card_a2780cd2ee3c06dadda775c9e38de3e2b}{get\+Sensor\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the sensor connected to the card. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_climate_card_a2b15582430d577bfa8f07983c5ecaf22}{register\+Change\+Callback}} (std\+::function$<$ void(uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Register a callback function that will be called when the state of the air conditioner changes. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_climate_card_ab95d86d1fc8f2d1f19324f1161afbcaf}{register\+Sensor\+Callback}} (std\+::function$<$ void(float, float)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Register a callback function that will be called when the sensor data changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_a15d887d1b211d461edd0835d0104f7c7}{unregister\+Change\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregister a callback function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_card_a13d422d72f933de45cde16477de623ad}{unregister\+Sensor\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregister a sensor callback function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_climate_card_a651b1cbd6da6281cfba68e5852e9a597}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_climate_card}{Climate\+Card}} class is a class for controlling an air conditioner. 
+
+This class allows you to control an air conditioner using an IR LED. It is meant to be used with the ESPMega Climate Card.
+
+\begin{DoxyNote}{Note}
+You can also use a DHT22 or DS18\+B20 temperature sensor to get the room temperature (and humidity if using a DHT22). Although, this is optional. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_climate_card_a4abb72ecf8f3c175130155a248822ab5}\label{class_climate_card_a4abb72ecf8f3c175130155a248822ab5}} 
+\index{ClimateCard@{ClimateCard}!ClimateCard@{ClimateCard}}
+\index{ClimateCard@{ClimateCard}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{ClimateCard()}{ClimateCard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Climate\+Card\+::\+Climate\+Card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ir\+\_\+pin,  }\item[{\mbox{\hyperlink{struct_air_conditioner}{Air\+Conditioner}}}]{ac,  }\item[{uint8\+\_\+t}]{sensor\+\_\+type,  }\item[{uint8\+\_\+t}]{sensor\+\_\+pin }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ir\+\_\+pin} & The GPIO pin number of the IR transmitter. \\
+\hline
+{\em ac} & The \mbox{\hyperlink{struct_air_conditioner}{Air\+Conditioner}} object that represents the air conditioner. \\
+\hline
+{\em sensor\+\_\+type} & The type of the sensor connected to the card. \\
+\hline
+{\em sensor\+\_\+pin} & The GPIO pin number of the sensor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_climate_card_a9b4b6fd707c9f507243f0d5dc5b3d854}\label{class_climate_card_a9b4b6fd707c9f507243f0d5dc5b3d854}} 
+\index{ClimateCard@{ClimateCard}!ClimateCard@{ClimateCard}}
+\index{ClimateCard@{ClimateCard}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{ClimateCard()}{ClimateCard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Climate\+Card\+::\+Climate\+Card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ir\+\_\+pin,  }\item[{\mbox{\hyperlink{struct_air_conditioner}{Air\+Conditioner}}}]{ac }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ir\+\_\+pin} & The GPIO pin number of the IR transmitter. \\
+\hline
+{\em ac} & The \mbox{\hyperlink{struct_air_conditioner}{Air\+Conditioner}} object that represents the air conditioner.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This constructor can be used when no sensor is connected to the card. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_climate_card_aa0649398f58b7093250875c1202711fc}\label{class_climate_card_aa0649398f58b7093250875c1202711fc}} 
+\index{ClimateCard@{ClimateCard}!begin@{begin}}
+\index{begin@{begin}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool Climate\+Card\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object. 
+
+\begin{DoxyReturn}{Returns}
+true if initialization was successful. 
+
+false if initialization failed. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_climate_card_a87ce688cdf3b1acd7526968d599b5422}\label{class_climate_card_a87ce688cdf3b1acd7526968d599b5422}} 
+\index{ClimateCard@{ClimateCard}!bindFRAM@{bindFRAM}}
+\index{bindFRAM@{bindFRAM}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{bindFRAM()}{bindFRAM()}}
+{\footnotesize\ttfamily void Climate\+Card\+::bind\+FRAM (\begin{DoxyParamCaption}\item[{FRAM $\ast$}]{fram,  }\item[{uint16\+\_\+t}]{fram\+\_\+address }\end{DoxyParamCaption})}
+
+
+
+bind FRAM memory to the \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object at the specified address. 
+
+\begin{DoxyNote}{Note}
+This function must be called before calling \mbox{\hyperlink{class_climate_card_a09f550e371c3836bee9e01bf795e7557}{load\+State\+From\+FRAM()}} or \mbox{\hyperlink{class_climate_card_ab5993cfca1e2f691bdd613e58e0800e0}{save\+State\+To\+FRAM()}}. 
+
+This card takes up 3 bytes of FRAM memory.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em fram} & The FRAM object. \\
+\hline
+{\em fram\+\_\+address} & The starting address of the card in FRAM memory. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_climate_card_a119c0d4369efb88eab7c99f45b7a62af}\label{class_climate_card_a119c0d4369efb88eab7c99f45b7a62af}} 
+\index{ClimateCard@{ClimateCard}!getFanSpeed@{getFanSpeed}}
+\index{getFanSpeed@{getFanSpeed}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getFanSpeed()}{getFanSpeed()}}
+{\footnotesize\ttfamily uint8\+\_\+t Climate\+Card\+::get\+Fan\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the fan speed of the air conditioner. 
+
+\begin{DoxyReturn}{Returns}
+The fan speed of the air conditioner. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_climate_card_ab300cdd889f3fc7bd9bc03857d137356}\label{class_climate_card_ab300cdd889f3fc7bd9bc03857d137356}} 
+\index{ClimateCard@{ClimateCard}!getFanSpeedName@{getFanSpeedName}}
+\index{getFanSpeedName@{getFanSpeedName}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getFanSpeedName()}{getFanSpeedName()}}
+{\footnotesize\ttfamily char $\ast$ Climate\+Card\+::get\+Fan\+Speed\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the current fan speed. 
+
+\begin{DoxyReturn}{Returns}
+The name of the current fan speed. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_ab300cdd889f3fc7bd9bc03857d137356_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a734fbf0f3471bd0bcbd1f7c24e273185}\label{class_climate_card_a734fbf0f3471bd0bcbd1f7c24e273185}} 
+\index{ClimateCard@{ClimateCard}!getHumidity@{getHumidity}}
+\index{getHumidity@{getHumidity}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getHumidity()}{getHumidity()}}
+{\footnotesize\ttfamily float Climate\+Card\+::get\+Humidity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the humidity in percent. 
+
+\begin{DoxyReturn}{Returns}
+The humidity. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a734fbf0f3471bd0bcbd1f7c24e273185_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a8a9c0eb63c2e92a01fc39715c1876509}\label{class_climate_card_a8a9c0eb63c2e92a01fc39715c1876509}} 
+\index{ClimateCard@{ClimateCard}!getMode@{getMode}}
+\index{getMode@{getMode}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily uint8\+\_\+t Climate\+Card\+::get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the mode of the air conditioner. 
+
+\begin{DoxyReturn}{Returns}
+The mode of the air conditioner. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_climate_card_a4eae69055d00724777be2b70ea99a6f3}\label{class_climate_card_a4eae69055d00724777be2b70ea99a6f3}} 
+\index{ClimateCard@{ClimateCard}!getModeName@{getModeName}}
+\index{getModeName@{getModeName}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getModeName()}{getModeName()}}
+{\footnotesize\ttfamily char $\ast$ Climate\+Card\+::get\+Mode\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the name of the current mode. 
+
+\begin{DoxyReturn}{Returns}
+The name of the current mode. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a4eae69055d00724777be2b70ea99a6f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a975cea4b22a9fa43c23e5e62c21596df}\label{class_climate_card_a975cea4b22a9fa43c23e5e62c21596df}} 
+\index{ClimateCard@{ClimateCard}!getRoomTemperature@{getRoomTemperature}}
+\index{getRoomTemperature@{getRoomTemperature}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getRoomTemperature()}{getRoomTemperature()}}
+{\footnotesize\ttfamily float Climate\+Card\+::get\+Room\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the room temperature in degrees Celsius. 
+
+\begin{DoxyReturn}{Returns}
+The room temperature. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a975cea4b22a9fa43c23e5e62c21596df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a2780cd2ee3c06dadda775c9e38de3e2b}\label{class_climate_card_a2780cd2ee3c06dadda775c9e38de3e2b}} 
+\index{ClimateCard@{ClimateCard}!getSensorType@{getSensorType}}
+\index{getSensorType@{getSensorType}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getSensorType()}{getSensorType()}}
+{\footnotesize\ttfamily uint8\+\_\+t Climate\+Card\+::get\+Sensor\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the type of the sensor connected to the card. 
+
+\begin{DoxyReturn}{Returns}
+The type of the sensor connected to the card. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a2780cd2ee3c06dadda775c9e38de3e2b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a0877f36123ed2fdfe41677bdbac320be}\label{class_climate_card_a0877f36123ed2fdfe41677bdbac320be}} 
+\index{ClimateCard@{ClimateCard}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily uint8\+\_\+t Climate\+Card\+::get\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the temperature of the air conditioner. 
+
+\begin{DoxyReturn}{Returns}
+The temperature of the air conditioner. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a0877f36123ed2fdfe41677bdbac320be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a651b1cbd6da6281cfba68e5852e9a597}\label{class_climate_card_a651b1cbd6da6281cfba68e5852e9a597}} 
+\index{ClimateCard@{ClimateCard}!getType@{getType}}
+\index{getType@{getType}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily uint8\+\_\+t Climate\+Card\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the type of the card. 
+
+\begin{DoxyReturn}{Returns}
+The handler of the callback function. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_climate_card_a09f550e371c3836bee9e01bf795e7557}\label{class_climate_card_a09f550e371c3836bee9e01bf795e7557}} 
+\index{ClimateCard@{ClimateCard}!loadStateFromFRAM@{loadStateFromFRAM}}
+\index{loadStateFromFRAM@{loadStateFromFRAM}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{loadStateFromFRAM()}{loadStateFromFRAM()}}
+{\footnotesize\ttfamily void Climate\+Card\+::load\+State\+From\+FRAM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load the state from FRAM memory. 
+
+\begin{DoxyNote}{Note}
+This function has no effect if \mbox{\hyperlink{class_climate_card_a87ce688cdf3b1acd7526968d599b5422}{bind\+FRAM()}} has not been called. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_climate_card_ab03908a04c55282a920a5c648b5f7fc8}\label{class_climate_card_ab03908a04c55282a920a5c648b5f7fc8}} 
+\index{ClimateCard@{ClimateCard}!loop@{loop}}
+\index{loop@{loop}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Climate\+Card\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Loop function of the \mbox{\hyperlink{class_climate_card}{Climate\+Card}} class. 
+
+\begin{DoxyNote}{Note}
+When this card is installed in an ESPMega, this function is called automatically by the ESPMega class. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_climate_card_a2b15582430d577bfa8f07983c5ecaf22}\label{class_climate_card_a2b15582430d577bfa8f07983c5ecaf22}} 
+\index{ClimateCard@{ClimateCard}!registerChangeCallback@{registerChangeCallback}}
+\index{registerChangeCallback@{registerChangeCallback}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{registerChangeCallback()}{registerChangeCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t Climate\+Card\+::register\+Change\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Register a callback function that will be called when the state of the air conditioner changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function to register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The handler of the callback function. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a2b15582430d577bfa8f07983c5ecaf22_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_ab95d86d1fc8f2d1f19324f1161afbcaf}\label{class_climate_card_ab95d86d1fc8f2d1f19324f1161afbcaf}} 
+\index{ClimateCard@{ClimateCard}!registerSensorCallback@{registerSensorCallback}}
+\index{registerSensorCallback@{registerSensorCallback}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{registerSensorCallback()}{registerSensorCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t Climate\+Card\+::register\+Sensor\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(float, float)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Register a callback function that will be called when the sensor data changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function to register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler of the callback function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_climate_card_ab5993cfca1e2f691bdd613e58e0800e0}\label{class_climate_card_ab5993cfca1e2f691bdd613e58e0800e0}} 
+\index{ClimateCard@{ClimateCard}!saveStateToFRAM@{saveStateToFRAM}}
+\index{saveStateToFRAM@{saveStateToFRAM}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{saveStateToFRAM()}{saveStateToFRAM()}}
+{\footnotesize\ttfamily void Climate\+Card\+::save\+State\+To\+FRAM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Save the state to FRAM memory. 
+
+\begin{DoxyNote}{Note}
+This function has no effect if \mbox{\hyperlink{class_climate_card_a87ce688cdf3b1acd7526968d599b5422}{bind\+FRAM()}} has not been called. 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_ab5993cfca1e2f691bdd613e58e0800e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_af3649bf5137e950b16073da4ae266a5b}\label{class_climate_card_af3649bf5137e950b16073da4ae266a5b}} 
+\index{ClimateCard@{ClimateCard}!setFanSpeed@{setFanSpeed}}
+\index{setFanSpeed@{setFanSpeed}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{setFanSpeed()}{setFanSpeed()}}
+{\footnotesize\ttfamily void Climate\+Card\+::set\+Fan\+Speed (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{fan\+\_\+speed }\end{DoxyParamCaption})}
+
+
+
+Set the fan speed of the air conditioner. 
+
+\begin{DoxyNote}{Note}
+If the fan speed is out of range, it will be set to 0. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em fan\+\_\+speed} & The fan speed to set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_af3649bf5137e950b16073da4ae266a5b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_af3649bf5137e950b16073da4ae266a5b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a745658695c2ad4aac7be116ddba8bee7}\label{class_climate_card_a745658695c2ad4aac7be116ddba8bee7}} 
+\index{ClimateCard@{ClimateCard}!setFanSpeedByName@{setFanSpeedByName}}
+\index{setFanSpeedByName@{setFanSpeedByName}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{setFanSpeedByName()}{setFanSpeedByName()}}
+{\footnotesize\ttfamily void Climate\+Card\+::set\+Fan\+Speed\+By\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fan\+\_\+speed\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Set fan speed by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fan\+\_\+speed\+\_\+name} & The name of the fan speed to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If the fan speed is not found, the function will not do anything. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a745658695c2ad4aac7be116ddba8bee7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_aa00bb77607d324938e83a0527344e4ef}\label{class_climate_card_aa00bb77607d324938e83a0527344e4ef}} 
+\index{ClimateCard@{ClimateCard}!setFRAMAutoSave@{setFRAMAutoSave}}
+\index{setFRAMAutoSave@{setFRAMAutoSave}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{setFRAMAutoSave()}{setFRAMAutoSave()}}
+{\footnotesize\ttfamily void Climate\+Card\+::set\+FRAMAuto\+Save (\begin{DoxyParamCaption}\item[{bool}]{auto\+Save }\end{DoxyParamCaption})}
+
+
+
+Set whether the state should be automatically saved to FRAM memory. 
+
+\begin{DoxyNote}{Note}
+This function has no effect if \mbox{\hyperlink{class_climate_card_a87ce688cdf3b1acd7526968d599b5422}{bind\+FRAM()}} has not been called. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em auto\+Save} & Whether the state should be automatically saved to FRAM memory. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_climate_card_ad9ba9dfc23dccc0d9b32ca101257a54d}\label{class_climate_card_ad9ba9dfc23dccc0d9b32ca101257a54d}} 
+\index{ClimateCard@{ClimateCard}!setMode@{setMode}}
+\index{setMode@{setMode}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily void Climate\+Card\+::set\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set the mode of the air conditioner. 
+
+\begin{DoxyNote}{Note}
+If the mode is out of range, it will be set to 0. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode to set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_ad9ba9dfc23dccc0d9b32ca101257a54d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_ad9ba9dfc23dccc0d9b32ca101257a54d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a2780d9bb76438ddd00fa8beb418583f6}\label{class_climate_card_a2780d9bb76438ddd00fa8beb418583f6}} 
+\index{ClimateCard@{ClimateCard}!setModeByName@{setModeByName}}
+\index{setModeByName@{setModeByName}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{setModeByName()}{setModeByName()}}
+{\footnotesize\ttfamily void Climate\+Card\+::set\+Mode\+By\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{mode\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Set mode by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode\+\_\+name} & The name of the mode to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If the mode is not found, the function will not do anything. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a2780d9bb76438ddd00fa8beb418583f6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_afb279e4b037b42d6056a1a224548511c}\label{class_climate_card_afb279e4b037b42d6056a1a224548511c}} 
+\index{ClimateCard@{ClimateCard}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void Climate\+Card\+::set\+Temperature (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{temperature }\end{DoxyParamCaption})}
+
+
+
+Set the temperature of the air conditioner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & The temperature to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If the temperature is out of range, it will be set to its respective maximum or minimum. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_afb279e4b037b42d6056a1a224548511c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a15d887d1b211d461edd0835d0104f7c7}\label{class_climate_card_a15d887d1b211d461edd0835d0104f7c7}} 
+\index{ClimateCard@{ClimateCard}!unregisterChangeCallback@{unregisterChangeCallback}}
+\index{unregisterChangeCallback@{unregisterChangeCallback}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{unregisterChangeCallback()}{unregisterChangeCallback()}}
+{\footnotesize\ttfamily void Climate\+Card\+::unregister\+Change\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregister a callback function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler of the callback function to unregister. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_card_a15d887d1b211d461edd0835d0104f7c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_card_a13d422d72f933de45cde16477de623ad}\label{class_climate_card_a13d422d72f933de45cde16477de623ad}} 
+\index{ClimateCard@{ClimateCard}!unregisterSensorCallback@{unregisterSensorCallback}}
+\index{unregisterSensorCallback@{unregisterSensorCallback}!ClimateCard@{ClimateCard}}
+\doxysubsubsection{\texorpdfstring{unregisterSensorCallback()}{unregisterSensorCallback()}}
+{\footnotesize\ttfamily void Climate\+Card\+::unregister\+Sensor\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregister a sensor callback function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler of the callback function to unregister. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Climate\+Card.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/\mbox{\hyperlink{_climate_card_8cpp}{Climate\+Card.\+cpp}}\end{DoxyCompactItemize}

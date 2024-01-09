@@ -1,0 +1,173 @@
+.TH "DigitalInputIoT" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DigitalInputIoT \- The \fBDigitalInputIoT\fP class is a class for connecting the Digital Input Card to the IoT module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DigitalInputIoT\&.hpp>\fP
+.PP
+Inherits \fBIoTComponent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBbegin\fP (uint8_t card_id, \fBExpansionCard\fP *card, PubSubClient *mqtt, char *base_topic)"
+.br
+.RI "Initializes the \fBDigitalInputIoT\fP object\&. "
+.ti -1c
+.RI "void \fBhandleMqttMessage\fP (char *topic, char *payload)"
+.br
+.RI "Handles MQTT messages for the \fBDigitalInputIoT\fP component\&. "
+.ti -1c
+.RI "void \fBpublishDigitalInputs\fP ()"
+.br
+.RI "Publish all digital inputs to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBpublishDigitalInput\fP (uint8_t pin)"
+.br
+.RI "Publish a digital input to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBsetDigitalInputsPublishEnabled\fP (bool enabled)"
+.br
+.RI "Set if the digital inputs should be published to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBhandleValueChange\fP (uint8_t pin, uint8_t value)"
+.br
+.RI "Handles a value change for a digital input\&. "
+.ti -1c
+.RI "void \fBpublishReport\fP ()"
+.br
+.RI "Publish all inputs to the MQTT Broker\&. "
+.ti -1c
+.RI "void \fBsubscribe\fP ()"
+.br
+.RI "Subscribes to the MQTT topics for the \fBDigitalInputIoT\fP component\&. "
+.ti -1c
+.RI "uint8_t \fBgetType\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBDigitalInputIoT\fP class is a class for connecting the Digital Input Card to the IoT module\&. 
+
+This function allows you to control the Digital Input Card using MQTT\&.
+.PP
+\fBWarning\fP
+.RS 4
+You should not instantiate this class directly, instead use \fBESPMegaIoT\fP's registerCard function\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool DigitalInputIoT::begin (uint8_t card_id, \fBExpansionCard\fP * card, PubSubClient * mqtt, char * base_topic)\fC [virtual]\fP"
+
+.PP
+Initializes the \fBDigitalInputIoT\fP object\&. This function sets the necessary parameters for the \fBDigitalInputIoT\fP object, such as the card ID, expansion card, MQTT client, and base topic\&. It also enables the publishing of digital input values and registers a callback function for handling value changes\&.
+.PP
+\fBNote\fP
+.RS 4
+Although this function can be called in the main program, it is recommended to use \fBESPMegaIoT::registerCard()\fP to automatically manage the instantiation and initialization of this component\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcard_id\fP The ID of the card\&. 
+.br
+\fIcard\fP Pointer to the \fBDigitalInputCard\fP object\&. 
+.br
+\fImqtt\fP Pointer to the PubSubClient object\&. 
+.br
+\fIbase_topic\fP The base topic for MQTT communication\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the initialization is successful, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void DigitalInputIoT::handleMqttMessage (char * topic, char * payload)\fC [virtual]\fP"
+
+.PP
+Handles MQTT messages for the \fBDigitalInputIoT\fP component\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The trimmed topic of the MQTT message\&. 
+.br
+\fIpayload\fP The null-terminated payload of the MQTT message\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void DigitalInputIoT::handleValueChange (uint8_t pin, uint8_t value)"
+
+.PP
+Handles a value change for a digital input\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is registered as a callback function for the \fBDigitalInputCard\fP object\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin that changed\&. 
+.br
+\fIvalue\fP The new value of the pin\&. 
+.RE
+.PP
+
+.SS "void DigitalInputIoT::publishDigitalInput (uint8_t pin)"
+
+.PP
+Publish a digital input to the MQTT broker\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to publish\&. 
+.RE
+.PP
+
+.SS "void DigitalInputIoT::publishReport ()\fC [virtual]\fP"
+
+.PP
+Publish all inputs to the MQTT Broker\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is overriden from the \fBIoTComponent\fP class and is called by \fBESPMegaIoT\fP\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to publish\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void DigitalInputIoT::setDigitalInputsPublishEnabled (bool enabled)"
+
+.PP
+Set if the digital inputs should be published to the MQTT broker\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenabled\fP True if the digital inputs should be published, false otherwise\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

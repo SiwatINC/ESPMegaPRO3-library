@@ -1,0 +1,1111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_analog_io_t" xml:lang="en-US">
+<title>AnalogIoT Class Reference</title>
+<indexterm><primary>AnalogIoT</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_analog_io_t">AnalogIoT</link> class is a class for connecting the Analog Card to the IoT module. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AnalogIoT.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for AnalogIoT:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AnalogIoT:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_analog_io_t_1ac3923fe40bba207e1959a72c180e85d6">AnalogIoT</link> ()</para>
+
+<para>Default constructor for the <link linkend="_class_analog_io_t">AnalogIoT</link> class. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_analog_io_t_1abb92f699eebef5d8b6db83d0053a7e9a"/><link linkend="_class_analog_io_t_1abb92f699eebef5d8b6db83d0053a7e9a">~AnalogIoT</link> ()</para>
+
+<para>Default destructor for the <link linkend="_class_analog_io_t">AnalogIoT</link> class. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_analog_io_t_1a3888c317175981272a603fe27054460a">begin</link> (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> *card, PubSubClient *mqtt, char *base_topic)</para>
+
+<para>Initializes the <link linkend="_class_analog_io_t">AnalogIoT</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf">handleMqttMessage</link> (char *topic, char *payload)</para>
+
+<para>Publishes the state of all DACs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1a84402cb7e45ce0da63a860ee16716ce8">handleDACChange</link> (uint8_t pin, uint16_t value)</para>
+
+<para>Publishes the state of a DAC. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_analog_io_t_1a09922e70d6374ba79b3193c3a3b35231"/>void <link linkend="_class_analog_io_t_1a09922e70d6374ba79b3193c3a3b35231">publishADCs</link> ()</para>
+
+<para>Publishes the state of all DACs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1a2f74e7f22b3374b4950357d9f4b11ccc">publishADC</link> (uint8_t pin)</para>
+
+<para>Publishes the state of a DAC. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_analog_io_t_1a0050d5b14ed148e2ea358f393909114c"/>void <link linkend="_class_analog_io_t_1a0050d5b14ed148e2ea358f393909114c">publishDACs</link> ()</para>
+
+<para>Publishes the state of all DACs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1a108ab3e98144f9ff07ec88ba794d594c">publishDAC</link> (uint8_t pin)</para>
+
+<para>Publishes the state of a DAC. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1af9686e6a38360e26a2c476c96f9d7c91">publishDACState</link> (uint8_t pin)</para>
+
+<para>Publishes the state of a DAC. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1a87bed89be4587e778eac2f8cabed4bab">publishDACValue</link> (uint8_t pin)</para>
+
+<para>Publishes the value of a DAC. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1a9a4ba77a993ea1c789f809ea89c57722">setADCsPublishInterval</link> (uint32_t interval)</para>
+
+<para>Sets the interval at which the state of all DACs is published. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1ada3f1d46782f2b63488445e75b05cf63">setADCsPublishEnabled</link> (bool enabled)</para>
+
+<para>Sets whether the state of all DACs is published. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_analog_io_t_1a1e1c02ae471274537452a89fd067d024">registerADCConversionCallback</link> (std::function&lt; void(uint8_t, uint16_t)&gt; callback)</para>
+
+<para>Registers a callback for handling ADC conversions. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1aa7d3175c73cea942123caf24ce779539">unregisterADCConversionCallback</link> (uint8_t handler)</para>
+
+<para>Unregisters a callback for handling ADC conversions. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1abd35a9011a0018c38af690bd95e367fb">setADCConversionInterval</link> (uint8_t pin, uint16_t interval)</para>
+
+<para>Sets the interval at which the value of an ADC channel is read. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1ae3b8eaee385ed8eb20f145996513461d">setADCConversionEnabled</link> (uint8_t pin, bool enabled)</para>
+
+<para>Enables or disables the periodic reading of the value of an ADC channel. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_analog_io_t_1a27f21df078fd88872c9f54f58f2c37bd">processADCSetConversionIntervalMessage</link> (char *topic, char *payload, uint8_t topic_length)</para>
+
+<para>Processes a message received on the MQTT topic for setting the state of a DAC. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_analog_io_t_1a9506f0c01d7ef71858a4881fc01050b7">processADCSetConversionEnabledMessage</link> (char *topic, char *payload, uint8_t topic_length)</para>
+
+<para>Processes a message received on the MQTT topic for setting the value of a DAC. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_analog_io_t_1ab582bcdd8b97fe81dae216ace1e7e827">processDACSetStateMessage</link> (char *topic, char *payload, uint8_t topic_length)</para>
+
+<para>Processes a message received on the MQTT topic for setting the state of a DAC. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_analog_io_t_1adf3114a294de15674d994785a82548f8">processDACSetValueMessage</link> (char *topic, char *payload, uint8_t topic_length)</para>
+
+<para>Processes a message received on the MQTT topic for setting the value of a DAC. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_analog_io_t_1a2e18ed063bdbf7cc2a59b20a721050f8">processRequestStateMessage</link> (char *topic, char *payload, uint8_t topic_length)</para>
+
+<para>Processes a message received on the MQTT topic for requesting the state of all DACs. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_analog_io_t_1ad49a200a7568281874f39b2f14f12621"/>void <link linkend="_class_analog_io_t_1ad49a200a7568281874f39b2f14f12621">publishReport</link> ()</para>
+
+<para>Publishes the state of all DACs. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_io_t_1a37216e8cc0030b538ead2a7c30546d15">subscribe</link> ()</para>
+
+<para>Subscribes to all MQTT topics used by the <link linkend="_class_analog_io_t">AnalogIoT</link> object. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_analog_io_t_1a7fc696f238783d0f8b8ba6d7d3c70e58"/>void <emphasis role="strong">loop</emphasis> ()</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_analog_io_t_1ae16f9a69bc1cefda4b6cc766f5cbc9cd">getType</link> ()</para>
+
+<para>Gets the type of the card. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_analog_io_t">AnalogIoT</link> class is a class for connecting the Analog Card to the IoT module. </para>
+
+
+
+<para>This function allows you to control the Analog Card using MQTT.</para>
+
+<para><warning><title>Warning</title>
+
+<para>You should not instantiate this class directly, instead use <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link>&apos;s registerCard function. </para>
+</warning>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_analog_io_t_1ac3923fe40bba207e1959a72c180e85d6"/>    <section>
+    <title>AnalogIoT()</title>
+<indexterm><primary>AnalogIoT</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>AnalogIoT</secondary></indexterm>
+<para><computeroutput>AnalogIoT::AnalogIoT ( )</computeroutput></para><para>
+
+<para>Default constructor for the <link linkend="_class_analog_io_t">AnalogIoT</link> class. </para>
+</para>
+
+<para>This constructor initializes the <link linkend="_class_analog_io_t">AnalogIoT</link> object and sets up the ADC conversion callbacks. </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_analog_io_t_1a3888c317175981272a603fe27054460a"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool AnalogIoT::begin (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> * card, PubSubClient * mqtt, char * base_topic)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_analog_io_t">AnalogIoT</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>card_id</entry>
+                                <entry>
+<para>The ID of the card. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>card</entry>
+                                <entry>
+<para>A pointer to the card object. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt</entry>
+                                <entry>
+<para>A pointer to the MQTT client object. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>base_topic</entry>
+                                <entry>
+<para>The base MQTT topic. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the initialization was successful, false otherwise. </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>This function can be called from the main program but it is recommended to use <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> to initialize the IoT Components. This function initializes the <link linkend="_class_analog_io_t">AnalogIoT</link> object and registers the callbacks for handling DAC changes. </para>
+</note>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a3888c317175981272a603fe27054460a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1ae16f9a69bc1cefda4b6cc766f5cbc9cd"/>    <section>
+    <title>getType()</title>
+<indexterm><primary>getType</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>getType</secondary></indexterm>
+<para><computeroutput>uint8_t AnalogIoT::getType ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Gets the type of the card. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The type of the card. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+    </section><anchor xml:id="_class_analog_io_t_1a84402cb7e45ce0da63a860ee16716ce8"/>    <section>
+    <title>handleDACChange()</title>
+<indexterm><primary>handleDACChange</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>handleDACChange</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::handleDACChange (uint8_t pin, uint16_t value)</computeroutput></para><para>
+
+<para>Publishes the state of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin of the DAC. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a84402cb7e45ce0da63a860ee16716ce8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a84402cb7e45ce0da63a860ee16716ce8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf"/>    <section>
+    <title>handleMqttMessage()</title>
+<indexterm><primary>handleMqttMessage</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>handleMqttMessage</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::handleMqttMessage (char * topic, char * payload)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Publishes the state of all DACs. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is called when a request state message is received. </para>
+</note>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a24c2bf88a47a4cdaf8ebf5e55508ddbf_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1a9506f0c01d7ef71858a4881fc01050b7"/>    <section>
+    <title>processADCSetConversionEnabledMessage()</title>
+<indexterm><primary>processADCSetConversionEnabledMessage</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>processADCSetConversionEnabledMessage</secondary></indexterm>
+<para><computeroutput>bool AnalogIoT::processADCSetConversionEnabledMessage (char * topic, char * payload, uint8_t topic_length)</computeroutput></para><para>
+
+<para>Processes a message received on the MQTT topic for setting the value of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The payload of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>topic_length</entry>
+                                <entry>
+<para>The length of the topic. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is not meant to be called from user code. </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>True if the message was processed, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a9506f0c01d7ef71858a4881fc01050b7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a9506f0c01d7ef71858a4881fc01050b7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1a27f21df078fd88872c9f54f58f2c37bd"/>    <section>
+    <title>processADCSetConversionIntervalMessage()</title>
+<indexterm><primary>processADCSetConversionIntervalMessage</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>processADCSetConversionIntervalMessage</secondary></indexterm>
+<para><computeroutput>bool AnalogIoT::processADCSetConversionIntervalMessage (char * topic, char * payload, uint8_t topic_length)</computeroutput></para><para>
+
+<para>Processes a message received on the MQTT topic for setting the state of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The payload of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>topic_length</entry>
+                                <entry>
+<para>The length of the topic. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is not meant to be called from user code. </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>True if the message was processed, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a27f21df078fd88872c9f54f58f2c37bd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a27f21df078fd88872c9f54f58f2c37bd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1ab582bcdd8b97fe81dae216ace1e7e827"/>    <section>
+    <title>processDACSetStateMessage()</title>
+<indexterm><primary>processDACSetStateMessage</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>processDACSetStateMessage</secondary></indexterm>
+<para><computeroutput>bool AnalogIoT::processDACSetStateMessage (char * topic, char * payload, uint8_t topic_length)</computeroutput></para><para>
+
+<para>Processes a message received on the MQTT topic for setting the state of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The payload of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>topic_length</entry>
+                                <entry>
+<para>The length of the topic. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is not meant to be called from user code. </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>True if the message was processed, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_ab582bcdd8b97fe81dae216ace1e7e827_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_ab582bcdd8b97fe81dae216ace1e7e827_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1adf3114a294de15674d994785a82548f8"/>    <section>
+    <title>processDACSetValueMessage()</title>
+<indexterm><primary>processDACSetValueMessage</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>processDACSetValueMessage</secondary></indexterm>
+<para><computeroutput>bool AnalogIoT::processDACSetValueMessage (char * topic, char * payload, uint8_t topic_length)</computeroutput></para><para>
+
+<para>Processes a message received on the MQTT topic for setting the value of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The payload of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>topic_length</entry>
+                                <entry>
+<para>The length of the topic. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is not meant to be called from user code. </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>True if the message was processed, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_adf3114a294de15674d994785a82548f8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_adf3114a294de15674d994785a82548f8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1a2e18ed063bdbf7cc2a59b20a721050f8"/>    <section>
+    <title>processRequestStateMessage()</title>
+<indexterm><primary>processRequestStateMessage</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>processRequestStateMessage</secondary></indexterm>
+<para><computeroutput>bool AnalogIoT::processRequestStateMessage (char * topic, char * payload, uint8_t topic_length)</computeroutput></para><para>
+
+<para>Processes a message received on the MQTT topic for requesting the state of all DACs. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The payload of the message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>topic_length</entry>
+                                <entry>
+<para>The length of the topic. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function is not meant to be called from user code. </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>True if the message was processed, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a2e18ed063bdbf7cc2a59b20a721050f8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a2e18ed063bdbf7cc2a59b20a721050f8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1a2f74e7f22b3374b4950357d9f4b11ccc"/>    <section>
+    <title>publishADC()</title>
+<indexterm><primary>publishADC</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>publishADC</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::publishADC (uint8_t pin)</computeroutput></para><para>
+
+<para>Publishes the state of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin of the DAC. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a2f74e7f22b3374b4950357d9f4b11ccc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a2f74e7f22b3374b4950357d9f4b11ccc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1a108ab3e98144f9ff07ec88ba794d594c"/>    <section>
+    <title>publishDAC()</title>
+<indexterm><primary>publishDAC</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>publishDAC</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::publishDAC (uint8_t pin)</computeroutput></para><para>
+
+<para>Publishes the state of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin of the DAC. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a108ab3e98144f9ff07ec88ba794d594c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a108ab3e98144f9ff07ec88ba794d594c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1af9686e6a38360e26a2c476c96f9d7c91"/>    <section>
+    <title>publishDACState()</title>
+<indexterm><primary>publishDACState</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>publishDACState</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::publishDACState (uint8_t pin)</computeroutput></para><para>
+
+<para>Publishes the state of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin of the DAC. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_af9686e6a38360e26a2c476c96f9d7c91_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_af9686e6a38360e26a2c476c96f9d7c91_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1a87bed89be4587e778eac2f8cabed4bab"/>    <section>
+    <title>publishDACValue()</title>
+<indexterm><primary>publishDACValue</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>publishDACValue</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::publishDACValue (uint8_t pin)</computeroutput></para><para>
+
+<para>Publishes the value of a DAC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin of the DAC. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a87bed89be4587e778eac2f8cabed4bab_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_a87bed89be4587e778eac2f8cabed4bab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1a1e1c02ae471274537452a89fd067d024"/>    <section>
+    <title>registerADCConversionCallback()</title>
+<indexterm><primary>registerADCConversionCallback</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>registerADCConversionCallback</secondary></indexterm>
+<para><computeroutput>uint8_t AnalogIoT::registerADCConversionCallback (std::function&lt; void(uint8_t, uint16_t)&gt; callback)</computeroutput></para><para>
+
+<para>Registers a callback for handling ADC conversions. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handler of the callback. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1ae3b8eaee385ed8eb20f145996513461d"/>    <section>
+    <title>setADCConversionEnabled()</title>
+<indexterm><primary>setADCConversionEnabled</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>setADCConversionEnabled</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::setADCConversionEnabled (uint8_t pin, bool enabled)</computeroutput></para><para>
+
+<para>Enables or disables the periodic reading of the value of an ADC channel. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin of the ADC channel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>enabled</entry>
+                                <entry>
+<para>True if the value of the ADC channel should be read, false otherwise. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_ae3b8eaee385ed8eb20f145996513461d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1abd35a9011a0018c38af690bd95e367fb"/>    <section>
+    <title>setADCConversionInterval()</title>
+<indexterm><primary>setADCConversionInterval</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>setADCConversionInterval</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::setADCConversionInterval (uint8_t pin, uint16_t interval)</computeroutput></para><para>
+
+<para>Sets the interval at which the value of an ADC channel is read. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin of the ADC channel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>interval</entry>
+                                <entry>
+<para>The interval in milliseconds. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_io_t_abd35a9011a0018c38af690bd95e367fb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_io_t_1ada3f1d46782f2b63488445e75b05cf63"/>    <section>
+    <title>setADCsPublishEnabled()</title>
+<indexterm><primary>setADCsPublishEnabled</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>setADCsPublishEnabled</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::setADCsPublishEnabled (bool enabled)</computeroutput></para><para>
+
+<para>Sets whether the state of all DACs is published. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>enabled</entry>
+                                <entry>
+<para>True if the state of all DACs should be published, false otherwise. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_analog_io_t_1a9a4ba77a993ea1c789f809ea89c57722"/>    <section>
+    <title>setADCsPublishInterval()</title>
+<indexterm><primary>setADCsPublishInterval</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>setADCsPublishInterval</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::setADCsPublishInterval (uint32_t interval)</computeroutput></para><para>
+
+<para>Sets the interval at which the state of all DACs is published. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>interval</entry>
+                                <entry>
+<para>The interval in milliseconds. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_analog_io_t_1a37216e8cc0030b538ead2a7c30546d15"/>    <section>
+    <title>subscribe()</title>
+<indexterm><primary>subscribe</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>subscribe</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::subscribe ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Subscribes to all MQTT topics used by the <link linkend="_class_analog_io_t">AnalogIoT</link> object. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is called when the MQTT client connects. </para>
+</note>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+    </section><anchor xml:id="_class_analog_io_t_1aa7d3175c73cea942123caf24ce779539"/>    <section>
+    <title>unregisterADCConversionCallback()</title>
+<indexterm><primary>unregisterADCConversionCallback</primary><secondary>AnalogIoT</secondary></indexterm>
+<indexterm><primary>AnalogIoT</primary><secondary>unregisterADCConversionCallback</secondary></indexterm>
+<para><computeroutput>void AnalogIoT::unregisterADCConversionCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregisters a callback for handling ADC conversions. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler of the callback. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp/home/siwat/ESPMegaPRO3-library/<link linkend="__analog_io_t_8cpp">AnalogIoT.cpp</link></section>
+</section>

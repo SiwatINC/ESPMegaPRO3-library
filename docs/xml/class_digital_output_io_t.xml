@@ -1,0 +1,775 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_digital_output_io_t" kind="class" language="C++" prot="public">
+    <compoundname>DigitalOutputIoT</compoundname>
+    <basecompoundref refid="class_io_t_component" prot="public" virt="non-virtual">IoTComponent</basecompoundref>
+    <includes refid="_digital_output_io_t_8hpp" local="no">DigitalOutputIoT.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_digital_output_io_t_1a4eb84ec3f1078fc16dce71242fb35885" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DigitalOutputIoT::digital_outputs_publish_enabled</definition>
+        <argsstring></argsstring>
+        <name>digital_outputs_publish_enabled</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="28" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1a22e6d7c503c4930791470b59437a0f45" prot="private" static="no" mutable="no">
+        <type><ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref> *</type>
+        <definition>DigitalOutputCard* DigitalOutputIoT::card</definition>
+        <argsstring></argsstring>
+        <name>card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="32" column="27" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1a68d267a47064921c73507197386c6501" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* DigitalOutputIoT::state_report_topic</definition>
+        <argsstring></argsstring>
+        <name>state_report_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="33" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1afec7b2dfad5d0561cd2df0c114793d8b" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* DigitalOutputIoT::value_report_topic</definition>
+        <argsstring></argsstring>
+        <name>value_report_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="34" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1aaf157b33618323c764efb6b65a3ed268" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputIoT::set_state_length</definition>
+        <argsstring></argsstring>
+        <name>set_state_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="35" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1a8ac5c5bdb030b031288a7c51086768d7" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputIoT::set_value_length</definition>
+        <argsstring></argsstring>
+        <name>set_value_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="36" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1a55c62b906ae91945fd82c6c1933fdd1a" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputIoT::state_length</definition>
+        <argsstring></argsstring>
+        <name>state_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="37" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1a67d205e95c9950df4d03a0de6eb26125" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputIoT::value_length</definition>
+        <argsstring></argsstring>
+        <name>value_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="38" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1a3cfc4ede11d75e7b7507a774568f3b1c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputIoT::request_state_length</definition>
+        <argsstring></argsstring>
+        <name>request_state_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="39" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_io_t_1a2b498cda288389adc2b500e0ec274c8d" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputIoT::publish_enable_length</definition>
+        <argsstring></argsstring>
+        <name>publish_enable_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="40" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_digital_output_io_t_1a6c619c09a8c325f1931e14d1cab14e20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DigitalOutputIoT::DigitalOutputIoT</definition>
+        <argsstring>()</argsstring>
+        <name>DigitalOutputIoT</name>
+        <briefdescription>
+<para>Create a new <ref refid="class_digital_output_io_t" kindref="compound">DigitalOutputIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="13" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="6" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1ada967432a1efd635565e06b18e63449e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DigitalOutputIoT::~DigitalOutputIoT</definition>
+        <argsstring>()</argsstring>
+        <name>~DigitalOutputIoT</name>
+        <briefdescription>
+<para>Destroy the <ref refid="class_digital_output_io_t" kindref="compound">DigitalOutputIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="14" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a7360bb6922c644e1898cc0d2b2bb2373" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool DigitalOutputIoT::begin</definition>
+        <argsstring>(uint8_t card_id, ExpansionCard *card, PubSubClient *mqtt, char *base_topic)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_io_t_component_1af3068b3087e942700f2756df61567470">begin</reimplements>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+          <declname>card</declname>
+        </param>
+        <param>
+          <type>PubSubClient *</type>
+          <declname>mqtt</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>base_topic</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the <ref refid="class_digital_output_io_t" kindref="compound">DigitalOutputIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>ALthough this function can be called inside the main program, it is recommended to use <ref refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" kindref="member">ESPMegaPRO::installCard()</ref> instead</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>card_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the card </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>card</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The card object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PubSubClient object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base_topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base topic of the card </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the initialization is successful, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="15" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="33" bodyend="54"/>
+        <references refid="class_digital_output_io_t_1a1aeb4b1e36da7aec99808971f1d95cbf" compoundref="_digital_output_io_t_8cpp" startline="269" endline="272">handleValueChange</references>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1aea7aa08507f13b49e142532d728f074b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::handleMqttMessage</definition>
+        <argsstring>(char *topic, char *payload)</argsstring>
+        <name>handleMqttMessage</name>
+        <reimplements refid="class_io_t_component_1a1b3fbabfa0e9c1697f0edab1a8d14149">handleMqttMessage</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+<para>Handle the MQTT messages for the <ref refid="class_digital_output_io_t" kindref="compound">DigitalOutputIoT</ref> card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload of the message </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="16" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="62" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a5ea97114ef576a05c2ace8bced6be2f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::publishDigitalOutputs</definition>
+        <argsstring>()</argsstring>
+        <name>publishDigitalOutputs</name>
+        <briefdescription>
+<para>Publish the state of all digital outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="17" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="199" bodyend="207"/>
+        <references refid="class_digital_output_io_t_1a254ad82d5f263d8d335e8007fcea9061" compoundref="_digital_output_io_t_8cpp" startline="214" endline="218">publishDigitalOutput</references>
+        <referencedby refid="class_digital_output_io_t_1a9330dd4073df5a61f68fdf5825de26e0" compoundref="_digital_output_io_t_8cpp" startline="279" endline="282">publishReport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a254ad82d5f263d8d335e8007fcea9061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::publishDigitalOutput</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>publishDigitalOutput</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Publish the state and value of the specified digital output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to publish </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="18" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="214" bodyend="218"/>
+        <references refid="class_digital_output_io_t_1a186d8a94e312afc13c61dae4d31cd633" compoundref="_digital_output_io_t_8cpp" startline="225" endline="232">publishDigitalOutputState</references>
+        <references refid="class_digital_output_io_t_1a99cb645e8ef895b893ba128f0bd54726" compoundref="_digital_output_io_t_8cpp" startline="239" endline="248">publishDigitalOutputValue</references>
+        <referencedby refid="class_digital_output_io_t_1a1aeb4b1e36da7aec99808971f1d95cbf" compoundref="_digital_output_io_t_8cpp" startline="269" endline="272">handleValueChange</referencedby>
+        <referencedby refid="class_digital_output_io_t_1a5ea97114ef576a05c2ace8bced6be2f8" compoundref="_digital_output_io_t_8cpp" startline="199" endline="207">publishDigitalOutputs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a186d8a94e312afc13c61dae4d31cd633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::publishDigitalOutputState</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>publishDigitalOutputState</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Publish the state of the specified digital output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to publish </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="19" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="225" bodyend="232"/>
+        <references refid="class_digital_output_card_1a3e239d57c39cb82cff4aca6455f01d6f" compoundref="_digital_output_card_8cpp" startline="118" endline="120">DigitalOutputCard::getState</references>
+        <referencedby refid="class_digital_output_io_t_1a254ad82d5f263d8d335e8007fcea9061" compoundref="_digital_output_io_t_8cpp" startline="214" endline="218">publishDigitalOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a99cb645e8ef895b893ba128f0bd54726" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::publishDigitalOutputValue</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>publishDigitalOutputValue</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Publish the value of the specified digital output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to publish </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="20" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="239" bodyend="248"/>
+        <references refid="class_digital_output_card_1ae160653dd5ec2bdbce0327af77669d87" compoundref="_digital_output_card_8cpp" startline="128" endline="130">DigitalOutputCard::getValue</references>
+        <referencedby refid="class_digital_output_io_t_1a254ad82d5f263d8d335e8007fcea9061" compoundref="_digital_output_io_t_8cpp" startline="214" endline="218">publishDigitalOutput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a7aef0880d159a3dcf6590c7b567ac1b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::setDigitalOutputsPublishEnabled</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setDigitalOutputsPublishEnabled</name>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Enable/disable publishing of digital outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to enable publishing, false to disable publishing </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="21" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a1aeb4b1e36da7aec99808971f1d95cbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::handleValueChange</definition>
+        <argsstring>(uint8_t pin, bool state, uint16_t value)</argsstring>
+        <name>handleValueChange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Handle the value change of a pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is registered as a callback function with the <ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref> object</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin that changed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new state of the pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value of the pin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="22" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="269" bodyend="272"/>
+        <references refid="class_digital_output_io_t_1a254ad82d5f263d8d335e8007fcea9061" compoundref="_digital_output_io_t_8cpp" startline="214" endline="218">publishDigitalOutput</references>
+        <referencedby refid="class_digital_output_io_t_1a7360bb6922c644e1898cc0d2b2bb2373" compoundref="_digital_output_io_t_8cpp" startline="33" endline="54">begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a9330dd4073df5a61f68fdf5825de26e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::publishReport</definition>
+        <argsstring>()</argsstring>
+        <name>publishReport</name>
+        <reimplements refid="class_io_t_component_1aa8b2aa560998451171ab6c39957cf787">publishReport</reimplements>
+        <briefdescription>
+<para>Publish all digital outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is called by the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="23" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="279" bodyend="282"/>
+        <references refid="class_digital_output_io_t_1a5ea97114ef576a05c2ace8bced6be2f8" compoundref="_digital_output_io_t_8cpp" startline="199" endline="207">publishDigitalOutputs</references>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1aeffef9a2e359f4dd9a2c81c8ae478dd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::subscribe</definition>
+        <argsstring>()</argsstring>
+        <name>subscribe</name>
+        <reimplements refid="class_io_t_component_1acdf8bc6b4a9f9ac515ff1dc3b63aa330">subscribe</reimplements>
+        <briefdescription>
+<para>Subscribe to the MQTT topics used by the <ref refid="class_digital_output_io_t" kindref="compound">DigitalOutputIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="24" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="297" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1af3d97141417b3539138ed824ea05990f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputIoT::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>The main loop for the <ref refid="class_digital_output_io_t" kindref="compound">DigitalOutputIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is not used, it is only here to implement the <ref refid="class_io_t_component" kindref="compound">IoTComponent</ref> interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="25" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="323" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1ae351ff6afcef3d1e6739222523ed7173" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputIoT::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplements refid="class_io_t_component_1a3c5bf4cb3ba447ccbcbf45c9065f288d">getType</reimplements>
+        <briefdescription>
+<para>Get the type of the IoT component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The type of the IoT component </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="26" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="289" bodyend="292"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_digital_output_io_t_1ab86efa614b824ab4e7dda0752f8881d4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DigitalOutputIoT::processSetStateMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processSetStateMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Process a set state message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null terminated topic </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null terminated payload </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the message is a set state message, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="29" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="89" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1ad99b03278e983c4e9bb786a7a2dbcd8f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DigitalOutputIoT::processSetValueMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processSetValueMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Process a set value message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null terminated topic </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null terminated payload </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the message is a set value message, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="30" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="139" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_io_t_1a20ef1f9ba16713aca4d6f7cc652296a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DigitalOutputIoT::processRequestStateMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processRequestStateMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Process a request state message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null terminated topic </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null terminated payload </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the message is a request state message, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="31" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.cpp" bodystart="176" bodyend="194"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_digital_output_io_t" kindref="compound">DigitalOutputIoT</ref> class is a class interfacing with the Digital Output Card through MQTT. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>You should not instantiate this class directly, instead use ESPMegaIO&apos;s registerCard function. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="1">
+        <label>DigitalOutputIoT</label>
+        <link refid="class_digital_output_io_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="1">
+        <label>DigitalOutputIoT</label>
+        <link refid="class_digital_output_io_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" line="11" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp" bodystart="11" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_io_t_component_1aeb90ccffdbf21519987505b9f52f0a57" prot="protected" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>base_topic</name></member>
+      <member refid="class_digital_output_io_t_1a7360bb6922c644e1898cc0d2b2bb2373" prot="public" virt="virtual"><scope>DigitalOutputIoT</scope><name>begin</name></member>
+      <member refid="class_digital_output_io_t_1a22e6d7c503c4930791470b59437a0f45" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>card</name></member>
+      <member refid="class_io_t_component_1a8ea4f18d3f5adf232137f12d8a8f763a" prot="protected" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>card_id</name></member>
+      <member refid="class_digital_output_io_t_1a4eb84ec3f1078fc16dce71242fb35885" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>digital_outputs_publish_enabled</name></member>
+      <member refid="class_digital_output_io_t_1a6c619c09a8c325f1931e14d1cab14e20" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>DigitalOutputIoT</name></member>
+      <member refid="class_digital_output_io_t_1ae351ff6afcef3d1e6739222523ed7173" prot="public" virt="virtual"><scope>DigitalOutputIoT</scope><name>getType</name></member>
+      <member refid="class_digital_output_io_t_1aea7aa08507f13b49e142532d728f074b" prot="public" virt="virtual"><scope>DigitalOutputIoT</scope><name>handleMqttMessage</name></member>
+      <member refid="class_digital_output_io_t_1a1aeb4b1e36da7aec99808971f1d95cbf" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>handleValueChange</name></member>
+      <member refid="class_digital_output_io_t_1af3d97141417b3539138ed824ea05990f" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>loop</name></member>
+      <member refid="class_io_t_component_1a81926ee5477da6738063128028597e3e" prot="protected" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>mqtt</name></member>
+      <member refid="class_digital_output_io_t_1a20ef1f9ba16713aca4d6f7cc652296a3" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>processRequestStateMessage</name></member>
+      <member refid="class_digital_output_io_t_1ab86efa614b824ab4e7dda0752f8881d4" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>processSetStateMessage</name></member>
+      <member refid="class_digital_output_io_t_1ad99b03278e983c4e9bb786a7a2dbcd8f" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>processSetValueMessage</name></member>
+      <member refid="class_digital_output_io_t_1a2b498cda288389adc2b500e0ec274c8d" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>publish_enable_length</name></member>
+      <member refid="class_digital_output_io_t_1a254ad82d5f263d8d335e8007fcea9061" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>publishDigitalOutput</name></member>
+      <member refid="class_digital_output_io_t_1a5ea97114ef576a05c2ace8bced6be2f8" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>publishDigitalOutputs</name></member>
+      <member refid="class_digital_output_io_t_1a186d8a94e312afc13c61dae4d31cd633" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>publishDigitalOutputState</name></member>
+      <member refid="class_digital_output_io_t_1a99cb645e8ef895b893ba128f0bd54726" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>publishDigitalOutputValue</name></member>
+      <member refid="class_io_t_component_1a223659969099a0a8aaf84e18c51014dc" prot="protected" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>publishRelative</name></member>
+      <member refid="class_digital_output_io_t_1a9330dd4073df5a61f68fdf5825de26e0" prot="public" virt="virtual"><scope>DigitalOutputIoT</scope><name>publishReport</name></member>
+      <member refid="class_digital_output_io_t_1a3cfc4ede11d75e7b7507a774568f3b1c" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>request_state_length</name></member>
+      <member refid="class_digital_output_io_t_1aaf157b33618323c764efb6b65a3ed268" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>set_state_length</name></member>
+      <member refid="class_digital_output_io_t_1a8ac5c5bdb030b031288a7c51086768d7" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>set_value_length</name></member>
+      <member refid="class_digital_output_io_t_1a7aef0880d159a3dcf6590c7b567ac1b1" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>setDigitalOutputsPublishEnabled</name></member>
+      <member refid="class_io_t_component_1add98837edef95e9d4f31fba7e210cf09" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>setMqttClient</name></member>
+      <member refid="class_digital_output_io_t_1a55c62b906ae91945fd82c6c1933fdd1a" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>state_length</name></member>
+      <member refid="class_digital_output_io_t_1a68d267a47064921c73507197386c6501" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>state_report_topic</name></member>
+      <member refid="class_digital_output_io_t_1aeffef9a2e359f4dd9a2c81c8ae478dd8" prot="public" virt="virtual"><scope>DigitalOutputIoT</scope><name>subscribe</name></member>
+      <member refid="class_io_t_component_1ab7841d6b92b52ed398d5ff1cac0a9625" prot="protected" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>subscribeRelative</name></member>
+      <member refid="class_digital_output_io_t_1a67d205e95c9950df4d03a0de6eb26125" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>value_length</name></member>
+      <member refid="class_digital_output_io_t_1afec7b2dfad5d0561cd2df0c114793d8b" prot="private" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>value_report_topic</name></member>
+      <member refid="class_digital_output_io_t_1ada967432a1efd635565e06b18e63449e" prot="public" virt="non-virtual"><scope>DigitalOutputIoT</scope><name>~DigitalOutputIoT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

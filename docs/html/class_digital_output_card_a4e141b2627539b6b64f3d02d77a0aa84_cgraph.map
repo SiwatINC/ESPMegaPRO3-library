@@ -1,0 +1,5 @@
+<map id="DigitalOutputCard::digitalWrite" name="DigitalOutputCard::digitalWrite">
+<area shape="rect" id="node1" title="Write a digtal LOW or HIGH to the specified pin." alt="" coords="5,39,152,80"/>
+<area shape="rect" id="node2" href="$class_digital_output_card.html#a99ac93ac96289b95063d4d1e1e2b7893" title="Save a single pin value to FRAM." alt="" coords="200,5,361,47"/>
+<area shape="rect" id="node3" href="$class_digital_output_card.html#a8d99e0805f6463fc886087e502efb12d" title="Save the states of all the pins to FRAM." alt="" coords="207,71,354,112"/>
+</map>

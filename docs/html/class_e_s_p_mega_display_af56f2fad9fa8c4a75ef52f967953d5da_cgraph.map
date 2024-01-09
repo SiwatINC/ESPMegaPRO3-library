@@ -1,0 +1,4 @@
+<map id="ESPMegaDisplay::sendCommand" name="ESPMegaDisplay::sendCommand">
+<area shape="rect" id="node1" title="Sends a command to the display adapter." alt="" coords="5,13,241,39"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a8bfb30429f6e11f4719480bfc6f83d72" title="Sends stop bytes to the display adapter." alt="" coords="289,5,488,47"/>
+</map>

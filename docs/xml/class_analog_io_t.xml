@@ -1,0 +1,1137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_analog_io_t" kind="class" language="C++" prot="public">
+    <compoundname>AnalogIoT</compoundname>
+    <basecompoundref refid="class_io_t_component" prot="public" virt="non-virtual">IoTComponent</basecompoundref>
+    <includes refid="_analog_io_t_8hpp" local="no">AnalogIoT.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_analog_io_t_1a2f6907fba2a648ddc038fefb30e2aad4" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::adc_conversion_callback_index</definition>
+        <argsstring></argsstring>
+        <name>adc_conversion_callback_index</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="51" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1ab375bb4d864399369bcce48176e25b24" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::dac_set_state_length</definition>
+        <argsstring></argsstring>
+        <name>dac_set_state_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="53" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a251ea56ceb5a50a6e504eb356494ec32" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::dac_set_value_length</definition>
+        <argsstring></argsstring>
+        <name>dac_set_value_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="54" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a12fdc060d59e218b21daa1e55ef01777" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::dac_state_length</definition>
+        <argsstring></argsstring>
+        <name>dac_state_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="55" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a0a9b8ea45b3f03d5b4e9a2f45a955e1e" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::dac_value_length</definition>
+        <argsstring></argsstring>
+        <name>dac_value_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="56" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a256376341320488eef1c4525b48c48b2" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::request_state_length</definition>
+        <argsstring></argsstring>
+        <name>request_state_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="57" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a40bab9745a8fc551717294b29a6413bd" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::dac_publish_enable_length</definition>
+        <argsstring></argsstring>
+        <name>dac_publish_enable_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="58" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a026cf7159a82e2b5c1b90340ccdf472f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AnalogIoT::last_adc_publish</definition>
+        <argsstring></argsstring>
+        <name>last_adc_publish</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="59" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1ac435510889d1a7537200ae8e1a51cfe2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_analog_card" kindref="compound">AnalogCard</ref> *</type>
+        <definition>AnalogCard* AnalogIoT::card</definition>
+        <argsstring></argsstring>
+        <name>card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="60" column="20" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a04b9a096a271ba039aa2e7783145e7bc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AnalogIoT::adc_publish_enabled[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>adc_publish_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="61" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1afaeb4f82b7e204321f24a0a06a3732c5" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AnalogIoT::adc_conversion_interval[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>adc_conversion_interval</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="62" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a612a3707b8ccf76ea9bc86b49ac8ff50" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AnalogIoT::last_adc_conversion[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>last_adc_conversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="63" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_io_t_1a7fb0317eac3d9847221af0dd73fc9353" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(uint8_t, uint16_t)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t, std::function&lt;void(uint8_t, uint16_t)&gt; &gt; AnalogIoT::adc_conversion_callbacks</definition>
+        <argsstring></argsstring>
+        <name>adc_conversion_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="64" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_analog_io_t_1ac3923fe40bba207e1959a72c180e85d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AnalogIoT::AnalogIoT</definition>
+        <argsstring>()</argsstring>
+        <name>AnalogIoT</name>
+        <briefdescription>
+<para>Default constructor for the <ref refid="class_analog_io_t" kindref="compound">AnalogIoT</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This constructor initializes the <ref refid="class_analog_io_t" kindref="compound">AnalogIoT</ref> object and sets up the ADC conversion callbacks. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="23" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="17" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1abb92f699eebef5d8b6db83d0053a7e9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AnalogIoT::~AnalogIoT</definition>
+        <argsstring>()</argsstring>
+        <name>~AnalogIoT</name>
+        <briefdescription>
+<para>Default destructor for the <ref refid="class_analog_io_t" kindref="compound">AnalogIoT</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="24" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a3888c317175981272a603fe27054460a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool AnalogIoT::begin</definition>
+        <argsstring>(uint8_t card_id, ExpansionCard *card, PubSubClient *mqtt, char *base_topic)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_io_t_component_1af3068b3087e942700f2756df61567470">begin</reimplements>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+          <declname>card</declname>
+        </param>
+        <param>
+          <type>PubSubClient *</type>
+          <declname>mqtt</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>base_topic</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="class_analog_io_t" kindref="compound">AnalogIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>card_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the card. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>card</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the card object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the MQTT client object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base_topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base MQTT topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the initialization was successful, false otherwise. </para>
+</simplesect>
+<simplesect kind="note"><para>This function can be called from the main program but it is recommended to use <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> to initialize the IoT Components. This function initializes the <ref refid="class_analog_io_t" kindref="compound">AnalogIoT</ref> object and registers the callbacks for handling DAC changes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="25" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="42" bodyend="57"/>
+        <references refid="class_analog_io_t_1a84402cb7e45ce0da63a860ee16716ce8" compoundref="_analog_io_t_8cpp" startline="422" endline="424">handleDACChange</references>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::handleMqttMessage</definition>
+        <argsstring>(char *topic, char *payload)</argsstring>
+        <name>handleMqttMessage</name>
+        <reimplements refid="class_io_t_component_1a1b3fbabfa0e9c1697f0edab1a8d14149">handleMqttMessage</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+<para>Publishes the state of all DACs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is called when a request state message is received. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="26" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="63" bodyend="70"/>
+        <references refid="class_analog_io_t_1a9506f0c01d7ef71858a4881fc01050b7" compoundref="_analog_io_t_8cpp" startline="199" endline="221">processADCSetConversionEnabledMessage</references>
+        <references refid="class_analog_io_t_1a27f21df078fd88872c9f54f58f2c37bd" compoundref="_analog_io_t_8cpp" startline="166" endline="189">processADCSetConversionIntervalMessage</references>
+        <references refid="class_analog_io_t_1ab582bcdd8b97fe81dae216ace1e7e827" compoundref="_analog_io_t_8cpp" startline="231" endline="253">processDACSetStateMessage</references>
+        <references refid="class_analog_io_t_1adf3114a294de15674d994785a82548f8" compoundref="_analog_io_t_8cpp" startline="263" endline="285">processDACSetValueMessage</references>
+        <references refid="class_analog_io_t_1a2e18ed063bdbf7cc2a59b20a721050f8" compoundref="_analog_io_t_8cpp" startline="295" endline="310">processRequestStateMessage</references>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a84402cb7e45ce0da63a860ee16716ce8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::handleDACChange</definition>
+        <argsstring>(uint8_t pin, uint16_t value)</argsstring>
+        <name>handleDACChange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Publishes the state of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the DAC. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="27" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="422" bodyend="424"/>
+        <references refid="class_analog_io_t_1a108ab3e98144f9ff07ec88ba794d594c" compoundref="_analog_io_t_8cpp" startline="385" endline="388">publishDAC</references>
+        <referencedby refid="class_analog_io_t_1a3888c317175981272a603fe27054460a" compoundref="_analog_io_t_8cpp" startline="42" endline="57">begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a09922e70d6374ba79b3193c3a3b35231" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::publishADCs</definition>
+        <argsstring>()</argsstring>
+        <name>publishADCs</name>
+        <briefdescription>
+<para>Publishes the state of all DACs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="28" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="75" bodyend="79"/>
+        <references refid="class_analog_io_t_1a2f74e7f22b3374b4950357d9f4b11ccc" compoundref="_analog_io_t_8cpp" startline="85" endline="100">publishADC</references>
+        <referencedby refid="class_analog_io_t_1a2e18ed063bdbf7cc2a59b20a721050f8" compoundref="_analog_io_t_8cpp" startline="295" endline="310">processRequestStateMessage</referencedby>
+        <referencedby refid="class_analog_io_t_1ad49a200a7568281874f39b2f14f12621" compoundref="_analog_io_t_8cpp" startline="359" endline="362">publishReport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a2f74e7f22b3374b4950357d9f4b11ccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::publishADC</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>publishADC</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Publishes the state of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the DAC. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="29" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="85" bodyend="100"/>
+        <references refid="class_analog_card_1a57f3af0fdcbc6ccb651007540c6829c4" compoundref="_analog_card_8cpp" startline="117" endline="128">AnalogCard::analogRead</references>
+        <referencedby refid="class_analog_io_t_1a09922e70d6374ba79b3193c3a3b35231" compoundref="_analog_io_t_8cpp" startline="75" endline="79">publishADCs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a0050d5b14ed148e2ea358f393909114c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::publishDACs</definition>
+        <argsstring>()</argsstring>
+        <name>publishDACs</name>
+        <briefdescription>
+<para>Publishes the state of all DACs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="30" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="375" bodyend="379"/>
+        <references refid="class_analog_io_t_1a108ab3e98144f9ff07ec88ba794d594c" compoundref="_analog_io_t_8cpp" startline="385" endline="388">publishDAC</references>
+        <referencedby refid="class_analog_io_t_1a2e18ed063bdbf7cc2a59b20a721050f8" compoundref="_analog_io_t_8cpp" startline="295" endline="310">processRequestStateMessage</referencedby>
+        <referencedby refid="class_analog_io_t_1ad49a200a7568281874f39b2f14f12621" compoundref="_analog_io_t_8cpp" startline="359" endline="362">publishReport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a108ab3e98144f9ff07ec88ba794d594c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::publishDAC</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>publishDAC</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Publishes the state of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the DAC. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="31" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="385" bodyend="388"/>
+        <references refid="class_analog_io_t_1af9686e6a38360e26a2c476c96f9d7c91" compoundref="_analog_io_t_8cpp" startline="394" endline="402">publishDACState</references>
+        <references refid="class_analog_io_t_1a87bed89be4587e778eac2f8cabed4bab" compoundref="_analog_io_t_8cpp" startline="408" endline="416">publishDACValue</references>
+        <referencedby refid="class_analog_io_t_1a84402cb7e45ce0da63a860ee16716ce8" compoundref="_analog_io_t_8cpp" startline="422" endline="424">handleDACChange</referencedby>
+        <referencedby refid="class_analog_io_t_1a0050d5b14ed148e2ea358f393909114c" compoundref="_analog_io_t_8cpp" startline="375" endline="379">publishDACs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1af9686e6a38360e26a2c476c96f9d7c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::publishDACState</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>publishDACState</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Publishes the state of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the DAC. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="32" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="394" bodyend="402"/>
+        <references refid="class_analog_card_1aa10a9eb6b4c1f1b7660ea5183a0f618e" compoundref="_analog_card_8cpp" startline="82" endline="85">AnalogCard::getDACState</references>
+        <referencedby refid="class_analog_io_t_1a108ab3e98144f9ff07ec88ba794d594c" compoundref="_analog_io_t_8cpp" startline="385" endline="388">publishDAC</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a87bed89be4587e778eac2f8cabed4bab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::publishDACValue</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>publishDACValue</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Publishes the value of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the DAC. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="33" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="408" bodyend="416"/>
+        <references refid="class_analog_card_1a7793911eaabacee0d40dac626e39279a" compoundref="_analog_card_8cpp" startline="72" endline="75">AnalogCard::getDACValue</references>
+        <referencedby refid="class_analog_io_t_1a108ab3e98144f9ff07ec88ba794d594c" compoundref="_analog_io_t_8cpp" startline="385" endline="388">publishDAC</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a9a4ba77a993ea1c789f809ea89c57722" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::setADCsPublishInterval</definition>
+        <argsstring>(uint32_t interval)</argsstring>
+        <name>setADCsPublishInterval</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+<para>Sets the interval at which the state of all DACs is published. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interval in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="34" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1ada3f1d46782f2b63488445e75b05cf63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::setADCsPublishEnabled</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setADCsPublishEnabled</name>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Sets whether the state of all DACs is published. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the state of all DACs should be published, false otherwise. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="35" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a1e1c02ae471274537452a89fd067d024" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::registerADCConversionCallback</definition>
+        <argsstring>(std::function&lt; void(uint8_t, uint16_t)&gt; callback)</argsstring>
+        <name>registerADCConversionCallback</name>
+        <param>
+          <type>std::function&lt; void(uint8_t, uint16_t)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Registers a callback for handling ADC conversions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handler of the callback. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="36" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1aa7d3175c73cea942123caf24ce779539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::unregisterADCConversionCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterADCConversionCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters a callback for handling ADC conversions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler of the callback. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="37" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="136" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1abd35a9011a0018c38af690bd95e367fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::setADCConversionInterval</definition>
+        <argsstring>(uint8_t pin, uint16_t interval)</argsstring>
+        <name>setADCConversionInterval</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+<para>Sets the interval at which the value of an ADC channel is read. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the ADC channel. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interval in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="38" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="145" bodyend="147"/>
+        <referencedby refid="class_analog_io_t_1a27f21df078fd88872c9f54f58f2c37bd" compoundref="_analog_io_t_8cpp" startline="166" endline="189">processADCSetConversionIntervalMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1ae3b8eaee385ed8eb20f145996513461d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::setADCConversionEnabled</definition>
+        <argsstring>(uint8_t pin, bool enabled)</argsstring>
+        <name>setADCConversionEnabled</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables the periodic reading of the value of an ADC channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the ADC channel. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the value of the ADC channel should be read, false otherwise. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="39" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="154" bodyend="156"/>
+        <referencedby refid="class_analog_io_t_1a9506f0c01d7ef71858a4881fc01050b7" compoundref="_analog_io_t_8cpp" startline="199" endline="221">processADCSetConversionEnabledMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a27f21df078fd88872c9f54f58f2c37bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AnalogIoT::processADCSetConversionIntervalMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processADCSetConversionIntervalMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes a message received on the MQTT topic for setting the state of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is not meant to be called from user code. </para>
+</simplesect>
+<simplesect kind="return"><para>True if the message was processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="40" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="166" bodyend="189"/>
+        <references refid="class_analog_io_t_1abd35a9011a0018c38af690bd95e367fb" compoundref="_analog_io_t_8cpp" startline="145" endline="147">setADCConversionInterval</references>
+        <referencedby refid="class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf" compoundref="_analog_io_t_8cpp" startline="63" endline="70">handleMqttMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a9506f0c01d7ef71858a4881fc01050b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AnalogIoT::processADCSetConversionEnabledMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processADCSetConversionEnabledMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes a message received on the MQTT topic for setting the value of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is not meant to be called from user code. </para>
+</simplesect>
+<simplesect kind="return"><para>True if the message was processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="41" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="199" bodyend="221"/>
+        <references refid="class_analog_io_t_1ae3b8eaee385ed8eb20f145996513461d" compoundref="_analog_io_t_8cpp" startline="154" endline="156">setADCConversionEnabled</references>
+        <referencedby refid="class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf" compoundref="_analog_io_t_8cpp" startline="63" endline="70">handleMqttMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1ab582bcdd8b97fe81dae216ace1e7e827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AnalogIoT::processDACSetStateMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processDACSetStateMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes a message received on the MQTT topic for setting the state of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is not meant to be called from user code. </para>
+</simplesect>
+<simplesect kind="return"><para>True if the message was processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="42" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="231" bodyend="253"/>
+        <references refid="class_analog_card_1a445ff04dfcd2f49bb070bcc6e17a13f0" compoundref="_analog_card_8cpp" startline="40" endline="49">AnalogCard::setDACState</references>
+        <referencedby refid="class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf" compoundref="_analog_io_t_8cpp" startline="63" endline="70">handleMqttMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1adf3114a294de15674d994785a82548f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AnalogIoT::processDACSetValueMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processDACSetValueMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes a message received on the MQTT topic for setting the value of a DAC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is not meant to be called from user code. </para>
+</simplesect>
+<simplesect kind="return"><para>True if the message was processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="43" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="263" bodyend="285"/>
+        <references refid="class_analog_card_1a4703be8e25568617d28915d14e4df71b" compoundref="_analog_card_8cpp" startline="56" endline="65">AnalogCard::setDACValue</references>
+        <referencedby refid="class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf" compoundref="_analog_io_t_8cpp" startline="63" endline="70">handleMqttMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a2e18ed063bdbf7cc2a59b20a721050f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AnalogIoT::processRequestStateMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processRequestStateMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes a message received on the MQTT topic for requesting the state of all DACs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload of the message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is not meant to be called from user code. </para>
+</simplesect>
+<simplesect kind="return"><para>True if the message was processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="44" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="295" bodyend="310"/>
+        <references refid="class_analog_io_t_1a09922e70d6374ba79b3193c3a3b35231" compoundref="_analog_io_t_8cpp" startline="75" endline="79">publishADCs</references>
+        <references refid="class_analog_io_t_1a0050d5b14ed148e2ea358f393909114c" compoundref="_analog_io_t_8cpp" startline="375" endline="379">publishDACs</references>
+        <referencedby refid="class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf" compoundref="_analog_io_t_8cpp" startline="63" endline="70">handleMqttMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1ad49a200a7568281874f39b2f14f12621" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::publishReport</definition>
+        <argsstring>()</argsstring>
+        <name>publishReport</name>
+        <reimplements refid="class_io_t_component_1aa8b2aa560998451171ab6c39957cf787">publishReport</reimplements>
+        <briefdescription>
+<para>Publishes the state of all DACs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="45" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="359" bodyend="362"/>
+        <references refid="class_analog_io_t_1a09922e70d6374ba79b3193c3a3b35231" compoundref="_analog_io_t_8cpp" startline="75" endline="79">publishADCs</references>
+        <references refid="class_analog_io_t_1a0050d5b14ed148e2ea358f393909114c" compoundref="_analog_io_t_8cpp" startline="375" endline="379">publishDACs</references>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a37216e8cc0030b538ead2a7c30546d15" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::subscribe</definition>
+        <argsstring>()</argsstring>
+        <name>subscribe</name>
+        <reimplements refid="class_io_t_component_1acdf8bc6b4a9f9ac515ff1dc3b63aa330">subscribe</reimplements>
+        <briefdescription>
+<para>Subscribes to all MQTT topics used by the <ref refid="class_analog_io_t" kindref="compound">AnalogIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is called when the MQTT client connects. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="46" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="316" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1a7fc696f238783d0f8b8ba6d7d3c70e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogIoT::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="47" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="345" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_io_t_1ae16f9a69bc1cefda4b6cc766f5cbc9cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogIoT::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplements refid="class_io_t_component_1a3c5bf4cb3ba447ccbcbf45c9065f288d">getType</reimplements>
+        <briefdescription>
+<para>Gets the type of the card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The type of the card. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="48" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp" bodystart="368" bodyend="370"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_analog_io_t" kindref="compound">AnalogIoT</ref> class is a class for connecting the Analog Card to the IoT module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This function allows you to control the Analog Card using MQTT.</para>
+<para><simplesect kind="warning"><para>You should not instantiate this class directly, instead use <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref>&apos;s registerCard function. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="1">
+        <label>AnalogIoT</label>
+        <link refid="class_analog_io_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="1">
+        <label>AnalogIoT</label>
+        <link refid="class_analog_io_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" line="21" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp" bodystart="21" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_analog_io_t_1a2f6907fba2a648ddc038fefb30e2aad4" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>adc_conversion_callback_index</name></member>
+      <member refid="class_analog_io_t_1a7fb0317eac3d9847221af0dd73fc9353" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>adc_conversion_callbacks</name></member>
+      <member refid="class_analog_io_t_1afaeb4f82b7e204321f24a0a06a3732c5" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>adc_conversion_interval</name></member>
+      <member refid="class_analog_io_t_1a04b9a096a271ba039aa2e7783145e7bc" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>adc_publish_enabled</name></member>
+      <member refid="class_analog_io_t_1ac3923fe40bba207e1959a72c180e85d6" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>AnalogIoT</name></member>
+      <member refid="class_io_t_component_1aeb90ccffdbf21519987505b9f52f0a57" prot="protected" virt="non-virtual"><scope>AnalogIoT</scope><name>base_topic</name></member>
+      <member refid="class_analog_io_t_1a3888c317175981272a603fe27054460a" prot="public" virt="virtual"><scope>AnalogIoT</scope><name>begin</name></member>
+      <member refid="class_analog_io_t_1ac435510889d1a7537200ae8e1a51cfe2" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>card</name></member>
+      <member refid="class_io_t_component_1a8ea4f18d3f5adf232137f12d8a8f763a" prot="protected" virt="non-virtual"><scope>AnalogIoT</scope><name>card_id</name></member>
+      <member refid="class_analog_io_t_1a40bab9745a8fc551717294b29a6413bd" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>dac_publish_enable_length</name></member>
+      <member refid="class_analog_io_t_1ab375bb4d864399369bcce48176e25b24" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>dac_set_state_length</name></member>
+      <member refid="class_analog_io_t_1a251ea56ceb5a50a6e504eb356494ec32" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>dac_set_value_length</name></member>
+      <member refid="class_analog_io_t_1a12fdc060d59e218b21daa1e55ef01777" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>dac_state_length</name></member>
+      <member refid="class_analog_io_t_1a0a9b8ea45b3f03d5b4e9a2f45a955e1e" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>dac_value_length</name></member>
+      <member refid="class_analog_io_t_1ae16f9a69bc1cefda4b6cc766f5cbc9cd" prot="public" virt="virtual"><scope>AnalogIoT</scope><name>getType</name></member>
+      <member refid="class_analog_io_t_1a84402cb7e45ce0da63a860ee16716ce8" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>handleDACChange</name></member>
+      <member refid="class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf" prot="public" virt="virtual"><scope>AnalogIoT</scope><name>handleMqttMessage</name></member>
+      <member refid="class_analog_io_t_1a612a3707b8ccf76ea9bc86b49ac8ff50" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>last_adc_conversion</name></member>
+      <member refid="class_analog_io_t_1a026cf7159a82e2b5c1b90340ccdf472f" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>last_adc_publish</name></member>
+      <member refid="class_analog_io_t_1a7fc696f238783d0f8b8ba6d7d3c70e58" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>loop</name></member>
+      <member refid="class_io_t_component_1a81926ee5477da6738063128028597e3e" prot="protected" virt="non-virtual"><scope>AnalogIoT</scope><name>mqtt</name></member>
+      <member refid="class_analog_io_t_1a9506f0c01d7ef71858a4881fc01050b7" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>processADCSetConversionEnabledMessage</name></member>
+      <member refid="class_analog_io_t_1a27f21df078fd88872c9f54f58f2c37bd" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>processADCSetConversionIntervalMessage</name></member>
+      <member refid="class_analog_io_t_1ab582bcdd8b97fe81dae216ace1e7e827" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>processDACSetStateMessage</name></member>
+      <member refid="class_analog_io_t_1adf3114a294de15674d994785a82548f8" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>processDACSetValueMessage</name></member>
+      <member refid="class_analog_io_t_1a2e18ed063bdbf7cc2a59b20a721050f8" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>processRequestStateMessage</name></member>
+      <member refid="class_analog_io_t_1a2f74e7f22b3374b4950357d9f4b11ccc" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>publishADC</name></member>
+      <member refid="class_analog_io_t_1a09922e70d6374ba79b3193c3a3b35231" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>publishADCs</name></member>
+      <member refid="class_analog_io_t_1a108ab3e98144f9ff07ec88ba794d594c" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>publishDAC</name></member>
+      <member refid="class_analog_io_t_1a0050d5b14ed148e2ea358f393909114c" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>publishDACs</name></member>
+      <member refid="class_analog_io_t_1af9686e6a38360e26a2c476c96f9d7c91" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>publishDACState</name></member>
+      <member refid="class_analog_io_t_1a87bed89be4587e778eac2f8cabed4bab" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>publishDACValue</name></member>
+      <member refid="class_io_t_component_1a223659969099a0a8aaf84e18c51014dc" prot="protected" virt="non-virtual"><scope>AnalogIoT</scope><name>publishRelative</name></member>
+      <member refid="class_analog_io_t_1ad49a200a7568281874f39b2f14f12621" prot="public" virt="virtual"><scope>AnalogIoT</scope><name>publishReport</name></member>
+      <member refid="class_analog_io_t_1a1e1c02ae471274537452a89fd067d024" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>registerADCConversionCallback</name></member>
+      <member refid="class_analog_io_t_1a256376341320488eef1c4525b48c48b2" prot="private" virt="non-virtual"><scope>AnalogIoT</scope><name>request_state_length</name></member>
+      <member refid="class_analog_io_t_1ae3b8eaee385ed8eb20f145996513461d" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>setADCConversionEnabled</name></member>
+      <member refid="class_analog_io_t_1abd35a9011a0018c38af690bd95e367fb" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>setADCConversionInterval</name></member>
+      <member refid="class_analog_io_t_1ada3f1d46782f2b63488445e75b05cf63" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>setADCsPublishEnabled</name></member>
+      <member refid="class_analog_io_t_1a9a4ba77a993ea1c789f809ea89c57722" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>setADCsPublishInterval</name></member>
+      <member refid="class_io_t_component_1add98837edef95e9d4f31fba7e210cf09" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>setMqttClient</name></member>
+      <member refid="class_analog_io_t_1a37216e8cc0030b538ead2a7c30546d15" prot="public" virt="virtual"><scope>AnalogIoT</scope><name>subscribe</name></member>
+      <member refid="class_io_t_component_1ab7841d6b92b52ed398d5ff1cac0a9625" prot="protected" virt="non-virtual"><scope>AnalogIoT</scope><name>subscribeRelative</name></member>
+      <member refid="class_analog_io_t_1aa7d3175c73cea942123caf24ce779539" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>unregisterADCConversionCallback</name></member>
+      <member refid="class_analog_io_t_1abb92f699eebef5d8b6db83d0053a7e9a" prot="public" virt="non-virtual"><scope>AnalogIoT</scope><name>~AnalogIoT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

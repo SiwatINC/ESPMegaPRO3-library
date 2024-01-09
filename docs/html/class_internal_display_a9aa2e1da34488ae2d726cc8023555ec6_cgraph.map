@@ -1,0 +1,6 @@
+<map id="InternalDisplay::bindOutputCard" name="InternalDisplay::bindOutputCard">
+<area shape="rect" id="node1" title="Set the output card to be be shown on the output page." alt="" coords="5,42,236,69"/>
+<area shape="rect" id="node2" href="$class_digital_output_card.html#a04a881ba7142114c83f41a49129111b6" title="Register a callback function for the specified pin." alt="" coords="319,5,496,47"/>
+<area shape="rect" id="node3" href="$class_internal_display.html#a452703babc7891b7ab937e32155e2310" title="Unbind the output card from the display." alt="" coords="284,71,531,98"/>
+<area shape="rect" id="node4" href="$class_digital_output_card.html#ae9601a5033bc723852d11d336cc2de93" title="Unregister a callback function." alt="" coords="579,64,772,105"/>
+</map>

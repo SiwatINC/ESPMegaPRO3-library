@@ -1,0 +1,1778 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_e_s_p_mega_io_t" kind="class" language="C++" prot="public">
+    <compoundname>ESPMegaIoT</compoundname>
+    <includes refid="_e_s_p_mega_io_t_8hpp" local="no">ESPMegaIoT.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1ab06f46405e4cdf051188ebb62edd0404" prot="private" static="no" mutable="no">
+        <type>FRAM *</type>
+        <definition>FRAM* ESPMegaIoT::fram</definition>
+        <argsstring></argsstring>
+        <name>fram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="127" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1afc991a34f789d9044024a9540f2d1063" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::useWifi</definition>
+        <argsstring></argsstring>
+        <name>useWifi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="128" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a45ba2164317155f85c5f2400aa73f25c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::WifiUseAuth</definition>
+        <argsstring></argsstring>
+        <name>WifiUseAuth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="129" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a0b848ce7fb8cc3a24e2ef874c5729f90" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ESPMegaIoT::ssid[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>ssid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="130" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a988507bc5f62ff4a56211cfc16045c40" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ESPMegaIoT::password[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="131" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a754690d2e2204990e0dbc69b729dc66b" prot="private" static="no" mutable="no">
+        <type>WiFiClient</type>
+        <definition>WiFiClient ESPMegaIoT::tcpClient</definition>
+        <argsstring></argsstring>
+        <name>tcpClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="132" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a491d9e95af289d0f53155c8d70540a43" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaIoT::mqtt_callbacks_handler_index</definition>
+        <argsstring></argsstring>
+        <name>mqtt_callbacks_handler_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="138" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1ad63cb4c982d44da4d332b3a5c2fc7803" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaIoT::mqtt_relative_callbacks_handler_index</definition>
+        <argsstring></argsstring>
+        <name>mqtt_relative_callbacks_handler_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="139" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1aab7a904ac82f956bbf9fa79297961f5e" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaIoT::subscribe_callbacks_handler_index</definition>
+        <argsstring></argsstring>
+        <name>subscribe_callbacks_handler_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="140" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a8884fd7739640d74028bc395465a3d92" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(char *, char *)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t, std::function&lt;void(char*, char*)&gt; &gt; ESPMegaIoT::mqtt_callbacks</definition>
+        <argsstring></argsstring>
+        <name>mqtt_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="141" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a890d1558c60aeeb2e1fff63d9bba4026" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(char *, char *)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t, std::function&lt;void(char*, char*)&gt; &gt; ESPMegaIoT::mqtt_relative_callbacks</definition>
+        <argsstring></argsstring>
+        <name>mqtt_relative_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="142" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a6a1d088e2a8bbed868b1a6b8d7fb0e88" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(void)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t, std::function&lt;void(void)&gt; &gt; ESPMegaIoT::subscribe_callbacks</definition>
+        <argsstring></argsstring>
+        <name>subscribe_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="143" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a16c38f63ea8dd8910d194df69c0fa48c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="145" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1add9a8931564deac2fc1d075f6d9bb943" prot="private" static="no" mutable="no">
+        <type>PubSubClient</type>
+        <definition>PubSubClient ESPMegaIoT::mqtt</definition>
+        <argsstring></argsstring>
+        <name>mqtt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="146" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1aa41d5f365ae6e0a371db08a6b592ac37" prot="private" static="no" mutable="no">
+        <type><ref refid="class_io_t_component" kindref="compound">IoTComponent</ref> *</type>
+        <definition>IoTComponent* ESPMegaIoT::components[255]</definition>
+        <argsstring>[255]</argsstring>
+        <name>components</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="147" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1acb0c4765b06711c9c10b98faf0a3db5b" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ESPMegaIoT::payload_buffer[200]</definition>
+        <argsstring>[200]</argsstring>
+        <name>payload_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="148" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a97f0f63db3e098d49436ce7e505c6f48" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaIoT::base_topic_length</definition>
+        <argsstring></argsstring>
+        <name>base_topic_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="149" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1ade579c9bce0867a534a080afaafee65a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> **</type>
+        <definition>ExpansionCard** ESPMegaIoT::cards</definition>
+        <argsstring></argsstring>
+        <name>cards</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="150" column="19" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a18047238bca0f80e98a19dc76580d499" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::mqtt_connected</definition>
+        <argsstring></argsstring>
+        <name>mqtt_connected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="152" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1abd9063b667f48d87c635cca38c5d4d4e" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref></type>
+        <definition>NetworkConfig ESPMegaIoT::network_config</definition>
+        <argsstring></argsstring>
+        <name>network_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="153" column="19" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a179e86e639e19100ecf7aacb71716758" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref></type>
+        <definition>MqttConfig ESPMegaIoT::mqtt_config</definition>
+        <argsstring></argsstring>
+        <name>mqtt_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="154" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_io_t_1a609c6e5c75c156d63ae16dcd1421be64" prot="private" static="no" mutable="no">
+        <type>ETHClass *</type>
+        <definition>ETHClass* ESPMegaIoT::ethernetIface</definition>
+        <argsstring></argsstring>
+        <name>ethernetIface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="155" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1affa7c3b532147b2c485f5c3113f0a8a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ESPMegaIoT::ESPMegaIoT</definition>
+        <argsstring>()</argsstring>
+        <name>ESPMegaIoT</name>
+        <briefdescription>
+<para>Create a new <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>You shold not create this object directly, Instead, you should use the ESPMegaPRO::iot object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="73" column="5" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="9" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a2e59b40473015d237898b93aef5631b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ESPMegaIoT::~ESPMegaIoT</definition>
+        <argsstring>()</argsstring>
+        <name>~ESPMegaIoT</name>
+        <briefdescription>
+<para>Destroy the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="74" column="5" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a12baf9ad36896f400c5c77fa7a32d3de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::intr_begin</definition>
+        <argsstring>(ExpansionCard *cards[])</argsstring>
+        <name>intr_begin</name>
+        <param>
+          <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+          <declname>cards</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>Begin the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cards</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of <ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> objects </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="75" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="84" bodyend="88"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1aa6436515e96f420606fd7069737fc67f" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="165" endline="171">ESPMegaPRO::enableIotModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a260083ed6e8710b7321f18942ad6eef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>The main loop for the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Normally you should not call this function, Instead, you should call <ref refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" kindref="member">ESPMegaPRO::loop()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="76" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="95" bodyend="109"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="50" endline="67">ESPMegaPRO::loop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ae7323d1d3ff23494b68a748c1eb57891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::registerCard</definition>
+        <argsstring>(uint8_t card_id)</argsstring>
+        <name>registerCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <briefdescription>
+<para>Register an existing card for use with IoT. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function registers an existing card for use with IoT The card should be installed using <ref refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" kindref="member">ESPMegaPRO::installCard()</ref> before calling this function</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>card_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the card </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="77" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="119" bodyend="171"/>
+        <references refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" compoundref="_e_s_p_mega_io_t_8hpp" startline="58">MqttConfig::base_topic</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a11e8435455ffecc362eb4de09087d43a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::unregisterCard</definition>
+        <argsstring>(uint8_t card_id)</argsstring>
+        <name>unregisterCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <briefdescription>
+<para>Unregister a card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>card_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the card </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="78" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="178" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1aba6676558bdfe8123028cbe3cf924eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::publishCard</definition>
+        <argsstring>(uint8_t card_id)</argsstring>
+        <name>publishCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <briefdescription>
+<para>Publish all cards&apos;s reports. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="79" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="193" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a740ea6dc48ae78b87d48afc39f00d992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::publishRelative</definition>
+        <argsstring>(char *topic, char *payload)</argsstring>
+        <name>publishRelative</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+<para>Publish a message relative to the base topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic to publish to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload to publish </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="81" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="491" bodyend="497"/>
+        <references refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" compoundref="_e_s_p_mega_io_t_8hpp" startline="58">MqttConfig::base_topic</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a98e8c822491c06be6823328e133507a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::subscribeRelative</definition>
+        <argsstring>(char *topic)</argsstring>
+        <name>subscribeRelative</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to a topic relative to the base topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic to subscribe to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="83" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="504" bodyend="510"/>
+        <references refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" compoundref="_e_s_p_mega_io_t_8hpp" startline="58">MqttConfig::base_topic</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a098f74442df4c0b5059f0d94921c64f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::subscribe</definition>
+        <argsstring>(char *topic)</argsstring>
+        <name>subscribe</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Subscribe to a topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic to subscribe to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="84" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="209" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a30629a0c025c0f20d84ab8ff7a9c437f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::unsubscribeFromTopic</definition>
+        <argsstring>(char *topic)</argsstring>
+        <name>unsubscribeFromTopic</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Unsubscribe from a topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic to unsubscribe from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="85" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ac90fb46005eeb8528bc6f7108d4a7c06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::connectToWifi</definition>
+        <argsstring>(char *ssid, char *password)</argsstring>
+        <name>connectToWifi</name>
+        <param>
+          <type>char *</type>
+          <declname>ssid</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Connect to a wifi network. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ssid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSID of the wifi network </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The password of the wifi network </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="86" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="230" bodyend="233"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">connectNetwork</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1af7728b5bfaf7cb4849c127b739dda575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::connectToWifi</definition>
+        <argsstring>(char *ssid)</argsstring>
+        <name>connectToWifi</name>
+        <param>
+          <type>char *</type>
+          <declname>ssid</declname>
+        </param>
+        <briefdescription>
+<para>Connect to a unsecured wifi network. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ssid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSID of the wifi network </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="87" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="240" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a4e382d99e13bafc5937e774cc14d6227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::disconnectFromWifi</definition>
+        <argsstring>()</argsstring>
+        <name>disconnectFromWifi</name>
+        <briefdescription>
+<para>Disconnect from the wifi network. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="88" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a8c18fddf81218ea5c69bca2eb064167f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::wifiConnected</definition>
+        <argsstring>()</argsstring>
+        <name>wifiConnected</name>
+        <briefdescription>
+<para>Check if the wifi is connected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the wifi is connected, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="89" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="258" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a2a167a8e30202a4fc34141595b795492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::ethernetBegin</definition>
+        <argsstring>()</argsstring>
+        <name>ethernetBegin</name>
+        <briefdescription>
+<para>Begin the ethernet interface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="90" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="585" bodyend="588"/>
+        <references refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" compoundref="_e_s_p_mega_io_t_8hpp" startline="39">NetworkConfig::hostname</references>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">connectNetwork</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::loadNetworkConfig</definition>
+        <argsstring>()</argsstring>
+        <name>loadNetworkConfig</name>
+        <briefdescription>
+<para>Load the network config from FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="91" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="547" bodyend="561"/>
+        <references refid="struct_network_config_1a2706b2e04d704496b2202e476fa9635c" compoundref="_e_s_p_mega_io_t_8hpp" startline="37">NetworkConfig::dns1</references>
+        <references refid="struct_network_config_1a393560e108d63338ae825bbab2c25e2c" compoundref="_e_s_p_mega_io_t_8hpp" startline="38">NetworkConfig::dns2</references>
+        <references refid="struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41" compoundref="_e_s_p_mega_io_t_8hpp" startline="35">NetworkConfig::gateway</references>
+        <references refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" compoundref="_e_s_p_mega_io_t_8hpp" startline="39">NetworkConfig::hostname</references>
+        <references refid="struct_network_config_1a0176904843001d1f2435ac52ca040ede" compoundref="_e_s_p_mega_io_t_8hpp" startline="34">NetworkConfig::ip</references>
+        <references refid="struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2" compoundref="_e_s_p_mega_io_t_8hpp" startline="44">NetworkConfig::password</references>
+        <references refid="struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19" compoundref="_e_s_p_mega_io_t_8hpp" startline="43">NetworkConfig::ssid</references>
+        <references refid="struct_network_config_1a18dd746c622cb7a38da58ca94ff31657" compoundref="_e_s_p_mega_io_t_8hpp" startline="36">NetworkConfig::subnet</references>
+        <references refid="struct_network_config_1a9884b31dba672d1f24636fb64a55d38a" compoundref="_e_s_p_mega_io_t_8hpp" startline="40">NetworkConfig::useStaticIp</references>
+        <references refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" compoundref="_e_s_p_mega_io_t_8hpp" startline="41">NetworkConfig::useWifi</references>
+        <references refid="struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea" compoundref="_e_s_p_mega_io_t_8hpp" startline="42">NetworkConfig::wifiUseAuth</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::saveNetworkConfig</definition>
+        <argsstring>()</argsstring>
+        <name>saveNetworkConfig</name>
+        <briefdescription>
+<para>Save the network config to FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="92" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="566" bodyend="580"/>
+        <references refid="struct_network_config_1a2706b2e04d704496b2202e476fa9635c" compoundref="_e_s_p_mega_io_t_8hpp" startline="37">NetworkConfig::dns1</references>
+        <references refid="struct_network_config_1a393560e108d63338ae825bbab2c25e2c" compoundref="_e_s_p_mega_io_t_8hpp" startline="38">NetworkConfig::dns2</references>
+        <references refid="struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41" compoundref="_e_s_p_mega_io_t_8hpp" startline="35">NetworkConfig::gateway</references>
+        <references refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" compoundref="_e_s_p_mega_io_t_8hpp" startline="39">NetworkConfig::hostname</references>
+        <references refid="struct_network_config_1a0176904843001d1f2435ac52ca040ede" compoundref="_e_s_p_mega_io_t_8hpp" startline="34">NetworkConfig::ip</references>
+        <references refid="struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2" compoundref="_e_s_p_mega_io_t_8hpp" startline="44">NetworkConfig::password</references>
+        <references refid="struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19" compoundref="_e_s_p_mega_io_t_8hpp" startline="43">NetworkConfig::ssid</references>
+        <references refid="struct_network_config_1a18dd746c622cb7a38da58ca94ff31657" compoundref="_e_s_p_mega_io_t_8hpp" startline="36">NetworkConfig::subnet</references>
+        <references refid="struct_network_config_1a9884b31dba672d1f24636fb64a55d38a" compoundref="_e_s_p_mega_io_t_8hpp" startline="40">NetworkConfig::useStaticIp</references>
+        <references refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" compoundref="_e_s_p_mega_io_t_8hpp" startline="41">NetworkConfig::useWifi</references>
+        <references refid="struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea" compoundref="_e_s_p_mega_io_t_8hpp" startline="42">NetworkConfig::wifiUseAuth</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ab0ee8902014f9d08c97f0ffe11f66133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref> *</type>
+        <definition>NetworkConfig * ESPMegaIoT::getNetworkConfig</definition>
+        <argsstring>()</argsstring>
+        <name>getNetworkConfig</name>
+        <briefdescription>
+<para>Get the network config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>You should not modify the returned struct directly</para>
+</simplesect>
+<simplesect kind="return"><para>The network config struct </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="93" column="19" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="699" bodyend="702"/>
+        <referencedby refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" compoundref="_internal_display_8cpp" startline="11" endline="29">InternalDisplay::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref> *</type>
+        <definition>MqttConfig * ESPMegaIoT::getMqttConfig</definition>
+        <argsstring>()</argsstring>
+        <name>getMqttConfig</name>
+        <briefdescription>
+<para>Get the MQTT config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>You should not modify the returned struct directly</para>
+</simplesect>
+<simplesect kind="return"><para>The MQTT config struct </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="94" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="711" bodyend="714"/>
+        <referencedby refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" compoundref="_internal_display_8cpp" startline="11" endline="29">InternalDisplay::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a16b33cc73cccefd62577dca8f015ee43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::setMqttConfig</definition>
+        <argsstring>(MqttConfig mqtt_config)</argsstring>
+        <name>setMqttConfig</name>
+        <param>
+          <type><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref></type>
+          <declname>mqtt_config</declname>
+        </param>
+        <briefdescription>
+<para>Set the MQTT config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mqtt_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT config struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="95" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="665" bodyend="669"/>
+        <references refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" compoundref="_e_s_p_mega_io_t_8hpp" startline="58">MqttConfig::base_topic</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::saveMqttConfig</definition>
+        <argsstring>()</argsstring>
+        <name>saveMqttConfig</name>
+        <briefdescription>
+<para>Save the MQTT config to FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="96" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="609" bodyend="617"/>
+        <references refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" compoundref="_e_s_p_mega_io_t_8hpp" startline="58">MqttConfig::base_topic</references>
+        <references refid="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" compoundref="_e_s_p_mega_io_t_8hpp" startline="56">MqttConfig::mqtt_password</references>
+        <references refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" compoundref="_e_s_p_mega_io_t_8hpp" startline="54">MqttConfig::mqtt_port</references>
+        <references refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" compoundref="_e_s_p_mega_io_t_8hpp" startline="53">MqttConfig::mqtt_server</references>
+        <references refid="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" compoundref="_e_s_p_mega_io_t_8hpp" startline="57">MqttConfig::mqtt_useauth</references>
+        <references refid="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" compoundref="_e_s_p_mega_io_t_8hpp" startline="55">MqttConfig::mqtt_user</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::loadMqttConfig</definition>
+        <argsstring>()</argsstring>
+        <name>loadMqttConfig</name>
+        <briefdescription>
+<para>Load the MQTT config from FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="97" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="593" bodyend="604"/>
+        <references refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" compoundref="_e_s_p_mega_io_t_8hpp" startline="58">MqttConfig::base_topic</references>
+        <references refid="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" compoundref="_e_s_p_mega_io_t_8hpp" startline="56">MqttConfig::mqtt_password</references>
+        <references refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" compoundref="_e_s_p_mega_io_t_8hpp" startline="54">MqttConfig::mqtt_port</references>
+        <references refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" compoundref="_e_s_p_mega_io_t_8hpp" startline="53">MqttConfig::mqtt_server</references>
+        <references refid="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" compoundref="_e_s_p_mega_io_t_8hpp" startline="57">MqttConfig::mqtt_useauth</references>
+        <references refid="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" compoundref="_e_s_p_mega_io_t_8hpp" startline="55">MqttConfig::mqtt_user</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::connectNetwork</definition>
+        <argsstring>()</argsstring>
+        <name>connectNetwork</name>
+        <briefdescription>
+<para>Connect to the network using the current config. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="98" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="639" bodyend="658"/>
+        <references refid="class_e_s_p_mega_io_t_1ac90fb46005eeb8528bc6f7108d4a7c06" compoundref="_e_s_p_mega_io_t_8cpp" startline="230" endline="233">connectToWifi</references>
+        <references refid="struct_network_config_1a2706b2e04d704496b2202e476fa9635c" compoundref="_e_s_p_mega_io_t_8hpp" startline="37">NetworkConfig::dns1</references>
+        <references refid="struct_network_config_1a393560e108d63338ae825bbab2c25e2c" compoundref="_e_s_p_mega_io_t_8hpp" startline="38">NetworkConfig::dns2</references>
+        <references refid="class_e_s_p_mega_io_t_1a2a167a8e30202a4fc34141595b795492" compoundref="_e_s_p_mega_io_t_8cpp" startline="585" endline="588">ethernetBegin</references>
+        <references refid="struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41" compoundref="_e_s_p_mega_io_t_8hpp" startline="35">NetworkConfig::gateway</references>
+        <references refid="struct_network_config_1a0176904843001d1f2435ac52ca040ede" compoundref="_e_s_p_mega_io_t_8hpp" startline="34">NetworkConfig::ip</references>
+        <references refid="struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2" compoundref="_e_s_p_mega_io_t_8hpp" startline="44">NetworkConfig::password</references>
+        <references refid="struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19" compoundref="_e_s_p_mega_io_t_8hpp" startline="43">NetworkConfig::ssid</references>
+        <references refid="struct_network_config_1a18dd746c622cb7a38da58ca94ff31657" compoundref="_e_s_p_mega_io_t_8hpp" startline="36">NetworkConfig::subnet</references>
+        <references refid="struct_network_config_1a9884b31dba672d1f24636fb64a55d38a" compoundref="_e_s_p_mega_io_t_8hpp" startline="40">NetworkConfig::useStaticIp</references>
+        <references refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" compoundref="_e_s_p_mega_io_t_8hpp" startline="41">NetworkConfig::useWifi</references>
+        <references refid="struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea" compoundref="_e_s_p_mega_io_t_8hpp" startline="42">NetworkConfig::wifiUseAuth</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a426932179c2d84864e3b1fb269723fc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::setNetworkConfig</definition>
+        <argsstring>(NetworkConfig network_config)</argsstring>
+        <name>setNetworkConfig</name>
+        <param>
+          <type><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref></type>
+          <declname>network_config</declname>
+        </param>
+        <briefdescription>
+<para>Set the network config. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>network_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The network config struct </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="99" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="539" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::connectToMqtt</definition>
+        <argsstring>()</argsstring>
+        <name>connectToMqtt</name>
+        <briefdescription>
+<para>Connect to MQTT with the current config. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="100" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="622" bodyend="634"/>
+        <references refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" compoundref="_e_s_p_mega_io_t_8hpp" startline="39">NetworkConfig::hostname</references>
+        <references refid="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" compoundref="_e_s_p_mega_io_t_8hpp" startline="56">MqttConfig::mqtt_password</references>
+        <references refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" compoundref="_e_s_p_mega_io_t_8hpp" startline="54">MqttConfig::mqtt_port</references>
+        <references refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" compoundref="_e_s_p_mega_io_t_8hpp" startline="53">MqttConfig::mqtt_server</references>
+        <references refid="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" compoundref="_e_s_p_mega_io_t_8hpp" startline="57">MqttConfig::mqtt_useauth</references>
+        <references refid="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" compoundref="_e_s_p_mega_io_t_8hpp" startline="55">MqttConfig::mqtt_user</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a0dc0ebc659c880d5b17c85f341987535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::connectToMqtt</definition>
+        <argsstring>(char *client_id, char *mqtt_server, uint16_t mqtt_port, char *mqtt_user, char *mqtt_password)</argsstring>
+        <name>connectToMqtt</name>
+        <param>
+          <type>char *</type>
+          <declname>client_id</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>mqtt_server</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>mqtt_port</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>mqtt_user</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>mqtt_password</declname>
+        </param>
+        <briefdescription>
+<para>Connect to a MQTT broker with authentication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client id to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt_server</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT server to connect to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT port to connect to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt_user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT username to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt_password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT password to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the connection is successful, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="101" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="273" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a6033a2b376f85c2f912f77e9af0a1a2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::connectToMqtt</definition>
+        <argsstring>(char *client_id, char *mqtt_server, uint16_t mqtt_port)</argsstring>
+        <name>connectToMqtt</name>
+        <param>
+          <type>char *</type>
+          <declname>client_id</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>mqtt_server</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>mqtt_port</declname>
+        </param>
+        <briefdescription>
+<para>Connect to a MQTT broker without authentication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>client_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The client id to use </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt_server</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT server to connect to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT port to connect to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the connection is successful, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="102" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="311" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1af9365947904e2fe67965db7c12164eac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::mqttConnected</definition>
+        <argsstring>()</argsstring>
+        <name>mqttConnected</name>
+        <briefdescription>
+<para>Check if the MQTT is connected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the MQTT is connected, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="103" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="721" bodyend="725"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a634dfa685dd2e7d5c0a442d4a85c3e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::disconnectFromMqtt</definition>
+        <argsstring>()</argsstring>
+        <name>disconnectFromMqtt</name>
+        <briefdescription>
+<para>Disconnect from the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="104" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="345" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ae70528fc480706a1e7aeed202c40736e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::publish</definition>
+        <argsstring>(const char *topic, const char *payload)</argsstring>
+        <name>publish</name>
+        <param>
+          <type>const char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+<para>Publish a message to a topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic to publish to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload to publish </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="105" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="356" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1aedcb19a15a935777f1ccc51f24b7c07d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaIoT::registerMqttCallback</definition>
+        <argsstring>(std::function&lt; void(char *, char *)&gt; callback)</argsstring>
+        <name>registerMqttCallback</name>
+        <param>
+          <type>std::function&lt; void(char *, char *)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Register a callback for MQTT messages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handler for the callback </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="106" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="367" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a9a8ef4e5e7b98c0b77e339a5b4b847cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::unregisterMqttCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterMqttCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregister a callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler of the callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="107" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="378" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1abb24084f6a8a448b4f6aea35bd4c7679" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaIoT::registerRelativeMqttCallback</definition>
+        <argsstring>(std::function&lt; void(char *, char *)&gt; callback)</argsstring>
+        <name>registerRelativeMqttCallback</name>
+        <param>
+          <type>std::function&lt; void(char *, char *)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Register a callback for MQTT messages relative to the base topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The message&apos;s base topic will be removed before calling the callback</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handler for the callback </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="108" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="469" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a34be62570b94a256c2cda7f354cc9909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::unregisterRelativeMqttCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterRelativeMqttCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregister a relative MQTT callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler of the callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="109" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="480" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1adabafbe2c88bf37b3a90e0e1373ab752" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaIoT::registerSubscribeCallback</definition>
+        <argsstring>(std::function&lt; void(void)&gt; callback)</argsstring>
+        <name>registerSubscribeCallback</name>
+        <param>
+          <type>std::function&lt; void(void)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Register a function to be called when the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object is subscribing to topics. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handler for the callback </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="110" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="518" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a0816eddc3a7bfd7685959a8cc6dec129" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::unregisterSubscribeCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterSubscribeCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregister a subscribe callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler of the callback </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="111" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="529" bodyend="532"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a92e3a81d45a4389e5945c46486182e9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::setBaseTopic</definition>
+        <argsstring>(char *base_topic)</argsstring>
+        <name>setBaseTopic</name>
+        <param>
+          <type>char *</type>
+          <declname>base_topic</declname>
+        </param>
+        <briefdescription>
+<para>Set the base topic for the IoT. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base_topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base topic </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="112" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="73" bodyend="77"/>
+        <references refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" compoundref="_e_s_p_mega_io_t_8hpp" startline="58">MqttConfig::base_topic</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a2da8aec25ea170e5974f786798191fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::bindEthernetInterface</definition>
+        <argsstring>(ETHClass *ethernetIface)</argsstring>
+        <name>bindEthernetInterface</name>
+        <param>
+          <type>ETHClass *</type>
+          <declname>ethernetIface</declname>
+        </param>
+        <briefdescription>
+<para>Bind an ethernet interface to the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ethernetIface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ethernet interface to bind (ETH for <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> R3) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="113" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="676" bodyend="679"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1acb0b6d3616f924ae793981f8653b142f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::networkConnected</definition>
+        <argsstring>()</argsstring>
+        <name>networkConnected</name>
+        <briefdescription>
+<para>Check if the network is connected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the network is connected, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="114" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="732" bodyend="738"/>
+        <references refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" compoundref="_e_s_p_mega_io_t_8hpp" startline="41">NetworkConfig::useWifi</references>
+        <referencedby refid="class_internal_display_1acba3729be902fcde3e30e754aef62330" compoundref="_internal_display_8cpp" startline="36" endline="55">InternalDisplay::loop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1afd192a63876d86300086522e701905de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::bindFRAM</definition>
+        <argsstring>(FRAM *fram)</argsstring>
+        <name>bindFRAM</name>
+        <param>
+          <type>FRAM *</type>
+          <declname>fram</declname>
+        </param>
+        <briefdescription>
+<para>Bind a FRAM object to the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This class is hardcode to use the FRAM address 34-300</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The FRAM object to bind </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="115" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="746" bodyend="749"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1aa6436515e96f420606fd7069737fc67f" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="165" endline="171">ESPMegaPRO::enableIotModule</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a667661f7ed0bcd013561c3f5d637a4fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_io_t_component" kindref="compound">IoTComponent</ref> *</type>
+        <definition>IoTComponent * ESPMegaIoT::getComponent</definition>
+        <argsstring>(uint8_t card_id)</argsstring>
+        <name>getComponent</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <briefdescription>
+<para>Get the <ref refid="class_io_t_component" kindref="compound">IoTComponent</ref> object for a card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>card_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the card </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="class_io_t_component" kindref="compound">IoTComponent</ref> object for the card </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="117" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="687" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ae6aad5ece3729e612352e2256e44bbec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IPAddress</type>
+        <definition>IPAddress ESPMegaIoT::getETHIp</definition>
+        <argsstring>()</argsstring>
+        <name>getETHIp</name>
+        <briefdescription>
+<para>Get the Ethernet IP Address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The Ethernet IP Address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="118" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="765" bodyend="767"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0" compoundref="_e_s_p_mega_io_t_8cpp" startline="774" endline="779">getIp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ae0f8dc4901511ccd52cb81409bc50574" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IPAddress</type>
+        <definition>IPAddress ESPMegaIoT::getWifiIp</definition>
+        <argsstring>()</argsstring>
+        <name>getWifiIp</name>
+        <briefdescription>
+<para>Get the Wifi IP address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The Wifi IP address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="119" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="756" bodyend="758"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0" compoundref="_e_s_p_mega_io_t_8cpp" startline="774" endline="779">getIp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>IPAddress</type>
+        <definition>IPAddress ESPMegaIoT::getIp</definition>
+        <argsstring>()</argsstring>
+        <name>getIp</name>
+        <briefdescription>
+<para>Get the IP address of the currently active network interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The IP address of the currently active network interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="120" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="774" bodyend="779"/>
+        <references refid="class_e_s_p_mega_io_t_1ae6aad5ece3729e612352e2256e44bbec" compoundref="_e_s_p_mega_io_t_8cpp" startline="765" endline="767">getETHIp</references>
+        <references refid="class_e_s_p_mega_io_t_1ae0f8dc4901511ccd52cb81409bc50574" compoundref="_e_s_p_mega_io_t_8cpp" startline="756" endline="758">getWifiIp</references>
+        <references refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" compoundref="_e_s_p_mega_io_t_8hpp" startline="41">NetworkConfig::useWifi</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a3ed44db4c8d69dc8f9f611acfeb609cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String ESPMegaIoT::getETHMac</definition>
+        <argsstring>()</argsstring>
+        <name>getETHMac</name>
+        <briefdescription>
+<para>Get the MAC Address of the Ethernet interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The MAC Address of the Ethernet interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="122" column="12" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="786" bodyend="788"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163" compoundref="_e_s_p_mega_io_t_8cpp" startline="804" endline="809">getMac</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ae6bb7062882ac48df2f4ea98618e5e30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String ESPMegaIoT::getWifiMac</definition>
+        <argsstring>()</argsstring>
+        <name>getWifiMac</name>
+        <briefdescription>
+<para>Get the MAC Address of the Wifi interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The MAC Address of the Wifi interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="123" column="12" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="795" bodyend="797"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163" compoundref="_e_s_p_mega_io_t_8cpp" startline="804" endline="809">getMac</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String ESPMegaIoT::getMac</definition>
+        <argsstring>()</argsstring>
+        <name>getMac</name>
+        <briefdescription>
+<para>Get the MAC Address of the currently active network interface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The MAC Address of the currently active network interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="124" column="12" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="804" bodyend="809"/>
+        <references refid="class_e_s_p_mega_io_t_1a3ed44db4c8d69dc8f9f611acfeb609cf" compoundref="_e_s_p_mega_io_t_8cpp" startline="786" endline="788">getETHMac</references>
+        <references refid="class_e_s_p_mega_io_t_1ae6bb7062882ac48df2f4ea98618e5e30" compoundref="_e_s_p_mega_io_t_8cpp" startline="795" endline="797">getWifiMac</references>
+        <references refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" compoundref="_e_s_p_mega_io_t_8hpp" startline="41">NetworkConfig::useWifi</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1adc1d701a355eea305944662035d22734" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::sessionKeepAlive</definition>
+        <argsstring>()</argsstring>
+        <name>sessionKeepAlive</name>
+        <briefdescription>
+<para>Keep the MQTT session alive. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is called automatically by the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object, You should not call this function directly </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="133" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="435" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a112099cb50a2b752e1492f036404b42e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaIoT::mqttReconnect</definition>
+        <argsstring>()</argsstring>
+        <name>mqttReconnect</name>
+        <briefdescription>
+<para>Subscribe relative to the base topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="134" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="419" bodyend="429"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a9527e214ab262683d423d8cd7431b4eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::wifiReconnect</definition>
+        <argsstring>()</argsstring>
+        <name>wifiReconnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="135" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1adbe4298276b624b3ecaf12f83e6cc761" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::mqttSubscribe</definition>
+        <argsstring>()</argsstring>
+        <name>mqttSubscribe</name>
+        <briefdescription>
+<para>Subscribe to all components&apos;s topics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="136" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="386" bodyend="404"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1a7d45396a8781896d3528f639c64cbd4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::mqttCallback</definition>
+        <argsstring>(char *topic, byte *payload, unsigned int length)</argsstring>
+        <name>mqttCallback</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>byte *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>The mqtt callback function, This function is called when a message is received on a subscribed topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called when a message is received on a subscribed topic The payload is copied to a buffer and a null terminator is added The payload is then passed to the respective card&apos;s mqtt callback</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload of the message in byte form </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the payload </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="137" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="39" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_io_t_1aed982916798265a7a8a5b8650b0442eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaIoT::publishRelative</definition>
+        <argsstring>(uint8_t card_id, char *topic, char *payload)</argsstring>
+        <name>publishRelative</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+<para>Publish relative to the base topic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="144" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp" bodystart="409" bodyend="414"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> class is a class that is used to interface with the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> IoT module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class allows you to register IoT components and interface with them through MQTT. This class also manages the network and MQTT connections for you. Supports both WiFi and Ethernet. Also allows you to save and load network and MQTT configurations to and from FRAM. Also provides MQTT helpers for publishing and subscribing to topics. </para>
+    </detaileddescription>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="70" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="71" bodyend="156"/>
+    <listofallmembers>
+      <member refid="class_e_s_p_mega_io_t_1a16c38f63ea8dd8910d194df69c0fa48c" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>active</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a97f0f63db3e098d49436ce7e505c6f48" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>base_topic_length</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a2da8aec25ea170e5974f786798191fcb" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>bindEthernetInterface</name></member>
+      <member refid="class_e_s_p_mega_io_t_1afd192a63876d86300086522e701905de" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>bindFRAM</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ade579c9bce0867a534a080afaafee65a" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>cards</name></member>
+      <member refid="class_e_s_p_mega_io_t_1aa41d5f365ae6e0a371db08a6b592ac37" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>components</name></member>
+      <member refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>connectNetwork</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>connectToMqtt</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a0dc0ebc659c880d5b17c85f341987535" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>connectToMqtt</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a6033a2b376f85c2f912f77e9af0a1a2a" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>connectToMqtt</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ac90fb46005eeb8528bc6f7108d4a7c06" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>connectToWifi</name></member>
+      <member refid="class_e_s_p_mega_io_t_1af7728b5bfaf7cb4849c127b739dda575" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>connectToWifi</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a634dfa685dd2e7d5c0a442d4a85c3e1a" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>disconnectFromMqtt</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a4e382d99e13bafc5937e774cc14d6227" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>disconnectFromWifi</name></member>
+      <member refid="class_e_s_p_mega_io_t_1affa7c3b532147b2c485f5c3113f0a8a3" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>ESPMegaIoT</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a2a167a8e30202a4fc34141595b795492" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>ethernetBegin</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a609c6e5c75c156d63ae16dcd1421be64" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>ethernetIface</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ab06f46405e4cdf051188ebb62edd0404" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>fram</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a667661f7ed0bcd013561c3f5d637a4fd" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getComponent</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ae6aad5ece3729e612352e2256e44bbec" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getETHIp</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a3ed44db4c8d69dc8f9f611acfeb609cf" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getETHMac</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getIp</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getMac</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getMqttConfig</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ab0ee8902014f9d08c97f0ffe11f66133" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getNetworkConfig</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ae0f8dc4901511ccd52cb81409bc50574" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getWifiIp</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ae6bb7062882ac48df2f4ea98618e5e30" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>getWifiMac</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a12baf9ad36896f400c5c77fa7a32d3de" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>intr_begin</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>loadMqttConfig</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>loadNetworkConfig</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a260083ed6e8710b7321f18942ad6eef8" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>loop</name></member>
+      <member refid="class_e_s_p_mega_io_t_1add9a8931564deac2fc1d075f6d9bb943" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqtt</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a8884fd7739640d74028bc395465a3d92" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqtt_callbacks</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a491d9e95af289d0f53155c8d70540a43" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqtt_callbacks_handler_index</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a179e86e639e19100ecf7aacb71716758" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqtt_config</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a18047238bca0f80e98a19dc76580d499" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqtt_connected</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a890d1558c60aeeb2e1fff63d9bba4026" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqtt_relative_callbacks</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ad63cb4c982d44da4d332b3a5c2fc7803" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqtt_relative_callbacks_handler_index</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a7d45396a8781896d3528f639c64cbd4a" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqttCallback</name></member>
+      <member refid="class_e_s_p_mega_io_t_1af9365947904e2fe67965db7c12164eac" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqttConnected</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a112099cb50a2b752e1492f036404b42e" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqttReconnect</name></member>
+      <member refid="class_e_s_p_mega_io_t_1adbe4298276b624b3ecaf12f83e6cc761" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>mqttSubscribe</name></member>
+      <member refid="class_e_s_p_mega_io_t_1abd9063b667f48d87c635cca38c5d4d4e" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>network_config</name></member>
+      <member refid="class_e_s_p_mega_io_t_1acb0b6d3616f924ae793981f8653b142f" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>networkConnected</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a988507bc5f62ff4a56211cfc16045c40" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>password</name></member>
+      <member refid="class_e_s_p_mega_io_t_1acb0c4765b06711c9c10b98faf0a3db5b" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>payload_buffer</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ae70528fc480706a1e7aeed202c40736e" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>publish</name></member>
+      <member refid="class_e_s_p_mega_io_t_1aba6676558bdfe8123028cbe3cf924eab" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>publishCard</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a740ea6dc48ae78b87d48afc39f00d992" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>publishRelative</name></member>
+      <member refid="class_e_s_p_mega_io_t_1aed982916798265a7a8a5b8650b0442eb" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>publishRelative</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ae7323d1d3ff23494b68a748c1eb57891" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>registerCard</name></member>
+      <member refid="class_e_s_p_mega_io_t_1aedcb19a15a935777f1ccc51f24b7c07d" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>registerMqttCallback</name></member>
+      <member refid="class_e_s_p_mega_io_t_1abb24084f6a8a448b4f6aea35bd4c7679" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>registerRelativeMqttCallback</name></member>
+      <member refid="class_e_s_p_mega_io_t_1adabafbe2c88bf37b3a90e0e1373ab752" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>registerSubscribeCallback</name></member>
+      <member refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>saveMqttConfig</name></member>
+      <member refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>saveNetworkConfig</name></member>
+      <member refid="class_e_s_p_mega_io_t_1adc1d701a355eea305944662035d22734" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>sessionKeepAlive</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a92e3a81d45a4389e5945c46486182e9b" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>setBaseTopic</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a16b33cc73cccefd62577dca8f015ee43" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>setMqttConfig</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a426932179c2d84864e3b1fb269723fc6" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>setNetworkConfig</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a0b848ce7fb8cc3a24e2ef874c5729f90" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>ssid</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a098f74442df4c0b5059f0d94921c64f5" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>subscribe</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a6a1d088e2a8bbed868b1a6b8d7fb0e88" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>subscribe_callbacks</name></member>
+      <member refid="class_e_s_p_mega_io_t_1aab7a904ac82f956bbf9fa79297961f5e" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>subscribe_callbacks_handler_index</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a98e8c822491c06be6823328e133507a1" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>subscribeRelative</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a754690d2e2204990e0dbc69b729dc66b" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>tcpClient</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a11e8435455ffecc362eb4de09087d43a" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>unregisterCard</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a9a8ef4e5e7b98c0b77e339a5b4b847cf" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>unregisterMqttCallback</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a34be62570b94a256c2cda7f354cc9909" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>unregisterRelativeMqttCallback</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a0816eddc3a7bfd7685959a8cc6dec129" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>unregisterSubscribeCallback</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a30629a0c025c0f20d84ab8ff7a9c437f" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>unsubscribeFromTopic</name></member>
+      <member refid="class_e_s_p_mega_io_t_1afc991a34f789d9044024a9540f2d1063" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>useWifi</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a8c18fddf81218ea5c69bca2eb064167f" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>wifiConnected</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a9527e214ab262683d423d8cd7431b4eb" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>wifiReconnect</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a45ba2164317155f85c5f2400aa73f25c" prot="private" virt="non-virtual"><scope>ESPMegaIoT</scope><name>WifiUseAuth</name></member>
+      <member refid="class_e_s_p_mega_io_t_1a2e59b40473015d237898b93aef5631b9" prot="public" virt="non-virtual"><scope>ESPMegaIoT</scope><name>~ESPMegaIoT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,69 @@
+\hypertarget{struct_air_conditioner}{}\doxysection{Air\+Conditioner Struct Reference}
+\label{struct_air_conditioner}\index{AirConditioner@{AirConditioner}}
+
+
+This struct is used to store information about an air conditioner.  
+
+
+
+
+{\ttfamily \#include $<$Climate\+Card.\+hpp$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_air_conditioner_a83083620f779bf7182d5d0f6e667b7b7}\label{struct_air_conditioner_a83083620f779bf7182d5d0f6e667b7b7}} 
+uint8\+\_\+t \mbox{\hyperlink{struct_air_conditioner_a83083620f779bf7182d5d0f6e667b7b7}{max\+\_\+temperature}}
+\begin{DoxyCompactList}\small\item\em Maximum temperature. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_air_conditioner_a03d5029ad66a4eded61f3dcc6a455c28}\label{struct_air_conditioner_a03d5029ad66a4eded61f3dcc6a455c28}} 
+uint8\+\_\+t \mbox{\hyperlink{struct_air_conditioner_a03d5029ad66a4eded61f3dcc6a455c28}{min\+\_\+temperature}}
+\begin{DoxyCompactList}\small\item\em Minimum temperature. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_air_conditioner_a47901e2eb7d9063260ab46a2656c1fec}\label{struct_air_conditioner_a47901e2eb7d9063260ab46a2656c1fec}} 
+uint8\+\_\+t \mbox{\hyperlink{struct_air_conditioner_a47901e2eb7d9063260ab46a2656c1fec}{modes}}
+\begin{DoxyCompactList}\small\item\em Number of modes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_air_conditioner_ae10f517c89bfefeb5511a7e86c91ef54}\label{struct_air_conditioner_ae10f517c89bfefeb5511a7e86c91ef54}} 
+const char $\ast$$\ast$ \mbox{\hyperlink{struct_air_conditioner_ae10f517c89bfefeb5511a7e86c91ef54}{mode\+\_\+names}}
+\begin{DoxyCompactList}\small\item\em Names of modes in the form of an array of strings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_air_conditioner_a4b0afb9a8eeeaf69587a8591d0357b2b}\label{struct_air_conditioner_a4b0afb9a8eeeaf69587a8591d0357b2b}} 
+uint8\+\_\+t \mbox{\hyperlink{struct_air_conditioner_a4b0afb9a8eeeaf69587a8591d0357b2b}{fan\+\_\+speeds}}
+\begin{DoxyCompactList}\small\item\em Number of fan speeds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_air_conditioner_aa4672be81a8f0275d842e6a43b6685cf}\label{struct_air_conditioner_aa4672be81a8f0275d842e6a43b6685cf}} 
+const char $\ast$$\ast$ \mbox{\hyperlink{struct_air_conditioner_aa4672be81a8f0275d842e6a43b6685cf}{fan\+\_\+speed\+\_\+names}}
+\begin{DoxyCompactList}\small\item\em Names of fan speeds in the form of an array of strings. \end{DoxyCompactList}\item 
+size\+\_\+t($\ast$ \mbox{\hyperlink{struct_air_conditioner_abb9aca0520a6fa66db6487b9f33ecfb9}{get\+Infrared\+Code}} )(uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t, const uint16\+\_\+t $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em Function to get IR code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This struct is used to store information about an air conditioner. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_air_conditioner_abb9aca0520a6fa66db6487b9f33ecfb9}\label{struct_air_conditioner_abb9aca0520a6fa66db6487b9f33ecfb9}} 
+\index{AirConditioner@{AirConditioner}!getInfraredCode@{getInfraredCode}}
+\index{getInfraredCode@{getInfraredCode}!AirConditioner@{AirConditioner}}
+\doxysubsubsection{\texorpdfstring{getInfraredCode}{getInfraredCode}}
+{\footnotesize\ttfamily size\+\_\+t($\ast$ Air\+Conditioner\+::get\+Infrared\+Code) (uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t, const uint16\+\_\+t $\ast$$\ast$)}
+
+
+
+Function to get IR code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Mode of the air conditioner \\
+\hline
+{\em fan\+\_\+speed} & Fan speed of the air conditioner \\
+\hline
+{\em temperature} & Temperature of the air conditioner \\
+\hline
+{\em code} & Pointer to the IR code array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Size of the IR code array 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Climate\+Card.\+hpp\end{DoxyCompactItemize}

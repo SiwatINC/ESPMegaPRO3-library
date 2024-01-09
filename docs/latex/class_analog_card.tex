@@ -1,0 +1,364 @@
+\hypertarget{class_analog_card}{}\doxysection{Analog\+Card Class Reference}
+\label{class_analog_card}\index{AnalogCard@{AnalogCard}}
+
+
+This class represents the Analog Card.  
+
+
+
+
+{\ttfamily \#include $<$Analog\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Analog\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_analog_card__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Analog\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_analog_card__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_analog_card_ab01a99dc92b2d5431f5e438c2e4bf7f5}\label{class_analog_card_ab01a99dc92b2d5431f5e438c2e4bf7f5}} 
+\mbox{\hyperlink{class_analog_card_ab01a99dc92b2d5431f5e438c2e4bf7f5}{Analog\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{class_analog_card}{Analog\+Card}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_card_a7f0a07632ef1db4bfaf64593cbccce66}{dac\+Write}} (uint8\+\_\+t pin, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Writes a value to the specified DAC pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_card_a121c84a174bcc6756e82538cfe19477a}{send\+Data\+To\+DAC}} (uint8\+\_\+t pin, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sends data to the specified DAC pin. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_analog_card_a57f3af0fdcbc6ccb651007540c6829c4}{analog\+Read}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Reads the value from the specified analog pin. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_card_a058b9fca0655b1d7d169527a37fe4c34}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{class_analog_card}{Analog\+Card}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_card_a88d1bd2c7028cfddcdf1392a6bd57c2a}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The main loop of the \mbox{\hyperlink{class_analog_card}{Analog\+Card}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_card_aa10a9eb6b4c1f1b7660ea5183a0f618e}{get\+DACState}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Gets the state of the specified DAC pin. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_analog_card_a7793911eaabacee0d40dac626e39279a}{get\+DACValue}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Gets the value of the specified DAC pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_card_a445ff04dfcd2f49bb070bcc6e17a13f0}{set\+DACState}} (uint8\+\_\+t pin, bool state)
+\begin{DoxyCompactList}\small\item\em Sets the state of the specified DAC pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_card_a4703be8e25568617d28915d14e4df71b}{set\+DACValue}} (uint8\+\_\+t pin, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the value of the specified DAC pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_analog_card_a748b2025b389bef19fd0249b1b7b0828}{register\+DACChange\+Callback}} (std\+::function$<$ void(uint8\+\_\+t, bool, uint16\+\_\+t)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback function to be called when the state or value of a DAC pin changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_card_a38740886df77565a5f56ef421c22e281}{unregister\+DACChange\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregisters a previously registered DAC change callback. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_analog_card_ab6d7761df1910a16c1531fc6c0c07176}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the \mbox{\hyperlink{class_analog_card}{Analog\+Card}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents the Analog Card. 
+
+The analog card has 8 analog inputs accross two banks, and 4 DAC outputs.
+
+\begin{DoxyNote}{Note}
+You do not need to specify the ESPMega I/O Address when creating an instance of this class as there can only be one Analog Card installed in the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} board. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+There can only be one Analog Card installed in the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} board. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_analog_card_a57f3af0fdcbc6ccb651007540c6829c4}\label{class_analog_card_a57f3af0fdcbc6ccb651007540c6829c4}} 
+\index{AnalogCard@{AnalogCard}!analogRead@{analogRead}}
+\index{analogRead@{analogRead}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{analogRead()}{analogRead()}}
+{\footnotesize\ttfamily uint16\+\_\+t Analog\+Card\+::analog\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Reads the value from the specified analog pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The analog pin to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value read from the analog pin. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_a57f3af0fdcbc6ccb651007540c6829c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_card_a058b9fca0655b1d7d169527a37fe4c34}\label{class_analog_card_a058b9fca0655b1d7d169527a37fe4c34}} 
+\index{AnalogCard@{AnalogCard}!begin@{begin}}
+\index{begin@{begin}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool Analog\+Card\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the \mbox{\hyperlink{class_analog_card}{Analog\+Card}}. 
+
+\begin{DoxyReturn}{Returns}
+True if initialization is successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_analog_card_a7f0a07632ef1db4bfaf64593cbccce66}\label{class_analog_card_a7f0a07632ef1db4bfaf64593cbccce66}} 
+\index{AnalogCard@{AnalogCard}!dacWrite@{dacWrite}}
+\index{dacWrite@{dacWrite}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{dacWrite()}{dacWrite()}}
+{\footnotesize\ttfamily void Analog\+Card\+::dac\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Writes a value to the specified DAC pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The DAC pin to write to. \\
+\hline
+{\em value} & The value to write. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_a7f0a07632ef1db4bfaf64593cbccce66_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_card_aa10a9eb6b4c1f1b7660ea5183a0f618e}\label{class_analog_card_aa10a9eb6b4c1f1b7660ea5183a0f618e}} 
+\index{AnalogCard@{AnalogCard}!getDACState@{getDACState}}
+\index{getDACState@{getDACState}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{getDACState()}{getDACState()}}
+{\footnotesize\ttfamily bool Analog\+Card\+::get\+DACState (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Gets the state of the specified DAC pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The DAC pin to get the state of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The state of the DAC pin (true = on, false = off). 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_aa10a9eb6b4c1f1b7660ea5183a0f618e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_card_a7793911eaabacee0d40dac626e39279a}\label{class_analog_card_a7793911eaabacee0d40dac626e39279a}} 
+\index{AnalogCard@{AnalogCard}!getDACValue@{getDACValue}}
+\index{getDACValue@{getDACValue}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{getDACValue()}{getDACValue()}}
+{\footnotesize\ttfamily uint16\+\_\+t Analog\+Card\+::get\+DACValue (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Gets the value of the specified DAC pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The DAC pin to get the value of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the DAC pin. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_a7793911eaabacee0d40dac626e39279a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_card_ab6d7761df1910a16c1531fc6c0c07176}\label{class_analog_card_ab6d7761df1910a16c1531fc6c0c07176}} 
+\index{AnalogCard@{AnalogCard}!getType@{getType}}
+\index{getType@{getType}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily uint8\+\_\+t Analog\+Card\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the type of the \mbox{\hyperlink{class_analog_card}{Analog\+Card}}. 
+
+\begin{DoxyReturn}{Returns}
+The type of the \mbox{\hyperlink{class_analog_card}{Analog\+Card}}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_analog_card_a88d1bd2c7028cfddcdf1392a6bd57c2a}\label{class_analog_card_a88d1bd2c7028cfddcdf1392a6bd57c2a}} 
+\index{AnalogCard@{AnalogCard}!loop@{loop}}
+\index{loop@{loop}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Analog\+Card\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The main loop of the \mbox{\hyperlink{class_analog_card}{Analog\+Card}}. 
+
+\begin{DoxyNote}{Note}
+This function does nothing. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_analog_card_a748b2025b389bef19fd0249b1b7b0828}\label{class_analog_card_a748b2025b389bef19fd0249b1b7b0828}} 
+\index{AnalogCard@{AnalogCard}!registerDACChangeCallback@{registerDACChangeCallback}}
+\index{registerDACChangeCallback@{registerDACChangeCallback}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{registerDACChangeCallback()}{registerDACChangeCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t Analog\+Card\+::register\+DACChange\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(uint8\+\_\+t, bool, uint16\+\_\+t)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Registers a callback function to be called when the state or value of a DAC pin changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function to register. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler ID of the registered callback. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_analog_card_a121c84a174bcc6756e82538cfe19477a}\label{class_analog_card_a121c84a174bcc6756e82538cfe19477a}} 
+\index{AnalogCard@{AnalogCard}!sendDataToDAC@{sendDataToDAC}}
+\index{sendDataToDAC@{sendDataToDAC}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{sendDataToDAC()}{sendDataToDAC()}}
+{\footnotesize\ttfamily void Analog\+Card\+::send\+Data\+To\+DAC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sends data to the specified DAC pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The DAC pin to send data to. \\
+\hline
+{\em value} & The data to send. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function does not call the DAC change callbacks. 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_a121c84a174bcc6756e82538cfe19477a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_card_a445ff04dfcd2f49bb070bcc6e17a13f0}\label{class_analog_card_a445ff04dfcd2f49bb070bcc6e17a13f0}} 
+\index{AnalogCard@{AnalogCard}!setDACState@{setDACState}}
+\index{setDACState@{setDACState}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{setDACState()}{setDACState()}}
+{\footnotesize\ttfamily void Analog\+Card\+::set\+DACState (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the state of the specified DAC pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The DAC pin to set the state of. \\
+\hline
+{\em state} & The state to set (true = on, false = off). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_a445ff04dfcd2f49bb070bcc6e17a13f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_a445ff04dfcd2f49bb070bcc6e17a13f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_card_a4703be8e25568617d28915d14e4df71b}\label{class_analog_card_a4703be8e25568617d28915d14e4df71b}} 
+\index{AnalogCard@{AnalogCard}!setDACValue@{setDACValue}}
+\index{setDACValue@{setDACValue}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{setDACValue()}{setDACValue()}}
+{\footnotesize\ttfamily void Analog\+Card\+::set\+DACValue (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the value of the specified DAC pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The DAC pin to set the value of. \\
+\hline
+{\em value} & The value to set. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_a4703be8e25568617d28915d14e4df71b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_card_a4703be8e25568617d28915d14e4df71b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_card_a38740886df77565a5f56ef421c22e281}\label{class_analog_card_a38740886df77565a5f56ef421c22e281}} 
+\index{AnalogCard@{AnalogCard}!unregisterDACChangeCallback@{unregisterDACChangeCallback}}
+\index{unregisterDACChangeCallback@{unregisterDACChangeCallback}!AnalogCard@{AnalogCard}}
+\doxysubsubsection{\texorpdfstring{unregisterDACChangeCallback()}{unregisterDACChangeCallback()}}
+{\footnotesize\ttfamily void Analog\+Card\+::unregister\+DACChange\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregisters a previously registered DAC change callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler ID of the callback to unregister. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Analog\+Card.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/\mbox{\hyperlink{_analog_card_8cpp}{Analog\+Card.\+cpp}}\end{DoxyCompactItemize}

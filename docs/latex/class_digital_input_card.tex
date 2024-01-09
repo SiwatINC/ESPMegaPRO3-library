@@ -1,0 +1,352 @@
+\hypertarget{class_digital_input_card}{}\doxysection{Digital\+Input\+Card Class Reference}
+\label{class_digital_input_card}\index{DigitalInputCard@{DigitalInputCard}}
+
+
+\mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} Digital Input Card.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Input\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Digital\+Input\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_digital_input_card__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Digital\+Input\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_digital_input_card__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_digital_input_card_aef0f217a8ef38ca72ed89493467e4c83}{Digital\+Input\+Card}} (uint8\+\_\+t address\+\_\+a, uint8\+\_\+t address\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Create a new Digital Input Card object with the specified address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_digital_input_card_a56c0295b4571c26a100c2e7600d0f50c}{Digital\+Input\+Card}} (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4, bool bit5)
+\begin{DoxyCompactList}\small\item\em Create a new Digital Input Card object with the specified position on the dip switch. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_input_card_a7b6b51455a010ff0c53fc04ac8091d0e}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the Digital Input Card. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_input_card_a09416f14975c453bb7b9d1fdfc033fd9}{digital\+Read}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Read the input from the specified pin, always refresh the input buffers. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_input_card_a367136fd2642dace15231c63c4520753}{digital\+Read}} (uint8\+\_\+t pin, bool refresh)
+\begin{DoxyCompactList}\small\item\em Read the input from the specified pin, also refresh the input buffers if refresh is true. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_input_card_a0ab3d3df306ecce30f19a252f5a25a6d}{loop}} ()
+\begin{DoxyCompactList}\small\item\em A loop to refresh the input buffers and check for pin changes. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_digital_input_card_adc87fbc7c209d96442c314a1dad8dba8}{get\+Input\+BufferA}} ()
+\begin{DoxyCompactList}\small\item\em Get the input buffer for bank A (the first 8 pins) \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_digital_input_card_a1e3db327def862be330475b6841f8f8c}{get\+Input\+BufferB}} ()
+\begin{DoxyCompactList}\small\item\em Get the input buffer for bank B (the last 8 pins) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_input_card_a9affdad2396322da8b90075e48fef731}{set\+Debounce\+Time}} (uint8\+\_\+t pin, uint32\+\_\+t debounce\+Time)
+\begin{DoxyCompactList}\small\item\em Set the debounce time for the specified pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_digital_input_card_a0de99f06d2d41a752026486008ea2261}{register\+Callback}} (std\+::function$<$ void(uint8\+\_\+t, bool)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Register a callback function to be called when a pin changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_input_card_ad6fb5a8020c323520cd4748c9dc01448}{unregister\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregister a callback function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_input_card_a7c73eabd0016245e681fedb328ba89d8}{load\+Pin\+Map}} (uint8\+\_\+t pin\+Map\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em Load the pin map for the card. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_digital_input_card_aa782d6ffc13a686955811adf36b618d4}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} Digital Input Card. 
+
+This class represents the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} Digital Input Card. It allows you to read the state of the digital inputs from the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} Digital Input Card. It also allows you to register callback functions to be called when a pin changes. The callback function also support debouncing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_digital_input_card_aef0f217a8ef38ca72ed89493467e4c83}\label{class_digital_input_card_aef0f217a8ef38ca72ed89493467e4c83}} 
+\index{DigitalInputCard@{DigitalInputCard}!DigitalInputCard@{DigitalInputCard}}
+\index{DigitalInputCard@{DigitalInputCard}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{DigitalInputCard()}{DigitalInputCard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Digital\+Input\+Card\+::\+Digital\+Input\+Card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address\+\_\+a,  }\item[{uint8\+\_\+t}]{address\+\_\+b }\end{DoxyParamCaption})}
+
+
+
+Create a new Digital Input Card object with the specified address. 
+
+\begin{DoxyNote}{Note}
+If you are using the ESPMega\+I/O board, you should use the dip switch constructor
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em address\+\_\+a} & The ESPMega\+I/O address of bank A \\
+\hline
+{\em address\+\_\+b} & The ESPMega\+I/O address of bank B \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_digital_input_card_a56c0295b4571c26a100c2e7600d0f50c}\label{class_digital_input_card_a56c0295b4571c26a100c2e7600d0f50c}} 
+\index{DigitalInputCard@{DigitalInputCard}!DigitalInputCard@{DigitalInputCard}}
+\index{DigitalInputCard@{DigitalInputCard}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{DigitalInputCard()}{DigitalInputCard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Digital\+Input\+Card\+::\+Digital\+Input\+Card (\begin{DoxyParamCaption}\item[{bool}]{bit0,  }\item[{bool}]{bit1,  }\item[{bool}]{bit2,  }\item[{bool}]{bit3,  }\item[{bool}]{bit4,  }\item[{bool}]{bit5 }\end{DoxyParamCaption})}
+
+
+
+Create a new Digital Input Card object with the specified position on the dip switch. 
+
+\begin{DoxyNote}{Note}
+The bit 0 are at the left of the dip switch
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+There are 6 switches on the dip switch, 3 for bank A and 3 for bank B, They should be unique for each bank accross all the cards
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em bit0} & The position of the first switch on the dip switch \\
+\hline
+{\em bit1} & The position of the second switch on the dip switch \\
+\hline
+{\em bit2} & The position of the third switch on the dip switch \\
+\hline
+{\em bit3} & The position of the fourth switch on the dip switch \\
+\hline
+{\em bit4} & The position of the fifth switch on the dip switch \\
+\hline
+{\em bit5} & The position of the sixth switch on the dip switch \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_digital_input_card_a7b6b51455a010ff0c53fc04ac8091d0e}\label{class_digital_input_card_a7b6b51455a010ff0c53fc04ac8091d0e}} 
+\index{DigitalInputCard@{DigitalInputCard}!begin@{begin}}
+\index{begin@{begin}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool Digital\+Input\+Card\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the Digital Input Card. 
+
+\begin{DoxyReturn}{Returns}
+True if the initialization is successful, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_digital_input_card_a09416f14975c453bb7b9d1fdfc033fd9}\label{class_digital_input_card_a09416f14975c453bb7b9d1fdfc033fd9}} 
+\index{DigitalInputCard@{DigitalInputCard}!digitalRead@{digitalRead}}
+\index{digitalRead@{digitalRead}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{digitalRead()}{digitalRead()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Digital\+Input\+Card\+::digital\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Read the input from the specified pin, always refresh the input buffers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to read from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the pin is HIGH, false if the pin is LOW 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_input_card_a09416f14975c453bb7b9d1fdfc033fd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_input_card_a367136fd2642dace15231c63c4520753}\label{class_digital_input_card_a367136fd2642dace15231c63c4520753}} 
+\index{DigitalInputCard@{DigitalInputCard}!digitalRead@{digitalRead}}
+\index{digitalRead@{digitalRead}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{digitalRead()}{digitalRead()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Digital\+Input\+Card\+::digital\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{bool}]{refresh }\end{DoxyParamCaption})}
+
+
+
+Read the input from the specified pin, also refresh the input buffers if refresh is true. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to read from \\
+\hline
+{\em refresh} & If true, the input buffers will be refreshed before reading the pin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the pin is HIGH, false if the pin is LOW 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_digital_input_card_adc87fbc7c209d96442c314a1dad8dba8}\label{class_digital_input_card_adc87fbc7c209d96442c314a1dad8dba8}} 
+\index{DigitalInputCard@{DigitalInputCard}!getInputBufferA@{getInputBufferA}}
+\index{getInputBufferA@{getInputBufferA}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{getInputBufferA()}{getInputBufferA()}}
+{\footnotesize\ttfamily uint8\+\_\+t Digital\+Input\+Card\+::get\+Input\+BufferA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the input buffer for bank A (the first 8 pins) 
+
+\begin{DoxyReturn}{Returns}
+The input buffer for bank A where the first bit is the first pin and the last bit is the last pin 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_digital_input_card_a1e3db327def862be330475b6841f8f8c}\label{class_digital_input_card_a1e3db327def862be330475b6841f8f8c}} 
+\index{DigitalInputCard@{DigitalInputCard}!getInputBufferB@{getInputBufferB}}
+\index{getInputBufferB@{getInputBufferB}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{getInputBufferB()}{getInputBufferB()}}
+{\footnotesize\ttfamily uint8\+\_\+t Digital\+Input\+Card\+::get\+Input\+BufferB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the input buffer for bank B (the last 8 pins) 
+
+\begin{DoxyReturn}{Returns}
+The input buffer for bank B where the first bit is the first pin and the last bit is the last pin 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_digital_input_card_aa782d6ffc13a686955811adf36b618d4}\label{class_digital_input_card_aa782d6ffc13a686955811adf36b618d4}} 
+\index{DigitalInputCard@{DigitalInputCard}!getType@{getType}}
+\index{getType@{getType}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily uint8\+\_\+t Digital\+Input\+Card\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the type of the card. 
+
+\begin{DoxyReturn}{Returns}
+The type of the card 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_digital_input_card_a7c73eabd0016245e681fedb328ba89d8}\label{class_digital_input_card_a7c73eabd0016245e681fedb328ba89d8}} 
+\index{DigitalInputCard@{DigitalInputCard}!loadPinMap@{loadPinMap}}
+\index{loadPinMap@{loadPinMap}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{loadPinMap()}{loadPinMap()}}
+{\footnotesize\ttfamily void Digital\+Input\+Card\+::load\+Pin\+Map (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin\+Map\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Load the pin map for the card. 
+
+A pin map is an array of 16 elements that maps the physical pins to virtual pins The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class The physical pins are the pins on the Input IC, This can be found on the schematic of the ESPMega\+I/O board This function is useful if you want to change the number identification of the pins to match your project needs
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin\+Map} & The pin map to load \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_input_card_a7c73eabd0016245e681fedb328ba89d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_input_card_a0ab3d3df306ecce30f19a252f5a25a6d}\label{class_digital_input_card_a0ab3d3df306ecce30f19a252f5a25a6d}} 
+\index{DigitalInputCard@{DigitalInputCard}!loop@{loop}}
+\index{loop@{loop}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Digital\+Input\+Card\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+A loop to refresh the input buffers and check for pin changes. 
+
+\begin{DoxyNote}{Note}
+Although this function can be called in the main loop, it is recommended install the card in ESPMega to automatically manage the loop 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_digital_input_card_a0ab3d3df306ecce30f19a252f5a25a6d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_input_card_a0de99f06d2d41a752026486008ea2261}\label{class_digital_input_card_a0de99f06d2d41a752026486008ea2261}} 
+\index{DigitalInputCard@{DigitalInputCard}!registerCallback@{registerCallback}}
+\index{registerCallback@{registerCallback}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{registerCallback()}{registerCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t Digital\+Input\+Card\+::register\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(uint8\+\_\+t, bool)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Register a callback function to be called when a pin changes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function to be called \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler of the callback function 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_input_card_a0de99f06d2d41a752026486008ea2261_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_input_card_a9affdad2396322da8b90075e48fef731}\label{class_digital_input_card_a9affdad2396322da8b90075e48fef731}} 
+\index{DigitalInputCard@{DigitalInputCard}!setDebounceTime@{setDebounceTime}}
+\index{setDebounceTime@{setDebounceTime}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{setDebounceTime()}{setDebounceTime()}}
+{\footnotesize\ttfamily void Digital\+Input\+Card\+::set\+Debounce\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint32\+\_\+t}]{debounce\+Time }\end{DoxyParamCaption})}
+
+
+
+Set the debounce time for the specified pin. 
+
+Debounce is the time in milliseconds that the pin should be stable before the callback function is called This is useful to prevent false triggers when the input is noisy An example of this is when the input is connected to a mechanical switch
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to set the debounce time for \\
+\hline
+{\em debounce\+Time} & The debounce time in milliseconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_digital_input_card_ad6fb5a8020c323520cd4748c9dc01448}\label{class_digital_input_card_ad6fb5a8020c323520cd4748c9dc01448}} 
+\index{DigitalInputCard@{DigitalInputCard}!unregisterCallback@{unregisterCallback}}
+\index{unregisterCallback@{unregisterCallback}!DigitalInputCard@{DigitalInputCard}}
+\doxysubsubsection{\texorpdfstring{unregisterCallback()}{unregisterCallback()}}
+{\footnotesize\ttfamily void Digital\+Input\+Card\+::unregister\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregister a callback function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler of the callback function to unregister \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_input_card_ad6fb5a8020c323520cd4748c9dc01448_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Digital\+Input\+Card.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Digital\+Input\+Card.\+cpp\end{DoxyCompactItemize}

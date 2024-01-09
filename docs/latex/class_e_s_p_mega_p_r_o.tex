@@ -1,0 +1,392 @@
+\hypertarget{class_e_s_p_mega_p_r_o}{}\doxysection{ESPMega\+PRO Class Reference}
+\label{class_e_s_p_mega_p_r_o}\index{ESPMegaPRO@{ESPMegaPRO}}
+
+
+The \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} class is the main class for the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} library.  
+
+
+
+
+{\ttfamily \#include $<$ESPMega\+Pro\+OS.\+hpp$>$}
+
+
+
+Collaboration diagram for ESPMega\+PRO\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_e_s_p_mega_p_r_o_ac06222dfa4d6dbf604d2a2490f0924ec}{ESPMega\+PRO}} ()
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a582f6a9d00c0313e772166bd6c52d06d}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a7bd135e51c69c802aaacda4cf016e599}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The main loop for the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a7064148ad97cdb5fc871789fbf2ba450}{install\+Card}} (uint8\+\_\+t slot, \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$card)
+\begin{DoxyCompactList}\small\item\em Installs an expansion card to the specified slot. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_s_p_mega_p_r_o_ab263d5baf53948d0790c5e22d3c2e4e3}{update\+Time\+From\+NTP}} ()
+\begin{DoxyCompactList}\small\item\em Updates the internal RTC from NTP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_p_r_o_aa6436515e96f420606fd7069737fc67f}{enable\+Iot\+Module}} ()
+\begin{DoxyCompactList}\small\item\em Enables, Instanitates, and Initializes the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a025ba61791a6e3b46c9c70e2f0de1f2f}{enable\+Internal\+Display}} (Hardware\+Serial $\ast$serial)
+\begin{DoxyCompactList}\small\item\em Enables, Instanitates, and Initializes the internal display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a77429b766c275aba8d6f2462688fd3ee}{enable\+Web\+Server}} (uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Enables the internal web server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structrtctime__t}{rtctime\+\_\+t}} \mbox{\hyperlink{class_e_s_p_mega_p_r_o_aa2c6607c5b3b4c4662549173b1998a7f}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current time from the internal RTC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a34d6ab7e6fe349bca6f41d8c86a8ab99}{dump\+FRAMto\+Serial}} (uint16\+\_\+t start, uint16\+\_\+t end)
+\begin{DoxyCompactList}\small\item\em Dumps the contents of the internal FRAM to the serial port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a7590608e32da0efbf6c375aa3d3a0a77}{dump\+FRAMto\+Serial\+ASCII}} (uint16\+\_\+t start, uint16\+\_\+t end)
+\begin{DoxyCompactList}\small\item\em Dumps the contents of the internal FRAM to the serial port in ASCII. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a456cfbdb9987a2e90e6f0eabeae42b83}{set\+Time}} (int hours, int minutes, int seconds, int day, int month, int year)
+\begin{DoxyCompactList}\small\item\em Sets the current time of the internal RTC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$ \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a569bef7ba6d96fdcbc7f02ad2cc5a422}{get\+Card}} (uint8\+\_\+t slot)
+\begin{DoxyCompactList}\small\item\em Gets the expansion card installed at the specified slot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a90aec2f3b041dd528ee587dadeca9d8a}\label{class_e_s_p_mega_p_r_o_a90aec2f3b041dd528ee587dadeca9d8a}} 
+FRAM {\bfseries fram}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a8ce5a40e5721a887c0dfcf00484b0719}\label{class_e_s_p_mega_p_r_o_a8ce5a40e5721a887c0dfcf00484b0719}} 
+\mbox{\hyperlink{class_digital_input_card}{Digital\+Input\+Card}} {\bfseries inputs} = \mbox{\hyperlink{class_digital_input_card}{Digital\+Input\+Card}}(INPUT\+\_\+\+BANK\+\_\+\+A\+\_\+\+ADDRESS, INPUT\+\_\+\+BANK\+\_\+\+B\+\_\+\+ADDRESS)
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a3cc8349ad4c8501ea3de2a8610ec92f0}\label{class_e_s_p_mega_p_r_o_a3cc8349ad4c8501ea3de2a8610ec92f0}} 
+\mbox{\hyperlink{class_digital_output_card}{Digital\+Output\+Card}} {\bfseries outputs} = \mbox{\hyperlink{class_digital_output_card}{Digital\+Output\+Card}}(PWM\+\_\+\+BANK\+\_\+\+ADDRESS)
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a634d0c8a22aaa20d5dfc422f6e1e1f15}\label{class_e_s_p_mega_p_r_o_a634d0c8a22aaa20d5dfc422f6e1e1f15}} 
+\mbox{\hyperlink{class_internal_display}{Internal\+Display}} $\ast$ {\bfseries display}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_afacb78b3c13c24fac8ae76eb2c369f5d}\label{class_e_s_p_mega_p_r_o_afacb78b3c13c24fac8ae76eb2c369f5d}} 
+\mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} $\ast$ {\bfseries iot}
+\item 
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_ac51e01e09374964e4aac66927f439907}\label{class_e_s_p_mega_p_r_o_ac51e01e09374964e4aac66927f439907}} 
+\mbox{\hyperlink{class_e_s_p_mega_web_server}{ESPMega\+Web\+Server}} $\ast$ {\bfseries web\+Server}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} class is the main class for the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} library. 
+
+This class provides functions for managing the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} board, such as installing expansion cards, managing the internal RTC, and managing the internal FRAM. This class also provides functions for managing the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} module and the internal display.
+
+This class provide a Object Oriented Programming (OOP) interface for the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} board. If you are looking for a more simple and a more procedural interface, please use the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} class in ESPMega\+PRO.\+hpp. But note that the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} class only interfaces with the built-\/in Digital Input and Digital Output cards and other onboard components. It does not provide an interface for expansion cards, the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} module, and the internal display.
+
+\begin{DoxyWarning}{Warning}
+Only one \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object can be created, creating more than one will result in undefined behavior. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_ac06222dfa4d6dbf604d2a2490f0924ec}\label{class_e_s_p_mega_p_r_o_ac06222dfa4d6dbf604d2a2490f0924ec}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!ESPMegaPRO@{ESPMegaPRO}}
+\index{ESPMegaPRO@{ESPMegaPRO}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{ESPMegaPRO()}{ESPMegaPRO()}}
+{\footnotesize\ttfamily ESPMega\+PRO\+::\+ESPMega\+PRO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object. 
+
+\begin{DoxyWarning}{Warning}
+Only one \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object can be created, creating more than one will result in undefined behavior 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a582f6a9d00c0313e772166bd6c52d06d}\label{class_e_s_p_mega_p_r_o_a582f6a9d00c0313e772166bd6c52d06d}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!begin@{begin}}
+\index{begin@{begin}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool ESPMega\+PRO\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object. 
+
+This function initializes the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object and all of its components. It also initializes the built-\/in Digital Input and Digital Output cards.
+
+\begin{DoxyReturn}{Returns}
+True if the initialization is successful, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_a582f6a9d00c0313e772166bd6c52d06d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a34d6ab7e6fe349bca6f41d8c86a8ab99}\label{class_e_s_p_mega_p_r_o_a34d6ab7e6fe349bca6f41d8c86a8ab99}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!dumpFRAMtoSerial@{dumpFRAMtoSerial}}
+\index{dumpFRAMtoSerial@{dumpFRAMtoSerial}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{dumpFRAMtoSerial()}{dumpFRAMtoSerial()}}
+{\footnotesize\ttfamily void ESPMega\+PRO\+::dump\+FRAMto\+Serial (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{start,  }\item[{uint16\+\_\+t}]{end }\end{DoxyParamCaption})}
+
+
+
+Dumps the contents of the internal FRAM to the serial port. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The starting address. \\
+\hline
+{\em end} & The ending address. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a7590608e32da0efbf6c375aa3d3a0a77}\label{class_e_s_p_mega_p_r_o_a7590608e32da0efbf6c375aa3d3a0a77}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!dumpFRAMtoSerialASCII@{dumpFRAMtoSerialASCII}}
+\index{dumpFRAMtoSerialASCII@{dumpFRAMtoSerialASCII}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{dumpFRAMtoSerialASCII()}{dumpFRAMtoSerialASCII()}}
+{\footnotesize\ttfamily void ESPMega\+PRO\+::dump\+FRAMto\+Serial\+ASCII (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{start,  }\item[{uint16\+\_\+t}]{end }\end{DoxyParamCaption})}
+
+
+
+Dumps the contents of the internal FRAM to the serial port in ASCII. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & The starting address. \\
+\hline
+{\em end} & The ending address. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a025ba61791a6e3b46c9c70e2f0de1f2f}\label{class_e_s_p_mega_p_r_o_a025ba61791a6e3b46c9c70e2f0de1f2f}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!enableInternalDisplay@{enableInternalDisplay}}
+\index{enableInternalDisplay@{enableInternalDisplay}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{enableInternalDisplay()}{enableInternalDisplay()}}
+{\footnotesize\ttfamily void ESPMega\+PRO\+::enable\+Internal\+Display (\begin{DoxyParamCaption}\item[{Hardware\+Serial $\ast$}]{serial }\end{DoxyParamCaption})}
+
+
+
+Enables, Instanitates, and Initializes the internal display. 
+
+\begin{DoxyNote}{Note}
+\&Serial is used for the internal display on \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} R3. 
+
+This function can only be called if the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} module is enabled. 
+
+This function must be called before using the internal display.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em serial} & Pointer to the Hardware\+Serial object to use for the internal display (Serial for \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} R3). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_a025ba61791a6e3b46c9c70e2f0de1f2f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_aa6436515e96f420606fd7069737fc67f}\label{class_e_s_p_mega_p_r_o_aa6436515e96f420606fd7069737fc67f}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!enableIotModule@{enableIotModule}}
+\index{enableIotModule@{enableIotModule}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{enableIotModule()}{enableIotModule()}}
+{\footnotesize\ttfamily void ESPMega\+PRO\+::enable\+Iot\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables, Instanitates, and Initializes the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} module. 
+
+\begin{DoxyNote}{Note}
+This function must be called before using the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} module. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_aa6436515e96f420606fd7069737fc67f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a77429b766c275aba8d6f2462688fd3ee}\label{class_e_s_p_mega_p_r_o_a77429b766c275aba8d6f2462688fd3ee}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!enableWebServer@{enableWebServer}}
+\index{enableWebServer@{enableWebServer}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{enableWebServer()}{enableWebServer()}}
+{\footnotesize\ttfamily void ESPMega\+PRO\+::enable\+Web\+Server (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+
+
+Enables the internal web server. 
+
+\begin{DoxyNote}{Note}
+This function can only be called if the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} module is enabled. 
+
+This function can only be called once.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to use for the web server. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_a77429b766c275aba8d6f2462688fd3ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a569bef7ba6d96fdcbc7f02ad2cc5a422}\label{class_e_s_p_mega_p_r_o_a569bef7ba6d96fdcbc7f02ad2cc5a422}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!getCard@{getCard}}
+\index{getCard@{getCard}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{getCard()}{getCard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$ ESPMega\+PRO\+::get\+Card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slot }\end{DoxyParamCaption})}
+
+
+
+Gets the expansion card installed at the specified slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & The slot to get the card from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} object, or nullptr if no card is installed at the specified slot. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_aa2c6607c5b3b4c4662549173b1998a7f}\label{class_e_s_p_mega_p_r_o_aa2c6607c5b3b4c4662549173b1998a7f}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!getTime@{getTime}}
+\index{getTime@{getTime}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrtctime__t}{rtctime\+\_\+t}} ESPMega\+PRO\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current time from the internal RTC. 
+
+\begin{DoxyReturn}{Returns}
+The current time as a \mbox{\hyperlink{structrtctime__t}{rtctime\+\_\+t}} struct. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_aa2c6607c5b3b4c4662549173b1998a7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a7064148ad97cdb5fc871789fbf2ba450}\label{class_e_s_p_mega_p_r_o_a7064148ad97cdb5fc871789fbf2ba450}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!installCard@{installCard}}
+\index{installCard@{installCard}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{installCard()}{installCard()}}
+{\footnotesize\ttfamily bool ESPMega\+PRO\+::install\+Card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{slot,  }\item[{\mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$}]{card }\end{DoxyParamCaption})}
+
+
+
+Installs an expansion card to the specified slot. 
+
+\begin{DoxyNote}{Note}
+This function automatically initializes the expansion card.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & The slot to install the card to. \\
+\hline
+{\em card} & Pointer to the \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the installation is successful, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_a7064148ad97cdb5fc871789fbf2ba450_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a7bd135e51c69c802aaacda4cf016e599}\label{class_e_s_p_mega_p_r_o_a7bd135e51c69c802aaacda4cf016e599}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!loop@{loop}}
+\index{loop@{loop}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void ESPMega\+PRO\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main loop for the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} object. 
+
+\begin{DoxyNote}{Note}
+This function must be called in the main loop of the program.
+\end{DoxyNote}
+It will call the \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a7bd135e51c69c802aaacda4cf016e599}{loop()}} function of all installed expansion cards, the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} module, and the internal display. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_a7bd135e51c69c802aaacda4cf016e599_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_a456cfbdb9987a2e90e6f0eabeae42b83}\label{class_e_s_p_mega_p_r_o_a456cfbdb9987a2e90e6f0eabeae42b83}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!setTime@{setTime}}
+\index{setTime@{setTime}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily void ESPMega\+PRO\+::set\+Time (\begin{DoxyParamCaption}\item[{int}]{hours,  }\item[{int}]{minutes,  }\item[{int}]{seconds,  }\item[{int}]{day,  }\item[{int}]{month,  }\item[{int}]{year }\end{DoxyParamCaption})}
+
+
+
+Sets the current time of the internal RTC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hours} & The hours. \\
+\hline
+{\em minutes} & The minutes. \\
+\hline
+{\em seconds} & The seconds. \\
+\hline
+{\em day} & The day. \\
+\hline
+{\em month} & The month. \\
+\hline
+{\em year} & The year. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_a456cfbdb9987a2e90e6f0eabeae42b83_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_p_r_o_ab263d5baf53948d0790c5e22d3c2e4e3}\label{class_e_s_p_mega_p_r_o_ab263d5baf53948d0790c5e22d3c2e4e3}} 
+\index{ESPMegaPRO@{ESPMegaPRO}!updateTimeFromNTP@{updateTimeFromNTP}}
+\index{updateTimeFromNTP@{updateTimeFromNTP}!ESPMegaPRO@{ESPMegaPRO}}
+\doxysubsubsection{\texorpdfstring{updateTimeFromNTP()}{updateTimeFromNTP()}}
+{\footnotesize\ttfamily bool ESPMega\+PRO\+::update\+Time\+From\+NTP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the internal RTC from NTP. 
+
+\begin{DoxyNote}{Note}
+Network must be connected before calling this function (see ESPMega\+PRO.\+ESPMega\+Io\+T\+::connect\+Network()).
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if the update is successful, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_p_r_o_ab263d5baf53948d0790c5e22d3c2e4e3_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/ESPMega\+Pro\+OS.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/ESPMega\+Pro\+OS.\+cpp\end{DoxyCompactItemize}

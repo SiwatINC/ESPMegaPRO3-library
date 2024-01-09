@@ -1,0 +1,249 @@
+\hypertarget{class_internal_display}{}\doxysection{Internal\+Display Class Reference}
+\label{class_internal_display}\index{InternalDisplay@{InternalDisplay}}
+
+
+The internal display of the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}}.  
+
+
+
+
+{\ttfamily \#include $<$Internal\+Display.\+hpp$>$}
+
+
+
+Inheritance diagram for Internal\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_internal_display__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Internal\+Display\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_internal_display__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_internal_display_adc0903695295bb14468224cb207d0dc4}{Internal\+Display}} (Hardware\+Serial $\ast$display\+Adapter)
+\begin{DoxyCompactList}\small\item\em Create a new Internal Display object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_internal_display_a0019ea04c0e81fdee50d190f948b3f05}{begin}} (\mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} $\ast$iot, std\+::function$<$ \mbox{\hyperlink{structrtctime__t}{rtctime\+\_\+t}}()$>$ get\+Rtc\+Time)
+\begin{DoxyCompactList}\small\item\em Initialize the Internal Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_internal_display_acba3729be902fcde3e30e754aef62330}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The main loop of the Internal Display. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_internal_display_a9e314baf652600542d649f5f0dd1cd68}{bind\+Input\+Card}} (\mbox{\hyperlink{class_digital_input_card}{Digital\+Input\+Card}} $\ast$input\+Card)
+\begin{DoxyCompactList}\small\item\em Set the input card to be be shown on the input page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_internal_display_a9aa2e1da34488ae2d726cc8023555ec6}{bind\+Output\+Card}} (\mbox{\hyperlink{class_digital_output_card}{Digital\+Output\+Card}} $\ast$output\+Card)
+\begin{DoxyCompactList}\small\item\em Set the output card to be be shown on the output page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_internal_display_aff819b7e2625b4af2b6fbd44f46c89f2}{bind\+Climate\+Card}} (\mbox{\hyperlink{class_climate_card}{Climate\+Card}} $\ast$climate\+Card)
+\begin{DoxyCompactList}\small\item\em Set the climate card to be be shown on the AC page. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_internal_display_a9ee706c80f56dd8e5088f282c467b146}\label{class_internal_display_a9ee706c80f56dd8e5088f282c467b146}} 
+void \mbox{\hyperlink{class_internal_display_a9ee706c80f56dd8e5088f282c467b146}{unbind\+Input\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Unbind the input card from the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_internal_display_a452703babc7891b7ab937e32155e2310}\label{class_internal_display_a452703babc7891b7ab937e32155e2310}} 
+void \mbox{\hyperlink{class_internal_display_a452703babc7891b7ab937e32155e2310}{unbind\+Output\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Unbind the output card from the display. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_internal_display_af952dea8b4a4d74314d3ed6260fba7c6}\label{class_internal_display_af952dea8b4a4d74314d3ed6260fba7c6}} 
+void \mbox{\hyperlink{class_internal_display_af952dea8b4a4d74314d3ed6260fba7c6}{unbind\+Climate\+Card}} ()
+\begin{DoxyCompactList}\small\item\em Unbind the climate card from the display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The internal display of the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}}. 
+
+This is the display that is installed on some \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} Chassis. It is a 3.\+5"{} TFT LCD with a resistive touch screen.
+
+You can use this display to monitor the status of the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} and also to control the various components of the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}}.
+
+If you are using a custom display, you need to create a class that inherits from \mbox{\hyperlink{class_e_s_p_mega_display}{ESPMega\+Display}} and implement the methods in that class, you may refer to this class for reference.
+
+\begin{DoxyNote}{Note}
+This class is automatically instantiated by the \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}} and can be accessed via the {\ttfamily display} variable. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_internal_display_adc0903695295bb14468224cb207d0dc4}\label{class_internal_display_adc0903695295bb14468224cb207d0dc4}} 
+\index{InternalDisplay@{InternalDisplay}!InternalDisplay@{InternalDisplay}}
+\index{InternalDisplay@{InternalDisplay}!InternalDisplay@{InternalDisplay}}
+\doxysubsubsection{\texorpdfstring{InternalDisplay()}{InternalDisplay()}}
+{\footnotesize\ttfamily Internal\+Display\+::\+Internal\+Display (\begin{DoxyParamCaption}\item[{Hardware\+Serial $\ast$}]{display\+Adapter }\end{DoxyParamCaption})}
+
+
+
+Create a new Internal Display object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Adapter} & The Hardware\+Serial object that is connected to the display \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_internal_display_a0019ea04c0e81fdee50d190f948b3f05}\label{class_internal_display_a0019ea04c0e81fdee50d190f948b3f05}} 
+\index{InternalDisplay@{InternalDisplay}!begin@{begin}}
+\index{begin@{begin}!InternalDisplay@{InternalDisplay}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void Internal\+Display\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} $\ast$}]{iot,  }\item[{std\+::function$<$ \mbox{\hyperlink{structrtctime__t}{rtctime\+\_\+t}}()$>$}]{get\+Rtc\+Time }\end{DoxyParamCaption})}
+
+
+
+Initialize the Internal Display. 
+
+\begin{DoxyNote}{Note}
+You should not call this function directly, instead use ESPMega\+Io\+T\+::enable\+Internal\+Display()
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em iot} & The \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object \\
+\hline
+{\em get\+Rtc\+Time} & A function that returns the current time \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_internal_display_a0019ea04c0e81fdee50d190f948b3f05_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_internal_display_a0019ea04c0e81fdee50d190f948b3f05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_internal_display_aff819b7e2625b4af2b6fbd44f46c89f2}\label{class_internal_display_aff819b7e2625b4af2b6fbd44f46c89f2}} 
+\index{InternalDisplay@{InternalDisplay}!bindClimateCard@{bindClimateCard}}
+\index{bindClimateCard@{bindClimateCard}!InternalDisplay@{InternalDisplay}}
+\doxysubsubsection{\texorpdfstring{bindClimateCard()}{bindClimateCard()}}
+{\footnotesize\ttfamily void Internal\+Display\+::bind\+Climate\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_climate_card}{Climate\+Card}} $\ast$}]{climate\+Card }\end{DoxyParamCaption})}
+
+
+
+Set the climate card to be be shown on the AC page. 
+
+This assume that your Climeate\+Card has the mode and fan speed names in the following order\+: mode\+: \mbox{[}off, fan\+\_\+only, cool\mbox{]} fan\+\_\+speed\+: \mbox{[}auto, low, medium, high\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em climate\+Card} & The climate card object to be shown \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_internal_display_aff819b7e2625b4af2b6fbd44f46c89f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_internal_display_a9e314baf652600542d649f5f0dd1cd68}\label{class_internal_display_a9e314baf652600542d649f5f0dd1cd68}} 
+\index{InternalDisplay@{InternalDisplay}!bindInputCard@{bindInputCard}}
+\index{bindInputCard@{bindInputCard}!InternalDisplay@{InternalDisplay}}
+\doxysubsubsection{\texorpdfstring{bindInputCard()}{bindInputCard()}}
+{\footnotesize\ttfamily void Internal\+Display\+::bind\+Input\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_digital_input_card}{Digital\+Input\+Card}} $\ast$}]{input\+Card }\end{DoxyParamCaption})}
+
+
+
+Set the input card to be be shown on the input page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Card} & The input card object to be shown \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_internal_display_a9e314baf652600542d649f5f0dd1cd68_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_internal_display_a9e314baf652600542d649f5f0dd1cd68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_internal_display_a9aa2e1da34488ae2d726cc8023555ec6}\label{class_internal_display_a9aa2e1da34488ae2d726cc8023555ec6}} 
+\index{InternalDisplay@{InternalDisplay}!bindOutputCard@{bindOutputCard}}
+\index{bindOutputCard@{bindOutputCard}!InternalDisplay@{InternalDisplay}}
+\doxysubsubsection{\texorpdfstring{bindOutputCard()}{bindOutputCard()}}
+{\footnotesize\ttfamily void Internal\+Display\+::bind\+Output\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_digital_output_card}{Digital\+Output\+Card}} $\ast$}]{output\+Card }\end{DoxyParamCaption})}
+
+
+
+Set the output card to be be shown on the output page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Card} & The output card object to be shown \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_internal_display_a9aa2e1da34488ae2d726cc8023555ec6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_internal_display_a9aa2e1da34488ae2d726cc8023555ec6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_internal_display_acba3729be902fcde3e30e754aef62330}\label{class_internal_display_acba3729be902fcde3e30e754aef62330}} 
+\index{InternalDisplay@{InternalDisplay}!loop@{loop}}
+\index{loop@{loop}!InternalDisplay@{InternalDisplay}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Internal\+Display\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main loop of the Internal Display. 
+
+\begin{DoxyNote}{Note}
+You should not call this function directly, instead use ESPMega\+::loop() 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_internal_display_acba3729be902fcde3e30e754aef62330_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_internal_display_acba3729be902fcde3e30e754aef62330_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Internal\+Display.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Internal\+Display.\+cpp\end{DoxyCompactItemize}

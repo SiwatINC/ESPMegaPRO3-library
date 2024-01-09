@@ -1,0 +1,4 @@
+<map id="ESPMegaDisplay::setVolume" name="ESPMegaDisplay::setVolume">
+<area shape="rect" id="node1" title="Sets the volume of the display." alt="" coords="5,13,212,39"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a8bfb30429f6e11f4719480bfc6f83d72" title="Sends stop bytes to the display adapter." alt="" coords="260,5,459,47"/>
+</map>

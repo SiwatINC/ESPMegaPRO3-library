@@ -1,0 +1,4 @@
+<map id="AnalogCard" name="AnalogCard">
+<area shape="rect" id="node1" title="This class represents the Analog Card." alt="" coords="16,80,113,107"/>
+<area shape="rect" id="node2" href="$class_expansion_card.html" title="The base class for all expansion cards." alt="" coords="5,5,124,32"/>
+</map>

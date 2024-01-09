@@ -1,0 +1,4 @@
+<map id="DigitalInputCard" name="DigitalInputCard">
+<area shape="rect" id="node1" title="ESPMegaPRO Digital Input Card." alt="" coords="5,80,133,107"/>
+<area shape="rect" id="node2" href="$class_expansion_card.html" title="The base class for all expansion cards." alt="" coords="10,5,129,32"/>
+</map>

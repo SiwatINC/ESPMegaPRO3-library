@@ -1,0 +1,319 @@
+\hypertarget{class_e_s_p_mega_web_server}{}\doxysection{ESPMega\+Web\+Server Class Reference}
+\label{class_e_s_p_mega_web_server}\index{ESPMegaWebServer@{ESPMegaWebServer}}
+
+
+Provides a web server for \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}}.  
+
+
+
+
+{\ttfamily \#include $<$ESPMega\+Web\+Server.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_e_s_p_mega_web_server_aede4d3aebb8172455eba0c852bf563b3}{ESPMega\+Web\+Server}} (uint16\+\_\+t port, \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} $\ast$iot)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_e_s_p_mega_web_server_aede4d3aebb8172455eba0c852bf563b3}{ESPMega\+Web\+Server\+::\+ESPMega\+Web\+Server}} objecy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_accf7cb756ec0141017c449468e3acdbd}\label{class_e_s_p_mega_web_server_accf7cb756ec0141017c449468e3acdbd}} 
+\mbox{\hyperlink{class_e_s_p_mega_web_server_accf7cb756ec0141017c449468e3acdbd}{$\sim$\+ESPMega\+Web\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_e_s_p_mega_web_server_aede4d3aebb8172455eba0c852bf563b3}{ESPMega\+Web\+Server\+::\+ESPMega\+Web\+Server}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Start the web server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_web_server_ac2390697ddcc99604eed00a785dd2a4b}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The loop function for the web server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_web_server_a15d05ef973863bfd460879a414be7095}{reset\+Credentials}} ()
+\begin{DoxyCompactList}\small\item\em Reset web username and password to default. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_e_s_p_mega_web_server_a9a51eef8c5a27d0a8147d10a64b0a762}{get\+Web\+Username}} ()
+\begin{DoxyCompactList}\small\item\em Get the web username. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{class_e_s_p_mega_web_server_a44f59352c6202fbf4172ea5ab72ef1d0}{get\+Web\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Get the web password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_web_server_a9c7298ea1f25f41f4742302f1f91a89b}{set\+Web\+Username}} (const char $\ast$username)
+\begin{DoxyCompactList}\small\item\em Set the web username. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_web_server_add17e20b33d97076a26e6bfe3d664db0}{set\+Web\+Password}} (const char $\ast$password)
+\begin{DoxyCompactList}\small\item\em Set the web password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_web_server_adb3781890cee6513b494d27b18e6f5ff}{bind\+FRAM}} (FRAM $\ast$fram)
+\begin{DoxyCompactList}\small\item\em Bind the FRAM object to the web server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_web_server_aa51292db61fcd51b03558589f1e43fbf}{load\+Credentials\+From\+FRAM}} ()
+\begin{DoxyCompactList}\small\item\em Load web username and password from FRAM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_s_p_mega_web_server_a77e5ca53ae15af09a632ce98330a9530}{save\+Credentials\+To\+FRAM}} ()
+\begin{DoxyCompactList}\small\item\em Save web username and password to FRAM. \end{DoxyCompactList}\item 
+Async\+Web\+Server $\ast$ \mbox{\hyperlink{class_e_s_p_mega_web_server_a6f09ae056c6ecd1641bb30b272e2eb37}{get\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Get the Async\+Web\+Server object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides a web server for \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}}. 
+
+This class provides a web server for \mbox{\hyperlink{class_e_s_p_mega_p_r_o}{ESPMega\+PRO}}. It is used to configure the device and to update the firmware. This class also allows to save the credentials to access the web server in the FRAM memory. User can also add custom endpoints to the web server.
+
+This class use FRAM address 301-\/400 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_aede4d3aebb8172455eba0c852bf563b3}\label{class_e_s_p_mega_web_server_aede4d3aebb8172455eba0c852bf563b3}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!ESPMegaWebServer@{ESPMegaWebServer}}
+\index{ESPMegaWebServer@{ESPMegaWebServer}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{ESPMegaWebServer()}{ESPMegaWebServer()}}
+{\footnotesize\ttfamily ESPMega\+Web\+Server\+::\+ESPMega\+Web\+Server (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port,  }\item[{\mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} $\ast$}]{iot }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_e_s_p_mega_web_server_aede4d3aebb8172455eba0c852bf563b3}{ESPMega\+Web\+Server\+::\+ESPMega\+Web\+Server}} objecy. 
+
+\begin{DoxyNote}{Note}
+Although you can instantiate this class directly, it is recommended to use the ESPMega\+PRO.\+web\+Server object instead.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The TCP port to listen on \\
+\hline
+{\em iot} & A pointer to the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298}\label{class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!begin@{begin}}
+\index{begin@{begin}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void ESPMega\+Web\+Server\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the web server. 
+
+This method starts the web server and registers the necessary handlers.
+
+\begin{DoxyNote}{Note}
+This method should be called after the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object has been initialized. 
+
+This method is automatically called if you use \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a77429b766c275aba8d6f2462688fd3ee}{ESPMega\+PRO\+::enable\+Web\+Server()}} 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_adb3781890cee6513b494d27b18e6f5ff}\label{class_e_s_p_mega_web_server_adb3781890cee6513b494d27b18e6f5ff}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!bindFRAM@{bindFRAM}}
+\index{bindFRAM@{bindFRAM}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{bindFRAM()}{bindFRAM()}}
+{\footnotesize\ttfamily void ESPMega\+Web\+Server\+::bind\+FRAM (\begin{DoxyParamCaption}\item[{FRAM $\ast$}]{fram }\end{DoxyParamCaption})}
+
+
+
+Bind the FRAM object to the web server. 
+
+This method binds the FRAM object to the web server so that the web server can read and write credentials to the FRAM.
+
+\begin{DoxyNote}{Note}
+The FRAM object must be bound to the web server before calling \mbox{\hyperlink{class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298}{ESPMega\+Web\+Server\+::begin()}} 
+
+This class takes 64 bytes of FRAM starting from address 301, however address 301-\/400 is reserved for it.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em fram} & A pointer to the FRAM object \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_adb3781890cee6513b494d27b18e6f5ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_a6f09ae056c6ecd1641bb30b272e2eb37}\label{class_e_s_p_mega_web_server_a6f09ae056c6ecd1641bb30b272e2eb37}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!getServer@{getServer}}
+\index{getServer@{getServer}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{getServer()}{getServer()}}
+{\footnotesize\ttfamily Async\+Web\+Server $\ast$ ESPMega\+Web\+Server\+::get\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Async\+Web\+Server object. 
+
+\begin{DoxyReturn}{Returns}
+The Async\+Web\+Server object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_a44f59352c6202fbf4172ea5ab72ef1d0}\label{class_e_s_p_mega_web_server_a44f59352c6202fbf4172ea5ab72ef1d0}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!getWebPassword@{getWebPassword}}
+\index{getWebPassword@{getWebPassword}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{getWebPassword()}{getWebPassword()}}
+{\footnotesize\ttfamily char $\ast$ ESPMega\+Web\+Server\+::get\+Web\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the web password. 
+
+\begin{DoxyWarning}{Warning}
+The returned pointer should not be freed or modified.
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+The web password 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_a9a51eef8c5a27d0a8147d10a64b0a762}\label{class_e_s_p_mega_web_server_a9a51eef8c5a27d0a8147d10a64b0a762}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!getWebUsername@{getWebUsername}}
+\index{getWebUsername@{getWebUsername}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{getWebUsername()}{getWebUsername()}}
+{\footnotesize\ttfamily char $\ast$ ESPMega\+Web\+Server\+::get\+Web\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the web username. 
+
+\begin{DoxyWarning}{Warning}
+The returned pointer should not be freed or modified.
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+The web username 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_aa51292db61fcd51b03558589f1e43fbf}\label{class_e_s_p_mega_web_server_aa51292db61fcd51b03558589f1e43fbf}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!loadCredentialsFromFRAM@{loadCredentialsFromFRAM}}
+\index{loadCredentialsFromFRAM@{loadCredentialsFromFRAM}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{loadCredentialsFromFRAM()}{loadCredentialsFromFRAM()}}
+{\footnotesize\ttfamily void ESPMega\+Web\+Server\+::load\+Credentials\+From\+FRAM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load web username and password from FRAM. 
+
+This method loads the web server credentials from the FRAM.
+
+\begin{DoxyNote}{Note}
+This method is automatically called by \mbox{\hyperlink{class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298}{ESPMega\+Web\+Server\+::begin()}} 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_aa51292db61fcd51b03558589f1e43fbf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_aa51292db61fcd51b03558589f1e43fbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_ac2390697ddcc99604eed00a785dd2a4b}\label{class_e_s_p_mega_web_server_ac2390697ddcc99604eed00a785dd2a4b}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!loop@{loop}}
+\index{loop@{loop}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void ESPMega\+Web\+Server\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The loop function for the web server. 
+
+\begin{DoxyNote}{Note}
+This method is not used by the \mbox{\hyperlink{class_e_s_p_mega_web_server}{ESPMega\+Web\+Server}} class as of now. 
+\end{DoxyNote}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_ac2390697ddcc99604eed00a785dd2a4b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_a15d05ef973863bfd460879a414be7095}\label{class_e_s_p_mega_web_server_a15d05ef973863bfd460879a414be7095}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!resetCredentials@{resetCredentials}}
+\index{resetCredentials@{resetCredentials}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{resetCredentials()}{resetCredentials()}}
+{\footnotesize\ttfamily void ESPMega\+Web\+Server\+::reset\+Credentials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset web username and password to default. 
+
+This method resets the web server credentials to the default username and password.
+
+\begin{DoxyNote}{Note}
+The default username and password is both \char`\"{}admin\char`\"{} 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_a15d05ef973863bfd460879a414be7095_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_a15d05ef973863bfd460879a414be7095_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_a77e5ca53ae15af09a632ce98330a9530}\label{class_e_s_p_mega_web_server_a77e5ca53ae15af09a632ce98330a9530}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!saveCredentialsToFRAM@{saveCredentialsToFRAM}}
+\index{saveCredentialsToFRAM@{saveCredentialsToFRAM}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{saveCredentialsToFRAM()}{saveCredentialsToFRAM()}}
+{\footnotesize\ttfamily void ESPMega\+Web\+Server\+::save\+Credentials\+To\+FRAM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Save web username and password to FRAM. 
+
+This method saves the web server credentials to the FRAM. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_s_p_mega_web_server_a77e5ca53ae15af09a632ce98330a9530_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_add17e20b33d97076a26e6bfe3d664db0}\label{class_e_s_p_mega_web_server_add17e20b33d97076a26e6bfe3d664db0}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!setWebPassword@{setWebPassword}}
+\index{setWebPassword@{setWebPassword}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{setWebPassword()}{setWebPassword()}}
+{\footnotesize\ttfamily void ESPMega\+Web\+Server\+::set\+Web\+Password (\begin{DoxyParamCaption}\item[{const char $\ast$}]{password }\end{DoxyParamCaption})}
+
+
+
+Set the web password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & The new web password \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_s_p_mega_web_server_a9c7298ea1f25f41f4742302f1f91a89b}\label{class_e_s_p_mega_web_server_a9c7298ea1f25f41f4742302f1f91a89b}} 
+\index{ESPMegaWebServer@{ESPMegaWebServer}!setWebUsername@{setWebUsername}}
+\index{setWebUsername@{setWebUsername}!ESPMegaWebServer@{ESPMegaWebServer}}
+\doxysubsubsection{\texorpdfstring{setWebUsername()}{setWebUsername()}}
+{\footnotesize\ttfamily void ESPMega\+Web\+Server\+::set\+Web\+Username (\begin{DoxyParamCaption}\item[{const char $\ast$}]{username }\end{DoxyParamCaption})}
+
+
+
+Set the web username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The new web username \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/ESPMega\+Web\+Server.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/\mbox{\hyperlink{_e_s_p_mega_web_server_8cpp}{ESPMega\+Web\+Server.\+cpp}}\end{DoxyCompactItemize}

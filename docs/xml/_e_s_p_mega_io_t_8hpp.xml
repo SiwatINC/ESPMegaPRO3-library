@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_e_s_p_mega_io_t_8hpp" kind="file" language="C++">
+    <compoundname>ESPMegaIoT.hpp</compoundname>
+    <includes refid="_expansion_card_8hpp" local="no">ExpansionCard.hpp</includes>
+    <includes refid="_analog_card_8hpp" local="no">AnalogCard.hpp</includes>
+    <includes refid="_analog_io_t_8hpp" local="no">AnalogIoT.hpp</includes>
+    <includes refid="_digital_input_card_8hpp" local="no">DigitalInputCard.hpp</includes>
+    <includes refid="_digital_input_io_t_8hpp" local="no">DigitalInputIoT.hpp</includes>
+    <includes refid="_digital_output_card_8hpp" local="no">DigitalOutputCard.hpp</includes>
+    <includes refid="_digital_output_io_t_8hpp" local="no">DigitalOutputIoT.hpp</includes>
+    <includes refid="_climate_card_8hpp" local="no">ClimateCard.hpp</includes>
+    <includes refid="_climate_io_t_8hpp" local="no">ClimateIoT.hpp</includes>
+    <includes refid="_io_t_component_8hpp" local="no">IoTComponent.hpp</includes>
+    <includes local="no">PubSubClient.h</includes>
+    <includes local="no">ETH.h</includes>
+    <includes local="no">WiFi.h</includes>
+    <includes local="no">FRAM.h</includes>
+    <includes local="no">map</includes>
+    <includedby refid="_e_s_p_mega_io_t_8cpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp</includedby>
+    <includedby refid="_e_s_p_mega_pro_o_s_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</includedby>
+    <includedby refid="_e_s_p_mega_web_server_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp</includedby>
+    <includedby refid="_internal_display_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>DigitalInputCard.hpp</label>
+        <link refid="_digital_input_card_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Adafruit_ADS1X15.h</label>
+      </node>
+      <node id="22">
+        <label>OneWire.h</label>
+      </node>
+      <node id="15">
+        <label>DigitalInputIoT.hpp</label>
+        <link refid="_digital_input_io_t_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="19">
+        <label>DigitalOutputIoT.hpp</label>
+        <link refid="_digital_output_io_t_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>PubSubClient.h</label>
+      </node>
+      <node id="12">
+        <label>esp_log.h</label>
+      </node>
+      <node id="25">
+        <label>ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>IoTComponent.hpp</label>
+        <link refid="_io_t_component_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+      <node id="21">
+        <label>driver/rmt.h</label>
+      </node>
+      <node id="20">
+        <label>ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="18">
+        <label>Adafruit_PWMServoDriver.h</label>
+      </node>
+      <node id="26">
+        <label>ETH.h</label>
+      </node>
+      <node id="6">
+        <label>MCP4725.h</label>
+      </node>
+      <node id="24">
+        <label>dhtnew.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>AnalogIoT.hpp</label>
+        <link refid="_analog_io_t_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>AnalogCard.hpp</label>
+        <link refid="_analog_card_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>DigitalOutputCard.hpp</label>
+        <link refid="_digital_output_card_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>DS18B20.h</label>
+      </node>
+      <node id="16">
+        <label>FRAM.h</label>
+      </node>
+      <node id="14">
+        <label>PCF8574.h</label>
+      </node>
+      <node id="27">
+        <label>WiFi.h</label>
+      </node>
+      <node id="2">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</label>
+        <link refid="_e_s_p_mega_web_server_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_network_config" prot="public">NetworkConfig</innerclass>
+    <innerclass refid="struct_mqtt_config" prot="public">MqttConfig</innerclass>
+    <innerclass refid="class_e_s_p_mega_io_t" prot="public">ESPMegaIoT</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_e_s_p_mega_io_t_8hpp_1ab9dae92ce44467c2826f5ac80c6323c8" prot="public" static="no">
+        <name>TCP_TIMEOUT_SEC</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="19" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_io_t_8hpp_1af86fce26165d193433e36921aaa65443" prot="public" static="no">
+        <name>MQTT_RECONNECT_INTERVAL</name>
+        <initializer>30000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="20" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_io_t_8hpp_1a39c38c6ef33cea6e9b94f53d14e90eaf" prot="public" static="no">
+        <name>IOT_FRAM_ADDRESS</name>
+        <initializer>34</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="26" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ExpansionCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;AnalogCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;AnalogIoT.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DigitalInputCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DigitalInputIoT.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DigitalOutputCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DigitalOutputIoT.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ClimateCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ClimateIoT.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;IoTComponent.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;PubSubClient.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ETH.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;WiFi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;FRAM.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MQTT<sp/>Connection<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TCP_TIMEOUT_SEC<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MQTT_RECONNECT_INTERVAL<sp/>30000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FRAM<sp/>Address<sp/>for<sp/>ESPMegaPROIoT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Starts<sp/>from<sp/>34</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ends<sp/>at<sp/>300<sp/>(inclusive)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Total<sp/>of<sp/>267<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IOT_FRAM_ADDRESS<sp/>34</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="struct_network_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34" refid="struct_network_config_1a0176904843001d1f2435ac52ca040ede" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/><ref refid="struct_network_config_1a0176904843001d1f2435ac52ca040ede" kindref="member">ip</ref>;<sp/></highlight></codeline>
+<codeline lineno="35" refid="struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/><ref refid="struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41" kindref="member">gateway</ref>;<sp/></highlight></codeline>
+<codeline lineno="36" refid="struct_network_config_1a18dd746c622cb7a38da58ca94ff31657" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/><ref refid="struct_network_config_1a18dd746c622cb7a38da58ca94ff31657" kindref="member">subnet</ref>;<sp/></highlight></codeline>
+<codeline lineno="37" refid="struct_network_config_1a2706b2e04d704496b2202e476fa9635c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/><ref refid="struct_network_config_1a2706b2e04d704496b2202e476fa9635c" kindref="member">dns1</ref>;<sp/></highlight></codeline>
+<codeline lineno="38" refid="struct_network_config_1a393560e108d63338ae825bbab2c25e2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/><ref refid="struct_network_config_1a393560e108d63338ae825bbab2c25e2c" kindref="member">dns2</ref>;<sp/></highlight></codeline>
+<codeline lineno="39" refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" kindref="member">hostname</ref>[32];<sp/></highlight></codeline>
+<codeline lineno="40" refid="struct_network_config_1a9884b31dba672d1f24636fb64a55d38a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_network_config_1a9884b31dba672d1f24636fb64a55d38a" kindref="member">useStaticIp</ref>;<sp/></highlight></codeline>
+<codeline lineno="41" refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" kindref="member">useWifi</ref>;<sp/></highlight></codeline>
+<codeline lineno="42" refid="struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea" kindref="member">wifiUseAuth</ref>;<sp/></highlight></codeline>
+<codeline lineno="43" refid="struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19" kindref="member">ssid</ref>[32];<sp/></highlight></codeline>
+<codeline lineno="44" refid="struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2" kindref="member">password</ref>[32];<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="struct_mqtt_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53" refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e" kindref="member">mqtt_server</ref>[32];<sp/></highlight></codeline>
+<codeline lineno="54" refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="struct_mqtt_config_1a8c562630896777b8521621f553935a49" kindref="member">mqtt_port</ref>;<sp/></highlight></codeline>
+<codeline lineno="55" refid="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd" kindref="member">mqtt_user</ref>[32];<sp/></highlight></codeline>
+<codeline lineno="56" refid="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230" kindref="member">mqtt_password</ref>[32];<sp/></highlight></codeline>
+<codeline lineno="57" refid="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80" kindref="member">mqtt_useauth</ref>;<sp/></highlight></codeline>
+<codeline lineno="58" refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa" kindref="member">base_topic</ref>[32];<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_e_s_p_mega_io_t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_e_s_p_mega_io_t_1affa7c3b532147b2c485f5c3113f0a8a3" kindref="member">ESPMegaIoT</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_e_s_p_mega_io_t_1a2e59b40473015d237898b93aef5631b9" kindref="member">~ESPMegaIoT</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a12baf9ad36896f400c5c77fa7a32d3de" kindref="member">intr_begin</ref>(<ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref><sp/>*cards[]);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a260083ed6e8710b7321f18942ad6eef8" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1ae7323d1d3ff23494b68a748c1eb57891" kindref="member">registerCard</ref>(uint8_t<sp/>card_id);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a11e8435455ffecc362eb4de09087d43a" kindref="member">unregisterCard</ref>(uint8_t<sp/>card_id);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1aba6676558bdfe8123028cbe3cf924eab" kindref="member">publishCard</ref>(uint8_t<sp/>card_id);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>topic<sp/>appended<sp/>with<sp/>base<sp/>topic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a740ea6dc48ae78b87d48afc39f00d992" kindref="member">publishRelative</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Subscribe<sp/>topic<sp/>appended<sp/>with<sp/>base<sp/>topic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a98e8c822491c06be6823328e133507a1" kindref="member">subscribeRelative</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a098f74442df4c0b5059f0d94921c64f5" kindref="member">subscribe</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a30629a0c025c0f20d84ab8ff7a9c437f" kindref="member">unsubscribeFromTopic</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1ac90fb46005eeb8528bc6f7108d4a7c06" kindref="member">connectToWifi</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ssid,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1ac90fb46005eeb8528bc6f7108d4a7c06" kindref="member">connectToWifi</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ssid);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a4e382d99e13bafc5937e774cc14d6227" kindref="member">disconnectFromWifi</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a8c18fddf81218ea5c69bca2eb064167f" kindref="member">wifiConnected</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a2a167a8e30202a4fc34141595b795492" kindref="member">ethernetBegin</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" kindref="member">loadNetworkConfig</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" kindref="member">saveNetworkConfig</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref>*<sp/><ref refid="class_e_s_p_mega_io_t_1ab0ee8902014f9d08c97f0ffe11f66133" kindref="member">getNetworkConfig</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref>*<sp/><ref refid="class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c" kindref="member">getMqttConfig</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a16b33cc73cccefd62577dca8f015ee43" kindref="member">setMqttConfig</ref>(<ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref><sp/>mqtt_config);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b" kindref="member">saveMqttConfig</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7" kindref="member">loadMqttConfig</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" kindref="member">connectNetwork</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a426932179c2d84864e3b1fb269723fc6" kindref="member">setNetworkConfig</ref>(<ref refid="struct_network_config" kindref="compound">NetworkConfig</ref><sp/>network_config);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" kindref="member">connectToMqtt</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" kindref="member">connectToMqtt</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*client_id,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mqtt_server,<sp/>uint16_t<sp/>mqtt_port,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mqtt_user,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mqtt_password);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" kindref="member">connectToMqtt</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*client_id,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mqtt_server,<sp/>uint16_t<sp/>mqtt_port);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1af9365947904e2fe67965db7c12164eac" kindref="member">mqttConnected</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a634dfa685dd2e7d5c0a442d4a85c3e1a" kindref="member">disconnectFromMqtt</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1ae70528fc480706a1e7aeed202c40736e" kindref="member">publish</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_e_s_p_mega_io_t_1aedcb19a15a935777f1ccc51f24b7c07d" kindref="member">registerMqttCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&gt;<sp/>callback);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a9a8ef4e5e7b98c0b77e339a5b4b847cf" kindref="member">unregisterMqttCallback</ref>(uint8_t<sp/>handler);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_e_s_p_mega_io_t_1abb24084f6a8a448b4f6aea35bd4c7679" kindref="member">registerRelativeMqttCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)&gt;<sp/>callback);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a34be62570b94a256c2cda7f354cc9909" kindref="member">unregisterRelativeMqttCallback</ref>(uint8_t<sp/>handler);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_e_s_p_mega_io_t_1adabafbe2c88bf37b3a90e0e1373ab752" kindref="member">registerSubscribeCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)&gt;<sp/>callback);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a0816eddc3a7bfd7685959a8cc6dec129" kindref="member">unregisterSubscribeCallback</ref>(uint8_t<sp/>handler);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a92e3a81d45a4389e5945c46486182e9b" kindref="member">setBaseTopic</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*base_topic);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a2da8aec25ea170e5974f786798191fcb" kindref="member">bindEthernetInterface</ref>(ETHClass<sp/>*ethernetIface);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1acb0b6d3616f924ae793981f8653b142f" kindref="member">networkConnected</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1afd192a63876d86300086522e701905de" kindref="member">bindFRAM</ref>(FRAM<sp/>*fram);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_io_t_component" kindref="compound">IoTComponent</ref>*<sp/><ref refid="class_e_s_p_mega_io_t_1a667661f7ed0bcd013561c3f5d637a4fd" kindref="member">getComponent</ref>(uint8_t<sp/>card_id);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/><ref refid="class_e_s_p_mega_io_t_1ae6aad5ece3729e612352e2256e44bbec" kindref="member">getETHIp</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/><ref refid="class_e_s_p_mega_io_t_1ae0f8dc4901511ccd52cb81409bc50574" kindref="member">getWifiIp</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>IPAddress<sp/><ref refid="class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0" kindref="member">getIp</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/><ref refid="class_e_s_p_mega_io_t_1a3ed44db4c8d69dc8f9f611acfeb609cf" kindref="member">getETHMac</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/><ref refid="class_e_s_p_mega_io_t_1ae6bb7062882ac48df2f4ea98618e5e30" kindref="member">getWifiMac</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/><ref refid="class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163" kindref="member">getMac</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>FRAM<sp/>*fram;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useWifi;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>WifiUseAuth;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ssid[32];</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>password[32];</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>WiFiClient<sp/>tcpClient;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sessionKeepAlive();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mqttReconnect();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>wifiReconnect();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mqttSubscribe();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mqttCallback(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>*payload,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>mqtt_callbacks_handler_index;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>mqtt_relative_callbacks_handler_index;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>subscribe_callbacks_handler_index;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;uint8_t,<sp/>std::function&lt;void(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&gt;&gt;<sp/>mqtt_callbacks;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;uint8_t,<sp/>std::function&lt;void(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)&gt;&gt;<sp/>mqtt_relative_callbacks;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;uint8_t,<sp/>std::function&lt;void(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)&gt;&gt;<sp/>subscribe_callbacks;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t_1a740ea6dc48ae78b87d48afc39f00d992" kindref="member">publishRelative</ref>(uint8_t<sp/>card_id,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>PubSubClient<sp/>mqtt;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_io_t_component" kindref="compound">IoTComponent</ref><sp/>*components[255];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>payload_buffer[200];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>base_topic_length;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref><sp/>**cards;<sp/></highlight><highlight class="comment">//<sp/>Points<sp/>to<sp/>card<sp/>array<sp/>in<sp/>ESPMegaPRO<sp/>Core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MQTT<sp/>Connection<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mqtt_connected;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref><sp/>network_config;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref><sp/>mqtt_config;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>ETHClass<sp/>*ethernetIface;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp"/>
+  </compounddef>
+</doxygen>

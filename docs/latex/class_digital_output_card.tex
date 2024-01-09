@@ -1,0 +1,520 @@
+\hypertarget{class_digital_output_card}{}\doxysection{Digital\+Output\+Card Class Reference}
+\label{class_digital_output_card}\index{DigitalOutputCard@{DigitalOutputCard}}
+
+
+The \mbox{\hyperlink{class_digital_output_card}{Digital\+Output\+Card}} class is a class for controlling the Digital Output Card.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Output\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Digital\+Output\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_digital_output_card__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Digital\+Output\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_digital_output_card__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_digital_output_card_a8ca9e928a7e06da666e7bf3b3801f1da}{Digital\+Output\+Card}} (uint8\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Create a new Digital Output Card object with the specified address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_digital_output_card_aa73196a67686b5f8db3090577eff950b}{Digital\+Output\+Card}} (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4)
+\begin{DoxyCompactList}\small\item\em Create a new Digital Output Card object with the specified position on the dip switch. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_output_card_a4698ea2f13dba8e1cddc29efd8d11743}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the Digital Output Card. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_aeae842b0338e6788b99fa623fffcbe89}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The main loop for the Digital Output Card object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_a4e141b2627539b6b64f3d02d77a0aa84}{digital\+Write}} (uint8\+\_\+t pin, bool state)
+\begin{DoxyCompactList}\small\item\em Write a digtal LOW or HIGH to the specified pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_aa34d14771705c4374da1e41aad953843}{analog\+Write}} (uint8\+\_\+t pin, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Write a pwm value to the specified pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_a742206fb70202954d822175b69f0f954}{set\+State}} (uint8\+\_\+t pin, bool state)
+\begin{DoxyCompactList}\small\item\em Set the state of the specified pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_afa3fc66e71b03ee75ef022f92431466d}{set\+Value}} (uint8\+\_\+t pin, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Set the pwm value of the specified pin. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_output_card_a3e239d57c39cb82cff4aca6455f01d6f}{get\+State}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Get the state of the specified pin. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_digital_output_card_ae160653dd5ec2bdbce0327af77669d87}{get\+Value}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Get the pwm value of the specified pin. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_digital_output_card_a04a881ba7142114c83f41a49129111b6}{register\+Change\+Callback}} (std\+::function$<$ void(uint8\+\_\+t, bool, uint16\+\_\+t)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Register a callback function for the specified pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_ae9601a5033bc723852d11d336cc2de93}{unregister\+Change\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregister a callback function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_a57796fcf07bbb56366644a2435481b99}{load\+Pin\+Map}} (uint8\+\_\+t pin\+Map\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em Load a pin map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_aa43b2f8d13abb0164f661eba5daa14ce}{bind\+FRAM}} (FRAM $\ast$fram, uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Bind a FRAM to the card. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_digital_output_card_a451d122dfcc4c239c18c9d6f5d41449b}\label{class_digital_output_card_a451d122dfcc4c239c18c9d6f5d41449b}} 
+void \mbox{\hyperlink{class_digital_output_card_a451d122dfcc4c239c18c9d6f5d41449b}{save\+To\+FRAM}} ()
+\begin{DoxyCompactList}\small\item\em Save the states and values of all the pins to the FRAM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_digital_output_card_a500615c25557efcff072e98e65a8db33}\label{class_digital_output_card_a500615c25557efcff072e98e65a8db33}} 
+void \mbox{\hyperlink{class_digital_output_card_a500615c25557efcff072e98e65a8db33}{load\+From\+FRAM}} ()
+\begin{DoxyCompactList}\small\item\em Load the states and values of all the pins from the FRAM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_a3eed3e145a257bad60e3e0e82a74f7f7}{set\+Auto\+Save\+To\+FRAM}} (bool auto\+Save)
+\begin{DoxyCompactList}\small\item\em Set the auto save to FRAM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_card_a99ac93ac96289b95063d4d1e1e2b7893}{save\+Pin\+Value\+To\+FRAM}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Save a single pin value to FRAM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_digital_output_card_a8d99e0805f6463fc886087e502efb12d}\label{class_digital_output_card_a8d99e0805f6463fc886087e502efb12d}} 
+void \mbox{\hyperlink{class_digital_output_card_a8d99e0805f6463fc886087e502efb12d}{save\+State\+To\+FRAM}} ()
+\begin{DoxyCompactList}\small\item\em Save the states of all the pins to FRAM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_digital_output_card_aef670901ac2563bd79242f337f37f378}\label{class_digital_output_card_aef670901ac2563bd79242f337f37f378}} 
+void {\bfseries save\+Value\+To\+FRAM} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_digital_output_card_a9ce9c2b88a21f786c6cd76eb8468e13c}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_digital_output_card}{Digital\+Output\+Card}} class is a class for controlling the Digital Output Card. 
+
+This Digital Output Card has 16 digital outputs. All outputs are PWM capable. ALl outputs are 12V Push-\/\+Pull outputs. Outputs is grouped in 4 groups of 4 outputs.(0-\/3, 4-\/7, 8-\/11, 12-\/15) Each pin is capable of 0.\+6A, however each group\textquotesingle{}s total current is limited to 1.\+2A.
+
+\begin{DoxyWarning}{Warning}
+You should not instantiate this class directly, instead use ESPMega\+IO\textquotesingle{}s register\+Card function. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_digital_output_card_a8ca9e928a7e06da666e7bf3b3801f1da}\label{class_digital_output_card_a8ca9e928a7e06da666e7bf3b3801f1da}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!DigitalOutputCard@{DigitalOutputCard}}
+\index{DigitalOutputCard@{DigitalOutputCard}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{DigitalOutputCard()}{DigitalOutputCard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Digital\+Output\+Card\+::\+Digital\+Output\+Card (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+
+Create a new Digital Output Card object with the specified address. 
+
+\begin{DoxyNote}{Note}
+If you are using the ESPMega\+I/O board, you should use the dip switch constructor
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The ESPMega\+I/O address of the card \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_digital_output_card_aa73196a67686b5f8db3090577eff950b}\label{class_digital_output_card_aa73196a67686b5f8db3090577eff950b}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!DigitalOutputCard@{DigitalOutputCard}}
+\index{DigitalOutputCard@{DigitalOutputCard}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{DigitalOutputCard()}{DigitalOutputCard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Digital\+Output\+Card\+::\+Digital\+Output\+Card (\begin{DoxyParamCaption}\item[{bool}]{bit0,  }\item[{bool}]{bit1,  }\item[{bool}]{bit2,  }\item[{bool}]{bit3,  }\item[{bool}]{bit4 }\end{DoxyParamCaption})}
+
+
+
+Create a new Digital Output Card object with the specified position on the dip switch. 
+
+\begin{DoxyNote}{Note}
+The bit 0 are at the left of the dip switch
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+There are 5 switches on the dip switch, they should be unique accross all the cards
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em bit0} & The position of the first switch on the dip switch \\
+\hline
+{\em bit1} & The position of the second switch on the dip switch \\
+\hline
+{\em bit2} & The position of the third switch on the dip switch \\
+\hline
+{\em bit3} & The position of the fourth switch on the dip switch \\
+\hline
+{\em bit4} & The position of the fifth switch on the dip switch \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_digital_output_card_aa34d14771705c4374da1e41aad953843}\label{class_digital_output_card_aa34d14771705c4374da1e41aad953843}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!analogWrite@{analogWrite}}
+\index{analogWrite@{analogWrite}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{analogWrite()}{analogWrite()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::analog\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Write a pwm value to the specified pin. 
+
+\begin{DoxyNote}{Note}
+This function set both the state and the pwm value of the pin
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to set the pwm value \\
+\hline
+{\em value} & The pwm value to set \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_digital_output_card_aa34d14771705c4374da1e41aad953843_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a4698ea2f13dba8e1cddc29efd8d11743}\label{class_digital_output_card_a4698ea2f13dba8e1cddc29efd8d11743}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!begin@{begin}}
+\index{begin@{begin}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool Digital\+Output\+Card\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the Digital Output Card. 
+
+\begin{DoxyNote}{Note}
+Although this function can be called inside the main program, it is recommended to use \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a7064148ad97cdb5fc871789fbf2ba450}{ESPMega\+PRO\+::install\+Card()}} instead
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if the initialization is successful, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_digital_output_card_aa43b2f8d13abb0164f661eba5daa14ce}\label{class_digital_output_card_aa43b2f8d13abb0164f661eba5daa14ce}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!bindFRAM@{bindFRAM}}
+\index{bindFRAM@{bindFRAM}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{bindFRAM()}{bindFRAM()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::bind\+FRAM (\begin{DoxyParamCaption}\item[{FRAM $\ast$}]{fram,  }\item[{uint16\+\_\+t}]{address }\end{DoxyParamCaption})}
+
+
+
+Bind a FRAM to the card. 
+
+\begin{DoxyNote}{Note}
+The Output Card use 34 bytes of FRAM
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+If the fram range overlap with another card, undefined behavior will occur
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em fram} & The FRAM to bind \\
+\hline
+{\em address} & The address of the card in the FRAM \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{class_digital_output_card_aa43b2f8d13abb0164f661eba5daa14ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a4e141b2627539b6b64f3d02d77a0aa84}\label{class_digital_output_card_a4e141b2627539b6b64f3d02d77a0aa84}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!digitalWrite@{digitalWrite}}
+\index{digitalWrite@{digitalWrite}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{digitalWrite()}{digitalWrite()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::digital\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Write a digtal LOW or HIGH to the specified pin. 
+
+\begin{DoxyNote}{Note}
+This function set both the state and the pwm value of the pin
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to set the state \\
+\hline
+{\em state} & The logic level to set the pin to \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_digital_output_card_a4e141b2627539b6b64f3d02d77a0aa84_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a3e239d57c39cb82cff4aca6455f01d6f}\label{class_digital_output_card_a3e239d57c39cb82cff4aca6455f01d6f}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!getState@{getState}}
+\index{getState@{getState}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily bool Digital\+Output\+Card\+::get\+State (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Get the state of the specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to get the state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The state of the pin 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_card_a3e239d57c39cb82cff4aca6455f01d6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a9ce9c2b88a21f786c6cd76eb8468e13c}\label{class_digital_output_card_a9ce9c2b88a21f786c6cd76eb8468e13c}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!getType@{getType}}
+\index{getType@{getType}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily uint8\+\_\+t Digital\+Output\+Card\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the type of the card. 
+
+\begin{DoxyReturn}{Returns}
+The type of the card 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+\mbox{\Hypertarget{class_digital_output_card_ae160653dd5ec2bdbce0327af77669d87}\label{class_digital_output_card_ae160653dd5ec2bdbce0327af77669d87}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!getValue@{getValue}}
+\index{getValue@{getValue}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}}
+{\footnotesize\ttfamily uint16\+\_\+t Digital\+Output\+Card\+::get\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Get the pwm value of the specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to get the pwm value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pwm value of the pin 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_card_ae160653dd5ec2bdbce0327af77669d87_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a57796fcf07bbb56366644a2435481b99}\label{class_digital_output_card_a57796fcf07bbb56366644a2435481b99}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!loadPinMap@{loadPinMap}}
+\index{loadPinMap@{loadPinMap}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{loadPinMap()}{loadPinMap()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::load\+Pin\+Map (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin\+Map\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Load a pin map. 
+
+A pin map is an array of 16 elements that maps the physical pins to virtual pins The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class The physical pins are the pins on the Output IC, This can be found on the schematic of the ESPMega\+I/O board This function is useful if you want to change the number identification of the pins to match your project needs
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin\+Map} & The pin map to load \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_digital_output_card_aeae842b0338e6788b99fa623fffcbe89}\label{class_digital_output_card_aeae842b0338e6788b99fa623fffcbe89}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!loop@{loop}}
+\index{loop@{loop}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The main loop for the Digital Output Card object. 
+
+\begin{DoxyNote}{Note}
+This function is not used, it is only here to implement the \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} interface 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_card_aeae842b0338e6788b99fa623fffcbe89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a04a881ba7142114c83f41a49129111b6}\label{class_digital_output_card_a04a881ba7142114c83f41a49129111b6}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!registerChangeCallback@{registerChangeCallback}}
+\index{registerChangeCallback@{registerChangeCallback}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{registerChangeCallback()}{registerChangeCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t Digital\+Output\+Card\+::register\+Change\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(uint8\+\_\+t, bool, uint16\+\_\+t)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Register a callback function for the specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function to be called, the first parameter is the pin, the second parameter is the state, the third parameter is the pwm value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler of the callback function 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_card_a04a881ba7142114c83f41a49129111b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a99ac93ac96289b95063d4d1e1e2b7893}\label{class_digital_output_card_a99ac93ac96289b95063d4d1e1e2b7893}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!savePinValueToFRAM@{savePinValueToFRAM}}
+\index{savePinValueToFRAM@{savePinValueToFRAM}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{savePinValueToFRAM()}{savePinValueToFRAM()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::save\+Pin\+Value\+To\+FRAM (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Save a single pin value to FRAM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to save \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_card_a99ac93ac96289b95063d4d1e1e2b7893_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a3eed3e145a257bad60e3e0e82a74f7f7}\label{class_digital_output_card_a3eed3e145a257bad60e3e0e82a74f7f7}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!setAutoSaveToFRAM@{setAutoSaveToFRAM}}
+\index{setAutoSaveToFRAM@{setAutoSaveToFRAM}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{setAutoSaveToFRAM()}{setAutoSaveToFRAM()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::set\+Auto\+Save\+To\+FRAM (\begin{DoxyParamCaption}\item[{bool}]{auto\+Save }\end{DoxyParamCaption})}
+
+
+
+Set the auto save to FRAM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em auto\+Save} & True to enable auto save, false to disable auto save \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_digital_output_card_a3eed3e145a257bad60e3e0e82a74f7f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_a742206fb70202954d822175b69f0f954}\label{class_digital_output_card_a742206fb70202954d822175b69f0f954}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!setState@{setState}}
+\index{setState@{setState}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::set\+State (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{bool}]{state }\end{DoxyParamCaption})}
+
+
+
+Set the state of the specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to set the state \\
+\hline
+{\em state} & The state of the pin \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_digital_output_card_a742206fb70202954d822175b69f0f954_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_afa3fc66e71b03ee75ef022f92431466d}\label{class_digital_output_card_afa3fc66e71b03ee75ef022f92431466d}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!setValue@{setValue}}
+\index{setValue@{setValue}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::set\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the pwm value of the specified pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to set the pwm value \\
+\hline
+{\em value} & The pwm value to set \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_digital_output_card_afa3fc66e71b03ee75ef022f92431466d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_card_afa3fc66e71b03ee75ef022f92431466d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_card_ae9601a5033bc723852d11d336cc2de93}\label{class_digital_output_card_ae9601a5033bc723852d11d336cc2de93}} 
+\index{DigitalOutputCard@{DigitalOutputCard}!unregisterChangeCallback@{unregisterChangeCallback}}
+\index{unregisterChangeCallback@{unregisterChangeCallback}!DigitalOutputCard@{DigitalOutputCard}}
+\doxysubsubsection{\texorpdfstring{unregisterChangeCallback()}{unregisterChangeCallback()}}
+{\footnotesize\ttfamily void Digital\+Output\+Card\+::unregister\+Change\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregister a callback function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler of the callback function to be unregistered \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_card_ae9601a5033bc723852d11d336cc2de93_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Digital\+Output\+Card.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Digital\+Output\+Card.\+cpp\end{DoxyCompactItemize}

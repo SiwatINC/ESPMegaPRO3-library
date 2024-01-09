@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_digital_input_io_t" xml:lang="en-US">
+<title>DigitalInputIoT Class Reference</title>
+<indexterm><primary>DigitalInputIoT</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_digital_input_io_t">DigitalInputIoT</link> class is a class for connecting the Digital Input Card to the IoT module. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;DigitalInputIoT.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for DigitalInputIoT:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for DigitalInputIoT:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_digital_input_io_t_1a97e335d982d3c8701a5bf6934bccd773">begin</link> (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> *card, PubSubClient *mqtt, char *base_topic)</para>
+
+<para>Initializes the <link linkend="_class_digital_input_io_t">DigitalInputIoT</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_io_t_1aeff76b54d9e9a589cbfe4b7e2a5c6911">handleMqttMessage</link> (char *topic, char *payload)</para>
+
+<para>Handles MQTT messages for the <link linkend="_class_digital_input_io_t">DigitalInputIoT</link> component. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_input_io_t_1ad8906418ffb31af299146392d65204df"/>void <link linkend="_class_digital_input_io_t_1ad8906418ffb31af299146392d65204df">publishDigitalInputs</link> ()</para>
+
+<para>Publish all digital inputs to the MQTT broker. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_io_t_1ad5079368dd7bb6ac31152feca4412cf5">publishDigitalInput</link> (uint8_t pin)</para>
+
+<para>Publish a digital input to the MQTT broker. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_io_t_1aa3ff322526140cd93a72a669f1a0ba38">setDigitalInputsPublishEnabled</link> (bool enabled)</para>
+
+<para>Set if the digital inputs should be published to the MQTT broker. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_io_t_1a2ac6416b58adaf426b177eb0a1ec05fd">handleValueChange</link> (uint8_t pin, uint8_t value)</para>
+
+<para>Handles a value change for a digital input. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_io_t_1ad157a557a9d2b002cfa6c155842c4cee">publishReport</link> ()</para>
+
+<para>Publish all inputs to the MQTT Broker. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_input_io_t_1ad95132332ba406da7c2c0eb97b66eef4"/>void <link linkend="_class_digital_input_io_t_1ad95132332ba406da7c2c0eb97b66eef4">subscribe</link> ()</para>
+
+<para>Subscribes to the MQTT topics for the <link linkend="_class_digital_input_io_t">DigitalInputIoT</link> component. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_input_io_t_1a71d4b9af91c829719a6c4873524e3203"/>uint8_t <emphasis role="strong">getType</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_digital_input_io_t">DigitalInputIoT</link> class is a class for connecting the Digital Input Card to the IoT module. </para>
+
+
+
+<para>This function allows you to control the Digital Input Card using MQTT.</para>
+
+<para><warning><title>Warning</title>
+
+<para>You should not instantiate this class directly, instead use <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link>&apos;s registerCard function. </para>
+</warning>
+</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_digital_input_io_t_1a97e335d982d3c8701a5bf6934bccd773"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>DigitalInputIoT</secondary></indexterm>
+<indexterm><primary>DigitalInputIoT</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool DigitalInputIoT::begin (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> * card, PubSubClient * mqtt, char * base_topic)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_digital_input_io_t">DigitalInputIoT</link> object. </para>
+</para>
+
+<para>This function sets the necessary parameters for the <link linkend="_class_digital_input_io_t">DigitalInputIoT</link> object, such as the card ID, expansion card, MQTT client, and base topic. It also enables the publishing of digital input values and registers a callback function for handling value changes.</para>
+
+<para><note><title>Note</title>
+
+<para>Although this function can be called in the main program, it is recommended to use <link linkend="_class_e_s_p_mega_io_t_1ae7323d1d3ff23494b68a748c1eb57891">ESPMegaIoT::registerCard()</link> to automatically manage the instantiation and initialization of this component.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>card_id</entry>
+                                <entry>
+<para>The ID of the card. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>card</entry>
+                                <entry>
+<para>Pointer to the <link linkend="_class_digital_input_card">DigitalInputCard</link> object. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt</entry>
+                                <entry>
+<para>Pointer to the PubSubClient object. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>base_topic</entry>
+                                <entry>
+<para>The base topic for MQTT communication. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the initialization is successful, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_a97e335d982d3c8701a5bf6934bccd773_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_io_t_1aeff76b54d9e9a589cbfe4b7e2a5c6911"/>    <section>
+    <title>handleMqttMessage()</title>
+<indexterm><primary>handleMqttMessage</primary><secondary>DigitalInputIoT</secondary></indexterm>
+<indexterm><primary>DigitalInputIoT</primary><secondary>handleMqttMessage</secondary></indexterm>
+<para><computeroutput>void DigitalInputIoT::handleMqttMessage (char * topic, char * payload)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Handles MQTT messages for the <link linkend="_class_digital_input_io_t">DigitalInputIoT</link> component. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The trimmed topic of the MQTT message. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The null-terminated payload of the MQTT message. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_aeff76b54d9e9a589cbfe4b7e2a5c6911_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_io_t_1a2ac6416b58adaf426b177eb0a1ec05fd"/>    <section>
+    <title>handleValueChange()</title>
+<indexterm><primary>handleValueChange</primary><secondary>DigitalInputIoT</secondary></indexterm>
+<indexterm><primary>DigitalInputIoT</primary><secondary>handleValueChange</secondary></indexterm>
+<para><computeroutput>void DigitalInputIoT::handleValueChange (uint8_t pin, uint8_t value)</computeroutput></para><para>
+
+<para>Handles a value change for a digital input. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is registered as a callback function for the <link linkend="_class_digital_input_card">DigitalInputCard</link> object.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin that changed. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The new value of the pin. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_a2ac6416b58adaf426b177eb0a1ec05fd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_a2ac6416b58adaf426b177eb0a1ec05fd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_io_t_1ad5079368dd7bb6ac31152feca4412cf5"/>    <section>
+    <title>publishDigitalInput()</title>
+<indexterm><primary>publishDigitalInput</primary><secondary>DigitalInputIoT</secondary></indexterm>
+<indexterm><primary>DigitalInputIoT</primary><secondary>publishDigitalInput</secondary></indexterm>
+<para><computeroutput>void DigitalInputIoT::publishDigitalInput (uint8_t pin)</computeroutput></para><para>
+
+<para>Publish a digital input to the MQTT broker. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to publish. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_ad5079368dd7bb6ac31152feca4412cf5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_ad5079368dd7bb6ac31152feca4412cf5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_io_t_1ad157a557a9d2b002cfa6c155842c4cee"/>    <section>
+    <title>publishReport()</title>
+<indexterm><primary>publishReport</primary><secondary>DigitalInputIoT</secondary></indexterm>
+<indexterm><primary>DigitalInputIoT</primary><secondary>publishReport</secondary></indexterm>
+<para><computeroutput>void DigitalInputIoT::publishReport ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Publish all inputs to the MQTT Broker. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is overriden from the <link linkend="_class_io_t_component">IoTComponent</link> class and is called by <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link>.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to publish. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Reimplemented from <link linkend="_class_io_t_component">IoTComponent</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_ad157a557a9d2b002cfa6c155842c4cee_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_io_t_1aa3ff322526140cd93a72a669f1a0ba38"/>    <section>
+    <title>setDigitalInputsPublishEnabled()</title>
+<indexterm><primary>setDigitalInputsPublishEnabled</primary><secondary>DigitalInputIoT</secondary></indexterm>
+<indexterm><primary>DigitalInputIoT</primary><secondary>setDigitalInputsPublishEnabled</secondary></indexterm>
+<para><computeroutput>void DigitalInputIoT::setDigitalInputsPublishEnabled (bool enabled)</computeroutput></para><para>
+
+<para>Set if the digital inputs should be published to the MQTT broker. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>enabled</entry>
+                                <entry>
+<para>True if the digital inputs should be published, false otherwise. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_aa3ff322526140cd93a72a669f1a0ba38_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_io_t_aa3ff322526140cd93a72a669f1a0ba38_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp</section>
+</section>

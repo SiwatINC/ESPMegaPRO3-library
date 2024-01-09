@@ -1,0 +1,220 @@
+.TH "ClimateIoT" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClimateIoT \- The \fBClimateIoT\fP class is a class for connecting the Climate Card to the IoT module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ClimateIoT\&.hpp>\fP
+.PP
+Inherits \fBIoTComponent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB~ClimateIoT\fP ()"
+.br
+.RI "Destructor for the \fBClimateIoT\fP class\&. "
+.ti -1c
+.RI "bool \fBbegin\fP (uint8_t card_id, \fBExpansionCard\fP *card, PubSubClient *mqtt, char *base_topic)"
+.br
+.RI "Initializes the \fBClimateIoT\fP component\&. "
+.ti -1c
+.RI "void \fBhandleMqttMessage\fP (char *topic, char *payload)"
+.br
+.RI "Handles MQTT messages for the \fBClimateIoT\fP component\&. "
+.ti -1c
+.RI "void \fBpublishClimate\fP ()"
+.br
+.RI "Publishes the climate data (temperature, mode, fan speed) to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBpublishClimateTemperature\fP ()"
+.br
+.RI "Publishes the temperature of the air conditioner to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBpublishClimateMode\fP ()"
+.br
+.RI "Publishes the mode of the air conditioner to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBpublishClimateFanSpeed\fP ()"
+.br
+.RI "Publishes the fan speed of the air conditioner to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBpublishSensor\fP ()"
+.br
+.RI "Publishes the temperature and humidity of the room to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBpublishRoomTemperature\fP ()"
+.br
+.RI "Publishes the room temperature to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBpublishHumidity\fP ()"
+.br
+.RI "Publishes the humidity of the room to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBhandleStateChange\fP (uint8_t temperature, uint8_t mode, uint8_t fan_speed)"
+.br
+.RI "Handle Air Conditioner state change\&. "
+.ti -1c
+.RI "void \fBhandleSensorUpdate\fP (float temperature, float humidity)"
+.br
+.RI "This function is a callback function registered with the Climate card to be called when the sensor data is updated\&. "
+.ti -1c
+.RI "void \fBhandleAirConditionerUpdate\fP (uint8_t mode, uint8_t fan_speed, uint8_t temperature)"
+.br
+.RI "This function is a callback function registered with the Climate card to be called when the air conditioner state is updated\&. "
+.ti -1c
+.RI "void \fBpublishReport\fP ()"
+.br
+.RI "Publishes the climate and sensor data to the MQTT broker\&. "
+.ti -1c
+.RI "void \fBsubscribe\fP ()"
+.br
+.RI "Subscribes to MQTT topics\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The loop function for the \fBClimateIoT\fP component\&. "
+.ti -1c
+.RI "uint8_t \fBgetType\fP ()"
+.br
+.RI "Returns the type of the expansion card\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBClimateIoT\fP class is a class for connecting the Climate Card to the IoT module\&. 
+
+This function allows you to control the Climate Card using MQTT\&.
+.PP
+\fBWarning\fP
+.RS 4
+You should not instantiate this class directly, instead use \fBESPMegaIoT\fP's registerCard function\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ClimateIoT::begin (uint8_t card_id, \fBExpansionCard\fP * card, PubSubClient * mqtt, char * base_topic)\fC [virtual]\fP"
+
+.PP
+Initializes the \fBClimateIoT\fP component\&. This function sets the MQTT client, base topic, card ID, and card pointer\&. It also registers the sensor and air conditioner update callbacks\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIcard_id\fP The ID of the expansion card\&. 
+.br
+\fIcard\fP A pointer to the \fBExpansionCard\fP object\&. 
+.br
+\fImqtt\fP A pointer to the PubSubClient object\&. 
+.br
+\fIbase_topic\fP The base topic for MQTT communication\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the initialization is successful, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "uint8_t ClimateIoT::getType ()\fC [virtual]\fP"
+
+.PP
+Returns the type of the expansion card\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The type of the expansion card\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void ClimateIoT::handleAirConditionerUpdate (uint8_t mode, uint8_t fan_speed, uint8_t temperature)"
+
+.PP
+This function is a callback function registered with the Climate card to be called when the air conditioner state is updated\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP The mode of the air conditioner\&. 
+.br
+\fIfan_speed\fP The fan speed of the air conditioner\&. 
+.br
+\fItemperature\fP The temperature of the air conditioner\&. 
+.RE
+.PP
+
+.SS "void ClimateIoT::handleMqttMessage (char * topic, char * payload)\fC [virtual]\fP"
+
+.PP
+Handles MQTT messages for the \fBClimateIoT\fP component\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The trimmed topic of the MQTT message\&. 
+.br
+\fIpayload\fP The null-terminated payload of the MQTT message\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void ClimateIoT::handleSensorUpdate (float temperature, float humidity)"
+
+.PP
+This function is a callback function registered with the Climate card to be called when the sensor data is updated\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItemperature\fP The room temperature\&. 
+.br
+\fIhumidity\fP The room humidity\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The temperature and humidity are not used in this function but are required by the \fBClimateCard\fP class to match the signature of the callback function\&. 
+.RE
+.PP
+
+.SS "void ClimateIoT::handleStateChange (uint8_t temperature, uint8_t mode, uint8_t fan_speed)"
+
+.PP
+Handle Air Conditioner state change\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is called by the underlying \fBClimateCard\fP object and is not meant to be called manually\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fItemperature\fP Temperature of the air conditioner 
+.br
+\fImode\fP Mode of the air conditioner 
+.br
+\fIfan_speed\fP Fan speed of the air conditioner 
+.RE
+.PP
+
+.SS "void ClimateIoT::loop ()"
+
+.PP
+The loop function for the \fBClimateIoT\fP component\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function does nothing\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

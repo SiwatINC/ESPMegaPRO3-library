@@ -1,0 +1,4 @@
+<map id="ESPMegaWebServer::begin" name="ESPMegaWebServer::begin">
+<area shape="rect" id="node1" title="Start the web server." alt="" coords="284,5,480,32"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_p_r_o.html#a77429b766c275aba8d6f2462688fd3ee" title="Enables the internal web server." alt="" coords="5,5,236,32"/>
+</map>

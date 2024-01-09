@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_io_t_component" xml:lang="en-US">
+<title>IoTComponent Class Reference</title>
+<indexterm><primary>IoTComponent</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_io_t_component">IoTComponent</link> class is a base class that is used to interface with an expansion card through MQTT. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IoTComponent.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for IoTComponent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_io_t_component__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_io_t_component_1af3068b3087e942700f2756df61567470"/>virtual bool <emphasis role="strong">begin</emphasis> (uint8_t card_id, <link linkend="_class_expansion_card">ExpansionCard</link> *card, PubSubClient *mqtt, char *base_topic)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1a1b3fbabfa0e9c1697f0edab1a8d14149"/>virtual void <emphasis role="strong">handleMqttMessage</emphasis> (char *topic, char *payload)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1add98837edef95e9d4f31fba7e210cf09"/>void <emphasis role="strong">setMqttClient</emphasis> (PubSubClient *mqtt)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1aa8b2aa560998451171ab6c39957cf787"/>virtual void <emphasis role="strong">publishReport</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1a3c5bf4cb3ba447ccbcbf45c9065f288d"/>virtual uint8_t <emphasis role="strong">getType</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1acdf8bc6b4a9f9ac515ff1dc3b63aa330"/>virtual void <emphasis role="strong">subscribe</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1a652ae372e38701a301d82466eb0fd20e"/>void <emphasis role="strong">loop</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_io_t_component_1a223659969099a0a8aaf84e18c51014dc"/>void <emphasis role="strong">publishRelative</emphasis> (const char *topic, const char *payload)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1ab7841d6b92b52ed398d5ff1cac0a9625"/>void <emphasis role="strong">subscribeRelative</emphasis> (const char *topic)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_io_t_component_1aeb90ccffdbf21519987505b9f52f0a57"/>char * <emphasis role="strong">base_topic</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1a81926ee5477da6738063128028597e3e"/>PubSubClient * <emphasis role="strong">mqtt</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_io_t_component_1a8ea4f18d3f5adf232137f12d8a8f763a"/>uint8_t <emphasis role="strong">card_id</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_io_t_component">IoTComponent</link> class is a base class that is used to interface with an expansion card through MQTT. </para>
+
+
+
+<para>In order to create a new <link linkend="_class_io_t_component">IoTComponent</link>, you should create a new class that inherits from this class. Your class should implement the following functions:<itemizedlist>
+<listitem>
+<para>begin() : Initialize the component, record the card id, <link linkend="_class_expansion_card">ExpansionCard</link> object, the PubSubClient object and the base topic</para>
+</listitem><listitem>
+<para>handleMqttMessage() : Handle the MQTT messages for the component</para>
+</listitem><listitem>
+<para>publishReport() : Publish all the reports for the component</para>
+</listitem><listitem>
+<para>getType() : Get the type of the component, This should return the underlying <link linkend="_class_expansion_card">ExpansionCard</link> type</para>
+</listitem><listitem>
+<para>subscribe() : Subscribe to the MQTT topics used by the component</para>
+</listitem><listitem>
+<para>loop() : A function that is called in the main loop</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Additionally, the inherited class will have access to these helper functions:<itemizedlist>
+<listitem>
+<para>publishRelative() : Publish a message to a topic relative to the base topic and the card id</para>
+</listitem><listitem>
+<para>subscribeRelative() : Subscribe to a topic relative to the base topic and the card id</para>
+</listitem></itemizedlist>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>This class is abstract and should not be instantiated directly. </para>
+</warning>
+</para>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp/home/siwat/ESPMegaPRO3-library/IoTComponent.cpp</section>
+</section>

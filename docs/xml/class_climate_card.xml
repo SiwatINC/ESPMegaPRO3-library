@@ -1,0 +1,1106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_climate_card" kind="class" language="C++" prot="public">
+    <compoundname>ClimateCard</compoundname>
+    <basecompoundref refid="class_expansion_card" prot="public" virt="non-virtual">ExpansionCard</basecompoundref>
+    <includes refid="_climate_card_8hpp" local="no">ClimateCard.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_climate_card_1a67e6651981fa695b20f733b73fdddcb3" prot="private" static="no" mutable="no">
+        <type>DHTNEW *</type>
+        <definition>DHTNEW* ClimateCard::dht</definition>
+        <argsstring></argsstring>
+        <name>dht</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="98" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1aeda765fa43f4262fdca691c93cac41b4" prot="private" static="no" mutable="no">
+        <type>DS18B20 *</type>
+        <definition>DS18B20* ClimateCard::ds18b20</definition>
+        <argsstring></argsstring>
+        <name>ds18b20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="99" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a766ff49356a5e7ab067f26a5aee425df" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::callbacks_handler_count</definition>
+        <argsstring></argsstring>
+        <name>callbacks_handler_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="101" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1ab10964fbf984155b0d61d5a0805ccf97" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::sensor_callbacks_handler_count</definition>
+        <argsstring></argsstring>
+        <name>sensor_callbacks_handler_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="102" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a48f1c6cd56622fbb8337a96291a6085f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t,std::function&lt;void(uint8_t, uint8_t, uint8_t)&gt; &gt; ClimateCard::callbacks</definition>
+        <argsstring></argsstring>
+        <name>callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="103" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a6542ef05864fe97ec911bcb47646961a" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(float, float)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t,std::function&lt;void(float, float)&gt; &gt; ClimateCard::sensor_callbacks</definition>
+        <argsstring></argsstring>
+        <name>sensor_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="104" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a25a3664c605e8050c7531c8f1624e545" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::ir_pin</definition>
+        <argsstring></argsstring>
+        <name>ir_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="109" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a97e526a47c69cdfc822c1ee413e8a3fd" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref></type>
+        <definition>AirConditioner ClimateCard::ac</definition>
+        <argsstring></argsstring>
+        <name>ac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="111" column="24" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a218826a6feea3e9d494c4294d13cef68" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_climate_card_data" kindref="compound">ClimateCardData</ref></type>
+        <definition>ClimateCardData ClimateCard::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="112" column="25" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1aa8445d5473e5bd05ababda5958ea800f" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::sensor_type</definition>
+        <argsstring></argsstring>
+        <name>sensor_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="114" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a187959feea93397790be0c9e4cbb15ad" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::sensor_pin</definition>
+        <argsstring></argsstring>
+        <name>sensor_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="115" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a0f12fc20283be6b0688549a963dc0b51" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ClimateCard::humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="116" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a4ba2c53ab52835b391560c4ad15cf249" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ClimateCard::room_temperature</definition>
+        <argsstring></argsstring>
+        <name>room_temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="117" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1a080cc17a73a82871726ae7c245fa2ba2" prot="private" static="no" mutable="no">
+        <type>FRAM *</type>
+        <definition>FRAM* ClimateCard::fram</definition>
+        <argsstring></argsstring>
+        <name>fram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="119" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1ad702886d0015135ffaf8cbc3d0e9242e" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ClimateCard::fram_address</definition>
+        <argsstring></argsstring>
+        <name>fram_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="120" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_climate_card_1ab1bd32962463b4d9781e692c68d6b218" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClimateCard::fram_auto_save</definition>
+        <argsstring></argsstring>
+        <name>fram_auto_save</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="121" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClimateCard::ClimateCard</definition>
+        <argsstring>(uint8_t ir_pin, AirConditioner ac, uint8_t sensor_type, uint8_t sensor_pin)</argsstring>
+        <name>ClimateCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>ir_pin</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref></type>
+          <declname>ac</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sensor_type</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sensor_pin</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ir_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO pin number of the IR transmitter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref> object that represents the air conditioner. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sensor_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the sensor connected to the card. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sensor_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO pin number of the sensor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="68" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="19" bodyend="41"/>
+        <references refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" compoundref="_climate_card_8hpp" startline="30">ClimateCardData::ac_fan_speed</references>
+        <references refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" compoundref="_climate_card_8hpp" startline="29">ClimateCardData::ac_mode</references>
+        <references refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" compoundref="_climate_card_8hpp" startline="28">ClimateCardData::ac_temperature</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a9b4b6fd707c9f507243f0d5dc5b3d854" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClimateCard::ClimateCard</definition>
+        <argsstring>(uint8_t ir_pin, AirConditioner ac)</argsstring>
+        <name>ClimateCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>ir_pin</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref></type>
+          <declname>ac</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ir_pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The GPIO pin number of the IR transmitter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref> object that represents the air conditioner.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This constructor can be used when no sensor is connected to the card. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="69" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a25ee785ee45b87262a3af07cae01023e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClimateCard::~ClimateCard</definition>
+        <argsstring>()</argsstring>
+        <name>~ClimateCard</name>
+        <briefdescription>
+<para>The destructor of the <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="70" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1aa0649398f58b7093250875c1202711fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClimateCard::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_expansion_card_1aecd52cc9b31b642f2cd78f01654005de">begin</reimplements>
+        <briefdescription>
+<para>Initialize the <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if initialization was successful. </para>
+</simplesect>
+<simplesect kind="return"><para>false if initialization failed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="71" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="71" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClimateCard::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <reimplements refid="class_expansion_card_1a3b3364d9de40d039a3dbfe9141dea0a9">loop</reimplements>
+        <briefdescription>
+<para>Loop function of the <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>When this card is installed in an ESPMega, this function is called automatically by the ESPMega class. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="72" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="102" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a87ce688cdf3b1acd7526968d599b5422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::bindFRAM</definition>
+        <argsstring>(FRAM *fram, uint16_t fram_address)</argsstring>
+        <name>bindFRAM</name>
+        <param>
+          <type>FRAM *</type>
+          <declname>fram</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>fram_address</declname>
+        </param>
+        <briefdescription>
+<para>bind FRAM memory to the <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> object at the specified address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function must be called before calling <ref refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" kindref="member">loadStateFromFRAM()</ref> or <ref refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" kindref="member">saveStateToFRAM()</ref>. </para>
+</simplesect>
+<simplesect kind="note"><para>This card takes up 3 bytes of FRAM memory.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The FRAM object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fram_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting address of the card in FRAM memory. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="73" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1aa00bb77607d324938e83a0527344e4ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::setFRAMAutoSave</definition>
+        <argsstring>(bool autoSave)</argsstring>
+        <name>setFRAMAutoSave</name>
+        <param>
+          <type>bool</type>
+          <declname>autoSave</declname>
+        </param>
+        <briefdescription>
+<para>Set whether the state should be automatically saved to FRAM memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function has no effect if <ref refid="class_climate_card_1a87ce688cdf3b1acd7526968d599b5422" kindref="member">bindFRAM()</ref> has not been called. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>autoSave</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the state should be automatically saved to FRAM memory. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="74" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::saveStateToFRAM</definition>
+        <argsstring>()</argsstring>
+        <name>saveStateToFRAM</name>
+        <briefdescription>
+<para>Save the state to FRAM memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function has no effect if <ref refid="class_climate_card_1a87ce688cdf3b1acd7526968d599b5422" kindref="member">bindFRAM()</ref> has not been called. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="75" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="142" bodyend="149"/>
+        <references refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" compoundref="_climate_card_8hpp" startline="30">ClimateCardData::ac_fan_speed</references>
+        <references refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" compoundref="_climate_card_8hpp" startline="29">ClimateCardData::ac_mode</references>
+        <references refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" compoundref="_climate_card_8hpp" startline="28">ClimateCardData::ac_temperature</references>
+        <referencedby refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" compoundref="_climate_card_8cpp" startline="237" endline="245">setFanSpeed</referencedby>
+        <referencedby refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" compoundref="_climate_card_8cpp" startline="202" endline="210">setMode</referencedby>
+        <referencedby refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" compoundref="_climate_card_8cpp" startline="183" endline="194">setTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::loadStateFromFRAM</definition>
+        <argsstring>()</argsstring>
+        <name>loadStateFromFRAM</name>
+        <briefdescription>
+<para>Load the state from FRAM memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function has no effect if <ref refid="class_climate_card_1a87ce688cdf3b1acd7526968d599b5422" kindref="member">bindFRAM()</ref> has not been called. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="76" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="156" bodyend="175"/>
+        <references refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" compoundref="_climate_card_8hpp" startline="30">ClimateCardData::ac_fan_speed</references>
+        <references refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" compoundref="_climate_card_8hpp" startline="29">ClimateCardData::ac_mode</references>
+        <references refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" compoundref="_climate_card_8hpp" startline="28">ClimateCardData::ac_temperature</references>
+        <references refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" compoundref="_climate_card_8hpp" startline="41">AirConditioner::fan_speeds</references>
+        <references refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" compoundref="_climate_card_8hpp" startline="37">AirConditioner::max_temperature</references>
+        <references refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" compoundref="_climate_card_8hpp" startline="38">AirConditioner::min_temperature</references>
+        <references refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" compoundref="_climate_card_8hpp" startline="39">AirConditioner::modes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1afb279e4b037b42d6056a1a224548511c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::setTemperature</definition>
+        <argsstring>(uint8_t temperature)</argsstring>
+        <name>setTemperature</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+<para>Set the temperature of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The temperature to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If the temperature is out of range, it will be set to its respective maximum or minimum. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="77" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="183" bodyend="194"/>
+        <references refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" compoundref="_climate_card_8hpp" startline="28">ClimateCardData::ac_temperature</references>
+        <references refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" compoundref="_climate_card_8hpp" startline="37">AirConditioner::max_temperature</references>
+        <references refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" compoundref="_climate_card_8hpp" startline="38">AirConditioner::min_temperature</references>
+        <references refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" compoundref="_climate_card_8cpp" startline="142" endline="149">saveStateToFRAM</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a0877f36123ed2fdfe41677bdbac320be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::getTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>getTemperature</name>
+        <briefdescription>
+<para>Get the temperature of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The temperature of the air conditioner. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="78" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="414" bodyend="417"/>
+        <references refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" compoundref="_climate_card_8hpp" startline="28">ClimateCardData::ac_temperature</references>
+        <referencedby refid="class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876" compoundref="_climate_io_t_8cpp" startline="62" endline="66">ClimateIoT::publishClimateTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::setMode</definition>
+        <argsstring>(uint8_t mode)</argsstring>
+        <name>setMode</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Set the mode of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If the mode is out of range, it will be set to 0. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="79" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="202" bodyend="210"/>
+        <references refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" compoundref="_climate_card_8hpp" startline="29">ClimateCardData::ac_mode</references>
+        <references refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" compoundref="_climate_card_8hpp" startline="39">AirConditioner::modes</references>
+        <references refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" compoundref="_climate_card_8cpp" startline="142" endline="149">saveStateToFRAM</references>
+        <referencedby refid="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" compoundref="_climate_card_8cpp" startline="271" endline="281">setModeByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::setModeByName</definition>
+        <argsstring>(const char *mode_name)</argsstring>
+        <name>setModeByName</name>
+        <param>
+          <type>const char *</type>
+          <declname>mode_name</declname>
+        </param>
+        <briefdescription>
+<para>Set mode by name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the mode to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If the mode is not found, the function will not do anything. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="80" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="271" bodyend="281"/>
+        <references refid="struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54" compoundref="_climate_card_8hpp" startline="40">AirConditioner::mode_names</references>
+        <references refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" compoundref="_climate_card_8hpp" startline="39">AirConditioner::modes</references>
+        <references refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" compoundref="_climate_card_8cpp" startline="202" endline="210">setMode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a8a9c0eb63c2e92a01fc39715c1876509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::getMode</definition>
+        <argsstring>()</argsstring>
+        <name>getMode</name>
+        <briefdescription>
+<para>Get the mode of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mode of the air conditioner. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="81" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="424" bodyend="427"/>
+        <references refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" compoundref="_climate_card_8hpp" startline="29">ClimateCardData::ac_mode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * ClimateCard::getModeName</definition>
+        <argsstring>()</argsstring>
+        <name>getModeName</name>
+        <briefdescription>
+<para>Get the name of the current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The name of the current mode. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="82" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="216" bodyend="219"/>
+        <references refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" compoundref="_climate_card_8hpp" startline="29">ClimateCardData::ac_mode</references>
+        <references refid="struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54" compoundref="_climate_card_8hpp" startline="40">AirConditioner::mode_names</references>
+        <referencedby refid="class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e" compoundref="_climate_io_t_8cpp" startline="71" endline="73">ClimateIoT::publishClimateMode</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::setFanSpeed</definition>
+        <argsstring>(uint8_t fan_speed)</argsstring>
+        <name>setFanSpeed</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>fan_speed</declname>
+        </param>
+        <briefdescription>
+<para>Set the fan speed of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If the fan speed is out of range, it will be set to 0. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fan_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fan speed to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="83" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="237" bodyend="245"/>
+        <references refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" compoundref="_climate_card_8hpp" startline="30">ClimateCardData::ac_fan_speed</references>
+        <references refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" compoundref="_climate_card_8hpp" startline="41">AirConditioner::fan_speeds</references>
+        <references refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" compoundref="_climate_card_8cpp" startline="142" endline="149">saveStateToFRAM</references>
+        <referencedby refid="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" compoundref="_climate_card_8cpp" startline="253" endline="263">setFanSpeedByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::setFanSpeedByName</definition>
+        <argsstring>(const char *fan_speed_name)</argsstring>
+        <name>setFanSpeedByName</name>
+        <param>
+          <type>const char *</type>
+          <declname>fan_speed_name</declname>
+        </param>
+        <briefdescription>
+<para>Set fan speed by name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fan_speed_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the fan speed to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If the fan speed is not found, the function will not do anything. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="84" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="253" bodyend="263"/>
+        <references refid="struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf" compoundref="_climate_card_8hpp" startline="42">AirConditioner::fan_speed_names</references>
+        <references refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" compoundref="_climate_card_8hpp" startline="41">AirConditioner::fan_speeds</references>
+        <references refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" compoundref="_climate_card_8cpp" startline="237" endline="245">setFanSpeed</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a119c0d4369efb88eab7c99f45b7a62af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::getFanSpeed</definition>
+        <argsstring>()</argsstring>
+        <name>getFanSpeed</name>
+        <briefdescription>
+<para>Get the fan speed of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The fan speed of the air conditioner. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="85" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="434" bodyend="437"/>
+        <references refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" compoundref="_climate_card_8hpp" startline="30">ClimateCardData::ac_fan_speed</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * ClimateCard::getFanSpeedName</definition>
+        <argsstring>()</argsstring>
+        <name>getFanSpeedName</name>
+        <briefdescription>
+<para>Get the name of the current fan speed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The name of the current fan speed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="86" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="226" bodyend="229"/>
+        <references refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" compoundref="_climate_card_8hpp" startline="30">ClimateCardData::ac_fan_speed</references>
+        <references refid="struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf" compoundref="_climate_card_8hpp" startline="42">AirConditioner::fan_speed_names</references>
+        <referencedby refid="class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46" compoundref="_climate_io_t_8cpp" startline="78" endline="80">ClimateIoT::publishClimateFanSpeed</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ClimateCard::getRoomTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>getRoomTemperature</name>
+        <briefdescription>
+<para>Get the room temperature in degrees Celsius. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The room temperature. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="87" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="394" bodyend="397"/>
+        <referencedby refid="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" compoundref="_climate_io_t_8cpp" startline="102" endline="109">ClimateIoT::publishRoomTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ClimateCard::getHumidity</definition>
+        <argsstring>()</argsstring>
+        <name>getHumidity</name>
+        <briefdescription>
+<para>Get the humidity in percent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The humidity. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="88" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="404" bodyend="407"/>
+        <referencedby refid="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" compoundref="_climate_io_t_8cpp" startline="114" endline="120">ClimateIoT::publishHumidity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::getSensorType</definition>
+        <argsstring>()</argsstring>
+        <name>getSensorType</name>
+        <briefdescription>
+<para>Get the type of the sensor connected to the card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The type of the sensor connected to the card. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="89" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="384" bodyend="387"/>
+        <referencedby refid="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" compoundref="_climate_io_t_8cpp" startline="114" endline="120">ClimateIoT::publishHumidity</referencedby>
+        <referencedby refid="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" compoundref="_climate_io_t_8cpp" startline="102" endline="109">ClimateIoT::publishRoomTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a2b15582430d577bfa8f07983c5ecaf22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::registerChangeCallback</definition>
+        <argsstring>(std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; callback)</argsstring>
+        <name>registerChangeCallback</name>
+        <param>
+          <type>std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Register a callback function that will be called when the state of the air conditioner changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function to register.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint8_t The handler of the callback function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="90" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="290" bodyend="294"/>
+        <referencedby refid="class_internal_display_1aff819b7e2625b4af2b6fbd44f46c89f2" compoundref="_internal_display_8cpp" startline="533" endline="543">InternalDisplay::bindClimateCard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1ab95d86d1fc8f2d1f19324f1161afbcaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::registerSensorCallback</definition>
+        <argsstring>(std::function&lt; void(float, float)&gt; callback)</argsstring>
+        <name>registerSensorCallback</name>
+        <param>
+          <type>std::function&lt; void(float, float)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Register a callback function that will be called when the sensor data changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function to register.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handler of the callback function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="91" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="446" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a15d887d1b211d461edd0835d0104f7c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::unregisterChangeCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterChangeCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregister a callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler of the callback function to unregister. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="92" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="457" bodyend="460"/>
+        <referencedby refid="class_internal_display_1af952dea8b4a4d74314d3ed6260fba7c6" compoundref="_internal_display_8cpp" startline="548" endline="554">InternalDisplay::unbindClimateCard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a13d422d72f933de45cde16477de623ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::unregisterSensorCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterSensorCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregister a sensor callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler of the callback function to unregister. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="93" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="467" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1a651b1cbd6da6281cfba68e5852e9a597" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCard::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplements refid="class_expansion_card_1a83371d97f1deba4e419093b193aea99c">getType</reimplements>
+        <briefdescription>
+<para>Get the type of the card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The handler of the callback function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="94" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="301" bodyend="304"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_climate_card_1a0503c5d9ad8c5e295d91f9dbcca86f2c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::updateSensor</definition>
+        <argsstring>()</argsstring>
+        <name>updateSensor</name>
+        <briefdescription>
+<para>update environmental sensor data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is called automatically by the <ref refid="class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8" kindref="member">loop()</ref> function. </para>
+</simplesect>
+<simplesect kind="note"><para>This function has no effect if no sensor is connected to the card. </para>
+</simplesect>
+<simplesect kind="note"><para>This function also calls the sensor callbacks. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="106" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="313" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1aa82141ea9add7b85ff22a87a329b97b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateCard::updateAirConditioner</definition>
+        <argsstring>()</argsstring>
+        <name>updateAirConditioner</name>
+        <briefdescription>
+<para>Update the air conditioner state to match the state of the card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This function is not working yet. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="107" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp" bodystart="351" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_card_1aca7c90194bab5aee9c5c1ec86779d09e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t *</type>
+        <definition>uint16_t* ClimateCard::getIrIndex</definition>
+        <argsstring>(uint8_t mode, uint8_t fan_speed, uint8_t temperature)</argsstring>
+        <name>getIrIndex</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>fan_speed</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="122" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> class is a class for controlling an air conditioner. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class allows you to control an air conditioner using an IR LED. It is meant to be used with the ESPMega Climate Card.</para>
+<para><simplesect kind="note"><para>You can also use a DHT22 or DS18B20 temperature sensor to get the room temperature (and humidity if using a DHT22). Although, this is optional. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ClimateCard</label>
+        <link refid="class_climate_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ClimateCard</label>
+        <link refid="class_climate_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="66" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="66" bodyend="123"/>
+    <listofallmembers>
+      <member refid="class_climate_card_1a97e526a47c69cdfc822c1ee413e8a3fd" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>ac</name></member>
+      <member refid="class_climate_card_1aa0649398f58b7093250875c1202711fc" prot="public" virt="virtual"><scope>ClimateCard</scope><name>begin</name></member>
+      <member refid="class_climate_card_1a87ce688cdf3b1acd7526968d599b5422" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>bindFRAM</name></member>
+      <member refid="class_climate_card_1a48f1c6cd56622fbb8337a96291a6085f" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>callbacks</name></member>
+      <member refid="class_climate_card_1a766ff49356a5e7ab067f26a5aee425df" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>callbacks_handler_count</name></member>
+      <member refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>ClimateCard</name></member>
+      <member refid="class_climate_card_1a9b4b6fd707c9f507243f0d5dc5b3d854" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>ClimateCard</name></member>
+      <member refid="class_climate_card_1a67e6651981fa695b20f733b73fdddcb3" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>dht</name></member>
+      <member refid="class_climate_card_1aeda765fa43f4262fdca691c93cac41b4" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>ds18b20</name></member>
+      <member refid="class_expansion_card_1a3b5afabfdb7183b37b78be1e20e4cde6" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>ExpansionCard</name></member>
+      <member refid="class_climate_card_1a080cc17a73a82871726ae7c245fa2ba2" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>fram</name></member>
+      <member refid="class_climate_card_1ad702886d0015135ffaf8cbc3d0e9242e" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>fram_address</name></member>
+      <member refid="class_climate_card_1ab1bd32962463b4d9781e692c68d6b218" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>fram_auto_save</name></member>
+      <member refid="class_climate_card_1a119c0d4369efb88eab7c99f45b7a62af" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>getFanSpeed</name></member>
+      <member refid="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>getFanSpeedName</name></member>
+      <member refid="class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>getHumidity</name></member>
+      <member refid="class_climate_card_1aca7c90194bab5aee9c5c1ec86779d09e" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>getIrIndex</name></member>
+      <member refid="class_climate_card_1a8a9c0eb63c2e92a01fc39715c1876509" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>getMode</name></member>
+      <member refid="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>getModeName</name></member>
+      <member refid="class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>getRoomTemperature</name></member>
+      <member refid="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>getSensorType</name></member>
+      <member refid="class_climate_card_1a0877f36123ed2fdfe41677bdbac320be" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>getTemperature</name></member>
+      <member refid="class_climate_card_1a651b1cbd6da6281cfba68e5852e9a597" prot="public" virt="virtual"><scope>ClimateCard</scope><name>getType</name></member>
+      <member refid="class_climate_card_1a0f12fc20283be6b0688549a963dc0b51" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>humidity</name></member>
+      <member refid="class_climate_card_1a25a3664c605e8050c7531c8f1624e545" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>ir_pin</name></member>
+      <member refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>loadStateFromFRAM</name></member>
+      <member refid="class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8" prot="public" virt="virtual"><scope>ClimateCard</scope><name>loop</name></member>
+      <member refid="class_climate_card_1a2b15582430d577bfa8f07983c5ecaf22" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>registerChangeCallback</name></member>
+      <member refid="class_climate_card_1ab95d86d1fc8f2d1f19324f1161afbcaf" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>registerSensorCallback</name></member>
+      <member refid="class_climate_card_1a4ba2c53ab52835b391560c4ad15cf249" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>room_temperature</name></member>
+      <member refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>saveStateToFRAM</name></member>
+      <member refid="class_climate_card_1a6542ef05864fe97ec911bcb47646961a" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>sensor_callbacks</name></member>
+      <member refid="class_climate_card_1ab10964fbf984155b0d61d5a0805ccf97" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>sensor_callbacks_handler_count</name></member>
+      <member refid="class_climate_card_1a187959feea93397790be0c9e4cbb15ad" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>sensor_pin</name></member>
+      <member refid="class_climate_card_1aa8445d5473e5bd05ababda5958ea800f" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>sensor_type</name></member>
+      <member refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>setFanSpeed</name></member>
+      <member refid="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>setFanSpeedByName</name></member>
+      <member refid="class_climate_card_1aa00bb77607d324938e83a0527344e4ef" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>setFRAMAutoSave</name></member>
+      <member refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>setMode</name></member>
+      <member refid="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>setModeByName</name></member>
+      <member refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>setTemperature</name></member>
+      <member refid="class_climate_card_1a218826a6feea3e9d494c4294d13cef68" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>state</name></member>
+      <member refid="class_climate_card_1a15d887d1b211d461edd0835d0104f7c7" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>unregisterChangeCallback</name></member>
+      <member refid="class_climate_card_1a13d422d72f933de45cde16477de623ad" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>unregisterSensorCallback</name></member>
+      <member refid="class_climate_card_1aa82141ea9add7b85ff22a87a329b97b5" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>updateAirConditioner</name></member>
+      <member refid="class_climate_card_1a0503c5d9ad8c5e295d91f9dbcca86f2c" prot="private" virt="non-virtual"><scope>ClimateCard</scope><name>updateSensor</name></member>
+      <member refid="class_climate_card_1a25ee785ee45b87262a3af07cae01023e" prot="public" virt="non-virtual"><scope>ClimateCard</scope><name>~ClimateCard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

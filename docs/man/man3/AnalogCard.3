@@ -1,0 +1,263 @@
+.TH "AnalogCard" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AnalogCard \- This class represents the Analog Card\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AnalogCard\&.hpp>\fP
+.PP
+Inherits \fBExpansionCard\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAnalogCard\fP ()"
+.br
+.RI "Default constructor for the \fBAnalogCard\fP class\&. "
+.ti -1c
+.RI "void \fBdacWrite\fP (uint8_t pin, uint16_t value)"
+.br
+.RI "Writes a value to the specified DAC pin\&. "
+.ti -1c
+.RI "void \fBsendDataToDAC\fP (uint8_t pin, uint16_t value)"
+.br
+.RI "Sends data to the specified DAC pin\&. "
+.ti -1c
+.RI "uint16_t \fBanalogRead\fP (uint8_t pin)"
+.br
+.RI "Reads the value from the specified analog pin\&. "
+.ti -1c
+.RI "bool \fBbegin\fP ()"
+.br
+.RI "Initializes the \fBAnalogCard\fP\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The main loop of the \fBAnalogCard\fP\&. "
+.ti -1c
+.RI "bool \fBgetDACState\fP (uint8_t pin)"
+.br
+.RI "Gets the state of the specified DAC pin\&. "
+.ti -1c
+.RI "uint16_t \fBgetDACValue\fP (uint8_t pin)"
+.br
+.RI "Gets the value of the specified DAC pin\&. "
+.ti -1c
+.RI "void \fBsetDACState\fP (uint8_t pin, bool state)"
+.br
+.RI "Sets the state of the specified DAC pin\&. "
+.ti -1c
+.RI "void \fBsetDACValue\fP (uint8_t pin, uint16_t value)"
+.br
+.RI "Sets the value of the specified DAC pin\&. "
+.ti -1c
+.RI "uint8_t \fBregisterDACChangeCallback\fP (std::function< void(uint8_t, bool, uint16_t)> callback)"
+.br
+.RI "Registers a callback function to be called when the state or value of a DAC pin changes\&. "
+.ti -1c
+.RI "void \fBunregisterDACChangeCallback\fP (uint8_t handler)"
+.br
+.RI "Unregisters a previously registered DAC change callback\&. "
+.ti -1c
+.RI "uint8_t \fBgetType\fP ()"
+.br
+.RI "Gets the type of the \fBAnalogCard\fP\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents the Analog Card\&. 
+
+The analog card has 8 analog inputs accross two banks, and 4 DAC outputs\&.
+.PP
+\fBNote\fP
+.RS 4
+You do not need to specify the ESPMega I/O Address when creating an instance of this class as there can only be one Analog Card installed in the \fBESPMegaPRO\fP board\&. 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+There can only be one Analog Card installed in the \fBESPMegaPRO\fP board\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "uint16_t AnalogCard::analogRead (uint8_t pin)"
+
+.PP
+Reads the value from the specified analog pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The analog pin to read from\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The value read from the analog pin\&. 
+.RE
+.PP
+
+.SS "bool AnalogCard::begin ()\fC [virtual]\fP"
+
+.PP
+Initializes the \fBAnalogCard\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if initialization is successful, false otherwise\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "void AnalogCard::dacWrite (uint8_t pin, uint16_t value)"
+
+.PP
+Writes a value to the specified DAC pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The DAC pin to write to\&. 
+.br
+\fIvalue\fP The value to write\&. 
+.RE
+.PP
+
+.SS "bool AnalogCard::getDACState (uint8_t pin)"
+
+.PP
+Gets the state of the specified DAC pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The DAC pin to get the state of\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The state of the DAC pin (true = on, false = off)\&. 
+.RE
+.PP
+
+.SS "uint16_t AnalogCard::getDACValue (uint8_t pin)"
+
+.PP
+Gets the value of the specified DAC pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The DAC pin to get the value of\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The value of the DAC pin\&. 
+.RE
+.PP
+
+.SS "uint8_t AnalogCard::getType ()\fC [virtual]\fP"
+
+.PP
+Gets the type of the \fBAnalogCard\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The type of the \fBAnalogCard\fP\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "void AnalogCard::loop ()\fC [virtual]\fP"
+
+.PP
+The main loop of the \fBAnalogCard\fP\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function does nothing\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "uint8_t AnalogCard::registerDACChangeCallback (std::function< void(uint8_t, bool, uint16_t)> callback)"
+
+.PP
+Registers a callback function to be called when the state or value of a DAC pin changes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function to register\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handler ID of the registered callback\&. 
+.RE
+.PP
+
+.SS "void AnalogCard::sendDataToDAC (uint8_t pin, uint16_t value)"
+
+.PP
+Sends data to the specified DAC pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The DAC pin to send data to\&. 
+.br
+\fIvalue\fP The data to send\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This function does not call the DAC change callbacks\&. 
+.RE
+.PP
+
+.SS "void AnalogCard::setDACState (uint8_t pin, bool state)"
+
+.PP
+Sets the state of the specified DAC pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The DAC pin to set the state of\&. 
+.br
+\fIstate\fP The state to set (true = on, false = off)\&. 
+.RE
+.PP
+
+.SS "void AnalogCard::setDACValue (uint8_t pin, uint16_t value)"
+
+.PP
+Sets the value of the specified DAC pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The DAC pin to set the value of\&. 
+.br
+\fIvalue\fP The value to set\&. 
+.RE
+.PP
+
+.SS "void AnalogCard::unregisterDACChangeCallback (uint8_t handler)"
+
+.PP
+Unregisters a previously registered DAC change callback\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler ID of the callback to unregister\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

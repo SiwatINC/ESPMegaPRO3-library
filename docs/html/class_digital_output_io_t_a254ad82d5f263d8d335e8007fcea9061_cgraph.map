@@ -1,0 +1,7 @@
+<map id="DigitalOutputIoT::publishDigitalOutput" name="DigitalOutputIoT::publishDigitalOutput">
+<area shape="rect" id="node1" title="Publish the state and value of the specified digital output." alt="" coords="5,39,188,80"/>
+<area shape="rect" id="node2" href="$class_digital_output_io_t.html#a186d8a94e312afc13c61dae4d31cd633" title="Publish the state of the specified digital output." alt="" coords="236,5,419,47"/>
+<area shape="rect" id="node4" href="$class_digital_output_io_t.html#a99cb645e8ef895b893ba128f0bd54726" title="Publish the value of the specified digital output." alt="" coords="236,71,419,112"/>
+<area shape="rect" id="node3" href="$class_digital_output_card.html#a3e239d57c39cb82cff4aca6455f01d6f" title="Get the state of the specified pin." alt="" coords="467,5,613,47"/>
+<area shape="rect" id="node5" href="$class_digital_output_card.html#ae160653dd5ec2bdbce0327af77669d87" title="Get the pwm value of the specified pin." alt="" coords="467,71,613,112"/>
+</map>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structrtctime__t" kind="struct" language="C++" prot="public">
+    <compoundname>rtctime_t</compoundname>
+    <includes refid="_time_structure_8hpp" local="no">TimeStructure.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structrtctime__t_1a97a4694c9446d8cc04ce81af7c4c5353" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t rtctime_t::hours</definition>
+        <argsstring></argsstring>
+        <name>hours</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="35" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrtctime__t_1ac45f5e20eb515ae2ec0b11f42298d46f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t rtctime_t::minutes</definition>
+        <argsstring></argsstring>
+        <name>minutes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="36" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrtctime__t_1a82d3a3a8361a658c22cabcf7a66e99c4" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t rtctime_t::seconds</definition>
+        <argsstring></argsstring>
+        <name>seconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="37" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrtctime__t_1afc7f4724b89188aecc270517ea1ea708" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t rtctime_t::day</definition>
+        <argsstring></argsstring>
+        <name>day</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="38" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrtctime__t_1acb2d7ef5bb42ea95e7aaf84d9ceda5ab" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t rtctime_t::month</definition>
+        <argsstring></argsstring>
+        <name>month</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="39" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structrtctime__t_1ace9c482c457de1c0a89b7ef69e5954c7" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t rtctime_t::year</definition>
+        <argsstring></argsstring>
+        <name>year</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="40" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="structrtctime__t" kindref="compound">rtctime_t</ref> struct is a structure for storing the time. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This structure is used by the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> library to store the time.</para>
+<para><simplesect kind="warning"><para>This structure is not compatible with the Arduino Time library. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="34" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="34" bodyend="41"/>
+    <listofallmembers>
+      <member refid="structrtctime__t_1afc7f4724b89188aecc270517ea1ea708" prot="public" virt="non-virtual"><scope>rtctime_t</scope><name>day</name></member>
+      <member refid="structrtctime__t_1a97a4694c9446d8cc04ce81af7c4c5353" prot="public" virt="non-virtual"><scope>rtctime_t</scope><name>hours</name></member>
+      <member refid="structrtctime__t_1ac45f5e20eb515ae2ec0b11f42298d46f" prot="public" virt="non-virtual"><scope>rtctime_t</scope><name>minutes</name></member>
+      <member refid="structrtctime__t_1acb2d7ef5bb42ea95e7aaf84d9ceda5ab" prot="public" virt="non-virtual"><scope>rtctime_t</scope><name>month</name></member>
+      <member refid="structrtctime__t_1a82d3a3a8361a658c22cabcf7a66e99c4" prot="public" virt="non-virtual"><scope>rtctime_t</scope><name>seconds</name></member>
+      <member refid="structrtctime__t_1ace9c482c457de1c0a89b7ef69e5954c7" prot="public" virt="non-virtual"><scope>rtctime_t</scope><name>year</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

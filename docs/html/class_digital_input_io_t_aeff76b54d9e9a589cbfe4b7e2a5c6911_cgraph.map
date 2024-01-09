@@ -1,0 +1,7 @@
+<map id="DigitalInputIoT::handleMqttMessage" name="DigitalInputIoT::handleMqttMessage">
+<area shape="rect" id="node1" title="Handles MQTT messages for the DigitalInputIoT component." alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$class_digital_input_io_t.html#aa3ff322526140cd93a72a669f1a0ba38" title="Set if the digital inputs should be published to the MQTT broker." alt="" coords="252,5,440,47"/>
+<area shape="rect" id="node3" href="$class_digital_input_io_t.html#ad8906418ffb31af299146392d65204df" title="Publish all digital inputs to the MQTT broker." alt="" coords="488,5,660,47"/>
+<area shape="rect" id="node4" href="$class_digital_input_io_t.html#ad5079368dd7bb6ac31152feca4412cf5" title="Publish a digital input to the MQTT broker." alt="" coords="708,5,880,47"/>
+<area shape="rect" id="node5" href="$class_digital_input_card.html#a09416f14975c453bb7b9d1fdfc033fd9" title="Read the input from the specified pin, always refresh the input buffers." alt="" coords="928,13,1139,39"/>
+</map>

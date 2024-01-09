@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_digital_output_card_8hpp" kind="file" language="C++">
+    <compoundname>DigitalOutputCard.hpp</compoundname>
+    <includes refid="_expansion_card_8hpp" local="no">ExpansionCard.hpp</includes>
+    <includes local="no">Adafruit_PWMServoDriver.h</includes>
+    <includes local="no">FRAM.h</includes>
+    <includes local="no">map</includes>
+    <includedby refid="_digital_output_card_8cpp" local="no">/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp</includedby>
+    <includedby refid="_digital_output_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_pro_o_s_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</includedby>
+    <includedby refid="_internal_display_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>Adafruit_PWMServoDriver.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp</label>
+        <link refid="_digital_output_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>FRAM.h</label>
+      </node>
+      <node id="2">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp</label>
+        <link refid="_digital_output_io_t_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</label>
+        <link refid="_e_s_p_mega_web_server_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp</label>
+        <link refid="_digital_output_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_digital_output_card" prot="public">DigitalOutputCard</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_digital_output_card_8hpp_1a33573d6e816259b5253646b8d8ecaf1e" prot="public" static="no">
+        <name>SET_STATE_TOPIC</name>
+        <initializer>&quot;/set/state&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="17" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_digital_output_card_8hpp_1a4ba13ccd92cbfd5338948687e80f6e08" prot="public" static="no">
+        <name>SET_VALUE_TOPIC</name>
+        <initializer>&quot;/set/value&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="18" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_digital_output_card_8hpp_1ac3e054bf571e7ffb1a7e8fa097b2b51f" prot="public" static="no">
+        <name>STATE_TOPIC</name>
+        <initializer>&quot;/state&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="19" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_digital_output_card_8hpp_1aef42f61dc1d5d6692c2230bdd0089bf3" prot="public" static="no">
+        <name>VALUE_TOPIC</name>
+        <initializer>&quot;/value&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="20" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_digital_output_card_8hpp_1a40d2cb170c349f2752381005b1712e3c" prot="public" static="no">
+        <name>REQUEST_STATE_TOPIC</name>
+        <initializer>&quot;requeststate&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="21" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_digital_output_card_8hpp_1a3eeef41dd057fa12ca238112285bd4b9" prot="public" static="no">
+        <name>PUBLISH_ENABLE_TOPIC</name>
+        <initializer>&quot;publish_enable&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="22" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_digital_output_card_8hpp_1aa5c448731d78eddd5588e28b80d51d67" prot="public" static="no">
+        <name>CARD_TYPE_DIGITAL_OUTPUT</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="25" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ExpansionCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_PWMServoDriver.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;FRAM.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Protocol<sp/>for<sp/>digital<sp/>output<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>pin<sp/>is<sp/>always<sp/>2<sp/>characters<sp/>long<sp/>and<sp/>padded<sp/>with<sp/>0<sp/>if<sp/>necessary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>pin<sp/>state<sp/>topic:<sp/>&lt;pin&gt;/set/state<sp/>payload:<sp/>0/1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>pin<sp/>pwm<sp/>topic:<sp/>&lt;pin&gt;/set/value<sp/>payload:<sp/>0-4095</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Publish<sp/>pin<sp/>state<sp/>topic:<sp/>&lt;pin&gt;/state<sp/>payload:<sp/>0/1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Publish<sp/>pin<sp/>pwm<sp/>topic:<sp/>&lt;pin&gt;/value<sp/>payload:<sp/>0-4095</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Publish<sp/>all<sp/>topic:<sp/>requeststate<sp/>payload:<sp/>N/A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Enable/disable<sp/>publish<sp/>topic:<sp/>publish_enable<sp/>payload:<sp/>0/1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MQTT<sp/>Topics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SET_STATE_TOPIC<sp/>&quot;/set/state&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SET_VALUE_TOPIC<sp/>&quot;/set/value&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STATE_TOPIC<sp/>&quot;/state&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALUE_TOPIC<sp/>&quot;/value&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REQUEST_STATE_TOPIC<sp/>&quot;requeststate&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PUBLISH_ENABLE_TOPIC<sp/>&quot;publish_enable&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Card<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CARD_TYPE_DIGITAL_OUTPUT<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="class_digital_output_card" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Instantiate<sp/>the<sp/>card<sp/>with<sp/>the<sp/>specified<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_digital_output_card_1a8ca9e928a7e06da666e7bf3b3801f1da" kindref="member">DigitalOutputCard</ref>(uint8_t<sp/>address);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Instantiate<sp/>the<sp/>card<sp/>with<sp/>the<sp/>specified<sp/>position<sp/>on<sp/>the<sp/>dip<sp/>switch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_digital_output_card_1a8ca9e928a7e06da666e7bf3b3801f1da" kindref="member">DigitalOutputCard</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit0,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit3,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit4);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a4698ea2f13dba8e1cddc29efd8d11743" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Dummy<sp/>loop<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1aeae842b0338e6788b99fa623fffcbe89" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>output<sp/>to<sp/>the<sp/>specified<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>set<sp/>both<sp/>the<sp/>state<sp/>and<sp/>the<sp/>pwm<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a4e141b2627539b6b64f3d02d77a0aa84" kindref="member">digitalWrite</ref>(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>output<sp/>to<sp/>the<sp/>specified<sp/>pwm<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>set<sp/>both<sp/>the<sp/>state<sp/>and<sp/>the<sp/>pwm<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1aa34d14771705c4374da1e41aad953843" kindref="member">analogWrite</ref>(uint8_t<sp/>pin,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>state<sp/>of<sp/>the<sp/>specified<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a742206fb70202954d822175b69f0f954" kindref="member">setState</ref>(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>pwm<sp/>value<sp/>of<sp/>the<sp/>specified<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1afa3fc66e71b03ee75ef022f92431466d" kindref="member">setValue</ref>(uint8_t<sp/>pin,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>state<sp/>of<sp/>the<sp/>specified<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a3e239d57c39cb82cff4aca6455f01d6f" kindref="member">getState</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>pwm<sp/>value<sp/>of<sp/>the<sp/>specified<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_digital_output_card_1ae160653dd5ec2bdbce0327af77669d87" kindref="member">getValue</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>a<sp/>callback<sp/>function<sp/>that<sp/>will<sp/>be<sp/>called<sp/>when<sp/>the<sp/>state<sp/>of<sp/>a<sp/>pin<sp/>changes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_digital_output_card_1a04a881ba7142114c83f41a49129111b6" kindref="member">registerChangeCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(uint8_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/>uint16_t)&gt;<sp/>callback);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unregister<sp/>the<sp/>callback<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1ae9601a5033bc723852d11d336cc2de93" kindref="member">unregisterChangeCallback</ref>(uint8_t<sp/>handler);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>a<sp/>new<sp/>pin<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a57796fcf07bbb56366644a2435481b99" kindref="member">loadPinMap</ref>(uint8_t<sp/>pinMap[16]);<sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bind<sp/>the<sp/>fram<sp/>object<sp/>to<sp/>the<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>Output<sp/>card<sp/>use<sp/>the<sp/>fram<sp/>in<sp/>this<sp/>layout:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>[2<sp/>bytes]<sp/>0-1<sp/>:<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>[32<sp/>bytes]<sp/>2-33<sp/>:<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1aa43b2f8d13abb0164f661eba5daa14ce" kindref="member">bindFRAM</ref>(FRAM<sp/>*fram,<sp/>uint16_t<sp/>address);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>state<sp/>and<sp/>value<sp/>to<sp/>the<sp/>fram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a451d122dfcc4c239c18c9d6f5d41449b" kindref="member">saveToFRAM</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>the<sp/>state<sp/>and<sp/>value<sp/>from<sp/>the<sp/>fram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a500615c25557efcff072e98e65a8db33" kindref="member">loadFromFRAM</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>auto<sp/>save<sp/>to<sp/>fram<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a3eed3e145a257bad60e3e0e82a74f7f7" kindref="member">setAutoSaveToFRAM</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>autoSave);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>a<sp/>single<sp/>pin<sp/>value<sp/>to<sp/>fram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a99ac93ac96289b95063d4d1e1e2b7893" kindref="member">savePinValueToFRAM</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>state<sp/>to<sp/>fram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_output_card_1a8d99e0805f6463fc886087e502efb12d" kindref="member">saveStateToFRAM</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>value<sp/>to<sp/>fram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>saveValueToFRAM();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>type<sp/>of<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_digital_output_card_1a9ce9c2b88a21f786c6cd76eb8468e13c" kindref="member">getType</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FRAM<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>framAddress;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FRAM<sp/>is<sp/>binded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>framBinded<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Auto<sp/>save<sp/>to<sp/>fram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>framAutoSave<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>fram<sp/>object<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>FRAM<sp/>*fram;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>pwm<sp/>driver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>Adafruit_PWMServoDriver<sp/>pwm;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>address<sp/>of<sp/>the<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>address;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>state<sp/>of<sp/>the<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state_buffer[16];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>pwm<sp/>value<sp/>of<sp/>the<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>value_buffer[16];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>callback<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>callbacks_handler_index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;uint8_t,<sp/>std::function&lt;void(uint8_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/>uint16_t)&gt;&gt;<sp/>change_callbacks;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Physical<sp/>pin<sp/>to<sp/>virtual<sp/>pin<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pinMap[16];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>16<sp/>bit<sp/>value<sp/>representing<sp/>all<sp/>16<sp/>channels</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>packStates();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unpack<sp/>the<sp/>16<sp/>bit<sp/>value<sp/>to<sp/>the<sp/>state<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unpackStates(uint16_t<sp/>states);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Virtual<sp/>pin<sp/>to<sp/>physical<sp/>pin<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>virtualPinMap[16];</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp"/>
+  </compounddef>
+</doxygen>

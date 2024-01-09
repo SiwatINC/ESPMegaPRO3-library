@@ -1,0 +1,55 @@
+.TH "MqttConfig" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MqttConfig \- The MQTT configuration struct\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ESPMegaIoT\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "char \fBmqtt_server\fP [32]"
+.br
+.RI "The MQTT server address\&. "
+.ti -1c
+.RI "uint16_t \fBmqtt_port\fP"
+.br
+.RI "The MQTT server port\&. "
+.ti -1c
+.RI "char \fBmqtt_user\fP [32]"
+.br
+.RI "The MQTT username, even if mqtt_useauth is false, this should be set\&. "
+.ti -1c
+.RI "char \fBmqtt_password\fP [32]"
+.br
+.RI "The MQTT password, even if mqtt_useauth is false, this should be set\&. "
+.ti -1c
+.RI "bool \fBmqtt_useauth\fP"
+.br
+.RI "Whether to use MQTT authentication, if false, mqtt_user and mqtt_password will be ignored\&. "
+.ti -1c
+.RI "char \fBbase_topic\fP [32]"
+.br
+.RI "The base topic for the MQTT messages\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The MQTT configuration struct\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+This struct will be saved to FRAM when calling saveMqttConfig 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

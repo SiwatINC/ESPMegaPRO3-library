@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_digital_input_io_t" kind="class" language="C++" prot="public">
+    <compoundname>DigitalInputIoT</compoundname>
+    <basecompoundref refid="class_io_t_component" prot="public" virt="non-virtual">IoTComponent</basecompoundref>
+    <includes refid="_digital_input_io_t_8hpp" local="no">DigitalInputIoT.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_digital_input_io_t_1a66d888396188c6405dc4ef4bef850dc2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DigitalInputIoT::digital_inputs_publish_enabled</definition>
+        <argsstring></argsstring>
+        <name>digital_inputs_publish_enabled</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="29" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_io_t_1a2a54a9247ef7ccb4fc9fd7d72b0f74b2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref> *</type>
+        <definition>DigitalInputCard* DigitalInputIoT::card</definition>
+        <argsstring></argsstring>
+        <name>card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="30" column="26" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_digital_input_io_t_1a97e335d982d3c8701a5bf6934bccd773" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool DigitalInputIoT::begin</definition>
+        <argsstring>(uint8_t card_id, ExpansionCard *card, PubSubClient *mqtt, char *base_topic)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_io_t_component_1af3068b3087e942700f2756df61567470">begin</reimplements>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+          <declname>card</declname>
+        </param>
+        <param>
+          <type>PubSubClient *</type>
+          <declname>mqtt</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>base_topic</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="class_digital_input_io_t" kindref="compound">DigitalInputIoT</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the necessary parameters for the <ref refid="class_digital_input_io_t" kindref="compound">DigitalInputIoT</ref> object, such as the card ID, expansion card, MQTT client, and base topic. It also enables the publishing of digital input values and registers a callback function for handling value changes.</para>
+<para><simplesect kind="note"><para>Although this function can be called in the main program, it is recommended to use <ref refid="class_e_s_p_mega_io_t_1ae7323d1d3ff23494b68a748c1eb57891" kindref="member">ESPMegaIoT::registerCard()</ref> to automatically manage the instantiation and initialization of this component.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>card_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the card. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>card</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the PubSubClient object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base_topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base topic for MQTT communication. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the initialization is successful, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="19" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="18" bodyend="27"/>
+        <references refid="class_digital_input_io_t_1a2ac6416b58adaf426b177eb0a1ec05fd" compoundref="_digital_input_io_t_8cpp" startline="85" endline="90">handleValueChange</references>
+        <references refid="class_digital_input_io_t_1aa3ff322526140cd93a72a669f1a0ba38" compoundref="_digital_input_io_t_8cpp" startline="70" endline="75">setDigitalInputsPublishEnabled</references>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_io_t_1aeff76b54d9e9a589cbfe4b7e2a5c6911" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DigitalInputIoT::handleMqttMessage</definition>
+        <argsstring>(char *topic, char *payload)</argsstring>
+        <name>handleMqttMessage</name>
+        <reimplements refid="class_io_t_component_1a1b3fbabfa0e9c1697f0edab1a8d14149">handleMqttMessage</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+<para>Handles MQTT messages for the <ref refid="class_digital_input_io_t" kindref="compound">DigitalInputIoT</ref> component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trimmed topic of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null-terminated payload of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="20" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="42" bodyend="51"/>
+        <references refid="class_digital_input_io_t_1aa3ff322526140cd93a72a669f1a0ba38" compoundref="_digital_input_io_t_8cpp" startline="70" endline="75">setDigitalInputsPublishEnabled</references>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_io_t_1ad8906418ffb31af299146392d65204df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputIoT::publishDigitalInputs</definition>
+        <argsstring>()</argsstring>
+        <name>publishDigitalInputs</name>
+        <briefdescription>
+<para>Publish all digital inputs to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="21" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="56" bodyend="63"/>
+        <references refid="class_digital_input_io_t_1ad5079368dd7bb6ac31152feca4412cf5" compoundref="_digital_input_io_t_8cpp" startline="111" endline="120">publishDigitalInput</references>
+        <referencedby refid="class_digital_input_io_t_1ad157a557a9d2b002cfa6c155842c4cee" compoundref="_digital_input_io_t_8cpp" startline="99" endline="101">publishReport</referencedby>
+        <referencedby refid="class_digital_input_io_t_1aa3ff322526140cd93a72a669f1a0ba38" compoundref="_digital_input_io_t_8cpp" startline="70" endline="75">setDigitalInputsPublishEnabled</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_io_t_1ad5079368dd7bb6ac31152feca4412cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputIoT::publishDigitalInput</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>publishDigitalInput</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Publish a digital input to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to publish. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="22" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="111" bodyend="120"/>
+        <references refid="class_digital_input_card_1a09416f14975c453bb7b9d1fdfc033fd9" compoundref="_digital_input_card_8cpp" startline="89" endline="92">DigitalInputCard::digitalRead</references>
+        <referencedby refid="class_digital_input_io_t_1a2ac6416b58adaf426b177eb0a1ec05fd" compoundref="_digital_input_io_t_8cpp" startline="85" endline="90">handleValueChange</referencedby>
+        <referencedby refid="class_digital_input_io_t_1ad8906418ffb31af299146392d65204df" compoundref="_digital_input_io_t_8cpp" startline="56" endline="63">publishDigitalInputs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_io_t_1aa3ff322526140cd93a72a669f1a0ba38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputIoT::setDigitalInputsPublishEnabled</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>setDigitalInputsPublishEnabled</name>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Set if the digital inputs should be published to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the digital inputs should be published, false otherwise. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="23" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="70" bodyend="75"/>
+        <references refid="class_digital_input_io_t_1ad8906418ffb31af299146392d65204df" compoundref="_digital_input_io_t_8cpp" startline="56" endline="63">publishDigitalInputs</references>
+        <referencedby refid="class_digital_input_io_t_1a97e335d982d3c8701a5bf6934bccd773" compoundref="_digital_input_io_t_8cpp" startline="18" endline="27">begin</referencedby>
+        <referencedby refid="class_digital_input_io_t_1aeff76b54d9e9a589cbfe4b7e2a5c6911" compoundref="_digital_input_io_t_8cpp" startline="42" endline="51">handleMqttMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_io_t_1a2ac6416b58adaf426b177eb0a1ec05fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputIoT::handleValueChange</definition>
+        <argsstring>(uint8_t pin, uint8_t value)</argsstring>
+        <name>handleValueChange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Handles a value change for a digital input. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is registered as a callback function for the <ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref> object.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin that changed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value of the pin. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="24" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="85" bodyend="90"/>
+        <references refid="class_digital_input_io_t_1ad5079368dd7bb6ac31152feca4412cf5" compoundref="_digital_input_io_t_8cpp" startline="111" endline="120">publishDigitalInput</references>
+        <referencedby refid="class_digital_input_io_t_1a97e335d982d3c8701a5bf6934bccd773" compoundref="_digital_input_io_t_8cpp" startline="18" endline="27">begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_io_t_1ad157a557a9d2b002cfa6c155842c4cee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DigitalInputIoT::publishReport</definition>
+        <argsstring>()</argsstring>
+        <name>publishReport</name>
+        <reimplements refid="class_io_t_component_1aa8b2aa560998451171ab6c39957cf787">publishReport</reimplements>
+        <briefdescription>
+<para>Publish all inputs to the MQTT Broker. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is overriden from the <ref refid="class_io_t_component" kindref="compound">IoTComponent</ref> class and is called by <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref>.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to publish. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="25" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="99" bodyend="101"/>
+        <references refid="class_digital_input_io_t_1ad8906418ffb31af299146392d65204df" compoundref="_digital_input_io_t_8cpp" startline="56" endline="63">publishDigitalInputs</references>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_io_t_1ad95132332ba406da7c2c0eb97b66eef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DigitalInputIoT::subscribe</definition>
+        <argsstring>()</argsstring>
+        <name>subscribe</name>
+        <reimplements refid="class_io_t_component_1acdf8bc6b4a9f9ac515ff1dc3b63aa330">subscribe</reimplements>
+        <briefdescription>
+<para>Subscribes to the MQTT topics for the <ref refid="class_digital_input_io_t" kindref="compound">DigitalInputIoT</ref> component. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="26" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_io_t_1a71d4b9af91c829719a6c4873524e3203" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputIoT::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplements refid="class_io_t_component_1a3c5bf4cb3ba447ccbcbf45c9065f288d">getType</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="27" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.cpp" bodystart="102" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_digital_input_io_t" kindref="compound">DigitalInputIoT</ref> class is a class for connecting the Digital Input Card to the IoT module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This function allows you to control the Digital Input Card using MQTT.</para>
+<para><simplesect kind="warning"><para>You should not instantiate this class directly, instead use <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref>&apos;s registerCard function. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="1">
+        <label>DigitalInputIoT</label>
+        <link refid="class_digital_input_io_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="1">
+        <label>DigitalInputIoT</label>
+        <link refid="class_digital_input_io_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" line="17" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp" bodystart="17" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_io_t_component_1aeb90ccffdbf21519987505b9f52f0a57" prot="protected" virt="non-virtual"><scope>DigitalInputIoT</scope><name>base_topic</name></member>
+      <member refid="class_digital_input_io_t_1a97e335d982d3c8701a5bf6934bccd773" prot="public" virt="virtual"><scope>DigitalInputIoT</scope><name>begin</name></member>
+      <member refid="class_digital_input_io_t_1a2a54a9247ef7ccb4fc9fd7d72b0f74b2" prot="private" virt="non-virtual"><scope>DigitalInputIoT</scope><name>card</name></member>
+      <member refid="class_io_t_component_1a8ea4f18d3f5adf232137f12d8a8f763a" prot="protected" virt="non-virtual"><scope>DigitalInputIoT</scope><name>card_id</name></member>
+      <member refid="class_digital_input_io_t_1a66d888396188c6405dc4ef4bef850dc2" prot="private" virt="non-virtual"><scope>DigitalInputIoT</scope><name>digital_inputs_publish_enabled</name></member>
+      <member refid="class_digital_input_io_t_1a71d4b9af91c829719a6c4873524e3203" prot="public" virt="virtual"><scope>DigitalInputIoT</scope><name>getType</name></member>
+      <member refid="class_digital_input_io_t_1aeff76b54d9e9a589cbfe4b7e2a5c6911" prot="public" virt="virtual"><scope>DigitalInputIoT</scope><name>handleMqttMessage</name></member>
+      <member refid="class_digital_input_io_t_1a2ac6416b58adaf426b177eb0a1ec05fd" prot="public" virt="non-virtual"><scope>DigitalInputIoT</scope><name>handleValueChange</name></member>
+      <member refid="class_io_t_component_1a652ae372e38701a301d82466eb0fd20e" prot="public" virt="non-virtual"><scope>DigitalInputIoT</scope><name>loop</name></member>
+      <member refid="class_io_t_component_1a81926ee5477da6738063128028597e3e" prot="protected" virt="non-virtual"><scope>DigitalInputIoT</scope><name>mqtt</name></member>
+      <member refid="class_digital_input_io_t_1ad5079368dd7bb6ac31152feca4412cf5" prot="public" virt="non-virtual"><scope>DigitalInputIoT</scope><name>publishDigitalInput</name></member>
+      <member refid="class_digital_input_io_t_1ad8906418ffb31af299146392d65204df" prot="public" virt="non-virtual"><scope>DigitalInputIoT</scope><name>publishDigitalInputs</name></member>
+      <member refid="class_io_t_component_1a223659969099a0a8aaf84e18c51014dc" prot="protected" virt="non-virtual"><scope>DigitalInputIoT</scope><name>publishRelative</name></member>
+      <member refid="class_digital_input_io_t_1ad157a557a9d2b002cfa6c155842c4cee" prot="public" virt="virtual"><scope>DigitalInputIoT</scope><name>publishReport</name></member>
+      <member refid="class_digital_input_io_t_1aa3ff322526140cd93a72a669f1a0ba38" prot="public" virt="non-virtual"><scope>DigitalInputIoT</scope><name>setDigitalInputsPublishEnabled</name></member>
+      <member refid="class_io_t_component_1add98837edef95e9d4f31fba7e210cf09" prot="public" virt="non-virtual"><scope>DigitalInputIoT</scope><name>setMqttClient</name></member>
+      <member refid="class_digital_input_io_t_1ad95132332ba406da7c2c0eb97b66eef4" prot="public" virt="virtual"><scope>DigitalInputIoT</scope><name>subscribe</name></member>
+      <member refid="class_io_t_component_1ab7841d6b92b52ed398d5ff1cac0a9625" prot="protected" virt="non-virtual"><scope>DigitalInputIoT</scope><name>subscribeRelative</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,595 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_analog_card" kind="class" language="C++" prot="public">
+    <compoundname>AnalogCard</compoundname>
+    <basecompoundref refid="class_expansion_card" prot="public" virt="non-virtual">ExpansionCard</basecompoundref>
+    <includes refid="_analog_card_8hpp" local="no">AnalogCard.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_analog_card_1ac316c7e1dc143606a8282d1b710dc7fa" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogCard::handler_count</definition>
+        <argsstring></argsstring>
+        <name>handler_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="44" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1a5b63d22b2e8b133045ba4283f4e0e40b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(uint8_t, bool, uint16_t)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t, std::function&lt;void(uint8_t, bool, uint16_t)&gt; &gt; AnalogCard::dac_change_callbacks</definition>
+        <argsstring></argsstring>
+        <name>dac_change_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="46" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1ac6eff1f2a5bf777ba33590767cb34c9b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AnalogCard::dac_state[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>dac_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="47" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1ab262941a893f7eef121834d6b75ff105" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AnalogCard::dac_value[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>dac_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="48" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1a48e00632950d10e650e43f79cc2eceb4" prot="private" static="no" mutable="no">
+        <type>MCP4725</type>
+        <definition>MCP4725 AnalogCard::dac0</definition>
+        <argsstring></argsstring>
+        <name>dac0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="49" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1ae898ce82062a48caa551bacaebbb6d26" prot="private" static="no" mutable="no">
+        <type>MCP4725</type>
+        <definition>MCP4725 AnalogCard::dac1</definition>
+        <argsstring></argsstring>
+        <name>dac1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="50" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1a1d891ec0444fe42b36bd57d406eaff99" prot="private" static="no" mutable="no">
+        <type>MCP4725</type>
+        <definition>MCP4725 AnalogCard::dac2</definition>
+        <argsstring></argsstring>
+        <name>dac2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="51" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1a5e264454afaa0fd055901ca5a0d80766" prot="private" static="no" mutable="no">
+        <type>MCP4725</type>
+        <definition>MCP4725 AnalogCard::dac3</definition>
+        <argsstring></argsstring>
+        <name>dac3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="52" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1a9241cd87812cb356508be77212af5dc5" prot="private" static="no" mutable="no">
+        <type>Adafruit_ADS1115</type>
+        <definition>Adafruit_ADS1115 AnalogCard::analogInputBankA</definition>
+        <argsstring></argsstring>
+        <name>analogInputBankA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="53" column="26" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_analog_card_1a4700d072ed09ac6ec6993ef73e484505" prot="private" static="no" mutable="no">
+        <type>Adafruit_ADS1115</type>
+        <definition>Adafruit_ADS1115 AnalogCard::analogInputBankB</definition>
+        <argsstring></argsstring>
+        <name>analogInputBankB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="54" column="26" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_analog_card_1ab01a99dc92b2d5431f5e438c2e4bf7f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AnalogCard::AnalogCard</definition>
+        <argsstring>()</argsstring>
+        <name>AnalogCard</name>
+        <briefdescription>
+<para>Default constructor for the <ref refid="class_analog_card" kindref="compound">AnalogCard</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="30" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="12" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a7f0a07632ef1db4bfaf64593cbccce66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogCard::dacWrite</definition>
+        <argsstring>(uint8_t pin, uint16_t value)</argsstring>
+        <name>dacWrite</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes a value to the specified DAC pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC pin to write to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to write. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="31" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="28" bodyend="33"/>
+        <references refid="class_analog_card_1a445ff04dfcd2f49bb070bcc6e17a13f0" compoundref="_analog_card_8cpp" startline="40" endline="49">setDACState</references>
+        <references refid="class_analog_card_1a4703be8e25568617d28915d14e4df71b" compoundref="_analog_card_8cpp" startline="56" endline="65">setDACValue</references>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a121c84a174bcc6756e82538cfe19477a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogCard::sendDataToDAC</definition>
+        <argsstring>(uint8_t pin, uint16_t value)</argsstring>
+        <name>sendDataToDAC</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sends data to the specified DAC pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC pin to send data to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to send. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function does not call the DAC change callbacks. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="32" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="93" bodyend="110"/>
+        <referencedby refid="class_analog_card_1a445ff04dfcd2f49bb070bcc6e17a13f0" compoundref="_analog_card_8cpp" startline="40" endline="49">setDACState</referencedby>
+        <referencedby refid="class_analog_card_1a4703be8e25568617d28915d14e4df71b" compoundref="_analog_card_8cpp" startline="56" endline="65">setDACValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a57f3af0fdcbc6ccb651007540c6829c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t AnalogCard::analogRead</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>analogRead</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Reads the value from the specified analog pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The analog pin to read from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value read from the analog pin. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="33" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="117" bodyend="128"/>
+        <referencedby refid="class_analog_io_t_1a2f74e7f22b3374b4950357d9f4b11ccc" compoundref="_analog_io_t_8cpp" startline="85" endline="100">AnalogIoT::publishADC</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a058b9fca0655b1d7d169527a37fe4c34" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool AnalogCard::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_expansion_card_1aecd52cc9b31b642f2cd78f01654005de">begin</reimplements>
+        <briefdescription>
+<para>Initializes the <ref refid="class_analog_card" kindref="compound">AnalogCard</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if initialization is successful, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="34" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="134" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a88d1bd2c7028cfddcdf1392a6bd57c2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AnalogCard::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <reimplements refid="class_expansion_card_1a3b3364d9de40d039a3dbfe9141dea0a9">loop</reimplements>
+        <briefdescription>
+<para>The main loop of the <ref refid="class_analog_card" kindref="compound">AnalogCard</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function does nothing. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="35" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1aa10a9eb6b4c1f1b7660ea5183a0f618e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AnalogCard::getDACState</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>getDACState</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Gets the state of the specified DAC pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC pin to get the state of. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The state of the DAC pin (true = on, false = off). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="36" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="82" bodyend="85"/>
+        <referencedby refid="class_analog_io_t_1af9686e6a38360e26a2c476c96f9d7c91" compoundref="_analog_io_t_8cpp" startline="394" endline="402">AnalogIoT::publishDACState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a7793911eaabacee0d40dac626e39279a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t AnalogCard::getDACValue</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>getDACValue</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of the specified DAC pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC pin to get the value of. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the DAC pin. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="37" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="72" bodyend="75"/>
+        <referencedby refid="class_analog_io_t_1a87bed89be4587e778eac2f8cabed4bab" compoundref="_analog_io_t_8cpp" startline="408" endline="416">AnalogIoT::publishDACValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a445ff04dfcd2f49bb070bcc6e17a13f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogCard::setDACState</definition>
+        <argsstring>(uint8_t pin, bool state)</argsstring>
+        <name>setDACState</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets the state of the specified DAC pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC pin to set the state of. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state to set (true = on, false = off). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="38" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="40" bodyend="49"/>
+        <references refid="class_analog_card_1a121c84a174bcc6756e82538cfe19477a" compoundref="_analog_card_8cpp" startline="93" endline="110">sendDataToDAC</references>
+        <referencedby refid="class_analog_card_1a7f0a07632ef1db4bfaf64593cbccce66" compoundref="_analog_card_8cpp" startline="28" endline="33">dacWrite</referencedby>
+        <referencedby refid="class_analog_io_t_1ab582bcdd8b97fe81dae216ace1e7e827" compoundref="_analog_io_t_8cpp" startline="231" endline="253">AnalogIoT::processDACSetStateMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a4703be8e25568617d28915d14e4df71b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogCard::setDACValue</definition>
+        <argsstring>(uint8_t pin, uint16_t value)</argsstring>
+        <name>setDACValue</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of the specified DAC pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DAC pin to set the value of. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="39" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="56" bodyend="65"/>
+        <references refid="class_analog_card_1a121c84a174bcc6756e82538cfe19477a" compoundref="_analog_card_8cpp" startline="93" endline="110">sendDataToDAC</references>
+        <referencedby refid="class_analog_card_1a7f0a07632ef1db4bfaf64593cbccce66" compoundref="_analog_card_8cpp" startline="28" endline="33">dacWrite</referencedby>
+        <referencedby refid="class_analog_io_t_1adf3114a294de15674d994785a82548f8" compoundref="_analog_io_t_8cpp" startline="263" endline="285">AnalogIoT::processDACSetValueMessage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a748b2025b389bef19fd0249b1b7b0828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogCard::registerDACChangeCallback</definition>
+        <argsstring>(std::function&lt; void(uint8_t, bool, uint16_t)&gt; callback)</argsstring>
+        <name>registerDACChangeCallback</name>
+        <param>
+          <type>std::function&lt; void(uint8_t, bool, uint16_t)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Registers a callback function to be called when the state or value of a DAC pin changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function to register. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handler ID of the registered callback. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="40" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="191" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1a38740886df77565a5f56ef421c22e281" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalogCard::unregisterDACChangeCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterDACChangeCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters a previously registered DAC change callback. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler ID of the callback to unregister. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="41" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="201" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_analog_card_1ab6d7761df1910a16c1531fc6c0c07176" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AnalogCard::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplements refid="class_expansion_card_1a83371d97f1deba4e419093b193aea99c">getType</reimplements>
+        <briefdescription>
+<para>Gets the type of the <ref refid="class_analog_card" kindref="compound">AnalogCard</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The type of the <ref refid="class_analog_card" kindref="compound">AnalogCard</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="42" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp" bodystart="181" bodyend="184"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents the Analog Card. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The analog card has 8 analog inputs accross two banks, and 4 DAC outputs.</para>
+<para><simplesect kind="note"><para>You do not need to specify the ESPMega I/O Address when creating an instance of this class as there can only be one Analog Card installed in the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> board. </para>
+</simplesect>
+<simplesect kind="warning"><para>There can only be one Analog Card installed in the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> board. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AnalogCard</label>
+        <link refid="class_analog_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AnalogCard</label>
+        <link refid="class_analog_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="28" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="28" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_analog_card_1ab01a99dc92b2d5431f5e438c2e4bf7f5" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>AnalogCard</name></member>
+      <member refid="class_analog_card_1a9241cd87812cb356508be77212af5dc5" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>analogInputBankA</name></member>
+      <member refid="class_analog_card_1a4700d072ed09ac6ec6993ef73e484505" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>analogInputBankB</name></member>
+      <member refid="class_analog_card_1a57f3af0fdcbc6ccb651007540c6829c4" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>analogRead</name></member>
+      <member refid="class_analog_card_1a058b9fca0655b1d7d169527a37fe4c34" prot="public" virt="virtual"><scope>AnalogCard</scope><name>begin</name></member>
+      <member refid="class_analog_card_1a48e00632950d10e650e43f79cc2eceb4" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>dac0</name></member>
+      <member refid="class_analog_card_1ae898ce82062a48caa551bacaebbb6d26" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>dac1</name></member>
+      <member refid="class_analog_card_1a1d891ec0444fe42b36bd57d406eaff99" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>dac2</name></member>
+      <member refid="class_analog_card_1a5e264454afaa0fd055901ca5a0d80766" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>dac3</name></member>
+      <member refid="class_analog_card_1a5b63d22b2e8b133045ba4283f4e0e40b" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>dac_change_callbacks</name></member>
+      <member refid="class_analog_card_1ac6eff1f2a5bf777ba33590767cb34c9b" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>dac_state</name></member>
+      <member refid="class_analog_card_1ab262941a893f7eef121834d6b75ff105" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>dac_value</name></member>
+      <member refid="class_analog_card_1a7f0a07632ef1db4bfaf64593cbccce66" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>dacWrite</name></member>
+      <member refid="class_expansion_card_1a3b5afabfdb7183b37b78be1e20e4cde6" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>ExpansionCard</name></member>
+      <member refid="class_analog_card_1aa10a9eb6b4c1f1b7660ea5183a0f618e" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>getDACState</name></member>
+      <member refid="class_analog_card_1a7793911eaabacee0d40dac626e39279a" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>getDACValue</name></member>
+      <member refid="class_analog_card_1ab6d7761df1910a16c1531fc6c0c07176" prot="public" virt="virtual"><scope>AnalogCard</scope><name>getType</name></member>
+      <member refid="class_analog_card_1ac316c7e1dc143606a8282d1b710dc7fa" prot="private" virt="non-virtual"><scope>AnalogCard</scope><name>handler_count</name></member>
+      <member refid="class_analog_card_1a88d1bd2c7028cfddcdf1392a6bd57c2a" prot="public" virt="virtual"><scope>AnalogCard</scope><name>loop</name></member>
+      <member refid="class_analog_card_1a748b2025b389bef19fd0249b1b7b0828" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>registerDACChangeCallback</name></member>
+      <member refid="class_analog_card_1a121c84a174bcc6756e82538cfe19477a" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>sendDataToDAC</name></member>
+      <member refid="class_analog_card_1a445ff04dfcd2f49bb070bcc6e17a13f0" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>setDACState</name></member>
+      <member refid="class_analog_card_1a4703be8e25568617d28915d14e4df71b" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>setDACValue</name></member>
+      <member refid="class_analog_card_1a38740886df77565a5f56ef421c22e281" prot="public" virt="non-virtual"><scope>AnalogCard</scope><name>unregisterDACChangeCallback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

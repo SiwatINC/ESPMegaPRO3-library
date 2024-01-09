@@ -1,0 +1,468 @@
+.TH "ESPMegaDisplay" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESPMegaDisplay \- The \fBESPMegaDisplay\fP class is a class for controlling the \fBESPMegaDisplay\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ESPMegaDisplay\&.hpp>\fP
+.PP
+Inherited by \fBInternalDisplay\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESPMegaDisplay\fP (HardwareSerial *displayAdapter)"
+.br
+.RI "Constructor for the \fBESPMegaDisplay\fP class\&. "
+.ti -1c
+.RI "void \fBbegin\fP ()"
+.br
+.RI "Initializes the display\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The main loop function of the display\&. "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.RI "Restarts the display\&. "
+.ti -1c
+.RI "void \fBsetBrightness\fP (int value)"
+.br
+.RI "Sets the brightness of the display\&. "
+.ti -1c
+.RI "void \fBsetVolume\fP (int value)"
+.br
+.RI "Sets the volume of the display\&. "
+.ti -1c
+.RI "void \fBjumpToPage\fP (int page)"
+.br
+.RI "Jumps to the specified page on the display\&. "
+.ti -1c
+.RI "void \fBsetString\fP (const char *component, const char *value)"
+.br
+.RI "Sets the value of a string component on the display\&. "
+.ti -1c
+.RI "void \fBsetNumber\fP (const char *component, int value)"
+.br
+.RI "Sets the value of a number component on the display\&. "
+.ti -1c
+.RI "const char * \fBgetString\fP (const char *component)"
+.br
+.RI "Gets the value of a string component from the display\&. "
+.ti -1c
+.RI "bool \fBgetStringToBuffer\fP (const char *component, char *buffer, uint8_t buffer_size)"
+.br
+.RI "Gets the value of a number component from the display and stores it in a buffer\&. "
+.ti -1c
+.RI "uint32_t \fBgetNumber\fP (const char *component)"
+.br
+.RI "Gets the value of a number component from the display\&. "
+.ti -1c
+.RI "uint16_t \fBregisterTouchCallback\fP (std::function< void(uint8_t, uint8_t, uint8_t)> callback)"
+.br
+.RI "Registers a callback function for touch events\&. "
+.ti -1c
+.RI "void \fBunregisterTouchCallback\fP (uint16_t handle)"
+.br
+.RI "Unregisters a callback function for touch events\&. "
+.ti -1c
+.RI "uint16_t \fBregisterPageChangeCallback\fP (std::function< void(uint8_t)> callback)"
+.br
+.RI "Registers a callback function for page change events\&. "
+.ti -1c
+.RI "void \fBunregisterPageChangeCallback\fP (uint16_t handle)"
+.br
+.RI "Unregisters a callback function for page change events\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBrecieveSerialCommand\fP ()"
+.br
+.RI "Receives and processes serial commands from the display adapter\&. "
+.ti -1c
+.RI "bool \fBrecieveSerialCommand\fP (bool process)"
+.br
+.RI "Receives and processes serial commands from the display adapter\&. "
+.ti -1c
+.RI "void \fBprocessSerialCommand\fP ()"
+.br
+.RI "Processes the received serial command\&. "
+.ti -1c
+.RI "void \fBprocessTouchPayload\fP ()"
+.br
+.RI "Processes the touch event payload\&. "
+.ti -1c
+.RI "void \fBprocessPageReportPayload\fP ()"
+.br
+.RI "Processes the page report event payload\&. "
+.ti -1c
+.RI "void \fBsendStopBytes\fP ()"
+.br
+.RI "Sends stop bytes to the display adapter\&. "
+.ti -1c
+.RI "void \fBsendCommand\fP (char *command)"
+.br
+.RI "Sends a command to the display adapter\&. "
+.ti -1c
+.RI "bool \fBpayloadIsValid\fP ()"
+.br
+.RI "Checks if the received payload is valid\&. "
+.ti -1c
+.RI "bool \fBwaitForValidPayload\fP (uint32_t timeout)"
+.br
+.RI "Waits for a valid payload from the display adapter\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBcurrentPage\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBrx_buffer_index\fP"
+.br
+.ti -1c
+.RI "char \fBrx_buffer\fP [256]"
+.br
+.ti -1c
+.RI "char \fBtx_buffer\fP [256]"
+.br
+.ti -1c
+.RI "HardwareSerial * \fBdisplayAdapter\fP"
+.br
+.ti -1c
+.RI "std::map< uint16_t, std::function< void(uint8_t, uint8_t, uint8_t)> > \fBtouch_callbacks\fP"
+.br
+.ti -1c
+.RI "std::map< uint16_t, std::function< void(uint8_t)> > \fBpage_change_callbacks\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBESPMegaDisplay\fP class is a class for controlling the \fBESPMegaDisplay\fP\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+The \fBESPMegaDisplay\fP is a UART controlled display\&. 
+.PP
+Connect the Display's TX pin to the ESPMega's RX pin and the Display's RX pin to the ESPMega's TX pin\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESPMegaDisplay::ESPMegaDisplay (HardwareSerial * displayAdapter)"
+
+.PP
+Constructor for the \fBESPMegaDisplay\fP class\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdisplayAdapter\fP The serial adapter connected to the display\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t ESPMegaDisplay::getNumber (const char * component)"
+
+.PP
+Gets the value of a number component from the display\&. 
+.PP
+\fBWarning\fP
+.RS 4
+This function is blocking\&. 
+.PP
+If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcomponent\fP The component name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The value of the number component\&. 
+.RE
+.PP
+
+.SS "const char * ESPMegaDisplay::getString (const char * component)"
+
+.PP
+Gets the value of a string component from the display\&. 
+.PP
+\fBWarning\fP
+.RS 4
+This function is blocking\&. 
+.PP
+If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcomponent\fP The component name\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The value of the string component\&. 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The returned char array must be freed after use\&. 
+.RE
+.PP
+
+.SS "bool ESPMegaDisplay::getStringToBuffer (const char * component, char * buffer, uint8_t buffer_size)"
+
+.PP
+Gets the value of a number component from the display and stores it in a buffer\&. 
+.PP
+\fBWarning\fP
+.RS 4
+This function is blocking\&. 
+.PP
+If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds\&. 
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcomponent\fP The component name\&. 
+.br
+\fIbuffer\fP The buffer to store the value\&. 
+.br
+\fIbuffer_size\fP The size of the buffer\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the value is successfully stored in the buffer, false otherwise\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::jumpToPage (int page)"
+
+.PP
+Jumps to the specified page on the display\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpage\fP The page number to jump to\&. 
+.RE
+.PP
+
+.SS "bool ESPMegaDisplay::payloadIsValid ()\fC [protected]\fP"
+
+.PP
+Checks if the received payload is valid\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the payload is valid, false otherwise\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::processPageReportPayload ()\fC [protected]\fP"
+
+.PP
+Processes the page report event payload\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function interacts directly with the rx_buffer\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::processSerialCommand ()\fC [protected]\fP"
+
+.PP
+Processes the received serial command\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function interacts directly with the rx_buffer\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::processTouchPayload ()\fC [protected]\fP"
+
+.PP
+Processes the touch event payload\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function interacts directly with the rx_buffer\&. 
+.RE
+.PP
+
+.SS "bool ESPMegaDisplay::recieveSerialCommand ()\fC [protected]\fP"
+
+.PP
+Receives and processes serial commands from the display adapter\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if data is received, false otherwise\&. 
+.RE
+.PP
+
+.SS "bool ESPMegaDisplay::recieveSerialCommand (bool process)\fC [protected]\fP"
+
+.PP
+Receives and processes serial commands from the display adapter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprocess\fP Flag indicating whether to process the received commands\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if data is received, false otherwise\&. 
+.RE
+.PP
+
+.SS "uint16_t ESPMegaDisplay::registerPageChangeCallback (std::function< void(uint8_t)> callback)"
+
+.PP
+Registers a callback function for page change events\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handle of the callback function\&. 
+.RE
+.PP
+
+.SS "uint16_t ESPMegaDisplay::registerTouchCallback (std::function< void(uint8_t, uint8_t, uint8_t)> callback)"
+
+.PP
+Registers a callback function for touch events\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handle of the callback function\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::sendCommand (char * command)\fC [protected]\fP"
+
+.PP
+Sends a command to the display adapter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP The command to send\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::setBrightness (int value)"
+
+.PP
+Sets the brightness of the display\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP The brightness value\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::setNumber (const char * component, int value)"
+
+.PP
+Sets the value of a number component on the display\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcomponent\fP The component name\&. 
+.br
+\fIvalue\fP The value to set\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::setString (const char * component, const char * value)"
+
+.PP
+Sets the value of a string component on the display\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcomponent\fP The component name\&. 
+.br
+\fIvalue\fP The value to set\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::setVolume (int value)"
+
+.PP
+Sets the volume of the display\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvalue\fP The volume value\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::unregisterPageChangeCallback (uint16_t handle)"
+
+.PP
+Unregisters a callback function for page change events\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP The handle of the callback function\&. 
+.RE
+.PP
+
+.SS "void ESPMegaDisplay::unregisterTouchCallback (uint16_t handle)"
+
+.PP
+Unregisters a callback function for touch events\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandle\fP The handle of the callback function\&. 
+.RE
+.PP
+
+.SS "bool ESPMegaDisplay::waitForValidPayload (uint32_t timeout)\fC [protected]\fP"
+
+.PP
+Waits for a valid payload from the display adapter\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItimeout\fP The timeout value in milliseconds\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if a valid payload is received, false otherwise\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

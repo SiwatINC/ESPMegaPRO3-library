@@ -1,0 +1,690 @@
+.TH "ESPMegaIoT" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESPMegaIoT \- The \fBESPMegaIoT\fP class is a class that is used to interface with the \fBESPMegaPRO\fP IoT module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ESPMegaIoT\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESPMegaIoT\fP ()"
+.br
+.RI "Create a new \fBESPMegaIoT\fP object\&. "
+.ti -1c
+.RI "\fB~ESPMegaIoT\fP ()"
+.br
+.RI "Destroy the \fBESPMegaIoT\fP object\&. "
+.ti -1c
+.RI "void \fBintr_begin\fP (\fBExpansionCard\fP *cards[])"
+.br
+.RI "Begin the \fBESPMegaIoT\fP object\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The main loop for the \fBESPMegaIoT\fP object\&. "
+.ti -1c
+.RI "void \fBregisterCard\fP (uint8_t card_id)"
+.br
+.RI "Register an existing card for use with IoT\&. "
+.ti -1c
+.RI "void \fBunregisterCard\fP (uint8_t card_id)"
+.br
+.RI "Unregister a card\&. "
+.ti -1c
+.RI "void \fBpublishCard\fP (uint8_t card_id)"
+.br
+.RI "Publish all cards's reports\&. "
+.ti -1c
+.RI "void \fBpublishRelative\fP (char *topic, char *payload)"
+.br
+.RI "Publish a message relative to the base topic\&. "
+.ti -1c
+.RI "void \fBsubscribeRelative\fP (char *topic)"
+.br
+.RI "Subscribe to a topic relative to the base topic\&. "
+.ti -1c
+.RI "void \fBsubscribe\fP (char *topic)"
+.br
+.RI "Subscribe to a topic\&. "
+.ti -1c
+.RI "void \fBunsubscribeFromTopic\fP (char *topic)"
+.br
+.RI "Unsubscribe from a topic\&. "
+.ti -1c
+.RI "void \fBconnectToWifi\fP (char *ssid, char *password)"
+.br
+.RI "Connect to a wifi network\&. "
+.ti -1c
+.RI "void \fBconnectToWifi\fP (char *ssid)"
+.br
+.RI "Connect to a unsecured wifi network\&. "
+.ti -1c
+.RI "void \fBdisconnectFromWifi\fP ()"
+.br
+.RI "Disconnect from the wifi network\&. "
+.ti -1c
+.RI "bool \fBwifiConnected\fP ()"
+.br
+.RI "Check if the wifi is connected\&. "
+.ti -1c
+.RI "void \fBethernetBegin\fP ()"
+.br
+.RI "Begin the ethernet interface\&. "
+.ti -1c
+.RI "void \fBloadNetworkConfig\fP ()"
+.br
+.RI "Load the network config from FRAM\&. "
+.ti -1c
+.RI "void \fBsaveNetworkConfig\fP ()"
+.br
+.RI "Save the network config to FRAM\&. "
+.ti -1c
+.RI "\fBNetworkConfig\fP * \fBgetNetworkConfig\fP ()"
+.br
+.RI "Get the network config\&. "
+.ti -1c
+.RI "\fBMqttConfig\fP * \fBgetMqttConfig\fP ()"
+.br
+.RI "Get the MQTT config\&. "
+.ti -1c
+.RI "void \fBsetMqttConfig\fP (\fBMqttConfig\fP mqtt_config)"
+.br
+.RI "Set the MQTT config\&. "
+.ti -1c
+.RI "void \fBsaveMqttConfig\fP ()"
+.br
+.RI "Save the MQTT config to FRAM\&. "
+.ti -1c
+.RI "void \fBloadMqttConfig\fP ()"
+.br
+.RI "Load the MQTT config from FRAM\&. "
+.ti -1c
+.RI "void \fBconnectNetwork\fP ()"
+.br
+.RI "Connect to the network using the current config\&. "
+.ti -1c
+.RI "void \fBsetNetworkConfig\fP (\fBNetworkConfig\fP network_config)"
+.br
+.RI "Set the network config\&. "
+.ti -1c
+.RI "void \fBconnectToMqtt\fP ()"
+.br
+.RI "Connect to MQTT with the current config\&. "
+.ti -1c
+.RI "bool \fBconnectToMqtt\fP (char *client_id, char *mqtt_server, uint16_t mqtt_port, char *mqtt_user, char *mqtt_password)"
+.br
+.RI "Connect to a MQTT broker with authentication\&. "
+.ti -1c
+.RI "bool \fBconnectToMqtt\fP (char *client_id, char *mqtt_server, uint16_t mqtt_port)"
+.br
+.RI "Connect to a MQTT broker without authentication\&. "
+.ti -1c
+.RI "bool \fBmqttConnected\fP ()"
+.br
+.RI "Check if the MQTT is connected\&. "
+.ti -1c
+.RI "void \fBdisconnectFromMqtt\fP ()"
+.br
+.RI "Disconnect from the MQTT broker\&. "
+.ti -1c
+.RI "void \fBpublish\fP (const char *topic, const char *payload)"
+.br
+.RI "Publish a message to a topic\&. "
+.ti -1c
+.RI "uint8_t \fBregisterMqttCallback\fP (std::function< void(char *, char *)> callback)"
+.br
+.RI "Register a callback for MQTT messages\&. "
+.ti -1c
+.RI "void \fBunregisterMqttCallback\fP (uint8_t handler)"
+.br
+.RI "Unregister a callback\&. "
+.ti -1c
+.RI "uint8_t \fBregisterRelativeMqttCallback\fP (std::function< void(char *, char *)> callback)"
+.br
+.RI "Register a callback for MQTT messages relative to the base topic\&. "
+.ti -1c
+.RI "void \fBunregisterRelativeMqttCallback\fP (uint8_t handler)"
+.br
+.RI "Unregister a relative MQTT callback\&. "
+.ti -1c
+.RI "uint8_t \fBregisterSubscribeCallback\fP (std::function< void(void)> callback)"
+.br
+.RI "Register a function to be called when the \fBESPMegaIoT\fP object is subscribing to topics\&. "
+.ti -1c
+.RI "void \fBunregisterSubscribeCallback\fP (uint8_t handler)"
+.br
+.RI "Unregister a subscribe callback\&. "
+.ti -1c
+.RI "void \fBsetBaseTopic\fP (char *base_topic)"
+.br
+.RI "Set the base topic for the IoT\&. "
+.ti -1c
+.RI "void \fBbindEthernetInterface\fP (ETHClass *ethernetIface)"
+.br
+.RI "Bind an ethernet interface to the \fBESPMegaIoT\fP object\&. "
+.ti -1c
+.RI "bool \fBnetworkConnected\fP ()"
+.br
+.RI "Check if the network is connected\&. "
+.ti -1c
+.RI "void \fBbindFRAM\fP (FRAM *fram)"
+.br
+.RI "Bind a FRAM object to the \fBESPMegaIoT\fP object\&. "
+.ti -1c
+.RI "\fBIoTComponent\fP * \fBgetComponent\fP (uint8_t card_id)"
+.br
+.RI "Get the \fBIoTComponent\fP object for a card\&. "
+.ti -1c
+.RI "IPAddress \fBgetETHIp\fP ()"
+.br
+.RI "Get the Ethernet IP Address\&. "
+.ti -1c
+.RI "IPAddress \fBgetWifiIp\fP ()"
+.br
+.RI "Get the Wifi IP address\&. "
+.ti -1c
+.RI "IPAddress \fBgetIp\fP ()"
+.br
+.RI "Get the IP address of the currently active network interface\&. "
+.ti -1c
+.RI "String \fBgetETHMac\fP ()"
+.br
+.RI "Get the MAC Address of the Ethernet interface\&. "
+.ti -1c
+.RI "String \fBgetWifiMac\fP ()"
+.br
+.RI "Get the MAC Address of the Wifi interface\&. "
+.ti -1c
+.RI "String \fBgetMac\fP ()"
+.br
+.RI "Get the MAC Address of the currently active network interface\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBESPMegaIoT\fP class is a class that is used to interface with the \fBESPMegaPRO\fP IoT module\&. 
+
+This class allows you to register IoT components and interface with them through MQTT\&. This class also manages the network and MQTT connections for you\&. Supports both WiFi and Ethernet\&. Also allows you to save and load network and MQTT configurations to and from FRAM\&. Also provides MQTT helpers for publishing and subscribing to topics\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESPMegaIoT::ESPMegaIoT ()"
+
+.PP
+Create a new \fBESPMegaIoT\fP object\&. 
+.PP
+\fBNote\fP
+.RS 4
+You shold not create this object directly, Instead, you should use the ESPMegaPRO::iot object 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ESPMegaIoT::bindEthernetInterface (ETHClass * ethernetIface)"
+
+.PP
+Bind an ethernet interface to the \fBESPMegaIoT\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIethernetIface\fP The ethernet interface to bind (ETH for \fBESPMegaPRO\fP R3) 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::bindFRAM (FRAM * fram)"
+
+.PP
+Bind a FRAM object to the \fBESPMegaIoT\fP object\&. 
+.PP
+\fBNote\fP
+.RS 4
+This class is hardcode to use the FRAM address 34-300
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIfram\fP The FRAM object to bind 
+.RE
+.PP
+
+.SS "bool ESPMegaIoT::connectToMqtt (char * client_id, char * mqtt_server, uint16_t mqtt_port)"
+
+.PP
+Connect to a MQTT broker without authentication\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclient_id\fP The client id to use 
+.br
+\fImqtt_server\fP The MQTT server to connect to 
+.br
+\fImqtt_port\fP The MQTT port to connect to 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the connection is successful, false otherwise 
+.RE
+.PP
+
+.SS "bool ESPMegaIoT::connectToMqtt (char * client_id, char * mqtt_server, uint16_t mqtt_port, char * mqtt_user, char * mqtt_password)"
+
+.PP
+Connect to a MQTT broker with authentication\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclient_id\fP The client id to use 
+.br
+\fImqtt_server\fP The MQTT server to connect to 
+.br
+\fImqtt_port\fP The MQTT port to connect to 
+.br
+\fImqtt_user\fP The MQTT username to use 
+.br
+\fImqtt_password\fP The MQTT password to use 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the connection is successful, false otherwise 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::connectToWifi (char * ssid)"
+
+.PP
+Connect to a unsecured wifi network\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIssid\fP The SSID of the wifi network 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::connectToWifi (char * ssid, char * password)"
+
+.PP
+Connect to a wifi network\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIssid\fP The SSID of the wifi network 
+.br
+\fIpassword\fP The password of the wifi network 
+.RE
+.PP
+
+.SS "\fBIoTComponent\fP * ESPMegaIoT::getComponent (uint8_t card_id)"
+
+.PP
+Get the \fBIoTComponent\fP object for a card\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcard_id\fP The id of the card 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The \fBIoTComponent\fP object for the card 
+.RE
+.PP
+
+.SS "IPAddress ESPMegaIoT::getETHIp ()"
+
+.PP
+Get the Ethernet IP Address\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The Ethernet IP Address 
+.RE
+.PP
+
+.SS "String ESPMegaIoT::getETHMac ()"
+
+.PP
+Get the MAC Address of the Ethernet interface\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The MAC Address of the Ethernet interface 
+.RE
+.PP
+
+.SS "IPAddress ESPMegaIoT::getIp ()"
+
+.PP
+Get the IP address of the currently active network interface\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The IP address of the currently active network interface 
+.RE
+.PP
+
+.SS "String ESPMegaIoT::getMac ()"
+
+.PP
+Get the MAC Address of the currently active network interface\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The MAC Address of the currently active network interface 
+.RE
+.PP
+
+.SS "\fBMqttConfig\fP * ESPMegaIoT::getMqttConfig ()"
+
+.PP
+Get the MQTT config\&. 
+.PP
+\fBWarning\fP
+.RS 4
+You should not modify the returned struct directly
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The MQTT config struct 
+.RE
+.PP
+
+.SS "\fBNetworkConfig\fP * ESPMegaIoT::getNetworkConfig ()"
+
+.PP
+Get the network config\&. 
+.PP
+\fBWarning\fP
+.RS 4
+You should not modify the returned struct directly
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The network config struct 
+.RE
+.PP
+
+.SS "IPAddress ESPMegaIoT::getWifiIp ()"
+
+.PP
+Get the Wifi IP address\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The Wifi IP address 
+.RE
+.PP
+
+.SS "String ESPMegaIoT::getWifiMac ()"
+
+.PP
+Get the MAC Address of the Wifi interface\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The MAC Address of the Wifi interface 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::intr_begin (\fBExpansionCard\fP * cards[])"
+
+.PP
+Begin the \fBESPMegaIoT\fP object\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcards\fP The array of \fBExpansionCard\fP objects 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::loop ()"
+
+.PP
+The main loop for the \fBESPMegaIoT\fP object\&. 
+.PP
+\fBNote\fP
+.RS 4
+Normally you should not call this function, Instead, you should call \fBESPMegaPRO::loop()\fP 
+.RE
+.PP
+
+.SS "bool ESPMegaIoT::mqttConnected ()"
+
+.PP
+Check if the MQTT is connected\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the MQTT is connected, false otherwise 
+.RE
+.PP
+
+.SS "bool ESPMegaIoT::networkConnected ()"
+
+.PP
+Check if the network is connected\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the network is connected, false otherwise 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::publish (const char * topic, const char * payload)"
+
+.PP
+Publish a message to a topic\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic to publish to 
+.br
+\fIpayload\fP The payload to publish 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::publishRelative (char * topic, char * payload)"
+
+.PP
+Publish a message relative to the base topic\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic to publish to 
+.br
+\fIpayload\fP The payload to publish 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::registerCard (uint8_t card_id)"
+
+.PP
+Register an existing card for use with IoT\&. This function registers an existing card for use with IoT The card should be installed using \fBESPMegaPRO::installCard()\fP before calling this function
+.PP
+\fBParameters\fP
+.RS 4
+\fIcard_id\fP The id of the card 
+.RE
+.PP
+
+.SS "uint8_t ESPMegaIoT::registerMqttCallback (std::function< void(char *, char *)> callback)"
+
+.PP
+Register a callback for MQTT messages\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handler for the callback 
+.RE
+.PP
+
+.SS "uint8_t ESPMegaIoT::registerRelativeMqttCallback (std::function< void(char *, char *)> callback)"
+
+.PP
+Register a callback for MQTT messages relative to the base topic\&. The message's base topic will be removed before calling the callback
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handler for the callback 
+.RE
+.PP
+
+.SS "uint8_t ESPMegaIoT::registerSubscribeCallback (std::function< void(void)> callback)"
+
+.PP
+Register a function to be called when the \fBESPMegaIoT\fP object is subscribing to topics\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handler for the callback 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::setBaseTopic (char * base_topic)"
+
+.PP
+Set the base topic for the IoT\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIbase_topic\fP The base topic 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::setMqttConfig (\fBMqttConfig\fP mqtt_config)"
+
+.PP
+Set the MQTT config\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImqtt_config\fP The MQTT config struct 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::setNetworkConfig (\fBNetworkConfig\fP network_config)"
+
+.PP
+Set the network config\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fInetwork_config\fP The network config struct 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::subscribe (char * topic)"
+
+.PP
+Subscribe to a topic\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic to subscribe to 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::subscribeRelative (char * topic)"
+
+.PP
+Subscribe to a topic relative to the base topic\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic to subscribe to 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::unregisterCard (uint8_t card_id)"
+
+.PP
+Unregister a card\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcard_id\fP The id of the card 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::unregisterMqttCallback (uint8_t handler)"
+
+.PP
+Unregister a callback\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler of the callback 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::unregisterRelativeMqttCallback (uint8_t handler)"
+
+.PP
+Unregister a relative MQTT callback\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler of the callback 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::unregisterSubscribeCallback (uint8_t handler)"
+
+.PP
+Unregister a subscribe callback\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler of the callback 
+.RE
+.PP
+
+.SS "void ESPMegaIoT::unsubscribeFromTopic (char * topic)"
+
+.PP
+Unsubscribe from a topic\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic to unsubscribe from 
+.RE
+.PP
+
+.SS "bool ESPMegaIoT::wifiConnected ()"
+
+.PP
+Check if the wifi is connected\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the wifi is connected, false otherwise 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

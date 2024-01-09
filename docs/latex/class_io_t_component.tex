@@ -1,0 +1,96 @@
+\hypertarget{class_io_t_component}{}\doxysection{Io\+TComponent Class Reference}
+\label{class_io_t_component}\index{IoTComponent@{IoTComponent}}
+
+
+The \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}} class is a base class that is used to interface with an expansion card through MQTT.  
+
+
+
+
+{\ttfamily \#include $<$Io\+TComponent.\+hpp$>$}
+
+
+
+Inheritance diagram for Io\+TComponent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_io_t_component__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_io_t_component_af3068b3087e942700f2756df61567470}\label{class_io_t_component_af3068b3087e942700f2756df61567470}} 
+virtual bool {\bfseries begin} (uint8\+\_\+t card\+\_\+id, \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$card, Pub\+Sub\+Client $\ast$mqtt, char $\ast$base\+\_\+topic)
+\item 
+\mbox{\Hypertarget{class_io_t_component_a1b3fbabfa0e9c1697f0edab1a8d14149}\label{class_io_t_component_a1b3fbabfa0e9c1697f0edab1a8d14149}} 
+virtual void {\bfseries handle\+Mqtt\+Message} (char $\ast$topic, char $\ast$payload)
+\item 
+\mbox{\Hypertarget{class_io_t_component_add98837edef95e9d4f31fba7e210cf09}\label{class_io_t_component_add98837edef95e9d4f31fba7e210cf09}} 
+void {\bfseries set\+Mqtt\+Client} (Pub\+Sub\+Client $\ast$mqtt)
+\item 
+\mbox{\Hypertarget{class_io_t_component_aa8b2aa560998451171ab6c39957cf787}\label{class_io_t_component_aa8b2aa560998451171ab6c39957cf787}} 
+virtual void {\bfseries publish\+Report} ()
+\item 
+\mbox{\Hypertarget{class_io_t_component_a3c5bf4cb3ba447ccbcbf45c9065f288d}\label{class_io_t_component_a3c5bf4cb3ba447ccbcbf45c9065f288d}} 
+virtual uint8\+\_\+t {\bfseries get\+Type} ()
+\item 
+\mbox{\Hypertarget{class_io_t_component_acdf8bc6b4a9f9ac515ff1dc3b63aa330}\label{class_io_t_component_acdf8bc6b4a9f9ac515ff1dc3b63aa330}} 
+virtual void {\bfseries subscribe} ()
+\item 
+\mbox{\Hypertarget{class_io_t_component_a652ae372e38701a301d82466eb0fd20e}\label{class_io_t_component_a652ae372e38701a301d82466eb0fd20e}} 
+void {\bfseries loop} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_io_t_component_a223659969099a0a8aaf84e18c51014dc}\label{class_io_t_component_a223659969099a0a8aaf84e18c51014dc}} 
+void {\bfseries publish\+Relative} (const char $\ast$topic, const char $\ast$payload)
+\item 
+\mbox{\Hypertarget{class_io_t_component_ab7841d6b92b52ed398d5ff1cac0a9625}\label{class_io_t_component_ab7841d6b92b52ed398d5ff1cac0a9625}} 
+void {\bfseries subscribe\+Relative} (const char $\ast$topic)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_io_t_component_aeb90ccffdbf21519987505b9f52f0a57}\label{class_io_t_component_aeb90ccffdbf21519987505b9f52f0a57}} 
+char $\ast$ {\bfseries base\+\_\+topic}
+\item 
+\mbox{\Hypertarget{class_io_t_component_a81926ee5477da6738063128028597e3e}\label{class_io_t_component_a81926ee5477da6738063128028597e3e}} 
+Pub\+Sub\+Client $\ast$ {\bfseries mqtt}
+\item 
+\mbox{\Hypertarget{class_io_t_component_a8ea4f18d3f5adf232137f12d8a8f763a}\label{class_io_t_component_a8ea4f18d3f5adf232137f12d8a8f763a}} 
+uint8\+\_\+t {\bfseries card\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}} class is a base class that is used to interface with an expansion card through MQTT. 
+
+In order to create a new \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}, you should create a new class that inherits from this class. Your class should implement the following functions\+:
+\begin{DoxyItemize}
+\item begin() \+: Initialize the component, record the card id, \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} object, the Pub\+Sub\+Client object and the base topic
+\item handle\+Mqtt\+Message() \+: Handle the MQTT messages for the component
+\item publish\+Report() \+: Publish all the reports for the component
+\item get\+Type() \+: Get the type of the component, This should return the underlying \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} type
+\item subscribe() \+: Subscribe to the MQTT topics used by the component
+\item loop() \+: A function that is called in the main loop
+\end{DoxyItemize}
+
+Additionally, the inherited class will have access to these helper functions\+:
+\begin{DoxyItemize}
+\item publish\+Relative() \+: Publish a message to a topic relative to the base topic and the card id
+\item subscribe\+Relative() \+: Subscribe to a topic relative to the base topic and the card id
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Warning}
+This class is abstract and should not be instantiated directly. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Io\+TComponent.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Io\+TComponent.\+cpp\end{DoxyCompactItemize}

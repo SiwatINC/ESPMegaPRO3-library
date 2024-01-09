@@ -1,0 +1,5 @@
+<map id="DigitalInputCard::registerCallback" name="DigitalInputCard::registerCallback">
+<area shape="rect" id="node1" title="Register a callback function to be called when a pin changes." alt="" coords="531,5,717,47"/>
+<area shape="rect" id="node2" href="$class_internal_display.html#a9e314baf652600542d649f5f0dd1cd68" title="Set the input card to be be shown on the input page." alt="" coords="264,13,483,39"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_p_r_o.html#a025ba61791a6e3b46c9c70e2f0de1f2f" title="Enables, Instanitates, and Initializes the internal display." alt="" coords="5,5,216,47"/>
+</map>

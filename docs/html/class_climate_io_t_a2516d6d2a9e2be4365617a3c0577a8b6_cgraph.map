@@ -1,0 +1,9 @@
+<map id="ClimateIoT::handleSensorUpdate" name="ClimateIoT::handleSensorUpdate">
+<area shape="rect" id="node1" title="This function is a callback function registered with the Climate card to be called when the sensor da..." alt="" coords="5,49,193,90"/>
+<area shape="rect" id="node2" href="$class_climate_io_t.html#a15060120ec8d458d023cf63174caf018" title="Publishes the temperature and humidity of the room to the MQTT broker." alt="" coords="241,56,432,83"/>
+<area shape="rect" id="node3" href="$class_climate_io_t.html#aab50fe7f8fa35d3f62a98b4ef81c7056" title="Publishes the humidity of the room to the MQTT broker." alt="" coords="510,31,717,57"/>
+<area shape="rect" id="node6" href="$class_climate_io_t.html#a0552877211038ed07b697af151d6dcec" title="Publishes the room temperature to the MQTT broker." alt="" coords="480,81,747,108"/>
+<area shape="rect" id="node4" href="$class_climate_card.html#a734fbf0f3471bd0bcbd1f7c24e273185" title="Get the humidity in percent." alt="" coords="825,5,1017,32"/>
+<area shape="rect" id="node5" href="$class_climate_card.html#a2780cd2ee3c06dadda775c9e38de3e2b" title="Get the type of the sensor connected to the card." alt="" coords="817,56,1024,83"/>
+<area shape="rect" id="node7" href="$class_climate_card.html#a975cea4b22a9fa43c23e5e62c21596df" title="Get the room temperature in degrees Celsius." alt="" coords="795,107,1047,133"/>
+</map>

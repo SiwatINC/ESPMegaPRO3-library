@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_climate_card_8cpp" kind="file" language="C++">
+    <compoundname>ClimateCard.cpp</compoundname>
+    <includes refid="_climate_card_8hpp" local="no">ClimateCard.hpp</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>OneWire.h</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>driver/rmt.h</label>
+      </node>
+      <node id="2">
+        <label>ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="9">
+        <label>dhtnew.h</label>
+      </node>
+      <node id="8">
+        <label>DS18B20.h</label>
+      </node>
+      <node id="6">
+        <label>FRAM.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp</label>
+        <link refid="_climate_card_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Implementation file for the <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains the implementation of the <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> class, which represents a climate control card. The <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> class provides methods for controlling an air conditioner, reading temperature and humidity from sensors, and saving and loading the state to/from FRAM memory. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ClimateCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" refkind="member"><highlight class="normal"><ref refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" kindref="member">ClimateCard::ClimateCard</ref>(uint8_t<sp/>ir_pin,<sp/><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref><sp/>ac,<sp/>uint8_t<sp/>sensor_type,<sp/>uint8_t<sp/>sensor_pin)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;ir_pin<sp/>=<sp/>ir_pin;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;ac<sp/>=<sp/>ac;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;sensor_type<sp/>=<sp/>sensor_type;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;sensor_pin<sp/>=<sp/>sensor_pin;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Pointers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;dht<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;ds18b20<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram_address<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram_auto_save<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;humidity<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;room_temperature<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref><sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_climate_card_1a9b4b6fd707c9f507243f0d5dc5b3d854" refkind="member"><highlight class="normal"><ref refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" kindref="member">ClimateCard::ClimateCard</ref>(uint8_t<sp/>ir_pin,<sp/><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref><sp/>ac)<sp/>:<sp/><ref refid="class_climate_card" kindref="compound">ClimateCard</ref>(ir_pin,<sp/>ac,<sp/>AC_SENSOR_TYPE_NONE,<sp/>0)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_climate_card_1a25ee785ee45b87262a3af07cae01023e" refkind="member"><highlight class="normal"><ref refid="class_climate_card_1a25ee785ee45b87262a3af07cae01023e" kindref="member">ClimateCard::~ClimateCard</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>dht;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>ds18b20;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>rmt_driver_uninstall(RMT_TX_CHANNEL);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_climate_card_1aa0649398f58b7093250875c1202711fc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1aa0649398f58b7093250875c1202711fc" kindref="member">ClimateCard::begin</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(sensor_type)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>AC_SENSOR_TYPE_DHT22:</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dht<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DHTNEW(sensor_pin);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>AC_SENSOR_TYPE_DS18B20:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OneWire<sp/>oneWire(sensor_pin);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ds18b20<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DS18B20(&amp;oneWire);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>updateAirConditioner();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>are<sp/>returning<sp/>here<sp/>because<sp/>sending<sp/>IR<sp/>signals<sp/>is<sp/>not<sp/>working<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sensor_pin<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>RMT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gpio_num_t<sp/>gpio_num<sp/>=<sp/>gpio_num_t(ir_pin);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rmt_config_t<sp/>rmt_tx<sp/>=<sp/>RMT_DEFAULT_CONFIG_TX(gpio_num,<sp/>RMT_TX_CHANNEL);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rmt_tx.clk_div<sp/>=<sp/>80;<sp/></highlight><highlight class="comment">//<sp/>1MHz<sp/>clock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rmt_config(&amp;rmt_tx);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rmt_driver_install(rmt_tx.channel,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8" kindref="member">ClimateCard::loop</ref>()</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>last_sensor_update<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(millis()<sp/>-<sp/>last_sensor_update<sp/>&gt;=<sp/>AC_SENSOR_READ_INTERVAL)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_sensor_update<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updateSensor();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_climate_card_1a87ce688cdf3b1acd7526968d599b5422" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a87ce688cdf3b1acd7526968d599b5422" kindref="member">ClimateCard::bindFRAM</ref>(FRAM<sp/>*fram,<sp/>uint16_t<sp/>fram_address)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram<sp/>=<sp/>fram;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram_address<sp/>=<sp/>fram_address;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_climate_card_1aa00bb77607d324938e83a0527344e4ef" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1aa00bb77607d324938e83a0527344e4ef" kindref="member">ClimateCard::setFRAMAutoSave</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>autoSave)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fram_auto_save<sp/>=<sp/>autoSave;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" kindref="member">ClimateCard::saveStateToFRAM</ref>()</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fram<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>fram-&gt;write8(fram_address,<sp/>state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>fram-&gt;write8(fram_address<sp/>+<sp/>1,<sp/>state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>fram-&gt;write8(fram_address<sp/>+<sp/>2,<sp/>state.<ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" kindref="member">ClimateCard::loadStateFromFRAM</ref>()</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fram<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref><sp/>&gt;<sp/>ac.<ref refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" kindref="member">max_temperature</ref>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref><sp/>=<sp/>ac.<ref refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" kindref="member">max_temperature</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref><sp/>&lt;<sp/>ac.<ref refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" kindref="member">min_temperature</ref>)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref><sp/>=<sp/>ac.<ref refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" kindref="member">min_temperature</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>mode<sp/>is<sp/>out<sp/>of<sp/>range,<sp/>set<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref><sp/>&gt;<sp/>ac.<ref refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" kindref="member">modes</ref>)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>fan<sp/>speed<sp/>is<sp/>out<sp/>of<sp/>range,<sp/>set<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state.<ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref><sp/>&gt;<sp/>ac.<ref refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" kindref="member">fan_speeds</ref>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.<ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>updateAirConditioner();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;callback<sp/>:<sp/>callbacks)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.second(this-&gt;state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref>,<sp/>this-&gt;state.ac_fan_speed,<sp/>this-&gt;state.ac_temperature);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" kindref="member">ClimateCard::setTemperature</ref>(uint8_t<sp/>temperature)</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>temperature<sp/>is<sp/>out<sp/>of<sp/>range,<sp/>set<sp/>to<sp/>its<sp/>respective<sp/>maximum<sp/>or<sp/>minimum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temperature<sp/>&gt;<sp/>ac.<ref refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" kindref="member">max_temperature</ref>)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature<sp/>=<sp/>ac.<ref refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" kindref="member">max_temperature</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temperature<sp/>&lt;<sp/>ac.<ref refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" kindref="member">min_temperature</ref>)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature<sp/>=<sp/>ac.<ref refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" kindref="member">min_temperature</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref><sp/>=<sp/>temperature;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>updateAirConditioner();</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fram_auto_save)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" kindref="member">saveStateToFRAM</ref>();</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" kindref="member">ClimateCard::setMode</ref>(uint8_t<sp/>mode)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mode<sp/>&gt;<sp/>ac.<ref refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" kindref="member">modes</ref>)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref><sp/>=<sp/>mode;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>updateAirConditioner();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fram_auto_save)</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" kindref="member">saveStateToFRAM</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" kindref="member">ClimateCard::getModeName</ref>()</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)ac.<ref refid="struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54" kindref="member">mode_names</ref>[state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref>];</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" kindref="member">ClimateCard::getFanSpeedName</ref>()</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)ac.<ref refid="struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf" kindref="member">fan_speed_names</ref>[state.<ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref>];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237" refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" kindref="member">ClimateCard::setFanSpeed</ref>(uint8_t<sp/>fan_speed)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fan_speed<sp/>&gt;<sp/>ac.<ref refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" kindref="member">fan_speeds</ref>)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fan_speed<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state.<ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref><sp/>=<sp/>fan_speed;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>updateAirConditioner();</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fram_auto_save)</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" kindref="member">saveStateToFRAM</ref>();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" kindref="member">ClimateCard::setFanSpeedByName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fan_speed_name)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ac.<ref refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" kindref="member">fan_speeds</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(fan_speed_name,<sp/>ac.<ref refid="struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf" kindref="member">fan_speed_names</ref>[i])<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" kindref="member">setFanSpeed</ref>(i);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" kindref="member">ClimateCard::setModeByName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*mode_name)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ac.<ref refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" kindref="member">modes</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(mode_name,<sp/>ac.<ref refid="struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54" kindref="member">mode_names</ref>[i])<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" kindref="member">setMode</ref>(i);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="class_climate_card_1a2b15582430d577bfa8f07983c5ecaf22" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="class_climate_card_1a2b15582430d577bfa8f07983c5ecaf22" kindref="member">ClimateCard::registerChangeCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(uint8_t,<sp/>uint8_t,<sp/>uint8_t)&gt;<sp/>callback)</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>callbacks[callbacks_handler_count]<sp/>=<sp/>callback;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>callbacks_handler_count++;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="class_climate_card_1a651b1cbd6da6281cfba68e5852e9a597" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="class_climate_card_1a651b1cbd6da6281cfba68e5852e9a597" kindref="member">ClimateCard::getType</ref>()</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CARD_TYPE_CLIMATE;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ClimateCard::updateSensor()</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sensor_type<sp/>==<sp/>AC_SENSOR_TYPE_NONE)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>sensor<sp/>data<sp/>and<sp/>update<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(sensor_type)</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>AC_SENSOR_TYPE_DHT22:</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(millis()<sp/>-<sp/>dht-&gt;lastRead()<sp/>&lt;<sp/>AC_SENSOR_READ_INTERVAL)</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dht-&gt;read();</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>room_temperature<sp/>=<sp/>dht-&gt;getTemperature();</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>humidity<sp/>=<sp/>dht-&gt;getHumidity();</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>AC_SENSOR_TYPE_DS18B20:</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ds18b20-&gt;requestTemperatures();</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>start<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!ds18b20-&gt;isConversionComplete())</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(millis()<sp/>-<sp/>start<sp/>&gt;=<sp/>AC_SENSOR_READ_TIMEOUT)</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>room_temperature<sp/>=<sp/>ds18b20-&gt;getTempC();</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;callback<sp/>:<sp/>sensor_callbacks)</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.second(room_temperature,<sp/>humidity);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ClimateCard::updateAirConditioner()</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>The<sp/>IR<sp/>Transmissions<sp/>are<sp/>not<sp/>working<sp/>yet<sp/>so<sp/>we<sp/>just<sp/>return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>const<sp/>uint16_t*<sp/>ir_code_ptr<sp/>=<sp/>nullptr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>size_t<sp/>itemCount<sp/>=<sp/>(*(this-&gt;ac.getInfraredCode))(this-&gt;state.ac_mode,<sp/>this-&gt;state.ac_fan_speed,<sp/>this-&gt;state.ac_temperature,<sp/>&amp;ir_code_ptr);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>(ir_code_ptr<sp/>==<sp/>nullptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rmt_item32_t<sp/>items[itemCount];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Convert<sp/>IR<sp/>timing<sp/>array<sp/>to<sp/>RMT<sp/>items</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>(size_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>itemCount;<sp/>i+=2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>items[i].level0<sp/>=<sp/>1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>items[i].duration0<sp/>=<sp/>ir_code_ptr[i];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>items[i].level1<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>items[i].duration1<sp/>=<sp/>ir_code_ptr[i+1];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Send<sp/>IR<sp/>signal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rmt_write_items(RMT_TX_CHANNEL,<sp/>items,<sp/>itemCount,<sp/>true);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>rmt_wait_tx_done(RMT_TX_CHANNEL,<sp/>portMAX_DELAY);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Publish<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;callback<sp/>:<sp/>callbacks)</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.second(this-&gt;state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref>,<sp/>this-&gt;state.ac_fan_speed,<sp/>this-&gt;state.ac_temperature);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="377"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384" refid="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" kindref="member">ClimateCard::getSensorType</ref>()</highlight></codeline>
+<codeline lineno="385"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sensor_type;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394" refid="class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df" kindref="member">ClimateCard::getRoomTemperature</ref>()</highlight></codeline>
+<codeline lineno="395"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>room_temperature;</highlight></codeline>
+<codeline lineno="397"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="404" refid="class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185" kindref="member">ClimateCard::getHumidity</ref>()</highlight></codeline>
+<codeline lineno="405"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>humidity;</highlight></codeline>
+<codeline lineno="407"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414" refid="class_climate_card_1a0877f36123ed2fdfe41677bdbac320be" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="class_climate_card_1a0877f36123ed2fdfe41677bdbac320be" kindref="member">ClimateCard::getTemperature</ref>()</highlight></codeline>
+<codeline lineno="415"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state.<ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref>;</highlight></codeline>
+<codeline lineno="417"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424" refid="class_climate_card_1a8a9c0eb63c2e92a01fc39715c1876509" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="class_climate_card_1a8a9c0eb63c2e92a01fc39715c1876509" kindref="member">ClimateCard::getMode</ref>()</highlight></codeline>
+<codeline lineno="425"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state.<ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref>;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434" refid="class_climate_card_1a119c0d4369efb88eab7c99f45b7a62af" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="class_climate_card_1a119c0d4369efb88eab7c99f45b7a62af" kindref="member">ClimateCard::getFanSpeed</ref>()</highlight></codeline>
+<codeline lineno="435"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>state.<ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref>;</highlight></codeline>
+<codeline lineno="437"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446" refid="class_climate_card_1ab95d86d1fc8f2d1f19324f1161afbcaf" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="class_climate_card_1ab95d86d1fc8f2d1f19324f1161afbcaf" kindref="member">ClimateCard::registerSensorCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)&gt;<sp/>callback)</highlight></codeline>
+<codeline lineno="447"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_callbacks[sensor_callbacks_handler_count]<sp/>=<sp/>callback;</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sensor_callbacks_handler_count++;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+<codeline lineno="457" refid="class_climate_card_1a15d887d1b211d461edd0835d0104f7c7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a15d887d1b211d461edd0835d0104f7c7" kindref="member">ClimateCard::unregisterChangeCallback</ref>(uint8_t<sp/>handler)</highlight></codeline>
+<codeline lineno="458"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/>callbacks.erase(handler);</highlight></codeline>
+<codeline lineno="460"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467" refid="class_climate_card_1a13d422d72f933de45cde16477de623ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a13d422d72f933de45cde16477de623ad" kindref="member">ClimateCard::unregisterSensorCallback</ref>(uint8_t<sp/>handler)</highlight></codeline>
+<codeline lineno="468"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor_callbacks.erase(handler);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp"/>
+  </compounddef>
+</doxygen>

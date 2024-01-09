@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_digital_input_card_8hpp" kind="file" language="C++">
+    <compoundname>DigitalInputCard.hpp</compoundname>
+    <includes refid="_expansion_card_8hpp" local="no">ExpansionCard.hpp</includes>
+    <includes local="no">PCF8574.h</includes>
+    <includes local="no">map</includes>
+    <includedby refid="_digital_input_card_8cpp" local="no">/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp</includedby>
+    <includedby refid="_digital_input_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_pro_o_s_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</includedby>
+    <includedby refid="_internal_display_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp</label>
+        <link refid="_digital_input_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>PCF8574.h</label>
+      </node>
+      <node id="2">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp</label>
+        <link refid="_digital_input_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp</label>
+        <link refid="_digital_input_io_t_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</label>
+        <link refid="_e_s_p_mega_web_server_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_digital_input_card" prot="public">DigitalInputCard</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_digital_input_card_8hpp_1aa9393c088a8130b0a859bb4bbd817ad2" prot="public" static="no">
+        <name>CARD_TYPE_DIGITAL_INPUT</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="7" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ExpansionCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;PCF8574.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Card<sp/>Type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CARD_TYPE_DIGITAL_INPUT<sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_digital_input_card" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Instantiate<sp/>the<sp/>card<sp/>with<sp/>the<sp/>specified<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_digital_input_card_1aef0f217a8ef38ca72ed89493467e4c83" kindref="member">DigitalInputCard</ref>(uint8_t<sp/>address_a,<sp/>uint8_t<sp/>address_b);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Instantiate<sp/>the<sp/>card<sp/>with<sp/>the<sp/>specified<sp/>position<sp/>on<sp/>the<sp/>dip<sp/>switch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_digital_input_card_1aef0f217a8ef38ca72ed89493467e4c83" kindref="member">DigitalInputCard</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit0,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit3,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit4,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bit5);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_digital_input_card_1a7b6b51455a010ff0c53fc04ac8091d0e" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Refresh<sp/>and<sp/>Read<sp/>the<sp/>input<sp/>from<sp/>the<sp/>specified<sp/>pin,<sp/>always<sp/>refresh<sp/>the<sp/>input<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_digital_input_card_1a09416f14975c453bb7b9d1fdfc033fd9" kindref="member">digitalRead</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>input<sp/>from<sp/>the<sp/>specified<sp/>pin,<sp/>also<sp/>refresh<sp/>the<sp/>input<sp/>buffers<sp/>if<sp/>refresh<sp/>is<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_digital_input_card_1a09416f14975c453bb7b9d1fdfc033fd9" kindref="member">digitalRead</ref>(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>refresh);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Preform<sp/>a<sp/>loop<sp/>to<sp/>refresh<sp/>the<sp/>input<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_input_card_1a0ab3d3df306ecce30f19a252f5a25a6d" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>input<sp/>buffer<sp/>for<sp/>bank<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_digital_input_card_1adc87fbc7c209d96442c314a1dad8dba8" kindref="member">getInputBufferA</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>input<sp/>buffer<sp/>for<sp/>bank<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_digital_input_card_1a1e3db327def862be330475b6841f8f8c" kindref="member">getInputBufferB</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>debounce<sp/>time<sp/>for<sp/>the<sp/>specified<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_input_card_1a9affdad2396322da8b90075e48fef731" kindref="member">setDebounceTime</ref>(uint8_t<sp/>pin,<sp/>uint32_t<sp/>debounceTime);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>a<sp/>callback<sp/>function<sp/>to<sp/>be<sp/>called<sp/>when<sp/>a<sp/>pin<sp/>changes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_digital_input_card_1a0de99f06d2d41a752026486008ea2261" kindref="member">registerCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(uint8_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)&gt;<sp/>callback);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unregister<sp/>the<sp/>callback<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_input_card_1ad6fb5a8020c323520cd4748c9dc01448" kindref="member">unregisterCallback</ref>(uint8_t<sp/>handler);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>a<sp/>new<sp/>pin<sp/>map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_digital_input_card_1a7c73eabd0016245e681fedb328ba89d8" kindref="member">loadPinMap</ref>(uint8_t<sp/>pinMap[16]);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>type<sp/>of<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_digital_input_card_1aa782d6ffc13a686955811adf36b618d4" kindref="member">getType</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PCF8574<sp/>inputBankA;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PCF8574<sp/>inputBankB;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>address_a;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>address_b;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>inputBufferA;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>inputBufferB;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>previousInputBufferA;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>previousInputBufferB;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>debounceTime[16];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>lastDebounceTime[16];</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>map<sp/>of<sp/>the<sp/>physical<sp/>pin<sp/>to<sp/>the<sp/>virtual<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>pinMap[16];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>map<sp/>of<sp/>the<sp/>virtual<sp/>pin<sp/>to<sp/>the<sp/>physical<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>virtualPinMap[16];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>callbacks_handler_index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;uint8_t,<sp/>std::function&lt;void(uint8_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">)&gt;&gt;<sp/>callbacks;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshInputBankA();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshInputBankB();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handlePinChange(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin,<sp/>uint8_t&amp;<sp/>currentBuffer,<sp/>uint8_t&amp;<sp/>previousBuffer);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_air_conditioner" xml:lang="en-US">
+<title>AirConditioner Struct Reference</title>
+<indexterm><primary>AirConditioner</primary></indexterm>
+<para>
+
+<para>This struct is used to store information about an air conditioner. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ClimateCard.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7"/>uint8_t <link linkend="_struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7">max_temperature</link></para>
+
+<para>Maximum temperature. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28"/>uint8_t <link linkend="_struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28">min_temperature</link></para>
+
+<para>Minimum temperature. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec"/>uint8_t <link linkend="_struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec">modes</link></para>
+
+<para>Number of modes. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54"/>const char ** <link linkend="_struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54">mode_names</link></para>
+
+<para>Names of modes in the form of an array of strings. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b"/>uint8_t <link linkend="_struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b">fan_speeds</link></para>
+
+<para>Number of fan speeds. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf"/>const char ** <link linkend="_struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf">fan_speed_names</link></para>
+
+<para>Names of fan speeds in the form of an array of strings. </para>
+</listitem>
+            <listitem><para>size_t(* <link linkend="_struct_air_conditioner_1abb9aca0520a6fa66db6487b9f33ecfb9">getInfraredCode</link> )(uint8_t, uint8_t, uint8_t, const uint16_t **)</para>
+
+<para>Function to get IR code. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This struct is used to store information about an air conditioner. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_air_conditioner_1abb9aca0520a6fa66db6487b9f33ecfb9"/>    <section>
+    <title>getInfraredCode</title>
+<indexterm><primary>getInfraredCode</primary><secondary>AirConditioner</secondary></indexterm>
+<indexterm><primary>AirConditioner</primary><secondary>getInfraredCode</secondary></indexterm>
+<para><computeroutput>size_t(* AirConditioner::getInfraredCode) (uint8_t, uint8_t, uint8_t, const uint16_t **)</computeroutput></para><para>
+
+<para>Function to get IR code. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>mode</entry>
+                                <entry>
+<para>Mode of the air conditioner </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>fan_speed</entry>
+                                <entry>
+<para>Fan speed of the air conditioner </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>temperature</entry>
+                                <entry>
+<para>Temperature of the air conditioner </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>code</entry>
+                                <entry>
+<para>Pointer to the IR code array</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Size of the IR code array </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp</section>
+</section>

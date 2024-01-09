@@ -1,0 +1,9 @@
+<map id="ClimateCard::getModeName" name="ClimateCard::getModeName">
+<area shape="rect" id="node1" title="Get the name of the current mode." alt="" coords="1004,71,1211,98"/>
+<area shape="rect" id="node2" href="$class_climate_io_t.html#acc5a0774647d0c94d5a8d6eaec9fa23e" title="Publishes the mode of the air conditioner to the MQTT broker." alt="" coords="721,71,956,98"/>
+<area shape="rect" id="node3" href="$class_climate_io_t.html#aa47d6901ed1a95e41d93766a708ac1da" title="Publishes the climate data (temperature, mode, fan speed) to the MQTT broker." alt="" coords="475,71,673,98"/>
+<area shape="rect" id="node4" href="$class_climate_io_t.html#ae9838e9774728052ba52526b89bf5da1" title="This function is a callback function registered with the Climate card to be called when the air condi..." alt="" coords="189,5,427,47"/>
+<area shape="rect" id="node6" href="$class_climate_io_t.html#a0098ee608786b6cea97f50a6602a1026" title="Handle Air Conditioner state change." alt="" coords="195,71,421,98"/>
+<area shape="rect" id="node7" href="$class_climate_io_t.html#aa418416d349122f67b5df4c980dd3526" title="Publishes the climate and sensor data to the MQTT broker." alt="" coords="213,122,403,149"/>
+<area shape="rect" id="node5" href="$class_climate_io_t.html#aad3d146120fb6390867d2900b7fe0f6b" title="Initializes the ClimateIoT component." alt="" coords="5,13,141,39"/>
+</map>

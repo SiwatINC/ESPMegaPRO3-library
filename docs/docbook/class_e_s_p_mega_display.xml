@@ -1,0 +1,1005 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_e_s_p_mega_display" xml:lang="en-US">
+<title>ESPMegaDisplay Class Reference</title>
+<indexterm><primary>ESPMegaDisplay</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_e_s_p_mega_display">ESPMegaDisplay</link> class is a class for controlling the <link linkend="_class_e_s_p_mega_display">ESPMegaDisplay</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ESPMegaDisplay.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for ESPMegaDisplay:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_e_s_p_mega_display_1a4360083078b2ece774a0ec1c400aa72a">ESPMegaDisplay</link> (HardwareSerial *displayAdapter)</para>
+
+<para>Constructor for the <link linkend="_class_e_s_p_mega_display">ESPMegaDisplay</link> class. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1adfd6642f84055724abf6549aa4ed463a"/>void <link linkend="_class_e_s_p_mega_display_1adfd6642f84055724abf6549aa4ed463a">begin</link> ()</para>
+
+<para>Initializes the display. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1a465333c65fdbdbd62f6a8982b03ecf3e"/>void <link linkend="_class_e_s_p_mega_display_1a465333c65fdbdbd62f6a8982b03ecf3e">loop</link> ()</para>
+
+<para>The main loop function of the display. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1a073d4f8a7da95b9b4acd963ab20dbca9"/>void <link linkend="_class_e_s_p_mega_display_1a073d4f8a7da95b9b4acd963ab20dbca9">reset</link> ()</para>
+
+<para>Restarts the display. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1a22cc6197c8f23767525f82157f6772fa">setBrightness</link> (int value)</para>
+
+<para>Sets the brightness of the display. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1adb6d1860150abc6b5ef20ed0e61b2ba2">setVolume</link> (int value)</para>
+
+<para>Sets the volume of the display. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1a66059d32f493fba86c55e092bbf248bb">jumpToPage</link> (int page)</para>
+
+<para>Jumps to the specified page on the display. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1a5374292e7c2a0eec289de7c2130e0ac9">setString</link> (const char *component, const char *value)</para>
+
+<para>Sets the value of a string component on the display. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1a76be0c9c5099711323d30ee429a8133a">setNumber</link> (const char *component, int value)</para>
+
+<para>Sets the value of a number component on the display. </para>
+</listitem>
+            <listitem><para>const char * <link linkend="_class_e_s_p_mega_display_1a69bf78095709e4d36d7ceef987909dfe">getString</link> (const char *component)</para>
+
+<para>Gets the value of a string component from the display. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_display_1aa9ee805cf25d3f70b98ff650da742e9a">getStringToBuffer</link> (const char *component, char *buffer, uint8_t buffer_size)</para>
+
+<para>Gets the value of a number component from the display and stores it in a buffer. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_class_e_s_p_mega_display_1a72fe852174fb83d438cbc7ea70a9ec6f">getNumber</link> (const char *component)</para>
+
+<para>Gets the value of a number component from the display. </para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_e_s_p_mega_display_1ab4bc0794bffbe4dea647649e1b41c07d">registerTouchCallback</link> (std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; callback)</para>
+
+<para>Registers a callback function for touch events. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1a0060a66f442a2fc13b16e7294b0e2faf">unregisterTouchCallback</link> (uint16_t handle)</para>
+
+<para>Unregisters a callback function for touch events. </para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_e_s_p_mega_display_1a435fef88a91a498503250f95d72f30ab">registerPageChangeCallback</link> (std::function&lt; void(uint8_t)&gt; callback)</para>
+
+<para>Registers a callback function for page change events. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1aa129bc1acd35b13fa2777a14ebee61b7">unregisterPageChangeCallback</link> (uint16_t handle)</para>
+
+<para>Unregisters a callback function for page change events. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_display_1ae442963a5ed99212bba46c41f3b7b215">recieveSerialCommand</link> ()</para>
+
+<para>Receives and processes serial commands from the display adapter. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_display_1ada566f9769dd3c06391e5845dc7adc92">recieveSerialCommand</link> (bool process)</para>
+
+<para>Receives and processes serial commands from the display adapter. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932">processSerialCommand</link> ()</para>
+
+<para>Processes the received serial command. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1af7ca531b96d9a70d75b60c7acd5e0c70">processTouchPayload</link> ()</para>
+
+<para>Processes the touch event payload. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1a50fbc6fa94f8e88ba1d008543a2c7535">processPageReportPayload</link> ()</para>
+
+<para>Processes the page report event payload. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72"/>void <link linkend="_class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72">sendStopBytes</link> ()</para>
+
+<para>Sends stop bytes to the display adapter. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_display_1af56f2fad9fa8c4a75ef52f967953d5da">sendCommand</link> (char *command)</para>
+
+<para>Sends a command to the display adapter. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_display_1a6f0c3ec00e8a7d52cf9572ebe54ef367">payloadIsValid</link> ()</para>
+
+<para>Checks if the received payload is valid. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c">waitForValidPayload</link> (uint32_t timeout)</para>
+
+<para>Waits for a valid payload from the display adapter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1aba3f1486492ec4c48937c62234717b8b"/>uint8_t <emphasis role="strong">currentPage</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1ad48219cdaf6da8ce2228f801626a5687"/>uint8_t <emphasis role="strong">rx_buffer_index</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1a334d707f1d7289255773076eaac2bb14"/>char <emphasis role="strong">rx_buffer</emphasis> [256]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1a2e9835362d046e53c5717ee5c247ea36"/>char <emphasis role="strong">tx_buffer</emphasis> [256]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1a6ccab68e98c5dc32d4d3bc4ca10d81bc"/>HardwareSerial * <emphasis role="strong">displayAdapter</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1ab2e0e290d9ba1b8d2aaea4924a6c0295"/>std::map&lt; uint16_t, std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; &gt; <emphasis role="strong">touch_callbacks</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_display_1a56fd8793813104acdd2af0ab0968b198"/>std::map&lt; uint16_t, std::function&lt; void(uint8_t)&gt; &gt; <emphasis role="strong">page_change_callbacks</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_e_s_p_mega_display">ESPMegaDisplay</link> class is a class for controlling the <link linkend="_class_e_s_p_mega_display">ESPMegaDisplay</link>. </para>
+
+
+
+<para><note><title>Note</title>
+
+<para>The <link linkend="_class_e_s_p_mega_display">ESPMegaDisplay</link> is a UART controlled display. </para>
+
+<para>Connect the Display&apos;s TX pin to the ESPMega&apos;s RX pin and the Display&apos;s RX pin to the ESPMega&apos;s TX pin. </para>
+</note>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_e_s_p_mega_display_1a4360083078b2ece774a0ec1c400aa72a"/>    <section>
+    <title>ESPMegaDisplay()</title>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<para><computeroutput>ESPMegaDisplay::ESPMegaDisplay (HardwareSerial * displayAdapter)</computeroutput></para><para>
+
+<para>Constructor for the <link linkend="_class_e_s_p_mega_display">ESPMegaDisplay</link> class. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>displayAdapter</entry>
+                                <entry>
+<para>The serial adapter connected to the display. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_e_s_p_mega_display_1a72fe852174fb83d438cbc7ea70a9ec6f"/>    <section>
+    <title>getNumber()</title>
+<indexterm><primary>getNumber</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>getNumber</secondary></indexterm>
+<para><computeroutput>uint32_t ESPMegaDisplay::getNumber (const char * component)</computeroutput></para><para>
+
+<para>Gets the value of a number component from the display. </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>This function is blocking. </para>
+
+<para>If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds. </para>
+</warning>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>component</entry>
+                                <entry>
+<para>The component name. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The value of the number component. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a72fe852174fb83d438cbc7ea70a9ec6f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a69bf78095709e4d36d7ceef987909dfe"/>    <section>
+    <title>getString()</title>
+<indexterm><primary>getString</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>getString</secondary></indexterm>
+<para><computeroutput>const char * ESPMegaDisplay::getString (const char * component)</computeroutput></para><para>
+
+<para>Gets the value of a string component from the display. </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>This function is blocking. </para>
+
+<para>If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds. </para>
+</warning>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>component</entry>
+                                <entry>
+<para>The component name. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The value of the string component. </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The returned char array must be freed after use. </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a69bf78095709e4d36d7ceef987909dfe_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1aa9ee805cf25d3f70b98ff650da742e9a"/>    <section>
+    <title>getStringToBuffer()</title>
+<indexterm><primary>getStringToBuffer</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>getStringToBuffer</secondary></indexterm>
+<para><computeroutput>bool ESPMegaDisplay::getStringToBuffer (const char * component, char * buffer, uint8_t buffer_size)</computeroutput></para><para>
+
+<para>Gets the value of a number component from the display and stores it in a buffer. </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>This function is blocking. </para>
+
+<para>If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds. </para>
+</warning>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>component</entry>
+                                <entry>
+<para>The component name. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>buffer</entry>
+                                <entry>
+<para>The buffer to store the value. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>buffer_size</entry>
+                                <entry>
+<para>The size of the buffer. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the value is successfully stored in the buffer, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_aa9ee805cf25d3f70b98ff650da742e9a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a66059d32f493fba86c55e092bbf248bb"/>    <section>
+    <title>jumpToPage()</title>
+<indexterm><primary>jumpToPage</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>jumpToPage</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::jumpToPage (int page)</computeroutput></para><para>
+
+<para>Jumps to the specified page on the display. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>page</entry>
+                                <entry>
+<para>The page number to jump to. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a66059d32f493fba86c55e092bbf248bb_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a66059d32f493fba86c55e092bbf248bb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a6f0c3ec00e8a7d52cf9572ebe54ef367"/>    <section>
+    <title>payloadIsValid()</title>
+<indexterm><primary>payloadIsValid</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>payloadIsValid</secondary></indexterm>
+<para><computeroutput>bool ESPMegaDisplay::payloadIsValid ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Checks if the received payload is valid. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the payload is valid, false otherwise. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a6f0c3ec00e8a7d52cf9572ebe54ef367_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a50fbc6fa94f8e88ba1d008543a2c7535"/>    <section>
+    <title>processPageReportPayload()</title>
+<indexterm><primary>processPageReportPayload</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>processPageReportPayload</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::processPageReportPayload ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Processes the page report event payload. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function interacts directly with the rx_buffer. </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a50fbc6fa94f8e88ba1d008543a2c7535_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932"/>    <section>
+    <title>processSerialCommand()</title>
+<indexterm><primary>processSerialCommand</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>processSerialCommand</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::processSerialCommand ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Processes the received serial command. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function interacts directly with the rx_buffer. </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a65da2ffe1baa4d9e1e886467b2908932_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a65da2ffe1baa4d9e1e886467b2908932_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1af7ca531b96d9a70d75b60c7acd5e0c70"/>    <section>
+    <title>processTouchPayload()</title>
+<indexterm><primary>processTouchPayload</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>processTouchPayload</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::processTouchPayload ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Processes the touch event payload. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function interacts directly with the rx_buffer. </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_af7ca531b96d9a70d75b60c7acd5e0c70_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1ae442963a5ed99212bba46c41f3b7b215"/>    <section>
+    <title>recieveSerialCommand()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>recieveSerialCommand</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>recieveSerialCommand</secondary></indexterm>
+<para><computeroutput>bool ESPMegaDisplay::recieveSerialCommand ( )<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Receives and processes serial commands from the display adapter. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if data is received, false otherwise. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_ae442963a5ed99212bba46c41f3b7b215_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1ada566f9769dd3c06391e5845dc7adc92"/>    <section>
+    <title>recieveSerialCommand()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>recieveSerialCommand</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>recieveSerialCommand</secondary></indexterm>
+<para><computeroutput>bool ESPMegaDisplay::recieveSerialCommand (bool process)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Receives and processes serial commands from the display adapter. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>process</entry>
+                                <entry>
+<para>Flag indicating whether to process the received commands. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if data is received, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_ada566f9769dd3c06391e5845dc7adc92_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a435fef88a91a498503250f95d72f30ab"/>    <section>
+    <title>registerPageChangeCallback()</title>
+<indexterm><primary>registerPageChangeCallback</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>registerPageChangeCallback</secondary></indexterm>
+<para><computeroutput>uint16_t ESPMegaDisplay::registerPageChangeCallback (std::function&lt; void(uint8_t)&gt; callback)</computeroutput></para><para>
+
+<para>Registers a callback function for page change events. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handle of the callback function. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a435fef88a91a498503250f95d72f30ab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1ab4bc0794bffbe4dea647649e1b41c07d"/>    <section>
+    <title>registerTouchCallback()</title>
+<indexterm><primary>registerTouchCallback</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>registerTouchCallback</secondary></indexterm>
+<para><computeroutput>uint16_t ESPMegaDisplay::registerTouchCallback (std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; callback)</computeroutput></para><para>
+
+<para>Registers a callback function for touch events. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handle of the callback function. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_ab4bc0794bffbe4dea647649e1b41c07d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1af56f2fad9fa8c4a75ef52f967953d5da"/>    <section>
+    <title>sendCommand()</title>
+<indexterm><primary>sendCommand</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>sendCommand</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::sendCommand (char * command)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Sends a command to the display adapter. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>command</entry>
+                                <entry>
+<para>The command to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_af56f2fad9fa8c4a75ef52f967953d5da_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a22cc6197c8f23767525f82157f6772fa"/>    <section>
+    <title>setBrightness()</title>
+<indexterm><primary>setBrightness</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>setBrightness</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::setBrightness (int value)</computeroutput></para><para>
+
+<para>Sets the brightness of the display. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The brightness value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a22cc6197c8f23767525f82157f6772fa_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a76be0c9c5099711323d30ee429a8133a"/>    <section>
+    <title>setNumber()</title>
+<indexterm><primary>setNumber</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>setNumber</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::setNumber (const char * component, int value)</computeroutput></para><para>
+
+<para>Sets the value of a number component on the display. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>component</entry>
+                                <entry>
+<para>The component name. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The value to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a76be0c9c5099711323d30ee429a8133a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a5374292e7c2a0eec289de7c2130e0ac9"/>    <section>
+    <title>setString()</title>
+<indexterm><primary>setString</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>setString</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::setString (const char * component, const char * value)</computeroutput></para><para>
+
+<para>Sets the value of a string component on the display. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>component</entry>
+                                <entry>
+<para>The component name. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The value to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a5374292e7c2a0eec289de7c2130e0ac9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1adb6d1860150abc6b5ef20ed0e61b2ba2"/>    <section>
+    <title>setVolume()</title>
+<indexterm><primary>setVolume</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>setVolume</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::setVolume (int value)</computeroutput></para><para>
+
+<para>Sets the volume of the display. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The volume value. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_adb6d1860150abc6b5ef20ed0e61b2ba2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1aa129bc1acd35b13fa2777a14ebee61b7"/>    <section>
+    <title>unregisterPageChangeCallback()</title>
+<indexterm><primary>unregisterPageChangeCallback</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>unregisterPageChangeCallback</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::unregisterPageChangeCallback (uint16_t handle)</computeroutput></para><para>
+
+<para>Unregisters a callback function for page change events. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handle</entry>
+                                <entry>
+<para>The handle of the callback function. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a0060a66f442a2fc13b16e7294b0e2faf"/>    <section>
+    <title>unregisterTouchCallback()</title>
+<indexterm><primary>unregisterTouchCallback</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>unregisterTouchCallback</secondary></indexterm>
+<para><computeroutput>void ESPMegaDisplay::unregisterTouchCallback (uint16_t handle)</computeroutput></para><para>
+
+<para>Unregisters a callback function for touch events. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handle</entry>
+                                <entry>
+<para>The handle of the callback function. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c"/>    <section>
+    <title>waitForValidPayload()</title>
+<indexterm><primary>waitForValidPayload</primary><secondary>ESPMegaDisplay</secondary></indexterm>
+<indexterm><primary>ESPMegaDisplay</primary><secondary>waitForValidPayload</secondary></indexterm>
+<para><computeroutput>bool ESPMegaDisplay::waitForValidPayload (uint32_t timeout)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Waits for a valid payload from the display adapter. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>timeout</entry>
+                                <entry>
+<para>The timeout value in milliseconds. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if a valid payload is received, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a152ac85f3b883e5866ad303b8c53dc9c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_display_a152ac85f3b883e5866ad303b8c53dc9c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp</section>
+</section>

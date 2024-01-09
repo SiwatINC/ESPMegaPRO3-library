@@ -1,0 +1,4 @@
+<map id="ClimateCard::setMode" name="ClimateCard::setMode">
+<area shape="rect" id="node1" title="Set the mode of the air conditioner." alt="" coords="276,5,443,32"/>
+<area shape="rect" id="node2" href="$class_climate_card.html#a2780d9bb76438ddd00fa8beb418583f6" title="Set mode by name." alt="" coords="5,5,228,32"/>
+</map>

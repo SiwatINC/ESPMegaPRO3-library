@@ -1,0 +1,49 @@
+.TH "ExpansionCard" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ExpansionCard \- The base class for all expansion cards\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ExpansionCard\&.hpp>\fP
+.PP
+Inherited by \fBAnalogCard\fP, \fBClimateCard\fP, \fBDigitalInputCard\fP, and \fBDigitalOutputCard\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBloop\fP ()"
+.br
+.ti -1c
+.RI "virtual uint8_t \fBgetType\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The base class for all expansion cards\&. 
+
+In order to create a new expansion card, you should create a new class that inherits from this class\&. Your class should implement the following functions:
+.IP "\(bu" 2
+begin() : Initialize the card
+.IP "\(bu" 2
+loop() : A function that is called in the main loop
+.IP "\(bu" 2
+getType() : Get the type of the card, The type should be a unique number between 0 and 255
+.PP
+.PP
+\fBWarning\fP
+.RS 4
+This class is abstract and should not be instantiated directly\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

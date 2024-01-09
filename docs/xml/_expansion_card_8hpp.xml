@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_expansion_card_8hpp" kind="file" language="C++">
+    <compoundname>ExpansionCard.hpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includedby refid="_analog_card_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp</includedby>
+    <includedby refid="_climate_card_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp</includedby>
+    <includedby refid="_climate_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp</includedby>
+    <includedby refid="_digital_input_card_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp</includedby>
+    <includedby refid="_digital_output_card_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp</includedby>
+    <includedby refid="_digital_output_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_pro_o_s_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</includedby>
+    <includedby refid="_io_t_component_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="14">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp</label>
+        <link refid="_digital_input_card_8hpp_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalInputIoT.hpp</label>
+        <link refid="_digital_input_io_t_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalOutputIoT.hpp</label>
+        <link refid="_digital_output_io_t_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp</label>
+        <link refid="_analog_card_8cpp"/>
+      </node>
+      <node id="13">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp</label>
+        <link refid="_analog_io_t_8cpp"/>
+      </node>
+      <node id="18">
+        <label>/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp</label>
+        <link refid="_io_t_component_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</label>
+        <link refid="_e_s_p_mega_web_server_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp_source"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp</label>
+        <link refid="_analog_io_t_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp</label>
+        <link refid="_analog_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp</label>
+        <link refid="_digital_output_card_8hpp_source"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp</label>
+        <link refid="_climate_card_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_expansion_card" prot="public">ExpansionCard</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_expansion_card" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Instantiate<sp/>the<sp/>card<sp/>with<sp/>the<sp/>specified<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>begin();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Preform<sp/>a<sp/>loop<sp/>to<sp/>refresh<sp/>the<sp/>input<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loop();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>card<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint8_t<sp/>getType();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp"/>
+  </compounddef>
+</doxygen>

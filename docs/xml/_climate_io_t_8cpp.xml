@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_climate_io_t_8cpp" kind="file" language="C++">
+    <compoundname>ClimateIoT.cpp</compoundname>
+    <includes refid="_climate_io_t_8hpp" local="no">ClimateIoT.hpp</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>OneWire.h</label>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>PubSubClient.h</label>
+      </node>
+      <node id="7">
+        <label>esp_log.h</label>
+      </node>
+      <node id="2">
+        <label>ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>IoTComponent.hpp</label>
+        <link refid="_io_t_component_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>driver/rmt.h</label>
+      </node>
+      <node id="8">
+        <label>ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Arduino.h</label>
+      </node>
+      <node id="13">
+        <label>dhtnew.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp</label>
+        <link refid="_climate_io_t_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>DS18B20.h</label>
+      </node>
+      <node id="10">
+        <label>FRAM.h</label>
+      </node>
+      <node id="4">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;ClimateIoT.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">ClimateIoT::ClimateIoT()<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_climate_io_t_1a54535f32b8bda07e5295bcda18b311fe" refkind="member"><highlight class="normal"><ref refid="class_climate_io_t_1a54535f32b8bda07e5295bcda18b311fe" kindref="member">ClimateIoT::~ClimateIoT</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Destructor<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b" kindref="member">ClimateIoT::begin</ref>(uint8_t<sp/>card_id,<sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref><sp/>*card,<sp/>PubSubClient<sp/>*mqtt,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*base_topic)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;mqtt<sp/>=<sp/>mqtt;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;base_topic<sp/>=<sp/>base_topic;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;card_id<sp/>=<sp/>card_id;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;card<sp/>=<sp/>(<ref refid="class_climate_card" kindref="compound">ClimateCard</ref><sp/>*)card;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reister<sp/>Callbacks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedSensorCallback<sp/>=<sp/>std::bind(&amp;<ref refid="class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6" kindref="member">ClimateIoT::handleSensorUpdate</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1,<sp/>std::placeholders::_2);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;card-&gt;registerSensorCallback(bindedSensorCallback);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedAirConditionerCallback<sp/>=<sp/>std::bind(&amp;<ref refid="class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1" kindref="member">ClimateIoT::handleAirConditionerUpdate</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1,<sp/>std::placeholders::_2,<sp/>std::placeholders::_3);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;card-&gt;registerChangeCallback(bindedAirConditionerCallback);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ClimateIoT&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Climate<sp/>IoT<sp/>Component<sp/>initialized&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_climate_io_t_1a3ca9eea384da622be06cf56a3d264aff" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a3ca9eea384da622be06cf56a3d264aff" kindref="member">ClimateIoT::handleMqttMessage</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>topic_length<sp/>=<sp/>strlen(topic);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;processSetTemperatureMessage(topic,<sp/>payload,<sp/>topic_length))</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;processSetModeMessage(topic,<sp/>payload,<sp/>topic_length))</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;processSetFanSpeedMessage(topic,<sp/>payload,<sp/>topic_length))</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;processRequestStateMessage(topic,<sp/>payload,<sp/>topic_length))</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876" kindref="member">ClimateIoT::publishClimateTemperature</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>payload[5];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>itoa(this-&gt;card-&gt;<ref refid="class_climate_card_1a0877f36123ed2fdfe41677bdbac320be" kindref="member">getTemperature</ref>(),<sp/>payload,<sp/>10);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;publishRelative(AC_TEMPERATURE_REPORT_TOPIC,<sp/>payload);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e" kindref="member">ClimateIoT::publishClimateMode</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;publishRelative(AC_MODE_REPORT_TOPIC,<sp/>this-&gt;card-&gt;<ref refid="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" kindref="member">getModeName</ref>());</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46" kindref="member">ClimateIoT::publishClimateFanSpeed</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;publishRelative(AC_FAN_SPEED_REPORT_TOPIC,<sp/>this-&gt;card-&gt;<ref refid="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" kindref="member">getFanSpeedName</ref>());</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" kindref="member">ClimateIoT::publishSensor</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" kindref="member">publishRoomTemperature</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" kindref="member">publishHumidity</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" kindref="member">ClimateIoT::publishClimate</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876" kindref="member">publishClimateTemperature</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e" kindref="member">publishClimateMode</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46" kindref="member">publishClimateFanSpeed</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" kindref="member">ClimateIoT::publishRoomTemperature</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;card-&gt;<ref refid="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" kindref="member">getSensorType</ref>()<sp/>==<sp/>AC_SENSOR_TYPE_NONE<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>payload[5];</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>itoa(this-&gt;card-&gt;<ref refid="class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df" kindref="member">getRoomTemperature</ref>(),<sp/>payload,<sp/>10);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;publishRelative(AC_ROOM_TEMPERATURE_REPORT_TOPIC,<sp/>payload);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" kindref="member">ClimateIoT::publishHumidity</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;card-&gt;<ref refid="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" kindref="member">getSensorType</ref>()<sp/>==<sp/>AC_SENSOR_TYPE_DHT22)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>payload[5];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>itoa(this-&gt;card-&gt;<ref refid="class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185" kindref="member">getHumidity</ref>(),<sp/>payload,<sp/>10);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;publishRelative(AC_HUMIDITY_REPORT_TOPIC,<sp/>payload);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="class_climate_io_t_1a0098ee608786b6cea97f50a6602a1026" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a0098ee608786b6cea97f50a6602a1026" kindref="member">ClimateIoT::handleStateChange</ref>(uint8_t<sp/>temperature,<sp/>uint8_t<sp/>mode,<sp/>uint8_t<sp/>fan_speed)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" kindref="member">publishClimate</ref>();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526" kindref="member">ClimateIoT::publishReport</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" kindref="member">publishClimate</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" kindref="member">publishSensor</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="class_climate_io_t_1aa450a354851fbc82b54e32f3ffd9d359" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1aa450a354851fbc82b54e32f3ffd9d359" kindref="member">ClimateIoT::subscribe</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ClimateIoT&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>topics&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;subscribeRelative(AC_TEMPERATURE_SET_TOPIC);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;subscribeRelative(AC_MODE_SET_TOPIC);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;subscribeRelative(AC_FAN_SPEED_SET_TOPIC);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ClimateIoT&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Subscribed<sp/>to<sp/>topics&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_climate_io_t_1afe6cc8ae2063d700c5a7d5554aad2cd1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1afe6cc8ae2063d700c5a7d5554aad2cd1" kindref="member">ClimateIoT::loop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="class_climate_io_t_1a488320647faf79d26fdf8f0ea406f315" refkind="member"><highlight class="normal">uint8_t<sp/><ref refid="class_climate_io_t_1a488320647faf79d26fdf8f0ea406f315" kindref="member">ClimateIoT::getType</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CARD_TYPE_CLIMATE;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ClimateIoT::processSetTemperatureMessage(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload,<sp/>uint8_t<sp/>topic_length)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp(topic,<sp/>AC_TEMPERATURE_SET_TOPIC))<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>temperature<sp/>=<sp/>atoi(payload);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;card-&gt;<ref refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" kindref="member">setTemperature</ref>(temperature);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ClimateIoT::processSetModeMessage(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload,<sp/>uint8_t<sp/>topic_length)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp(topic,<sp/>AC_MODE_SET_TOPIC))<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;card-&gt;<ref refid="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" kindref="member">setModeByName</ref>(payload);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ClimateIoT::processSetFanSpeedMessage(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload,<sp/>uint8_t<sp/>topic_length)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp(topic,<sp/>AC_FAN_SPEED_SET_TOPIC))<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;card-&gt;<ref refid="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" kindref="member">setFanSpeedByName</ref>(payload);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ClimateIoT::processRequestStateMessage(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*payload,<sp/>uint8_t<sp/>topic_length)<sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!strcmp(topic,<sp/>AC_REQUEST_STATE_TOPIC))<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526" kindref="member">publishReport</ref>();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6" kindref="member">ClimateIoT::handleSensorUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temperature,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>humidity)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" kindref="member">publishSensor</ref>();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1" kindref="member">ClimateIoT::handleAirConditionerUpdate</ref>(uint8_t<sp/>mode,<sp/>uint8_t<sp/>fan_speed,<sp/>uint8_t<sp/>temperature)<sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" kindref="member">publishClimate</ref>();</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp"/>
+  </compounddef>
+</doxygen>

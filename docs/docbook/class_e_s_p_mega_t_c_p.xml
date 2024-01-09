@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_e_s_p_mega_t_c_p" xml:lang="en-US">
+<title>ESPMegaTCP Class Reference</title>
+<indexterm><primary>ESPMegaTCP</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_t_c_p_1acafa15e0c9ffa8496c97ef7a4b33bf7e"/>void <emphasis role="strong">begin</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_t_c_p_1a5996867daaa1b8359821ea41444a3259"/>void <emphasis role="strong">loop</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/siwat/ESPMegaPRO3-library/ESPMegaTCP.hpp</section>

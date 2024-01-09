@@ -1,0 +1,874 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_e_s_p_mega_display" kind="class" language="C++" prot="public">
+    <compoundname>ESPMegaDisplay</compoundname>
+    <derivedcompoundref refid="class_internal_display" prot="public" virt="non-virtual">InternalDisplay</derivedcompoundref>
+    <includes refid="_e_s_p_mega_display_8hpp" local="no">ESPMegaDisplay.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_e_s_p_mega_display_1aba3f1486492ec4c48937c62234717b8b" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaDisplay::currentPage</definition>
+        <argsstring></argsstring>
+        <name>currentPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="35" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_display_1ad48219cdaf6da8ce2228f801626a5687" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaDisplay::rx_buffer_index</definition>
+        <argsstring></argsstring>
+        <name>rx_buffer_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="36" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_display_1a334d707f1d7289255773076eaac2bb14" prot="protected" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ESPMegaDisplay::rx_buffer[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>rx_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="37" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_display_1a2e9835362d046e53c5717ee5c247ea36" prot="protected" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ESPMegaDisplay::tx_buffer[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>tx_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="38" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_display_1a6ccab68e98c5dc32d4d3bc4ca10d81bc" prot="protected" static="no" mutable="no">
+        <type>HardwareSerial *</type>
+        <definition>HardwareSerial* ESPMegaDisplay::displayAdapter</definition>
+        <argsstring></argsstring>
+        <name>displayAdapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="48" column="24" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_display_1ab2e0e290d9ba1b8d2aaea4924a6c0295" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; uint16_t, std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; &gt;</type>
+        <definition>std::map&lt;uint16_t, std::function&lt;void(uint8_t, uint8_t, uint8_t)&gt; &gt; ESPMegaDisplay::touch_callbacks</definition>
+        <argsstring></argsstring>
+        <name>touch_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="49" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_display_1a56fd8793813104acdd2af0ab0968b198" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; uint16_t, std::function&lt; void(uint8_t)&gt; &gt;</type>
+        <definition>std::map&lt;uint16_t, std::function&lt;void(uint8_t)&gt; &gt; ESPMegaDisplay::page_change_callbacks</definition>
+        <argsstring></argsstring>
+        <name>page_change_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="50" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a4360083078b2ece774a0ec1c400aa72a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ESPMegaDisplay::ESPMegaDisplay</definition>
+        <argsstring>(HardwareSerial *displayAdapter)</argsstring>
+        <name>ESPMegaDisplay</name>
+        <param>
+          <type>HardwareSerial *</type>
+          <declname>displayAdapter</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the <ref refid="class_e_s_p_mega_display" kindref="compound">ESPMegaDisplay</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>displayAdapter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The serial adapter connected to the display. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="17" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="430" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1adfd6642f84055724abf6549aa4ed463a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Initializes the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="18" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="440" bodyend="446"/>
+        <references refid="class_e_s_p_mega_display_1a073d4f8a7da95b9b4acd963ab20dbca9" compoundref="_e_s_p_mega_display_8cpp" startline="417" endline="424">reset</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a465333c65fdbdbd62f6a8982b03ecf3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>The main loop function of the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="19" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="451" bodyend="456"/>
+        <references refid="class_e_s_p_mega_display_1ae442963a5ed99212bba46c41f3b7b215" compoundref="_e_s_p_mega_display_8cpp" startline="32" endline="35">recieveSerialCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a073d4f8a7da95b9b4acd963ab20dbca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Restarts the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="20" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="417" bodyend="424"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+        <referencedby refid="class_e_s_p_mega_display_1adfd6642f84055724abf6549aa4ed463a" compoundref="_e_s_p_mega_display_8cpp" startline="440" endline="446">begin</referencedby>
+        <referencedby refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" compoundref="_internal_display_8cpp" startline="11" endline="29">InternalDisplay::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a22cc6197c8f23767525f82157f6772fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::setBrightness</definition>
+        <argsstring>(int value)</argsstring>
+        <name>setBrightness</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the brightness of the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The brightness value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="21" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="396" bodyend="401"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1adb6d1860150abc6b5ef20ed0e61b2ba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::setVolume</definition>
+        <argsstring>(int value)</argsstring>
+        <name>setVolume</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the volume of the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The volume value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="22" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="407" bodyend="412"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a66059d32f493fba86c55e092bbf248bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::jumpToPage</definition>
+        <argsstring>(int page)</argsstring>
+        <name>jumpToPage</name>
+        <param>
+          <type>int</type>
+          <declname>page</declname>
+        </param>
+        <briefdescription>
+<para>Jumps to the specified page on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>page</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The page number to jump to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="23" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="131" bodyend="136"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+        <referencedby refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" compoundref="_internal_display_8cpp" startline="11" endline="29">InternalDisplay::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a5374292e7c2a0eec289de7c2130e0ac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::setString</definition>
+        <argsstring>(const char *component, const char *value)</argsstring>
+        <name>setString</name>
+        <param>
+          <type>const char *</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of a string component on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="24" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="156" bodyend="163"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a76be0c9c5099711323d30ee429a8133a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::setNumber</definition>
+        <argsstring>(const char *component, int value)</argsstring>
+        <name>setNumber</name>
+        <param>
+          <type>const char *</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value of a number component on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="25" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="143" bodyend="149"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a69bf78095709e4d36d7ceef987909dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * ESPMegaDisplay::getString</definition>
+        <argsstring>(const char *component)</argsstring>
+        <name>getString</name>
+        <param>
+          <type>const char *</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of a string component from the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This function is blocking. </para>
+</simplesect>
+<simplesect kind="warning"><para>If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the string component. </para>
+</simplesect>
+<simplesect kind="note"><para>The returned char array must be freed after use. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="26" column="20" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="233" bodyend="283"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+        <references refid="class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c" compoundref="_e_s_p_mega_display_8cpp" startline="359" endline="372">waitForValidPayload</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1aa9ee805cf25d3f70b98ff650da742e9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaDisplay::getStringToBuffer</definition>
+        <argsstring>(const char *component, char *buffer, uint8_t buffer_size)</argsstring>
+        <name>getStringToBuffer</name>
+        <param>
+          <type>const char *</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>buffer_size</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of a number component from the display and stores it in a buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This function is blocking. </para>
+</simplesect>
+<simplesect kind="warning"><para>If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to store the value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the buffer. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the value is successfully stored in the buffer, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="27" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="294" bodyend="352"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+        <references refid="class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c" compoundref="_e_s_p_mega_display_8cpp" startline="359" endline="372">waitForValidPayload</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a72fe852174fb83d438cbc7ea70a9ec6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t ESPMegaDisplay::getNumber</definition>
+        <argsstring>(const char *component)</argsstring>
+        <name>getNumber</name>
+        <param>
+          <type>const char *</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+<para>Gets the value of a number component from the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This function is blocking. </para>
+</simplesect>
+<simplesect kind="warning"><para>If the display does not respond or is not connected, this function will block for up to DISPLAY_FETCH_RETRY_COUNT * DISPLAY_FETCH_TIMEOUT milliseconds. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the number component. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="28" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="172" bodyend="223"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+        <references refid="class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c" compoundref="_e_s_p_mega_display_8cpp" startline="359" endline="372">waitForValidPayload</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1ab4bc0794bffbe4dea647649e1b41c07d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t ESPMegaDisplay::registerTouchCallback</definition>
+        <argsstring>(std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt; callback)</argsstring>
+        <name>registerTouchCallback</name>
+        <param>
+          <type>std::function&lt; void(uint8_t, uint8_t, uint8_t)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Registers a callback function for touch events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handle of the callback function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="29" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="463" bodyend="468"/>
+        <referencedby refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" compoundref="_internal_display_8cpp" startline="11" endline="29">InternalDisplay::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a0060a66f442a2fc13b16e7294b0e2faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::unregisterTouchCallback</definition>
+        <argsstring>(uint16_t handle)</argsstring>
+        <name>unregisterTouchCallback</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters a callback function for touch events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handle of the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="30" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="474" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a435fef88a91a498503250f95d72f30ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t ESPMegaDisplay::registerPageChangeCallback</definition>
+        <argsstring>(std::function&lt; void(uint8_t)&gt; callback)</argsstring>
+        <name>registerPageChangeCallback</name>
+        <param>
+          <type>std::function&lt; void(uint8_t)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Registers a callback function for page change events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handle of the callback function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="31" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="484" bodyend="489"/>
+        <referencedby refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" compoundref="_internal_display_8cpp" startline="11" endline="29">InternalDisplay::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1aa129bc1acd35b13fa2777a14ebee61b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::unregisterPageChangeCallback</definition>
+        <argsstring>(uint16_t handle)</argsstring>
+        <name>unregisterPageChangeCallback</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters a callback function for page change events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handle of the callback function. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="32" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="495" bodyend="498"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_e_s_p_mega_display_1ae442963a5ed99212bba46c41f3b7b215" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaDisplay::recieveSerialCommand</definition>
+        <argsstring>()</argsstring>
+        <name>recieveSerialCommand</name>
+        <briefdescription>
+<para>Receives and processes serial commands from the display adapter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if data is received, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="39" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="32" bodyend="35"/>
+        <referencedby refid="class_e_s_p_mega_display_1a465333c65fdbdbd62f6a8982b03ecf3e" compoundref="_e_s_p_mega_display_8cpp" startline="451" endline="456">loop</referencedby>
+        <referencedby refid="class_internal_display_1acba3729be902fcde3e30e754aef62330" compoundref="_internal_display_8cpp" startline="36" endline="55">InternalDisplay::loop</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c" compoundref="_e_s_p_mega_display_8cpp" startline="359" endline="372">waitForValidPayload</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1ada566f9769dd3c06391e5845dc7adc92" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaDisplay::recieveSerialCommand</definition>
+        <argsstring>(bool process)</argsstring>
+        <name>recieveSerialCommand</name>
+        <param>
+          <type>bool</type>
+          <declname>process</declname>
+        </param>
+        <briefdescription>
+<para>Receives and processes serial commands from the display adapter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>process</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flag indicating whether to process the received commands. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if data is received, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="40" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="8" bodyend="26"/>
+        <references refid="class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932" compoundref="_e_s_p_mega_display_8cpp" startline="41" endline="62">processSerialCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::processSerialCommand</definition>
+        <argsstring>()</argsstring>
+        <name>processSerialCommand</name>
+        <briefdescription>
+<para>Processes the received serial command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function interacts directly with the rx_buffer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="41" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="41" bodyend="62"/>
+        <references refid="class_e_s_p_mega_display_1a6f0c3ec00e8a7d52cf9572ebe54ef367" compoundref="_e_s_p_mega_display_8cpp" startline="378" endline="390">payloadIsValid</references>
+        <references refid="class_e_s_p_mega_display_1a50fbc6fa94f8e88ba1d008543a2c7535" compoundref="_e_s_p_mega_display_8cpp" startline="90" endline="105">processPageReportPayload</references>
+        <references refid="class_e_s_p_mega_display_1af7ca531b96d9a70d75b60c7acd5e0c70" compoundref="_e_s_p_mega_display_8cpp" startline="68" endline="84">processTouchPayload</references>
+        <referencedby refid="class_e_s_p_mega_display_1ada566f9769dd3c06391e5845dc7adc92" compoundref="_e_s_p_mega_display_8cpp" startline="8" endline="26">recieveSerialCommand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1af7ca531b96d9a70d75b60c7acd5e0c70" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::processTouchPayload</definition>
+        <argsstring>()</argsstring>
+        <name>processTouchPayload</name>
+        <briefdescription>
+<para>Processes the touch event payload. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function interacts directly with the rx_buffer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="42" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="68" bodyend="84"/>
+        <referencedby refid="class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932" compoundref="_e_s_p_mega_display_8cpp" startline="41" endline="62">processSerialCommand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a50fbc6fa94f8e88ba1d008543a2c7535" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::processPageReportPayload</definition>
+        <argsstring>()</argsstring>
+        <name>processPageReportPayload</name>
+        <briefdescription>
+<para>Processes the page report event payload. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function interacts directly with the rx_buffer. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="43" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="90" bodyend="105"/>
+        <referencedby refid="class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932" compoundref="_e_s_p_mega_display_8cpp" startline="41" endline="62">processSerialCommand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::sendStopBytes</definition>
+        <argsstring>()</argsstring>
+        <name>sendStopBytes</name>
+        <briefdescription>
+<para>Sends stop bytes to the display adapter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="44" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="110" bodyend="115"/>
+        <referencedby refid="class_e_s_p_mega_display_1a72fe852174fb83d438cbc7ea70a9ec6f" compoundref="_e_s_p_mega_display_8cpp" startline="172" endline="223">getNumber</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a69bf78095709e4d36d7ceef987909dfe" compoundref="_e_s_p_mega_display_8cpp" startline="233" endline="283">getString</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1aa9ee805cf25d3f70b98ff650da742e9a" compoundref="_e_s_p_mega_display_8cpp" startline="294" endline="352">getStringToBuffer</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a66059d32f493fba86c55e092bbf248bb" compoundref="_e_s_p_mega_display_8cpp" startline="131" endline="136">jumpToPage</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a073d4f8a7da95b9b4acd963ab20dbca9" compoundref="_e_s_p_mega_display_8cpp" startline="417" endline="424">reset</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1af56f2fad9fa8c4a75ef52f967953d5da" compoundref="_e_s_p_mega_display_8cpp" startline="121" endline="125">sendCommand</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a22cc6197c8f23767525f82157f6772fa" compoundref="_e_s_p_mega_display_8cpp" startline="396" endline="401">setBrightness</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a76be0c9c5099711323d30ee429a8133a" compoundref="_e_s_p_mega_display_8cpp" startline="143" endline="149">setNumber</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a5374292e7c2a0eec289de7c2130e0ac9" compoundref="_e_s_p_mega_display_8cpp" startline="156" endline="163">setString</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1adb6d1860150abc6b5ef20ed0e61b2ba2" compoundref="_e_s_p_mega_display_8cpp" startline="407" endline="412">setVolume</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1af56f2fad9fa8c4a75ef52f967953d5da" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaDisplay::sendCommand</definition>
+        <argsstring>(char *command)</argsstring>
+        <name>sendCommand</name>
+        <param>
+          <type>char *</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Sends a command to the display adapter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to send. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="45" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="121" bodyend="125"/>
+        <references refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" compoundref="_e_s_p_mega_display_8cpp" startline="110" endline="115">sendStopBytes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a6f0c3ec00e8a7d52cf9572ebe54ef367" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaDisplay::payloadIsValid</definition>
+        <argsstring>()</argsstring>
+        <name>payloadIsValid</name>
+        <briefdescription>
+<para>Checks if the received payload is valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the payload is valid, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="46" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="378" bodyend="390"/>
+        <referencedby refid="class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932" compoundref="_e_s_p_mega_display_8cpp" startline="41" endline="62">processSerialCommand</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c" compoundref="_e_s_p_mega_display_8cpp" startline="359" endline="372">waitForValidPayload</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaDisplay::waitForValidPayload</definition>
+        <argsstring>(uint32_t timeout)</argsstring>
+        <name>waitForValidPayload</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Waits for a valid payload from the display adapter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The timeout value in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if a valid payload is received, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="47" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.cpp" bodystart="359" bodyend="372"/>
+        <references refid="class_e_s_p_mega_display_1a6f0c3ec00e8a7d52cf9572ebe54ef367" compoundref="_e_s_p_mega_display_8cpp" startline="378" endline="390">payloadIsValid</references>
+        <references refid="class_e_s_p_mega_display_1ae442963a5ed99212bba46c41f3b7b215" compoundref="_e_s_p_mega_display_8cpp" startline="32" endline="35">recieveSerialCommand</references>
+        <referencedby refid="class_e_s_p_mega_display_1a72fe852174fb83d438cbc7ea70a9ec6f" compoundref="_e_s_p_mega_display_8cpp" startline="172" endline="223">getNumber</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1a69bf78095709e4d36d7ceef987909dfe" compoundref="_e_s_p_mega_display_8cpp" startline="233" endline="283">getString</referencedby>
+        <referencedby refid="class_e_s_p_mega_display_1aa9ee805cf25d3f70b98ff650da742e9a" compoundref="_e_s_p_mega_display_8cpp" startline="294" endline="352">getStringToBuffer</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_e_s_p_mega_display" kindref="compound">ESPMegaDisplay</ref> class is a class for controlling the <ref refid="class_e_s_p_mega_display" kindref="compound">ESPMegaDisplay</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>The <ref refid="class_e_s_p_mega_display" kindref="compound">ESPMegaDisplay</ref> is a UART controlled display. </para>
+</simplesect>
+<simplesect kind="note"><para>Connect the Display&apos;s TX pin to the ESPMega&apos;s RX pin and the Display&apos;s RX pin to the ESPMega&apos;s TX pin. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ESPMegaDisplay</label>
+        <link refid="class_e_s_p_mega_display"/>
+      </node>
+      <node id="2">
+        <label>InternalDisplay</label>
+        <link refid="class_internal_display"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" line="14" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaDisplay.hpp" bodystart="15" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_e_s_p_mega_display_1adfd6642f84055724abf6549aa4ed463a" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>begin</name></member>
+      <member refid="class_e_s_p_mega_display_1aba3f1486492ec4c48937c62234717b8b" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>currentPage</name></member>
+      <member refid="class_e_s_p_mega_display_1a6ccab68e98c5dc32d4d3bc4ca10d81bc" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>displayAdapter</name></member>
+      <member refid="class_e_s_p_mega_display_1a4360083078b2ece774a0ec1c400aa72a" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>ESPMegaDisplay</name></member>
+      <member refid="class_e_s_p_mega_display_1a72fe852174fb83d438cbc7ea70a9ec6f" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>getNumber</name></member>
+      <member refid="class_e_s_p_mega_display_1a69bf78095709e4d36d7ceef987909dfe" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>getString</name></member>
+      <member refid="class_e_s_p_mega_display_1aa9ee805cf25d3f70b98ff650da742e9a" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>getStringToBuffer</name></member>
+      <member refid="class_e_s_p_mega_display_1a66059d32f493fba86c55e092bbf248bb" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>jumpToPage</name></member>
+      <member refid="class_e_s_p_mega_display_1a465333c65fdbdbd62f6a8982b03ecf3e" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>loop</name></member>
+      <member refid="class_e_s_p_mega_display_1a56fd8793813104acdd2af0ab0968b198" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>page_change_callbacks</name></member>
+      <member refid="class_e_s_p_mega_display_1a6f0c3ec00e8a7d52cf9572ebe54ef367" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>payloadIsValid</name></member>
+      <member refid="class_e_s_p_mega_display_1a50fbc6fa94f8e88ba1d008543a2c7535" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>processPageReportPayload</name></member>
+      <member refid="class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>processSerialCommand</name></member>
+      <member refid="class_e_s_p_mega_display_1af7ca531b96d9a70d75b60c7acd5e0c70" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>processTouchPayload</name></member>
+      <member refid="class_e_s_p_mega_display_1ae442963a5ed99212bba46c41f3b7b215" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>recieveSerialCommand</name></member>
+      <member refid="class_e_s_p_mega_display_1ada566f9769dd3c06391e5845dc7adc92" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>recieveSerialCommand</name></member>
+      <member refid="class_e_s_p_mega_display_1a435fef88a91a498503250f95d72f30ab" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>registerPageChangeCallback</name></member>
+      <member refid="class_e_s_p_mega_display_1ab4bc0794bffbe4dea647649e1b41c07d" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>registerTouchCallback</name></member>
+      <member refid="class_e_s_p_mega_display_1a073d4f8a7da95b9b4acd963ab20dbca9" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>reset</name></member>
+      <member refid="class_e_s_p_mega_display_1a334d707f1d7289255773076eaac2bb14" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>rx_buffer</name></member>
+      <member refid="class_e_s_p_mega_display_1ad48219cdaf6da8ce2228f801626a5687" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>rx_buffer_index</name></member>
+      <member refid="class_e_s_p_mega_display_1af56f2fad9fa8c4a75ef52f967953d5da" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>sendCommand</name></member>
+      <member refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>sendStopBytes</name></member>
+      <member refid="class_e_s_p_mega_display_1a22cc6197c8f23767525f82157f6772fa" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>setBrightness</name></member>
+      <member refid="class_e_s_p_mega_display_1a76be0c9c5099711323d30ee429a8133a" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>setNumber</name></member>
+      <member refid="class_e_s_p_mega_display_1a5374292e7c2a0eec289de7c2130e0ac9" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>setString</name></member>
+      <member refid="class_e_s_p_mega_display_1adb6d1860150abc6b5ef20ed0e61b2ba2" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>setVolume</name></member>
+      <member refid="class_e_s_p_mega_display_1ab2e0e290d9ba1b8d2aaea4924a6c0295" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>touch_callbacks</name></member>
+      <member refid="class_e_s_p_mega_display_1a2e9835362d046e53c5717ee5c247ea36" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>tx_buffer</name></member>
+      <member refid="class_e_s_p_mega_display_1aa129bc1acd35b13fa2777a14ebee61b7" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>unregisterPageChangeCallback</name></member>
+      <member refid="class_e_s_p_mega_display_1a0060a66f442a2fc13b16e7294b0e2faf" prot="public" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>unregisterTouchCallback</name></member>
+      <member refid="class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c" prot="protected" virt="non-virtual"><scope>ESPMegaDisplay</scope><name>waitForValidPayload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

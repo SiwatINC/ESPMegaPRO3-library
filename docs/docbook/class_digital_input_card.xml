@@ -1,0 +1,552 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_digital_input_card" xml:lang="en-US">
+<title>DigitalInputCard Class Reference</title>
+<indexterm><primary>DigitalInputCard</primary></indexterm>
+<para>
+
+<para><link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> Digital Input Card. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;DigitalInputCard.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for DigitalInputCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_card__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for DigitalInputCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_card__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_digital_input_card_1aef0f217a8ef38ca72ed89493467e4c83">DigitalInputCard</link> (uint8_t address_a, uint8_t address_b)</para>
+
+<para>Create a new Digital Input Card object with the specified address. </para>
+</listitem>
+            <listitem><para><link linkend="_class_digital_input_card_1a56c0295b4571c26a100c2e7600d0f50c">DigitalInputCard</link> (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4, bool bit5)</para>
+
+<para>Create a new Digital Input Card object with the specified position on the dip switch. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_digital_input_card_1a7b6b51455a010ff0c53fc04ac8091d0e">begin</link> ()</para>
+
+<para>Initialize the Digital Input Card. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_digital_input_card_1a09416f14975c453bb7b9d1fdfc033fd9">digitalRead</link> (uint8_t pin)</para>
+
+<para>Read the input from the specified pin, always refresh the input buffers. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_digital_input_card_1a367136fd2642dace15231c63c4520753">digitalRead</link> (uint8_t pin, bool refresh)</para>
+
+<para>Read the input from the specified pin, also refresh the input buffers if refresh is true. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_card_1a0ab3d3df306ecce30f19a252f5a25a6d">loop</link> ()</para>
+
+<para>A loop to refresh the input buffers and check for pin changes. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_digital_input_card_1adc87fbc7c209d96442c314a1dad8dba8">getInputBufferA</link> ()</para>
+
+<para>Get the input buffer for bank A (the first 8 pins) </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_digital_input_card_1a1e3db327def862be330475b6841f8f8c">getInputBufferB</link> ()</para>
+
+<para>Get the input buffer for bank B (the last 8 pins) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_card_1a9affdad2396322da8b90075e48fef731">setDebounceTime</link> (uint8_t pin, uint32_t debounceTime)</para>
+
+<para>Set the debounce time for the specified pin. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_digital_input_card_1a0de99f06d2d41a752026486008ea2261">registerCallback</link> (std::function&lt; void(uint8_t, bool)&gt; callback)</para>
+
+<para>Register a callback function to be called when a pin changes. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_card_1ad6fb5a8020c323520cd4748c9dc01448">unregisterCallback</link> (uint8_t handler)</para>
+
+<para>Unregister a callback function. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_input_card_1a7c73eabd0016245e681fedb328ba89d8">loadPinMap</link> (uint8_t pinMap[16])</para>
+
+<para>Load the pin map for the card. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_digital_input_card_1aa782d6ffc13a686955811adf36b618d4">getType</link> ()</para>
+
+<para>Get the type of the card. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> Digital Input Card. </para>
+
+
+
+<para>This class represents the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> Digital Input Card. It allows you to read the state of the digital inputs from the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> Digital Input Card. It also allows you to register callback functions to be called when a pin changes. The callback function also support debouncing. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_digital_input_card_1aef0f217a8ef38ca72ed89493467e4c83"/>    <section>
+    <title>DigitalInputCard()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>DigitalInputCard</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>DigitalInputCard</secondary></indexterm>
+<para><computeroutput>DigitalInputCard::DigitalInputCard (uint8_t address_a, uint8_t address_b)</computeroutput></para><para>
+
+<para>Create a new Digital Input Card object with the specified address. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>If you are using the ESPMegaI/O board, you should use the dip switch constructor</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>address_a</entry>
+                                <entry>
+<para>The ESPMegaI/O address of bank A </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>address_b</entry>
+                                <entry>
+<para>The ESPMegaI/O address of bank B </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_digital_input_card_1a56c0295b4571c26a100c2e7600d0f50c"/>    <section>
+    <title>DigitalInputCard()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>DigitalInputCard</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>DigitalInputCard</secondary></indexterm>
+<para><computeroutput>DigitalInputCard::DigitalInputCard (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4, bool bit5)</computeroutput></para><para>
+
+<para>Create a new Digital Input Card object with the specified position on the dip switch. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>The bit 0 are at the left of the dip switch</para>
+</note>
+<warning><title>Warning</title>
+
+<para>There are 6 switches on the dip switch, 3 for bank A and 3 for bank B, They should be unique for each bank accross all the cards</para>
+</warning>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>bit0</entry>
+                                <entry>
+<para>The position of the first switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit1</entry>
+                                <entry>
+<para>The position of the second switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit2</entry>
+                                <entry>
+<para>The position of the third switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit3</entry>
+                                <entry>
+<para>The position of the fourth switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit4</entry>
+                                <entry>
+<para>The position of the fifth switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit5</entry>
+                                <entry>
+<para>The position of the sixth switch on the dip switch </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_digital_input_card_1a7b6b51455a010ff0c53fc04ac8091d0e"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool DigitalInputCard::begin ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initialize the Digital Input Card. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the initialization is successful, false otherwise </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_digital_input_card_1a09416f14975c453bb7b9d1fdfc033fd9"/>    <section>
+    <title>digitalRead()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>digitalRead</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>digitalRead</secondary></indexterm>
+<para><computeroutput>bool DigitalInputCard::digitalRead (uint8_t pin)</computeroutput></para><para>
+
+<para>Read the input from the specified pin, always refresh the input buffers. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to read from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the pin is HIGH, false if the pin is LOW </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_card_a09416f14975c453bb7b9d1fdfc033fd9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_card_1a367136fd2642dace15231c63c4520753"/>    <section>
+    <title>digitalRead()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>digitalRead</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>digitalRead</secondary></indexterm>
+<para><computeroutput>bool DigitalInputCard::digitalRead (uint8_t pin, bool refresh)</computeroutput></para><para>
+
+<para>Read the input from the specified pin, also refresh the input buffers if refresh is true. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to read from </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>refresh</entry>
+                                <entry>
+<para>If true, the input buffers will be refreshed before reading the pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the pin is HIGH, false if the pin is LOW </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_digital_input_card_1adc87fbc7c209d96442c314a1dad8dba8"/>    <section>
+    <title>getInputBufferA()</title>
+<indexterm><primary>getInputBufferA</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>getInputBufferA</secondary></indexterm>
+<para><computeroutput>uint8_t DigitalInputCard::getInputBufferA ( )</computeroutput></para><para>
+
+<para>Get the input buffer for bank A (the first 8 pins) </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The input buffer for bank A where the first bit is the first pin and the last bit is the last pin </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_digital_input_card_1a1e3db327def862be330475b6841f8f8c"/>    <section>
+    <title>getInputBufferB()</title>
+<indexterm><primary>getInputBufferB</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>getInputBufferB</secondary></indexterm>
+<para><computeroutput>uint8_t DigitalInputCard::getInputBufferB ( )</computeroutput></para><para>
+
+<para>Get the input buffer for bank B (the last 8 pins) </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The input buffer for bank B where the first bit is the first pin and the last bit is the last pin </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_digital_input_card_1aa782d6ffc13a686955811adf36b618d4"/>    <section>
+    <title>getType()</title>
+<indexterm><primary>getType</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>getType</secondary></indexterm>
+<para><computeroutput>uint8_t DigitalInputCard::getType ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Get the type of the card. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The type of the card </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_digital_input_card_1a7c73eabd0016245e681fedb328ba89d8"/>    <section>
+    <title>loadPinMap()</title>
+<indexterm><primary>loadPinMap</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>loadPinMap</secondary></indexterm>
+<para><computeroutput>void DigitalInputCard::loadPinMap (uint8_t pinMap[16])</computeroutput></para><para>
+
+<para>Load the pin map for the card. </para>
+</para>
+
+<para>A pin map is an array of 16 elements that maps the physical pins to virtual pins The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class The physical pins are the pins on the Input IC, This can be found on the schematic of the ESPMegaI/O board This function is useful if you want to change the number identification of the pins to match your project needs</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pinMap</entry>
+                                <entry>
+<para>The pin map to load </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_card_a7c73eabd0016245e681fedb328ba89d8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_card_1a0ab3d3df306ecce30f19a252f5a25a6d"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void DigitalInputCard::loop ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>A loop to refresh the input buffers and check for pin changes. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Although this function can be called in the main loop, it is recommended install the card in ESPMega to automatically manage the loop </para>
+</note>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_card_a0ab3d3df306ecce30f19a252f5a25a6d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_card_1a0de99f06d2d41a752026486008ea2261"/>    <section>
+    <title>registerCallback()</title>
+<indexterm><primary>registerCallback</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>registerCallback</secondary></indexterm>
+<para><computeroutput>uint8_t DigitalInputCard::registerCallback (std::function&lt; void(uint8_t, bool)&gt; callback)</computeroutput></para><para>
+
+<para>Register a callback function to be called when a pin changes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function to be called </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handler of the callback function </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_card_a0de99f06d2d41a752026486008ea2261_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_input_card_1a9affdad2396322da8b90075e48fef731"/>    <section>
+    <title>setDebounceTime()</title>
+<indexterm><primary>setDebounceTime</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>setDebounceTime</secondary></indexterm>
+<para><computeroutput>void DigitalInputCard::setDebounceTime (uint8_t pin, uint32_t debounceTime)</computeroutput></para><para>
+
+<para>Set the debounce time for the specified pin. </para>
+</para>
+
+<para>Debounce is the time in milliseconds that the pin should be stable before the callback function is called This is useful to prevent false triggers when the input is noisy An example of this is when the input is connected to a mechanical switch</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to set the debounce time for </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>debounceTime</entry>
+                                <entry>
+<para>The debounce time in milliseconds </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_digital_input_card_1ad6fb5a8020c323520cd4748c9dc01448"/>    <section>
+    <title>unregisterCallback()</title>
+<indexterm><primary>unregisterCallback</primary><secondary>DigitalInputCard</secondary></indexterm>
+<indexterm><primary>DigitalInputCard</primary><secondary>unregisterCallback</secondary></indexterm>
+<para><computeroutput>void DigitalInputCard::unregisterCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregister a callback function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler of the callback function to unregister </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_input_card_ad6fb5a8020c323520cd4748c9dc01448_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp</section>
+</section>

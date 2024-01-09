@@ -1,0 +1,5 @@
+<map id="ESPMegaDisplay::processTouchPayload" name="ESPMegaDisplay::processTouchPayload">
+<area shape="rect" id="node1" title="Processes the touch event payload." alt="" coords="549,5,775,47"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a65da2ffe1baa4d9e1e886467b2908932" title="Processes the received serial command." alt="" coords="276,5,501,47"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_display.html#ada566f9769dd3c06391e5845dc7adc92" title="Receives and processes serial commands from the display adapter." alt="" coords="5,5,228,47"/>
+</map>

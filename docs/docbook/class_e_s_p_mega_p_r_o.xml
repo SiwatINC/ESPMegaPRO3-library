@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_e_s_p_mega_p_r_o" xml:lang="en-US">
+<title>ESPMegaPRO Class Reference</title>
+<indexterm><primary>ESPMegaPRO</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> class is the main class for the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> library. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ESPMegaProOS.hpp&gt;</computeroutput>
+</para>
+Collaboration diagram for ESPMegaPRO:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_e_s_p_mega_p_r_o_1ac06222dfa4d6dbf604d2a2490f0924ec">ESPMegaPRO</link> ()</para>
+
+<para>Create a new <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d">begin</link> ()</para>
+
+<para>Initializes the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599">loop</link> ()</para>
+
+<para>The main loop for the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450">installCard</link> (uint8_t slot, <link linkend="_class_expansion_card">ExpansionCard</link> *card)</para>
+
+<para>Installs an expansion card to the specified slot. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_p_r_o_1ab263d5baf53948d0790c5e22d3c2e4e3">updateTimeFromNTP</link> ()</para>
+
+<para>Updates the internal RTC from NTP. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_p_r_o_1aa6436515e96f420606fd7069737fc67f">enableIotModule</link> ()</para>
+
+<para>Enables, Instanitates, and Initializes the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> module. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f">enableInternalDisplay</link> (HardwareSerial *serial)</para>
+
+<para>Enables, Instanitates, and Initializes the internal display. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee">enableWebServer</link> (uint16_t port)</para>
+
+<para>Enables the internal web server. </para>
+</listitem>
+            <listitem><para><link linkend="_structrtctime__t">rtctime_t</link> <link linkend="_class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f">getTime</link> ()</para>
+
+<para>Gets the current time from the internal RTC. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_p_r_o_1a34d6ab7e6fe349bca6f41d8c86a8ab99">dumpFRAMtoSerial</link> (uint16_t start, uint16_t end)</para>
+
+<para>Dumps the contents of the internal FRAM to the serial port. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_p_r_o_1a7590608e32da0efbf6c375aa3d3a0a77">dumpFRAMtoSerialASCII</link> (uint16_t start, uint16_t end)</para>
+
+<para>Dumps the contents of the internal FRAM to the serial port in ASCII. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_p_r_o_1a456cfbdb9987a2e90e6f0eabeae42b83">setTime</link> (int hours, int minutes, int seconds, int day, int month, int year)</para>
+
+<para>Sets the current time of the internal RTC. </para>
+</listitem>
+            <listitem><para><link linkend="_class_expansion_card">ExpansionCard</link> * <link linkend="_class_e_s_p_mega_p_r_o_1a569bef7ba6d96fdcbc7f02ad2cc5a422">getCard</link> (uint8_t slot)</para>
+
+<para>Gets the expansion card installed at the specified slot. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_p_r_o_1a90aec2f3b041dd528ee587dadeca9d8a"/>FRAM <emphasis role="strong">fram</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_p_r_o_1a8ce5a40e5721a887c0dfcf00484b0719"/><link linkend="_class_digital_input_card">DigitalInputCard</link> <emphasis role="strong">inputs</emphasis> = <link linkend="_class_digital_input_card">DigitalInputCard</link>(INPUT_BANK_A_ADDRESS, INPUT_BANK_B_ADDRESS)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_p_r_o_1a3cc8349ad4c8501ea3de2a8610ec92f0"/><link linkend="_class_digital_output_card">DigitalOutputCard</link> <emphasis role="strong">outputs</emphasis> = <link linkend="_class_digital_output_card">DigitalOutputCard</link>(PWM_BANK_ADDRESS)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_p_r_o_1a634d0c8a22aaa20d5dfc422f6e1e1f15"/><link linkend="_class_internal_display">InternalDisplay</link> * <emphasis role="strong">display</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_p_r_o_1afacb78b3c13c24fac8ae76eb2c369f5d"/><link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> * <emphasis role="strong">iot</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_p_r_o_1ac51e01e09374964e4aac66927f439907"/><link linkend="_class_e_s_p_mega_web_server">ESPMegaWebServer</link> * <emphasis role="strong">webServer</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> class is the main class for the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> library. </para>
+
+
+
+<para>This class provides functions for managing the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> board, such as installing expansion cards, managing the internal RTC, and managing the internal FRAM. This class also provides functions for managing the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> module and the internal display.</para>
+
+<para>This class provide a Object Oriented Programming (OOP) interface for the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> board. If you are looking for a more simple and a more procedural interface, please use the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> class in ESPMegaPRO.hpp. But note that the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> class only interfaces with the built-in Digital Input and Digital Output cards and other onboard components. It does not provide an interface for expansion cards, the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> module, and the internal display.</para>
+
+<para><warning><title>Warning</title>
+
+<para>Only one <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object can be created, creating more than one will result in undefined behavior. </para>
+</warning>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_e_s_p_mega_p_r_o_1ac06222dfa4d6dbf604d2a2490f0924ec"/>    <section>
+    <title>ESPMegaPRO()</title>
+<indexterm><primary>ESPMegaPRO</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<para><computeroutput>ESPMegaPRO::ESPMegaPRO ( )</computeroutput></para><para>
+
+<para>Create a new <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object. </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>Only one <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object can be created, creating more than one will result in undefined behavior </para>
+</warning>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool ESPMegaPRO::begin ( )</computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object. </para>
+</para>
+
+<para>This function initializes the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object and all of its components. It also initializes the built-in Digital Input and Digital Output cards.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the initialization is successful, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_a582f6a9d00c0313e772166bd6c52d06d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1a34d6ab7e6fe349bca6f41d8c86a8ab99"/>    <section>
+    <title>dumpFRAMtoSerial()</title>
+<indexterm><primary>dumpFRAMtoSerial</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>dumpFRAMtoSerial</secondary></indexterm>
+<para><computeroutput>void ESPMegaPRO::dumpFRAMtoSerial (uint16_t start, uint16_t end)</computeroutput></para><para>
+
+<para>Dumps the contents of the internal FRAM to the serial port. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>start</entry>
+                                <entry>
+<para>The starting address. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>end</entry>
+                                <entry>
+<para>The ending address. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1a7590608e32da0efbf6c375aa3d3a0a77"/>    <section>
+    <title>dumpFRAMtoSerialASCII()</title>
+<indexterm><primary>dumpFRAMtoSerialASCII</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>dumpFRAMtoSerialASCII</secondary></indexterm>
+<para><computeroutput>void ESPMegaPRO::dumpFRAMtoSerialASCII (uint16_t start, uint16_t end)</computeroutput></para><para>
+
+<para>Dumps the contents of the internal FRAM to the serial port in ASCII. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>start</entry>
+                                <entry>
+<para>The starting address. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>end</entry>
+                                <entry>
+<para>The ending address. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f"/>    <section>
+    <title>enableInternalDisplay()</title>
+<indexterm><primary>enableInternalDisplay</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>enableInternalDisplay</secondary></indexterm>
+<para><computeroutput>void ESPMegaPRO::enableInternalDisplay (HardwareSerial * serial)</computeroutput></para><para>
+
+<para>Enables, Instanitates, and Initializes the internal display. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>&amp;Serial is used for the internal display on <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> R3. </para>
+
+<para>This function can only be called if the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> module is enabled. </para>
+
+<para>This function must be called before using the internal display.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>serial</entry>
+                                <entry>
+<para>Pointer to the HardwareSerial object to use for the internal display (Serial for <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> R3). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_a025ba61791a6e3b46c9c70e2f0de1f2f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1aa6436515e96f420606fd7069737fc67f"/>    <section>
+    <title>enableIotModule()</title>
+<indexterm><primary>enableIotModule</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>enableIotModule</secondary></indexterm>
+<para><computeroutput>void ESPMegaPRO::enableIotModule ( )</computeroutput></para><para>
+
+<para>Enables, Instanitates, and Initializes the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> module. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function must be called before using the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> module. </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_aa6436515e96f420606fd7069737fc67f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee"/>    <section>
+    <title>enableWebServer()</title>
+<indexterm><primary>enableWebServer</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>enableWebServer</secondary></indexterm>
+<para><computeroutput>void ESPMegaPRO::enableWebServer (uint16_t port)</computeroutput></para><para>
+
+<para>Enables the internal web server. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function can only be called if the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> module is enabled. </para>
+
+<para>This function can only be called once.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>port</entry>
+                                <entry>
+<para>The port to use for the web server. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_a77429b766c275aba8d6f2462688fd3ee_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1a569bef7ba6d96fdcbc7f02ad2cc5a422"/>    <section>
+    <title>getCard()</title>
+<indexterm><primary>getCard</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>getCard</secondary></indexterm>
+<para><computeroutput><link linkend="_class_expansion_card">ExpansionCard</link> * ESPMegaPRO::getCard (uint8_t slot)</computeroutput></para><para>
+
+<para>Gets the expansion card installed at the specified slot. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>slot</entry>
+                                <entry>
+<para>The slot to get the card from.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to the <link linkend="_class_expansion_card">ExpansionCard</link> object, or nullptr if no card is installed at the specified slot. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f"/>    <section>
+    <title>getTime()</title>
+<indexterm><primary>getTime</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>getTime</secondary></indexterm>
+<para><computeroutput><link linkend="_structrtctime__t">rtctime_t</link> ESPMegaPRO::getTime ( )</computeroutput></para><para>
+
+<para>Gets the current time from the internal RTC. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The current time as a <link linkend="_structrtctime__t">rtctime_t</link> struct. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_aa2c6607c5b3b4c4662549173b1998a7f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450"/>    <section>
+    <title>installCard()</title>
+<indexterm><primary>installCard</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>installCard</secondary></indexterm>
+<para><computeroutput>bool ESPMegaPRO::installCard (uint8_t slot, <link linkend="_class_expansion_card">ExpansionCard</link> * card)</computeroutput></para><para>
+
+<para>Installs an expansion card to the specified slot. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function automatically initializes the expansion card.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>slot</entry>
+                                <entry>
+<para>The slot to install the card to. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>card</entry>
+                                <entry>
+<para>Pointer to the <link linkend="_class_expansion_card">ExpansionCard</link> object.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the installation is successful, false otherwise. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_a7064148ad97cdb5fc871789fbf2ba450_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void ESPMegaPRO::loop ( )</computeroutput></para><para>
+
+<para>The main loop for the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> object. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function must be called in the main loop of the program.</para>
+</note>
+It will call the <link linkend="_class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599">loop()</link> function of all installed expansion cards, the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> module, and the internal display. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_a7bd135e51c69c802aaacda4cf016e599_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1a456cfbdb9987a2e90e6f0eabeae42b83"/>    <section>
+    <title>setTime()</title>
+<indexterm><primary>setTime</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>setTime</secondary></indexterm>
+<para><computeroutput>void ESPMegaPRO::setTime (int hours, int minutes, int seconds, int day, int month, int year)</computeroutput></para><para>
+
+<para>Sets the current time of the internal RTC. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>hours</entry>
+                                <entry>
+<para>The hours. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>minutes</entry>
+                                <entry>
+<para>The minutes. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>seconds</entry>
+                                <entry>
+<para>The seconds. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>day</entry>
+                                <entry>
+<para>The day. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>month</entry>
+                                <entry>
+<para>The month. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>year</entry>
+                                <entry>
+<para>The year. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_a456cfbdb9987a2e90e6f0eabeae42b83_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_p_r_o_1ab263d5baf53948d0790c5e22d3c2e4e3"/>    <section>
+    <title>updateTimeFromNTP()</title>
+<indexterm><primary>updateTimeFromNTP</primary><secondary>ESPMegaPRO</secondary></indexterm>
+<indexterm><primary>ESPMegaPRO</primary><secondary>updateTimeFromNTP</secondary></indexterm>
+<para><computeroutput>bool ESPMegaPRO::updateTimeFromNTP ( )</computeroutput></para><para>
+
+<para>Updates the internal RTC from NTP. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Network must be connected before calling this function (see ESPMegaPRO.ESPMegaIoT::connectNetwork()).</para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>True if the update is successful, false otherwise. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_p_r_o_ab263d5baf53948d0790c5e22d3c2e4e3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp</section>
+</section>

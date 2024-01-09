@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__analog_io_t_8cpp" xml:lang="en-US">
+<title>/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp File Reference</title>
+<indexterm><primary>/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp</primary></indexterm>
+<para>
+
+<para>Implementation of the <link linkend="_class_analog_io_t">AnalogIoT</link> class. </para>
+ 
+</para>
+<programlisting>#include &lt;AnalogIoT.hpp&gt;
+</programlisting>Include dependency graph for AnalogIoT.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_analog_io_t_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Implementation of the <link linkend="_class_analog_io_t">AnalogIoT</link> class. </para>
+
+<para>This file contains the implementation of the <link linkend="_class_analog_io_t">AnalogIoT</link> class, which provides functionality for handling analog input and output operations in an IoT system. The class allows for setting the state and value of digital-to-analog converters (DACs), as well as reading the value of analog-to-digital converters (ADCs). It also supports publishing the state and value of DACs and ADCs over MQTT. </para>
+</section>
+</section>

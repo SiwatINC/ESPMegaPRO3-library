@@ -1,0 +1,786 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_climate_io_t" kind="class" language="C++" prot="public">
+    <compoundname>ClimateIoT</compoundname>
+    <basecompoundref refid="class_io_t_component" prot="public" virt="non-virtual">IoTComponent</basecompoundref>
+    <includes refid="_climate_io_t_8hpp" local="no">ClimateIoT.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_climate_io_t_1ae01e3ac12675d8480f7b5c011420d7dc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_climate_card" kindref="compound">ClimateCard</ref> *</type>
+        <definition>ClimateCard* ClimateIoT::card</definition>
+        <argsstring></argsstring>
+        <name>card</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="45" column="21" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_climate_io_t_1a5f9c622e0e849abbccdef5b3ff246d96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClimateIoT::ClimateIoT</definition>
+        <argsstring>()</argsstring>
+        <name>ClimateIoT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="26" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1a54535f32b8bda07e5295bcda18b311fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ClimateIoT::~ClimateIoT</definition>
+        <argsstring>()</argsstring>
+        <name>~ClimateIoT</name>
+        <briefdescription>
+<para>Destructor for the <ref refid="class_climate_io_t" kindref="compound">ClimateIoT</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="27" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ClimateIoT::begin</definition>
+        <argsstring>(uint8_t card_id, ExpansionCard *card, PubSubClient *mqtt, char *base_topic)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_io_t_component_1af3068b3087e942700f2756df61567470">begin</reimplements>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+          <declname>card</declname>
+        </param>
+        <param>
+          <type>PubSubClient *</type>
+          <declname>mqtt</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>base_topic</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the <ref refid="class_climate_io_t" kindref="compound">ClimateIoT</ref> component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function sets the MQTT client, base topic, card ID, and card pointer. It also registers the sensor and air conditioner update callbacks.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>card_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the expansion card. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>card</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqtt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the PubSubClient object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base_topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base topic for MQTT communication. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the initialization is successful, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="28" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="27" bodyend="39"/>
+        <references refid="class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1" compoundref="_climate_io_t_8cpp" startline="255" endline="257">handleAirConditionerUpdate</references>
+        <references refid="class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6" compoundref="_climate_io_t_8cpp" startline="244" endline="246">handleSensorUpdate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1a3ca9eea384da622be06cf56a3d264aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::handleMqttMessage</definition>
+        <argsstring>(char *topic, char *payload)</argsstring>
+        <name>handleMqttMessage</name>
+        <reimplements refid="class_io_t_component_1a1b3fbabfa0e9c1697f0edab1a8d14149">handleMqttMessage</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+<para>Handles MQTT messages for the <ref refid="class_climate_io_t" kindref="compound">ClimateIoT</ref> component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trimmed topic of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null-terminated payload of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="29" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="47" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::publishClimate</definition>
+        <argsstring>()</argsstring>
+        <name>publishClimate</name>
+        <briefdescription>
+<para>Publishes the climate data (temperature, mode, fan speed) to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="30" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="93" bodyend="97"/>
+        <references refid="class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46" compoundref="_climate_io_t_8cpp" startline="78" endline="80">publishClimateFanSpeed</references>
+        <references refid="class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e" compoundref="_climate_io_t_8cpp" startline="71" endline="73">publishClimateMode</references>
+        <references refid="class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876" compoundref="_climate_io_t_8cpp" startline="62" endline="66">publishClimateTemperature</references>
+        <referencedby refid="class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1" compoundref="_climate_io_t_8cpp" startline="255" endline="257">handleAirConditionerUpdate</referencedby>
+        <referencedby refid="class_climate_io_t_1a0098ee608786b6cea97f50a6602a1026" compoundref="_climate_io_t_8cpp" startline="131" endline="133">handleStateChange</referencedby>
+        <referencedby refid="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526" compoundref="_climate_io_t_8cpp" startline="138" endline="141">publishReport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::publishClimateTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>publishClimateTemperature</name>
+        <briefdescription>
+<para>Publishes the temperature of the air conditioner to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="31" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="62" bodyend="66"/>
+        <references refid="class_climate_card_1a0877f36123ed2fdfe41677bdbac320be" compoundref="_climate_card_8cpp" startline="414" endline="417">ClimateCard::getTemperature</references>
+        <referencedby refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" compoundref="_climate_io_t_8cpp" startline="93" endline="97">publishClimate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::publishClimateMode</definition>
+        <argsstring>()</argsstring>
+        <name>publishClimateMode</name>
+        <briefdescription>
+<para>Publishes the mode of the air conditioner to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="32" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="71" bodyend="73"/>
+        <references refid="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" compoundref="_climate_card_8cpp" startline="216" endline="219">ClimateCard::getModeName</references>
+        <referencedby refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" compoundref="_climate_io_t_8cpp" startline="93" endline="97">publishClimate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::publishClimateFanSpeed</definition>
+        <argsstring>()</argsstring>
+        <name>publishClimateFanSpeed</name>
+        <briefdescription>
+<para>Publishes the fan speed of the air conditioner to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="33" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="78" bodyend="80"/>
+        <references refid="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" compoundref="_climate_card_8cpp" startline="226" endline="229">ClimateCard::getFanSpeedName</references>
+        <referencedby refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" compoundref="_climate_io_t_8cpp" startline="93" endline="97">publishClimate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::publishSensor</definition>
+        <argsstring>()</argsstring>
+        <name>publishSensor</name>
+        <briefdescription>
+<para>Publishes the temperature and humidity of the room to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="34" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="85" bodyend="88"/>
+        <references refid="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" compoundref="_climate_io_t_8cpp" startline="114" endline="120">publishHumidity</references>
+        <references refid="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" compoundref="_climate_io_t_8cpp" startline="102" endline="109">publishRoomTemperature</references>
+        <referencedby refid="class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6" compoundref="_climate_io_t_8cpp" startline="244" endline="246">handleSensorUpdate</referencedby>
+        <referencedby refid="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526" compoundref="_climate_io_t_8cpp" startline="138" endline="141">publishReport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::publishRoomTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>publishRoomTemperature</name>
+        <briefdescription>
+<para>Publishes the room temperature to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="35" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="102" bodyend="109"/>
+        <references refid="class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df" compoundref="_climate_card_8cpp" startline="394" endline="397">ClimateCard::getRoomTemperature</references>
+        <references refid="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" compoundref="_climate_card_8cpp" startline="384" endline="387">ClimateCard::getSensorType</references>
+        <referencedby refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" compoundref="_climate_io_t_8cpp" startline="85" endline="88">publishSensor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::publishHumidity</definition>
+        <argsstring>()</argsstring>
+        <name>publishHumidity</name>
+        <briefdescription>
+<para>Publishes the humidity of the room to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="36" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="114" bodyend="120"/>
+        <references refid="class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185" compoundref="_climate_card_8cpp" startline="404" endline="407">ClimateCard::getHumidity</references>
+        <references refid="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" compoundref="_climate_card_8cpp" startline="384" endline="387">ClimateCard::getSensorType</references>
+        <referencedby refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" compoundref="_climate_io_t_8cpp" startline="85" endline="88">publishSensor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1a0098ee608786b6cea97f50a6602a1026" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::handleStateChange</definition>
+        <argsstring>(uint8_t temperature, uint8_t mode, uint8_t fan_speed)</argsstring>
+        <name>handleStateChange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>temperature</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>fan_speed</declname>
+        </param>
+        <briefdescription>
+<para>Handle Air Conditioner state change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is called by the underlying <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> object and is not meant to be called manually.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature of the air conditioner </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mode of the air conditioner </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fan_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fan speed of the air conditioner </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="37" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="131" bodyend="133"/>
+        <references refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" compoundref="_climate_io_t_8cpp" startline="93" endline="97">publishClimate</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::handleSensorUpdate</definition>
+        <argsstring>(float temperature, float humidity)</argsstring>
+        <name>handleSensorUpdate</name>
+        <param>
+          <type>float</type>
+          <declname>temperature</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>humidity</declname>
+        </param>
+        <briefdescription>
+<para>This function is a callback function registered with the Climate card to be called when the sensor data is updated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The room temperature. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>humidity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The room humidity.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The temperature and humidity are not used in this function but are required by the <ref refid="class_climate_card" kindref="compound">ClimateCard</ref> class to match the signature of the callback function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="38" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="244" bodyend="246"/>
+        <references refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" compoundref="_climate_io_t_8cpp" startline="85" endline="88">publishSensor</references>
+        <referencedby refid="class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b" compoundref="_climate_io_t_8cpp" startline="27" endline="39">begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::handleAirConditionerUpdate</definition>
+        <argsstring>(uint8_t mode, uint8_t fan_speed, uint8_t temperature)</argsstring>
+        <name>handleAirConditionerUpdate</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>fan_speed</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+<para>This function is a callback function registered with the Climate card to be called when the air conditioner state is updated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode of the air conditioner. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fan_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fan speed of the air conditioner. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The temperature of the air conditioner. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="39" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="255" bodyend="257"/>
+        <references refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" compoundref="_climate_io_t_8cpp" startline="93" endline="97">publishClimate</references>
+        <referencedby refid="class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b" compoundref="_climate_io_t_8cpp" startline="27" endline="39">begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::publishReport</definition>
+        <argsstring>()</argsstring>
+        <name>publishReport</name>
+        <reimplements refid="class_io_t_component_1aa8b2aa560998451171ab6c39957cf787">publishReport</reimplements>
+        <briefdescription>
+<para>Publishes the climate and sensor data to the MQTT broker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="40" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="138" bodyend="141"/>
+        <references refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" compoundref="_climate_io_t_8cpp" startline="93" endline="97">publishClimate</references>
+        <references refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" compoundref="_climate_io_t_8cpp" startline="85" endline="88">publishSensor</references>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1aa450a354851fbc82b54e32f3ffd9d359" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::subscribe</definition>
+        <argsstring>()</argsstring>
+        <name>subscribe</name>
+        <reimplements refid="class_io_t_component_1acdf8bc6b4a9f9ac515ff1dc3b63aa330">subscribe</reimplements>
+        <briefdescription>
+<para>Subscribes to MQTT topics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="41" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="146" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1afe6cc8ae2063d700c5a7d5554aad2cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClimateIoT::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>The loop function for the <ref refid="class_climate_io_t" kindref="compound">ClimateIoT</ref> component. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function does nothing. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="42" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1a488320647faf79d26fdf8f0ea406f315" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateIoT::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplements refid="class_io_t_component_1a3c5bf4cb3ba447ccbcbf45c9065f288d">getType</reimplements>
+        <briefdescription>
+<para>Returns the type of the expansion card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The type of the expansion card. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="43" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="168" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_climate_io_t_1afca31814cf4e63a915e388b45da495a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClimateIoT::processSetTemperatureMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processSetTemperatureMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes the set temperature MQTT message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trimmed topic of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null-terminated payload of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the message is processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="46" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="180" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1ab2fd0c967b87b947f2488b70b2ed26da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClimateIoT::processSetModeMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processSetModeMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes the set mode MQTT message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trimmed topic of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null-terminated payload of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the message is processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="47" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="197" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1acd752ca6023b641f0857b1dfae39db78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClimateIoT::processSetFanSpeedMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processSetFanSpeedMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes the set fan speed MQTT message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trimmed topic of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null-terminated payload of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the message is processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="48" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="213" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_climate_io_t_1afe2bbf6c37e6a72805da5e858668dd89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClimateIoT::processRequestStateMessage</definition>
+        <argsstring>(char *topic, char *payload, uint8_t topic_length)</argsstring>
+        <name>processRequestStateMessage</name>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>topic_length</declname>
+        </param>
+        <briefdescription>
+<para>Processes the request state MQTT message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The trimmed topic of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The null-terminated payload of the MQTT message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topic_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the topic. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the message is processed, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="49" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.cpp" bodystart="228" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_climate_io_t" kindref="compound">ClimateIoT</ref> class is a class for connecting the Climate Card to the IoT module. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This function allows you to control the Climate Card using MQTT.</para>
+<para><simplesect kind="warning"><para>You should not instantiate this class directly, instead use <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref>&apos;s registerCard function. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="1">
+        <label>ClimateIoT</label>
+        <link refid="class_climate_io_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="1">
+        <label>ClimateIoT</label>
+        <link refid="class_climate_io_t"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" line="24" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp" bodystart="24" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_io_t_component_1aeb90ccffdbf21519987505b9f52f0a57" prot="protected" virt="non-virtual"><scope>ClimateIoT</scope><name>base_topic</name></member>
+      <member refid="class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b" prot="public" virt="virtual"><scope>ClimateIoT</scope><name>begin</name></member>
+      <member refid="class_climate_io_t_1ae01e3ac12675d8480f7b5c011420d7dc" prot="private" virt="non-virtual"><scope>ClimateIoT</scope><name>card</name></member>
+      <member refid="class_io_t_component_1a8ea4f18d3f5adf232137f12d8a8f763a" prot="protected" virt="non-virtual"><scope>ClimateIoT</scope><name>card_id</name></member>
+      <member refid="class_climate_io_t_1a5f9c622e0e849abbccdef5b3ff246d96" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>ClimateIoT</name></member>
+      <member refid="class_climate_io_t_1a488320647faf79d26fdf8f0ea406f315" prot="public" virt="virtual"><scope>ClimateIoT</scope><name>getType</name></member>
+      <member refid="class_climate_io_t_1ae9838e9774728052ba52526b89bf5da1" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>handleAirConditionerUpdate</name></member>
+      <member refid="class_climate_io_t_1a3ca9eea384da622be06cf56a3d264aff" prot="public" virt="virtual"><scope>ClimateIoT</scope><name>handleMqttMessage</name></member>
+      <member refid="class_climate_io_t_1a2516d6d2a9e2be4365617a3c0577a8b6" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>handleSensorUpdate</name></member>
+      <member refid="class_climate_io_t_1a0098ee608786b6cea97f50a6602a1026" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>handleStateChange</name></member>
+      <member refid="class_climate_io_t_1afe6cc8ae2063d700c5a7d5554aad2cd1" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>loop</name></member>
+      <member refid="class_io_t_component_1a81926ee5477da6738063128028597e3e" prot="protected" virt="non-virtual"><scope>ClimateIoT</scope><name>mqtt</name></member>
+      <member refid="class_climate_io_t_1afe2bbf6c37e6a72805da5e858668dd89" prot="private" virt="non-virtual"><scope>ClimateIoT</scope><name>processRequestStateMessage</name></member>
+      <member refid="class_climate_io_t_1acd752ca6023b641f0857b1dfae39db78" prot="private" virt="non-virtual"><scope>ClimateIoT</scope><name>processSetFanSpeedMessage</name></member>
+      <member refid="class_climate_io_t_1ab2fd0c967b87b947f2488b70b2ed26da" prot="private" virt="non-virtual"><scope>ClimateIoT</scope><name>processSetModeMessage</name></member>
+      <member refid="class_climate_io_t_1afca31814cf4e63a915e388b45da495a0" prot="private" virt="non-virtual"><scope>ClimateIoT</scope><name>processSetTemperatureMessage</name></member>
+      <member refid="class_climate_io_t_1aa47d6901ed1a95e41d93766a708ac1da" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>publishClimate</name></member>
+      <member refid="class_climate_io_t_1a5c3c09d45519d8b842a58848cd22dd46" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>publishClimateFanSpeed</name></member>
+      <member refid="class_climate_io_t_1acc5a0774647d0c94d5a8d6eaec9fa23e" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>publishClimateMode</name></member>
+      <member refid="class_climate_io_t_1af32cf1f2bad34f5c920a58ed23ecf876" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>publishClimateTemperature</name></member>
+      <member refid="class_climate_io_t_1aab50fe7f8fa35d3f62a98b4ef81c7056" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>publishHumidity</name></member>
+      <member refid="class_io_t_component_1a223659969099a0a8aaf84e18c51014dc" prot="protected" virt="non-virtual"><scope>ClimateIoT</scope><name>publishRelative</name></member>
+      <member refid="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526" prot="public" virt="virtual"><scope>ClimateIoT</scope><name>publishReport</name></member>
+      <member refid="class_climate_io_t_1a0552877211038ed07b697af151d6dcec" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>publishRoomTemperature</name></member>
+      <member refid="class_climate_io_t_1a15060120ec8d458d023cf63174caf018" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>publishSensor</name></member>
+      <member refid="class_io_t_component_1add98837edef95e9d4f31fba7e210cf09" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>setMqttClient</name></member>
+      <member refid="class_climate_io_t_1aa450a354851fbc82b54e32f3ffd9d359" prot="public" virt="virtual"><scope>ClimateIoT</scope><name>subscribe</name></member>
+      <member refid="class_io_t_component_1ab7841d6b92b52ed398d5ff1cac0a9625" prot="protected" virt="non-virtual"><scope>ClimateIoT</scope><name>subscribeRelative</name></member>
+      <member refid="class_climate_io_t_1a54535f32b8bda07e5295bcda18b311fe" prot="public" virt="non-virtual"><scope>ClimateIoT</scope><name>~ClimateIoT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

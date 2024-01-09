@@ -1,0 +1,4 @@
+<map id="AnalogIoT::publishDACValue" name="AnalogIoT::publishDACValue">
+<area shape="rect" id="node1" title="Publishes the value of a DAC." alt="" coords="5,5,211,32"/>
+<area shape="rect" id="node2" href="$class_analog_card.html#a7793911eaabacee0d40dac626e39279a" title="Gets the value of the specified DAC pin." alt="" coords="259,5,449,32"/>
+</map>

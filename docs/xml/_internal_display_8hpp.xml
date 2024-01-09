@@ -1,0 +1,902 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_internal_display_8hpp" kind="file" language="C++">
+    <compoundname>InternalDisplay.hpp</compoundname>
+    <includes refid="_e_s_p_mega_display_8hpp" local="no">ESPMegaDisplay.hpp</includes>
+    <includes refid="_time_structure_8hpp" local="no">TimeStructure.hpp</includes>
+    <includes refid="_e_s_p_mega_io_t_8hpp" local="no">ESPMegaIoT.hpp</includes>
+    <includes refid="_digital_input_card_8hpp" local="no">DigitalInputCard.hpp</includes>
+    <includes refid="_digital_output_card_8hpp" local="no">DigitalOutputCard.hpp</includes>
+    <includes refid="_climate_card_8hpp" local="no">ClimateCard.hpp</includes>
+    <includedby refid="_e_s_p_mega_pro_o_s_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</includedby>
+    <includedby refid="_internal_display_8cpp" local="no">/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp</includedby>
+    <incdepgraph>
+      <node id="17">
+        <label>DigitalInputCard.hpp</label>
+        <link refid="_digital_input_card_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Adafruit_ADS1X15.h</label>
+      </node>
+      <node id="26">
+        <label>OneWire.h</label>
+      </node>
+      <node id="19">
+        <label>DigitalInputIoT.hpp</label>
+        <link refid="_digital_input_io_t_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>TimeStructure.hpp</label>
+        <link refid="_time_structure_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="23">
+        <label>DigitalOutputIoT.hpp</label>
+        <link refid="_digital_output_io_t_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>PubSubClient.h</label>
+      </node>
+      <node id="16">
+        <label>esp_log.h</label>
+      </node>
+      <node id="29">
+        <label>ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>IoTComponent.hpp</label>
+        <link refid="_io_t_component_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="2">
+        <label>ESPMegaDisplay.hpp</label>
+        <link refid="_e_s_p_mega_display_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>driver/rmt.h</label>
+      </node>
+      <node id="24">
+        <label>ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="22">
+        <label>Adafruit_PWMServoDriver.h</label>
+      </node>
+      <node id="30">
+        <label>ETH.h</label>
+      </node>
+      <node id="11">
+        <label>MCP4725.h</label>
+      </node>
+      <node id="28">
+        <label>dhtnew.h</label>
+      </node>
+      <node id="7">
+        <label>ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>AnalogIoT.hpp</label>
+        <link refid="_analog_io_t_8hpp_source"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>AnalogCard.hpp</label>
+        <link refid="_analog_card_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>DigitalOutputCard.hpp</label>
+        <link refid="_digital_output_card_8hpp_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>DS18B20.h</label>
+      </node>
+      <node id="20">
+        <label>FRAM.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>PCF8574.h</label>
+      </node>
+      <node id="31">
+        <label>WiFi.h</label>
+      </node>
+      <node id="8">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_internal_display" prot="public">InternalDisplay</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_internal_display_8hpp_1a53e5ff16b5a9aa869ab7243974fa48c4" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_BOOT_PAGE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="10" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a1068c6b8359487d633c0202077ed4d58" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_DASHBOARD_PAGE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="11" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a444b2c3959a5d6fdcba989dffd75e24a" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_INPUT_PAGE</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="12" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a8c2b91d99225f6e8f6d873135ce1c607" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_OUTPUT_PAGE</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="13" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a9cc6d1c3a66d49de870115792c524e7a" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_AC_PAGE</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="14" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ac54de8b2ff30bdb990898720eec3df15" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_PWM_ADJUSTMENT_PAGE</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="15" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aef0480f06de9aeeb0dd02f2bc38f03cd" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_NETWORK_CONFIG_PAGE</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="16" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aca2d67234823a5ab1ba6eaabb097c7e2" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_OTA_PAGE</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="17" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a485f451ea1d22cfdfdb839677238ddc8" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_CLIMATE_NULL_PTR_PAGE</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="18" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ae74f997769234d377c7c6838f42791ad" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_MQTT_CONFIG_PAGE</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="19" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aacefa386c7efe4edb744e9d0d60ac60e" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_INPUT_NULL_PTR_PAGE</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="20" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aee91d22a0fa5e353920b676e9de509e8" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_OUTPUT_NULL_PTR_PAGE</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="21" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a6e7b6dc7ac80d3337991c2ca4b0e7aa2" prot="public" static="no">
+        <name>PIC_LAN_DISCONNECTED</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="24" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a97c950ec5d04059aabbfdb9951873d55" prot="public" static="no">
+        <name>PIC_LAN_CONNECTED</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="25" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a46f91e78d1b3cd96d831f96d16d9c9c7" prot="public" static="no">
+        <name>PIC_MQTT_DISCONNECTED</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="26" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ac259b7f57f590f141668861af1611533" prot="public" static="no">
+        <name>PIC_MQTT_CONNECTED</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="27" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ad8a7774453db7f2785a732c7daee9862" prot="public" static="no">
+        <name>PIC_PWM_BAR_ON</name>
+        <initializer>33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="28" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ac0a9747f5ffb2f4100c876fe2cf5bcbf" prot="public" static="no">
+        <name>PIC_PWM_BAR_OFF</name>
+        <initializer>48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="29" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a242b17d5b125a8bd6ebdab6ca19cc677" prot="public" static="no">
+        <name>PIC_AC_MODE_OFF_ACTIVE</name>
+        <initializer>24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="30" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a1da75872ed102b108b352ae0f9f06a91" prot="public" static="no">
+        <name>PIC_AC_MODE_OFF_INACTIVE</name>
+        <initializer>25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="31" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a38dfbd991af2452347cb838a2fafbb94" prot="public" static="no">
+        <name>PIC_AC_MODE_FAN_ACTIVE</name>
+        <initializer>22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="32" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aeecee35aaacdb98d17f7cc9965858012" prot="public" static="no">
+        <name>PIC_AC_MODE_FAN_INACTIVE</name>
+        <initializer>23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="33" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a5ccd9c38911073623bba53331ea1f4a6" prot="public" static="no">
+        <name>PIC_AC_MODE_COOL_ACTIVE</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="34" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a6a6f3eb4bef64113b809b8ecd2cdf220" prot="public" static="no">
+        <name>PIC_AC_MODE_COOL_INACTIVE</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="35" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aa65f1ce0b97959269d44f6acb6708fd0" prot="public" static="no">
+        <name>PIC_AC_FAN_SPEED_AUTO_ACTIVE</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="36" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ab62d4d12a034c78e7419df35fd9b90b4" prot="public" static="no">
+        <name>PIC_AC_FAN_SPEED_AUTO_INACTIVE</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="37" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a83f17a507902a6e53c94996e69a695c1" prot="public" static="no">
+        <name>PIC_AC_FAN_SPEED_LOW_ACTIVE</name>
+        <initializer>18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="38" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aed6a0d6f0f995372d7a453eaa42bc386" prot="public" static="no">
+        <name>PIC_AC_FAN_SPEED_LOW_INACTIVE</name>
+        <initializer>19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="39" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aa349b728c5ecace8cb151ce589789dc0" prot="public" static="no">
+        <name>PIC_AC_FAN_SPEED_MEDIUM_ACTIVE</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="40" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1aa2153040ca8db4b7e29deeaee96a8e2e" prot="public" static="no">
+        <name>PIC_AC_FAN_SPEED_MEDIUM_INACTIVE</name>
+        <initializer>21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="41" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a78f4bd3d2af0a9141f61001671db6b2c" prot="public" static="no">
+        <name>PIC_AC_FAN_SPEED_HIGH_ACTIVE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="42" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a928ecfd1082144bba6a1b5b8780fe35b" prot="public" static="no">
+        <name>PIC_AC_FAN_SPEED_HIGH_INACTIVE</name>
+        <initializer>17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="43" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a3b62ca64394fc82a9712e285c9d9657a" prot="public" static="no">
+        <name>AC_FAN_SPEED_AUTO</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="46" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a928562858ba314d3cdace1f5f8f2e519" prot="public" static="no">
+        <name>AC_FAN_SPEED_LOW</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="47" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ab97537d79164d75a7ee0667e257669ea" prot="public" static="no">
+        <name>AC_FAN_SPEED_MEDIUM</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="48" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ae193184d88ea6be40966751d0492c992" prot="public" static="no">
+        <name>AC_FAN_SPEED_HIGH</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="49" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a02f427a5d2620e1ab008a3f043b8211c" prot="public" static="no">
+        <name>AC_MODE_OFF</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="50" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1acd2bb86362c130e17072f12dff03f1c6" prot="public" static="no">
+        <name>AC_MODE_FAN_ONLY</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="51" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ac329ef4a8296f0213efc4c54bd3c8b5e" prot="public" static="no">
+        <name>AC_MODE_COOL</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="52" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a224768d9b552f130c20c15ce0fc6f7ce" prot="public" static="no">
+        <name>MSG_MQTT_CONNECTED</name>
+        <initializer>&quot;BMS Managed&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="55" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a065398ef63a37488ef89e7d1e9a65b5b" prot="public" static="no">
+        <name>MSG_MQTT_DISCONNECTED</name>
+        <initializer>&quot;Standalone&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="56" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ac187d9df30d20eec4352bb0c21ef1f25" prot="public" static="no">
+        <name>MSG_PWM_ADJUSTMENT_STATE_ON</name>
+        <initializer>&quot;ON&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="57" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1ae7176d88bd3994f1898ba1db98d10a6d" prot="public" static="no">
+        <name>MSG_PWM_ADJUSTMENT_STATE_OFF</name>
+        <initializer>&quot;OFF&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="58" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a78643616bca80c443359677e5f857c89" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_CLOCK_REFRESH_INTERVAL</name>
+        <initializer>15000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="61" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a895649da787ffc10c55e4421de4e1861" prot="public" static="no">
+        <name>INTERNAL_DISPLAY_TOP_BAR_REFRESH_INTERVAL</name>
+        <initializer>5000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="62" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a827f90fa4c756de2eab4f96b58853b80" prot="public" static="no">
+        <name>TOUCH_TYPE_PRESS</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="65" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_internal_display_8hpp_1a24bcb1b8538f3252e6b342085e64d035" prot="public" static="no">
+        <name>TOUCH_TYPE_RELEASE</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="66" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ESPMegaDisplay.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TimeStructure.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ESPMegaIoT.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DigitalInputCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DigitalOutputCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ClimateCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Page<sp/>IDs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_BOOT_PAGE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_DASHBOARD_PAGE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_INPUT_PAGE<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_OUTPUT_PAGE<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_AC_PAGE<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_PWM_ADJUSTMENT_PAGE<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_NETWORK_CONFIG_PAGE<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_OTA_PAGE<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_CLIMATE_NULL_PTR_PAGE<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_MQTT_CONFIG_PAGE<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_INPUT_NULL_PTR_PAGE<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_OUTPUT_NULL_PTR_PAGE<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Picture<sp/>IDs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_LAN_DISCONNECTED<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_LAN_CONNECTED<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_MQTT_DISCONNECTED<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_MQTT_CONNECTED<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_PWM_BAR_ON<sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_PWM_BAR_OFF<sp/>48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_MODE_OFF_ACTIVE<sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_MODE_OFF_INACTIVE<sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_MODE_FAN_ACTIVE<sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_MODE_FAN_INACTIVE<sp/>23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_MODE_COOL_ACTIVE<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_MODE_COOL_INACTIVE<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_FAN_SPEED_AUTO_ACTIVE<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_FAN_SPEED_AUTO_INACTIVE<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_FAN_SPEED_LOW_ACTIVE<sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_FAN_SPEED_LOW_INACTIVE<sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_FAN_SPEED_MEDIUM_ACTIVE<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_FAN_SPEED_MEDIUM_INACTIVE<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_FAN_SPEED_HIGH_ACTIVE<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIC_AC_FAN_SPEED_HIGH_INACTIVE<sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AC<sp/>Fan<sp/>Speeds<sp/>and<sp/>Mode<sp/>Position<sp/>Assumptions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_FAN_SPEED_AUTO<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_FAN_SPEED_LOW<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_FAN_SPEED_MEDIUM<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_FAN_SPEED_HIGH<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_MODE_OFF<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_MODE_FAN_ONLY<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_MODE_COOL<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSG_MQTT_CONNECTED<sp/>&quot;BMS<sp/>Managed&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSG_MQTT_DISCONNECTED<sp/>&quot;Standalone&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSG_PWM_ADJUSTMENT_STATE_ON<sp/>&quot;ON&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MSG_PWM_ADJUSTMENT_STATE_OFF<sp/>&quot;OFF&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Refresh<sp/>Interval</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_CLOCK_REFRESH_INTERVAL<sp/>15000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_DISPLAY_TOP_BAR_REFRESH_INTERVAL<sp/>5000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Touch<sp/>Types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOUCH_TYPE_PRESS<sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOUCH_TYPE_RELEASE<sp/>0x0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_internal_display" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_internal_display" kindref="compound">InternalDisplay</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_display" kindref="compound">ESPMegaDisplay</ref><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_internal_display_1adc0903695295bb14468224cb207d0dc4" kindref="member">InternalDisplay</ref>(HardwareSerial<sp/>*displayAdapter);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_display_1adfd6642f84055724abf6549aa4ed463a" kindref="member">begin</ref>(<ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref><sp/>*iot,<sp/>std::function&lt;<ref refid="structrtctime__t" kindref="compound">rtctime_t</ref>()&gt;<sp/>getRtcTime);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_internal_display_1acba3729be902fcde3e30e754aef62330" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_internal_display_1a9e314baf652600542d649f5f0dd1cd68" kindref="member">bindInputCard</ref>(<ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref><sp/>*inputCard);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6" kindref="member">bindOutputCard</ref>(<ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref><sp/>*outputCard);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_internal_display_1aff819b7e2625b4af2b6fbd44f46c89f2" kindref="member">bindClimateCard</ref>(<ref refid="class_climate_card" kindref="compound">ClimateCard</ref><sp/>*climateCard);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_internal_display_1a9ee706c80f56dd8e5088f282c467b146" kindref="member">unbindInputCard</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_internal_display_1a452703babc7891b7ab937e32155e2310" kindref="member">unbindOutputCard</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_internal_display_1af952dea8b4a4d74314d3ed6260fba7c6" kindref="member">unbindClimateCard</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>bindedInputCardCallbackHandler;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>bindedOutputCardCallbackHandler;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>bindedClimateCardCallbackHandler;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>bindedClimateCardSensorCallbackHandler;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref><sp/>*inputCard;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref><sp/>*outputCard;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card" kindref="compound">ClimateCard</ref><sp/>*climateCard;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleInputStateChange(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handlePwmStateChange(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handlePageChange(uint8_t<sp/>page);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setOutputBar(uint8_t<sp/>pin,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setOutputStateColor(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setInputMarker(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleACStateChange(uint8_t<sp/>mode,<sp/>uint8_t<sp/>fan_speed,<sp/>uint8_t<sp/>temperature);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>saveNetworkConfig();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>saveMQTTConfig();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateStatusIcons(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>networkStatus,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mqttStatus);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateClock();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshPage();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshPage(uint8_t<sp/>page);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshDashboard();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshInput();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshOutput();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshAC();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshPWMAdjustment();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshPWMAdjustmentSlider();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshPWMAdjustmentState();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshPWMAdjustmentId();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshNetworkConfig();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>refreshMQTTConfig();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sendIpToDisplay(IPAddress<sp/>ip);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>pmwAdjustmentPin;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Touch<sp/>handlers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleTouch(uint8_t<sp/>page,<sp/>uint8_t<sp/>component,<sp/>uint8_t<sp/>type);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handlePWMAdjustmentTouch(uint8_t<sp/>component,<sp/>uint8_t<sp/>type);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleACTouch(uint8_t<sp/>component,<sp/>uint8_t<sp/>type);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref><sp/>*mqttConfig;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref><sp/>*networkConfig;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointers<sp/>to<sp/>various<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref><sp/>*iot;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::function&lt;<ref refid="structrtctime__t" kindref="compound">rtctime_t</ref>()&gt;<sp/>getRtcTime;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp"/>
+  </compounddef>
+</doxygen>

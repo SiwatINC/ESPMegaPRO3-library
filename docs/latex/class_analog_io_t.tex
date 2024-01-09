@@ -1,0 +1,695 @@
+\hypertarget{class_analog_io_t}{}\doxysection{Analog\+IoT Class Reference}
+\label{class_analog_io_t}\index{AnalogIoT@{AnalogIoT}}
+
+
+The \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} class is a class for connecting the Analog Card to the IoT module.  
+
+
+
+
+{\ttfamily \#include $<$Analog\+Io\+T.\+hpp$>$}
+
+
+
+Inheritance diagram for Analog\+IoT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_analog_io_t__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Analog\+IoT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_analog_io_t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_analog_io_t_ac3923fe40bba207e1959a72c180e85d6}{Analog\+IoT}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_analog_io_t_abb92f699eebef5d8b6db83d0053a7e9a}\label{class_analog_io_t_abb92f699eebef5d8b6db83d0053a7e9a}} 
+\mbox{\hyperlink{class_analog_io_t_abb92f699eebef5d8b6db83d0053a7e9a}{$\sim$\+Analog\+IoT}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor for the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_io_t_a3888c317175981272a603fe27054460a}{begin}} (uint8\+\_\+t card\+\_\+id, \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$card, Pub\+Sub\+Client $\ast$mqtt, char $\ast$base\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_a24c2bf88a47a4cdaf8ebf5e55508ddbf}{handle\+Mqtt\+Message}} (char $\ast$topic, char $\ast$payload)
+\begin{DoxyCompactList}\small\item\em Publishes the state of all DACs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_a84402cb7e45ce0da63a860ee16716ce8}{handle\+DACChange}} (uint8\+\_\+t pin, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Publishes the state of a DAC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_analog_io_t_a09922e70d6374ba79b3193c3a3b35231}\label{class_analog_io_t_a09922e70d6374ba79b3193c3a3b35231}} 
+void \mbox{\hyperlink{class_analog_io_t_a09922e70d6374ba79b3193c3a3b35231}{publish\+ADCs}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the state of all DACs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_a2f74e7f22b3374b4950357d9f4b11ccc}{publish\+ADC}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Publishes the state of a DAC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_analog_io_t_a0050d5b14ed148e2ea358f393909114c}\label{class_analog_io_t_a0050d5b14ed148e2ea358f393909114c}} 
+void \mbox{\hyperlink{class_analog_io_t_a0050d5b14ed148e2ea358f393909114c}{publish\+DACs}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the state of all DACs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_a108ab3e98144f9ff07ec88ba794d594c}{publish\+DAC}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Publishes the state of a DAC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_af9686e6a38360e26a2c476c96f9d7c91}{publish\+DACState}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Publishes the state of a DAC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_a87bed89be4587e778eac2f8cabed4bab}{publish\+DACValue}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Publishes the value of a DAC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_a9a4ba77a993ea1c789f809ea89c57722}{set\+ADCs\+Publish\+Interval}} (uint32\+\_\+t interval)
+\begin{DoxyCompactList}\small\item\em Sets the interval at which the state of all DACs is published. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_ada3f1d46782f2b63488445e75b05cf63}{set\+ADCs\+Publish\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Sets whether the state of all DACs is published. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_analog_io_t_a1e1c02ae471274537452a89fd067d024}{register\+ADCConversion\+Callback}} (std\+::function$<$ void(uint8\+\_\+t, uint16\+\_\+t)$>$ callback)
+\begin{DoxyCompactList}\small\item\em Registers a callback for handling ADC conversions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_aa7d3175c73cea942123caf24ce779539}{unregister\+ADCConversion\+Callback}} (uint8\+\_\+t handler)
+\begin{DoxyCompactList}\small\item\em Unregisters a callback for handling ADC conversions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_abd35a9011a0018c38af690bd95e367fb}{set\+ADCConversion\+Interval}} (uint8\+\_\+t pin, uint16\+\_\+t interval)
+\begin{DoxyCompactList}\small\item\em Sets the interval at which the value of an ADC channel is read. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_ae3b8eaee385ed8eb20f145996513461d}{set\+ADCConversion\+Enabled}} (uint8\+\_\+t pin, bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables or disables the periodic reading of the value of an ADC channel. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_io_t_a27f21df078fd88872c9f54f58f2c37bd}{process\+ADCSet\+Conversion\+Interval\+Message}} (char $\ast$topic, char $\ast$payload, uint8\+\_\+t topic\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Processes a message received on the MQTT topic for setting the state of a DAC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_io_t_a9506f0c01d7ef71858a4881fc01050b7}{process\+ADCSet\+Conversion\+Enabled\+Message}} (char $\ast$topic, char $\ast$payload, uint8\+\_\+t topic\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Processes a message received on the MQTT topic for setting the value of a DAC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_io_t_ab582bcdd8b97fe81dae216ace1e7e827}{process\+DACSet\+State\+Message}} (char $\ast$topic, char $\ast$payload, uint8\+\_\+t topic\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Processes a message received on the MQTT topic for setting the state of a DAC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_io_t_adf3114a294de15674d994785a82548f8}{process\+DACSet\+Value\+Message}} (char $\ast$topic, char $\ast$payload, uint8\+\_\+t topic\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Processes a message received on the MQTT topic for setting the value of a DAC. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_analog_io_t_a2e18ed063bdbf7cc2a59b20a721050f8}{process\+Request\+State\+Message}} (char $\ast$topic, char $\ast$payload, uint8\+\_\+t topic\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Processes a message received on the MQTT topic for requesting the state of all DACs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_analog_io_t_ad49a200a7568281874f39b2f14f12621}\label{class_analog_io_t_ad49a200a7568281874f39b2f14f12621}} 
+void \mbox{\hyperlink{class_analog_io_t_ad49a200a7568281874f39b2f14f12621}{publish\+Report}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the state of all DACs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_analog_io_t_a37216e8cc0030b538ead2a7c30546d15}{subscribe}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes to all MQTT topics used by the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_analog_io_t_a7fc696f238783d0f8b8ba6d7d3c70e58}\label{class_analog_io_t_a7fc696f238783d0f8b8ba6d7d3c70e58}} 
+void {\bfseries loop} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{class_analog_io_t_ae16f9a69bc1cefda4b6cc766f5cbc9cd}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} class is a class for connecting the Analog Card to the IoT module. 
+
+This function allows you to control the Analog Card using MQTT.
+
+\begin{DoxyWarning}{Warning}
+You should not instantiate this class directly, instead use \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}}\textquotesingle{}s register\+Card function. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_analog_io_t_ac3923fe40bba207e1959a72c180e85d6}\label{class_analog_io_t_ac3923fe40bba207e1959a72c180e85d6}} 
+\index{AnalogIoT@{AnalogIoT}!AnalogIoT@{AnalogIoT}}
+\index{AnalogIoT@{AnalogIoT}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{AnalogIoT()}{AnalogIoT()}}
+{\footnotesize\ttfamily Analog\+Io\+T\+::\+Analog\+IoT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} class. 
+
+This constructor initializes the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} object and sets up the ADC conversion callbacks. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_analog_io_t_a3888c317175981272a603fe27054460a}\label{class_analog_io_t_a3888c317175981272a603fe27054460a}} 
+\index{AnalogIoT@{AnalogIoT}!begin@{begin}}
+\index{begin@{begin}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool Analog\+Io\+T\+::begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card\+\_\+id,  }\item[{\mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$}]{card,  }\item[{Pub\+Sub\+Client $\ast$}]{mqtt,  }\item[{char $\ast$}]{base\+\_\+topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card\+\_\+id} & The ID of the card. \\
+\hline
+{\em card} & A pointer to the card object. \\
+\hline
+{\em mqtt} & A pointer to the MQTT client object. \\
+\hline
+{\em base\+\_\+topic} & The base MQTT topic. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the initialization was successful, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function can be called from the main program but it is recommended to use \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} to initialize the IoT Components. This function initializes the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} object and registers the callbacks for handling DAC changes. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a3888c317175981272a603fe27054460a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_ae16f9a69bc1cefda4b6cc766f5cbc9cd}\label{class_analog_io_t_ae16f9a69bc1cefda4b6cc766f5cbc9cd}} 
+\index{AnalogIoT@{AnalogIoT}!getType@{getType}}
+\index{getType@{getType}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily uint8\+\_\+t Analog\+Io\+T\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the type of the card. 
+
+\begin{DoxyReturn}{Returns}
+The type of the card. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+\mbox{\Hypertarget{class_analog_io_t_a84402cb7e45ce0da63a860ee16716ce8}\label{class_analog_io_t_a84402cb7e45ce0da63a860ee16716ce8}} 
+\index{AnalogIoT@{AnalogIoT}!handleDACChange@{handleDACChange}}
+\index{handleDACChange@{handleDACChange}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{handleDACChange()}{handleDACChange()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::handle\+DACChange (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Publishes the state of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin of the DAC. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a84402cb7e45ce0da63a860ee16716ce8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a84402cb7e45ce0da63a860ee16716ce8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_a24c2bf88a47a4cdaf8ebf5e55508ddbf}\label{class_analog_io_t_a24c2bf88a47a4cdaf8ebf5e55508ddbf}} 
+\index{AnalogIoT@{AnalogIoT}!handleMqttMessage@{handleMqttMessage}}
+\index{handleMqttMessage@{handleMqttMessage}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{handleMqttMessage()}{handleMqttMessage()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::handle\+Mqtt\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Publishes the state of all DACs. 
+
+\begin{DoxyNote}{Note}
+This function is called when a request state message is received. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a24c2bf88a47a4cdaf8ebf5e55508ddbf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_a9506f0c01d7ef71858a4881fc01050b7}\label{class_analog_io_t_a9506f0c01d7ef71858a4881fc01050b7}} 
+\index{AnalogIoT@{AnalogIoT}!processADCSetConversionEnabledMessage@{processADCSetConversionEnabledMessage}}
+\index{processADCSetConversionEnabledMessage@{processADCSetConversionEnabledMessage}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{processADCSetConversionEnabledMessage()}{processADCSetConversionEnabledMessage()}}
+{\footnotesize\ttfamily bool Analog\+Io\+T\+::process\+ADCSet\+Conversion\+Enabled\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{topic\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Processes a message received on the MQTT topic for setting the value of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the message. \\
+\hline
+{\em payload} & The payload of the message. \\
+\hline
+{\em topic\+\_\+length} & The length of the topic. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is not meant to be called from user code. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if the message was processed, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a9506f0c01d7ef71858a4881fc01050b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a9506f0c01d7ef71858a4881fc01050b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_a27f21df078fd88872c9f54f58f2c37bd}\label{class_analog_io_t_a27f21df078fd88872c9f54f58f2c37bd}} 
+\index{AnalogIoT@{AnalogIoT}!processADCSetConversionIntervalMessage@{processADCSetConversionIntervalMessage}}
+\index{processADCSetConversionIntervalMessage@{processADCSetConversionIntervalMessage}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{processADCSetConversionIntervalMessage()}{processADCSetConversionIntervalMessage()}}
+{\footnotesize\ttfamily bool Analog\+Io\+T\+::process\+ADCSet\+Conversion\+Interval\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{topic\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Processes a message received on the MQTT topic for setting the state of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the message. \\
+\hline
+{\em payload} & The payload of the message. \\
+\hline
+{\em topic\+\_\+length} & The length of the topic. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is not meant to be called from user code. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if the message was processed, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a27f21df078fd88872c9f54f58f2c37bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a27f21df078fd88872c9f54f58f2c37bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_ab582bcdd8b97fe81dae216ace1e7e827}\label{class_analog_io_t_ab582bcdd8b97fe81dae216ace1e7e827}} 
+\index{AnalogIoT@{AnalogIoT}!processDACSetStateMessage@{processDACSetStateMessage}}
+\index{processDACSetStateMessage@{processDACSetStateMessage}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{processDACSetStateMessage()}{processDACSetStateMessage()}}
+{\footnotesize\ttfamily bool Analog\+Io\+T\+::process\+DACSet\+State\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{topic\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Processes a message received on the MQTT topic for setting the state of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the message. \\
+\hline
+{\em payload} & The payload of the message. \\
+\hline
+{\em topic\+\_\+length} & The length of the topic. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is not meant to be called from user code. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if the message was processed, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_ab582bcdd8b97fe81dae216ace1e7e827_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_ab582bcdd8b97fe81dae216ace1e7e827_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_adf3114a294de15674d994785a82548f8}\label{class_analog_io_t_adf3114a294de15674d994785a82548f8}} 
+\index{AnalogIoT@{AnalogIoT}!processDACSetValueMessage@{processDACSetValueMessage}}
+\index{processDACSetValueMessage@{processDACSetValueMessage}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{processDACSetValueMessage()}{processDACSetValueMessage()}}
+{\footnotesize\ttfamily bool Analog\+Io\+T\+::process\+DACSet\+Value\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{topic\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Processes a message received on the MQTT topic for setting the value of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the message. \\
+\hline
+{\em payload} & The payload of the message. \\
+\hline
+{\em topic\+\_\+length} & The length of the topic. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is not meant to be called from user code. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if the message was processed, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_adf3114a294de15674d994785a82548f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_adf3114a294de15674d994785a82548f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_a2e18ed063bdbf7cc2a59b20a721050f8}\label{class_analog_io_t_a2e18ed063bdbf7cc2a59b20a721050f8}} 
+\index{AnalogIoT@{AnalogIoT}!processRequestStateMessage@{processRequestStateMessage}}
+\index{processRequestStateMessage@{processRequestStateMessage}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{processRequestStateMessage()}{processRequestStateMessage()}}
+{\footnotesize\ttfamily bool Analog\+Io\+T\+::process\+Request\+State\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload,  }\item[{uint8\+\_\+t}]{topic\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Processes a message received on the MQTT topic for requesting the state of all DACs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the message. \\
+\hline
+{\em payload} & The payload of the message. \\
+\hline
+{\em topic\+\_\+length} & The length of the topic. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is not meant to be called from user code. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True if the message was processed, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a2e18ed063bdbf7cc2a59b20a721050f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a2e18ed063bdbf7cc2a59b20a721050f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_a2f74e7f22b3374b4950357d9f4b11ccc}\label{class_analog_io_t_a2f74e7f22b3374b4950357d9f4b11ccc}} 
+\index{AnalogIoT@{AnalogIoT}!publishADC@{publishADC}}
+\index{publishADC@{publishADC}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{publishADC()}{publishADC()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::publish\+ADC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Publishes the state of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin of the DAC. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a2f74e7f22b3374b4950357d9f4b11ccc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a2f74e7f22b3374b4950357d9f4b11ccc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_a108ab3e98144f9ff07ec88ba794d594c}\label{class_analog_io_t_a108ab3e98144f9ff07ec88ba794d594c}} 
+\index{AnalogIoT@{AnalogIoT}!publishDAC@{publishDAC}}
+\index{publishDAC@{publishDAC}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{publishDAC()}{publishDAC()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::publish\+DAC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Publishes the state of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin of the DAC. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a108ab3e98144f9ff07ec88ba794d594c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a108ab3e98144f9ff07ec88ba794d594c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_af9686e6a38360e26a2c476c96f9d7c91}\label{class_analog_io_t_af9686e6a38360e26a2c476c96f9d7c91}} 
+\index{AnalogIoT@{AnalogIoT}!publishDACState@{publishDACState}}
+\index{publishDACState@{publishDACState}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{publishDACState()}{publishDACState()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::publish\+DACState (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Publishes the state of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin of the DAC. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_af9686e6a38360e26a2c476c96f9d7c91_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_af9686e6a38360e26a2c476c96f9d7c91_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_a87bed89be4587e778eac2f8cabed4bab}\label{class_analog_io_t_a87bed89be4587e778eac2f8cabed4bab}} 
+\index{AnalogIoT@{AnalogIoT}!publishDACValue@{publishDACValue}}
+\index{publishDACValue@{publishDACValue}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{publishDACValue()}{publishDACValue()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::publish\+DACValue (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Publishes the value of a DAC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin of the DAC. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a87bed89be4587e778eac2f8cabed4bab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_a87bed89be4587e778eac2f8cabed4bab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_a1e1c02ae471274537452a89fd067d024}\label{class_analog_io_t_a1e1c02ae471274537452a89fd067d024}} 
+\index{AnalogIoT@{AnalogIoT}!registerADCConversionCallback@{registerADCConversionCallback}}
+\index{registerADCConversionCallback@{registerADCConversionCallback}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{registerADCConversionCallback()}{registerADCConversionCallback()}}
+{\footnotesize\ttfamily uint8\+\_\+t Analog\+Io\+T\+::register\+ADCConversion\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(uint8\+\_\+t, uint16\+\_\+t)$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Registers a callback for handling ADC conversions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & The callback function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The handler of the callback. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_analog_io_t_ae3b8eaee385ed8eb20f145996513461d}\label{class_analog_io_t_ae3b8eaee385ed8eb20f145996513461d}} 
+\index{AnalogIoT@{AnalogIoT}!setADCConversionEnabled@{setADCConversionEnabled}}
+\index{setADCConversionEnabled@{setADCConversionEnabled}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{setADCConversionEnabled()}{setADCConversionEnabled()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::set\+ADCConversion\+Enabled (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables or disables the periodic reading of the value of an ADC channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin of the ADC channel. \\
+\hline
+{\em enabled} & True if the value of the ADC channel should be read, false otherwise. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_ae3b8eaee385ed8eb20f145996513461d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_abd35a9011a0018c38af690bd95e367fb}\label{class_analog_io_t_abd35a9011a0018c38af690bd95e367fb}} 
+\index{AnalogIoT@{AnalogIoT}!setADCConversionInterval@{setADCConversionInterval}}
+\index{setADCConversionInterval@{setADCConversionInterval}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{setADCConversionInterval()}{setADCConversionInterval()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::set\+ADCConversion\+Interval (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{uint16\+\_\+t}]{interval }\end{DoxyParamCaption})}
+
+
+
+Sets the interval at which the value of an ADC channel is read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin of the ADC channel. \\
+\hline
+{\em interval} & The interval in milliseconds. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_analog_io_t_abd35a9011a0018c38af690bd95e367fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_analog_io_t_ada3f1d46782f2b63488445e75b05cf63}\label{class_analog_io_t_ada3f1d46782f2b63488445e75b05cf63}} 
+\index{AnalogIoT@{AnalogIoT}!setADCsPublishEnabled@{setADCsPublishEnabled}}
+\index{setADCsPublishEnabled@{setADCsPublishEnabled}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{setADCsPublishEnabled()}{setADCsPublishEnabled()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::set\+ADCs\+Publish\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Sets whether the state of all DACs is published. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & True if the state of all DACs should be published, false otherwise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_analog_io_t_a9a4ba77a993ea1c789f809ea89c57722}\label{class_analog_io_t_a9a4ba77a993ea1c789f809ea89c57722}} 
+\index{AnalogIoT@{AnalogIoT}!setADCsPublishInterval@{setADCsPublishInterval}}
+\index{setADCsPublishInterval@{setADCsPublishInterval}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{setADCsPublishInterval()}{setADCsPublishInterval()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::set\+ADCs\+Publish\+Interval (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{interval }\end{DoxyParamCaption})}
+
+
+
+Sets the interval at which the state of all DACs is published. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interval} & The interval in milliseconds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_analog_io_t_a37216e8cc0030b538ead2a7c30546d15}\label{class_analog_io_t_a37216e8cc0030b538ead2a7c30546d15}} 
+\index{AnalogIoT@{AnalogIoT}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::subscribe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Subscribes to all MQTT topics used by the \mbox{\hyperlink{class_analog_io_t}{Analog\+IoT}} object. 
+
+\begin{DoxyNote}{Note}
+This function is called when the MQTT client connects. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+\mbox{\Hypertarget{class_analog_io_t_aa7d3175c73cea942123caf24ce779539}\label{class_analog_io_t_aa7d3175c73cea942123caf24ce779539}} 
+\index{AnalogIoT@{AnalogIoT}!unregisterADCConversionCallback@{unregisterADCConversionCallback}}
+\index{unregisterADCConversionCallback@{unregisterADCConversionCallback}!AnalogIoT@{AnalogIoT}}
+\doxysubsubsection{\texorpdfstring{unregisterADCConversionCallback()}{unregisterADCConversionCallback()}}
+{\footnotesize\ttfamily void Analog\+Io\+T\+::unregister\+ADCConversion\+Callback (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{handler }\end{DoxyParamCaption})}
+
+
+
+Unregisters a callback for handling ADC conversions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & The handler of the callback. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Analog\+Io\+T.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/\mbox{\hyperlink{_analog_io_t_8cpp}{Analog\+Io\+T.\+cpp}}\end{DoxyCompactItemize}

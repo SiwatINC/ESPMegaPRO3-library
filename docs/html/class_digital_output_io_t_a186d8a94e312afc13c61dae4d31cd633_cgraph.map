@@ -1,0 +1,4 @@
+<map id="DigitalOutputIoT::publishDigitalOutputState" name="DigitalOutputIoT::publishDigitalOutputState">
+<area shape="rect" id="node1" title="Publish the state of the specified digital output." alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node2" href="$class_digital_output_card.html#a3e239d57c39cb82cff4aca6455f01d6f" title="Get the state of the specified pin." alt="" coords="236,5,383,47"/>
+</map>

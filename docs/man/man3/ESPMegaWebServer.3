@@ -1,0 +1,233 @@
+.TH "ESPMegaWebServer" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESPMegaWebServer \- Provides a web server for \fBESPMegaPRO\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ESPMegaWebServer\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESPMegaWebServer\fP (uint16_t port, \fBESPMegaIoT\fP *iot)"
+.br
+.RI "Construct a new \fBESPMegaWebServer::ESPMegaWebServer\fP objecy\&. "
+.ti -1c
+.RI "\fB~ESPMegaWebServer\fP ()"
+.br
+.RI "Destroy the \fBESPMegaWebServer::ESPMegaWebServer\fP object\&. "
+.ti -1c
+.RI "void \fBbegin\fP ()"
+.br
+.RI "Start the web server\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The loop function for the web server\&. "
+.ti -1c
+.RI "void \fBresetCredentials\fP ()"
+.br
+.RI "Reset web username and password to default\&. "
+.ti -1c
+.RI "char * \fBgetWebUsername\fP ()"
+.br
+.RI "Get the web username\&. "
+.ti -1c
+.RI "char * \fBgetWebPassword\fP ()"
+.br
+.RI "Get the web password\&. "
+.ti -1c
+.RI "void \fBsetWebUsername\fP (const char *username)"
+.br
+.RI "Set the web username\&. "
+.ti -1c
+.RI "void \fBsetWebPassword\fP (const char *password)"
+.br
+.RI "Set the web password\&. "
+.ti -1c
+.RI "void \fBbindFRAM\fP (FRAM *fram)"
+.br
+.RI "Bind the FRAM object to the web server\&. "
+.ti -1c
+.RI "void \fBloadCredentialsFromFRAM\fP ()"
+.br
+.RI "Load web username and password from FRAM\&. "
+.ti -1c
+.RI "void \fBsaveCredentialsToFRAM\fP ()"
+.br
+.RI "Save web username and password to FRAM\&. "
+.ti -1c
+.RI "AsyncWebServer * \fBgetServer\fP ()"
+.br
+.RI "Get the AsyncWebServer object\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides a web server for \fBESPMegaPRO\fP\&. 
+
+This class provides a web server for \fBESPMegaPRO\fP\&. It is used to configure the device and to update the firmware\&. This class also allows to save the credentials to access the web server in the FRAM memory\&. User can also add custom endpoints to the web server\&.
+.PP
+This class use FRAM address 301-400 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESPMegaWebServer::ESPMegaWebServer (uint16_t port, \fBESPMegaIoT\fP * iot)"
+
+.PP
+Construct a new \fBESPMegaWebServer::ESPMegaWebServer\fP objecy\&. 
+.PP
+\fBNote\fP
+.RS 4
+Although you can instantiate this class directly, it is recommended to use the ESPMegaPRO\&.webServer object instead\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIport\fP The TCP port to listen on 
+.br
+\fIiot\fP A pointer to the \fBESPMegaIoT\fP object 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ESPMegaWebServer::begin ()"
+
+.PP
+Start the web server\&. This method starts the web server and registers the necessary handlers\&.
+.PP
+\fBNote\fP
+.RS 4
+This method should be called after the \fBESPMegaIoT\fP object has been initialized\&. 
+.PP
+This method is automatically called if you use \fBESPMegaPRO::enableWebServer()\fP 
+.RE
+.PP
+
+.SS "void ESPMegaWebServer::bindFRAM (FRAM * fram)"
+
+.PP
+Bind the FRAM object to the web server\&. This method binds the FRAM object to the web server so that the web server can read and write credentials to the FRAM\&.
+.PP
+\fBNote\fP
+.RS 4
+The FRAM object must be bound to the web server before calling \fBESPMegaWebServer::begin()\fP 
+.PP
+This class takes 64 bytes of FRAM starting from address 301, however address 301-400 is reserved for it\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIfram\fP A pointer to the FRAM object 
+.RE
+.PP
+
+.SS "AsyncWebServer * ESPMegaWebServer::getServer ()"
+
+.PP
+Get the AsyncWebServer object\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The AsyncWebServer object 
+.RE
+.PP
+
+.SS "char * ESPMegaWebServer::getWebPassword ()"
+
+.PP
+Get the web password\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The returned pointer should not be freed or modified\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The web password 
+.RE
+.PP
+
+.SS "char * ESPMegaWebServer::getWebUsername ()"
+
+.PP
+Get the web username\&. 
+.PP
+\fBWarning\fP
+.RS 4
+The returned pointer should not be freed or modified\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The web username 
+.RE
+.PP
+
+.SS "void ESPMegaWebServer::loadCredentialsFromFRAM ()"
+
+.PP
+Load web username and password from FRAM\&. This method loads the web server credentials from the FRAM\&.
+.PP
+\fBNote\fP
+.RS 4
+This method is automatically called by \fBESPMegaWebServer::begin()\fP 
+.RE
+.PP
+
+.SS "void ESPMegaWebServer::loop ()"
+
+.PP
+The loop function for the web server\&. 
+.PP
+\fBNote\fP
+.RS 4
+This method is not used by the \fBESPMegaWebServer\fP class as of now\&. 
+.RE
+.PP
+
+.SS "void ESPMegaWebServer::resetCredentials ()"
+
+.PP
+Reset web username and password to default\&. This method resets the web server credentials to the default username and password\&.
+.PP
+\fBNote\fP
+.RS 4
+The default username and password is both 'admin' 
+.RE
+.PP
+
+.SS "void ESPMegaWebServer::saveCredentialsToFRAM ()"
+
+.PP
+Save web username and password to FRAM\&. This method saves the web server credentials to the FRAM\&. 
+.SS "void ESPMegaWebServer::setWebPassword (const char * password)"
+
+.PP
+Set the web password\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpassword\fP The new web password 
+.RE
+.PP
+
+.SS "void ESPMegaWebServer::setWebUsername (const char * username)"
+
+.PP
+Set the web username\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIusername\fP The new web username 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

@@ -1,0 +1,5 @@
+<map id="DigitalInputIoT::setDigitalInputsPublishEnabled" name="DigitalInputIoT::setDigitalInputsPublishEnabled">
+<area shape="rect" id="node1" title="Set if the digital inputs should be published to the MQTT broker." alt="" coords="252,27,440,69"/>
+<area shape="rect" id="node2" href="$class_digital_input_io_t.html#a97e335d982d3c8701a5bf6934bccd773" title="Initializes the DigitalInputIoT object." alt="" coords="24,5,185,32"/>
+<area shape="rect" id="node3" href="$class_digital_input_io_t.html#aeff76b54d9e9a589cbfe4b7e2a5c6911" title="Handles MQTT messages for the DigitalInputIoT component." alt="" coords="5,57,204,98"/>
+</map>

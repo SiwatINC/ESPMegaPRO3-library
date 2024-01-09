@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_expansion_card" xml:lang="en-US">
+<title>ExpansionCard Class Reference</title>
+<indexterm><primary>ExpansionCard</primary></indexterm>
+<para>
+
+<para>The base class for all expansion cards. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ExpansionCard.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for ExpansionCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_expansion_card__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_expansion_card_1aecd52cc9b31b642f2cd78f01654005de"/>virtual bool <emphasis role="strong">begin</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_expansion_card_1a3b3364d9de40d039a3dbfe9141dea0a9"/>virtual void <emphasis role="strong">loop</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_expansion_card_1a83371d97f1deba4e419093b193aea99c"/>virtual uint8_t <emphasis role="strong">getType</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The base class for all expansion cards. </para>
+
+
+
+<para>In order to create a new expansion card, you should create a new class that inherits from this class. Your class should implement the following functions:<itemizedlist>
+<listitem>
+<para>begin() : Initialize the card</para>
+</listitem><listitem>
+<para>loop() : A function that is called in the main loop</para>
+</listitem><listitem>
+<para>getType() : Get the type of the card, The type should be a unique number between 0 and 255</para>
+</listitem></itemizedlist>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>This class is abstract and should not be instantiated directly. </para>
+</warning>
+</para>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp</section>
+</section>

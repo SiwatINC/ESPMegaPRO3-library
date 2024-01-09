@@ -1,0 +1,686 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_e_s_p_mega_p_r_o_8h" kind="file" language="C++">
+    <compoundname>ESPMegaPRO.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">Wire.h</includes>
+    <includes local="no">Adafruit_PWMServoDriver.h</includes>
+    <includes local="no">PCF8574.h</includes>
+    <includes local="no">FRAM.h</includes>
+    <includes local="no">TimeLib.h</includes>
+    <includes local="no">DS1307RTC.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">Adafruit_ADS1X15.h</includes>
+    <includes local="no">MCP4725.h</includes>
+    <includedby refid="_e_s_p_mega_p_r_o_8cpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>Adafruit_ADS1X15.h</label>
+      </node>
+      <node id="8">
+        <label>DS1307RTC.h</label>
+      </node>
+      <node id="3">
+        <label>Wire.h</label>
+      </node>
+      <node id="7">
+        <label>TimeLib.h</label>
+      </node>
+      <node id="9">
+        <label>time.h</label>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>Adafruit_PWMServoDriver.h</label>
+      </node>
+      <node id="11">
+        <label>MCP4725.h</label>
+      </node>
+      <node id="6">
+        <label>FRAM.h</label>
+      </node>
+      <node id="5">
+        <label>PCF8574.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h</label>
+        <link refid="_e_s_p_mega_p_r_o_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structrtctime__t" prot="public">rtctime_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1af43d0d3e62f7b68055c490f24aa36dff" prot="public" static="no">
+        <name>ANALOG_CARD_ENABLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="3" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1ade7a48a45468eb98de764d0ee58dabf3" prot="public" static="no">
+        <name>INPUT_BANK_A_ADDRESS</name>
+        <initializer>0x21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="17" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1a3b4c8c1c813fb682ded1c40115318b9d" prot="public" static="no">
+        <name>INPUT_BANK_B_ADDRESS</name>
+        <initializer>0x22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="18" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1a076b37896367b420377173a5ce869f6e" prot="public" static="no">
+        <name>PWM_BANK_ADDRESS</name>
+        <initializer>0x5F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="19" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1a7c5d1c7f4a102bc090361b840c211815" prot="public" static="no">
+        <name>RTC_ADDRESS</name>
+        <initializer>0x68</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="20" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1a51f292f63dbdff6510aa3b27d83bbb4e" prot="public" static="no">
+        <name>ANALOG_INPUT_BANK_A_ADDRESS</name>
+        <initializer>0x48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="21" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1a4d34262227a8ee6766d850c537167f32" prot="public" static="no">
+        <name>ANALOG_INPUT_BANK_B_ADDRESS</name>
+        <initializer>0x49</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="22" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1a37187c0af909275004b98eaeaec36ffe" prot="public" static="no">
+        <name>DAC0_ADDRESS</name>
+        <initializer>0x60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="23" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1abcfff3c528d4734f3c6e8bcaaa0fc1ad" prot="public" static="no">
+        <name>DAC1_ADDRESS</name>
+        <initializer>0x61</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="24" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1ac59257888858f1ce1a081962d333df8d" prot="public" static="no">
+        <name>DAC2_ADDRESS</name>
+        <initializer>0x62</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="25" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1ab4eb5875ccf77974f0c53371ab47341c" prot="public" static="no">
+        <name>DAC3_ADDRESS</name>
+        <initializer>0x63</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="26" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1ab90a38ba3ae5dd686944501dfba7b565" prot="public" static="no">
+        <name>FRAM_ADDRESS</name>
+        <initializer>0x56</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="27" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1a019456f0dca31dab4f49bd51a53fb911" prot="public" static="no">
+        <name>INPUT_BANK_A_INTERRUPT</name>
+        <initializer>36</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="30" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1a111fbe685fa2a23f61fd964559d2ad6d" prot="public" static="no">
+        <name>INPUT_BANK_B_INTERRUPT</name>
+        <initializer>39</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="31" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_e_s_p_mega_p_r_o_8h_1aa85ccb4cf40ad86443e17fee7569c469" prot="public" static="no">
+        <name>ESPMega_configNTP</name>
+        <initializer>configTime</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="33" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_e_s_p_mega_p_r_o_8h_1aa5c18735f1dfdd5ef5e4e37674ad8c4a" prot="public" static="no" mutable="no">
+        <type>FRAM</type>
+        <definition>FRAM ESPMega_FRAM</definition>
+        <argsstring></argsstring>
+        <name>ESPMega_FRAM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="32" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="9" bodyend="-1" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="32" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1aaab05847ceb78a2fa10cd61f2ba2e261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMega_begin</definition>
+        <argsstring>()</argsstring>
+        <name>ESPMega_begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initiate ESPMega PRO Internal Components</para>
+<para>This function will initiate the PWM bank, Input banks, and the EEPROM. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="48" column="6" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="20" bodyend="46" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="48" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1a681b4d151365ac808e25aec1996960d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMega_loop</definition>
+        <argsstring>()</argsstring>
+        <name>ESPMega_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Run ESPMega PRO Internal Routines</para>
+<para>This function must be called regularly for the correct operation of the ESPMega! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="56" column="6" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="48" bodyend="50" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="56" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1ae5a50cb31146042f4a662c1481cbd57f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMega_digitalRead</definition>
+        <argsstring>(int id)</argsstring>
+        <name>ESPMega_digitalRead</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read one of the ESPMega&apos;s Digital Input pins (I0-I15)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of the pin to be read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The state of the pin (HIGH/LOW) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="64" column="6" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="52" bodyend="74" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="64" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1ac9f53c42bfbce180fcfe9762ada92bf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMega_analogWrite</definition>
+        <argsstring>(int id, int value)</argsstring>
+        <name>ESPMega_analogWrite</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a pulse wave modulated signal to one of the ESPMega&apos;s PWM pins (P0-P15)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of the pin to write to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the &quot;HIGH&quot; duty cycle of the PWM wave (0-4095) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="73" column="6" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="76" bodyend="83" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="73" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1a2b583ca62b2381f2f8a9829507371ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMega_digitalWrite</definition>
+        <argsstring>(int id, bool value)</argsstring>
+        <name>ESPMega_digitalWrite</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a digital signal to one of the ESPMega&apos;s PWM pins (P0-P15)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of the pin to write to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new state for the pin (HIGH/LOW) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="82" column="6" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="85" bodyend="91" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="82" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1ac42b2504093a4133099a81836909fb8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void IRAM_ATTR</type>
+        <definition>void IRAM_ATTR refreshInputBankA</definition>
+        <argsstring>()</argsstring>
+        <name>refreshInputBankA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="83" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="93" bodyend="96" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="83" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1ab5d2477c56d43133f1c972f7881c4159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void IRAM_ATTR</type>
+        <definition>void IRAM_ATTR refreshInputBankB</definition>
+        <argsstring>()</argsstring>
+        <name>refreshInputBankB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="84" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="98" bodyend="101" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="84" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1a38559cda9e7c3ae1de241c94a5f4cd95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrtctime__t" kindref="compound">rtctime_t</ref></type>
+        <definition>rtctime_t ESPMega_getTime</definition>
+        <argsstring>()</argsstring>
+        <name>ESPMega_getTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get time from the onboard RTC as a struct</para>
+<para><simplesect kind="return"><para>Time Element Struct </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="91" column="11" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="103" bodyend="115" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="91" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1a82a491d3fe0ffbabc700e206ec7af587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMega_setTime</definition>
+        <argsstring>(int hours, int minutes, int seconds, int day, int month, int year)</argsstring>
+        <name>ESPMega_setTime</name>
+        <param>
+          <type>int</type>
+          <declname>hours</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minutes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seconds</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>day</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>year</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the onboard RTC&apos;s time</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hours</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minutes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Day of the month </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Month in numerical form </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Years in AD </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="102" column="6" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.cpp" bodystart="117" bodyend="127" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="102" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1a6738c5795ea00478ccc0f4e39c1b4df8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMega_updateTimeFromNTP</definition>
+        <argsstring>()</argsstring>
+        <name>ESPMega_updateTimeFromNTP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the onboard RTC&apos;s time by using time from the NTP server configured with ESPMega_configNTP(); <simplesect kind="return"><para>true when updated successfully. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="110" column="6" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="110" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1ac2f37717ff4befc8905587f0d50a746f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t ESPMega_analogRead</definition>
+        <argsstring>(int id)</argsstring>
+        <name>ESPMega_analogRead</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read one of the ESPMega Analog Card&apos;s Analog Input pins (A0-A7)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of the pin to be read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the pin (0-4095) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="119" column="9" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="119" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="_e_s_p_mega_p_r_o_8h_1a60ac58a0018dc7e9a841bea898f3a90b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMega_dacWrite</definition>
+        <argsstring>(int id, int value)</argsstring>
+        <name>ESPMega_dacWrite</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a True Analog Signal to one of the ESPMega Analog Card&apos;s Analog Output pins (AO0-AO3)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of the pin to write to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the analog value of the pin (0-4095) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" line="127" column="6" declfile="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h" declline="127" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ESPMEGA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESPMEGA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANALOG_CARD_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_PWMServoDriver.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;PCF8574.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;FRAM.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TimeLib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DS1307RTC.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ANALOG_CARD_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_ADS1X15.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;MCP4725.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INPUT_BANK_A_ADDRESS<sp/>0x21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INPUT_BANK_B_ADDRESS<sp/>0x22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PWM_BANK_ADDRESS<sp/>0x5F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RTC_ADDRESS<sp/>0x68</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANALOG_INPUT_BANK_A_ADDRESS<sp/>0x48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANALOG_INPUT_BANK_B_ADDRESS<sp/>0x49</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC0_ADDRESS<sp/>0x60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC1_ADDRESS<sp/>0x61</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC2_ADDRESS<sp/>0x62</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC3_ADDRESS<sp/>0x63</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FRAM_ADDRESS<sp/>0x56</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>USE_INTERRUPT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INPUT_BANK_A_INTERRUPT<sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INPUT_BANK_B_INTERRUPT<sp/>39</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>FRAM<sp/>ESPMega_FRAM;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESPMega_configNTP<sp/>configTime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structrtctime__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structrtctime__t" kindref="compound">rtctime_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>hours;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>minutes;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>seconds;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>day;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>month;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>year;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMega_begin();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMega_loop();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ESPMega_digitalRead(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMega_analogWrite(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMega_digitalWrite(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>IRAM_ATTR<sp/>refreshInputBankA();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>IRAM_ATTR<sp/>refreshInputBankB();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="structrtctime__t" kindref="compound">rtctime_t</ref><sp/>ESPMega_getTime();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMega_setTime(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hours,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minutes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seconds,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>day,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>month,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>year);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ESPMega_updateTimeFromNTP();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ANALOG_CARD_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">int16_t<sp/>ESPMega_analogRead(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ESPMega_dacWrite(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaPRO.h"/>
+  </compounddef>
+</doxygen>

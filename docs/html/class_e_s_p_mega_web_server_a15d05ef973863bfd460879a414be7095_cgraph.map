@@ -1,0 +1,4 @@
+<map id="ESPMegaWebServer::resetCredentials" name="ESPMegaWebServer::resetCredentials">
+<area shape="rect" id="node1" title="Reset web username and password to default." alt="" coords="5,13,272,39"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_web_server.html#a77e5ca53ae15af09a632ce98330a9530" title="Save web username and password to FRAM." alt="" coords="320,5,585,47"/>
+</map>

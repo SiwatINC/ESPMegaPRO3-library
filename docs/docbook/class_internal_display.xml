@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_internal_display" xml:lang="en-US">
+<title>InternalDisplay Class Reference</title>
+<indexterm><primary>InternalDisplay</primary></indexterm>
+<para>
+
+<para>The internal display of the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;InternalDisplay.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for InternalDisplay:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for InternalDisplay:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_internal_display_1adc0903695295bb14468224cb207d0dc4">InternalDisplay</link> (HardwareSerial *displayAdapter)</para>
+
+<para>Create a new Internal Display object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05">begin</link> (<link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> *iot, std::function&lt; <link linkend="_structrtctime__t">rtctime_t</link>()&gt; getRtcTime)</para>
+
+<para>Initialize the Internal Display. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_internal_display_1acba3729be902fcde3e30e754aef62330">loop</link> ()</para>
+
+<para>The main loop of the Internal Display. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_internal_display_1a9e314baf652600542d649f5f0dd1cd68">bindInputCard</link> (<link linkend="_class_digital_input_card">DigitalInputCard</link> *inputCard)</para>
+
+<para>Set the input card to be be shown on the input page. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6">bindOutputCard</link> (<link linkend="_class_digital_output_card">DigitalOutputCard</link> *outputCard)</para>
+
+<para>Set the output card to be be shown on the output page. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_internal_display_1aff819b7e2625b4af2b6fbd44f46c89f2">bindClimateCard</link> (<link linkend="_class_climate_card">ClimateCard</link> *climateCard)</para>
+
+<para>Set the climate card to be be shown on the AC page. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_internal_display_1a9ee706c80f56dd8e5088f282c467b146"/>void <link linkend="_class_internal_display_1a9ee706c80f56dd8e5088f282c467b146">unbindInputCard</link> ()</para>
+
+<para>Unbind the input card from the display. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_internal_display_1a452703babc7891b7ab937e32155e2310"/>void <link linkend="_class_internal_display_1a452703babc7891b7ab937e32155e2310">unbindOutputCard</link> ()</para>
+
+<para>Unbind the output card from the display. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_internal_display_1af952dea8b4a4d74314d3ed6260fba7c6"/>void <link linkend="_class_internal_display_1af952dea8b4a4d74314d3ed6260fba7c6">unbindClimateCard</link> ()</para>
+
+<para>Unbind the climate card from the display. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The internal display of the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link>. </para>
+
+
+
+<para>This is the display that is installed on some <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> Chassis. It is a 3.5&quot; TFT LCD with a resistive touch screen.</para>
+
+<para>You can use this display to monitor the status of the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> and also to control the various components of the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link>.</para>
+
+<para>If you are using a custom display, you need to create a class that inherits from <link linkend="_class_e_s_p_mega_display">ESPMegaDisplay</link> and implement the methods in that class, you may refer to this class for reference.</para>
+
+<para><note><title>Note</title>
+
+<para>This class is automatically instantiated by the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> and can be accessed via the <computeroutput>display</computeroutput> variable. </para>
+</note>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_internal_display_1adc0903695295bb14468224cb207d0dc4"/>    <section>
+    <title>InternalDisplay()</title>
+<indexterm><primary>InternalDisplay</primary><secondary>InternalDisplay</secondary></indexterm>
+<indexterm><primary>InternalDisplay</primary><secondary>InternalDisplay</secondary></indexterm>
+<para><computeroutput>InternalDisplay::InternalDisplay (HardwareSerial * displayAdapter)</computeroutput></para><para>
+
+<para>Create a new Internal Display object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>displayAdapter</entry>
+                                <entry>
+<para>The HardwareSerial object that is connected to the display </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>InternalDisplay</secondary></indexterm>
+<indexterm><primary>InternalDisplay</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>void InternalDisplay::begin (<link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> * iot, std::function&lt; <link linkend="_structrtctime__t">rtctime_t</link>()&gt; getRtcTime)</computeroutput></para><para>
+
+<para>Initialize the Internal Display. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>You should not call this function directly, instead use ESPMegaIoT::enableInternalDisplay()</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>iot</entry>
+                                <entry>
+<para>The <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>getRtcTime</entry>
+                                <entry>
+<para>A function that returns the current time </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_a0019ea04c0e81fdee50d190f948b3f05_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_a0019ea04c0e81fdee50d190f948b3f05_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_internal_display_1aff819b7e2625b4af2b6fbd44f46c89f2"/>    <section>
+    <title>bindClimateCard()</title>
+<indexterm><primary>bindClimateCard</primary><secondary>InternalDisplay</secondary></indexterm>
+<indexterm><primary>InternalDisplay</primary><secondary>bindClimateCard</secondary></indexterm>
+<para><computeroutput>void InternalDisplay::bindClimateCard (<link linkend="_class_climate_card">ClimateCard</link> * climateCard)</computeroutput></para><para>
+
+<para>Set the climate card to be be shown on the AC page. </para>
+</para>
+
+<para>This assume that your ClimeateCard has the mode and fan speed names in the following order: mode: [off, fan_only, cool] fan_speed: [auto, low, medium, high]</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>climateCard</entry>
+                                <entry>
+<para>The climate card object to be shown </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_aff819b7e2625b4af2b6fbd44f46c89f2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_internal_display_1a9e314baf652600542d649f5f0dd1cd68"/>    <section>
+    <title>bindInputCard()</title>
+<indexterm><primary>bindInputCard</primary><secondary>InternalDisplay</secondary></indexterm>
+<indexterm><primary>InternalDisplay</primary><secondary>bindInputCard</secondary></indexterm>
+<para><computeroutput>void InternalDisplay::bindInputCard (<link linkend="_class_digital_input_card">DigitalInputCard</link> * inputCard)</computeroutput></para><para>
+
+<para>Set the input card to be be shown on the input page. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>inputCard</entry>
+                                <entry>
+<para>The input card object to be shown </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_a9e314baf652600542d649f5f0dd1cd68_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_a9e314baf652600542d649f5f0dd1cd68_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6"/>    <section>
+    <title>bindOutputCard()</title>
+<indexterm><primary>bindOutputCard</primary><secondary>InternalDisplay</secondary></indexterm>
+<indexterm><primary>InternalDisplay</primary><secondary>bindOutputCard</secondary></indexterm>
+<para><computeroutput>void InternalDisplay::bindOutputCard (<link linkend="_class_digital_output_card">DigitalOutputCard</link> * outputCard)</computeroutput></para><para>
+
+<para>Set the output card to be be shown on the output page. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>outputCard</entry>
+                                <entry>
+<para>The output card object to be shown </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_a9aa2e1da34488ae2d726cc8023555ec6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_a9aa2e1da34488ae2d726cc8023555ec6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_internal_display_1acba3729be902fcde3e30e754aef62330"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>InternalDisplay</secondary></indexterm>
+<indexterm><primary>InternalDisplay</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void InternalDisplay::loop ( )</computeroutput></para><para>
+
+<para>The main loop of the Internal Display. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>You should not call this function directly, instead use ESPMega::loop() </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_acba3729be902fcde3e30e754aef62330_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_internal_display_acba3729be902fcde3e30e754aef62330_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp</section>
+</section>

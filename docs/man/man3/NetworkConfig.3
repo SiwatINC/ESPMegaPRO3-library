@@ -1,0 +1,75 @@
+.TH "NetworkConfig" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NetworkConfig \- The network configuration struct\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ESPMegaIoT\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "IPAddress \fBip\fP"
+.br
+.RI "The IP address\&. "
+.ti -1c
+.RI "IPAddress \fBgateway\fP"
+.br
+.RI "The gateway address\&. "
+.ti -1c
+.RI "IPAddress \fBsubnet\fP"
+.br
+.RI "The subnet mask\&. "
+.ti -1c
+.RI "IPAddress \fBdns1\fP"
+.br
+.RI "The primary DNS server\&. "
+.ti -1c
+.RI "IPAddress \fBdns2\fP"
+.br
+.RI "The secondary DNS server\&. "
+.ti -1c
+.RI "char \fBhostname\fP [32]"
+.br
+.RI "The hostname\&. "
+.ti -1c
+.RI "bool \fBuseStaticIp\fP"
+.br
+.RI "Whether to use a static IP, if false, DHCP will be used\&. "
+.ti -1c
+.RI "bool \fBuseWifi\fP"
+.br
+.RI "Whether to use WiFi or Ethernet, if false, Ethernet will be used\&. "
+.ti -1c
+.RI "bool \fBwifiUseAuth\fP"
+.br
+.RI "Whether to use WiFi authentication, if false, ssid and password will be ignored\&. "
+.ti -1c
+.RI "char \fBssid\fP [32]"
+.br
+.RI "The WiFi SSID, even if wifiUseAuth is false, this should be set\&. "
+.ti -1c
+.RI "char \fBpassword\fP [32]"
+.br
+.RI "The WiFi password, even if wifiUseAuth is false, this should be set\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The network configuration struct\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+This struct will be saved to FRAM when calling saveNetworkConfig 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

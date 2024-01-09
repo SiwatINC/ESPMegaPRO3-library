@@ -1,0 +1,237 @@
+.TH "DigitalOutputIoT" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DigitalOutputIoT \- The \fBDigitalOutputIoT\fP class is a class interfacing with the Digital Output Card through MQTT\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DigitalOutputIoT\&.hpp>\fP
+.PP
+Inherits \fBIoTComponent\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDigitalOutputIoT\fP ()"
+.br
+.RI "Create a new \fBDigitalOutputIoT\fP object\&. "
+.ti -1c
+.RI "\fB~DigitalOutputIoT\fP ()"
+.br
+.RI "Destroy the \fBDigitalOutputIoT\fP object\&. "
+.ti -1c
+.RI "bool \fBbegin\fP (uint8_t card_id, \fBExpansionCard\fP *card, PubSubClient *mqtt, char *base_topic)"
+.br
+.RI "Initialize the \fBDigitalOutputIoT\fP object\&. "
+.ti -1c
+.RI "void \fBhandleMqttMessage\fP (char *topic, char *payload)"
+.br
+.RI "Handle the MQTT messages for the \fBDigitalOutputIoT\fP card\&. "
+.ti -1c
+.RI "void \fBpublishDigitalOutputs\fP ()"
+.br
+.RI "Publish the state of all digital outputs\&. "
+.ti -1c
+.RI "void \fBpublishDigitalOutput\fP (uint8_t pin)"
+.br
+.RI "Publish the state and value of the specified digital output\&. "
+.ti -1c
+.RI "void \fBpublishDigitalOutputState\fP (uint8_t pin)"
+.br
+.RI "Publish the state of the specified digital output\&. "
+.ti -1c
+.RI "void \fBpublishDigitalOutputValue\fP (uint8_t pin)"
+.br
+.RI "Publish the value of the specified digital output\&. "
+.ti -1c
+.RI "void \fBsetDigitalOutputsPublishEnabled\fP (bool enabled)"
+.br
+.RI "Enable/disable publishing of digital outputs\&. "
+.ti -1c
+.RI "void \fBhandleValueChange\fP (uint8_t pin, bool state, uint16_t value)"
+.br
+.RI "Handle the value change of a pin\&. "
+.ti -1c
+.RI "void \fBpublishReport\fP ()"
+.br
+.RI "Publish all digital outputs\&. "
+.ti -1c
+.RI "void \fBsubscribe\fP ()"
+.br
+.RI "Subscribe to the MQTT topics used by the \fBDigitalOutputIoT\fP object\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The main loop for the \fBDigitalOutputIoT\fP object\&. "
+.ti -1c
+.RI "uint8_t \fBgetType\fP ()"
+.br
+.RI "Get the type of the IoT component\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The \fBDigitalOutputIoT\fP class is a class interfacing with the Digital Output Card through MQTT\&. 
+
+
+.PP
+\fBWarning\fP
+.RS 4
+You should not instantiate this class directly, instead use ESPMegaIO's registerCard function\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool DigitalOutputIoT::begin (uint8_t card_id, \fBExpansionCard\fP * card, PubSubClient * mqtt, char * base_topic)\fC [virtual]\fP"
+
+.PP
+Initialize the \fBDigitalOutputIoT\fP object\&. 
+.PP
+\fBNote\fP
+.RS 4
+ALthough this function can be called inside the main program, it is recommended to use \fBESPMegaPRO::installCard()\fP instead
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIcard_id\fP The id of the card 
+.br
+\fIcard\fP The card object 
+.br
+\fImqtt\fP The PubSubClient object 
+.br
+\fIbase_topic\fP The base topic of the card 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the initialization is successful, false otherwise 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "uint8_t DigitalOutputIoT::getType ()\fC [virtual]\fP"
+
+.PP
+Get the type of the IoT component\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The type of the IoT component 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void DigitalOutputIoT::handleMqttMessage (char * topic, char * payload)\fC [virtual]\fP"
+
+.PP
+Handle the MQTT messages for the \fBDigitalOutputIoT\fP card\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItopic\fP The topic of the message 
+.br
+\fIpayload\fP The payload of the message 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void DigitalOutputIoT::handleValueChange (uint8_t pin, bool state, uint16_t value)"
+
+.PP
+Handle the value change of a pin\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is registered as a callback function with the \fBDigitalOutputCard\fP object
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin that changed 
+.br
+\fIstate\fP The new state of the pin 
+.br
+\fIvalue\fP The new value of the pin 
+.RE
+.PP
+
+.SS "void DigitalOutputIoT::loop ()"
+
+.PP
+The main loop for the \fBDigitalOutputIoT\fP object\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is not used, it is only here to implement the \fBIoTComponent\fP interface 
+.RE
+.PP
+
+.SS "void DigitalOutputIoT::publishDigitalOutput (uint8_t pin)"
+
+.PP
+Publish the state and value of the specified digital output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to publish 
+.RE
+.PP
+
+.SS "void DigitalOutputIoT::publishDigitalOutputState (uint8_t pin)"
+
+.PP
+Publish the state of the specified digital output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to publish 
+.RE
+.PP
+
+.SS "void DigitalOutputIoT::publishDigitalOutputValue (uint8_t pin)"
+
+.PP
+Publish the value of the specified digital output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to publish 
+.RE
+.PP
+
+.SS "void DigitalOutputIoT::publishReport ()\fC [virtual]\fP"
+
+.PP
+Publish all digital outputs\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is called by the \fBESPMegaIoT\fP object 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBIoTComponent\fP\&.
+.SS "void DigitalOutputIoT::setDigitalOutputsPublishEnabled (bool enabled)"
+
+.PP
+Enable/disable publishing of digital outputs\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenabled\fP True to enable publishing, false to disable publishing 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

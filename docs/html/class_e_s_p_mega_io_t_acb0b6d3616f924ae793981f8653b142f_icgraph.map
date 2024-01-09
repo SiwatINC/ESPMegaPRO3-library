@@ -1,0 +1,5 @@
+<map id="ESPMegaIoT::networkConnected" name="ESPMegaIoT::networkConnected">
+<area shape="rect" id="node1" title="Check if the network is connected." alt="" coords="403,5,633,32"/>
+<area shape="rect" id="node2" href="$class_internal_display.html#acba3729be902fcde3e30e754aef62330" title="The main loop of the Internal Display." alt="" coords="199,5,355,32"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_p_r_o.html#a7bd135e51c69c802aaacda4cf016e599" title="The main loop for the ESPMegaPRO object." alt="" coords="5,5,151,32"/>
+</map>

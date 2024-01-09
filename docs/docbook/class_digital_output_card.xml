@@ -1,0 +1,842 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_digital_output_card" xml:lang="en-US">
+<title>DigitalOutputCard Class Reference</title>
+<indexterm><primary>DigitalOutputCard</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_digital_output_card">DigitalOutputCard</link> class is a class for controlling the Digital Output Card. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;DigitalOutputCard.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for DigitalOutputCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for DigitalOutputCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_digital_output_card_1a8ca9e928a7e06da666e7bf3b3801f1da">DigitalOutputCard</link> (uint8_t address)</para>
+
+<para>Create a new Digital Output Card object with the specified address. </para>
+</listitem>
+            <listitem><para><link linkend="_class_digital_output_card_1aa73196a67686b5f8db3090577eff950b">DigitalOutputCard</link> (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4)</para>
+
+<para>Create a new Digital Output Card object with the specified position on the dip switch. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_digital_output_card_1a4698ea2f13dba8e1cddc29efd8d11743">begin</link> ()</para>
+
+<para>Initialize the Digital Output Card. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1aeae842b0338e6788b99fa623fffcbe89">loop</link> ()</para>
+
+<para>The main loop for the Digital Output Card object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1a4e141b2627539b6b64f3d02d77a0aa84">digitalWrite</link> (uint8_t pin, bool state)</para>
+
+<para>Write a digtal LOW or HIGH to the specified pin. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1aa34d14771705c4374da1e41aad953843">analogWrite</link> (uint8_t pin, uint16_t value)</para>
+
+<para>Write a pwm value to the specified pin. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1a742206fb70202954d822175b69f0f954">setState</link> (uint8_t pin, bool state)</para>
+
+<para>Set the state of the specified pin. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1afa3fc66e71b03ee75ef022f92431466d">setValue</link> (uint8_t pin, uint16_t value)</para>
+
+<para>Set the pwm value of the specified pin. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_digital_output_card_1a3e239d57c39cb82cff4aca6455f01d6f">getState</link> (uint8_t pin)</para>
+
+<para>Get the state of the specified pin. </para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_digital_output_card_1ae160653dd5ec2bdbce0327af77669d87">getValue</link> (uint8_t pin)</para>
+
+<para>Get the pwm value of the specified pin. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_digital_output_card_1a04a881ba7142114c83f41a49129111b6">registerChangeCallback</link> (std::function&lt; void(uint8_t, bool, uint16_t)&gt; callback)</para>
+
+<para>Register a callback function for the specified pin. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1ae9601a5033bc723852d11d336cc2de93">unregisterChangeCallback</link> (uint8_t handler)</para>
+
+<para>Unregister a callback function. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1a57796fcf07bbb56366644a2435481b99">loadPinMap</link> (uint8_t pinMap[16])</para>
+
+<para>Load a pin map. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1aa43b2f8d13abb0164f661eba5daa14ce">bindFRAM</link> (FRAM *fram, uint16_t address)</para>
+
+<para>Bind a FRAM to the card. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_output_card_1a451d122dfcc4c239c18c9d6f5d41449b"/>void <link linkend="_class_digital_output_card_1a451d122dfcc4c239c18c9d6f5d41449b">saveToFRAM</link> ()</para>
+
+<para>Save the states and values of all the pins to the FRAM. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_output_card_1a500615c25557efcff072e98e65a8db33"/>void <link linkend="_class_digital_output_card_1a500615c25557efcff072e98e65a8db33">loadFromFRAM</link> ()</para>
+
+<para>Load the states and values of all the pins from the FRAM. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1a3eed3e145a257bad60e3e0e82a74f7f7">setAutoSaveToFRAM</link> (bool autoSave)</para>
+
+<para>Set the auto save to FRAM. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_digital_output_card_1a99ac93ac96289b95063d4d1e1e2b7893">savePinValueToFRAM</link> (uint8_t pin)</para>
+
+<para>Save a single pin value to FRAM. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_output_card_1a8d99e0805f6463fc886087e502efb12d"/>void <link linkend="_class_digital_output_card_1a8d99e0805f6463fc886087e502efb12d">saveStateToFRAM</link> ()</para>
+
+<para>Save the states of all the pins to FRAM. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_digital_output_card_1aef670901ac2563bd79242f337f37f378"/>void <emphasis role="strong">saveValueToFRAM</emphasis> ()</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_digital_output_card_1a9ce9c2b88a21f786c6cd76eb8468e13c">getType</link> ()</para>
+
+<para>Get the type of the card. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_digital_output_card">DigitalOutputCard</link> class is a class for controlling the Digital Output Card. </para>
+
+
+
+<para>This Digital Output Card has 16 digital outputs. All outputs are PWM capable. ALl outputs are 12V Push-Pull outputs. Outputs is grouped in 4 groups of 4 outputs.(0-3, 4-7, 8-11, 12-15) Each pin is capable of 0.6A, however each group&apos;s total current is limited to 1.2A.</para>
+
+<para><warning><title>Warning</title>
+
+<para>You should not instantiate this class directly, instead use ESPMegaIO&apos;s registerCard function. </para>
+</warning>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_digital_output_card_1a8ca9e928a7e06da666e7bf3b3801f1da"/>    <section>
+    <title>DigitalOutputCard()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>DigitalOutputCard</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<para><computeroutput>DigitalOutputCard::DigitalOutputCard (uint8_t address)</computeroutput></para><para>
+
+<para>Create a new Digital Output Card object with the specified address. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>If you are using the ESPMegaI/O board, you should use the dip switch constructor</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>address</entry>
+                                <entry>
+<para>The ESPMegaI/O address of the card </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_digital_output_card_1aa73196a67686b5f8db3090577eff950b"/>    <section>
+    <title>DigitalOutputCard()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>DigitalOutputCard</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<para><computeroutput>DigitalOutputCard::DigitalOutputCard (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4)</computeroutput></para><para>
+
+<para>Create a new Digital Output Card object with the specified position on the dip switch. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>The bit 0 are at the left of the dip switch</para>
+</note>
+<warning><title>Warning</title>
+
+<para>There are 5 switches on the dip switch, they should be unique accross all the cards</para>
+</warning>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>bit0</entry>
+                                <entry>
+<para>The position of the first switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit1</entry>
+                                <entry>
+<para>The position of the second switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit2</entry>
+                                <entry>
+<para>The position of the third switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit3</entry>
+                                <entry>
+<para>The position of the fourth switch on the dip switch </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bit4</entry>
+                                <entry>
+<para>The position of the fifth switch on the dip switch </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_digital_output_card_1aa34d14771705c4374da1e41aad953843"/>    <section>
+    <title>analogWrite()</title>
+<indexterm><primary>analogWrite</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>analogWrite</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::analogWrite (uint8_t pin, uint16_t value)</computeroutput></para><para>
+
+<para>Write a pwm value to the specified pin. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function set both the state and the pwm value of the pin</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to set the pwm value </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The pwm value to set </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_aa34d14771705c4374da1e41aad953843_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a4698ea2f13dba8e1cddc29efd8d11743"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool DigitalOutputCard::begin ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initialize the Digital Output Card. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Although this function can be called inside the main program, it is recommended to use <link linkend="_class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450">ESPMegaPRO::installCard()</link> instead</para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>True if the initialization is successful, false otherwise </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_digital_output_card_1aa43b2f8d13abb0164f661eba5daa14ce"/>    <section>
+    <title>bindFRAM()</title>
+<indexterm><primary>bindFRAM</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>bindFRAM</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::bindFRAM (FRAM * fram, uint16_t address)</computeroutput></para><para>
+
+<para>Bind a FRAM to the card. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>The Output Card use 34 bytes of FRAM</para>
+</note>
+<warning><title>Warning</title>
+
+<para>If the fram range overlap with another card, undefined behavior will occur</para>
+</warning>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fram</entry>
+                                <entry>
+<para>The FRAM to bind </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>address</entry>
+                                <entry>
+<para>The address of the card in the FRAM </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_aa43b2f8d13abb0164f661eba5daa14ce_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a4e141b2627539b6b64f3d02d77a0aa84"/>    <section>
+    <title>digitalWrite()</title>
+<indexterm><primary>digitalWrite</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>digitalWrite</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::digitalWrite (uint8_t pin, bool state)</computeroutput></para><para>
+
+<para>Write a digtal LOW or HIGH to the specified pin. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function set both the state and the pwm value of the pin</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to set the state </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>state</entry>
+                                <entry>
+<para>The logic level to set the pin to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_a4e141b2627539b6b64f3d02d77a0aa84_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a3e239d57c39cb82cff4aca6455f01d6f"/>    <section>
+    <title>getState()</title>
+<indexterm><primary>getState</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>getState</secondary></indexterm>
+<para><computeroutput>bool DigitalOutputCard::getState (uint8_t pin)</computeroutput></para><para>
+
+<para>Get the state of the specified pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to get the state </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The state of the pin </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_a3e239d57c39cb82cff4aca6455f01d6f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a9ce9c2b88a21f786c6cd76eb8468e13c"/>    <section>
+    <title>getType()</title>
+<indexterm><primary>getType</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>getType</secondary></indexterm>
+<para><computeroutput>uint8_t DigitalOutputCard::getType ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Get the type of the card. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The type of the card </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_digital_output_card_1ae160653dd5ec2bdbce0327af77669d87"/>    <section>
+    <title>getValue()</title>
+<indexterm><primary>getValue</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>getValue</secondary></indexterm>
+<para><computeroutput>uint16_t DigitalOutputCard::getValue (uint8_t pin)</computeroutput></para><para>
+
+<para>Get the pwm value of the specified pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to get the pwm value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The pwm value of the pin </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_ae160653dd5ec2bdbce0327af77669d87_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a57796fcf07bbb56366644a2435481b99"/>    <section>
+    <title>loadPinMap()</title>
+<indexterm><primary>loadPinMap</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>loadPinMap</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::loadPinMap (uint8_t pinMap[16])</computeroutput></para><para>
+
+<para>Load a pin map. </para>
+</para>
+
+<para>A pin map is an array of 16 elements that maps the physical pins to virtual pins The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class The physical pins are the pins on the Output IC, This can be found on the schematic of the ESPMegaI/O board This function is useful if you want to change the number identification of the pins to match your project needs</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pinMap</entry>
+                                <entry>
+<para>The pin map to load </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_digital_output_card_1aeae842b0338e6788b99fa623fffcbe89"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::loop ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>The main loop for the Digital Output Card object. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function is not used, it is only here to implement the <link linkend="_class_expansion_card">ExpansionCard</link> interface </para>
+</note>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_aeae842b0338e6788b99fa623fffcbe89_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a04a881ba7142114c83f41a49129111b6"/>    <section>
+    <title>registerChangeCallback()</title>
+<indexterm><primary>registerChangeCallback</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>registerChangeCallback</secondary></indexterm>
+<para><computeroutput>uint8_t DigitalOutputCard::registerChangeCallback (std::function&lt; void(uint8_t, bool, uint16_t)&gt; callback)</computeroutput></para><para>
+
+<para>Register a callback function for the specified pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function to be called, the first parameter is the pin, the second parameter is the state, the third parameter is the pwm value </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handler of the callback function </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_a04a881ba7142114c83f41a49129111b6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a99ac93ac96289b95063d4d1e1e2b7893"/>    <section>
+    <title>savePinValueToFRAM()</title>
+<indexterm><primary>savePinValueToFRAM</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>savePinValueToFRAM</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::savePinValueToFRAM (uint8_t pin)</computeroutput></para><para>
+
+<para>Save a single pin value to FRAM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to save </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_a99ac93ac96289b95063d4d1e1e2b7893_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a3eed3e145a257bad60e3e0e82a74f7f7"/>    <section>
+    <title>setAutoSaveToFRAM()</title>
+<indexterm><primary>setAutoSaveToFRAM</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>setAutoSaveToFRAM</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::setAutoSaveToFRAM (bool autoSave)</computeroutput></para><para>
+
+<para>Set the auto save to FRAM. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>autoSave</entry>
+                                <entry>
+<para>True to enable auto save, false to disable auto save </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_a3eed3e145a257bad60e3e0e82a74f7f7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1a742206fb70202954d822175b69f0f954"/>    <section>
+    <title>setState()</title>
+<indexterm><primary>setState</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>setState</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::setState (uint8_t pin, bool state)</computeroutput></para><para>
+
+<para>Set the state of the specified pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to set the state </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>state</entry>
+                                <entry>
+<para>The state of the pin </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_a742206fb70202954d822175b69f0f954_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1afa3fc66e71b03ee75ef022f92431466d"/>    <section>
+    <title>setValue()</title>
+<indexterm><primary>setValue</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>setValue</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::setValue (uint8_t pin, uint16_t value)</computeroutput></para><para>
+
+<para>Set the pwm value of the specified pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The pin to set the pwm value </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The pwm value to set </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_afa3fc66e71b03ee75ef022f92431466d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_afa3fc66e71b03ee75ef022f92431466d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_digital_output_card_1ae9601a5033bc723852d11d336cc2de93"/>    <section>
+    <title>unregisterChangeCallback()</title>
+<indexterm><primary>unregisterChangeCallback</primary><secondary>DigitalOutputCard</secondary></indexterm>
+<indexterm><primary>DigitalOutputCard</primary><secondary>unregisterChangeCallback</secondary></indexterm>
+<para><computeroutput>void DigitalOutputCard::unregisterChangeCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregister a callback function. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler of the callback function to be unregistered </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_digital_output_card_ae9601a5033bc723852d11d336cc2de93_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp</section>
+</section>

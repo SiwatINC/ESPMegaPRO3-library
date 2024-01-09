@@ -1,0 +1,4 @@
+<map id="ClimateIoT::handleSensorUpdate" name="ClimateIoT::handleSensorUpdate">
+<area shape="rect" id="node1" title="This function is a callback function registered with the Climate card to be called when the sensor da..." alt="" coords="189,5,377,47"/>
+<area shape="rect" id="node2" href="$class_climate_io_t.html#aad3d146120fb6390867d2900b7fe0f6b" title="Initializes the ClimateIoT component." alt="" coords="5,13,141,39"/>
+</map>

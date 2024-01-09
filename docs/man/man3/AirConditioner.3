@@ -1,0 +1,74 @@
+.TH "AirConditioner" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AirConditioner \- This struct is used to store information about an air conditioner\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ClimateCard\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBmax_temperature\fP"
+.br
+.RI "Maximum temperature\&. "
+.ti -1c
+.RI "uint8_t \fBmin_temperature\fP"
+.br
+.RI "Minimum temperature\&. "
+.ti -1c
+.RI "uint8_t \fBmodes\fP"
+.br
+.RI "Number of modes\&. "
+.ti -1c
+.RI "const char ** \fBmode_names\fP"
+.br
+.RI "Names of modes in the form of an array of strings\&. "
+.ti -1c
+.RI "uint8_t \fBfan_speeds\fP"
+.br
+.RI "Number of fan speeds\&. "
+.ti -1c
+.RI "const char ** \fBfan_speed_names\fP"
+.br
+.RI "Names of fan speeds in the form of an array of strings\&. "
+.ti -1c
+.RI "size_t(* \fBgetInfraredCode\fP )(uint8_t, uint8_t, uint8_t, const uint16_t **)"
+.br
+.RI "Function to get IR code\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This struct is used to store information about an air conditioner\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "size_t(* AirConditioner::getInfraredCode) (uint8_t, uint8_t, uint8_t, const uint16_t **)"
+
+.PP
+Function to get IR code\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImode\fP Mode of the air conditioner 
+.br
+\fIfan_speed\fP Fan speed of the air conditioner 
+.br
+\fItemperature\fP Temperature of the air conditioner 
+.br
+\fIcode\fP Pointer to the IR code array
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Size of the IR code array 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

@@ -1,0 +1,4 @@
+<map id="ESPMegaIoT::connectToWifi" name="ESPMegaIoT::connectToWifi">
+<area shape="rect" id="node1" title="Connect to a wifi network." alt="" coords="268,5,467,32"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_io_t.html#aea329bb2d424ea758be8f8502655dfc3" title="Connect to the network using the current config." alt="" coords="5,5,220,32"/>
+</map>

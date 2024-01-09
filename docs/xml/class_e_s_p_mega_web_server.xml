@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_e_s_p_mega_web_server" kind="class" language="C++" prot="public">
+    <compoundname>ESPMegaWebServer</compoundname>
+    <includes refid="_e_s_p_mega_web_server_8hpp" local="no">ESPMegaWebServer.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_e_s_p_mega_web_server_1af5a2c731a75082261f21834cc4d5cccb" prot="private" static="no" mutable="no">
+        <type>FRAM *</type>
+        <definition>FRAM* ESPMegaWebServer::fram</definition>
+        <argsstring></argsstring>
+        <name>fram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="39" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_web_server_1aaa192f4817a5cb65cf444e82de4ddf7e" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ESPMegaWebServer::webUsername[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>webUsername</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="41" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_web_server_1a0d4ae272d25f22cc2456c2bacda6a6fc" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ESPMegaWebServer::webPassword[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>webPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="42" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_web_server_1a86a3b673ce66da7c607b86d7035d17df" prot="private" static="no" mutable="no">
+        <type>AsyncWebServer *</type>
+        <definition>AsyncWebServer* ESPMegaWebServer::server</definition>
+        <argsstring></argsstring>
+        <name>server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="44" column="24" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_web_server_1ab892cafa3a6b4e07bdcf94df703a4744" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t ESPMegaWebServer::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="45" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_web_server_1a93996f089aab7242068d3da136a8fdc4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> *</type>
+        <definition>ESPMegaIoT* ESPMegaWebServer::iot</definition>
+        <argsstring></argsstring>
+        <name>iot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="47" column="20" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_web_server_1a729a04f3659018c527fd742e54c8b466" prot="private" static="no" mutable="no">
+        <type>AsyncCallbackJsonWebHandler *</type>
+        <definition>AsyncCallbackJsonWebHandler* ESPMegaWebServer::saveConfigHandler</definition>
+        <argsstring></argsstring>
+        <name>saveConfigHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="53" column="37" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ESPMegaWebServer::ESPMegaWebServer</definition>
+        <argsstring>(uint16_t port, ESPMegaIoT *iot)</argsstring>
+        <name>ESPMegaWebServer</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> *</type>
+          <declname>iot</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3" kindref="member">ESPMegaWebServer::ESPMegaWebServer</ref> objecy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Although you can instantiate this class directly, it is recommended to use the ESPMegaPRO.webServer object instead.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The TCP port to listen on </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="24" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1accf7cb756ec0141017c449468e3acdbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ESPMegaWebServer::~ESPMegaWebServer</definition>
+        <argsstring>()</argsstring>
+        <name>~ESPMegaWebServer</name>
+        <briefdescription>
+<para>Destroy the <ref refid="class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3" kindref="member">ESPMegaWebServer::ESPMegaWebServer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="25" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Start the web server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method starts the web server and registers the necessary handlers.</para>
+<para><simplesect kind="note"><para>This method should be called after the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object has been initialized. </para>
+</simplesect>
+<simplesect kind="note"><para>This method is automatically called if you use <ref refid="class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee" kindref="member">ESPMegaPRO::enableWebServer()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="26" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="42" bodyend="54"/>
+        <references refid="class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf" compoundref="_e_s_p_mega_web_server_8cpp" startline="88" endline="124">loadCredentialsFromFRAM</references>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="249" endline="262">ESPMegaPRO::enableWebServer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1ac2390697ddcc99604eed00a785dd2a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>The loop function for the web server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This method is not used by the <ref refid="class_e_s_p_mega_web_server" kindref="compound">ESPMegaWebServer</ref> class as of now. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="27" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="61" bodyend="64"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="50" endline="67">ESPMegaPRO::loop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::resetCredentials</definition>
+        <argsstring>()</argsstring>
+        <name>resetCredentials</name>
+        <briefdescription>
+<para>Reset web username and password to default. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method resets the web server credentials to the default username and password.</para>
+<para><simplesect kind="note"><para>The default username and password is both &quot;admin&quot; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="28" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="144" bodyend="150"/>
+        <references refid="class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530" compoundref="_e_s_p_mega_web_server_8cpp" startline="131" endline="135">saveCredentialsToFRAM</references>
+        <referencedby refid="class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf" compoundref="_e_s_p_mega_web_server_8cpp" startline="88" endline="124">loadCredentialsFromFRAM</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a9a51eef8c5a27d0a8147d10a64b0a762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * ESPMegaWebServer::getWebUsername</definition>
+        <argsstring>()</argsstring>
+        <name>getWebUsername</name>
+        <briefdescription>
+<para>Get the web username. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>The returned pointer should not be freed or modified.</para>
+</simplesect>
+<simplesect kind="return"><para>The web username </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="29" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a44f59352c6202fbf4172ea5ab72ef1d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * ESPMegaWebServer::getWebPassword</definition>
+        <argsstring>()</argsstring>
+        <name>getWebPassword</name>
+        <briefdescription>
+<para>Get the web password. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>The returned pointer should not be freed or modified.</para>
+</simplesect>
+<simplesect kind="return"><para>The web password </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="30" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="171" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a9c7298ea1f25f41f4742302f1f91a89b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::setWebUsername</definition>
+        <argsstring>(const char *username)</argsstring>
+        <name>setWebUsername</name>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+<para>Set the web username. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new web username </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="31" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="181" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1add17e20b33d97076a26e6bfe3d664db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::setWebPassword</definition>
+        <argsstring>(const char *password)</argsstring>
+        <name>setWebPassword</name>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Set the web password. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new web password </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="32" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1adb3781890cee6513b494d27b18e6f5ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::bindFRAM</definition>
+        <argsstring>(FRAM *fram)</argsstring>
+        <name>bindFRAM</name>
+        <param>
+          <type>FRAM *</type>
+          <declname>fram</declname>
+        </param>
+        <briefdescription>
+<para>Bind the FRAM object to the web server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method binds the FRAM object to the web server so that the web server can read and write credentials to the FRAM.</para>
+<para><simplesect kind="note"><para>The FRAM object must be bound to the web server before calling <ref refid="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" kindref="member">ESPMegaWebServer::begin()</ref> </para>
+</simplesect>
+<simplesect kind="note"><para>This class takes 64 bytes of FRAM starting from address 301, however address 301-400 is reserved for it.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the FRAM object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="33" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="76" bodyend="79"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="249" endline="262">ESPMegaPRO::enableWebServer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::loadCredentialsFromFRAM</definition>
+        <argsstring>()</argsstring>
+        <name>loadCredentialsFromFRAM</name>
+        <briefdescription>
+<para>Load web username and password from FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method loads the web server credentials from the FRAM.</para>
+<para><simplesect kind="note"><para>This method is automatically called by <ref refid="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" kindref="member">ESPMegaWebServer::begin()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="34" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="88" bodyend="124"/>
+        <references refid="class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095" compoundref="_e_s_p_mega_web_server_8cpp" startline="144" endline="150">resetCredentials</references>
+        <referencedby refid="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" compoundref="_e_s_p_mega_web_server_8cpp" startline="42" endline="54">begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::saveCredentialsToFRAM</definition>
+        <argsstring>()</argsstring>
+        <name>saveCredentialsToFRAM</name>
+        <briefdescription>
+<para>Save web username and password to FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method saves the web server credentials to the FRAM. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="35" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="131" bodyend="135"/>
+        <referencedby refid="class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095" compoundref="_e_s_p_mega_web_server_8cpp" startline="144" endline="150">resetCredentials</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a6f09ae056c6ecd1641bb30b272e2eb37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AsyncWebServer *</type>
+        <definition>AsyncWebServer * ESPMegaWebServer::getServer</definition>
+        <argsstring>()</argsstring>
+        <name>getServer</name>
+        <briefdescription>
+<para>Get the AsyncWebServer object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The AsyncWebServer object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="36" column="24" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="514" bodyend="516"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1add184dca1b80ba255dad85063fa6e64b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::dashboardHandler</definition>
+        <argsstring>(AsyncWebServerRequest *request)</argsstring>
+        <name>dashboardHandler</name>
+        <param>
+          <type>AsyncWebServerRequest *</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+<para>Handle HTTP requests to the dashboard (/) page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AsyncWebServerRequest object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="49" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="201" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1aa92065c530de33e0f9f7197481b624b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String ESPMegaWebServer::dashboardProcessor</definition>
+        <argsstring>(const String &amp;var)</argsstring>
+        <name>dashboardProcessor</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Replace placeholders in the dashboard HTML with values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The placeholder name </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value to replace the placeholder with </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="50" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="217" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a523104d924adaf0ccf8b859acd85a76b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::configHandler</definition>
+        <argsstring>(AsyncWebServerRequest *request)</argsstring>
+        <name>configHandler</name>
+        <param>
+          <type>AsyncWebServerRequest *</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+<para>Handle HTTP requests to the config (/config) page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AsyncWebServerRequest object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="51" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="260" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a255ba0c2fa93d93be678dc9e90e22792" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String ESPMegaWebServer::configProcessor</definition>
+        <argsstring>(const String &amp;var)</argsstring>
+        <name>configProcessor</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Replace placeholders in the config HTML with values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>var</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The placeholder name</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value to replace the placeholder with </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="52" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="277" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a0b42165c79f87ad9fe4571691cf0eca4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::saveConfigJSONHandler</definition>
+        <argsstring>(AsyncWebServerRequest *request, JsonVariant &amp;json)</argsstring>
+        <name>saveConfigJSONHandler</name>
+        <param>
+          <type>AsyncWebServerRequest *</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>JsonVariant &amp;</type>
+          <declname>json</declname>
+        </param>
+        <briefdescription>
+<para>Handle JSON POST requests to the save_config (/save_config) page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AsyncWebServerRequest object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>json</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The JSON object representing the request body </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Request POST body should be a JSON object containing the following fields: ip_address: String, the IP address of the device netmask: String, the netmask of the device gateway: String, the gateway of the device dns: String, the DNS of the device hostname: String, the hostname of the device bms_ip: String, the IP address of the MQTT broker bms_port: int, the port of the MQTT broker bms_useauth: Boolean, true if the MQTT broker requires authentication bms_username: String, the username of the MQTT broker bms_password: String, the password of the MQTT broker bms_endpoint: String, the base topic of the MQTT broker web_username: String, the username of the web server web_password: String, the password of the web server</para>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="54" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="408" bodyend="507"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a7832a16b7521f71684560f9d8e2eb330" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::otaRequestHandler</definition>
+        <argsstring>(AsyncWebServerRequest *request)</argsstring>
+        <name>otaRequestHandler</name>
+        <param>
+          <type>AsyncWebServerRequest *</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+<para>Handle HTTP requests to the OTA update (/ota_update) page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AsyncWebServerRequest object </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="55" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="341" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1a38e7dce87a3e6c00b68b6328a32266a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::otaUploadHandler</definition>
+        <argsstring>(AsyncWebServerRequest *request, String filename, size_t index, uint8_t *data, size_t len, bool final)</argsstring>
+        <name>otaUploadHandler</name>
+        <param>
+          <type>AsyncWebServerRequest *</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>final</declname>
+        </param>
+        <briefdescription>
+<para>Handle HTTP upload session to the OTA update (/ota_update) page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The AsyncWebServerRequest object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The filename of the firmware </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the firmware </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The firmware data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the firmware data </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>final</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether this is the final chunk of firmware </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="56" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp" bodystart="365" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_web_server_1ab7fdcb01b25f43b63b449dca7551438c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaWebServer::restAPIHandler</definition>
+        <argsstring>(AsyncWebServerRequest *request)</argsstring>
+        <name>restAPIHandler</name>
+        <param>
+          <type>AsyncWebServerRequest *</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="57" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides a web server for <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides a web server for <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref>. It is used to configure the device and to update the firmware. This class also allows to save the credentials to access the web server in the FRAM memory. User can also add custom endpoints to the web server.</para>
+<para>This class use FRAM address 301-400 </para>
+    </detaileddescription>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" line="21" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp" bodystart="22" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>begin</name></member>
+      <member refid="class_e_s_p_mega_web_server_1adb3781890cee6513b494d27b18e6f5ff" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>bindFRAM</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a523104d924adaf0ccf8b859acd85a76b" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>configHandler</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a255ba0c2fa93d93be678dc9e90e22792" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>configProcessor</name></member>
+      <member refid="class_e_s_p_mega_web_server_1add184dca1b80ba255dad85063fa6e64b" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>dashboardHandler</name></member>
+      <member refid="class_e_s_p_mega_web_server_1aa92065c530de33e0f9f7197481b624b2" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>dashboardProcessor</name></member>
+      <member refid="class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>ESPMegaWebServer</name></member>
+      <member refid="class_e_s_p_mega_web_server_1af5a2c731a75082261f21834cc4d5cccb" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>fram</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a6f09ae056c6ecd1641bb30b272e2eb37" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>getServer</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a44f59352c6202fbf4172ea5ab72ef1d0" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>getWebPassword</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a9a51eef8c5a27d0a8147d10a64b0a762" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>getWebUsername</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a93996f089aab7242068d3da136a8fdc4" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>iot</name></member>
+      <member refid="class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>loadCredentialsFromFRAM</name></member>
+      <member refid="class_e_s_p_mega_web_server_1ac2390697ddcc99604eed00a785dd2a4b" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>loop</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a7832a16b7521f71684560f9d8e2eb330" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>otaRequestHandler</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a38e7dce87a3e6c00b68b6328a32266a0" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>otaUploadHandler</name></member>
+      <member refid="class_e_s_p_mega_web_server_1ab892cafa3a6b4e07bdcf94df703a4744" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>port</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>resetCredentials</name></member>
+      <member refid="class_e_s_p_mega_web_server_1ab7fdcb01b25f43b63b449dca7551438c" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>restAPIHandler</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a729a04f3659018c527fd742e54c8b466" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>saveConfigHandler</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a0b42165c79f87ad9fe4571691cf0eca4" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>saveConfigJSONHandler</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>saveCredentialsToFRAM</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a86a3b673ce66da7c607b86d7035d17df" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>server</name></member>
+      <member refid="class_e_s_p_mega_web_server_1add17e20b33d97076a26e6bfe3d664db0" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>setWebPassword</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a9c7298ea1f25f41f4742302f1f91a89b" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>setWebUsername</name></member>
+      <member refid="class_e_s_p_mega_web_server_1a0d4ae272d25f22cc2456c2bacda6a6fc" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>webPassword</name></member>
+      <member refid="class_e_s_p_mega_web_server_1aaa192f4817a5cb65cf444e82de4ddf7e" prot="private" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>webUsername</name></member>
+      <member refid="class_e_s_p_mega_web_server_1accf7cb756ec0141017c449468e3acdbd" prot="public" virt="non-virtual"><scope>ESPMegaWebServer</scope><name>~ESPMegaWebServer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

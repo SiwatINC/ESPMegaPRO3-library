@@ -1,0 +1,4 @@
+<map id="ESPMegaIoT::getWifiIp" name="ESPMegaIoT::getWifiIp">
+<area shape="rect" id="node1" title="Get the Wifi IP address." alt="" coords="196,5,363,32"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_io_t.html#a6fa8479ba86d6cafb32a82cbde94cdb0" title="Get the IP address of the currently active network interface." alt="" coords="5,5,148,32"/>
+</map>

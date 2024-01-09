@@ -1,0 +1,565 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_analog_card" xml:lang="en-US">
+<title>AnalogCard Class Reference</title>
+<indexterm><primary>AnalogCard</primary></indexterm>
+<para>
+
+<para>This class represents the Analog Card. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;AnalogCard.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for AnalogCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AnalogCard:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_analog_card_1ab01a99dc92b2d5431f5e438c2e4bf7f5"/><link linkend="_class_analog_card_1ab01a99dc92b2d5431f5e438c2e4bf7f5">AnalogCard</link> ()</para>
+
+<para>Default constructor for the <link linkend="_class_analog_card">AnalogCard</link> class. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_card_1a7f0a07632ef1db4bfaf64593cbccce66">dacWrite</link> (uint8_t pin, uint16_t value)</para>
+
+<para>Writes a value to the specified DAC pin. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_card_1a121c84a174bcc6756e82538cfe19477a">sendDataToDAC</link> (uint8_t pin, uint16_t value)</para>
+
+<para>Sends data to the specified DAC pin. </para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_analog_card_1a57f3af0fdcbc6ccb651007540c6829c4">analogRead</link> (uint8_t pin)</para>
+
+<para>Reads the value from the specified analog pin. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_analog_card_1a058b9fca0655b1d7d169527a37fe4c34">begin</link> ()</para>
+
+<para>Initializes the <link linkend="_class_analog_card">AnalogCard</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_card_1a88d1bd2c7028cfddcdf1392a6bd57c2a">loop</link> ()</para>
+
+<para>The main loop of the <link linkend="_class_analog_card">AnalogCard</link>. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_analog_card_1aa10a9eb6b4c1f1b7660ea5183a0f618e">getDACState</link> (uint8_t pin)</para>
+
+<para>Gets the state of the specified DAC pin. </para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_analog_card_1a7793911eaabacee0d40dac626e39279a">getDACValue</link> (uint8_t pin)</para>
+
+<para>Gets the value of the specified DAC pin. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_card_1a445ff04dfcd2f49bb070bcc6e17a13f0">setDACState</link> (uint8_t pin, bool state)</para>
+
+<para>Sets the state of the specified DAC pin. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_card_1a4703be8e25568617d28915d14e4df71b">setDACValue</link> (uint8_t pin, uint16_t value)</para>
+
+<para>Sets the value of the specified DAC pin. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_analog_card_1a748b2025b389bef19fd0249b1b7b0828">registerDACChangeCallback</link> (std::function&lt; void(uint8_t, bool, uint16_t)&gt; callback)</para>
+
+<para>Registers a callback function to be called when the state or value of a DAC pin changes. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_analog_card_1a38740886df77565a5f56ef421c22e281">unregisterDACChangeCallback</link> (uint8_t handler)</para>
+
+<para>Unregisters a previously registered DAC change callback. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_analog_card_1ab6d7761df1910a16c1531fc6c0c07176">getType</link> ()</para>
+
+<para>Gets the type of the <link linkend="_class_analog_card">AnalogCard</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This class represents the Analog Card. </para>
+
+
+
+<para>The analog card has 8 analog inputs accross two banks, and 4 DAC outputs.</para>
+
+<para><note><title>Note</title>
+
+<para>You do not need to specify the ESPMega I/O Address when creating an instance of this class as there can only be one Analog Card installed in the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> board. </para>
+</note>
+<warning><title>Warning</title>
+
+<para>There can only be one Analog Card installed in the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> board. </para>
+</warning>
+</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_analog_card_1a57f3af0fdcbc6ccb651007540c6829c4"/>    <section>
+    <title>analogRead()</title>
+<indexterm><primary>analogRead</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>analogRead</secondary></indexterm>
+<para><computeroutput>uint16_t AnalogCard::analogRead (uint8_t pin)</computeroutput></para><para>
+
+<para>Reads the value from the specified analog pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The analog pin to read from. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The value read from the analog pin. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_a57f3af0fdcbc6ccb651007540c6829c4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_card_1a058b9fca0655b1d7d169527a37fe4c34"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>bool AnalogCard::begin ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Initializes the <link linkend="_class_analog_card">AnalogCard</link>. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if initialization is successful, false otherwise. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_analog_card_1a7f0a07632ef1db4bfaf64593cbccce66"/>    <section>
+    <title>dacWrite()</title>
+<indexterm><primary>dacWrite</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>dacWrite</secondary></indexterm>
+<para><computeroutput>void AnalogCard::dacWrite (uint8_t pin, uint16_t value)</computeroutput></para><para>
+
+<para>Writes a value to the specified DAC pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The DAC pin to write to. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The value to write. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_a7f0a07632ef1db4bfaf64593cbccce66_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_card_1aa10a9eb6b4c1f1b7660ea5183a0f618e"/>    <section>
+    <title>getDACState()</title>
+<indexterm><primary>getDACState</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>getDACState</secondary></indexterm>
+<para><computeroutput>bool AnalogCard::getDACState (uint8_t pin)</computeroutput></para><para>
+
+<para>Gets the state of the specified DAC pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The DAC pin to get the state of. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The state of the DAC pin (true = on, false = off). </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_aa10a9eb6b4c1f1b7660ea5183a0f618e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_card_1a7793911eaabacee0d40dac626e39279a"/>    <section>
+    <title>getDACValue()</title>
+<indexterm><primary>getDACValue</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>getDACValue</secondary></indexterm>
+<para><computeroutput>uint16_t AnalogCard::getDACValue (uint8_t pin)</computeroutput></para><para>
+
+<para>Gets the value of the specified DAC pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The DAC pin to get the value of. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The value of the DAC pin. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_a7793911eaabacee0d40dac626e39279a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_card_1ab6d7761df1910a16c1531fc6c0c07176"/>    <section>
+    <title>getType()</title>
+<indexterm><primary>getType</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>getType</secondary></indexterm>
+<para><computeroutput>uint8_t AnalogCard::getType ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Gets the type of the <link linkend="_class_analog_card">AnalogCard</link>. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The type of the <link linkend="_class_analog_card">AnalogCard</link>. </para>
+</formalpara>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_analog_card_1a88d1bd2c7028cfddcdf1392a6bd57c2a"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void AnalogCard::loop ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>The main loop of the <link linkend="_class_analog_card">AnalogCard</link>. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This function does nothing. </para>
+</note>
+</para>
+<para>
+Reimplemented from <link linkend="_class_expansion_card">ExpansionCard</link>.</para>
+    </section><anchor xml:id="_class_analog_card_1a748b2025b389bef19fd0249b1b7b0828"/>    <section>
+    <title>registerDACChangeCallback()</title>
+<indexterm><primary>registerDACChangeCallback</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>registerDACChangeCallback</secondary></indexterm>
+<para><computeroutput>uint8_t AnalogCard::registerDACChangeCallback (std::function&lt; void(uint8_t, bool, uint16_t)&gt; callback)</computeroutput></para><para>
+
+<para>Registers a callback function to be called when the state or value of a DAC pin changes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function to register. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handler ID of the registered callback. </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_analog_card_1a121c84a174bcc6756e82538cfe19477a"/>    <section>
+    <title>sendDataToDAC()</title>
+<indexterm><primary>sendDataToDAC</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>sendDataToDAC</secondary></indexterm>
+<para><computeroutput>void AnalogCard::sendDataToDAC (uint8_t pin, uint16_t value)</computeroutput></para><para>
+
+<para>Sends data to the specified DAC pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The DAC pin to send data to. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The data to send. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>This function does not call the DAC change callbacks. </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_a121c84a174bcc6756e82538cfe19477a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_card_1a445ff04dfcd2f49bb070bcc6e17a13f0"/>    <section>
+    <title>setDACState()</title>
+<indexterm><primary>setDACState</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>setDACState</secondary></indexterm>
+<para><computeroutput>void AnalogCard::setDACState (uint8_t pin, bool state)</computeroutput></para><para>
+
+<para>Sets the state of the specified DAC pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The DAC pin to set the state of. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>state</entry>
+                                <entry>
+<para>The state to set (true = on, false = off). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_a445ff04dfcd2f49bb070bcc6e17a13f0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_a445ff04dfcd2f49bb070bcc6e17a13f0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_card_1a4703be8e25568617d28915d14e4df71b"/>    <section>
+    <title>setDACValue()</title>
+<indexterm><primary>setDACValue</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>setDACValue</secondary></indexterm>
+<para><computeroutput>void AnalogCard::setDACValue (uint8_t pin, uint16_t value)</computeroutput></para><para>
+
+<para>Sets the value of the specified DAC pin. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>pin</entry>
+                                <entry>
+<para>The DAC pin to set the value of. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>The value to set. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_a4703be8e25568617d28915d14e4df71b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_analog_card_a4703be8e25568617d28915d14e4df71b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_analog_card_1a38740886df77565a5f56ef421c22e281"/>    <section>
+    <title>unregisterDACChangeCallback()</title>
+<indexterm><primary>unregisterDACChangeCallback</primary><secondary>AnalogCard</secondary></indexterm>
+<indexterm><primary>AnalogCard</primary><secondary>unregisterDACChangeCallback</secondary></indexterm>
+<para><computeroutput>void AnalogCard::unregisterDACChangeCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregisters a previously registered DAC change callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler ID of the callback to unregister. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp/home/siwat/ESPMegaPRO3-library/<link linkend="__analog_card_8cpp">AnalogCard.cpp</link></section>
+</section>

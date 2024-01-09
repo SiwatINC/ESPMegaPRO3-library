@@ -1,0 +1,4 @@
+<map id="ESPMegaIoT::getETHMac" name="ESPMegaIoT::getETHMac">
+<area shape="rect" id="node1" title="Get the MAC Address of the Ethernet interface." alt="" coords="211,5,393,32"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_io_t.html#ac2c1a59d86f1c8ca3c76ec4870614163" title="Get the MAC Address of the currently active network interface." alt="" coords="5,5,163,32"/>
+</map>

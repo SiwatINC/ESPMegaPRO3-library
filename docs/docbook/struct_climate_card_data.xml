@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_climate_card_data" xml:lang="en-US">
+<title>ClimateCardData Struct Reference</title>
+<indexterm><primary>ClimateCardData</primary></indexterm>
+<para>
+
+<para>The struct is used to store the state of the air conditioner. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ClimateCard.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70"/>uint8_t <link linkend="_struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70">ac_temperature</link></para>
+
+<para>Temperature of the air conditioner. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c"/>uint8_t <link linkend="_struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c">ac_mode</link></para>
+
+<para>Mode of the air conditioner. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a"/>uint8_t <link linkend="_struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a">ac_fan_speed</link></para>
+
+<para>Fan speed of the air conditioner. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The struct is used to store the state of the air conditioner. </para>
+
+
+
+<para><note><title>Note</title>
+
+<para>This struct is stored in FRAM if it is used </para>
+
+<para>This struct is 3 bytes long </para>
+</note>
+</para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp</section>
+</section>

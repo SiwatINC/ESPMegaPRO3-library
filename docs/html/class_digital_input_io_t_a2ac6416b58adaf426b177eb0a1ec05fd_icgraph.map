@@ -1,0 +1,4 @@
+<map id="DigitalInputIoT::handleValueChange" name="DigitalInputIoT::handleValueChange">
+<area shape="rect" id="node1" title="Handles a value change for a digital input." alt="" coords="215,5,420,47"/>
+<area shape="rect" id="node2" href="$class_digital_input_io_t.html#a97e335d982d3c8701a5bf6934bccd773" title="Initializes the DigitalInputIoT object." alt="" coords="5,13,167,39"/>
+</map>

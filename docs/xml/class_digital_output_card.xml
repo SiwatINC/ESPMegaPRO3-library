@@ -1,0 +1,945 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_digital_output_card" kind="class" language="C++" prot="public">
+    <compoundname>DigitalOutputCard</compoundname>
+    <basecompoundref refid="class_expansion_card" prot="public" virt="non-virtual">ExpansionCard</basecompoundref>
+    <includes refid="_digital_output_card_8hpp" local="no">DigitalOutputCard.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_digital_output_card_1a7e5edd1d01440fc28d1b8b179add1723" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t DigitalOutputCard::framAddress</definition>
+        <argsstring></argsstring>
+        <name>framAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="90" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1ab88c90309b2daa02926d37fb4590beef" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DigitalOutputCard::framBinded</definition>
+        <argsstring></argsstring>
+        <name>framBinded</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="92" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1a0c694d227d6d5148561ee75410476df1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DigitalOutputCard::framAutoSave</definition>
+        <argsstring></argsstring>
+        <name>framAutoSave</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="94" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1af4203aa1b044b8679cd2661faccc49d4" prot="private" static="no" mutable="no">
+        <type>FRAM *</type>
+        <definition>FRAM* DigitalOutputCard::fram</definition>
+        <argsstring></argsstring>
+        <name>fram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="96" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1a54964f658af06a8c271167ec1bbc2163" prot="private" static="no" mutable="no">
+        <type>Adafruit_PWMServoDriver</type>
+        <definition>Adafruit_PWMServoDriver DigitalOutputCard::pwm</definition>
+        <argsstring></argsstring>
+        <name>pwm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="98" column="29" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1a2c544376f8960d9ab90dc27e2224baa0" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputCard::address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="100" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1a98e154c3d24cb9eff53856226d965476" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DigitalOutputCard::state_buffer[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>state_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="102" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1a46e86723a24613a1e0ce7ed697293c9b" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t DigitalOutputCard::value_buffer[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>value_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="104" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1a1f3eb57a22307eec5d1bf49d4698e225" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputCard::callbacks_handler_index</definition>
+        <argsstring></argsstring>
+        <name>callbacks_handler_index</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="106" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1a62bef9db87f2d80278d2112bb612adb9" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(uint8_t, bool, uint16_t)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t, std::function&lt;void(uint8_t, bool, uint16_t)&gt; &gt; DigitalOutputCard::change_callbacks</definition>
+        <argsstring></argsstring>
+        <name>change_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="107" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1abcac82adf6ab93cc14394f5e564863cd" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputCard::pinMap[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>pinMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="109" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_output_card_1aa0217d5e5231d1afe3382fb7aad3be8a" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputCard::virtualPinMap[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>virtualPinMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="115" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_digital_output_card_1a8ca9e928a7e06da666e7bf3b3801f1da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DigitalOutputCard::DigitalOutputCard</definition>
+        <argsstring>(uint8_t address)</argsstring>
+        <name>DigitalOutputCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Create a new Digital Output Card object with the specified address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If you are using the ESPMegaI/O board, you should use the dip switch constructor</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ESPMegaI/O address of the card </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="42" column="5" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="10" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1aa73196a67686b5f8db3090577eff950b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DigitalOutputCard::DigitalOutputCard</definition>
+        <argsstring>(bool bit0, bool bit1, bool bit2, bool bit3, bool bit4)</argsstring>
+        <name>DigitalOutputCard</name>
+        <param>
+          <type>bool</type>
+          <declname>bit0</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit1</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit3</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit4</declname>
+        </param>
+        <briefdescription>
+<para>Create a new Digital Output Card object with the specified position on the dip switch. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The bit 0 are at the left of the dip switch</para>
+</simplesect>
+<simplesect kind="warning"><para>There are 5 switches on the dip switch, they should be unique accross all the cards</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bit0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the first switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the second switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the third switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the fourth switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the fifth switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="44" column="5" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="34" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a4698ea2f13dba8e1cddc29efd8d11743" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool DigitalOutputCard::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_expansion_card_1aecd52cc9b31b642f2cd78f01654005de">begin</reimplements>
+        <briefdescription>
+<para>Initialize the Digital Output Card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Although this function can be called inside the main program, it is recommended to use <ref refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" kindref="member">ESPMegaPRO::installCard()</ref> instead</para>
+</simplesect>
+<simplesect kind="return"><para>True if the initialization is successful, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="46" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1aeae842b0338e6788b99fa623fffcbe89" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <reimplements refid="class_expansion_card_1a3b3364d9de40d039a3dbfe9141dea0a9">loop</reimplements>
+        <briefdescription>
+<para>The main loop for the Digital Output Card object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is not used, it is only here to implement the <ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> interface </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="48" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="109" bodyend="110"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="50" endline="67">ESPMegaPRO::loop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a4e141b2627539b6b64f3d02d77a0aa84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::digitalWrite</definition>
+        <argsstring>(uint8_t pin, bool state)</argsstring>
+        <name>digitalWrite</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Write a digtal LOW or HIGH to the specified pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function set both the state and the pwm value of the pin</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to set the state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logic level to set the pin to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="51" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="65" bodyend="77"/>
+        <references refid="class_digital_output_card_1a99ac93ac96289b95063d4d1e1e2b7893" compoundref="_digital_output_card_8cpp" startline="297" endline="300">savePinValueToFRAM</references>
+        <references refid="class_digital_output_card_1a8d99e0805f6463fc886087e502efb12d" compoundref="_digital_output_card_8cpp" startline="305" endline="309">saveStateToFRAM</references>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1aa34d14771705c4374da1e41aad953843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::analogWrite</definition>
+        <argsstring>(uint8_t pin, uint16_t value)</argsstring>
+        <name>analogWrite</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Write a pwm value to the specified pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function set both the state and the pwm value of the pin</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to set the pwm value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pwm value to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="54" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="87" bodyend="102"/>
+        <references refid="class_digital_output_card_1a99ac93ac96289b95063d4d1e1e2b7893" compoundref="_digital_output_card_8cpp" startline="297" endline="300">savePinValueToFRAM</references>
+        <references refid="class_digital_output_card_1a8d99e0805f6463fc886087e502efb12d" compoundref="_digital_output_card_8cpp" startline="305" endline="309">saveStateToFRAM</references>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a742206fb70202954d822175b69f0f954" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::setState</definition>
+        <argsstring>(uint8_t pin, bool state)</argsstring>
+        <name>setState</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the state of the specified pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to set the state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state of the pin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="56" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="147" bodyend="156"/>
+        <references refid="class_digital_output_card_1a8d99e0805f6463fc886087e502efb12d" compoundref="_digital_output_card_8cpp" startline="305" endline="309">saveStateToFRAM</references>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1afa3fc66e71b03ee75ef022f92431466d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::setValue</definition>
+        <argsstring>(uint8_t pin, uint16_t value)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the pwm value of the specified pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to set the pwm value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pwm value to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="58" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="164" bodyend="176"/>
+        <references refid="class_digital_output_card_1a99ac93ac96289b95063d4d1e1e2b7893" compoundref="_digital_output_card_8cpp" startline="297" endline="300">savePinValueToFRAM</references>
+        <referencedby refid="class_digital_output_card_1a500615c25557efcff072e98e65a8db33" compoundref="_digital_output_card_8cpp" startline="270" endline="281">loadFromFRAM</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a3e239d57c39cb82cff4aca6455f01d6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DigitalOutputCard::getState</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>getState</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Get the state of the specified pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to get the state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The state of the pin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="60" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="118" bodyend="120"/>
+        <referencedby refid="class_digital_output_io_t_1a186d8a94e312afc13c61dae4d31cd633" compoundref="_digital_output_io_t_8cpp" startline="225" endline="232">DigitalOutputIoT::publishDigitalOutputState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1ae160653dd5ec2bdbce0327af77669d87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t DigitalOutputCard::getValue</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>getValue</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Get the pwm value of the specified pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to get the pwm value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The pwm value of the pin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="62" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="128" bodyend="130"/>
+        <referencedby refid="class_digital_output_io_t_1a99cb645e8ef895b893ba128f0bd54726" compoundref="_digital_output_io_t_8cpp" startline="239" endline="248">DigitalOutputIoT::publishDigitalOutputValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a04a881ba7142114c83f41a49129111b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputCard::registerChangeCallback</definition>
+        <argsstring>(std::function&lt; void(uint8_t, bool, uint16_t)&gt; callback)</argsstring>
+        <name>registerChangeCallback</name>
+        <param>
+          <type>std::function&lt; void(uint8_t, bool, uint16_t)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Register a callback function for the specified pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function to be called, the first parameter is the pin, the second parameter is the state, the third parameter is the pwm value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handler of the callback function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="64" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="184" bodyend="187"/>
+        <referencedby refid="class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6" compoundref="_internal_display_8cpp" startline="501" endline="511">InternalDisplay::bindOutputCard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1ae9601a5033bc723852d11d336cc2de93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::unregisterChangeCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterChangeCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregister a callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler of the callback function to be unregistered </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="66" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="194" bodyend="196"/>
+        <referencedby refid="class_internal_display_1a452703babc7891b7ab937e32155e2310" compoundref="_internal_display_8cpp" startline="516" endline="522">InternalDisplay::unbindOutputCard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a57796fcf07bbb56366644a2435481b99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::loadPinMap</definition>
+        <argsstring>(uint8_t pinMap[16])</argsstring>
+        <name>loadPinMap</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pinMap</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>Load a pin map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A pin map is an array of 16 elements that maps the physical pins to virtual pins The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class The physical pins are the pins on the Output IC, This can be found on the schematic of the ESPMegaI/O board This function is useful if you want to change the number identification of the pins to match your project needs</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pinMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin map to load </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="68" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="208" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1aa43b2f8d13abb0164f661eba5daa14ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::bindFRAM</definition>
+        <argsstring>(FRAM *fram, uint16_t address)</argsstring>
+        <name>bindFRAM</name>
+        <param>
+          <type>FRAM *</type>
+          <declname>fram</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Bind a FRAM to the card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The Output Card use 34 bytes of FRAM</para>
+</simplesect>
+<simplesect kind="warning"><para>If the fram range overlap with another card, undefined behavior will occur</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The FRAM to bind </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the card in the FRAM </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="73" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="225" bodyend="229"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="24" endline="40">ESPMegaPRO::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a451d122dfcc4c239c18c9d6f5d41449b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::saveToFRAM</definition>
+        <argsstring>()</argsstring>
+        <name>saveToFRAM</name>
+        <briefdescription>
+<para>Save the states and values of all the pins to the FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="75" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="258" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a500615c25557efcff072e98e65a8db33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::loadFromFRAM</definition>
+        <argsstring>()</argsstring>
+        <name>loadFromFRAM</name>
+        <briefdescription>
+<para>Load the states and values of all the pins from the FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="77" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="270" bodyend="281"/>
+        <references refid="class_digital_output_card_1afa3fc66e71b03ee75ef022f92431466d" compoundref="_digital_output_card_8cpp" startline="164" endline="176">setValue</references>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="24" endline="40">ESPMegaPRO::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a3eed3e145a257bad60e3e0e82a74f7f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::setAutoSaveToFRAM</definition>
+        <argsstring>(bool autoSave)</argsstring>
+        <name>setAutoSaveToFRAM</name>
+        <param>
+          <type>bool</type>
+          <declname>autoSave</declname>
+        </param>
+        <briefdescription>
+<para>Set the auto save to FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>autoSave</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to enable auto save, false to disable auto save </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="79" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="288" bodyend="290"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="24" endline="40">ESPMegaPRO::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a99ac93ac96289b95063d4d1e1e2b7893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::savePinValueToFRAM</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>savePinValueToFRAM</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Save a single pin value to FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to save </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="81" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="297" bodyend="300"/>
+        <referencedby refid="class_digital_output_card_1aa34d14771705c4374da1e41aad953843" compoundref="_digital_output_card_8cpp" startline="87" endline="102">analogWrite</referencedby>
+        <referencedby refid="class_digital_output_card_1a4e141b2627539b6b64f3d02d77a0aa84" compoundref="_digital_output_card_8cpp" startline="65" endline="77">digitalWrite</referencedby>
+        <referencedby refid="class_digital_output_card_1afa3fc66e71b03ee75ef022f92431466d" compoundref="_digital_output_card_8cpp" startline="164" endline="176">setValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a8d99e0805f6463fc886087e502efb12d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::saveStateToFRAM</definition>
+        <argsstring>()</argsstring>
+        <name>saveStateToFRAM</name>
+        <briefdescription>
+<para>Save the states of all the pins to FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="83" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="305" bodyend="309"/>
+        <referencedby refid="class_digital_output_card_1aa34d14771705c4374da1e41aad953843" compoundref="_digital_output_card_8cpp" startline="87" endline="102">analogWrite</referencedby>
+        <referencedby refid="class_digital_output_card_1a4e141b2627539b6b64f3d02d77a0aa84" compoundref="_digital_output_card_8cpp" startline="65" endline="77">digitalWrite</referencedby>
+        <referencedby refid="class_digital_output_card_1a742206fb70202954d822175b69f0f954" compoundref="_digital_output_card_8cpp" startline="147" endline="156">setState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1aef670901ac2563bd79242f337f37f378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::saveValueToFRAM</definition>
+        <argsstring>()</argsstring>
+        <name>saveValueToFRAM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="85" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1a9ce9c2b88a21f786c6cd76eb8468e13c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalOutputCard::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplements refid="class_expansion_card_1a83371d97f1deba4e419093b193aea99c">getType</reimplements>
+        <briefdescription>
+<para>Get the type of the card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The type of the card </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="87" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="137" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_digital_output_card_1a3185550c2882a1a11bd47c09e2f424ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t DigitalOutputCard::packStates</definition>
+        <argsstring>()</argsstring>
+        <name>packStates</name>
+        <briefdescription>
+<para>Pack the states of all the pins into a 16 bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The packed states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="111" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="236" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_output_card_1aeb15e364f888b2282da706d6cf082bfd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalOutputCard::unpackStates</definition>
+        <argsstring>(uint16_t states)</argsstring>
+        <name>unpackStates</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>states</declname>
+        </param>
+        <briefdescription>
+<para>Unpack the states of all the pins from a 16 bit integer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>states</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The packed states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="113" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.cpp" bodystart="249" bodyend="253"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref> class is a class for controlling the Digital Output Card. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This Digital Output Card has 16 digital outputs. All outputs are PWM capable. ALl outputs are 12V Push-Pull outputs. Outputs is grouped in 4 groups of 4 outputs.(0-3, 4-7, 8-11, 12-15) Each pin is capable of 0.6A, however each group&apos;s total current is limited to 1.2A.</para>
+<para><simplesect kind="warning"><para>You should not instantiate this class directly, instead use ESPMegaIO&apos;s registerCard function. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DigitalOutputCard</label>
+        <link refid="class_digital_output_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DigitalOutputCard</label>
+        <link refid="class_digital_output_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" line="38" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalOutputCard.hpp" bodystart="39" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_digital_output_card_1a2c544376f8960d9ab90dc27e2224baa0" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>address</name></member>
+      <member refid="class_digital_output_card_1aa34d14771705c4374da1e41aad953843" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>analogWrite</name></member>
+      <member refid="class_digital_output_card_1a4698ea2f13dba8e1cddc29efd8d11743" prot="public" virt="virtual"><scope>DigitalOutputCard</scope><name>begin</name></member>
+      <member refid="class_digital_output_card_1aa43b2f8d13abb0164f661eba5daa14ce" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>bindFRAM</name></member>
+      <member refid="class_digital_output_card_1a1f3eb57a22307eec5d1bf49d4698e225" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>callbacks_handler_index</name></member>
+      <member refid="class_digital_output_card_1a62bef9db87f2d80278d2112bb612adb9" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>change_callbacks</name></member>
+      <member refid="class_digital_output_card_1a8ca9e928a7e06da666e7bf3b3801f1da" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>DigitalOutputCard</name></member>
+      <member refid="class_digital_output_card_1aa73196a67686b5f8db3090577eff950b" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>DigitalOutputCard</name></member>
+      <member refid="class_digital_output_card_1a4e141b2627539b6b64f3d02d77a0aa84" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>digitalWrite</name></member>
+      <member refid="class_expansion_card_1a3b5afabfdb7183b37b78be1e20e4cde6" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>ExpansionCard</name></member>
+      <member refid="class_digital_output_card_1af4203aa1b044b8679cd2661faccc49d4" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>fram</name></member>
+      <member refid="class_digital_output_card_1a7e5edd1d01440fc28d1b8b179add1723" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>framAddress</name></member>
+      <member refid="class_digital_output_card_1a0c694d227d6d5148561ee75410476df1" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>framAutoSave</name></member>
+      <member refid="class_digital_output_card_1ab88c90309b2daa02926d37fb4590beef" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>framBinded</name></member>
+      <member refid="class_digital_output_card_1a3e239d57c39cb82cff4aca6455f01d6f" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>getState</name></member>
+      <member refid="class_digital_output_card_1a9ce9c2b88a21f786c6cd76eb8468e13c" prot="public" virt="virtual"><scope>DigitalOutputCard</scope><name>getType</name></member>
+      <member refid="class_digital_output_card_1ae160653dd5ec2bdbce0327af77669d87" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>getValue</name></member>
+      <member refid="class_digital_output_card_1a500615c25557efcff072e98e65a8db33" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>loadFromFRAM</name></member>
+      <member refid="class_digital_output_card_1a57796fcf07bbb56366644a2435481b99" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>loadPinMap</name></member>
+      <member refid="class_digital_output_card_1aeae842b0338e6788b99fa623fffcbe89" prot="public" virt="virtual"><scope>DigitalOutputCard</scope><name>loop</name></member>
+      <member refid="class_digital_output_card_1a3185550c2882a1a11bd47c09e2f424ce" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>packStates</name></member>
+      <member refid="class_digital_output_card_1abcac82adf6ab93cc14394f5e564863cd" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>pinMap</name></member>
+      <member refid="class_digital_output_card_1a54964f658af06a8c271167ec1bbc2163" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>pwm</name></member>
+      <member refid="class_digital_output_card_1a04a881ba7142114c83f41a49129111b6" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>registerChangeCallback</name></member>
+      <member refid="class_digital_output_card_1a99ac93ac96289b95063d4d1e1e2b7893" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>savePinValueToFRAM</name></member>
+      <member refid="class_digital_output_card_1a8d99e0805f6463fc886087e502efb12d" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>saveStateToFRAM</name></member>
+      <member refid="class_digital_output_card_1a451d122dfcc4c239c18c9d6f5d41449b" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>saveToFRAM</name></member>
+      <member refid="class_digital_output_card_1aef670901ac2563bd79242f337f37f378" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>saveValueToFRAM</name></member>
+      <member refid="class_digital_output_card_1a3eed3e145a257bad60e3e0e82a74f7f7" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>setAutoSaveToFRAM</name></member>
+      <member refid="class_digital_output_card_1a742206fb70202954d822175b69f0f954" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>setState</name></member>
+      <member refid="class_digital_output_card_1afa3fc66e71b03ee75ef022f92431466d" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>setValue</name></member>
+      <member refid="class_digital_output_card_1a98e154c3d24cb9eff53856226d965476" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>state_buffer</name></member>
+      <member refid="class_digital_output_card_1aeb15e364f888b2282da706d6cf082bfd" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>unpackStates</name></member>
+      <member refid="class_digital_output_card_1ae9601a5033bc723852d11d336cc2de93" prot="public" virt="non-virtual"><scope>DigitalOutputCard</scope><name>unregisterChangeCallback</name></member>
+      <member refid="class_digital_output_card_1a46e86723a24613a1e0ce7ed697293c9b" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>value_buffer</name></member>
+      <member refid="class_digital_output_card_1aa0217d5e5231d1afe3382fb7aad3be8a" prot="private" virt="non-virtual"><scope>DigitalOutputCard</scope><name>virtualPinMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

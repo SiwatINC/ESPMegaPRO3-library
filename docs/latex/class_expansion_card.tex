@@ -1,0 +1,53 @@
+\hypertarget{class_expansion_card}{}\doxysection{Expansion\+Card Class Reference}
+\label{class_expansion_card}\index{ExpansionCard@{ExpansionCard}}
+
+
+The base class for all expansion cards.  
+
+
+
+
+{\ttfamily \#include $<$Expansion\+Card.\+hpp$>$}
+
+
+
+Inheritance diagram for Expansion\+Card\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_expansion_card__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_expansion_card_aecd52cc9b31b642f2cd78f01654005de}\label{class_expansion_card_aecd52cc9b31b642f2cd78f01654005de}} 
+virtual bool {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{class_expansion_card_a3b3364d9de40d039a3dbfe9141dea0a9}\label{class_expansion_card_a3b3364d9de40d039a3dbfe9141dea0a9}} 
+virtual void {\bfseries loop} ()
+\item 
+\mbox{\Hypertarget{class_expansion_card_a83371d97f1deba4e419093b193aea99c}\label{class_expansion_card_a83371d97f1deba4e419093b193aea99c}} 
+virtual uint8\+\_\+t {\bfseries get\+Type} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for all expansion cards. 
+
+In order to create a new expansion card, you should create a new class that inherits from this class. Your class should implement the following functions\+:
+\begin{DoxyItemize}
+\item begin() \+: Initialize the card
+\item loop() \+: A function that is called in the main loop
+\item get\+Type() \+: Get the type of the card, The type should be a unique number between 0 and 255
+\end{DoxyItemize}
+
+\begin{DoxyWarning}{Warning}
+This class is abstract and should not be instantiated directly. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Expansion\+Card.\+hpp\end{DoxyCompactItemize}

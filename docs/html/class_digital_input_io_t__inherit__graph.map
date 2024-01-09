@@ -1,0 +1,4 @@
+<map id="DigitalInputIoT" name="DigitalInputIoT">
+<area shape="rect" id="node1" title="The DigitalInputIoT class is a class for connecting the Digital Input Card to the IoT module." alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node2" href="$class_io_t_component.html" title="The IoTComponent class is a base class that is used to interface with an expansion card through MQTT." alt="" coords="7,5,123,32"/>
+</map>

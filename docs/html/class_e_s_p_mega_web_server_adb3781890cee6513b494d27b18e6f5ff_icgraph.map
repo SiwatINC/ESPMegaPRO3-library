@@ -1,0 +1,4 @@
+<map id="ESPMegaWebServer::bindFRAM" name="ESPMegaWebServer::bindFRAM">
+<area shape="rect" id="node1" title="Bind the FRAM object to the web server." alt="" coords="284,5,511,32"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_p_r_o.html#a77429b766c275aba8d6f2462688fd3ee" title="Enables the internal web server." alt="" coords="5,5,236,32"/>
+</map>

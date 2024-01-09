@@ -1,0 +1,386 @@
+.TH "DigitalOutputCard" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DigitalOutputCard \- The \fBDigitalOutputCard\fP class is a class for controlling the Digital Output Card\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DigitalOutputCard\&.hpp>\fP
+.PP
+Inherits \fBExpansionCard\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDigitalOutputCard\fP (uint8_t address)"
+.br
+.RI "Create a new Digital Output Card object with the specified address\&. "
+.ti -1c
+.RI "\fBDigitalOutputCard\fP (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4)"
+.br
+.RI "Create a new Digital Output Card object with the specified position on the dip switch\&. "
+.ti -1c
+.RI "bool \fBbegin\fP ()"
+.br
+.RI "Initialize the Digital Output Card\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The main loop for the Digital Output Card object\&. "
+.ti -1c
+.RI "void \fBdigitalWrite\fP (uint8_t pin, bool state)"
+.br
+.RI "Write a digtal LOW or HIGH to the specified pin\&. "
+.ti -1c
+.RI "void \fBanalogWrite\fP (uint8_t pin, uint16_t value)"
+.br
+.RI "Write a pwm value to the specified pin\&. "
+.ti -1c
+.RI "void \fBsetState\fP (uint8_t pin, bool state)"
+.br
+.RI "Set the state of the specified pin\&. "
+.ti -1c
+.RI "void \fBsetValue\fP (uint8_t pin, uint16_t value)"
+.br
+.RI "Set the pwm value of the specified pin\&. "
+.ti -1c
+.RI "bool \fBgetState\fP (uint8_t pin)"
+.br
+.RI "Get the state of the specified pin\&. "
+.ti -1c
+.RI "uint16_t \fBgetValue\fP (uint8_t pin)"
+.br
+.RI "Get the pwm value of the specified pin\&. "
+.ti -1c
+.RI "uint8_t \fBregisterChangeCallback\fP (std::function< void(uint8_t, bool, uint16_t)> callback)"
+.br
+.RI "Register a callback function for the specified pin\&. "
+.ti -1c
+.RI "void \fBunregisterChangeCallback\fP (uint8_t handler)"
+.br
+.RI "Unregister a callback function\&. "
+.ti -1c
+.RI "void \fBloadPinMap\fP (uint8_t pinMap[16])"
+.br
+.RI "Load a pin map\&. "
+.ti -1c
+.RI "void \fBbindFRAM\fP (FRAM *fram, uint16_t address)"
+.br
+.RI "Bind a FRAM to the card\&. "
+.ti -1c
+.RI "void \fBsaveToFRAM\fP ()"
+.br
+.RI "Save the states and values of all the pins to the FRAM\&. "
+.ti -1c
+.RI "void \fBloadFromFRAM\fP ()"
+.br
+.RI "Load the states and values of all the pins from the FRAM\&. "
+.ti -1c
+.RI "void \fBsetAutoSaveToFRAM\fP (bool autoSave)"
+.br
+.RI "Set the auto save to FRAM\&. "
+.ti -1c
+.RI "void \fBsavePinValueToFRAM\fP (uint8_t pin)"
+.br
+.RI "Save a single pin value to FRAM\&. "
+.ti -1c
+.RI "void \fBsaveStateToFRAM\fP ()"
+.br
+.RI "Save the states of all the pins to FRAM\&. "
+.ti -1c
+.RI "void \fBsaveValueToFRAM\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBgetType\fP ()"
+.br
+.RI "Get the type of the card\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBDigitalOutputCard\fP class is a class for controlling the Digital Output Card\&. 
+
+This Digital Output Card has 16 digital outputs\&. All outputs are PWM capable\&. ALl outputs are 12V Push-Pull outputs\&. Outputs is grouped in 4 groups of 4 outputs\&.(0-3, 4-7, 8-11, 12-15) Each pin is capable of 0\&.6A, however each group's total current is limited to 1\&.2A\&.
+.PP
+\fBWarning\fP
+.RS 4
+You should not instantiate this class directly, instead use ESPMegaIO's registerCard function\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DigitalOutputCard::DigitalOutputCard (uint8_t address)"
+
+.PP
+Create a new Digital Output Card object with the specified address\&. 
+.PP
+\fBNote\fP
+.RS 4
+If you are using the ESPMegaI/O board, you should use the dip switch constructor
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIaddress\fP The ESPMegaI/O address of the card 
+.RE
+.PP
+
+.SS "DigitalOutputCard::DigitalOutputCard (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4)"
+
+.PP
+Create a new Digital Output Card object with the specified position on the dip switch\&. 
+.PP
+\fBNote\fP
+.RS 4
+The bit 0 are at the left of the dip switch
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+There are 5 switches on the dip switch, they should be unique accross all the cards
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIbit0\fP The position of the first switch on the dip switch 
+.br
+\fIbit1\fP The position of the second switch on the dip switch 
+.br
+\fIbit2\fP The position of the third switch on the dip switch 
+.br
+\fIbit3\fP The position of the fourth switch on the dip switch 
+.br
+\fIbit4\fP The position of the fifth switch on the dip switch 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void DigitalOutputCard::analogWrite (uint8_t pin, uint16_t value)"
+
+.PP
+Write a pwm value to the specified pin\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function set both the state and the pwm value of the pin
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to set the pwm value 
+.br
+\fIvalue\fP The pwm value to set 
+.RE
+.PP
+
+.SS "bool DigitalOutputCard::begin ()\fC [virtual]\fP"
+
+.PP
+Initialize the Digital Output Card\&. 
+.PP
+\fBNote\fP
+.RS 4
+Although this function can be called inside the main program, it is recommended to use \fBESPMegaPRO::installCard()\fP instead
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the initialization is successful, false otherwise 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "void DigitalOutputCard::bindFRAM (FRAM * fram, uint16_t address)"
+
+.PP
+Bind a FRAM to the card\&. 
+.PP
+\fBNote\fP
+.RS 4
+The Output Card use 34 bytes of FRAM
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+If the fram range overlap with another card, undefined behavior will occur
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIfram\fP The FRAM to bind 
+.br
+\fIaddress\fP The address of the card in the FRAM 
+.RE
+.PP
+
+.SS "void DigitalOutputCard::digitalWrite (uint8_t pin, bool state)"
+
+.PP
+Write a digtal LOW or HIGH to the specified pin\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function set both the state and the pwm value of the pin
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to set the state 
+.br
+\fIstate\fP The logic level to set the pin to 
+.RE
+.PP
+
+.SS "bool DigitalOutputCard::getState (uint8_t pin)"
+
+.PP
+Get the state of the specified pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to get the state 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The state of the pin 
+.RE
+.PP
+
+.SS "uint8_t DigitalOutputCard::getType ()\fC [virtual]\fP"
+
+.PP
+Get the type of the card\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The type of the card 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "uint16_t DigitalOutputCard::getValue (uint8_t pin)"
+
+.PP
+Get the pwm value of the specified pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to get the pwm value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The pwm value of the pin 
+.RE
+.PP
+
+.SS "void DigitalOutputCard::loadPinMap (uint8_t pinMap[16])"
+
+.PP
+Load a pin map\&. A pin map is an array of 16 elements that maps the physical pins to virtual pins The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class The physical pins are the pins on the Output IC, This can be found on the schematic of the ESPMegaI/O board This function is useful if you want to change the number identification of the pins to match your project needs
+.PP
+\fBParameters\fP
+.RS 4
+\fIpinMap\fP The pin map to load 
+.RE
+.PP
+
+.SS "void DigitalOutputCard::loop ()\fC [virtual]\fP"
+
+.PP
+The main loop for the Digital Output Card object\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function is not used, it is only here to implement the \fBExpansionCard\fP interface 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "uint8_t DigitalOutputCard::registerChangeCallback (std::function< void(uint8_t, bool, uint16_t)> callback)"
+
+.PP
+Register a callback function for the specified pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function to be called, the first parameter is the pin, the second parameter is the state, the third parameter is the pwm value 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handler of the callback function 
+.RE
+.PP
+
+.SS "void DigitalOutputCard::savePinValueToFRAM (uint8_t pin)"
+
+.PP
+Save a single pin value to FRAM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to save 
+.RE
+.PP
+
+.SS "void DigitalOutputCard::setAutoSaveToFRAM (bool autoSave)"
+
+.PP
+Set the auto save to FRAM\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIautoSave\fP True to enable auto save, false to disable auto save 
+.RE
+.PP
+
+.SS "void DigitalOutputCard::setState (uint8_t pin, bool state)"
+
+.PP
+Set the state of the specified pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to set the state 
+.br
+\fIstate\fP The state of the pin 
+.RE
+.PP
+
+.SS "void DigitalOutputCard::setValue (uint8_t pin, uint16_t value)"
+
+.PP
+Set the pwm value of the specified pin\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to set the pwm value 
+.br
+\fIvalue\fP The pwm value to set 
+.RE
+.PP
+
+.SS "void DigitalOutputCard::unregisterChangeCallback (uint8_t handler)"
+
+.PP
+Unregister a callback function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler of the callback function to be unregistered 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

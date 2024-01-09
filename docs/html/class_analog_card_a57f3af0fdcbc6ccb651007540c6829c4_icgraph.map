@@ -1,0 +1,8 @@
+<map id="AnalogCard::analogRead" name="AnalogCard::analogRead">
+<area shape="rect" id="node1" title="Reads the value from the specified analog pin." alt="" coords="967,42,1149,69"/>
+<area shape="rect" id="node2" href="$class_analog_io_t.html#a2f74e7f22b3374b4950357d9f4b11ccc" title="Publishes the state of a DAC." alt="" coords="749,42,919,69"/>
+<area shape="rect" id="node3" href="$class_analog_io_t.html#a09922e70d6374ba79b3193c3a3b35231" title="Publishes the state of all DACs." alt="" coords="525,42,701,69"/>
+<area shape="rect" id="node4" href="$class_analog_io_t.html#a2e18ed063bdbf7cc2a59b20a721050f8" title="Processes a message received on the MQTT topic for requesting the state of all DACs." alt="" coords="280,5,477,47"/>
+<area shape="rect" id="node6" href="$class_analog_io_t.html#ad49a200a7568281874f39b2f14f12621" title="Publishes the state of all DACs." alt="" coords="287,71,471,98"/>
+<area shape="rect" id="node5" href="$class_analog_io_t.html#a24c2bf88a47a4cdaf8ebf5e55508ddbf" title="Publishes the state of all DACs." alt="" coords="5,13,232,39"/>
+</map>

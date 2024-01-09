@@ -1,0 +1,345 @@
+\hypertarget{class_digital_output_io_t}{}\doxysection{Digital\+Output\+IoT Class Reference}
+\label{class_digital_output_io_t}\index{DigitalOutputIoT@{DigitalOutputIoT}}
+
+
+The \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} class is a class interfacing with the Digital Output Card through MQTT.  
+
+
+
+
+{\ttfamily \#include $<$Digital\+Output\+Io\+T.\+hpp$>$}
+
+
+
+Inheritance diagram for Digital\+Output\+IoT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_digital_output_io_t__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Digital\+Output\+IoT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_digital_output_io_t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_digital_output_io_t_a6c619c09a8c325f1931e14d1cab14e20}\label{class_digital_output_io_t_a6c619c09a8c325f1931e14d1cab14e20}} 
+\mbox{\hyperlink{class_digital_output_io_t_a6c619c09a8c325f1931e14d1cab14e20}{Digital\+Output\+IoT}} ()
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_digital_output_io_t_ada967432a1efd635565e06b18e63449e}\label{class_digital_output_io_t_ada967432a1efd635565e06b18e63449e}} 
+\mbox{\hyperlink{class_digital_output_io_t_ada967432a1efd635565e06b18e63449e}{$\sim$\+Digital\+Output\+IoT}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_digital_output_io_t_a7360bb6922c644e1898cc0d2b2bb2373}{begin}} (uint8\+\_\+t card\+\_\+id, \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$card, Pub\+Sub\+Client $\ast$mqtt, char $\ast$base\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Initialize the \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_io_t_aea7aa08507f13b49e142532d728f074b}{handle\+Mqtt\+Message}} (char $\ast$topic, char $\ast$payload)
+\begin{DoxyCompactList}\small\item\em Handle the MQTT messages for the \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} card. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_digital_output_io_t_a5ea97114ef576a05c2ace8bced6be2f8}\label{class_digital_output_io_t_a5ea97114ef576a05c2ace8bced6be2f8}} 
+void \mbox{\hyperlink{class_digital_output_io_t_a5ea97114ef576a05c2ace8bced6be2f8}{publish\+Digital\+Outputs}} ()
+\begin{DoxyCompactList}\small\item\em Publish the state of all digital outputs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_io_t_a254ad82d5f263d8d335e8007fcea9061}{publish\+Digital\+Output}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Publish the state and value of the specified digital output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_io_t_a186d8a94e312afc13c61dae4d31cd633}{publish\+Digital\+Output\+State}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Publish the state of the specified digital output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_io_t_a99cb645e8ef895b893ba128f0bd54726}{publish\+Digital\+Output\+Value}} (uint8\+\_\+t pin)
+\begin{DoxyCompactList}\small\item\em Publish the value of the specified digital output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_io_t_a7aef0880d159a3dcf6590c7b567ac1b1}{set\+Digital\+Outputs\+Publish\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/disable publishing of digital outputs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_io_t_a1aeb4b1e36da7aec99808971f1d95cbf}{handle\+Value\+Change}} (uint8\+\_\+t pin, bool state, uint16\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Handle the value change of a pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_io_t_a9330dd4073df5a61f68fdf5825de26e0}{publish\+Report}} ()
+\begin{DoxyCompactList}\small\item\em Publish all digital outputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_digital_output_io_t_aeffef9a2e359f4dd9a2c81c8ae478dd8}\label{class_digital_output_io_t_aeffef9a2e359f4dd9a2c81c8ae478dd8}} 
+void \mbox{\hyperlink{class_digital_output_io_t_aeffef9a2e359f4dd9a2c81c8ae478dd8}{subscribe}} ()
+\begin{DoxyCompactList}\small\item\em Subscribe to the MQTT topics used by the \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digital_output_io_t_af3d97141417b3539138ed824ea05990f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The main loop for the \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} object. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_digital_output_io_t_ae351ff6afcef3d1e6739222523ed7173}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the IoT component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} class is a class interfacing with the Digital Output Card through MQTT. 
+
+\begin{DoxyWarning}{Warning}
+You should not instantiate this class directly, instead use ESPMega\+IO\textquotesingle{}s register\+Card function. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_digital_output_io_t_a7360bb6922c644e1898cc0d2b2bb2373}\label{class_digital_output_io_t_a7360bb6922c644e1898cc0d2b2bb2373}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!begin@{begin}}
+\index{begin@{begin}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool Digital\+Output\+Io\+T\+::begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card\+\_\+id,  }\item[{\mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$}]{card,  }\item[{Pub\+Sub\+Client $\ast$}]{mqtt,  }\item[{char $\ast$}]{base\+\_\+topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initialize the \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} object. 
+
+\begin{DoxyNote}{Note}
+ALthough this function can be called inside the main program, it is recommended to use \mbox{\hyperlink{class_e_s_p_mega_p_r_o_a7064148ad97cdb5fc871789fbf2ba450}{ESPMega\+PRO\+::install\+Card()}} instead
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em card\+\_\+id} & The id of the card \\
+\hline
+{\em card} & The card object \\
+\hline
+{\em mqtt} & The Pub\+Sub\+Client object \\
+\hline
+{\em base\+\_\+topic} & The base topic of the card \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the initialization is successful, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a7360bb6922c644e1898cc0d2b2bb2373_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_io_t_ae351ff6afcef3d1e6739222523ed7173}\label{class_digital_output_io_t_ae351ff6afcef3d1e6739222523ed7173}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!getType@{getType}}
+\index{getType@{getType}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily uint8\+\_\+t Digital\+Output\+Io\+T\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the type of the IoT component. 
+
+\begin{DoxyReturn}{Returns}
+The type of the IoT component 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+\mbox{\Hypertarget{class_digital_output_io_t_aea7aa08507f13b49e142532d728f074b}\label{class_digital_output_io_t_aea7aa08507f13b49e142532d728f074b}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!handleMqttMessage@{handleMqttMessage}}
+\index{handleMqttMessage@{handleMqttMessage}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{handleMqttMessage()}{handleMqttMessage()}}
+{\footnotesize\ttfamily void Digital\+Output\+Io\+T\+::handle\+Mqtt\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handle the MQTT messages for the \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} card. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the message \\
+\hline
+{\em payload} & The payload of the message \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+\mbox{\Hypertarget{class_digital_output_io_t_a1aeb4b1e36da7aec99808971f1d95cbf}\label{class_digital_output_io_t_a1aeb4b1e36da7aec99808971f1d95cbf}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!handleValueChange@{handleValueChange}}
+\index{handleValueChange@{handleValueChange}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{handleValueChange()}{handleValueChange()}}
+{\footnotesize\ttfamily void Digital\+Output\+Io\+T\+::handle\+Value\+Change (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin,  }\item[{bool}]{state,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Handle the value change of a pin. 
+
+\begin{DoxyNote}{Note}
+This function is registered as a callback function with the \mbox{\hyperlink{class_digital_output_card}{Digital\+Output\+Card}} object
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin that changed \\
+\hline
+{\em state} & The new state of the pin \\
+\hline
+{\em value} & The new value of the pin \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a1aeb4b1e36da7aec99808971f1d95cbf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a1aeb4b1e36da7aec99808971f1d95cbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_io_t_af3d97141417b3539138ed824ea05990f}\label{class_digital_output_io_t_af3d97141417b3539138ed824ea05990f}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!loop@{loop}}
+\index{loop@{loop}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Digital\+Output\+Io\+T\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main loop for the \mbox{\hyperlink{class_digital_output_io_t}{Digital\+Output\+IoT}} object. 
+
+\begin{DoxyNote}{Note}
+This function is not used, it is only here to implement the \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}} interface 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_digital_output_io_t_a254ad82d5f263d8d335e8007fcea9061}\label{class_digital_output_io_t_a254ad82d5f263d8d335e8007fcea9061}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!publishDigitalOutput@{publishDigitalOutput}}
+\index{publishDigitalOutput@{publishDigitalOutput}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{publishDigitalOutput()}{publishDigitalOutput()}}
+{\footnotesize\ttfamily void Digital\+Output\+Io\+T\+::publish\+Digital\+Output (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Publish the state and value of the specified digital output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to publish \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a254ad82d5f263d8d335e8007fcea9061_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a254ad82d5f263d8d335e8007fcea9061_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_io_t_a186d8a94e312afc13c61dae4d31cd633}\label{class_digital_output_io_t_a186d8a94e312afc13c61dae4d31cd633}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!publishDigitalOutputState@{publishDigitalOutputState}}
+\index{publishDigitalOutputState@{publishDigitalOutputState}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{publishDigitalOutputState()}{publishDigitalOutputState()}}
+{\footnotesize\ttfamily void Digital\+Output\+Io\+T\+::publish\+Digital\+Output\+State (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Publish the state of the specified digital output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to publish \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a186d8a94e312afc13c61dae4d31cd633_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a186d8a94e312afc13c61dae4d31cd633_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_io_t_a99cb645e8ef895b893ba128f0bd54726}\label{class_digital_output_io_t_a99cb645e8ef895b893ba128f0bd54726}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!publishDigitalOutputValue@{publishDigitalOutputValue}}
+\index{publishDigitalOutputValue@{publishDigitalOutputValue}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{publishDigitalOutputValue()}{publishDigitalOutputValue()}}
+{\footnotesize\ttfamily void Digital\+Output\+Io\+T\+::publish\+Digital\+Output\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{pin }\end{DoxyParamCaption})}
+
+
+
+Publish the value of the specified digital output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The pin to publish \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a99cb645e8ef895b893ba128f0bd54726_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a99cb645e8ef895b893ba128f0bd54726_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_io_t_a9330dd4073df5a61f68fdf5825de26e0}\label{class_digital_output_io_t_a9330dd4073df5a61f68fdf5825de26e0}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!publishReport@{publishReport}}
+\index{publishReport@{publishReport}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{publishReport()}{publishReport()}}
+{\footnotesize\ttfamily void Digital\+Output\+Io\+T\+::publish\+Report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Publish all digital outputs. 
+
+\begin{DoxyNote}{Note}
+This function is called by the \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}} object 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_digital_output_io_t_a9330dd4073df5a61f68fdf5825de26e0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_digital_output_io_t_a7aef0880d159a3dcf6590c7b567ac1b1}\label{class_digital_output_io_t_a7aef0880d159a3dcf6590c7b567ac1b1}} 
+\index{DigitalOutputIoT@{DigitalOutputIoT}!setDigitalOutputsPublishEnabled@{setDigitalOutputsPublishEnabled}}
+\index{setDigitalOutputsPublishEnabled@{setDigitalOutputsPublishEnabled}!DigitalOutputIoT@{DigitalOutputIoT}}
+\doxysubsubsection{\texorpdfstring{setDigitalOutputsPublishEnabled()}{setDigitalOutputsPublishEnabled()}}
+{\footnotesize\ttfamily void Digital\+Output\+Io\+T\+::set\+Digital\+Outputs\+Publish\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable/disable publishing of digital outputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & True to enable publishing, false to disable publishing \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Digital\+Output\+Io\+T.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Digital\+Output\+Io\+T.\+cpp\end{DoxyCompactItemize}

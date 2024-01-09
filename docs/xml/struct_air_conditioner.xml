@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_air_conditioner" kind="struct" language="C++" prot="public">
+    <compoundname>AirConditioner</compoundname>
+    <includes refid="_climate_card_8hpp" local="no">ClimateCard.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AirConditioner::max_temperature</definition>
+        <argsstring></argsstring>
+        <name>max_temperature</name>
+        <briefdescription>
+<para>Maximum temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="37" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" compoundref="_climate_card_8cpp" startline="156" endline="175">ClimateCard::loadStateFromFRAM</referencedby>
+        <referencedby refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" compoundref="_climate_card_8cpp" startline="183" endline="194">ClimateCard::setTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AirConditioner::min_temperature</definition>
+        <argsstring></argsstring>
+        <name>min_temperature</name>
+        <briefdescription>
+<para>Minimum temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="38" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" compoundref="_climate_card_8cpp" startline="156" endline="175">ClimateCard::loadStateFromFRAM</referencedby>
+        <referencedby refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" compoundref="_climate_card_8cpp" startline="183" endline="194">ClimateCard::setTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AirConditioner::modes</definition>
+        <argsstring></argsstring>
+        <name>modes</name>
+        <briefdescription>
+<para>Number of modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="39" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" compoundref="_climate_card_8cpp" startline="156" endline="175">ClimateCard::loadStateFromFRAM</referencedby>
+        <referencedby refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" compoundref="_climate_card_8cpp" startline="202" endline="210">ClimateCard::setMode</referencedby>
+        <referencedby refid="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" compoundref="_climate_card_8cpp" startline="271" endline="281">ClimateCard::setModeByName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54" prot="public" static="no" mutable="no">
+        <type>const char **</type>
+        <definition>const char** AirConditioner::mode_names</definition>
+        <argsstring></argsstring>
+        <name>mode_names</name>
+        <briefdescription>
+<para>Names of modes in the form of an array of strings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="40" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" compoundref="_climate_card_8cpp" startline="216" endline="219">ClimateCard::getModeName</referencedby>
+        <referencedby refid="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" compoundref="_climate_card_8cpp" startline="271" endline="281">ClimateCard::setModeByName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AirConditioner::fan_speeds</definition>
+        <argsstring></argsstring>
+        <name>fan_speeds</name>
+        <briefdescription>
+<para>Number of fan speeds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="41" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" compoundref="_climate_card_8cpp" startline="156" endline="175">ClimateCard::loadStateFromFRAM</referencedby>
+        <referencedby refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" compoundref="_climate_card_8cpp" startline="237" endline="245">ClimateCard::setFanSpeed</referencedby>
+        <referencedby refid="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" compoundref="_climate_card_8cpp" startline="253" endline="263">ClimateCard::setFanSpeedByName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf" prot="public" static="no" mutable="no">
+        <type>const char **</type>
+        <definition>const char** AirConditioner::fan_speed_names</definition>
+        <argsstring></argsstring>
+        <name>fan_speed_names</name>
+        <briefdescription>
+<para>Names of fan speeds in the form of an array of strings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="42" column="16" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" compoundref="_climate_card_8cpp" startline="226" endline="229">ClimateCard::getFanSpeedName</referencedby>
+        <referencedby refid="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" compoundref="_climate_card_8cpp" startline="253" endline="263">ClimateCard::setFanSpeedByName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_air_conditioner_1abb9aca0520a6fa66db6487b9f33ecfb9" prot="public" static="no" mutable="no">
+        <type>size_t(*</type>
+        <definition>size_t(* AirConditioner::getInfraredCode) (uint8_t, uint8_t, uint8_t, const uint16_t **)</definition>
+        <argsstring>)(uint8_t, uint8_t, uint8_t, const uint16_t **)</argsstring>
+        <name>getInfraredCode</name>
+        <briefdescription>
+<para>Function to get IR code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mode of the air conditioner </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fan_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fan speed of the air conditioner </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature of the air conditioner </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the IR code array</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Size of the IR code array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="53" column="5" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This struct is used to store information about an air conditioner. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="36" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="36" bodyend="54"/>
+    <listofallmembers>
+      <member refid="struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf" prot="public" virt="non-virtual"><scope>AirConditioner</scope><name>fan_speed_names</name></member>
+      <member refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" prot="public" virt="non-virtual"><scope>AirConditioner</scope><name>fan_speeds</name></member>
+      <member refid="struct_air_conditioner_1abb9aca0520a6fa66db6487b9f33ecfb9" prot="public" virt="non-virtual"><scope>AirConditioner</scope><name>getInfraredCode</name></member>
+      <member refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" prot="public" virt="non-virtual"><scope>AirConditioner</scope><name>max_temperature</name></member>
+      <member refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" prot="public" virt="non-virtual"><scope>AirConditioner</scope><name>min_temperature</name></member>
+      <member refid="struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54" prot="public" virt="non-virtual"><scope>AirConditioner</scope><name>mode_names</name></member>
+      <member refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" prot="public" virt="non-virtual"><scope>AirConditioner</scope><name>modes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

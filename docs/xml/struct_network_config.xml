@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_network_config" kind="struct" language="C++" prot="public">
+    <compoundname>NetworkConfig</compoundname>
+    <includes refid="_e_s_p_mega_io_t_8hpp" local="no">ESPMegaIoT.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_network_config_1a0176904843001d1f2435ac52ca040ede" prot="public" static="no" mutable="no">
+        <type>IPAddress</type>
+        <definition>IPAddress NetworkConfig::ip</definition>
+        <argsstring></argsstring>
+        <name>ip</name>
+        <briefdescription>
+<para>The IP address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="34" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41" prot="public" static="no" mutable="no">
+        <type>IPAddress</type>
+        <definition>IPAddress NetworkConfig::gateway</definition>
+        <argsstring></argsstring>
+        <name>gateway</name>
+        <briefdescription>
+<para>The gateway address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="35" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1a18dd746c622cb7a38da58ca94ff31657" prot="public" static="no" mutable="no">
+        <type>IPAddress</type>
+        <definition>IPAddress NetworkConfig::subnet</definition>
+        <argsstring></argsstring>
+        <name>subnet</name>
+        <briefdescription>
+<para>The subnet mask. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="36" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1a2706b2e04d704496b2202e476fa9635c" prot="public" static="no" mutable="no">
+        <type>IPAddress</type>
+        <definition>IPAddress NetworkConfig::dns1</definition>
+        <argsstring></argsstring>
+        <name>dns1</name>
+        <briefdescription>
+<para>The primary DNS server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="37" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1a393560e108d63338ae825bbab2c25e2c" prot="public" static="no" mutable="no">
+        <type>IPAddress</type>
+        <definition>IPAddress NetworkConfig::dns2</definition>
+        <argsstring></argsstring>
+        <name>dns2</name>
+        <briefdescription>
+<para>The secondary DNS server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="38" column="15" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char NetworkConfig::hostname[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>hostname</name>
+        <briefdescription>
+<para>The hostname. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="39" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4" compoundref="_e_s_p_mega_io_t_8cpp" startline="622" endline="634">ESPMegaIoT::connectToMqtt</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a2a167a8e30202a4fc34141595b795492" compoundref="_e_s_p_mega_io_t_8cpp" startline="585" endline="588">ESPMegaIoT::ethernetBegin</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1a9884b31dba672d1f24636fb64a55d38a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool NetworkConfig::useStaticIp</definition>
+        <argsstring></argsstring>
+        <name>useStaticIp</name>
+        <briefdescription>
+<para>Whether to use a static IP, if false, DHCP will be used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="40" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool NetworkConfig::useWifi</definition>
+        <argsstring></argsstring>
+        <name>useWifi</name>
+        <briefdescription>
+<para>Whether to use WiFi or Ethernet, if false, Ethernet will be used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="41" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0" compoundref="_e_s_p_mega_io_t_8cpp" startline="774" endline="779">ESPMegaIoT::getIp</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163" compoundref="_e_s_p_mega_io_t_8cpp" startline="804" endline="809">ESPMegaIoT::getMac</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1acb0b6d3616f924ae793981f8653b142f" compoundref="_e_s_p_mega_io_t_8cpp" startline="732" endline="738">ESPMegaIoT::networkConnected</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool NetworkConfig::wifiUseAuth</definition>
+        <argsstring></argsstring>
+        <name>wifiUseAuth</name>
+        <briefdescription>
+<para>Whether to use WiFi authentication, if false, ssid and password will be ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="42" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char NetworkConfig::ssid[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>ssid</name>
+        <briefdescription>
+<para>The WiFi SSID, even if wifiUseAuth is false, this should be set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="43" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char NetworkConfig::password[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>password</name>
+        <briefdescription>
+<para>The WiFi password, even if wifiUseAuth is false, this should be set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="44" column="10" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3" compoundref="_e_s_p_mega_io_t_8cpp" startline="639" endline="658">ESPMegaIoT::connectNetwork</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414" compoundref="_e_s_p_mega_io_t_8cpp" startline="547" endline="561">ESPMegaIoT::loadNetworkConfig</referencedby>
+        <referencedby refid="class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba" compoundref="_e_s_p_mega_io_t_8cpp" startline="566" endline="580">ESPMegaIoT::saveNetworkConfig</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The network configuration struct. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This struct will be saved to FRAM when calling saveNetworkConfig </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" line="32" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp" bodystart="33" bodyend="45"/>
+    <listofallmembers>
+      <member refid="struct_network_config_1a2706b2e04d704496b2202e476fa9635c" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>dns1</name></member>
+      <member refid="struct_network_config_1a393560e108d63338ae825bbab2c25e2c" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>dns2</name></member>
+      <member refid="struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>gateway</name></member>
+      <member refid="struct_network_config_1a450d89f26365aa8339be5b77682fbd91" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>hostname</name></member>
+      <member refid="struct_network_config_1a0176904843001d1f2435ac52ca040ede" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>ip</name></member>
+      <member refid="struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>password</name></member>
+      <member refid="struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>ssid</name></member>
+      <member refid="struct_network_config_1a18dd746c622cb7a38da58ca94ff31657" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>subnet</name></member>
+      <member refid="struct_network_config_1a9884b31dba672d1f24636fb64a55d38a" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>useStaticIp</name></member>
+      <member refid="struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>useWifi</name></member>
+      <member refid="struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea" prot="public" virt="non-virtual"><scope>NetworkConfig</scope><name>wifiUseAuth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

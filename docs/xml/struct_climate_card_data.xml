@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="struct_climate_card_data" kind="struct" language="C++" prot="public">
+    <compoundname>ClimateCardData</compoundname>
+    <includes refid="_climate_card_8hpp" local="no">ClimateCard.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCardData::ac_temperature</definition>
+        <argsstring></argsstring>
+        <name>ac_temperature</name>
+        <briefdescription>
+<para>Temperature of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="28" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" compoundref="_climate_card_8cpp" startline="19" endline="41">ClimateCard::ClimateCard</referencedby>
+        <referencedby refid="class_climate_card_1a0877f36123ed2fdfe41677bdbac320be" compoundref="_climate_card_8cpp" startline="414" endline="417">ClimateCard::getTemperature</referencedby>
+        <referencedby refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" compoundref="_climate_card_8cpp" startline="156" endline="175">ClimateCard::loadStateFromFRAM</referencedby>
+        <referencedby refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" compoundref="_climate_card_8cpp" startline="142" endline="149">ClimateCard::saveStateToFRAM</referencedby>
+        <referencedby refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" compoundref="_climate_card_8cpp" startline="183" endline="194">ClimateCard::setTemperature</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCardData::ac_mode</definition>
+        <argsstring></argsstring>
+        <name>ac_mode</name>
+        <briefdescription>
+<para>Mode of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="29" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" compoundref="_climate_card_8cpp" startline="19" endline="41">ClimateCard::ClimateCard</referencedby>
+        <referencedby refid="class_climate_card_1a8a9c0eb63c2e92a01fc39715c1876509" compoundref="_climate_card_8cpp" startline="424" endline="427">ClimateCard::getMode</referencedby>
+        <referencedby refid="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" compoundref="_climate_card_8cpp" startline="216" endline="219">ClimateCard::getModeName</referencedby>
+        <referencedby refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" compoundref="_climate_card_8cpp" startline="156" endline="175">ClimateCard::loadStateFromFRAM</referencedby>
+        <referencedby refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" compoundref="_climate_card_8cpp" startline="142" endline="149">ClimateCard::saveStateToFRAM</referencedby>
+        <referencedby refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" compoundref="_climate_card_8cpp" startline="202" endline="210">ClimateCard::setMode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ClimateCardData::ac_fan_speed</definition>
+        <argsstring></argsstring>
+        <name>ac_fan_speed</name>
+        <briefdescription>
+<para>Fan speed of the air conditioner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="30" column="13" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" compoundref="_climate_card_8cpp" startline="19" endline="41">ClimateCard::ClimateCard</referencedby>
+        <referencedby refid="class_climate_card_1a119c0d4369efb88eab7c99f45b7a62af" compoundref="_climate_card_8cpp" startline="434" endline="437">ClimateCard::getFanSpeed</referencedby>
+        <referencedby refid="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" compoundref="_climate_card_8cpp" startline="226" endline="229">ClimateCard::getFanSpeedName</referencedby>
+        <referencedby refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" compoundref="_climate_card_8cpp" startline="156" endline="175">ClimateCard::loadStateFromFRAM</referencedby>
+        <referencedby refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" compoundref="_climate_card_8cpp" startline="142" endline="149">ClimateCard::saveStateToFRAM</referencedby>
+        <referencedby refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" compoundref="_climate_card_8cpp" startline="237" endline="245">ClimateCard::setFanSpeed</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The struct is used to store the state of the air conditioner. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This struct is stored in FRAM if it is used </para>
+</simplesect>
+<simplesect kind="note"><para>This struct is 3 bytes long </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="27" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="27" bodyend="31"/>
+    <listofallmembers>
+      <member refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" prot="public" virt="non-virtual"><scope>ClimateCardData</scope><name>ac_fan_speed</name></member>
+      <member refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" prot="public" virt="non-virtual"><scope>ClimateCardData</scope><name>ac_mode</name></member>
+      <member refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" prot="public" virt="non-virtual"><scope>ClimateCardData</scope><name>ac_temperature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,4 @@
+<map id="DigitalInputIoT::publishDigitalInput" name="DigitalInputIoT::publishDigitalInput">
+<area shape="rect" id="node1" title="Publish a digital input to the MQTT broker." alt="" coords="5,5,177,47"/>
+<area shape="rect" id="node2" href="$class_digital_input_card.html#a09416f14975c453bb7b9d1fdfc033fd9" title="Read the input from the specified pin, always refresh the input buffers." alt="" coords="225,13,436,39"/>
+</map>

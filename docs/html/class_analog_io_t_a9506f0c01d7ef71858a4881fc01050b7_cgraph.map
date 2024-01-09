@@ -1,0 +1,4 @@
+<map id="AnalogIoT::processADCSetConversionEnabledMessage" name="AnalogIoT::processADCSetConversionEnabledMessage">
+<area shape="rect" id="node1" title="Processes a message received on the MQTT topic for setting the value of a DAC." alt="" coords="5,5,211,47"/>
+<area shape="rect" id="node2" href="$class_analog_io_t.html#ae3b8eaee385ed8eb20f145996513461d" title="Enables or disables the periodic reading of the value of an ADC channel." alt="" coords="259,5,473,47"/>
+</map>

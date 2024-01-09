@@ -1,0 +1,8 @@
+<map id="ClimateCard::saveStateToFRAM" name="ClimateCard::saveStateToFRAM">
+<area shape="rect" id="node1" title="Save the state to FRAM memory." alt="" coords="537,70,765,97"/>
+<area shape="rect" id="node2" href="$class_climate_card.html#af3649bf5137e950b16073da4ae266a5b" title="Set the fan speed of the air conditioner." alt="" coords="286,15,479,42"/>
+<area shape="rect" id="node4" href="$class_climate_card.html#ad9ba9dfc23dccc0d9b32ca101257a54d" title="Set the mode of the air conditioner." alt="" coords="299,70,466,97"/>
+<area shape="rect" id="node6" href="$class_climate_card.html#afb279e4b037b42d6056a1a224548511c" title="Set the temperature of the air conditioner." alt="" coords="276,121,489,147"/>
+<area shape="rect" id="node3" href="$class_climate_card.html#a745658695c2ad4aac7be116ddba8bee7" title="Set fan speed by name." alt="" coords="20,5,213,47"/>
+<area shape="rect" id="node5" href="$class_climate_card.html#a2780d9bb76438ddd00fa8beb418583f6" title="Set mode by name." alt="" coords="5,71,228,98"/>
+</map>

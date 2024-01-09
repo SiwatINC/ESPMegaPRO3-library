@@ -1,0 +1,1251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_internal_display" kind="class" language="C++" prot="public">
+    <compoundname>InternalDisplay</compoundname>
+    <basecompoundref refid="class_e_s_p_mega_display" prot="public" virt="non-virtual">ESPMegaDisplay</basecompoundref>
+    <includes refid="_internal_display_8hpp" local="no">InternalDisplay.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_internal_display_1aae887e165837541cd619c32568d4cb6c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t InternalDisplay::bindedInputCardCallbackHandler</definition>
+        <argsstring></argsstring>
+        <name>bindedInputCardCallbackHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="94" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a279f71b8c9166c07352f6f1a455e76e2" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t InternalDisplay::bindedOutputCardCallbackHandler</definition>
+        <argsstring></argsstring>
+        <name>bindedOutputCardCallbackHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="95" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a301a17d0307361517cb2263062e96bc5" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t InternalDisplay::bindedClimateCardCallbackHandler</definition>
+        <argsstring></argsstring>
+        <name>bindedClimateCardCallbackHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="96" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a1cb99d23d10c1b7b2eb5863589d7f831" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t InternalDisplay::bindedClimateCardSensorCallbackHandler</definition>
+        <argsstring></argsstring>
+        <name>bindedClimateCardSensorCallbackHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="97" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1aba57b2df17fce3769980c130fb348052" prot="private" static="no" mutable="no">
+        <type><ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref> *</type>
+        <definition>DigitalInputCard* InternalDisplay::inputCard</definition>
+        <argsstring></argsstring>
+        <name>inputCard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="98" column="26" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a50fa39b12e4467dc7bcd6cb26f708ee5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref> *</type>
+        <definition>DigitalOutputCard* InternalDisplay::outputCard</definition>
+        <argsstring></argsstring>
+        <name>outputCard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="99" column="27" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a41fbf815660957e6c1747867be57ba82" prot="private" static="no" mutable="no">
+        <type><ref refid="class_climate_card" kindref="compound">ClimateCard</ref> *</type>
+        <definition>ClimateCard* InternalDisplay::climateCard</definition>
+        <argsstring></argsstring>
+        <name>climateCard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="100" column="21" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a11138e11636be5147ec06eb0bcf18eec" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t InternalDisplay::pmwAdjustmentPin</definition>
+        <argsstring></argsstring>
+        <name>pmwAdjustmentPin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="125" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1ac8a1590897a009e4bf72b93407370e42" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_mqtt_config" kindref="compound">MqttConfig</ref> *</type>
+        <definition>MqttConfig* InternalDisplay::mqttConfig</definition>
+        <argsstring></argsstring>
+        <name>mqttConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="130" column="20" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a285f2afe5051c422857e83fba80670df" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_network_config" kindref="compound">NetworkConfig</ref> *</type>
+        <definition>NetworkConfig* InternalDisplay::networkConfig</definition>
+        <argsstring></argsstring>
+        <name>networkConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="131" column="23" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a938986598e26b212583c11cd02e5af33" prot="private" static="no" mutable="no">
+        <type><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> *</type>
+        <definition>ESPMegaIoT* InternalDisplay::iot</definition>
+        <argsstring></argsstring>
+        <name>iot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="133" column="20" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_internal_display_1a54deaacf7322217f2440c7040e085985" prot="private" static="no" mutable="no">
+        <type>std::function&lt; <ref refid="structrtctime__t" kindref="compound">rtctime_t</ref>()&gt;</type>
+        <definition>std::function&lt;rtctime_t()&gt; InternalDisplay::getRtcTime</definition>
+        <argsstring></argsstring>
+        <name>getRtcTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="134" column="23" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_internal_display_1adc0903695295bb14468224cb207d0dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InternalDisplay::InternalDisplay</definition>
+        <argsstring>(HardwareSerial *displayAdapter)</argsstring>
+        <name>InternalDisplay</name>
+        <param>
+          <type>HardwareSerial *</type>
+          <declname>displayAdapter</declname>
+        </param>
+        <briefdescription>
+<para>Create a new Internal Display object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>displayAdapter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HardwareSerial object that is connected to the display </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="83" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="456" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::begin</definition>
+        <argsstring>(ESPMegaIoT *iot, std::function&lt; rtctime_t()&gt; getRtcTime)</argsstring>
+        <name>begin</name>
+        <param>
+          <type><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> *</type>
+          <declname>iot</declname>
+        </param>
+        <param>
+          <type>std::function&lt; <ref refid="structrtctime__t" kindref="compound">rtctime_t</ref>()&gt;</type>
+          <declname>getRtcTime</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the Internal Display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>You should not call this function directly, instead use ESPMegaIoT::enableInternalDisplay()</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>getRtcTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A function that returns the current time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="84" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="11" bodyend="29"/>
+        <references refid="class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c" compoundref="_e_s_p_mega_io_t_8cpp" startline="711" endline="714">ESPMegaIoT::getMqttConfig</references>
+        <references refid="class_e_s_p_mega_io_t_1ab0ee8902014f9d08c97f0ffe11f66133" compoundref="_e_s_p_mega_io_t_8cpp" startline="699" endline="702">ESPMegaIoT::getNetworkConfig</references>
+        <references refid="class_e_s_p_mega_display_1a66059d32f493fba86c55e092bbf248bb" compoundref="_e_s_p_mega_display_8cpp" startline="131" endline="136">ESPMegaDisplay::jumpToPage</references>
+        <references refid="class_e_s_p_mega_display_1a435fef88a91a498503250f95d72f30ab" compoundref="_e_s_p_mega_display_8cpp" startline="484" endline="489">ESPMegaDisplay::registerPageChangeCallback</references>
+        <references refid="class_e_s_p_mega_display_1ab4bc0794bffbe4dea647649e1b41c07d" compoundref="_e_s_p_mega_display_8cpp" startline="463" endline="468">ESPMegaDisplay::registerTouchCallback</references>
+        <references refid="class_e_s_p_mega_display_1a073d4f8a7da95b9b4acd963ab20dbca9" compoundref="_e_s_p_mega_display_8cpp" startline="417" endline="424">ESPMegaDisplay::reset</references>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="195" endline="212">ESPMegaPRO::enableInternalDisplay</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1acba3729be902fcde3e30e754aef62330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>The main loop of the Internal Display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>You should not call this function directly, instead use ESPMega::loop() </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="85" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="36" bodyend="55"/>
+        <references refid="class_e_s_p_mega_io_t_1acb0b6d3616f924ae793981f8653b142f" compoundref="_e_s_p_mega_io_t_8cpp" startline="732" endline="738">ESPMegaIoT::networkConnected</references>
+        <references refid="class_e_s_p_mega_display_1ae442963a5ed99212bba46c41f3b7b215" compoundref="_e_s_p_mega_display_8cpp" startline="32" endline="35">ESPMegaDisplay::recieveSerialCommand</references>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="50" endline="67">ESPMegaPRO::loop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a9e314baf652600542d649f5f0dd1cd68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::bindInputCard</definition>
+        <argsstring>(DigitalInputCard *inputCard)</argsstring>
+        <name>bindInputCard</name>
+        <param>
+          <type><ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref> *</type>
+          <declname>inputCard</declname>
+        </param>
+        <briefdescription>
+<para>Set the input card to be be shown on the input page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputCard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The input card object to be shown </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="86" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="471" bodyend="483"/>
+        <references refid="class_digital_input_card_1a0de99f06d2d41a752026486008ea2261" compoundref="_digital_input_card_8cpp" startline="225" endline="229">DigitalInputCard::registerCallback</references>
+        <references refid="class_internal_display_1a9ee706c80f56dd8e5088f282c467b146" compoundref="_internal_display_8cpp" startline="488" endline="494">unbindInputCard</references>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="195" endline="212">ESPMegaPRO::enableInternalDisplay</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::bindOutputCard</definition>
+        <argsstring>(DigitalOutputCard *outputCard)</argsstring>
+        <name>bindOutputCard</name>
+        <param>
+          <type><ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref> *</type>
+          <declname>outputCard</declname>
+        </param>
+        <briefdescription>
+<para>Set the output card to be be shown on the output page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputCard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output card object to be shown </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="87" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="501" bodyend="511"/>
+        <references refid="class_digital_output_card_1a04a881ba7142114c83f41a49129111b6" compoundref="_digital_output_card_8cpp" startline="184" endline="187">DigitalOutputCard::registerChangeCallback</references>
+        <references refid="class_internal_display_1a452703babc7891b7ab937e32155e2310" compoundref="_internal_display_8cpp" startline="516" endline="522">unbindOutputCard</references>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="195" endline="212">ESPMegaPRO::enableInternalDisplay</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1aff819b7e2625b4af2b6fbd44f46c89f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::bindClimateCard</definition>
+        <argsstring>(ClimateCard *climateCard)</argsstring>
+        <name>bindClimateCard</name>
+        <param>
+          <type><ref refid="class_climate_card" kindref="compound">ClimateCard</ref> *</type>
+          <declname>climateCard</declname>
+        </param>
+        <briefdescription>
+<para>Set the climate card to be be shown on the AC page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This assume that your ClimeateCard has the mode and fan speed names in the following order: mode: [off, fan_only, cool] fan_speed: [auto, low, medium, high]</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>climateCard</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The climate card object to be shown </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="88" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="533" bodyend="543"/>
+        <references refid="class_climate_card_1a2b15582430d577bfa8f07983c5ecaf22" compoundref="_climate_card_8cpp" startline="290" endline="294">ClimateCard::registerChangeCallback</references>
+        <references refid="class_internal_display_1af952dea8b4a4d74314d3ed6260fba7c6" compoundref="_internal_display_8cpp" startline="548" endline="554">unbindClimateCard</references>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a9ee706c80f56dd8e5088f282c467b146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::unbindInputCard</definition>
+        <argsstring>()</argsstring>
+        <name>unbindInputCard</name>
+        <briefdescription>
+<para>Unbind the input card from the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="89" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="488" bodyend="494"/>
+        <references refid="class_digital_input_card_1ad6fb5a8020c323520cd4748c9dc01448" compoundref="_digital_input_card_8cpp" startline="268" endline="271">DigitalInputCard::unregisterCallback</references>
+        <referencedby refid="class_internal_display_1a9e314baf652600542d649f5f0dd1cd68" compoundref="_internal_display_8cpp" startline="471" endline="483">bindInputCard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a452703babc7891b7ab937e32155e2310" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::unbindOutputCard</definition>
+        <argsstring>()</argsstring>
+        <name>unbindOutputCard</name>
+        <briefdescription>
+<para>Unbind the output card from the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="90" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="516" bodyend="522"/>
+        <references refid="class_digital_output_card_1ae9601a5033bc723852d11d336cc2de93" compoundref="_digital_output_card_8cpp" startline="194" endline="196">DigitalOutputCard::unregisterChangeCallback</references>
+        <referencedby refid="class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6" compoundref="_internal_display_8cpp" startline="501" endline="511">bindOutputCard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1af952dea8b4a4d74314d3ed6260fba7c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::unbindClimateCard</definition>
+        <argsstring>()</argsstring>
+        <name>unbindClimateCard</name>
+        <briefdescription>
+<para>Unbind the climate card from the display. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="91" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="548" bodyend="554"/>
+        <references refid="class_climate_card_1a15d887d1b211d461edd0835d0104f7c7" compoundref="_climate_card_8cpp" startline="457" endline="460">ClimateCard::unregisterChangeCallback</references>
+        <referencedby refid="class_internal_display_1aff819b7e2625b4af2b6fbd44f46c89f2" compoundref="_internal_display_8cpp" startline="533" endline="543">bindClimateCard</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_internal_display_1a1636114fdfb8ee1cdca9534d3e2a2fe1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::handleInputStateChange</definition>
+        <argsstring>(uint8_t pin, bool state)</argsstring>
+        <name>handleInputStateChange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Update the display in response to a change in the input state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin that changed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new state of the pin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="101" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="63" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a10f3e75b6b3c2065f38d0caa43bbaf7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::handlePwmStateChange</definition>
+        <argsstring>(uint8_t pin, bool state, uint16_t value)</argsstring>
+        <name>handlePwmStateChange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Update the display in response to a change in the PWM state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin that changed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new state of the pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new value of the pin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="102" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="80" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a7a0ef884527a4016361e1896ab886363" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::handlePageChange</definition>
+        <argsstring>(uint8_t page)</argsstring>
+        <name>handlePageChange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>page</declname>
+        </param>
+        <briefdescription>
+<para>Update the display in response to page change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>page</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new page </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="103" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a0d195a6749bdebd37cc792d380a25cec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::setOutputBar</definition>
+        <argsstring>(uint8_t pin, uint16_t value)</argsstring>
+        <name>setOutputBar</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the PWM status output bar value (Fullness of the bar) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the PWM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the PWM (0 - 4095) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="104" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="411" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a46b1fbd2e67d2c7373c57fceee5803f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::setOutputStateColor</definition>
+        <argsstring>(uint8_t pin, bool state)</argsstring>
+        <name>setOutputStateColor</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the PWM status output bar color to match the PWM state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the PWM </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state of the PWM </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="105" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="427" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1aa1dd21253a798e65733439170930c98a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::setInputMarker</definition>
+        <argsstring>(uint8_t pin, bool state)</argsstring>
+        <name>setInputMarker</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set Input Marker to match the input state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin of the input </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state of the input </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="106" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="442" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1abbb8d406a1b39e1bc636e29ff2322f73" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::handleACStateChange</definition>
+        <argsstring>(uint8_t mode, uint8_t fan_speed, uint8_t temperature)</argsstring>
+        <name>handleACStateChange</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>fan_speed</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+<para>Handle the AC state change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function is registered as a callback to the <ref refid="class_climate_card" kindref="compound">ClimateCard</ref></para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new mode </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fan_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new fan speed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new temperature </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="107" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="863" bodyend="872"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a7719f2e7cf259789c0156a177af74906" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::saveNetworkConfig</definition>
+        <argsstring>()</argsstring>
+        <name>saveNetworkConfig</name>
+        <briefdescription>
+<para>Save the network config to the FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="108" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="110" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a47d12c3fd877c845c2756af4384f7487" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::saveMQTTConfig</definition>
+        <argsstring>()</argsstring>
+        <name>saveMQTTConfig</name>
+        <briefdescription>
+<para>Save the MQTT config to the FRAM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="109" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="181" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a5cadb8347683dca01c7c3fb3e4c3a086" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::updateStatusIcons</definition>
+        <argsstring>(bool networkStatus, bool mqttStatus)</argsstring>
+        <name>updateStatusIcons</name>
+        <param>
+          <type>bool</type>
+          <declname>networkStatus</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>mqttStatus</declname>
+        </param>
+        <briefdescription>
+<para>Update the status icons on the Internal Display&apos;s top bar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>networkStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The network status </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mqttStatus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="110" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="226" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a9a2e12da0a102b48d9ff7923f2926c45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::updateClock</definition>
+        <argsstring>()</argsstring>
+        <name>updateClock</name>
+        <briefdescription>
+<para>Update the clock on the Internal Display&apos;s top bar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="111" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="235" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1ad651daa22a79c2230d46086846fa2893" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshPage</definition>
+        <argsstring>()</argsstring>
+        <name>refreshPage</name>
+        <briefdescription>
+<para>Send data to display element on the current page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="112" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="245" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a74e7997483b1b22eceae18a6ce4e7bb2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshPage</definition>
+        <argsstring>(uint8_t page)</argsstring>
+        <name>refreshPage</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>page</declname>
+        </param>
+        <briefdescription>
+<para>Send data to display element on the specified page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The current page must be the specified page</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>page</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The page to refresh </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="113" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="257" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a6c94691c9a6f6d9896b233b9b475c2d9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshDashboard</definition>
+        <argsstring>()</argsstring>
+        <name>refreshDashboard</name>
+        <briefdescription>
+<para>Send data to display element on the dashboard page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="114" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="305" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a10a64112a2a2252ce099778f1e740d4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshInput</definition>
+        <argsstring>()</argsstring>
+        <name>refreshInput</name>
+        <briefdescription>
+<para>Send data to display element on the input page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="115" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="329" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a689326d7770c22247151d6c20609d22a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshOutput</definition>
+        <argsstring>()</argsstring>
+        <name>refreshOutput</name>
+        <briefdescription>
+<para>Send data to display element on the output page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="116" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="340" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1af9496149594c09356810fc32be865dc4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshAC</definition>
+        <argsstring>()</argsstring>
+        <name>refreshAC</name>
+        <briefdescription>
+<para>Send data to display element on the AC page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="117" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="352" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a4dd9d101dd57fa0dfa803c4badba26c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshPWMAdjustment</definition>
+        <argsstring>()</argsstring>
+        <name>refreshPWMAdjustment</name>
+        <briefdescription>
+<para>Send data to display element on the PWM Adjustment page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="118" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="559" bodyend="572"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a542223df4079ccc532432fa79a25f2fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshPWMAdjustmentSlider</definition>
+        <argsstring>()</argsstring>
+        <name>refreshPWMAdjustmentSlider</name>
+        <briefdescription>
+<para>Send the PWM value to the display on the PWM Adjustment page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="119" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="589" bodyend="595"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1abf8fd53d3c23dff0f4a055ae522a5177" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshPWMAdjustmentState</definition>
+        <argsstring>()</argsstring>
+        <name>refreshPWMAdjustmentState</name>
+        <briefdescription>
+<para>Send the PWM state to the display on the PWM Adjustment page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="120" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="600" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1aec4d7a92a59743626b8bb2f00173edda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshPWMAdjustmentId</definition>
+        <argsstring>()</argsstring>
+        <name>refreshPWMAdjustmentId</name>
+        <briefdescription>
+<para>Send the PWM pin id to the display on the PWM Adjustment page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="121" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="577" bodyend="584"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a0d652fc0346624120dca433ab42e8e51" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshNetworkConfig</definition>
+        <argsstring>()</argsstring>
+        <name>refreshNetworkConfig</name>
+        <briefdescription>
+<para>Send data to display element on the network config page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="122" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="756" bodyend="790"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1afaa4940f1c6497dd824a705627fb01b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::refreshMQTTConfig</definition>
+        <argsstring>()</argsstring>
+        <name>refreshMQTTConfig</name>
+        <briefdescription>
+<para>Send data to display element on the mqtt config page. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="123" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="795" bodyend="833"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a63c4250ee9b909dbe459f4364d152747" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::sendIpToDisplay</definition>
+        <argsstring>(IPAddress ip)</argsstring>
+        <name>sendIpToDisplay</name>
+        <param>
+          <type>IPAddress</type>
+          <declname>ip</declname>
+        </param>
+        <briefdescription>
+<para>Write an ip address to the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function only writes the ip address to the display, you need to send the prefix and suffix yourself</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ip address to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="124" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="842" bodyend="852"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1af08a5fa7d078534a4a1b45879af6aedb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::handleTouch</definition>
+        <argsstring>(uint8_t page, uint8_t component, uint8_t type)</argsstring>
+        <name>handleTouch</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>page</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Handle the touch event on the display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>page</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The page that the touch event occured </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component that the touch event occured </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the touch event </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="127" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="616" bodyend="638"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a66cb53b07b41c71276992f9b6b273105" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::handlePWMAdjustmentTouch</definition>
+        <argsstring>(uint8_t component, uint8_t type)</argsstring>
+        <name>handlePWMAdjustmentTouch</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>component</declname>
+          <defname>type</defname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>type</declname>
+          <defname>component</defname>
+        </param>
+        <briefdescription>
+<para>Handle the touch event on the PWM Adjustment page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the touch event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component that the touch event occured </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="128" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="715" bodyend="751"/>
+      </memberdef>
+      <memberdef kind="function" id="class_internal_display_1a74720e4e7222c5b69d6eb88644d47654" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalDisplay::handleACTouch</definition>
+        <argsstring>(uint8_t component, uint8_t type)</argsstring>
+        <name>handleACTouch</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>component</declname>
+          <defname>type</defname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>type</declname>
+          <defname>component</defname>
+        </param>
+        <briefdescription>
+<para>Handle the touch event on the AC page. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the touch event </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>component</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The component that the touch event occured </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="129" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.cpp" bodystart="646" bodyend="707"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The internal display of the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is the display that is installed on some <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> Chassis. It is a 3.5" TFT LCD with a resistive touch screen.</para>
+<para>You can use this display to monitor the status of the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> and also to control the various components of the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref>.</para>
+<para>If you are using a custom display, you need to create a class that inherits from <ref refid="class_e_s_p_mega_display" kindref="compound">ESPMegaDisplay</ref> and implement the methods in that class, you may refer to this class for reference.</para>
+<para><simplesect kind="note"><para>This class is automatically instantiated by the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> and can be accessed via the <computeroutput>display</computeroutput> variable. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ESPMegaDisplay</label>
+        <link refid="class_e_s_p_mega_display"/>
+      </node>
+      <node id="1">
+        <label>InternalDisplay</label>
+        <link refid="class_internal_display"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ESPMegaDisplay</label>
+        <link refid="class_e_s_p_mega_display"/>
+      </node>
+      <node id="1">
+        <label>InternalDisplay</label>
+        <link refid="class_internal_display"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" line="81" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp" bodystart="81" bodyend="135"/>
+    <listofallmembers>
+      <member refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>begin</name></member>
+      <member refid="class_e_s_p_mega_display_1adfd6642f84055724abf6549aa4ed463a" prot="public" virt="non-virtual" ambiguityscope="ESPMegaDisplay::"><scope>InternalDisplay</scope><name>begin</name></member>
+      <member refid="class_internal_display_1aff819b7e2625b4af2b6fbd44f46c89f2" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>bindClimateCard</name></member>
+      <member refid="class_internal_display_1a301a17d0307361517cb2263062e96bc5" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>bindedClimateCardCallbackHandler</name></member>
+      <member refid="class_internal_display_1a1cb99d23d10c1b7b2eb5863589d7f831" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>bindedClimateCardSensorCallbackHandler</name></member>
+      <member refid="class_internal_display_1aae887e165837541cd619c32568d4cb6c" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>bindedInputCardCallbackHandler</name></member>
+      <member refid="class_internal_display_1a279f71b8c9166c07352f6f1a455e76e2" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>bindedOutputCardCallbackHandler</name></member>
+      <member refid="class_internal_display_1a9e314baf652600542d649f5f0dd1cd68" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>bindInputCard</name></member>
+      <member refid="class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>bindOutputCard</name></member>
+      <member refid="class_internal_display_1a41fbf815660957e6c1747867be57ba82" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>climateCard</name></member>
+      <member refid="class_e_s_p_mega_display_1aba3f1486492ec4c48937c62234717b8b" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>currentPage</name></member>
+      <member refid="class_e_s_p_mega_display_1a6ccab68e98c5dc32d4d3bc4ca10d81bc" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>displayAdapter</name></member>
+      <member refid="class_e_s_p_mega_display_1a4360083078b2ece774a0ec1c400aa72a" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>ESPMegaDisplay</name></member>
+      <member refid="class_e_s_p_mega_display_1a72fe852174fb83d438cbc7ea70a9ec6f" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>getNumber</name></member>
+      <member refid="class_internal_display_1a54deaacf7322217f2440c7040e085985" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>getRtcTime</name></member>
+      <member refid="class_e_s_p_mega_display_1a69bf78095709e4d36d7ceef987909dfe" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>getString</name></member>
+      <member refid="class_e_s_p_mega_display_1aa9ee805cf25d3f70b98ff650da742e9a" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>getStringToBuffer</name></member>
+      <member refid="class_internal_display_1abbb8d406a1b39e1bc636e29ff2322f73" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>handleACStateChange</name></member>
+      <member refid="class_internal_display_1a74720e4e7222c5b69d6eb88644d47654" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>handleACTouch</name></member>
+      <member refid="class_internal_display_1a1636114fdfb8ee1cdca9534d3e2a2fe1" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>handleInputStateChange</name></member>
+      <member refid="class_internal_display_1a7a0ef884527a4016361e1896ab886363" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>handlePageChange</name></member>
+      <member refid="class_internal_display_1a66cb53b07b41c71276992f9b6b273105" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>handlePWMAdjustmentTouch</name></member>
+      <member refid="class_internal_display_1a10f3e75b6b3c2065f38d0caa43bbaf7d" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>handlePwmStateChange</name></member>
+      <member refid="class_internal_display_1af08a5fa7d078534a4a1b45879af6aedb" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>handleTouch</name></member>
+      <member refid="class_internal_display_1aba57b2df17fce3769980c130fb348052" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>inputCard</name></member>
+      <member refid="class_internal_display_1adc0903695295bb14468224cb207d0dc4" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>InternalDisplay</name></member>
+      <member refid="class_internal_display_1a938986598e26b212583c11cd02e5af33" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>iot</name></member>
+      <member refid="class_e_s_p_mega_display_1a66059d32f493fba86c55e092bbf248bb" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>jumpToPage</name></member>
+      <member refid="class_internal_display_1acba3729be902fcde3e30e754aef62330" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>loop</name></member>
+      <member refid="class_internal_display_1ac8a1590897a009e4bf72b93407370e42" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>mqttConfig</name></member>
+      <member refid="class_internal_display_1a285f2afe5051c422857e83fba80670df" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>networkConfig</name></member>
+      <member refid="class_internal_display_1a50fa39b12e4467dc7bcd6cb26f708ee5" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>outputCard</name></member>
+      <member refid="class_e_s_p_mega_display_1a56fd8793813104acdd2af0ab0968b198" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>page_change_callbacks</name></member>
+      <member refid="class_e_s_p_mega_display_1a6f0c3ec00e8a7d52cf9572ebe54ef367" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>payloadIsValid</name></member>
+      <member refid="class_internal_display_1a11138e11636be5147ec06eb0bcf18eec" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>pmwAdjustmentPin</name></member>
+      <member refid="class_e_s_p_mega_display_1a50fbc6fa94f8e88ba1d008543a2c7535" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>processPageReportPayload</name></member>
+      <member refid="class_e_s_p_mega_display_1a65da2ffe1baa4d9e1e886467b2908932" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>processSerialCommand</name></member>
+      <member refid="class_e_s_p_mega_display_1af7ca531b96d9a70d75b60c7acd5e0c70" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>processTouchPayload</name></member>
+      <member refid="class_e_s_p_mega_display_1ae442963a5ed99212bba46c41f3b7b215" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>recieveSerialCommand</name></member>
+      <member refid="class_e_s_p_mega_display_1ada566f9769dd3c06391e5845dc7adc92" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>recieveSerialCommand</name></member>
+      <member refid="class_internal_display_1af9496149594c09356810fc32be865dc4" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshAC</name></member>
+      <member refid="class_internal_display_1a6c94691c9a6f6d9896b233b9b475c2d9" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshDashboard</name></member>
+      <member refid="class_internal_display_1a10a64112a2a2252ce099778f1e740d4e" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshInput</name></member>
+      <member refid="class_internal_display_1afaa4940f1c6497dd824a705627fb01b3" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshMQTTConfig</name></member>
+      <member refid="class_internal_display_1a0d652fc0346624120dca433ab42e8e51" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshNetworkConfig</name></member>
+      <member refid="class_internal_display_1a689326d7770c22247151d6c20609d22a" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshOutput</name></member>
+      <member refid="class_internal_display_1ad651daa22a79c2230d46086846fa2893" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshPage</name></member>
+      <member refid="class_internal_display_1a74e7997483b1b22eceae18a6ce4e7bb2" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshPage</name></member>
+      <member refid="class_internal_display_1a4dd9d101dd57fa0dfa803c4badba26c4" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshPWMAdjustment</name></member>
+      <member refid="class_internal_display_1aec4d7a92a59743626b8bb2f00173edda" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshPWMAdjustmentId</name></member>
+      <member refid="class_internal_display_1a542223df4079ccc532432fa79a25f2fc" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshPWMAdjustmentSlider</name></member>
+      <member refid="class_internal_display_1abf8fd53d3c23dff0f4a055ae522a5177" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>refreshPWMAdjustmentState</name></member>
+      <member refid="class_e_s_p_mega_display_1a435fef88a91a498503250f95d72f30ab" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>registerPageChangeCallback</name></member>
+      <member refid="class_e_s_p_mega_display_1ab4bc0794bffbe4dea647649e1b41c07d" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>registerTouchCallback</name></member>
+      <member refid="class_e_s_p_mega_display_1a073d4f8a7da95b9b4acd963ab20dbca9" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>reset</name></member>
+      <member refid="class_e_s_p_mega_display_1a334d707f1d7289255773076eaac2bb14" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>rx_buffer</name></member>
+      <member refid="class_e_s_p_mega_display_1ad48219cdaf6da8ce2228f801626a5687" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>rx_buffer_index</name></member>
+      <member refid="class_internal_display_1a47d12c3fd877c845c2756af4384f7487" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>saveMQTTConfig</name></member>
+      <member refid="class_internal_display_1a7719f2e7cf259789c0156a177af74906" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>saveNetworkConfig</name></member>
+      <member refid="class_e_s_p_mega_display_1af56f2fad9fa8c4a75ef52f967953d5da" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>sendCommand</name></member>
+      <member refid="class_internal_display_1a63c4250ee9b909dbe459f4364d152747" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>sendIpToDisplay</name></member>
+      <member refid="class_e_s_p_mega_display_1a8bfb30429f6e11f4719480bfc6f83d72" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>sendStopBytes</name></member>
+      <member refid="class_e_s_p_mega_display_1a22cc6197c8f23767525f82157f6772fa" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>setBrightness</name></member>
+      <member refid="class_internal_display_1aa1dd21253a798e65733439170930c98a" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>setInputMarker</name></member>
+      <member refid="class_e_s_p_mega_display_1a76be0c9c5099711323d30ee429a8133a" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>setNumber</name></member>
+      <member refid="class_internal_display_1a0d195a6749bdebd37cc792d380a25cec" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>setOutputBar</name></member>
+      <member refid="class_internal_display_1a46b1fbd2e67d2c7373c57fceee5803f9" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>setOutputStateColor</name></member>
+      <member refid="class_e_s_p_mega_display_1a5374292e7c2a0eec289de7c2130e0ac9" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>setString</name></member>
+      <member refid="class_e_s_p_mega_display_1adb6d1860150abc6b5ef20ed0e61b2ba2" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>setVolume</name></member>
+      <member refid="class_e_s_p_mega_display_1ab2e0e290d9ba1b8d2aaea4924a6c0295" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>touch_callbacks</name></member>
+      <member refid="class_e_s_p_mega_display_1a2e9835362d046e53c5717ee5c247ea36" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>tx_buffer</name></member>
+      <member refid="class_internal_display_1af952dea8b4a4d74314d3ed6260fba7c6" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>unbindClimateCard</name></member>
+      <member refid="class_internal_display_1a9ee706c80f56dd8e5088f282c467b146" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>unbindInputCard</name></member>
+      <member refid="class_internal_display_1a452703babc7891b7ab937e32155e2310" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>unbindOutputCard</name></member>
+      <member refid="class_e_s_p_mega_display_1aa129bc1acd35b13fa2777a14ebee61b7" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>unregisterPageChangeCallback</name></member>
+      <member refid="class_e_s_p_mega_display_1a0060a66f442a2fc13b16e7294b0e2faf" prot="public" virt="non-virtual"><scope>InternalDisplay</scope><name>unregisterTouchCallback</name></member>
+      <member refid="class_internal_display_1a9a2e12da0a102b48d9ff7923f2926c45" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>updateClock</name></member>
+      <member refid="class_internal_display_1a5cadb8347683dca01c7c3fb3e4c3a086" prot="private" virt="non-virtual"><scope>InternalDisplay</scope><name>updateStatusIcons</name></member>
+      <member refid="class_e_s_p_mega_display_1a152ac85f3b883e5866ad303b8c53dc9c" prot="protected" virt="non-virtual"><scope>InternalDisplay</scope><name>waitForValidPayload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

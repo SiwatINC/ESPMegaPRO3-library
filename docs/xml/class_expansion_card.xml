@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_expansion_card" kind="class" language="C++" prot="public">
+    <compoundname>ExpansionCard</compoundname>
+    <derivedcompoundref refid="class_analog_card" prot="public" virt="non-virtual">AnalogCard</derivedcompoundref>
+    <derivedcompoundref refid="class_climate_card" prot="public" virt="non-virtual">ClimateCard</derivedcompoundref>
+    <derivedcompoundref refid="class_digital_input_card" prot="public" virt="non-virtual">DigitalInputCard</derivedcompoundref>
+    <derivedcompoundref refid="class_digital_output_card" prot="public" virt="non-virtual">DigitalOutputCard</derivedcompoundref>
+    <includes refid="_expansion_card_8hpp" local="no">ExpansionCard.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_expansion_card_1a3b5afabfdb7183b37b78be1e20e4cde6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ExpansionCard::ExpansionCard</definition>
+        <argsstring>()</argsstring>
+        <name>ExpansionCard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp" line="18" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_expansion_card_1aecd52cc9b31b642f2cd78f01654005de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool ExpansionCard::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <reimplementedby refid="class_analog_card_1a058b9fca0655b1d7d169527a37fe4c34">begin</reimplementedby>
+        <reimplementedby refid="class_climate_card_1aa0649398f58b7093250875c1202711fc">begin</reimplementedby>
+        <reimplementedby refid="class_digital_input_card_1a7b6b51455a010ff0c53fc04ac8091d0e">begin</reimplementedby>
+        <reimplementedby refid="class_digital_output_card_1a4698ea2f13dba8e1cddc29efd8d11743">begin</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp" line="19" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_expansion_card_1a3b3364d9de40d039a3dbfe9141dea0a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void ExpansionCard::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <reimplementedby refid="class_analog_card_1a88d1bd2c7028cfddcdf1392a6bd57c2a">loop</reimplementedby>
+        <reimplementedby refid="class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8">loop</reimplementedby>
+        <reimplementedby refid="class_digital_input_card_1a0ab3d3df306ecce30f19a252f5a25a6d">loop</reimplementedby>
+        <reimplementedby refid="class_digital_output_card_1aeae842b0338e6788b99fa623fffcbe89">loop</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp" line="21" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_expansion_card_1a83371d97f1deba4e419093b193aea99c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t ExpansionCard::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplementedby refid="class_analog_card_1ab6d7761df1910a16c1531fc6c0c07176">getType</reimplementedby>
+        <reimplementedby refid="class_climate_card_1a651b1cbd6da6281cfba68e5852e9a597">getType</reimplementedby>
+        <reimplementedby refid="class_digital_input_card_1aa782d6ffc13a686955811adf36b618d4">getType</reimplementedby>
+        <reimplementedby refid="class_digital_output_card_1a9ce9c2b88a21f786c6cd76eb8468e13c">getType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp" line="23" column="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The base class for all expansion cards. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>In order to create a new expansion card, you should create a new class that inherits from this class. Your class should implement the following functions:<itemizedlist>
+<listitem><para>begin() : Initialize the card</para>
+</listitem><listitem><para>loop() : A function that is called in the main loop</para>
+</listitem><listitem><para>getType() : Get the type of the card, The type should be a unique number between 0 and 255</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This class is abstract and should not be instantiated directly. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AnalogCard</label>
+        <link refid="class_analog_card"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DigitalInputCard</label>
+        <link refid="class_digital_input_card"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ClimateCard</label>
+        <link refid="class_climate_card"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DigitalOutputCard</label>
+        <link refid="class_digital_output_card"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp" line="15" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ExpansionCard.hpp" bodystart="15" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_expansion_card_1aecd52cc9b31b642f2cd78f01654005de" prot="public" virt="virtual"><scope>ExpansionCard</scope><name>begin</name></member>
+      <member refid="class_expansion_card_1a3b5afabfdb7183b37b78be1e20e4cde6" prot="public" virt="non-virtual"><scope>ExpansionCard</scope><name>ExpansionCard</name></member>
+      <member refid="class_expansion_card_1a83371d97f1deba4e419093b193aea99c" prot="public" virt="virtual"><scope>ExpansionCard</scope><name>getType</name></member>
+      <member refid="class_expansion_card_1a3b3364d9de40d039a3dbfe9141dea0a9" prot="public" virt="virtual"><scope>ExpansionCard</scope><name>loop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>ESPMega PRO R3</title>
+    </info>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="struct_air_conditioner.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_analog_card.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_analog_io_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_climate_card.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_climate_card_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_climate_io_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_digital_input_card.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_digital_input_io_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_digital_output_card.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_digital_output_io_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_e_s_p_mega_display.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_e_s_p_mega_io_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_e_s_p_mega_p_r_o.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_e_s_p_mega_t_c_p.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_e_s_p_mega_web_server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_expansion_card.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_internal_display.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_io_t_component.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_mqtt_config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_network_config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structrtctime__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_analog_card_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_analog_io_t_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_climate_card_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_e_s_p_mega_web_server_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

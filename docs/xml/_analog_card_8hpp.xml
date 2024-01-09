@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_analog_card_8hpp" kind="file" language="C++">
+    <compoundname>AnalogCard.hpp</compoundname>
+    <includes refid="_expansion_card_8hpp" local="no">ExpansionCard.hpp</includes>
+    <includes local="no">Adafruit_ADS1X15.h</includes>
+    <includes local="no">MCP4725.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includedby refid="_analog_card_8cpp" local="no">/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp</includedby>
+    <includedby refid="_analog_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_pro_o_s_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>Adafruit_ADS1X15.h</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="5">
+        <label>MCP4725.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp</label>
+        <link refid="_analog_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+      </node>
+      <node id="2">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogCard.cpp</label>
+        <link refid="_analog_card_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogIoT.cpp</label>
+        <link refid="_analog_io_t_8cpp"/>
+      </node>
+      <node id="8">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</label>
+        <link refid="_e_s_p_mega_web_server_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogIoT.hpp</label>
+        <link refid="_analog_io_t_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp</label>
+        <link refid="_analog_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_analog_card" prot="public">AnalogCard</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_analog_card_8hpp_1a24104011936b1ce4cbb2ea1310b99533" prot="public" static="no">
+        <name>CARD_TYPE_ANALOG</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="9" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_analog_card_8hpp_1a51f292f63dbdff6510aa3b27d83bbb4e" prot="public" static="no">
+        <name>ANALOG_INPUT_BANK_A_ADDRESS</name>
+        <initializer>0x48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="12" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_analog_card_8hpp_1a4d34262227a8ee6766d850c537167f32" prot="public" static="no">
+        <name>ANALOG_INPUT_BANK_B_ADDRESS</name>
+        <initializer>0x49</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="13" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_analog_card_8hpp_1a37187c0af909275004b98eaeaec36ffe" prot="public" static="no">
+        <name>DAC0_ADDRESS</name>
+        <initializer>0x60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="14" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_analog_card_8hpp_1abcfff3c528d4734f3c6e8bcaaa0fc1ad" prot="public" static="no">
+        <name>DAC1_ADDRESS</name>
+        <initializer>0x61</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="15" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_analog_card_8hpp_1ac59257888858f1ce1a081962d333df8d" prot="public" static="no">
+        <name>DAC2_ADDRESS</name>
+        <initializer>0x62</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="16" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_analog_card_8hpp_1ab4eb5875ccf77974f0c53371ab47341c" prot="public" static="no">
+        <name>DAC3_ADDRESS</name>
+        <initializer>0x63</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" line="17" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ExpansionCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_ADS1X15.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;MCP4725.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Analog<sp/>Card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CARD_TYPE_ANALOG<sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Analog<sp/>Card<sp/>FRAM<sp/>Address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANALOG_INPUT_BANK_A_ADDRESS<sp/>0x48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ANALOG_INPUT_BANK_B_ADDRESS<sp/>0x49</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC0_ADDRESS<sp/>0x60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC1_ADDRESS<sp/>0x61</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC2_ADDRESS<sp/>0x62</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DAC3_ADDRESS<sp/>0x63</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_analog_card" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_analog_card" kindref="compound">AnalogCard</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_analog_card_1ab01a99dc92b2d5431f5e438c2e4bf7f5" kindref="member">AnalogCard</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_analog_card_1a7f0a07632ef1db4bfaf64593cbccce66" kindref="member">dacWrite</ref>(uint8_t<sp/>pin,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_analog_card_1a121c84a174bcc6756e82538cfe19477a" kindref="member">sendDataToDAC</ref>(uint8_t<sp/>pin,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_analog_card_1a57f3af0fdcbc6ccb651007540c6829c4" kindref="member">analogRead</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_analog_card_1a058b9fca0655b1d7d169527a37fe4c34" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_analog_card_1a88d1bd2c7028cfddcdf1392a6bd57c2a" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_analog_card_1aa10a9eb6b4c1f1b7660ea5183a0f618e" kindref="member">getDACState</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="class_analog_card_1a7793911eaabacee0d40dac626e39279a" kindref="member">getDACValue</ref>(uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_analog_card_1a445ff04dfcd2f49bb070bcc6e17a13f0" kindref="member">setDACState</ref>(uint8_t<sp/>pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_analog_card_1a4703be8e25568617d28915d14e4df71b" kindref="member">setDACValue</ref>(uint8_t<sp/>pin,<sp/>uint16_t<sp/>value);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_analog_card_1a748b2025b389bef19fd0249b1b7b0828" kindref="member">registerDACChangeCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(uint8_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/>uint16_t)&gt;<sp/>callback);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_analog_card_1a38740886df77565a5f56ef421c22e281" kindref="member">unregisterDACChangeCallback</ref>(uint8_t<sp/>handler);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_analog_card_1ab6d7761df1910a16c1531fc6c0c07176" kindref="member">getType</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>handler_count;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Map<sp/>of<sp/>handler<sp/>IDs<sp/>to<sp/>callback<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;uint8_t,<sp/>std::function&lt;void(uint8_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/>uint16_t)&gt;&gt;<sp/>dac_change_callbacks;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dac_state[4];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>dac_value[4];</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCP4725<sp/>dac0;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCP4725<sp/>dac1;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCP4725<sp/>dac2;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MCP4725<sp/>dac3;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adafruit_ADS1115<sp/>analogInputBankA;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adafruit_ADS1115<sp/>analogInputBankB;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/AnalogCard.hpp"/>
+  </compounddef>
+</doxygen>

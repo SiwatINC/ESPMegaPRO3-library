@@ -1,0 +1,4 @@
+<map id="ESPMegaPRO::installCard" name="ESPMegaPRO::installCard">
+<area shape="rect" id="node1" title="Installs an expansion card to the specified slot." alt="" coords="207,5,393,32"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_p_r_o.html#a582f6a9d00c0313e772166bd6c52d06d" title="Initializes the ESPMegaPRO object." alt="" coords="5,5,159,32"/>
+</map>

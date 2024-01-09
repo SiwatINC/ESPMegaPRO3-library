@@ -1,0 +1,14 @@
+.TH "md__home_siwat__e_s_p_mega_p_r_o3_library__r_e_a_d_m_e" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__home_siwat__e_s_p_mega_p_r_o3_library__r_e_a_d_m_e \- PlatformIO library for ESPMega PRO (R3) 
+Example ``` #include 'ESPMegaPRO\&.h'
+.PP
+void setup() { ESPMega_begin(); // Must be called first in setup
+.PP
+ESPMega_analogWrite(5,2048) // Write PWM value of 2048 to pin 5 }
+.PP
+void loop() { ESPMega_loop(); //Must be called in loop
+.PP
+bool pin9 = ESPMega_digitalRead(9) // Read Digital Input Pin 9 ESPMega_digitalWrite(9,pin9) // Mirror Input Pin 9 to Output Pin 9 } 

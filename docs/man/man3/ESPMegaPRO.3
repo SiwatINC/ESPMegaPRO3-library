@@ -1,0 +1,306 @@
+.TH "ESPMegaPRO" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ESPMegaPRO \- The \fBESPMegaPRO\fP class is the main class for the \fBESPMegaPRO\fP library\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ESPMegaProOS\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBESPMegaPRO\fP ()"
+.br
+.RI "Create a new \fBESPMegaPRO\fP object\&. "
+.ti -1c
+.RI "bool \fBbegin\fP ()"
+.br
+.RI "Initializes the \fBESPMegaPRO\fP object\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "The main loop for the \fBESPMegaPRO\fP object\&. "
+.ti -1c
+.RI "bool \fBinstallCard\fP (uint8_t slot, \fBExpansionCard\fP *card)"
+.br
+.RI "Installs an expansion card to the specified slot\&. "
+.ti -1c
+.RI "bool \fBupdateTimeFromNTP\fP ()"
+.br
+.RI "Updates the internal RTC from NTP\&. "
+.ti -1c
+.RI "void \fBenableIotModule\fP ()"
+.br
+.RI "Enables, Instanitates, and Initializes the \fBESPMegaIoT\fP module\&. "
+.ti -1c
+.RI "void \fBenableInternalDisplay\fP (HardwareSerial *serial)"
+.br
+.RI "Enables, Instanitates, and Initializes the internal display\&. "
+.ti -1c
+.RI "void \fBenableWebServer\fP (uint16_t port)"
+.br
+.RI "Enables the internal web server\&. "
+.ti -1c
+.RI "\fBrtctime_t\fP \fBgetTime\fP ()"
+.br
+.RI "Gets the current time from the internal RTC\&. "
+.ti -1c
+.RI "void \fBdumpFRAMtoSerial\fP (uint16_t start, uint16_t end)"
+.br
+.RI "Dumps the contents of the internal FRAM to the serial port\&. "
+.ti -1c
+.RI "void \fBdumpFRAMtoSerialASCII\fP (uint16_t start, uint16_t end)"
+.br
+.RI "Dumps the contents of the internal FRAM to the serial port in ASCII\&. "
+.ti -1c
+.RI "void \fBsetTime\fP (int hours, int minutes, int seconds, int day, int month, int year)"
+.br
+.RI "Sets the current time of the internal RTC\&. "
+.ti -1c
+.RI "\fBExpansionCard\fP * \fBgetCard\fP (uint8_t slot)"
+.br
+.RI "Gets the expansion card installed at the specified slot\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "FRAM \fBfram\fP"
+.br
+.ti -1c
+.RI "\fBDigitalInputCard\fP \fBinputs\fP = \fBDigitalInputCard\fP(INPUT_BANK_A_ADDRESS, INPUT_BANK_B_ADDRESS)"
+.br
+.ti -1c
+.RI "\fBDigitalOutputCard\fP \fBoutputs\fP = \fBDigitalOutputCard\fP(PWM_BANK_ADDRESS)"
+.br
+.ti -1c
+.RI "\fBInternalDisplay\fP * \fBdisplay\fP"
+.br
+.ti -1c
+.RI "\fBESPMegaIoT\fP * \fBiot\fP"
+.br
+.ti -1c
+.RI "\fBESPMegaWebServer\fP * \fBwebServer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBESPMegaPRO\fP class is the main class for the \fBESPMegaPRO\fP library\&. 
+
+This class provides functions for managing the \fBESPMegaPRO\fP board, such as installing expansion cards, managing the internal RTC, and managing the internal FRAM\&. This class also provides functions for managing the \fBESPMegaIoT\fP module and the internal display\&.
+.PP
+This class provide a Object Oriented Programming (OOP) interface for the \fBESPMegaPRO\fP board\&. If you are looking for a more simple and a more procedural interface, please use the \fBESPMegaPRO\fP class in ESPMegaPRO\&.hpp\&. But note that the \fBESPMegaPRO\fP class only interfaces with the built-in Digital Input and Digital Output cards and other onboard components\&. It does not provide an interface for expansion cards, the \fBESPMegaIoT\fP module, and the internal display\&.
+.PP
+\fBWarning\fP
+.RS 4
+Only one \fBESPMegaPRO\fP object can be created, creating more than one will result in undefined behavior\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ESPMegaPRO::ESPMegaPRO ()"
+
+.PP
+Create a new \fBESPMegaPRO\fP object\&. 
+.PP
+\fBWarning\fP
+.RS 4
+Only one \fBESPMegaPRO\fP object can be created, creating more than one will result in undefined behavior 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ESPMegaPRO::begin ()"
+
+.PP
+Initializes the \fBESPMegaPRO\fP object\&. This function initializes the \fBESPMegaPRO\fP object and all of its components\&. It also initializes the built-in Digital Input and Digital Output cards\&.
+.PP
+\fBReturns\fP
+.RS 4
+True if the initialization is successful, false otherwise\&. 
+.RE
+.PP
+
+.SS "void ESPMegaPRO::dumpFRAMtoSerial (uint16_t start, uint16_t end)"
+
+.PP
+Dumps the contents of the internal FRAM to the serial port\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP The starting address\&. 
+.br
+\fIend\fP The ending address\&. 
+.RE
+.PP
+
+.SS "void ESPMegaPRO::dumpFRAMtoSerialASCII (uint16_t start, uint16_t end)"
+
+.PP
+Dumps the contents of the internal FRAM to the serial port in ASCII\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIstart\fP The starting address\&. 
+.br
+\fIend\fP The ending address\&. 
+.RE
+.PP
+
+.SS "void ESPMegaPRO::enableInternalDisplay (HardwareSerial * serial)"
+
+.PP
+Enables, Instanitates, and Initializes the internal display\&. 
+.PP
+\fBNote\fP
+.RS 4
+&Serial is used for the internal display on \fBESPMegaPRO\fP R3\&. 
+.PP
+This function can only be called if the \fBESPMegaIoT\fP module is enabled\&. 
+.PP
+This function must be called before using the internal display\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIserial\fP Pointer to the HardwareSerial object to use for the internal display (Serial for \fBESPMegaPRO\fP R3)\&. 
+.RE
+.PP
+
+.SS "void ESPMegaPRO::enableIotModule ()"
+
+.PP
+Enables, Instanitates, and Initializes the \fBESPMegaIoT\fP module\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function must be called before using the \fBESPMegaIoT\fP module\&. 
+.RE
+.PP
+
+.SS "void ESPMegaPRO::enableWebServer (uint16_t port)"
+
+.PP
+Enables the internal web server\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function can only be called if the \fBESPMegaIoT\fP module is enabled\&. 
+.PP
+This function can only be called once\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIport\fP The port to use for the web server\&. 
+.RE
+.PP
+
+.SS "\fBExpansionCard\fP * ESPMegaPRO::getCard (uint8_t slot)"
+
+.PP
+Gets the expansion card installed at the specified slot\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIslot\fP The slot to get the card from\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the \fBExpansionCard\fP object, or nullptr if no card is installed at the specified slot\&. 
+.RE
+.PP
+
+.SS "\fBrtctime_t\fP ESPMegaPRO::getTime ()"
+
+.PP
+Gets the current time from the internal RTC\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The current time as a \fBrtctime_t\fP struct\&. 
+.RE
+.PP
+
+.SS "bool ESPMegaPRO::installCard (uint8_t slot, \fBExpansionCard\fP * card)"
+
+.PP
+Installs an expansion card to the specified slot\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function automatically initializes the expansion card\&.
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIslot\fP The slot to install the card to\&. 
+.br
+\fIcard\fP Pointer to the \fBExpansionCard\fP object\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the installation is successful, false otherwise\&. 
+.RE
+.PP
+
+.SS "void ESPMegaPRO::loop ()"
+
+.PP
+The main loop for the \fBESPMegaPRO\fP object\&. 
+.PP
+\fBNote\fP
+.RS 4
+This function must be called in the main loop of the program\&.
+.RE
+.PP
+It will call the \fBloop()\fP function of all installed expansion cards, the \fBESPMegaIoT\fP module, and the internal display\&. 
+.SS "void ESPMegaPRO::setTime (int hours, int minutes, int seconds, int day, int month, int year)"
+
+.PP
+Sets the current time of the internal RTC\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhours\fP The hours\&. 
+.br
+\fIminutes\fP The minutes\&. 
+.br
+\fIseconds\fP The seconds\&. 
+.br
+\fIday\fP The day\&. 
+.br
+\fImonth\fP The month\&. 
+.br
+\fIyear\fP The year\&. 
+.RE
+.PP
+
+.SS "bool ESPMegaPRO::updateTimeFromNTP ()"
+
+.PP
+Updates the internal RTC from NTP\&. 
+.PP
+\fBNote\fP
+.RS 4
+Network must be connected before calling this function (see ESPMegaPRO\&.ESPMegaIoT::connectNetwork())\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the update is successful, false otherwise\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

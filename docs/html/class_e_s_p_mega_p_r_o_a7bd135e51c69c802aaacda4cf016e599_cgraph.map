@@ -1,0 +1,10 @@
+<map id="ESPMegaPRO::loop" name="ESPMegaPRO::loop">
+<area shape="rect" id="node1" title="The main loop for the ESPMegaPRO object." alt="" coords="5,107,151,133"/>
+<area shape="rect" id="node2" href="$class_digital_input_card.html#a0ab3d3df306ecce30f19a252f5a25a6d" title="A loop to refresh the input buffers and check for pin changes." alt="" coords="211,5,375,32"/>
+<area shape="rect" id="node3" href="$class_digital_output_card.html#aeae842b0338e6788b99fa623fffcbe89" title="The main loop for the Digital Output Card object." alt="" coords="205,56,380,83"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_io_t.html#a260083ed6e8710b7321f18942ad6eef8" title="The main loop for the ESPMegaIoT object." alt="" coords="224,107,361,133"/>
+<area shape="rect" id="node5" href="$class_e_s_p_mega_web_server.html#ac2390697ddcc99604eed00a785dd2a4b" title="The loop function for the web server." alt="" coords="199,157,387,184"/>
+<area shape="rect" id="node6" href="$class_internal_display.html#acba3729be902fcde3e30e754aef62330" title="The main loop of the Internal Display." alt="" coords="215,208,371,235"/>
+<area shape="rect" id="node7" href="$class_e_s_p_mega_io_t.html#acb0b6d3616f924ae793981f8653b142f" title="Check if the network is connected." alt="" coords="435,179,665,205"/>
+<area shape="rect" id="node8" href="$class_e_s_p_mega_display.html#ae442963a5ed99212bba46c41f3b7b215" title="Receives and processes serial commands from the display adapter." alt="" coords="439,230,661,271"/>
+</map>

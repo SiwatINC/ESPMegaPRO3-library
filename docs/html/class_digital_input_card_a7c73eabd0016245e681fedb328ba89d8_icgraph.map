@@ -1,0 +1,4 @@
+<map id="DigitalInputCard::loadPinMap" name="DigitalInputCard::loadPinMap">
+<area shape="rect" id="node1" title="Load the pin map for the card." alt="" coords="207,5,419,32"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_p_r_o.html#a582f6a9d00c0313e772166bd6c52d06d" title="Initializes the ESPMegaPRO object." alt="" coords="5,5,159,32"/>
+</map>

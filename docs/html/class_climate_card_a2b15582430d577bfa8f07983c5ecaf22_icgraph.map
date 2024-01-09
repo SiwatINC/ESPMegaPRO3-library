@@ -1,0 +1,4 @@
+<map id="ClimateCard::registerChangeCallback" name="ClimateCard::registerChangeCallback">
+<area shape="rect" id="node1" title="Register a callback function that will be called when the state of the air conditioner changes." alt="" coords="291,5,501,47"/>
+<area shape="rect" id="node2" href="$class_internal_display.html#aff819b7e2625b4af2b6fbd44f46c89f2" title="Set the climate card to be be shown on the AC page." alt="" coords="5,13,243,39"/>
+</map>

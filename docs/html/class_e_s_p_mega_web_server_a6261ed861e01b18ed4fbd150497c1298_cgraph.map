@@ -1,0 +1,6 @@
+<map id="ESPMegaWebServer::begin" name="ESPMegaWebServer::begin">
+<area shape="rect" id="node1" title="Start the web server." alt="" coords="5,13,201,39"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_web_server.html#aa51292db61fcd51b03558589f1e43fbf" title="Load web username and password from FRAM." alt="" coords="249,5,512,47"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_web_server.html#a15d05ef973863bfd460879a414be7095" title="Reset web username and password to default." alt="" coords="560,13,827,39"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_web_server.html#a77e5ca53ae15af09a632ce98330a9530" title="Save web username and password to FRAM." alt="" coords="875,5,1140,47"/>
+</map>

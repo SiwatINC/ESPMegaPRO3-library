@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_mqtt_config" xml:lang="en-US">
+<title>MqttConfig Struct Reference</title>
+<indexterm><primary>MqttConfig</primary></indexterm>
+<para>
+
+<para>The MQTT configuration struct. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ESPMegaIoT.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e"/>char <link linkend="_struct_mqtt_config_1adaf50456b5f0c76b1db2ce80647ca92e">mqtt_server</link> [32]</para>
+
+<para>The MQTT server address. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_mqtt_config_1a8c562630896777b8521621f553935a49"/>uint16_t <link linkend="_struct_mqtt_config_1a8c562630896777b8521621f553935a49">mqtt_port</link></para>
+
+<para>The MQTT server port. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd"/>char <link linkend="_struct_mqtt_config_1a87c8492269c0144f0f8ee100184ca5cd">mqtt_user</link> [32]</para>
+
+<para>The MQTT username, even if mqtt_useauth is false, this should be set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230"/>char <link linkend="_struct_mqtt_config_1ad9a7f3d30941e6bde92684bfb5974230">mqtt_password</link> [32]</para>
+
+<para>The MQTT password, even if mqtt_useauth is false, this should be set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80"/>bool <link linkend="_struct_mqtt_config_1afad6620dfaae6d7643cea3a08eedec80">mqtt_useauth</link></para>
+
+<para>Whether to use MQTT authentication, if false, mqtt_user and mqtt_password will be ignored. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa"/>char <link linkend="_struct_mqtt_config_1a9b0519751efd0c53e8ee16b6697b99fa">base_topic</link> [32]</para>
+
+<para>The base topic for the MQTT messages. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The MQTT configuration struct. </para>
+
+
+
+<para><note><title>Note</title>
+
+<para>This struct will be saved to FRAM when calling saveMqttConfig </para>
+</note>
+</para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</section>
+</section>

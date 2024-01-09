@@ -1,0 +1,705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_e_s_p_mega_p_r_o" kind="class" language="C++" prot="public">
+    <compoundname>ESPMegaPRO</compoundname>
+    <includes refid="_e_s_p_mega_pro_o_s_8hpp" local="no">ESPMegaProOS.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1a90aec2f3b041dd528ee587dadeca9d8a" prot="public" static="no" mutable="no">
+        <type>FRAM</type>
+        <definition>FRAM ESPMegaPRO::fram</definition>
+        <argsstring></argsstring>
+        <name>fram</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="54" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1a8ce5a40e5721a887c0dfcf00484b0719" prot="public" static="no" mutable="no">
+        <type><ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref></type>
+        <definition>DigitalInputCard ESPMegaPRO::inputs</definition>
+        <argsstring></argsstring>
+        <name>inputs</name>
+        <initializer>= <ref refid="class_digital_input_card" kindref="compound">DigitalInputCard</ref>(INPUT_BANK_A_ADDRESS, INPUT_BANK_B_ADDRESS)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="60" column="26" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1a3cc8349ad4c8501ea3de2a8610ec92f0" prot="public" static="no" mutable="no">
+        <type><ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref></type>
+        <definition>DigitalOutputCard ESPMegaPRO::outputs</definition>
+        <argsstring></argsstring>
+        <name>outputs</name>
+        <initializer>= <ref refid="class_digital_output_card" kindref="compound">DigitalOutputCard</ref>(PWM_BANK_ADDRESS)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="66" column="27" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1a634d0c8a22aaa20d5dfc422f6e1e1f15" prot="public" static="no" mutable="no">
+        <type><ref refid="class_internal_display" kindref="compound">InternalDisplay</ref> *</type>
+        <definition>InternalDisplay* ESPMegaPRO::display</definition>
+        <argsstring></argsstring>
+        <name>display</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="72" column="25" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1afacb78b3c13c24fac8ae76eb2c369f5d" prot="public" static="no" mutable="no">
+        <type><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> *</type>
+        <definition>ESPMegaIoT* ESPMegaPRO::iot</definition>
+        <argsstring></argsstring>
+        <name>iot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="78" column="20" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1ac51e01e09374964e4aac66927f439907" prot="public" static="no" mutable="no">
+        <type><ref refid="class_e_s_p_mega_web_server" kindref="compound">ESPMegaWebServer</ref> *</type>
+        <definition>ESPMegaWebServer* ESPMegaPRO::webServer</definition>
+        <argsstring></argsstring>
+        <name>webServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="84" column="26" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1a681636596f826659a1f798edf920f24e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ESPMegaPRO::iotEnabled</definition>
+        <argsstring></argsstring>
+        <name>iotEnabled</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="86" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1aaaf8e4dc664b628401a9c088ec3d2d16" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ESPMegaPRO::internalDisplayEnabled</definition>
+        <argsstring></argsstring>
+        <name>internalDisplayEnabled</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="87" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1aef1e80f44b79551141a7012403e9545b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ESPMegaPRO::webServerEnabled</definition>
+        <argsstring></argsstring>
+        <name>webServerEnabled</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="88" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1a4a9f941c0707fce352de3f810d66bbcb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+        <definition>ExpansionCard* ESPMegaPRO::cards[255]</definition>
+        <argsstring>[255]</argsstring>
+        <name>cards</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="89" column="23" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1a50085789dfaeae1392bb75f38ba1e8a6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ESPMegaPRO::cardInstalled[255]</definition>
+        <argsstring>[255]</argsstring>
+        <name>cardInstalled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="90" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_e_s_p_mega_p_r_o_1abbfe8c63259f65ea0d8c4149f6144b04" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ESPMegaPRO::cardCount</definition>
+        <argsstring></argsstring>
+        <name>cardCount</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="91" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1ac06222dfa4d6dbf604d2a2490f0924ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ESPMegaPRO::ESPMegaPRO</definition>
+        <argsstring>()</argsstring>
+        <name>ESPMegaPRO</name>
+        <briefdescription>
+<para>Create a new <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only one <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> object can be created, creating more than one will result in undefined behavior </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="41" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaPRO::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Initializes the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> object and all of its components. It also initializes the built-in Digital Input and Digital Output cards.</para>
+<para><simplesect kind="return"><para>True if the initialization is successful, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="42" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="24" bodyend="40"/>
+        <references refid="class_digital_output_card_1aa43b2f8d13abb0164f661eba5daa14ce" compoundref="_digital_output_card_8cpp" startline="225" endline="229">DigitalOutputCard::bindFRAM</references>
+        <references refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="79" endline="93">installCard</references>
+        <references refid="class_digital_output_card_1a500615c25557efcff072e98e65a8db33" compoundref="_digital_output_card_8cpp" startline="270" endline="281">DigitalOutputCard::loadFromFRAM</references>
+        <references refid="class_digital_input_card_1a7c73eabd0016245e681fedb328ba89d8" compoundref="_digital_input_card_8cpp" startline="283" endline="292">DigitalInputCard::loadPinMap</references>
+        <references refid="class_digital_output_card_1a3eed3e145a257bad60e3e0e82a74f7f7" compoundref="_digital_output_card_8cpp" startline="288" endline="290">DigitalOutputCard::setAutoSaveToFRAM</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaPRO::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>The main loop for the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function must be called in the main loop of the program.</para>
+</simplesect>
+It will call the <ref refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" kindref="member">loop()</ref> function of all installed expansion cards, the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> module, and the internal display. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="43" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="50" bodyend="67"/>
+        <references refid="class_digital_input_card_1a0ab3d3df306ecce30f19a252f5a25a6d" compoundref="_digital_input_card_8cpp" startline="167" endline="185">DigitalInputCard::loop</references>
+        <references refid="class_digital_output_card_1aeae842b0338e6788b99fa623fffcbe89" compoundref="_digital_output_card_8cpp" startline="109" endline="110">DigitalOutputCard::loop</references>
+        <references refid="class_e_s_p_mega_io_t_1a260083ed6e8710b7321f18942ad6eef8" compoundref="_e_s_p_mega_io_t_8cpp" startline="95" endline="109">ESPMegaIoT::loop</references>
+        <references refid="class_e_s_p_mega_web_server_1ac2390697ddcc99604eed00a785dd2a4b" compoundref="_e_s_p_mega_web_server_8cpp" startline="61" endline="64">ESPMegaWebServer::loop</references>
+        <references refid="class_internal_display_1acba3729be902fcde3e30e754aef62330" compoundref="_internal_display_8cpp" startline="36" endline="55">InternalDisplay::loop</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaPRO::installCard</definition>
+        <argsstring>(uint8_t slot, ExpansionCard *card)</argsstring>
+        <name>installCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>slot</declname>
+        </param>
+        <param>
+          <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+          <declname>card</declname>
+        </param>
+        <briefdescription>
+<para>Installs an expansion card to the specified slot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function automatically initializes the expansion card.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slot to install the card to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>card</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the installation is successful, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="44" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="79" bodyend="93"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="24" endline="40">begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1ab263d5baf53948d0790c5e22d3c2e4e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ESPMegaPRO::updateTimeFromNTP</definition>
+        <argsstring>()</argsstring>
+        <name>updateTimeFromNTP</name>
+        <briefdescription>
+<para>Updates the internal RTC from NTP. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Network must be connected before calling this function (see ESPMegaPRO.ESPMegaIoT::connectNetwork()).</para>
+</simplesect>
+<simplesect kind="return"><para>True if the update is successful, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="45" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="102" bodyend="118"/>
+        <references refid="class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="125" endline="136">getTime</references>
+        <references refid="class_e_s_p_mega_p_r_o_1a456cfbdb9987a2e90e6f0eabeae42b83" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="148" endline="158">setTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1aa6436515e96f420606fd7069737fc67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaPRO::enableIotModule</definition>
+        <argsstring>()</argsstring>
+        <name>enableIotModule</name>
+        <briefdescription>
+<para>Enables, Instanitates, and Initializes the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> module. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function must be called before using the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> module. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="46" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="165" bodyend="171"/>
+        <references refid="class_e_s_p_mega_io_t_1afd192a63876d86300086522e701905de" compoundref="_e_s_p_mega_io_t_8cpp" startline="746" endline="749">ESPMegaIoT::bindFRAM</references>
+        <references refid="class_e_s_p_mega_io_t_1a12baf9ad36896f400c5c77fa7a32d3de" compoundref="_e_s_p_mega_io_t_8cpp" startline="84" endline="88">ESPMegaIoT::intr_begin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaPRO::enableInternalDisplay</definition>
+        <argsstring>(HardwareSerial *serial)</argsstring>
+        <name>enableInternalDisplay</name>
+        <param>
+          <type>HardwareSerial *</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>Enables, Instanitates, and Initializes the internal display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>&amp;Serial is used for the internal display on <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> R3. </para>
+</simplesect>
+<simplesect kind="note"><para>This function can only be called if the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> module is enabled. </para>
+</simplesect>
+<simplesect kind="note"><para>This function must be called before using the internal display.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the HardwareSerial object to use for the internal display (Serial for <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> R3). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="47" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="195" bodyend="212"/>
+        <references refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" compoundref="_internal_display_8cpp" startline="11" endline="29">InternalDisplay::begin</references>
+        <references refid="class_internal_display_1a9e314baf652600542d649f5f0dd1cd68" compoundref="_internal_display_8cpp" startline="471" endline="483">InternalDisplay::bindInputCard</references>
+        <references refid="class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6" compoundref="_internal_display_8cpp" startline="501" endline="511">InternalDisplay::bindOutputCard</references>
+        <references refid="class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="125" endline="136">getTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaPRO::enableWebServer</definition>
+        <argsstring>(uint16_t port)</argsstring>
+        <name>enableWebServer</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Enables the internal web server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function can only be called if the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> module is enabled. </para>
+</simplesect>
+<simplesect kind="note"><para>This function can only be called once.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The port to use for the web server. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="48" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="249" bodyend="262"/>
+        <references refid="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" compoundref="_e_s_p_mega_web_server_8cpp" startline="42" endline="54">ESPMegaWebServer::begin</references>
+        <references refid="class_e_s_p_mega_web_server_1adb3781890cee6513b494d27b18e6f5ff" compoundref="_e_s_p_mega_web_server_8cpp" startline="76" endline="79">ESPMegaWebServer::bindFRAM</references>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structrtctime__t" kindref="compound">rtctime_t</ref></type>
+        <definition>rtctime_t ESPMegaPRO::getTime</definition>
+        <argsstring>()</argsstring>
+        <name>getTime</name>
+        <briefdescription>
+<para>Gets the current time from the internal RTC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current time as a <ref refid="structrtctime__t" kindref="compound">rtctime_t</ref> struct. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="49" column="19" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="125" bodyend="136"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="195" endline="212">enableInternalDisplay</referencedby>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1ab263d5baf53948d0790c5e22d3c2e4e3" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="102" endline="118">updateTimeFromNTP</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a34d6ab7e6fe349bca6f41d8c86a8ab99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaPRO::dumpFRAMtoSerial</definition>
+        <argsstring>(uint16_t start, uint16_t end)</argsstring>
+        <name>dumpFRAMtoSerial</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Dumps the contents of the internal FRAM to the serial port. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ending address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="50" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="220" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a7590608e32da0efbf6c375aa3d3a0a77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaPRO::dumpFRAMtoSerialASCII</definition>
+        <argsstring>(uint16_t start, uint16_t end)</argsstring>
+        <name>dumpFRAMtoSerialASCII</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Dumps the contents of the internal FRAM to the serial port in ASCII. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The starting address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ending address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="51" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="235" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a456cfbdb9987a2e90e6f0eabeae42b83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ESPMegaPRO::setTime</definition>
+        <argsstring>(int hours, int minutes, int seconds, int day, int month, int year)</argsstring>
+        <name>setTime</name>
+        <param>
+          <type>int</type>
+          <declname>hours</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minutes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seconds</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>day</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>year</declname>
+        </param>
+        <briefdescription>
+<para>Sets the current time of the internal RTC. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hours</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hours. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minutes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minutes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seconds. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The day. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The month. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The year. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="52" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="148" bodyend="158"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1ab263d5baf53948d0790c5e22d3c2e4e3" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="102" endline="118">updateTimeFromNTP</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_e_s_p_mega_p_r_o_1a569bef7ba6d96fdcbc7f02ad2cc5a422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+        <definition>ExpansionCard * ESPMegaPRO::getCard</definition>
+        <argsstring>(uint8_t slot)</argsstring>
+        <name>getCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>slot</declname>
+        </param>
+        <briefdescription>
+<para>Gets the expansion card installed at the specified slot. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The slot to get the card from.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the <ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> object, or nullptr if no card is installed at the specified slot. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="53" column="23" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp" bodystart="180" bodyend="184"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> class is the main class for the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> library. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class provides functions for managing the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> board, such as installing expansion cards, managing the internal RTC, and managing the internal FRAM. This class also provides functions for managing the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> module and the internal display.</para>
+<para>This class provide a Object Oriented Programming (OOP) interface for the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> board. If you are looking for a more simple and a more procedural interface, please use the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> class in ESPMegaPRO.hpp. But note that the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> class only interfaces with the built-in Digital Input and Digital Output cards and other onboard components. It does not provide an interface for expansion cards, the <ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref> module, and the internal display.</para>
+<para><simplesect kind="warning"><para>Only one <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> object can be created, creating more than one will result in undefined behavior. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>ESPMegaWebServer</label>
+        <link refid="class_e_s_p_mega_web_server"/>
+      </node>
+      <node id="6">
+        <label>ESPMegaDisplay</label>
+        <link refid="class_e_s_p_mega_display"/>
+      </node>
+      <node id="4">
+        <label>DigitalInputCard</label>
+        <link refid="class_digital_input_card"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>InternalDisplay</label>
+        <link refid="class_internal_display"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DigitalOutputCard</label>
+        <link refid="class_digital_output_card"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ESPMegaIoT</label>
+        <link refid="class_e_s_p_mega_io_t"/>
+      </node>
+      <node id="1">
+        <label>ESPMegaPRO</label>
+        <link refid="class_e_s_p_mega_p_r_o"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>outputs</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>inputs</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>display</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>webServer</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>iot</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" line="39" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp" bodystart="39" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>begin</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1abbfe8c63259f65ea0d8c4149f6144b04" prot="private" virt="non-virtual"><scope>ESPMegaPRO</scope><name>cardCount</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a50085789dfaeae1392bb75f38ba1e8a6" prot="private" virt="non-virtual"><scope>ESPMegaPRO</scope><name>cardInstalled</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a4a9f941c0707fce352de3f810d66bbcb" prot="private" virt="non-virtual"><scope>ESPMegaPRO</scope><name>cards</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a634d0c8a22aaa20d5dfc422f6e1e1f15" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>display</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a34d6ab7e6fe349bca6f41d8c86a8ab99" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>dumpFRAMtoSerial</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a7590608e32da0efbf6c375aa3d3a0a77" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>dumpFRAMtoSerialASCII</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>enableInternalDisplay</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1aa6436515e96f420606fd7069737fc67f" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>enableIotModule</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>enableWebServer</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1ac06222dfa4d6dbf604d2a2490f0924ec" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>ESPMegaPRO</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a90aec2f3b041dd528ee587dadeca9d8a" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>fram</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a569bef7ba6d96fdcbc7f02ad2cc5a422" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>getCard</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>getTime</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a8ce5a40e5721a887c0dfcf00484b0719" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>inputs</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>installCard</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1aaaf8e4dc664b628401a9c088ec3d2d16" prot="private" virt="non-virtual"><scope>ESPMegaPRO</scope><name>internalDisplayEnabled</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1afacb78b3c13c24fac8ae76eb2c369f5d" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>iot</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a681636596f826659a1f798edf920f24e" prot="private" virt="non-virtual"><scope>ESPMegaPRO</scope><name>iotEnabled</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>loop</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a3cc8349ad4c8501ea3de2a8610ec92f0" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>outputs</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1a456cfbdb9987a2e90e6f0eabeae42b83" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>setTime</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1ab263d5baf53948d0790c5e22d3c2e4e3" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>updateTimeFromNTP</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1ac51e01e09374964e4aac66927f439907" prot="public" virt="non-virtual"><scope>ESPMegaPRO</scope><name>webServer</name></member>
+      <member refid="class_e_s_p_mega_p_r_o_1aef1e80f44b79551141a7012403e9545b" prot="private" virt="non-virtual"><scope>ESPMegaPRO</scope><name>webServerEnabled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

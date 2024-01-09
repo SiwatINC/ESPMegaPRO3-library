@@ -1,0 +1,4 @@
+<map id="InternalDisplay" name="InternalDisplay">
+<area shape="rect" id="node1" title="The internal display of the ESPMegaPRO." alt="" coords="10,80,131,107"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html" title="The ESPMegaDisplay class is a class for controlling the ESPMegaDisplay." alt="" coords="5,5,136,32"/>
+</map>

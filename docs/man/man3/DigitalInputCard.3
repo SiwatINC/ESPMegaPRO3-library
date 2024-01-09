@@ -1,0 +1,277 @@
+.TH "DigitalInputCard" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DigitalInputCard \- \fBESPMegaPRO\fP Digital Input Card\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DigitalInputCard\&.hpp>\fP
+.PP
+Inherits \fBExpansionCard\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDigitalInputCard\fP (uint8_t address_a, uint8_t address_b)"
+.br
+.RI "Create a new Digital Input Card object with the specified address\&. "
+.ti -1c
+.RI "\fBDigitalInputCard\fP (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4, bool bit5)"
+.br
+.RI "Create a new Digital Input Card object with the specified position on the dip switch\&. "
+.ti -1c
+.RI "bool \fBbegin\fP ()"
+.br
+.RI "Initialize the Digital Input Card\&. "
+.ti -1c
+.RI "bool \fBdigitalRead\fP (uint8_t pin)"
+.br
+.RI "Read the input from the specified pin, always refresh the input buffers\&. "
+.ti -1c
+.RI "bool \fBdigitalRead\fP (uint8_t pin, bool refresh)"
+.br
+.RI "Read the input from the specified pin, also refresh the input buffers if refresh is true\&. "
+.ti -1c
+.RI "void \fBloop\fP ()"
+.br
+.RI "A loop to refresh the input buffers and check for pin changes\&. "
+.ti -1c
+.RI "uint8_t \fBgetInputBufferA\fP ()"
+.br
+.RI "Get the input buffer for bank A (the first 8 pins) "
+.ti -1c
+.RI "uint8_t \fBgetInputBufferB\fP ()"
+.br
+.RI "Get the input buffer for bank B (the last 8 pins) "
+.ti -1c
+.RI "void \fBsetDebounceTime\fP (uint8_t pin, uint32_t debounceTime)"
+.br
+.RI "Set the debounce time for the specified pin\&. "
+.ti -1c
+.RI "uint8_t \fBregisterCallback\fP (std::function< void(uint8_t, bool)> callback)"
+.br
+.RI "Register a callback function to be called when a pin changes\&. "
+.ti -1c
+.RI "void \fBunregisterCallback\fP (uint8_t handler)"
+.br
+.RI "Unregister a callback function\&. "
+.ti -1c
+.RI "void \fBloadPinMap\fP (uint8_t pinMap[16])"
+.br
+.RI "Load the pin map for the card\&. "
+.ti -1c
+.RI "uint8_t \fBgetType\fP ()"
+.br
+.RI "Get the type of the card\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBESPMegaPRO\fP Digital Input Card\&. 
+
+This class represents the \fBESPMegaPRO\fP Digital Input Card\&. It allows you to read the state of the digital inputs from the \fBESPMegaPRO\fP Digital Input Card\&. It also allows you to register callback functions to be called when a pin changes\&. The callback function also support debouncing\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "DigitalInputCard::DigitalInputCard (uint8_t address_a, uint8_t address_b)"
+
+.PP
+Create a new Digital Input Card object with the specified address\&. 
+.PP
+\fBNote\fP
+.RS 4
+If you are using the ESPMegaI/O board, you should use the dip switch constructor
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIaddress_a\fP The ESPMegaI/O address of bank A 
+.br
+\fIaddress_b\fP The ESPMegaI/O address of bank B 
+.RE
+.PP
+
+.SS "DigitalInputCard::DigitalInputCard (bool bit0, bool bit1, bool bit2, bool bit3, bool bit4, bool bit5)"
+
+.PP
+Create a new Digital Input Card object with the specified position on the dip switch\&. 
+.PP
+\fBNote\fP
+.RS 4
+The bit 0 are at the left of the dip switch
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+There are 6 switches on the dip switch, 3 for bank A and 3 for bank B, They should be unique for each bank accross all the cards
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fIbit0\fP The position of the first switch on the dip switch 
+.br
+\fIbit1\fP The position of the second switch on the dip switch 
+.br
+\fIbit2\fP The position of the third switch on the dip switch 
+.br
+\fIbit3\fP The position of the fourth switch on the dip switch 
+.br
+\fIbit4\fP The position of the fifth switch on the dip switch 
+.br
+\fIbit5\fP The position of the sixth switch on the dip switch 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool DigitalInputCard::begin ()\fC [virtual]\fP"
+
+.PP
+Initialize the Digital Input Card\&. 
+.PP
+\fBReturns\fP
+.RS 4
+True if the initialization is successful, false otherwise 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "bool DigitalInputCard::digitalRead (uint8_t pin)"
+
+.PP
+Read the input from the specified pin, always refresh the input buffers\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to read from 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the pin is HIGH, false if the pin is LOW 
+.RE
+.PP
+
+.SS "bool DigitalInputCard::digitalRead (uint8_t pin, bool refresh)"
+
+.PP
+Read the input from the specified pin, also refresh the input buffers if refresh is true\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to read from 
+.br
+\fIrefresh\fP If true, the input buffers will be refreshed before reading the pin 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the pin is HIGH, false if the pin is LOW 
+.RE
+.PP
+
+.SS "uint8_t DigitalInputCard::getInputBufferA ()"
+
+.PP
+Get the input buffer for bank A (the first 8 pins) 
+.PP
+\fBReturns\fP
+.RS 4
+The input buffer for bank A where the first bit is the first pin and the last bit is the last pin 
+.RE
+.PP
+
+.SS "uint8_t DigitalInputCard::getInputBufferB ()"
+
+.PP
+Get the input buffer for bank B (the last 8 pins) 
+.PP
+\fBReturns\fP
+.RS 4
+The input buffer for bank B where the first bit is the first pin and the last bit is the last pin 
+.RE
+.PP
+
+.SS "uint8_t DigitalInputCard::getType ()\fC [virtual]\fP"
+
+.PP
+Get the type of the card\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The type of the card 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "void DigitalInputCard::loadPinMap (uint8_t pinMap[16])"
+
+.PP
+Load the pin map for the card\&. A pin map is an array of 16 elements that maps the physical pins to virtual pins The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class The physical pins are the pins on the Input IC, This can be found on the schematic of the ESPMegaI/O board This function is useful if you want to change the number identification of the pins to match your project needs
+.PP
+\fBParameters\fP
+.RS 4
+\fIpinMap\fP The pin map to load 
+.RE
+.PP
+
+.SS "void DigitalInputCard::loop ()\fC [virtual]\fP"
+
+.PP
+A loop to refresh the input buffers and check for pin changes\&. 
+.PP
+\fBNote\fP
+.RS 4
+Although this function can be called in the main loop, it is recommended install the card in ESPMega to automatically manage the loop 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpansionCard\fP\&.
+.SS "uint8_t DigitalInputCard::registerCallback (std::function< void(uint8_t, bool)> callback)"
+
+.PP
+Register a callback function to be called when a pin changes\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP The callback function to be called 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The handler of the callback function 
+.RE
+.PP
+
+.SS "void DigitalInputCard::setDebounceTime (uint8_t pin, uint32_t debounceTime)"
+
+.PP
+Set the debounce time for the specified pin\&. Debounce is the time in milliseconds that the pin should be stable before the callback function is called This is useful to prevent false triggers when the input is noisy An example of this is when the input is connected to a mechanical switch
+.PP
+\fBParameters\fP
+.RS 4
+\fIpin\fP The pin to set the debounce time for 
+.br
+\fIdebounceTime\fP The debounce time in milliseconds 
+.RE
+.PP
+
+.SS "void DigitalInputCard::unregisterCallback (uint8_t handler)"
+
+.PP
+Unregister a callback function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhandler\fP The handler of the callback function to unregister 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

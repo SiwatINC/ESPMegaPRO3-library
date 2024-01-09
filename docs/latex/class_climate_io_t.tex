@@ -1,0 +1,288 @@
+\hypertarget{class_climate_io_t}{}\doxysection{Climate\+IoT Class Reference}
+\label{class_climate_io_t}\index{ClimateIoT@{ClimateIoT}}
+
+
+The \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} class is a class for connecting the Climate Card to the IoT module.  
+
+
+
+
+{\ttfamily \#include $<$Climate\+Io\+T.\+hpp$>$}
+
+
+
+Inheritance diagram for Climate\+IoT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_climate_io_t__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Climate\+IoT\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_climate_io_t__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_climate_io_t_a54535f32b8bda07e5295bcda18b311fe}\label{class_climate_io_t_a54535f32b8bda07e5295bcda18b311fe}} 
+\mbox{\hyperlink{class_climate_io_t_a54535f32b8bda07e5295bcda18b311fe}{$\sim$\+Climate\+IoT}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_climate_io_t_aad3d146120fb6390867d2900b7fe0f6b}{begin}} (uint8\+\_\+t card\+\_\+id, \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$card, Pub\+Sub\+Client $\ast$mqtt, char $\ast$base\+\_\+topic)
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} component. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_io_t_a3ca9eea384da622be06cf56a3d264aff}{handle\+Mqtt\+Message}} (char $\ast$topic, char $\ast$payload)
+\begin{DoxyCompactList}\small\item\em Handles MQTT messages for the \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_aa47d6901ed1a95e41d93766a708ac1da}\label{class_climate_io_t_aa47d6901ed1a95e41d93766a708ac1da}} 
+void \mbox{\hyperlink{class_climate_io_t_aa47d6901ed1a95e41d93766a708ac1da}{publish\+Climate}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the climate data (temperature, mode, fan speed) to the MQTT broker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_af32cf1f2bad34f5c920a58ed23ecf876}\label{class_climate_io_t_af32cf1f2bad34f5c920a58ed23ecf876}} 
+void \mbox{\hyperlink{class_climate_io_t_af32cf1f2bad34f5c920a58ed23ecf876}{publish\+Climate\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the temperature of the air conditioner to the MQTT broker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_acc5a0774647d0c94d5a8d6eaec9fa23e}\label{class_climate_io_t_acc5a0774647d0c94d5a8d6eaec9fa23e}} 
+void \mbox{\hyperlink{class_climate_io_t_acc5a0774647d0c94d5a8d6eaec9fa23e}{publish\+Climate\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the mode of the air conditioner to the MQTT broker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_a5c3c09d45519d8b842a58848cd22dd46}\label{class_climate_io_t_a5c3c09d45519d8b842a58848cd22dd46}} 
+void \mbox{\hyperlink{class_climate_io_t_a5c3c09d45519d8b842a58848cd22dd46}{publish\+Climate\+Fan\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the fan speed of the air conditioner to the MQTT broker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_a15060120ec8d458d023cf63174caf018}\label{class_climate_io_t_a15060120ec8d458d023cf63174caf018}} 
+void \mbox{\hyperlink{class_climate_io_t_a15060120ec8d458d023cf63174caf018}{publish\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the temperature and humidity of the room to the MQTT broker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_a0552877211038ed07b697af151d6dcec}\label{class_climate_io_t_a0552877211038ed07b697af151d6dcec}} 
+void \mbox{\hyperlink{class_climate_io_t_a0552877211038ed07b697af151d6dcec}{publish\+Room\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the room temperature to the MQTT broker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_aab50fe7f8fa35d3f62a98b4ef81c7056}\label{class_climate_io_t_aab50fe7f8fa35d3f62a98b4ef81c7056}} 
+void \mbox{\hyperlink{class_climate_io_t_aab50fe7f8fa35d3f62a98b4ef81c7056}{publish\+Humidity}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the humidity of the room to the MQTT broker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_io_t_a0098ee608786b6cea97f50a6602a1026}{handle\+State\+Change}} (uint8\+\_\+t temperature, uint8\+\_\+t mode, uint8\+\_\+t fan\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em Handle Air Conditioner state change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_io_t_a2516d6d2a9e2be4365617a3c0577a8b6}{handle\+Sensor\+Update}} (float temperature, float humidity)
+\begin{DoxyCompactList}\small\item\em This function is a callback function registered with the Climate card to be called when the sensor data is updated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_io_t_ae9838e9774728052ba52526b89bf5da1}{handle\+Air\+Conditioner\+Update}} (uint8\+\_\+t mode, uint8\+\_\+t fan\+\_\+speed, uint8\+\_\+t temperature)
+\begin{DoxyCompactList}\small\item\em This function is a callback function registered with the Climate card to be called when the air conditioner state is updated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_aa418416d349122f67b5df4c980dd3526}\label{class_climate_io_t_aa418416d349122f67b5df4c980dd3526}} 
+void \mbox{\hyperlink{class_climate_io_t_aa418416d349122f67b5df4c980dd3526}{publish\+Report}} ()
+\begin{DoxyCompactList}\small\item\em Publishes the climate and sensor data to the MQTT broker. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_climate_io_t_aa450a354851fbc82b54e32f3ffd9d359}\label{class_climate_io_t_aa450a354851fbc82b54e32f3ffd9d359}} 
+void \mbox{\hyperlink{class_climate_io_t_aa450a354851fbc82b54e32f3ffd9d359}{subscribe}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes to MQTT topics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_climate_io_t_afe6cc8ae2063d700c5a7d5554aad2cd1}{loop}} ()
+\begin{DoxyCompactList}\small\item\em The loop function for the \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} component. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_climate_io_t_a488320647faf79d26fdf8f0ea406f315}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the type of the expansion card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} class is a class for connecting the Climate Card to the IoT module. 
+
+This function allows you to control the Climate Card using MQTT.
+
+\begin{DoxyWarning}{Warning}
+You should not instantiate this class directly, instead use \mbox{\hyperlink{class_e_s_p_mega_io_t}{ESPMega\+IoT}}\textquotesingle{}s register\+Card function. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_climate_io_t_aad3d146120fb6390867d2900b7fe0f6b}\label{class_climate_io_t_aad3d146120fb6390867d2900b7fe0f6b}} 
+\index{ClimateIoT@{ClimateIoT}!begin@{begin}}
+\index{begin@{begin}!ClimateIoT@{ClimateIoT}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool Climate\+Io\+T\+::begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{card\+\_\+id,  }\item[{\mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} $\ast$}]{card,  }\item[{Pub\+Sub\+Client $\ast$}]{mqtt,  }\item[{char $\ast$}]{base\+\_\+topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} component. 
+
+This function sets the MQTT client, base topic, card ID, and card pointer. It also registers the sensor and air conditioner update callbacks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em card\+\_\+id} & The ID of the expansion card. \\
+\hline
+{\em card} & A pointer to the \mbox{\hyperlink{class_expansion_card}{Expansion\+Card}} object. \\
+\hline
+{\em mqtt} & A pointer to the Pub\+Sub\+Client object. \\
+\hline
+{\em base\+\_\+topic} & The base topic for MQTT communication. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the initialization is successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_io_t_aad3d146120fb6390867d2900b7fe0f6b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_io_t_a488320647faf79d26fdf8f0ea406f315}\label{class_climate_io_t_a488320647faf79d26fdf8f0ea406f315}} 
+\index{ClimateIoT@{ClimateIoT}!getType@{getType}}
+\index{getType@{getType}!ClimateIoT@{ClimateIoT}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily uint8\+\_\+t Climate\+Io\+T\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the type of the expansion card. 
+
+\begin{DoxyReturn}{Returns}
+The type of the expansion card. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+\mbox{\Hypertarget{class_climate_io_t_ae9838e9774728052ba52526b89bf5da1}\label{class_climate_io_t_ae9838e9774728052ba52526b89bf5da1}} 
+\index{ClimateIoT@{ClimateIoT}!handleAirConditionerUpdate@{handleAirConditionerUpdate}}
+\index{handleAirConditionerUpdate@{handleAirConditionerUpdate}!ClimateIoT@{ClimateIoT}}
+\doxysubsubsection{\texorpdfstring{handleAirConditionerUpdate()}{handleAirConditionerUpdate()}}
+{\footnotesize\ttfamily void Climate\+Io\+T\+::handle\+Air\+Conditioner\+Update (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode,  }\item[{uint8\+\_\+t}]{fan\+\_\+speed,  }\item[{uint8\+\_\+t}]{temperature }\end{DoxyParamCaption})}
+
+
+
+This function is a callback function registered with the Climate card to be called when the air conditioner state is updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode of the air conditioner. \\
+\hline
+{\em fan\+\_\+speed} & The fan speed of the air conditioner. \\
+\hline
+{\em temperature} & The temperature of the air conditioner. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_io_t_ae9838e9774728052ba52526b89bf5da1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_io_t_ae9838e9774728052ba52526b89bf5da1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_io_t_a3ca9eea384da622be06cf56a3d264aff}\label{class_climate_io_t_a3ca9eea384da622be06cf56a3d264aff}} 
+\index{ClimateIoT@{ClimateIoT}!handleMqttMessage@{handleMqttMessage}}
+\index{handleMqttMessage@{handleMqttMessage}!ClimateIoT@{ClimateIoT}}
+\doxysubsubsection{\texorpdfstring{handleMqttMessage()}{handleMqttMessage()}}
+{\footnotesize\ttfamily void Climate\+Io\+T\+::handle\+Mqtt\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{char $\ast$}]{payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles MQTT messages for the \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The trimmed topic of the MQTT message. \\
+\hline
+{\em payload} & The null-\/terminated payload of the MQTT message. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_io_t_component}{Io\+TComponent}}.
+
+\mbox{\Hypertarget{class_climate_io_t_a2516d6d2a9e2be4365617a3c0577a8b6}\label{class_climate_io_t_a2516d6d2a9e2be4365617a3c0577a8b6}} 
+\index{ClimateIoT@{ClimateIoT}!handleSensorUpdate@{handleSensorUpdate}}
+\index{handleSensorUpdate@{handleSensorUpdate}!ClimateIoT@{ClimateIoT}}
+\doxysubsubsection{\texorpdfstring{handleSensorUpdate()}{handleSensorUpdate()}}
+{\footnotesize\ttfamily void Climate\+Io\+T\+::handle\+Sensor\+Update (\begin{DoxyParamCaption}\item[{float}]{temperature,  }\item[{float}]{humidity }\end{DoxyParamCaption})}
+
+
+
+This function is a callback function registered with the Climate card to be called when the sensor data is updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & The room temperature. \\
+\hline
+{\em humidity} & The room humidity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The temperature and humidity are not used in this function but are required by the \mbox{\hyperlink{class_climate_card}{Climate\+Card}} class to match the signature of the callback function. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_io_t_a2516d6d2a9e2be4365617a3c0577a8b6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_io_t_a2516d6d2a9e2be4365617a3c0577a8b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_io_t_a0098ee608786b6cea97f50a6602a1026}\label{class_climate_io_t_a0098ee608786b6cea97f50a6602a1026}} 
+\index{ClimateIoT@{ClimateIoT}!handleStateChange@{handleStateChange}}
+\index{handleStateChange@{handleStateChange}!ClimateIoT@{ClimateIoT}}
+\doxysubsubsection{\texorpdfstring{handleStateChange()}{handleStateChange()}}
+{\footnotesize\ttfamily void Climate\+Io\+T\+::handle\+State\+Change (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{temperature,  }\item[{uint8\+\_\+t}]{mode,  }\item[{uint8\+\_\+t}]{fan\+\_\+speed }\end{DoxyParamCaption})}
+
+
+
+Handle Air Conditioner state change. 
+
+\begin{DoxyNote}{Note}
+This function is called by the underlying \mbox{\hyperlink{class_climate_card}{Climate\+Card}} object and is not meant to be called manually.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & Temperature of the air conditioner \\
+\hline
+{\em mode} & Mode of the air conditioner \\
+\hline
+{\em fan\+\_\+speed} & Fan speed of the air conditioner \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_climate_io_t_a0098ee608786b6cea97f50a6602a1026_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_climate_io_t_afe6cc8ae2063d700c5a7d5554aad2cd1}\label{class_climate_io_t_afe6cc8ae2063d700c5a7d5554aad2cd1}} 
+\index{ClimateIoT@{ClimateIoT}!loop@{loop}}
+\index{loop@{loop}!ClimateIoT@{ClimateIoT}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void Climate\+Io\+T\+::loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The loop function for the \mbox{\hyperlink{class_climate_io_t}{Climate\+IoT}} component. 
+
+\begin{DoxyNote}{Note}
+This function does nothing. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Climate\+Io\+T.\+hpp\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/Climate\+Io\+T.\+cpp\end{DoxyCompactItemize}

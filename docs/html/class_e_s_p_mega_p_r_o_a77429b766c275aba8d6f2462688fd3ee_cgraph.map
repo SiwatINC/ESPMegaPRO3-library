@@ -1,0 +1,8 @@
+<map id="ESPMegaPRO::enableWebServer" name="ESPMegaPRO::enableWebServer">
+<area shape="rect" id="node1" title="Enables the internal web server." alt="" coords="5,38,236,65"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_web_server.html#a6261ed861e01b18ed4fbd150497c1298" title="Start the web server." alt="" coords="299,13,495,39"/>
+<area shape="rect" id="node6" href="$class_e_s_p_mega_web_server.html#adb3781890cee6513b494d27b18e6f5ff" title="Bind the FRAM object to the web server." alt="" coords="284,63,511,90"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_web_server.html#aa51292db61fcd51b03558589f1e43fbf" title="Load web username and password from FRAM." alt="" coords="559,5,821,47"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_web_server.html#a15d05ef973863bfd460879a414be7095" title="Reset web username and password to default." alt="" coords="869,13,1136,39"/>
+<area shape="rect" id="node5" href="$class_e_s_p_mega_web_server.html#a77e5ca53ae15af09a632ce98330a9530" title="Save web username and password to FRAM." alt="" coords="1184,5,1449,47"/>
+</map>

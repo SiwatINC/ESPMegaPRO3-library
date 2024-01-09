@@ -1,0 +1,6 @@
+<map id="InternalDisplay::bindClimateCard" name="InternalDisplay::bindClimateCard">
+<area shape="rect" id="node1" title="Set the climate card to be be shown on the AC page." alt="" coords="5,42,243,69"/>
+<area shape="rect" id="node2" href="$class_climate_card.html#a2b15582430d577bfa8f07983c5ecaf22" title="Register a callback function that will be called when the state of the air conditioner changes." alt="" coords="312,5,523,47"/>
+<area shape="rect" id="node3" href="$class_internal_display.html#af952dea8b4a4d74314d3ed6260fba7c6" title="Unbind the climate card from the display." alt="" coords="291,71,544,98"/>
+<area shape="rect" id="node4" href="$class_climate_card.html#a15d887d1b211d461edd0835d0104f7c7" title="Unregister a callback function." alt="" coords="592,64,819,105"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="ESPMegaDisplay::setBrightness" name="ESPMegaDisplay::setBrightness">
+<area shape="rect" id="node1" title="Sets the brightness of the display." alt="" coords="5,13,232,39"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a8bfb30429f6e11f4719480bfc6f83d72" title="Sends stop bytes to the display adapter." alt="" coords="280,5,479,47"/>
+</map>

@@ -1,0 +1,514 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_e_s_p_mega_pro_o_s_8cpp" kind="file" language="C++">
+    <compoundname>ESPMegaProOS.cpp</compoundname>
+    <includes refid="_e_s_p_mega_pro_o_s_8hpp" local="no">ESPMegaProOS.hpp</includes>
+    <incdepgraph>
+      <node id="45">
+        <label>config_html.h</label>
+        <link refid="config__html_8h_source"/>
+      </node>
+      <node id="39">
+        <label>FS.h</label>
+      </node>
+      <node id="5">
+        <label>DigitalInputCard.hpp</label>
+        <link refid="_digital_input_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Adafruit_ADS1X15.h</label>
+      </node>
+      <node id="13">
+        <label>OneWire.h</label>
+      </node>
+      <node id="25">
+        <label>DigitalInputIoT.hpp</label>
+        <link refid="_digital_input_io_t_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>stdint.h</label>
+      </node>
+      <node id="32">
+        <label>DS1307RTC.h</label>
+      </node>
+      <node id="44">
+        <label>all_html.h</label>
+        <link refid="all__html_8h_source"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>TimeStructure.hpp</label>
+        <link refid="_time_structure_8hpp_source"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="26">
+        <label>DigitalOutputIoT.hpp</label>
+        <link refid="_digital_output_io_t_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>PubSubClient.h</label>
+      </node>
+      <node id="40">
+        <label>ESPAsyncWebServer.h</label>
+      </node>
+      <node id="2">
+        <label>ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>esp_log.h</label>
+      </node>
+      <node id="30">
+        <label>Wire.h</label>
+      </node>
+      <node id="27">
+        <label>ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>TimeLib.h</label>
+      </node>
+      <node id="22">
+        <label>IoTComponent.hpp</label>
+        <link refid="_io_t_component_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>vector</label>
+      </node>
+      <node id="42">
+        <label>ArduinoJson.h</label>
+      </node>
+      <node id="46">
+        <label>ota_html.h</label>
+        <link refid="ota__html_8h_source"/>
+      </node>
+      <node id="36">
+        <label>ESPMegaDisplay.hpp</label>
+        <link refid="_e_s_p_mega_display_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>driver/rmt.h</label>
+      </node>
+      <node id="11">
+        <label>ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>time.h</label>
+      </node>
+      <node id="43">
+        <label>AsyncJson.h</label>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="41">
+        <label>Update.h</label>
+      </node>
+      <node id="9">
+        <label>Adafruit_PWMServoDriver.h</label>
+      </node>
+      <node id="28">
+        <label>ETH.h</label>
+      </node>
+      <node id="18">
+        <label>MCP4725.h</label>
+      </node>
+      <node id="15">
+        <label>dhtnew.h</label>
+      </node>
+      <node id="20">
+        <label>ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>AnalogIoT.hpp</label>
+        <link refid="_analog_io_t_8hpp_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>AnalogCard.hpp</label>
+        <link refid="_analog_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DigitalOutputCard.hpp</label>
+        <link refid="_digital_output_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>DS18B20.h</label>
+      </node>
+      <node id="10">
+        <label>FRAM.h</label>
+      </node>
+      <node id="37">
+        <label>InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp_source"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PCF8574.h</label>
+      </node>
+      <node id="29">
+        <label>WiFi.h</label>
+      </node>
+      <node id="3">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;ESPMegaProOS.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Reserve<sp/>FRAM<sp/>address<sp/>0<sp/>-<sp/>1000<sp/>for<sp/>ESPMegaPRO<sp/>Internal<sp/>Use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(34<sp/>Bytes)<sp/>Address<sp/>0-33<sp/>for<sp/>Built-in<sp/>Digital<sp/>Output<sp/>Card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(266<sp/>Bytes)<sp/>Address<sp/>34-300<sp/>for<sp/>ESPMegaPRO<sp/>IoT<sp/>Module</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_e_s_p_mega_p_r_o_1ac06222dfa4d6dbf604d2a2490f0924ec" refkind="member"><highlight class="normal"><ref refid="class_e_s_p_mega_p_r_o_1ac06222dfa4d6dbf604d2a2490f0924ec" kindref="member">ESPMegaPRO::ESPMegaPRO</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" kindref="member">ESPMegaPRO::begin</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.begin(14,<sp/>33);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>fram.begin(FRAM_ADDRESS);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.begin(115200);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" kindref="member">installCard</ref>(1,<sp/>&amp;outputs);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>outputs.<ref refid="class_digital_output_card_1aa43b2f8d13abb0164f661eba5daa14ce" kindref="member">bindFRAM</ref>(&amp;fram,0);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>outputs.<ref refid="class_digital_output_card_1a500615c25557efcff072e98e65a8db33" kindref="member">loadFromFRAM</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>outputs.<ref refid="class_digital_output_card_1a3eed3e145a257bad60e3e0e82a74f7f7" kindref="member">setAutoSaveToFRAM</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!this-&gt;<ref refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" kindref="member">installCard</ref>(0,<sp/>&amp;inputs))<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>initialize<sp/>inputs&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Is<sp/>this<sp/>an<sp/>ESPMegaPRO<sp/>device?&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pinMap[16]<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4,<sp/>5,<sp/>6,<sp/>7,<sp/>15,<sp/>14,<sp/>13,<sp/>12,<sp/>11,<sp/>10,<sp/>9,<sp/>8};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>inputs.<ref refid="class_digital_input_card_1a7c73eabd0016245e681fedb328ba89d8" kindref="member">loadPinMap</ref>(pinMap);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" kindref="member">ESPMegaPRO::loop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>inputs.<ref refid="class_digital_input_card_1a0ab3d3df306ecce30f19a252f5a25a6d" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>outputs.<ref refid="class_digital_output_card_1aeae842b0338e6788b99fa623fffcbe89" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>255;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cardInstalled[i])<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cards[i]-&gt;loop();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(iotEnabled)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iot-&gt;<ref refid="class_e_s_p_mega_io_t_1a260083ed6e8710b7321f18942ad6eef8" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(internalDisplayEnabled)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>display-&gt;<ref refid="class_internal_display_1acba3729be902fcde3e30e754aef62330" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(webServerEnabled)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>webServer-&gt;<ref refid="class_e_s_p_mega_web_server_1ac2390697ddcc99604eed00a785dd2a4b" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450" kindref="member">ESPMegaPRO::installCard</ref>(uint8_t<sp/>slot,<sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref>*<sp/>card)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(slot<sp/>&gt;<sp/>255)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cardInstalled[slot])<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Card<sp/>already<sp/>installed<sp/>at<sp/>slot<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>slot);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!card-&gt;begin())<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>initialize<sp/>card<sp/>at<sp/>slot<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>slot);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>cards[slot]<sp/>=<sp/>card;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>cardInstalled[slot]<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>cardCount++;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_e_s_p_mega_p_r_o_1ab263d5baf53948d0790c5e22d3c2e4e3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1ab263d5baf53948d0790c5e22d3c2e4e3" kindref="member">ESPMegaPRO::updateTimeFromNTP</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>timeinfo;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(getLocalTime(&amp;timeinfo))</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structrtctime__t" kindref="compound">rtctime_t</ref><sp/>rtctime<sp/>=<sp/>this-&gt;<ref refid="class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f" kindref="member">getTime</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rtctime.hours<sp/>!=<sp/>timeinfo.tm_hour<sp/>||<sp/>rtctime.minutes<sp/>!=<sp/>timeinfo.tm_min<sp/>||</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rtctime.seconds<sp/>!=<sp/>timeinfo.tm_sec<sp/>||<sp/>rtctime.day<sp/>!=<sp/>timeinfo.tm_mday<sp/>||</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rtctime.month<sp/>!=<sp/>timeinfo.tm_mon<sp/>+<sp/>1<sp/>||<sp/>rtctime.year<sp/>!=<sp/>timeinfo.tm_year<sp/>+<sp/>1900)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_e_s_p_mega_p_r_o_1a456cfbdb9987a2e90e6f0eabeae42b83" kindref="member">setTime</ref>(timeinfo.tm_hour,<sp/>timeinfo.tm_min,<sp/>timeinfo.tm_sec,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeinfo.tm_mday,<sp/>timeinfo.tm_mon<sp/>+<sp/>1,<sp/>timeinfo.tm_year<sp/>+<sp/>1900);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f" refkind="member"><highlight class="normal"><ref refid="structrtctime__t" kindref="compound">rtctime_t</ref><sp/><ref refid="class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f" kindref="member">ESPMegaPRO::getTime</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>tmElements_t<sp/>timeElement;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>RTC.read(timeElement);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structrtctime__t" kindref="compound">rtctime_t</ref><sp/>time;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>time.hours<sp/>=<sp/>timeElement.Hour;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>time.minutes<sp/>=<sp/>timeElement.Minute;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>time.seconds<sp/>=<sp/>timeElement.Second;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>time.day<sp/>=<sp/>timeElement.Day;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>time.month<sp/>=<sp/>timeElement.Month;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>time.year<sp/>=<sp/>timeElement.Year<sp/>+<sp/>1970;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>time;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="class_e_s_p_mega_p_r_o_1a456cfbdb9987a2e90e6f0eabeae42b83" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1a456cfbdb9987a2e90e6f0eabeae42b83" kindref="member">ESPMegaPRO::setTime</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hours,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minutes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seconds,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>day,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>month,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>year)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>tmElements_t<sp/>timeElement;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>timeElement.Hour<sp/>=<sp/>hours;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>timeElement.Minute<sp/>=<sp/>minutes;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>timeElement.Second<sp/>=<sp/>seconds;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>timeElement.Day<sp/>=<sp/>day;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>timeElement.Month<sp/>=<sp/>month;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>timeElement.Year<sp/>=<sp/>year<sp/>-<sp/>1970;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>RTC.write(timeElement);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="class_e_s_p_mega_p_r_o_1aa6436515e96f420606fd7069737fc67f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1aa6436515e96f420606fd7069737fc67f" kindref="member">ESPMegaPRO::enableIotModule</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iotEnabled)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;iot<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_io_t" kindref="compound">ESPMegaIoT</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1afd192a63876d86300086522e701905de" kindref="member">bindFRAM</ref>(&amp;fram);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;iot-&gt;<ref refid="class_e_s_p_mega_io_t_1a12baf9ad36896f400c5c77fa7a32d3de" kindref="member">intr_begin</ref>(cards);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>iotEnabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="class_e_s_p_mega_p_r_o_1a569bef7ba6d96fdcbc7f02ad2cc5a422" refkind="member"><highlight class="normal"><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref>*<sp/><ref refid="class_e_s_p_mega_p_r_o_1a569bef7ba6d96fdcbc7f02ad2cc5a422" kindref="member">ESPMegaPRO::getCard</ref>(uint8_t<sp/>slot)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(slot<sp/>&gt;<sp/>255)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!cardInstalled[slot])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cards[slot];</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1a025ba61791a6e3b46c9c70e2f0de1f2f" kindref="member">ESPMegaPRO::enableInternalDisplay</ref>(HardwareSerial<sp/>*serial)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(internalDisplayEnabled)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!iotEnabled)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>enable<sp/>internal<sp/>display<sp/>without<sp/>IoT<sp/>module<sp/>enabled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Enabling<sp/>Internal<sp/>Display&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>display<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_internal_display" kindref="compound">InternalDisplay</ref>(serial);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Binding<sp/>Internal<sp/>Display<sp/>to<sp/>IoT<sp/>Module&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bindedGetTime<sp/>=<sp/>std::bind(&amp;<ref refid="class_e_s_p_mega_p_r_o_1aa2c6607c5b3b4c4662549173b1998a7f" kindref="member">ESPMegaPRO::getTime</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Binding<sp/>Internal<sp/>Display<sp/>to<sp/>Input/Output<sp/>Cards&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>display-&gt;<ref refid="class_internal_display_1a9e314baf652600542d649f5f0dd1cd68" kindref="member">bindInputCard</ref>(&amp;inputs);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>display-&gt;<ref refid="class_internal_display_1a9aa2e1da34488ae2d726cc8023555ec6" kindref="member">bindOutputCard</ref>(&amp;outputs);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>display-&gt;<ref refid="class_internal_display_1a0019ea04c0e81fdee50d190f948b3f05" kindref="member">begin</ref>(this-&gt;iot,bindedGetTime);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>internalDisplayEnabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_LOGD(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Internal<sp/>Display<sp/>Enabled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="class_e_s_p_mega_p_r_o_1a34d6ab7e6fe349bca6f41d8c86a8ab99" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1a34d6ab7e6fe349bca6f41d8c86a8ab99" kindref="member">ESPMegaPRO::dumpFRAMtoSerial</ref>(uint16_t<sp/>start,<sp/>uint16_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>start;<sp/>i<sp/>&lt;=end;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>%<sp/>16<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;\n%03d:<sp/>&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;%03d<sp/>&quot;</highlight><highlight class="normal">,<sp/>this-&gt;fram.read8(i));</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="class_e_s_p_mega_p_r_o_1a7590608e32da0efbf6c375aa3d3a0a77" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1a7590608e32da0efbf6c375aa3d3a0a77" kindref="member">ESPMegaPRO::dumpFRAMtoSerialASCII</ref>(uint16_t<sp/>start,<sp/>uint16_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>500;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.printf(</highlight><highlight class="stringliteral">&quot;%d:<sp/>%c\n&quot;</highlight><highlight class="normal">,<sp/>i,this-&gt;fram.read8(i));</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee" kindref="member">ESPMegaPRO::enableWebServer</ref>(uint16_t<sp/>port)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!iotEnabled)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>enable<sp/>web<sp/>server<sp/>without<sp/>IoT<sp/>module<sp/>enabled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(webServerEnabled)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGE(</highlight><highlight class="stringliteral">&quot;ESPMegaPRO&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Web<sp/>server<sp/>already<sp/>enabled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>webServer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_e_s_p_mega_web_server" kindref="compound">ESPMegaWebServer</ref>(port,<sp/>this-&gt;iot);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>webServer-&gt;<ref refid="class_e_s_p_mega_web_server_1adb3781890cee6513b494d27b18e6f5ff" kindref="member">bindFRAM</ref>(&amp;fram);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>webServer-&gt;<ref refid="class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>webServerEnabled<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.cpp"/>
+  </compounddef>
+</doxygen>

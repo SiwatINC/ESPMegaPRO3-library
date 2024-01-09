@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_io_t_component" kind="class" language="C++" prot="public">
+    <compoundname>IoTComponent</compoundname>
+    <derivedcompoundref refid="class_analog_io_t" prot="public" virt="non-virtual">AnalogIoT</derivedcompoundref>
+    <derivedcompoundref refid="class_climate_io_t" prot="public" virt="non-virtual">ClimateIoT</derivedcompoundref>
+    <derivedcompoundref refid="class_digital_input_io_t" prot="public" virt="non-virtual">DigitalInputIoT</derivedcompoundref>
+    <derivedcompoundref refid="class_digital_output_io_t" prot="public" virt="non-virtual">DigitalOutputIoT</derivedcompoundref>
+    <includes refid="_io_t_component_8hpp" local="no">IoTComponent.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_io_t_component_1aeb90ccffdbf21519987505b9f52f0a57" prot="protected" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* IoTComponent::base_topic</definition>
+        <argsstring></argsstring>
+        <name>base_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="34" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_io_t_component_1a81926ee5477da6738063128028597e3e" prot="protected" static="no" mutable="no">
+        <type>PubSubClient *</type>
+        <definition>PubSubClient* IoTComponent::mqtt</definition>
+        <argsstring></argsstring>
+        <name>mqtt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="37" column="22" bodyfile="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_io_t_component_1a8ea4f18d3f5adf232137f12d8a8f763a" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t IoTComponent::card_id</definition>
+        <argsstring></argsstring>
+        <name>card_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="38" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_io_t_component_1af3068b3087e942700f2756df61567470" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool IoTComponent::begin</definition>
+        <argsstring>(uint8_t card_id, ExpansionCard *card, PubSubClient *mqtt, char *base_topic)</argsstring>
+        <name>begin</name>
+        <reimplementedby refid="class_analog_io_t_1a3888c317175981272a603fe27054460a">begin</reimplementedby>
+        <reimplementedby refid="class_climate_io_t_1aad3d146120fb6390867d2900b7fe0f6b">begin</reimplementedby>
+        <reimplementedby refid="class_digital_input_io_t_1a97e335d982d3c8701a5bf6934bccd773">begin</reimplementedby>
+        <reimplementedby refid="class_digital_output_io_t_1a7360bb6922c644e1898cc0d2b2bb2373">begin</reimplementedby>
+        <param>
+          <type>uint8_t</type>
+          <declname>card_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> *</type>
+          <declname>card</declname>
+        </param>
+        <param>
+          <type>PubSubClient *</type>
+          <declname>mqtt</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>base_topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="26" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_io_t_component_1a1b3fbabfa0e9c1697f0edab1a8d14149" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IoTComponent::handleMqttMessage</definition>
+        <argsstring>(char *topic, char *payload)</argsstring>
+        <name>handleMqttMessage</name>
+        <reimplementedby refid="class_analog_io_t_1a24c2bf88a47a4cdaf8ebf5e55508ddbf">handleMqttMessage</reimplementedby>
+        <reimplementedby refid="class_climate_io_t_1a3ca9eea384da622be06cf56a3d264aff">handleMqttMessage</reimplementedby>
+        <reimplementedby refid="class_digital_input_io_t_1aeff76b54d9e9a589cbfe4b7e2a5c6911">handleMqttMessage</reimplementedby>
+        <reimplementedby refid="class_digital_output_io_t_1aea7aa08507f13b49e142532d728f074b">handleMqttMessage</reimplementedby>
+        <param>
+          <type>char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="27" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_io_t_component_1add98837edef95e9d4f31fba7e210cf09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IoTComponent::setMqttClient</definition>
+        <argsstring>(PubSubClient *mqtt)</argsstring>
+        <name>setMqttClient</name>
+        <param>
+          <type>PubSubClient *</type>
+          <declname>mqtt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="28" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/IoTComponent.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_io_t_component_1aa8b2aa560998451171ab6c39957cf787" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IoTComponent::publishReport</definition>
+        <argsstring>()</argsstring>
+        <name>publishReport</name>
+        <reimplementedby refid="class_analog_io_t_1ad49a200a7568281874f39b2f14f12621">publishReport</reimplementedby>
+        <reimplementedby refid="class_climate_io_t_1aa418416d349122f67b5df4c980dd3526">publishReport</reimplementedby>
+        <reimplementedby refid="class_digital_input_io_t_1ad157a557a9d2b002cfa6c155842c4cee">publishReport</reimplementedby>
+        <reimplementedby refid="class_digital_output_io_t_1a9330dd4073df5a61f68fdf5825de26e0">publishReport</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="29" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_io_t_component_1a3c5bf4cb3ba447ccbcbf45c9065f288d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t IoTComponent::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplementedby refid="class_analog_io_t_1ae16f9a69bc1cefda4b6cc766f5cbc9cd">getType</reimplementedby>
+        <reimplementedby refid="class_climate_io_t_1a488320647faf79d26fdf8f0ea406f315">getType</reimplementedby>
+        <reimplementedby refid="class_digital_input_io_t_1a71d4b9af91c829719a6c4873524e3203">getType</reimplementedby>
+        <reimplementedby refid="class_digital_output_io_t_1ae351ff6afcef3d1e6739222523ed7173">getType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="30" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_io_t_component_1acdf8bc6b4a9f9ac515ff1dc3b63aa330" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void IoTComponent::subscribe</definition>
+        <argsstring>()</argsstring>
+        <name>subscribe</name>
+        <reimplementedby refid="class_analog_io_t_1a37216e8cc0030b538ead2a7c30546d15">subscribe</reimplementedby>
+        <reimplementedby refid="class_climate_io_t_1aa450a354851fbc82b54e32f3ffd9d359">subscribe</reimplementedby>
+        <reimplementedby refid="class_digital_input_io_t_1ad95132332ba406da7c2c0eb97b66eef4">subscribe</reimplementedby>
+        <reimplementedby refid="class_digital_output_io_t_1aeffef9a2e359f4dd9a2c81c8ae478dd8">subscribe</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="31" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_io_t_component_1a652ae372e38701a301d82466eb0fd20e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IoTComponent::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="32" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/IoTComponent.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_io_t_component_1a223659969099a0a8aaf84e18c51014dc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IoTComponent::publishRelative</definition>
+        <argsstring>(const char *topic, const char *payload)</argsstring>
+        <name>publishRelative</name>
+        <param>
+          <type>const char *</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="35" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/IoTComponent.cpp" bodystart="7" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_io_t_component_1ab7841d6b92b52ed398d5ff1cac0a9625" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IoTComponent::subscribeRelative</definition>
+        <argsstring>(const char *topic)</argsstring>
+        <name>subscribeRelative</name>
+        <param>
+          <type>const char *</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="36" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/IoTComponent.cpp" bodystart="15" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="class_io_t_component" kindref="compound">IoTComponent</ref> class is a base class that is used to interface with an expansion card through MQTT. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>In order to create a new <ref refid="class_io_t_component" kindref="compound">IoTComponent</ref>, you should create a new class that inherits from this class. Your class should implement the following functions:<itemizedlist>
+<listitem><para>begin() : Initialize the component, record the card id, <ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> object, the PubSubClient object and the base topic</para>
+</listitem><listitem><para>handleMqttMessage() : Handle the MQTT messages for the component</para>
+</listitem><listitem><para>publishReport() : Publish all the reports for the component</para>
+</listitem><listitem><para>getType() : Get the type of the component, This should return the underlying <ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref> type</para>
+</listitem><listitem><para>subscribe() : Subscribe to the MQTT topics used by the component</para>
+</listitem><listitem><para>loop() : A function that is called in the main loop</para>
+</listitem></itemizedlist>
+</para>
+<para>Additionally, the inherited class will have access to these helper functions:<itemizedlist>
+<listitem><para>publishRelative() : Publish a message to a topic relative to the base topic and the card id</para>
+</listitem><listitem><para>subscribeRelative() : Subscribe to a topic relative to the base topic and the card id</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="warning"><para>This class is abstract and should not be instantiated directly. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>IoTComponent</label>
+        <link refid="class_io_t_component"/>
+      </node>
+      <node id="3">
+        <label>ClimateIoT</label>
+        <link refid="class_climate_io_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>DigitalOutputIoT</label>
+        <link refid="class_digital_output_io_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>DigitalInputIoT</label>
+        <link refid="class_digital_input_io_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AnalogIoT</label>
+        <link refid="class_analog_io_t"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" line="24" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/IoTComponent.hpp" bodystart="24" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_io_t_component_1aeb90ccffdbf21519987505b9f52f0a57" prot="protected" virt="non-virtual"><scope>IoTComponent</scope><name>base_topic</name></member>
+      <member refid="class_io_t_component_1af3068b3087e942700f2756df61567470" prot="public" virt="virtual"><scope>IoTComponent</scope><name>begin</name></member>
+      <member refid="class_io_t_component_1a8ea4f18d3f5adf232137f12d8a8f763a" prot="protected" virt="non-virtual"><scope>IoTComponent</scope><name>card_id</name></member>
+      <member refid="class_io_t_component_1a3c5bf4cb3ba447ccbcbf45c9065f288d" prot="public" virt="virtual"><scope>IoTComponent</scope><name>getType</name></member>
+      <member refid="class_io_t_component_1a1b3fbabfa0e9c1697f0edab1a8d14149" prot="public" virt="virtual"><scope>IoTComponent</scope><name>handleMqttMessage</name></member>
+      <member refid="class_io_t_component_1a652ae372e38701a301d82466eb0fd20e" prot="public" virt="non-virtual"><scope>IoTComponent</scope><name>loop</name></member>
+      <member refid="class_io_t_component_1a81926ee5477da6738063128028597e3e" prot="protected" virt="non-virtual"><scope>IoTComponent</scope><name>mqtt</name></member>
+      <member refid="class_io_t_component_1a223659969099a0a8aaf84e18c51014dc" prot="protected" virt="non-virtual"><scope>IoTComponent</scope><name>publishRelative</name></member>
+      <member refid="class_io_t_component_1aa8b2aa560998451171ab6c39957cf787" prot="public" virt="virtual"><scope>IoTComponent</scope><name>publishReport</name></member>
+      <member refid="class_io_t_component_1add98837edef95e9d4f31fba7e210cf09" prot="public" virt="non-virtual"><scope>IoTComponent</scope><name>setMqttClient</name></member>
+      <member refid="class_io_t_component_1acdf8bc6b4a9f9ac515ff1dc3b63aa330" prot="public" virt="virtual"><scope>IoTComponent</scope><name>subscribe</name></member>
+      <member refid="class_io_t_component_1ab7841d6b92b52ed398d5ff1cac0a9625" prot="protected" virt="non-virtual"><scope>IoTComponent</scope><name>subscribeRelative</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

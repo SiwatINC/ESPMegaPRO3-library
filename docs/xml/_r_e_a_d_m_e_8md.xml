@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>PlatformIO<sp/>library<sp/>for<sp/>ESPMega<sp/>PRO<sp/>(R3)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;ESPMegaPRO.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>setup()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ESPMega_begin();<sp/>//<sp/>Must<sp/>be<sp/>called<sp/>first<sp/>in<sp/>setup</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ESPMega_analogWrite(5,2048)<sp/>//<sp/>Write<sp/>PWM<sp/>value<sp/>of<sp/>2048<sp/>to<sp/>pin<sp/>5</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>loop()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ESPMega_loop();<sp/>//Must<sp/>be<sp/>called<sp/>in<sp/>loop</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>pin9<sp/>=<sp/>ESPMega_digitalRead(9)<sp/>//<sp/>Read<sp/>Digital<sp/>Input<sp/>Pin<sp/>9</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ESPMega_digitalWrite(9,pin9)<sp/>//<sp/>Mirror<sp/>Input<sp/>Pin<sp/>9<sp/>to<sp/>Output<sp/>Pin<sp/>9</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/README.md"/>
+  </compounddef>
+</doxygen>

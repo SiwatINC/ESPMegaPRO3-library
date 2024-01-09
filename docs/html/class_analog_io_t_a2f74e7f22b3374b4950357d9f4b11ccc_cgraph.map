@@ -1,0 +1,4 @@
+<map id="AnalogIoT::publishADC" name="AnalogIoT::publishADC">
+<area shape="rect" id="node1" title="Publishes the state of a DAC." alt="" coords="5,5,175,32"/>
+<area shape="rect" id="node2" href="$class_analog_card.html#a57f3af0fdcbc6ccb651007540c6829c4" title="Reads the value from the specified analog pin." alt="" coords="223,5,405,32"/>
+</map>

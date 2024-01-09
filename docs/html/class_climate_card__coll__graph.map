@@ -1,0 +1,4 @@
+<map id="ClimateCard" name="ClimateCard">
+<area shape="rect" id="node1" title="The ClimateCard class is a class for controlling an air conditioner." alt="" coords="13,80,116,107"/>
+<area shape="rect" id="node2" href="$class_expansion_card.html" title="The base class for all expansion cards." alt="" coords="5,5,124,32"/>
+</map>

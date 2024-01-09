@@ -1,0 +1,5 @@
+<map id="AnalogIoT::setADCConversionInterval" name="AnalogIoT::setADCConversionInterval">
+<area shape="rect" id="node1" title="Sets the interval at which the value of an ADC channel is read." alt="" coords="531,5,745,47"/>
+<area shape="rect" id="node2" href="$class_analog_io_t.html#a27f21df078fd88872c9f54f58f2c37bd" title="Processes a message received on the MQTT topic for setting the state of a DAC." alt="" coords="280,5,483,47"/>
+<area shape="rect" id="node3" href="$class_analog_io_t.html#a24c2bf88a47a4cdaf8ebf5e55508ddbf" title="Publishes the state of all DACs." alt="" coords="5,13,232,39"/>
+</map>

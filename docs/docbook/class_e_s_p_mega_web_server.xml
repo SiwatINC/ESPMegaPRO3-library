@@ -1,0 +1,438 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_e_s_p_mega_web_server" xml:lang="en-US">
+<title>ESPMegaWebServer Class Reference</title>
+<indexterm><primary>ESPMegaWebServer</primary></indexterm>
+<para>
+
+<para>Provides a web server for <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ESPMegaWebServer.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3">ESPMegaWebServer</link> (uint16_t port, <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> *iot)</para>
+
+<para>Construct a new <link linkend="_class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3">ESPMegaWebServer::ESPMegaWebServer</link> objecy. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_web_server_1accf7cb756ec0141017c449468e3acdbd"/><link linkend="_class_e_s_p_mega_web_server_1accf7cb756ec0141017c449468e3acdbd">~ESPMegaWebServer</link> ()</para>
+
+<para>Destroy the <link linkend="_class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3">ESPMegaWebServer::ESPMegaWebServer</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298">begin</link> ()</para>
+
+<para>Start the web server. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_web_server_1ac2390697ddcc99604eed00a785dd2a4b">loop</link> ()</para>
+
+<para>The loop function for the web server. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095">resetCredentials</link> ()</para>
+
+<para>Reset web username and password to default. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_class_e_s_p_mega_web_server_1a9a51eef8c5a27d0a8147d10a64b0a762">getWebUsername</link> ()</para>
+
+<para>Get the web username. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_class_e_s_p_mega_web_server_1a44f59352c6202fbf4172ea5ab72ef1d0">getWebPassword</link> ()</para>
+
+<para>Get the web password. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_web_server_1a9c7298ea1f25f41f4742302f1f91a89b">setWebUsername</link> (const char *username)</para>
+
+<para>Set the web username. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_web_server_1add17e20b33d97076a26e6bfe3d664db0">setWebPassword</link> (const char *password)</para>
+
+<para>Set the web password. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_web_server_1adb3781890cee6513b494d27b18e6f5ff">bindFRAM</link> (FRAM *fram)</para>
+
+<para>Bind the FRAM object to the web server. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf">loadCredentialsFromFRAM</link> ()</para>
+
+<para>Load web username and password from FRAM. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530">saveCredentialsToFRAM</link> ()</para>
+
+<para>Save web username and password to FRAM. </para>
+</listitem>
+            <listitem><para>AsyncWebServer * <link linkend="_class_e_s_p_mega_web_server_1a6f09ae056c6ecd1641bb30b272e2eb37">getServer</link> ()</para>
+
+<para>Get the AsyncWebServer object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Provides a web server for <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link>. </para>
+
+
+
+<para>This class provides a web server for <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link>. It is used to configure the device and to update the firmware. This class also allows to save the credentials to access the web server in the FRAM memory. User can also add custom endpoints to the web server.</para>
+
+<para>This class use FRAM address 301-400 </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3"/>    <section>
+    <title>ESPMegaWebServer()</title>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<para><computeroutput>ESPMegaWebServer::ESPMegaWebServer (uint16_t port, <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> * iot)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_e_s_p_mega_web_server_1aede4d3aebb8172455eba0c852bf563b3">ESPMegaWebServer::ESPMegaWebServer</link> objecy. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Although you can instantiate this class directly, it is recommended to use the ESPMegaPRO.webServer object instead.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>port</entry>
+                                <entry>
+<para>The TCP port to listen on </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>iot</entry>
+                                <entry>
+<para>A pointer to the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298"/>    <section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>begin</secondary></indexterm>
+<para><computeroutput>void ESPMegaWebServer::begin ( )</computeroutput></para><para>
+
+<para>Start the web server. </para>
+</para>
+
+<para>This method starts the web server and registers the necessary handlers.</para>
+
+<para><note><title>Note</title>
+
+<para>This method should be called after the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object has been initialized. </para>
+
+<para>This method is automatically called if you use <link linkend="_class_e_s_p_mega_p_r_o_1a77429b766c275aba8d6f2462688fd3ee">ESPMegaPRO::enableWebServer()</link> </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_a6261ed861e01b18ed4fbd150497c1298_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1adb3781890cee6513b494d27b18e6f5ff"/>    <section>
+    <title>bindFRAM()</title>
+<indexterm><primary>bindFRAM</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>bindFRAM</secondary></indexterm>
+<para><computeroutput>void ESPMegaWebServer::bindFRAM (FRAM * fram)</computeroutput></para><para>
+
+<para>Bind the FRAM object to the web server. </para>
+</para>
+
+<para>This method binds the FRAM object to the web server so that the web server can read and write credentials to the FRAM.</para>
+
+<para><note><title>Note</title>
+
+<para>The FRAM object must be bound to the web server before calling <link linkend="_class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298">ESPMegaWebServer::begin()</link> </para>
+
+<para>This class takes 64 bytes of FRAM starting from address 301, however address 301-400 is reserved for it.</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fram</entry>
+                                <entry>
+<para>A pointer to the FRAM object </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_adb3781890cee6513b494d27b18e6f5ff_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1a6f09ae056c6ecd1641bb30b272e2eb37"/>    <section>
+    <title>getServer()</title>
+<indexterm><primary>getServer</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>getServer</secondary></indexterm>
+<para><computeroutput>AsyncWebServer * ESPMegaWebServer::getServer ( )</computeroutput></para><para>
+
+<para>Get the AsyncWebServer object. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The AsyncWebServer object </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1a44f59352c6202fbf4172ea5ab72ef1d0"/>    <section>
+    <title>getWebPassword()</title>
+<indexterm><primary>getWebPassword</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>getWebPassword</secondary></indexterm>
+<para><computeroutput>char * ESPMegaWebServer::getWebPassword ( )</computeroutput></para><para>
+
+<para>Get the web password. </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>The returned pointer should not be freed or modified.</para>
+</warning>
+<formalpara><title>Returns</title>
+
+<para>The web password </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1a9a51eef8c5a27d0a8147d10a64b0a762"/>    <section>
+    <title>getWebUsername()</title>
+<indexterm><primary>getWebUsername</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>getWebUsername</secondary></indexterm>
+<para><computeroutput>char * ESPMegaWebServer::getWebUsername ( )</computeroutput></para><para>
+
+<para>Get the web username. </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>The returned pointer should not be freed or modified.</para>
+</warning>
+<formalpara><title>Returns</title>
+
+<para>The web username </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1aa51292db61fcd51b03558589f1e43fbf"/>    <section>
+    <title>loadCredentialsFromFRAM()</title>
+<indexterm><primary>loadCredentialsFromFRAM</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>loadCredentialsFromFRAM</secondary></indexterm>
+<para><computeroutput>void ESPMegaWebServer::loadCredentialsFromFRAM ( )</computeroutput></para><para>
+
+<para>Load web username and password from FRAM. </para>
+</para>
+
+<para>This method loads the web server credentials from the FRAM.</para>
+
+<para><note><title>Note</title>
+
+<para>This method is automatically called by <link linkend="_class_e_s_p_mega_web_server_1a6261ed861e01b18ed4fbd150497c1298">ESPMegaWebServer::begin()</link> </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_aa51292db61fcd51b03558589f1e43fbf_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_aa51292db61fcd51b03558589f1e43fbf_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1ac2390697ddcc99604eed00a785dd2a4b"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void ESPMegaWebServer::loop ( )</computeroutput></para><para>
+
+<para>The loop function for the web server. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This method is not used by the <link linkend="_class_e_s_p_mega_web_server">ESPMegaWebServer</link> class as of now. </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_ac2390697ddcc99604eed00a785dd2a4b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1a15d05ef973863bfd460879a414be7095"/>    <section>
+    <title>resetCredentials()</title>
+<indexterm><primary>resetCredentials</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>resetCredentials</secondary></indexterm>
+<para><computeroutput>void ESPMegaWebServer::resetCredentials ( )</computeroutput></para><para>
+
+<para>Reset web username and password to default. </para>
+</para>
+
+<para>This method resets the web server credentials to the default username and password.</para>
+
+<para><note><title>Note</title>
+
+<para>The default username and password is both &quot;admin&quot; </para>
+</note>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_a15d05ef973863bfd460879a414be7095_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_a15d05ef973863bfd460879a414be7095_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1a77e5ca53ae15af09a632ce98330a9530"/>    <section>
+    <title>saveCredentialsToFRAM()</title>
+<indexterm><primary>saveCredentialsToFRAM</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>saveCredentialsToFRAM</secondary></indexterm>
+<para><computeroutput>void ESPMegaWebServer::saveCredentialsToFRAM ( )</computeroutput></para><para>
+
+<para>Save web username and password to FRAM. </para>
+</para>
+
+<para>This method saves the web server credentials to the FRAM. </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_web_server_a77e5ca53ae15af09a632ce98330a9530_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1add17e20b33d97076a26e6bfe3d664db0"/>    <section>
+    <title>setWebPassword()</title>
+<indexterm><primary>setWebPassword</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>setWebPassword</secondary></indexterm>
+<para><computeroutput>void ESPMegaWebServer::setWebPassword (const char * password)</computeroutput></para><para>
+
+<para>Set the web password. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>password</entry>
+                                <entry>
+<para>The new web password </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_web_server_1a9c7298ea1f25f41f4742302f1f91a89b"/>    <section>
+    <title>setWebUsername()</title>
+<indexterm><primary>setWebUsername</primary><secondary>ESPMegaWebServer</secondary></indexterm>
+<indexterm><primary>ESPMegaWebServer</primary><secondary>setWebUsername</secondary></indexterm>
+<para><computeroutput>void ESPMegaWebServer::setWebUsername (const char * username)</computeroutput></para><para>
+
+<para>Set the web username. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>username</entry>
+                                <entry>
+<para>The new web username </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp/home/siwat/ESPMegaPRO3-library/<link linkend="__e_s_p_mega_web_server_8cpp">ESPMegaWebServer.cpp</link></section>
+</section>

@@ -1,0 +1,7 @@
+<map id="IoTComponent" name="IoTComponent">
+<area shape="rect" id="node1" title="The IoTComponent class is a base class that is used to interface with an expansion card through MQTT." alt="" coords="171,5,287,32"/>
+<area shape="rect" id="node2" href="$class_analog_io_t.html" title="The AnalogIoT class is a class for connecting the Analog Card to the IoT module." alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="$class_climate_io_t.html" title="The ClimateIoT class is a class for connecting the Climate Card to the IoT module." alt="" coords="117,80,210,107"/>
+<area shape="rect" id="node4" href="$class_digital_input_io_t.html" title="The DigitalInputIoT class is a class for connecting the Digital Input Card to the IoT module." alt="" coords="235,80,353,107"/>
+<area shape="rect" id="node5" href="$class_digital_output_io_t.html" title="The DigitalOutputIoT class is a class interfacing with the Digital Output Card through MQTT." alt="" coords="377,80,507,107"/>
+</map>

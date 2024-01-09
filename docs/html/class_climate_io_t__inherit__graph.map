@@ -1,0 +1,4 @@
+<map id="ClimateIoT" name="ClimateIoT">
+<area shape="rect" id="node1" title="The ClimateIoT class is a class for connecting the Climate Card to the IoT module." alt="" coords="17,80,110,107"/>
+<area shape="rect" id="node2" href="$class_io_t_component.html" title="The IoTComponent class is a base class that is used to interface with an expansion card through MQTT." alt="" coords="5,5,121,32"/>
+</map>

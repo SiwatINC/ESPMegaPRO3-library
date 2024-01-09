@@ -1,0 +1,4 @@
+<map id="DigitalOutputCard::bindFRAM" name="DigitalOutputCard::bindFRAM">
+<area shape="rect" id="node1" title="Bind a FRAM to the card." alt="" coords="207,5,353,47"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_p_r_o.html#a582f6a9d00c0313e772166bd6c52d06d" title="Initializes the ESPMegaPRO object." alt="" coords="5,13,159,39"/>
+</map>

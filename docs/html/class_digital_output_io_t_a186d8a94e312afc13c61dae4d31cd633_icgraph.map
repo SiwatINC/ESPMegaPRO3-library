@@ -1,0 +1,8 @@
+<map id="DigitalOutputIoT::publishDigitalOutputState" name="DigitalOutputIoT::publishDigitalOutputState">
+<area shape="rect" id="node1" title="Publish the state of the specified digital output." alt="" coords="697,39,880,80"/>
+<area shape="rect" id="node2" href="$class_digital_output_io_t.html#a254ad82d5f263d8d335e8007fcea9061" title="Publish the state and value of the specified digital output." alt="" coords="467,39,649,80"/>
+<area shape="rect" id="node3" href="$class_digital_output_io_t.html#a1aeb4b1e36da7aec99808971f1d95cbf" title="Handle the value change of a pin." alt="" coords="237,5,417,47"/>
+<area shape="rect" id="node5" href="$class_digital_output_io_t.html#a5ea97114ef576a05c2ace8bced6be2f8" title="Publish the state of all digital outputs." alt="" coords="236,71,419,112"/>
+<area shape="rect" id="node4" href="$class_digital_output_io_t.html#a7360bb6922c644e1898cc0d2b2bb2373" title="Initialize the DigitalOutputIoT object." alt="" coords="11,13,183,39"/>
+<area shape="rect" id="node6" href="$class_digital_output_io_t.html#a9330dd4073df5a61f68fdf5825de26e0" title="Publish all digital outputs." alt="" coords="5,71,188,112"/>
+</map>

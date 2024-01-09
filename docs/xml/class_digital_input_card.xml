@@ -1,0 +1,771 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="class_digital_input_card" kind="class" language="C++" prot="public">
+    <compoundname>DigitalInputCard</compoundname>
+    <basecompoundref refid="class_expansion_card" prot="public" virt="non-virtual">ExpansionCard</basecompoundref>
+    <includes refid="_digital_input_card_8hpp" local="no">DigitalInputCard.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_digital_input_card_1a38a9ae09bee127e66850a918b40c0aea" prot="private" static="no" mutable="no">
+        <type>PCF8574</type>
+        <definition>PCF8574 DigitalInputCard::inputBankA</definition>
+        <argsstring></argsstring>
+        <name>inputBankA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="47" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1af23c20288677123182c67dbd2a9dac19" prot="private" static="no" mutable="no">
+        <type>PCF8574</type>
+        <definition>PCF8574 DigitalInputCard::inputBankB</definition>
+        <argsstring></argsstring>
+        <name>inputBankB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="48" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1abd520d0a7c3f825e59e279a23b4d7164" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::address_a</definition>
+        <argsstring></argsstring>
+        <name>address_a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="49" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1af6510f11c61d6efbeae09f9f7bd67786" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::address_b</definition>
+        <argsstring></argsstring>
+        <name>address_b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="50" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1a0789ef0e420765e6d513d72cdffa03f1" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::inputBufferA</definition>
+        <argsstring></argsstring>
+        <name>inputBufferA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="51" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1a202d172bea45cbcb5cc26e6b1ea7d071" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::inputBufferB</definition>
+        <argsstring></argsstring>
+        <name>inputBufferB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="52" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1a2e4dfa61df69fbf16f2cdb5f9053b52d" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::previousInputBufferA</definition>
+        <argsstring></argsstring>
+        <name>previousInputBufferA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="53" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1a7781b1756fa570dffb73293cc55425cf" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::previousInputBufferB</definition>
+        <argsstring></argsstring>
+        <name>previousInputBufferB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="54" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1adbb095c053800c118935c8721200bce9" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t DigitalInputCard::debounceTime[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>debounceTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="55" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1a5f89f5c4ea39ed87ead4a810387d8005" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t DigitalInputCard::lastDebounceTime[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>lastDebounceTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="56" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1a5206f4437cdbb533a9fa449a2f476eaf" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::pinMap[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>pinMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="58" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1af396558663455e97c9a65648a6e8712e" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::virtualPinMap[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>virtualPinMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="60" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1ad5f693d7ff734aa13516bfb3d80902a8" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::callbacks_handler_index</definition>
+        <argsstring></argsstring>
+        <name>callbacks_handler_index</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="61" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_digital_input_card_1a297f63cf73623205a896f7abb412fead" prot="private" static="no" mutable="no">
+        <type>std::map&lt; uint8_t, std::function&lt; void(uint8_t, bool)&gt; &gt;</type>
+        <definition>std::map&lt;uint8_t, std::function&lt;void(uint8_t, bool)&gt; &gt; DigitalInputCard::callbacks</definition>
+        <argsstring></argsstring>
+        <name>callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="62" column="18" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_digital_input_card_1aef0f217a8ef38ca72ed89493467e4c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DigitalInputCard::DigitalInputCard</definition>
+        <argsstring>(uint8_t address_a, uint8_t address_b)</argsstring>
+        <name>DigitalInputCard</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>address_a</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>address_b</declname>
+        </param>
+        <briefdescription>
+<para>Create a new Digital Input Card object with the specified address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If you are using the ESPMegaI/O board, you should use the dip switch constructor</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address_a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ESPMegaI/O address of bank A </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address_b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ESPMegaI/O address of bank B </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="21" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a56c0295b4571c26a100c2e7600d0f50c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DigitalInputCard::DigitalInputCard</definition>
+        <argsstring>(bool bit0, bool bit1, bool bit2, bool bit3, bool bit4, bool bit5)</argsstring>
+        <name>DigitalInputCard</name>
+        <param>
+          <type>bool</type>
+          <declname>bit0</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit1</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit3</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit4</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bit5</declname>
+        </param>
+        <briefdescription>
+<para>Create a new Digital Input Card object with the specified position on the dip switch. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The bit 0 are at the left of the dip switch</para>
+</simplesect>
+<simplesect kind="warning"><para>There are 6 switches on the dip switch, 3 for bank A and 3 for bank B, They should be unique for each bank accross all the cards</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bit0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the first switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the second switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the third switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the fourth switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the fifth switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit5</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position of the sixth switch on the dip switch </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="23" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="31" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a7b6b51455a010ff0c53fc04ac8091d0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool DigitalInputCard::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_expansion_card_1aecd52cc9b31b642f2cd78f01654005de">begin</reimplements>
+        <briefdescription>
+<para>Initialize the Digital Input Card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the initialization is successful, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="25" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="56" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a09416f14975c453bb7b9d1fdfc033fd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DigitalInputCard::digitalRead</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>digitalRead</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+<para>Read the input from the specified pin, always refresh the input buffers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to read from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the pin is HIGH, false if the pin is LOW </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="27" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="89" bodyend="92"/>
+        <referencedby refid="class_digital_input_io_t_1ad5079368dd7bb6ac31152feca4412cf5" compoundref="_digital_input_io_t_8cpp" startline="111" endline="120">DigitalInputIoT::publishDigitalInput</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a367136fd2642dace15231c63c4520753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DigitalInputCard::digitalRead</definition>
+        <argsstring>(uint8_t pin, bool refresh)</argsstring>
+        <name>digitalRead</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>refresh</declname>
+        </param>
+        <briefdescription>
+<para>Read the input from the specified pin, also refresh the input buffers if refresh is true. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to read from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>refresh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, the input buffers will be refreshed before reading the pin </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the pin is HIGH, false if the pin is LOW </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="29" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="101" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a0ab3d3df306ecce30f19a252f5a25a6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DigitalInputCard::loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <reimplements refid="class_expansion_card_1a3b3364d9de40d039a3dbfe9141dea0a9">loop</reimplements>
+        <briefdescription>
+<para>A loop to refresh the input buffers and check for pin changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Although this function can be called in the main loop, it is recommended install the card in ESPMega to automatically manage the loop </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="31" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="167" bodyend="185"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="50" endline="67">ESPMegaPRO::loop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1adc87fbc7c209d96442c314a1dad8dba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::getInputBufferA</definition>
+        <argsstring>()</argsstring>
+        <name>getInputBufferA</name>
+        <briefdescription>
+<para>Get the input buffer for bank A (the first 8 pins) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The input buffer for bank A where the first bit is the first pin and the last bit is the last pin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="33" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="192" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a1e3db327def862be330475b6841f8f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::getInputBufferB</definition>
+        <argsstring>()</argsstring>
+        <name>getInputBufferB</name>
+        <briefdescription>
+<para>Get the input buffer for bank B (the last 8 pins) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The input buffer for bank B where the first bit is the first pin and the last bit is the last pin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="35" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="208" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a9affdad2396322da8b90075e48fef731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputCard::setDebounceTime</definition>
+        <argsstring>(uint8_t pin, uint32_t debounceTime)</argsstring>
+        <name>setDebounceTime</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>debounceTime</declname>
+        </param>
+        <briefdescription>
+<para>Set the debounce time for the specified pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Debounce is the time in milliseconds that the pin should be stable before the callback function is called This is useful to prevent false triggers when the input is noisy An example of this is when the input is connected to a mechanical switch</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to set the debounce time for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>debounceTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The debounce time in milliseconds </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="37" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="257" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a0de99f06d2d41a752026486008ea2261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::registerCallback</definition>
+        <argsstring>(std::function&lt; void(uint8_t, bool)&gt; callback)</argsstring>
+        <name>registerCallback</name>
+        <param>
+          <type>std::function&lt; void(uint8_t, bool)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Register a callback function to be called when a pin changes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback function to be called </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The handler of the callback function </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="39" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="225" bodyend="229"/>
+        <referencedby refid="class_internal_display_1a9e314baf652600542d649f5f0dd1cd68" compoundref="_internal_display_8cpp" startline="471" endline="483">InternalDisplay::bindInputCard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1ad6fb5a8020c323520cd4748c9dc01448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputCard::unregisterCallback</definition>
+        <argsstring>(uint8_t handler)</argsstring>
+        <name>unregisterCallback</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+<para>Unregister a callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handler of the callback function to unregister </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="41" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="268" bodyend="271"/>
+        <referencedby refid="class_internal_display_1a9ee706c80f56dd8e5088f282c467b146" compoundref="_internal_display_8cpp" startline="488" endline="494">InternalDisplay::unbindInputCard</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a7c73eabd0016245e681fedb328ba89d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputCard::loadPinMap</definition>
+        <argsstring>(uint8_t pinMap[16])</argsstring>
+        <name>loadPinMap</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pinMap</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>Load the pin map for the card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A pin map is an array of 16 elements that maps the physical pins to virtual pins The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class The physical pins are the pins on the Input IC, This can be found on the schematic of the ESPMegaI/O board This function is useful if you want to change the number identification of the pins to match your project needs</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pinMap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin map to load </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="43" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="283" bodyend="292"/>
+        <referencedby refid="class_e_s_p_mega_p_r_o_1a582f6a9d00c0313e772166bd6c52d06d" compoundref="_e_s_p_mega_pro_o_s_8cpp" startline="24" endline="40">ESPMegaPRO::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1aa782d6ffc13a686955811adf36b618d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t DigitalInputCard::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <reimplements refid="class_expansion_card_1a83371d97f1deba4e419093b193aea99c">getType</reimplements>
+        <briefdescription>
+<para>Get the type of the card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The type of the card </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="45" column="17" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="299" bodyend="302"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_digital_input_card_1ad76ad04ab49dcba257e6dfad305e0685" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputCard::refreshInputBankA</definition>
+        <argsstring>()</argsstring>
+        <name>refreshInputBankA</name>
+        <briefdescription>
+<para>Read the input state from the input ic and store it in the input buffer for bank A. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="63" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="234" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a409e3e46ad6483514dcc919e1a03eb76" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputCard::refreshInputBankB</definition>
+        <argsstring>()</argsstring>
+        <name>refreshInputBankB</name>
+        <briefdescription>
+<para>Read the input state from the input ic and store it in the input buffer for bank B. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="64" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="242" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_digital_input_card_1a7a3a989147a217a42dcab8ab7d66a5b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DigitalInputCard::handlePinChange</definition>
+        <argsstring>(int pin, uint8_t &amp;currentBuffer, uint8_t &amp;previousBuffer)</argsstring>
+        <name>handlePinChange</name>
+        <param>
+          <type>int</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>uint8_t &amp;</type>
+          <declname>currentBuffer</declname>
+        </param>
+        <param>
+          <type>uint8_t &amp;</type>
+          <declname>previousBuffer</declname>
+        </param>
+        <briefdescription>
+<para>Check if the specified pin changed since the last call to this function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function compares the current input buffer with the previous input buffer to detect changes</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to check </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>currentBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current input buffer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>previousBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The previous input buffer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="65" column="14" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.cpp" bodystart="133" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> Digital Input Card. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class represents the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> Digital Input Card. It allows you to read the state of the digital inputs from the <ref refid="class_e_s_p_mega_p_r_o" kindref="compound">ESPMegaPRO</ref> Digital Input Card. It also allows you to register callback functions to be called when a pin changes. The callback function also support debouncing. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DigitalInputCard</label>
+        <link refid="class_digital_input_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DigitalInputCard</label>
+        <link refid="class_digital_input_card"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ExpansionCard</label>
+        <link refid="class_expansion_card"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" line="18" column="1" bodyfile="/home/siwat/ESPMegaPRO3-library/DigitalInputCard.hpp" bodystart="18" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_digital_input_card_1abd520d0a7c3f825e59e279a23b4d7164" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>address_a</name></member>
+      <member refid="class_digital_input_card_1af6510f11c61d6efbeae09f9f7bd67786" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>address_b</name></member>
+      <member refid="class_digital_input_card_1a7b6b51455a010ff0c53fc04ac8091d0e" prot="public" virt="virtual"><scope>DigitalInputCard</scope><name>begin</name></member>
+      <member refid="class_digital_input_card_1a297f63cf73623205a896f7abb412fead" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>callbacks</name></member>
+      <member refid="class_digital_input_card_1ad5f693d7ff734aa13516bfb3d80902a8" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>callbacks_handler_index</name></member>
+      <member refid="class_digital_input_card_1adbb095c053800c118935c8721200bce9" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>debounceTime</name></member>
+      <member refid="class_digital_input_card_1aef0f217a8ef38ca72ed89493467e4c83" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>DigitalInputCard</name></member>
+      <member refid="class_digital_input_card_1a56c0295b4571c26a100c2e7600d0f50c" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>DigitalInputCard</name></member>
+      <member refid="class_digital_input_card_1a09416f14975c453bb7b9d1fdfc033fd9" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>digitalRead</name></member>
+      <member refid="class_digital_input_card_1a367136fd2642dace15231c63c4520753" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>digitalRead</name></member>
+      <member refid="class_expansion_card_1a3b5afabfdb7183b37b78be1e20e4cde6" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>ExpansionCard</name></member>
+      <member refid="class_digital_input_card_1adc87fbc7c209d96442c314a1dad8dba8" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>getInputBufferA</name></member>
+      <member refid="class_digital_input_card_1a1e3db327def862be330475b6841f8f8c" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>getInputBufferB</name></member>
+      <member refid="class_digital_input_card_1aa782d6ffc13a686955811adf36b618d4" prot="public" virt="virtual"><scope>DigitalInputCard</scope><name>getType</name></member>
+      <member refid="class_digital_input_card_1a7a3a989147a217a42dcab8ab7d66a5b1" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>handlePinChange</name></member>
+      <member refid="class_digital_input_card_1a38a9ae09bee127e66850a918b40c0aea" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>inputBankA</name></member>
+      <member refid="class_digital_input_card_1af23c20288677123182c67dbd2a9dac19" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>inputBankB</name></member>
+      <member refid="class_digital_input_card_1a0789ef0e420765e6d513d72cdffa03f1" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>inputBufferA</name></member>
+      <member refid="class_digital_input_card_1a202d172bea45cbcb5cc26e6b1ea7d071" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>inputBufferB</name></member>
+      <member refid="class_digital_input_card_1a5f89f5c4ea39ed87ead4a810387d8005" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>lastDebounceTime</name></member>
+      <member refid="class_digital_input_card_1a7c73eabd0016245e681fedb328ba89d8" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>loadPinMap</name></member>
+      <member refid="class_digital_input_card_1a0ab3d3df306ecce30f19a252f5a25a6d" prot="public" virt="virtual"><scope>DigitalInputCard</scope><name>loop</name></member>
+      <member refid="class_digital_input_card_1a5206f4437cdbb533a9fa449a2f476eaf" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>pinMap</name></member>
+      <member refid="class_digital_input_card_1a2e4dfa61df69fbf16f2cdb5f9053b52d" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>previousInputBufferA</name></member>
+      <member refid="class_digital_input_card_1a7781b1756fa570dffb73293cc55425cf" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>previousInputBufferB</name></member>
+      <member refid="class_digital_input_card_1ad76ad04ab49dcba257e6dfad305e0685" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>refreshInputBankA</name></member>
+      <member refid="class_digital_input_card_1a409e3e46ad6483514dcc919e1a03eb76" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>refreshInputBankB</name></member>
+      <member refid="class_digital_input_card_1a0de99f06d2d41a752026486008ea2261" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>registerCallback</name></member>
+      <member refid="class_digital_input_card_1a9affdad2396322da8b90075e48fef731" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>setDebounceTime</name></member>
+      <member refid="class_digital_input_card_1ad6fb5a8020c323520cd4748c9dc01448" prot="public" virt="non-virtual"><scope>DigitalInputCard</scope><name>unregisterCallback</name></member>
+      <member refid="class_digital_input_card_1af396558663455e97c9a65648a6e8712e" prot="private" virt="non-virtual"><scope>DigitalInputCard</scope><name>virtualPinMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

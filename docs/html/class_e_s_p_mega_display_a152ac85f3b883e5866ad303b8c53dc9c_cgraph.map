@@ -1,0 +1,5 @@
+<map id="ESPMegaDisplay::waitForValidPayload" name="ESPMegaDisplay::waitForValidPayload">
+<area shape="rect" id="node1" title="Waits for a valid payload from the display adapter." alt="" coords="5,39,224,80"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a6f0c3ec00e8a7d52cf9572ebe54ef367" title="Checks if the received payload is valid." alt="" coords="283,5,484,47"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_display.html#ae442963a5ed99212bba46c41f3b7b215" title="Receives and processes serial commands from the display adapter." alt="" coords="272,71,495,112"/>
+</map>

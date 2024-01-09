@@ -1,0 +1,60 @@
+\hypertarget{struct_network_config}{}\doxysection{Network\+Config Struct Reference}
+\label{struct_network_config}\index{NetworkConfig@{NetworkConfig}}
+
+
+The network configuration struct.  
+
+
+
+
+{\ttfamily \#include $<$ESPMega\+Io\+T.\+hpp$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_network_config_a0176904843001d1f2435ac52ca040ede}\label{struct_network_config_a0176904843001d1f2435ac52ca040ede}} 
+IPAddress \mbox{\hyperlink{struct_network_config_a0176904843001d1f2435ac52ca040ede}{ip}}
+\begin{DoxyCompactList}\small\item\em The IP address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_ab4e53b665582ae32752d5e5c22c7aa41}\label{struct_network_config_ab4e53b665582ae32752d5e5c22c7aa41}} 
+IPAddress \mbox{\hyperlink{struct_network_config_ab4e53b665582ae32752d5e5c22c7aa41}{gateway}}
+\begin{DoxyCompactList}\small\item\em The gateway address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_a18dd746c622cb7a38da58ca94ff31657}\label{struct_network_config_a18dd746c622cb7a38da58ca94ff31657}} 
+IPAddress \mbox{\hyperlink{struct_network_config_a18dd746c622cb7a38da58ca94ff31657}{subnet}}
+\begin{DoxyCompactList}\small\item\em The subnet mask. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_a2706b2e04d704496b2202e476fa9635c}\label{struct_network_config_a2706b2e04d704496b2202e476fa9635c}} 
+IPAddress \mbox{\hyperlink{struct_network_config_a2706b2e04d704496b2202e476fa9635c}{dns1}}
+\begin{DoxyCompactList}\small\item\em The primary DNS server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_a393560e108d63338ae825bbab2c25e2c}\label{struct_network_config_a393560e108d63338ae825bbab2c25e2c}} 
+IPAddress \mbox{\hyperlink{struct_network_config_a393560e108d63338ae825bbab2c25e2c}{dns2}}
+\begin{DoxyCompactList}\small\item\em The secondary DNS server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_a450d89f26365aa8339be5b77682fbd91}\label{struct_network_config_a450d89f26365aa8339be5b77682fbd91}} 
+char \mbox{\hyperlink{struct_network_config_a450d89f26365aa8339be5b77682fbd91}{hostname}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em The hostname. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_a9884b31dba672d1f24636fb64a55d38a}\label{struct_network_config_a9884b31dba672d1f24636fb64a55d38a}} 
+bool \mbox{\hyperlink{struct_network_config_a9884b31dba672d1f24636fb64a55d38a}{use\+Static\+Ip}}
+\begin{DoxyCompactList}\small\item\em Whether to use a static IP, if false, DHCP will be used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_a0233b29fea3a45f59e21b824e2850f5b}\label{struct_network_config_a0233b29fea3a45f59e21b824e2850f5b}} 
+bool \mbox{\hyperlink{struct_network_config_a0233b29fea3a45f59e21b824e2850f5b}{use\+Wifi}}
+\begin{DoxyCompactList}\small\item\em Whether to use Wi\+Fi or Ethernet, if false, Ethernet will be used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_ae4c0e464e09b9f8aa2c9321d7defd7ea}\label{struct_network_config_ae4c0e464e09b9f8aa2c9321d7defd7ea}} 
+bool \mbox{\hyperlink{struct_network_config_ae4c0e464e09b9f8aa2c9321d7defd7ea}{wifi\+Use\+Auth}}
+\begin{DoxyCompactList}\small\item\em Whether to use Wi\+Fi authentication, if false, ssid and password will be ignored. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_a7d4ea00f216ac189ef206b2ee979df19}\label{struct_network_config_a7d4ea00f216ac189ef206b2ee979df19}} 
+char \mbox{\hyperlink{struct_network_config_a7d4ea00f216ac189ef206b2ee979df19}{ssid}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em The Wi\+Fi SSID, even if wifi\+Use\+Auth is false, this should be set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_network_config_aa26399d81f1ca21f2094db5f0adc76d2}\label{struct_network_config_aa26399d81f1ca21f2094db5f0adc76d2}} 
+char \mbox{\hyperlink{struct_network_config_aa26399d81f1ca21f2094db5f0adc76d2}{password}} \mbox{[}32\mbox{]}
+\begin{DoxyCompactList}\small\item\em The Wi\+Fi password, even if wifi\+Use\+Auth is false, this should be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The network configuration struct. 
+
+\begin{DoxyNote}{Note}
+This struct will be saved to FRAM when calling save\+Network\+Config 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/siwat/\+ESPMega\+PRO3-\/library/ESPMega\+Io\+T.\+hpp\end{DoxyCompactItemize}

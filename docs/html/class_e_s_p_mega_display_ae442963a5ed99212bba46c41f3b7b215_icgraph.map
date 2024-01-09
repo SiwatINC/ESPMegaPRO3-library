@@ -1,0 +1,10 @@
+<map id="ESPMegaDisplay::recieveSerialCommand" name="ESPMegaDisplay::recieveSerialCommand">
+<area shape="rect" id="node1" title="Receives and processes serial commands from the display adapter." alt="" coords="531,49,753,90"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_display.html#a465333c65fdbdbd62f6a8982b03ecf3e" title="The main loop function of the display." alt="" coords="290,5,457,32"/>
+<area shape="rect" id="node3" href="$class_internal_display.html#acba3729be902fcde3e30e754aef62330" title="The main loop of the Internal Display." alt="" coords="295,56,451,83"/>
+<area shape="rect" id="node5" href="$class_e_s_p_mega_display.html#a152ac85f3b883e5866ad303b8c53dc9c" title="Waits for a valid payload from the display adapter." alt="" coords="264,118,483,159"/>
+<area shape="rect" id="node4" href="$class_e_s_p_mega_p_r_o.html#a7bd135e51c69c802aaacda4cf016e599" title="The main loop for the ESPMegaPRO object." alt="" coords="38,45,183,72"/>
+<area shape="rect" id="node6" href="$class_e_s_p_mega_display.html#a72fe852174fb83d438cbc7ea70a9ec6f" title="Gets the value of a number component from the display." alt="" coords="5,96,216,123"/>
+<area shape="rect" id="node7" href="$class_e_s_p_mega_display.html#a69bf78095709e4d36d7ceef987909dfe" title="Gets the value of a string component from the display." alt="" coords="12,147,209,173"/>
+<area shape="rect" id="node8" href="$class_e_s_p_mega_display.html#aa9ee805cf25d3f70b98ff650da742e9a" title="Gets the value of a number component from the display and stores it in a buffer." alt="" coords="12,198,209,239"/>
+</map>

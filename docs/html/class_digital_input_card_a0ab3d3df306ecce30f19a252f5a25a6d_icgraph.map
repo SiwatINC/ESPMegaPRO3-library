@@ -1,0 +1,4 @@
+<map id="DigitalInputCard::loop" name="DigitalInputCard::loop">
+<area shape="rect" id="node1" title="A loop to refresh the input buffers and check for pin changes." alt="" coords="199,5,363,32"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_p_r_o.html#a7bd135e51c69c802aaacda4cf016e599" title="The main loop for the ESPMegaPRO object." alt="" coords="5,5,151,32"/>
+</map>

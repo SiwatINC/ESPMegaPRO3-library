@@ -1,0 +1,9 @@
+<map id="AnalogIoT::begin" name="AnalogIoT::begin">
+<area shape="rect" id="node1" title="Initializes the AnalogIoT object." alt="" coords="5,31,136,57"/>
+<area shape="rect" id="node2" href="$class_analog_io_t.html#a84402cb7e45ce0da63a860ee16716ce8" title="Publishes the state of a DAC." alt="" coords="184,31,399,57"/>
+<area shape="rect" id="node3" href="$class_analog_io_t.html#a108ab3e98144f9ff07ec88ba794d594c" title="Publishes the state of a DAC." alt="" coords="447,31,616,57"/>
+<area shape="rect" id="node4" href="$class_analog_io_t.html#af9686e6a38360e26a2c476c96f9d7c91" title="Publishes the state of a DAC." alt="" coords="665,5,868,32"/>
+<area shape="rect" id="node6" href="$class_analog_io_t.html#a87bed89be4587e778eac2f8cabed4bab" title="Publishes the value of a DAC." alt="" coords="664,56,869,83"/>
+<area shape="rect" id="node5" href="$class_analog_card.html#aa10a9eb6b4c1f1b7660ea5183a0f618e" title="Gets the state of the specified DAC pin." alt="" coords="919,5,1107,32"/>
+<area shape="rect" id="node7" href="$class_analog_card.html#a7793911eaabacee0d40dac626e39279a" title="Gets the value of the specified DAC pin." alt="" coords="917,56,1108,83"/>
+</map>

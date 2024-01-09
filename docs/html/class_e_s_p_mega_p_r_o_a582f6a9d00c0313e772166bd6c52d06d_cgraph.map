@@ -1,0 +1,10 @@
+<map id="ESPMegaPRO::begin" name="ESPMegaPRO::begin">
+<area shape="rect" id="node1" title="Initializes the ESPMegaPRO object." alt="" coords="5,130,159,157"/>
+<area shape="rect" id="node2" href="$class_digital_output_card.html#aa43b2f8d13abb0164f661eba5daa14ce" title="Bind a FRAM to the card." alt="" coords="239,5,386,47"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_p_r_o.html#a7064148ad97cdb5fc871789fbf2ba450" title="Installs an expansion card to the specified slot." alt="" coords="219,71,406,98"/>
+<area shape="rect" id="node4" href="$class_digital_output_card.html#a500615c25557efcff072e98e65a8db33" title="Load the states and values of all the pins from the FRAM." alt="" coords="239,123,386,164"/>
+<area shape="rect" id="node7" href="$class_digital_input_card.html#a7c73eabd0016245e681fedb328ba89d8" title="Load the pin map for the card." alt="" coords="207,189,419,215"/>
+<area shape="rect" id="node8" href="$class_digital_output_card.html#a3eed3e145a257bad60e3e0e82a74f7f7" title="Set the auto save to FRAM." alt="" coords="235,240,391,281"/>
+<area shape="rect" id="node5" href="$class_digital_output_card.html#afa3fc66e71b03ee75ef022f92431466d" title="Set the pwm value of the specified pin." alt="" coords="467,123,613,164"/>
+<area shape="rect" id="node6" href="$class_digital_output_card.html#a99ac93ac96289b95063d4d1e1e2b7893" title="Save a single pin value to FRAM." alt="" coords="661,123,823,164"/>
+</map>

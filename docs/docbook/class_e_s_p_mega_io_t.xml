@@ -1,0 +1,1366 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_e_s_p_mega_io_t" xml:lang="en-US">
+<title>ESPMegaIoT Class Reference</title>
+<indexterm><primary>ESPMegaIoT</primary></indexterm>
+<para>
+
+<para>The <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> class is a class that is used to interface with the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> IoT module. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ESPMegaIoT.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_e_s_p_mega_io_t_1affa7c3b532147b2c485f5c3113f0a8a3">ESPMegaIoT</link> ()</para>
+
+<para>Create a new <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1a2e59b40473015d237898b93aef5631b9"/><link linkend="_class_e_s_p_mega_io_t_1a2e59b40473015d237898b93aef5631b9">~ESPMegaIoT</link> ()</para>
+
+<para>Destroy the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a12baf9ad36896f400c5c77fa7a32d3de">intr_begin</link> (<link linkend="_class_expansion_card">ExpansionCard</link> *cards[])</para>
+
+<para>Begin the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a260083ed6e8710b7321f18942ad6eef8">loop</link> ()</para>
+
+<para>The main loop for the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1ae7323d1d3ff23494b68a748c1eb57891">registerCard</link> (uint8_t card_id)</para>
+
+<para>Register an existing card for use with IoT. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a11e8435455ffecc362eb4de09087d43a">unregisterCard</link> (uint8_t card_id)</para>
+
+<para>Unregister a card. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1aba6676558bdfe8123028cbe3cf924eab"/>void <link linkend="_class_e_s_p_mega_io_t_1aba6676558bdfe8123028cbe3cf924eab">publishCard</link> (uint8_t card_id)</para>
+
+<para>Publish all cards&apos;s reports. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a740ea6dc48ae78b87d48afc39f00d992">publishRelative</link> (char *topic, char *payload)</para>
+
+<para>Publish a message relative to the base topic. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a98e8c822491c06be6823328e133507a1">subscribeRelative</link> (char *topic)</para>
+
+<para>Subscribe to a topic relative to the base topic. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a098f74442df4c0b5059f0d94921c64f5">subscribe</link> (char *topic)</para>
+
+<para>Subscribe to a topic. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a30629a0c025c0f20d84ab8ff7a9c437f">unsubscribeFromTopic</link> (char *topic)</para>
+
+<para>Unsubscribe from a topic. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1ac90fb46005eeb8528bc6f7108d4a7c06">connectToWifi</link> (char *ssid, char *password)</para>
+
+<para>Connect to a wifi network. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1af7728b5bfaf7cb4849c127b739dda575">connectToWifi</link> (char *ssid)</para>
+
+<para>Connect to a unsecured wifi network. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1a4e382d99e13bafc5937e774cc14d6227"/>void <link linkend="_class_e_s_p_mega_io_t_1a4e382d99e13bafc5937e774cc14d6227">disconnectFromWifi</link> ()</para>
+
+<para>Disconnect from the wifi network. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_io_t_1a8c18fddf81218ea5c69bca2eb064167f">wifiConnected</link> ()</para>
+
+<para>Check if the wifi is connected. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1a2a167a8e30202a4fc34141595b795492"/>void <link linkend="_class_e_s_p_mega_io_t_1a2a167a8e30202a4fc34141595b795492">ethernetBegin</link> ()</para>
+
+<para>Begin the ethernet interface. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414"/>void <link linkend="_class_e_s_p_mega_io_t_1a02bd57229c6f8b3f163c21bb6ae78414">loadNetworkConfig</link> ()</para>
+
+<para>Load the network config from FRAM. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba"/>void <link linkend="_class_e_s_p_mega_io_t_1aec0e8b4a584d9cdccec777bd981726ba">saveNetworkConfig</link> ()</para>
+
+<para>Save the network config to FRAM. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_network_config">NetworkConfig</link> * <link linkend="_class_e_s_p_mega_io_t_1ab0ee8902014f9d08c97f0ffe11f66133">getNetworkConfig</link> ()</para>
+
+<para>Get the network config. </para>
+</listitem>
+            <listitem><para><link linkend="_struct_mqtt_config">MqttConfig</link> * <link linkend="_class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c">getMqttConfig</link> ()</para>
+
+<para>Get the MQTT config. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a16b33cc73cccefd62577dca8f015ee43">setMqttConfig</link> (<link linkend="_struct_mqtt_config">MqttConfig</link> mqtt_config)</para>
+
+<para>Set the MQTT config. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b"/>void <link linkend="_class_e_s_p_mega_io_t_1ae03cab69f4e68d829611ed5399ba1c3b">saveMqttConfig</link> ()</para>
+
+<para>Save the MQTT config to FRAM. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7"/>void <link linkend="_class_e_s_p_mega_io_t_1a2c3f8fa952d6a1e008b4b15990f9a2e7">loadMqttConfig</link> ()</para>
+
+<para>Load the MQTT config from FRAM. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3"/>void <link linkend="_class_e_s_p_mega_io_t_1aea329bb2d424ea758be8f8502655dfc3">connectNetwork</link> ()</para>
+
+<para>Connect to the network using the current config. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a426932179c2d84864e3b1fb269723fc6">setNetworkConfig</link> (<link linkend="_struct_network_config">NetworkConfig</link> network_config)</para>
+
+<para>Set the network config. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4"/>void <link linkend="_class_e_s_p_mega_io_t_1a6a1f92a8f3ca5ce73e93851f18892cb4">connectToMqtt</link> ()</para>
+
+<para>Connect to MQTT with the current config. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_io_t_1a0dc0ebc659c880d5b17c85f341987535">connectToMqtt</link> (char *client_id, char *mqtt_server, uint16_t mqtt_port, char *mqtt_user, char *mqtt_password)</para>
+
+<para>Connect to a MQTT broker with authentication. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_io_t_1a6033a2b376f85c2f912f77e9af0a1a2a">connectToMqtt</link> (char *client_id, char *mqtt_server, uint16_t mqtt_port)</para>
+
+<para>Connect to a MQTT broker without authentication. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_io_t_1af9365947904e2fe67965db7c12164eac">mqttConnected</link> ()</para>
+
+<para>Check if the MQTT is connected. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_e_s_p_mega_io_t_1a634dfa685dd2e7d5c0a442d4a85c3e1a"/>void <link linkend="_class_e_s_p_mega_io_t_1a634dfa685dd2e7d5c0a442d4a85c3e1a">disconnectFromMqtt</link> ()</para>
+
+<para>Disconnect from the MQTT broker. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1ae70528fc480706a1e7aeed202c40736e">publish</link> (const char *topic, const char *payload)</para>
+
+<para>Publish a message to a topic. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_e_s_p_mega_io_t_1aedcb19a15a935777f1ccc51f24b7c07d">registerMqttCallback</link> (std::function&lt; void(char *, char *)&gt; callback)</para>
+
+<para>Register a callback for MQTT messages. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a9a8ef4e5e7b98c0b77e339a5b4b847cf">unregisterMqttCallback</link> (uint8_t handler)</para>
+
+<para>Unregister a callback. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_e_s_p_mega_io_t_1abb24084f6a8a448b4f6aea35bd4c7679">registerRelativeMqttCallback</link> (std::function&lt; void(char *, char *)&gt; callback)</para>
+
+<para>Register a callback for MQTT messages relative to the base topic. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a34be62570b94a256c2cda7f354cc9909">unregisterRelativeMqttCallback</link> (uint8_t handler)</para>
+
+<para>Unregister a relative MQTT callback. </para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_class_e_s_p_mega_io_t_1adabafbe2c88bf37b3a90e0e1373ab752">registerSubscribeCallback</link> (std::function&lt; void(void)&gt; callback)</para>
+
+<para>Register a function to be called when the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object is subscribing to topics. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a0816eddc3a7bfd7685959a8cc6dec129">unregisterSubscribeCallback</link> (uint8_t handler)</para>
+
+<para>Unregister a subscribe callback. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a92e3a81d45a4389e5945c46486182e9b">setBaseTopic</link> (char *base_topic)</para>
+
+<para>Set the base topic for the IoT. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1a2da8aec25ea170e5974f786798191fcb">bindEthernetInterface</link> (ETHClass *ethernetIface)</para>
+
+<para>Bind an ethernet interface to the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_e_s_p_mega_io_t_1acb0b6d3616f924ae793981f8653b142f">networkConnected</link> ()</para>
+
+<para>Check if the network is connected. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_e_s_p_mega_io_t_1afd192a63876d86300086522e701905de">bindFRAM</link> (FRAM *fram)</para>
+
+<para>Bind a FRAM object to the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</listitem>
+            <listitem><para><link linkend="_class_io_t_component">IoTComponent</link> * <link linkend="_class_e_s_p_mega_io_t_1a667661f7ed0bcd013561c3f5d637a4fd">getComponent</link> (uint8_t card_id)</para>
+
+<para>Get the <link linkend="_class_io_t_component">IoTComponent</link> object for a card. </para>
+</listitem>
+            <listitem><para>IPAddress <link linkend="_class_e_s_p_mega_io_t_1ae6aad5ece3729e612352e2256e44bbec">getETHIp</link> ()</para>
+
+<para>Get the Ethernet IP Address. </para>
+</listitem>
+            <listitem><para>IPAddress <link linkend="_class_e_s_p_mega_io_t_1ae0f8dc4901511ccd52cb81409bc50574">getWifiIp</link> ()</para>
+
+<para>Get the Wifi IP address. </para>
+</listitem>
+            <listitem><para>IPAddress <link linkend="_class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0">getIp</link> ()</para>
+
+<para>Get the IP address of the currently active network interface. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_e_s_p_mega_io_t_1a3ed44db4c8d69dc8f9f611acfeb609cf">getETHMac</link> ()</para>
+
+<para>Get the MAC Address of the Ethernet interface. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_e_s_p_mega_io_t_1ae6bb7062882ac48df2f4ea98618e5e30">getWifiMac</link> ()</para>
+
+<para>Get the MAC Address of the Wifi interface. </para>
+</listitem>
+            <listitem><para>String <link linkend="_class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163">getMac</link> ()</para>
+
+<para>Get the MAC Address of the currently active network interface. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> class is a class that is used to interface with the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> IoT module. </para>
+
+
+
+<para>This class allows you to register IoT components and interface with them through MQTT. This class also manages the network and MQTT connections for you. Supports both WiFi and Ethernet. Also allows you to save and load network and MQTT configurations to and from FRAM. Also provides MQTT helpers for publishing and subscribing to topics. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_e_s_p_mega_io_t_1affa7c3b532147b2c485f5c3113f0a8a3"/>    <section>
+    <title>ESPMegaIoT()</title>
+<indexterm><primary>ESPMegaIoT</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<para><computeroutput>ESPMegaIoT::ESPMegaIoT ( )</computeroutput></para><para>
+
+<para>Create a new <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>You shold not create this object directly, Instead, you should use the ESPMegaPRO::iot object </para>
+</note>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_e_s_p_mega_io_t_1a2da8aec25ea170e5974f786798191fcb"/>    <section>
+    <title>bindEthernetInterface()</title>
+<indexterm><primary>bindEthernetInterface</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>bindEthernetInterface</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::bindEthernetInterface (ETHClass * ethernetIface)</computeroutput></para><para>
+
+<para>Bind an ethernet interface to the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ethernetIface</entry>
+                                <entry>
+<para>The ethernet interface to bind (ETH for <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> R3) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1afd192a63876d86300086522e701905de"/>    <section>
+    <title>bindFRAM()</title>
+<indexterm><primary>bindFRAM</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>bindFRAM</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::bindFRAM (FRAM * fram)</computeroutput></para><para>
+
+<para>Bind a FRAM object to the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>This class is hardcode to use the FRAM address 34-300</para>
+</note>
+
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>fram</entry>
+                                <entry>
+<para>The FRAM object to bind </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_afd192a63876d86300086522e701905de_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a6033a2b376f85c2f912f77e9af0a1a2a"/>    <section>
+    <title>connectToMqtt()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>connectToMqtt</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>connectToMqtt</secondary></indexterm>
+<para><computeroutput>bool ESPMegaIoT::connectToMqtt (char * client_id, char * mqtt_server, uint16_t mqtt_port)</computeroutput></para><para>
+
+<para>Connect to a MQTT broker without authentication. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>client_id</entry>
+                                <entry>
+<para>The client id to use </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt_server</entry>
+                                <entry>
+<para>The MQTT server to connect to </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt_port</entry>
+                                <entry>
+<para>The MQTT port to connect to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the connection is successful, false otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a0dc0ebc659c880d5b17c85f341987535"/>    <section>
+    <title>connectToMqtt()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>connectToMqtt</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>connectToMqtt</secondary></indexterm>
+<para><computeroutput>bool ESPMegaIoT::connectToMqtt (char * client_id, char * mqtt_server, uint16_t mqtt_port, char * mqtt_user, char * mqtt_password)</computeroutput></para><para>
+
+<para>Connect to a MQTT broker with authentication. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>client_id</entry>
+                                <entry>
+<para>The client id to use </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt_server</entry>
+                                <entry>
+<para>The MQTT server to connect to </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt_port</entry>
+                                <entry>
+<para>The MQTT port to connect to </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt_user</entry>
+                                <entry>
+<para>The MQTT username to use </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mqtt_password</entry>
+                                <entry>
+<para>The MQTT password to use </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>True if the connection is successful, false otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1af7728b5bfaf7cb4849c127b739dda575"/>    <section>
+    <title>connectToWifi()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>connectToWifi</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>connectToWifi</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::connectToWifi (char * ssid)</computeroutput></para><para>
+
+<para>Connect to a unsecured wifi network. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ssid</entry>
+                                <entry>
+<para>The SSID of the wifi network </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1ac90fb46005eeb8528bc6f7108d4a7c06"/>    <section>
+    <title>connectToWifi()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>connectToWifi</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>connectToWifi</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::connectToWifi (char * ssid, char * password)</computeroutput></para><para>
+
+<para>Connect to a wifi network. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ssid</entry>
+                                <entry>
+<para>The SSID of the wifi network </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>password</entry>
+                                <entry>
+<para>The password of the wifi network </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_ac90fb46005eeb8528bc6f7108d4a7c06_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a667661f7ed0bcd013561c3f5d637a4fd"/>    <section>
+    <title>getComponent()</title>
+<indexterm><primary>getComponent</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getComponent</secondary></indexterm>
+<para><computeroutput><link linkend="_class_io_t_component">IoTComponent</link> * ESPMegaIoT::getComponent (uint8_t card_id)</computeroutput></para><para>
+
+<para>Get the <link linkend="_class_io_t_component">IoTComponent</link> object for a card. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>card_id</entry>
+                                <entry>
+<para>The id of the card </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The <link linkend="_class_io_t_component">IoTComponent</link> object for the card </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1ae6aad5ece3729e612352e2256e44bbec"/>    <section>
+    <title>getETHIp()</title>
+<indexterm><primary>getETHIp</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getETHIp</secondary></indexterm>
+<para><computeroutput>IPAddress ESPMegaIoT::getETHIp ( )</computeroutput></para><para>
+
+<para>Get the Ethernet IP Address. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The Ethernet IP Address </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_ae6aad5ece3729e612352e2256e44bbec_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a3ed44db4c8d69dc8f9f611acfeb609cf"/>    <section>
+    <title>getETHMac()</title>
+<indexterm><primary>getETHMac</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getETHMac</secondary></indexterm>
+<para><computeroutput>String ESPMegaIoT::getETHMac ( )</computeroutput></para><para>
+
+<para>Get the MAC Address of the Ethernet interface. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The MAC Address of the Ethernet interface </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_a3ed44db4c8d69dc8f9f611acfeb609cf_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a6fa8479ba86d6cafb32a82cbde94cdb0"/>    <section>
+    <title>getIp()</title>
+<indexterm><primary>getIp</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getIp</secondary></indexterm>
+<para><computeroutput>IPAddress ESPMegaIoT::getIp ( )</computeroutput></para><para>
+
+<para>Get the IP address of the currently active network interface. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The IP address of the currently active network interface </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_a6fa8479ba86d6cafb32a82cbde94cdb0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1ac2c1a59d86f1c8ca3c76ec4870614163"/>    <section>
+    <title>getMac()</title>
+<indexterm><primary>getMac</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getMac</secondary></indexterm>
+<para><computeroutput>String ESPMegaIoT::getMac ( )</computeroutput></para><para>
+
+<para>Get the MAC Address of the currently active network interface. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The MAC Address of the currently active network interface </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_ac2c1a59d86f1c8ca3c76ec4870614163_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a831d8c372ae931eeaabbe999dad27e5c"/>    <section>
+    <title>getMqttConfig()</title>
+<indexterm><primary>getMqttConfig</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getMqttConfig</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_mqtt_config">MqttConfig</link> * ESPMegaIoT::getMqttConfig ( )</computeroutput></para><para>
+
+<para>Get the MQTT config. </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>You should not modify the returned struct directly</para>
+</warning>
+<formalpara><title>Returns</title>
+
+<para>The MQTT config struct </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_a831d8c372ae931eeaabbe999dad27e5c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1ab0ee8902014f9d08c97f0ffe11f66133"/>    <section>
+    <title>getNetworkConfig()</title>
+<indexterm><primary>getNetworkConfig</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getNetworkConfig</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_network_config">NetworkConfig</link> * ESPMegaIoT::getNetworkConfig ( )</computeroutput></para><para>
+
+<para>Get the network config. </para>
+</para>
+
+<para><warning><title>Warning</title>
+
+<para>You should not modify the returned struct directly</para>
+</warning>
+<formalpara><title>Returns</title>
+
+<para>The network config struct </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_ab0ee8902014f9d08c97f0ffe11f66133_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1ae0f8dc4901511ccd52cb81409bc50574"/>    <section>
+    <title>getWifiIp()</title>
+<indexterm><primary>getWifiIp</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getWifiIp</secondary></indexterm>
+<para><computeroutput>IPAddress ESPMegaIoT::getWifiIp ( )</computeroutput></para><para>
+
+<para>Get the Wifi IP address. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The Wifi IP address </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_ae0f8dc4901511ccd52cb81409bc50574_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1ae6bb7062882ac48df2f4ea98618e5e30"/>    <section>
+    <title>getWifiMac()</title>
+<indexterm><primary>getWifiMac</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>getWifiMac</secondary></indexterm>
+<para><computeroutput>String ESPMegaIoT::getWifiMac ( )</computeroutput></para><para>
+
+<para>Get the MAC Address of the Wifi interface. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>The MAC Address of the Wifi interface </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_ae6bb7062882ac48df2f4ea98618e5e30_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a12baf9ad36896f400c5c77fa7a32d3de"/>    <section>
+    <title>intr_begin()</title>
+<indexterm><primary>intr_begin</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>intr_begin</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::intr_begin (<link linkend="_class_expansion_card">ExpansionCard</link> * cards[])</computeroutput></para><para>
+
+<para>Begin the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>cards</entry>
+                                <entry>
+<para>The array of <link linkend="_class_expansion_card">ExpansionCard</link> objects </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_a12baf9ad36896f400c5c77fa7a32d3de_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a260083ed6e8710b7321f18942ad6eef8"/>    <section>
+    <title>loop()</title>
+<indexterm><primary>loop</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>loop</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::loop ( )</computeroutput></para><para>
+
+<para>The main loop for the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Normally you should not call this function, Instead, you should call <link linkend="_class_e_s_p_mega_p_r_o_1a7bd135e51c69c802aaacda4cf016e599">ESPMegaPRO::loop()</link> </para>
+</note>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_a260083ed6e8710b7321f18942ad6eef8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1af9365947904e2fe67965db7c12164eac"/>    <section>
+    <title>mqttConnected()</title>
+<indexterm><primary>mqttConnected</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>mqttConnected</secondary></indexterm>
+<para><computeroutput>bool ESPMegaIoT::mqttConnected ( )</computeroutput></para><para>
+
+<para>Check if the MQTT is connected. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the MQTT is connected, false otherwise </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1acb0b6d3616f924ae793981f8653b142f"/>    <section>
+    <title>networkConnected()</title>
+<indexterm><primary>networkConnected</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>networkConnected</secondary></indexterm>
+<para><computeroutput>bool ESPMegaIoT::networkConnected ( )</computeroutput></para><para>
+
+<para>Check if the network is connected. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the network is connected, false otherwise </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_e_s_p_mega_io_t_acb0b6d3616f924ae793981f8653b142f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1ae70528fc480706a1e7aeed202c40736e"/>    <section>
+    <title>publish()</title>
+<indexterm><primary>publish</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>publish</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::publish (const char * topic, const char * payload)</computeroutput></para><para>
+
+<para>Publish a message to a topic. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic to publish to </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The payload to publish </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a740ea6dc48ae78b87d48afc39f00d992"/>    <section>
+    <title>publishRelative()</title>
+<indexterm><primary>publishRelative</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>publishRelative</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::publishRelative (char * topic, char * payload)</computeroutput></para><para>
+
+<para>Publish a message relative to the base topic. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic to publish to </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>payload</entry>
+                                <entry>
+<para>The payload to publish </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1ae7323d1d3ff23494b68a748c1eb57891"/>    <section>
+    <title>registerCard()</title>
+<indexterm><primary>registerCard</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>registerCard</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::registerCard (uint8_t card_id)</computeroutput></para><para>
+
+<para>Register an existing card for use with IoT. </para>
+</para>
+
+<para>This function registers an existing card for use with IoT The card should be installed using <link linkend="_class_e_s_p_mega_p_r_o_1a7064148ad97cdb5fc871789fbf2ba450">ESPMegaPRO::installCard()</link> before calling this function</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>card_id</entry>
+                                <entry>
+<para>The id of the card </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1aedcb19a15a935777f1ccc51f24b7c07d"/>    <section>
+    <title>registerMqttCallback()</title>
+<indexterm><primary>registerMqttCallback</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>registerMqttCallback</secondary></indexterm>
+<para><computeroutput>uint8_t ESPMegaIoT::registerMqttCallback (std::function&lt; void(char *, char *)&gt; callback)</computeroutput></para><para>
+
+<para>Register a callback for MQTT messages. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handler for the callback </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1abb24084f6a8a448b4f6aea35bd4c7679"/>    <section>
+    <title>registerRelativeMqttCallback()</title>
+<indexterm><primary>registerRelativeMqttCallback</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>registerRelativeMqttCallback</secondary></indexterm>
+<para><computeroutput>uint8_t ESPMegaIoT::registerRelativeMqttCallback (std::function&lt; void(char *, char *)&gt; callback)</computeroutput></para><para>
+
+<para>Register a callback for MQTT messages relative to the base topic. </para>
+</para>
+
+<para>The message&apos;s base topic will be removed before calling the callback</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handler for the callback </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1adabafbe2c88bf37b3a90e0e1373ab752"/>    <section>
+    <title>registerSubscribeCallback()</title>
+<indexterm><primary>registerSubscribeCallback</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>registerSubscribeCallback</secondary></indexterm>
+<para><computeroutput>uint8_t ESPMegaIoT::registerSubscribeCallback (std::function&lt; void(void)&gt; callback)</computeroutput></para><para>
+
+<para>Register a function to be called when the <link linkend="_class_e_s_p_mega_io_t">ESPMegaIoT</link> object is subscribing to topics. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>The callback function </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The handler for the callback </para>
+</formalpara>
+</para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a92e3a81d45a4389e5945c46486182e9b"/>    <section>
+    <title>setBaseTopic()</title>
+<indexterm><primary>setBaseTopic</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>setBaseTopic</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::setBaseTopic (char * base_topic)</computeroutput></para><para>
+
+<para>Set the base topic for the IoT. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>base_topic</entry>
+                                <entry>
+<para>The base topic </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a16b33cc73cccefd62577dca8f015ee43"/>    <section>
+    <title>setMqttConfig()</title>
+<indexterm><primary>setMqttConfig</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>setMqttConfig</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::setMqttConfig (<link linkend="_struct_mqtt_config">MqttConfig</link> mqtt_config)</computeroutput></para><para>
+
+<para>Set the MQTT config. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>mqtt_config</entry>
+                                <entry>
+<para>The MQTT config struct </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a426932179c2d84864e3b1fb269723fc6"/>    <section>
+    <title>setNetworkConfig()</title>
+<indexterm><primary>setNetworkConfig</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>setNetworkConfig</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::setNetworkConfig (<link linkend="_struct_network_config">NetworkConfig</link> network_config)</computeroutput></para><para>
+
+<para>Set the network config. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>network_config</entry>
+                                <entry>
+<para>The network config struct </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a098f74442df4c0b5059f0d94921c64f5"/>    <section>
+    <title>subscribe()</title>
+<indexterm><primary>subscribe</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>subscribe</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::subscribe (char * topic)</computeroutput></para><para>
+
+<para>Subscribe to a topic. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic to subscribe to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a98e8c822491c06be6823328e133507a1"/>    <section>
+    <title>subscribeRelative()</title>
+<indexterm><primary>subscribeRelative</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>subscribeRelative</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::subscribeRelative (char * topic)</computeroutput></para><para>
+
+<para>Subscribe to a topic relative to the base topic. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic to subscribe to </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a11e8435455ffecc362eb4de09087d43a"/>    <section>
+    <title>unregisterCard()</title>
+<indexterm><primary>unregisterCard</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>unregisterCard</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::unregisterCard (uint8_t card_id)</computeroutput></para><para>
+
+<para>Unregister a card. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>card_id</entry>
+                                <entry>
+<para>The id of the card </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a9a8ef4e5e7b98c0b77e339a5b4b847cf"/>    <section>
+    <title>unregisterMqttCallback()</title>
+<indexterm><primary>unregisterMqttCallback</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>unregisterMqttCallback</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::unregisterMqttCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregister a callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler of the callback </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a34be62570b94a256c2cda7f354cc9909"/>    <section>
+    <title>unregisterRelativeMqttCallback()</title>
+<indexterm><primary>unregisterRelativeMqttCallback</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>unregisterRelativeMqttCallback</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::unregisterRelativeMqttCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregister a relative MQTT callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler of the callback </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a0816eddc3a7bfd7685959a8cc6dec129"/>    <section>
+    <title>unregisterSubscribeCallback()</title>
+<indexterm><primary>unregisterSubscribeCallback</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>unregisterSubscribeCallback</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::unregisterSubscribeCallback (uint8_t handler)</computeroutput></para><para>
+
+<para>Unregister a subscribe callback. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>handler</entry>
+                                <entry>
+<para>The handler of the callback </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a30629a0c025c0f20d84ab8ff7a9c437f"/>    <section>
+    <title>unsubscribeFromTopic()</title>
+<indexterm><primary>unsubscribeFromTopic</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>unsubscribeFromTopic</secondary></indexterm>
+<para><computeroutput>void ESPMegaIoT::unsubscribeFromTopic (char * topic)</computeroutput></para><para>
+
+<para>Unsubscribe from a topic. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>topic</entry>
+                                <entry>
+<para>The topic to unsubscribe from </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+    </section><anchor xml:id="_class_e_s_p_mega_io_t_1a8c18fddf81218ea5c69bca2eb064167f"/>    <section>
+    <title>wifiConnected()</title>
+<indexterm><primary>wifiConnected</primary><secondary>ESPMegaIoT</secondary></indexterm>
+<indexterm><primary>ESPMegaIoT</primary><secondary>wifiConnected</secondary></indexterm>
+<para><computeroutput>bool ESPMegaIoT::wifiConnected ( )</computeroutput></para><para>
+
+<para>Check if the wifi is connected. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>True if the wifi is connected, false otherwise </para>
+</formalpara>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.cpp</section>
+</section>

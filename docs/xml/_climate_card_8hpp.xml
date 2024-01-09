@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="_climate_card_8hpp" kind="file" language="C++">
+    <compoundname>ClimateCard.hpp</compoundname>
+    <includes refid="_expansion_card_8hpp" local="no">ExpansionCard.hpp</includes>
+    <includes local="no">driver/rmt.h</includes>
+    <includes local="no">FRAM.h</includes>
+    <includes local="no">OneWire.h</includes>
+    <includes local="no">DS18B20.h</includes>
+    <includes local="no">dhtnew.h</includes>
+    <includes local="no">map</includes>
+    <includedby refid="_climate_card_8cpp" local="no">/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp</includedby>
+    <includedby refid="_climate_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_io_t_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</includedby>
+    <includedby refid="_e_s_p_mega_pro_o_s_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</includedby>
+    <includedby refid="_internal_display_8hpp" local="no">/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>OneWire.h</label>
+      </node>
+      <node id="9">
+        <label>map</label>
+      </node>
+      <node id="4">
+        <label>driver/rmt.h</label>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="8">
+        <label>dhtnew.h</label>
+      </node>
+      <node id="7">
+        <label>DS18B20.h</label>
+      </node>
+      <node id="5">
+        <label>FRAM.h</label>
+      </node>
+      <node id="2">
+        <label>ExpansionCard.hpp</label>
+        <link refid="_expansion_card_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaProOS.hpp</label>
+        <link refid="_e_s_p_mega_pro_o_s_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateIoT.hpp</label>
+        <link refid="_climate_io_t_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</label>
+        <link refid="_e_s_p_mega_web_server_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp</label>
+        <link refid="_climate_card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</label>
+        <link refid="_e_s_p_mega_io_t_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/siwat/ESPMegaPRO3-library/InternalDisplay.hpp</label>
+        <link refid="_internal_display_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.hpp</label>
+        <link refid="_e_s_p_mega_web_server_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/siwat/ESPMegaPRO3-library/ClimateCard.cpp</label>
+        <link refid="_climate_card_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_climate_card_data" prot="public">ClimateCardData</innerclass>
+    <innerclass refid="struct_air_conditioner" prot="public">AirConditioner</innerclass>
+    <innerclass refid="class_climate_card" prot="public">ClimateCard</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_climate_card_8hpp_1a38e7997a99df922644beb30beeaedca4" prot="public" static="no">
+        <name>RMT_TX_CHANNEL</name>
+        <initializer>RMT_CHANNEL_0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="10" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_card_8hpp_1a5dff314983f8744c2263b78aed2e1ae8" prot="public" static="no">
+        <name>CARD_TYPE_CLIMATE</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="12" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_card_8hpp_1ae6bb3208d3c3b2ff231eaa811eef0438" prot="public" static="no">
+        <name>AC_SENSOR_TYPE_NONE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="14" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_card_8hpp_1ac72d622ee9f0d2a31476eb35591a7369" prot="public" static="no">
+        <name>AC_SENSOR_TYPE_DHT22</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="15" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_card_8hpp_1a9cf2603c3461710952d65cab2edf354c" prot="public" static="no">
+        <name>AC_SENSOR_TYPE_DS18B20</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="16" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_card_8hpp_1a1af04108515f74890b53cc4dcdcffc90" prot="public" static="no">
+        <name>AC_SENSOR_READ_INTERVAL</name>
+        <initializer>5000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="18" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_climate_card_8hpp_1ac9c54d71ac04dcb79e2bb3caa7015915" prot="public" static="no">
+        <name>AC_SENSOR_READ_TIMEOUT</name>
+        <initializer>250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" line="19" column="9" bodyfile="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ExpansionCard.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;driver/rmt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;FRAM.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;OneWire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;DS18B20.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;dhtnew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMT_TX_CHANNEL<sp/>RMT_CHANNEL_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CARD_TYPE_CLIMATE<sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_SENSOR_TYPE_NONE<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_SENSOR_TYPE_DHT22<sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_SENSOR_TYPE_DS18B20<sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_SENSOR_READ_INTERVAL<sp/>5000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AC_SENSOR_READ_TIMEOUT<sp/>250</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="struct_climate_card_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_climate_card_data" kindref="compound">ClimateCardData</ref><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_climate_card_data_1a45c0e297ffe3e17d6c821e0d49729c70" kindref="member">ac_temperature</ref>;<sp/></highlight></codeline>
+<codeline lineno="29" refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_climate_card_data_1acbc39e40e865c442c8c99bd637323d0c" kindref="member">ac_mode</ref>;<sp/></highlight></codeline>
+<codeline lineno="30" refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_climate_card_data_1a987e26aa9c9bbba6e37c2dfd14b4167a" kindref="member">ac_fan_speed</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="struct_air_conditioner" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref><sp/>{</highlight></codeline>
+<codeline lineno="37" refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_air_conditioner_1a83083620f779bf7182d5d0f6e667b7b7" kindref="member">max_temperature</ref>;<sp/></highlight></codeline>
+<codeline lineno="38" refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_air_conditioner_1a03d5029ad66a4eded61f3dcc6a455c28" kindref="member">min_temperature</ref>;<sp/></highlight></codeline>
+<codeline lineno="39" refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_air_conditioner_1a47901e2eb7d9063260ab46a2656c1fec" kindref="member">modes</ref>;<sp/></highlight></codeline>
+<codeline lineno="40" refid="struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="struct_air_conditioner_1ae10f517c89bfefeb5511a7e86c91ef54" kindref="member">mode_names</ref>;<sp/></highlight></codeline>
+<codeline lineno="41" refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="struct_air_conditioner_1a4b0afb9a8eeeaf69587a8591d0357b2b" kindref="member">fan_speeds</ref>;<sp/></highlight></codeline>
+<codeline lineno="42" refid="struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="struct_air_conditioner_1aa4672be81a8f0275d842e6a43b6685cf" kindref="member">fan_speed_names</ref>;<sp/></highlight></codeline>
+<codeline lineno="53" refid="struct_air_conditioner_1abb9aca0520a6fa66db6487b9f33ecfb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>size_t<sp/>(*<ref refid="struct_air_conditioner_1abb9aca0520a6fa66db6487b9f33ecfb9" kindref="member">getInfraredCode</ref>)(uint8_t,<sp/>uint8_t,<sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t**);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>requires<sp/>3<sp/>bytes<sp/>of<sp/>FRAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_climate_card" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_climate_card" kindref="compound">ClimateCard</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_expansion_card" kindref="compound">ExpansionCard</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" kindref="member">ClimateCard</ref>(uint8_t<sp/>ir_pin,<sp/><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref><sp/>ac,<sp/>uint8_t<sp/>sensor_type,<sp/>uint8_t<sp/>sensor_pin);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card_1a4abb72ecf8f3c175130155a248822ab5" kindref="member">ClimateCard</ref>(uint8_t<sp/>ir_pin,<sp/><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref><sp/>ac);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_climate_card_1a25ee785ee45b87262a3af07cae01023e" kindref="member">~ClimateCard</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1aa0649398f58b7093250875c1202711fc" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1ab03908a04c55282a920a5c648b5f7fc8" kindref="member">loop</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a87ce688cdf3b1acd7526968d599b5422" kindref="member">bindFRAM</ref>(FRAM<sp/>*fram,<sp/>uint16_t<sp/>fram_address);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1aa00bb77607d324938e83a0527344e4ef" kindref="member">setFRAMAutoSave</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>autoSave);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1ab5993cfca1e2f691bdd613e58e0800e0" kindref="member">saveStateToFRAM</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a09f550e371c3836bee9e01bf795e7557" kindref="member">loadStateFromFRAM</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1afb279e4b037b42d6056a1a224548511c" kindref="member">setTemperature</ref>(uint8_t<sp/>temperature);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_climate_card_1a0877f36123ed2fdfe41677bdbac320be" kindref="member">getTemperature</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1ad9ba9dfc23dccc0d9b32ca101257a54d" kindref="member">setMode</ref>(uint8_t<sp/>mode);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a2780d9bb76438ddd00fa8beb418583f6" kindref="member">setModeByName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>mode_name);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_climate_card_1a8a9c0eb63c2e92a01fc39715c1876509" kindref="member">getMode</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_climate_card_1a4eae69055d00724777be2b70ea99a6f3" kindref="member">getModeName</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1af3649bf5137e950b16073da4ae266a5b" kindref="member">setFanSpeed</ref>(uint8_t<sp/>fan_speed);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a745658695c2ad4aac7be116ddba8bee7" kindref="member">setFanSpeedByName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fan_speed_name);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_climate_card_1a119c0d4369efb88eab7c99f45b7a62af" kindref="member">getFanSpeed</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_climate_card_1ab300cdd889f3fc7bd9bc03857d137356" kindref="member">getFanSpeedName</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a975cea4b22a9fa43c23e5e62c21596df" kindref="member">getRoomTemperature</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a734fbf0f3471bd0bcbd1f7c24e273185" kindref="member">getHumidity</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_climate_card_1a2780cd2ee3c06dadda775c9e38de3e2b" kindref="member">getSensorType</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_climate_card_1a2b15582430d577bfa8f07983c5ecaf22" kindref="member">registerChangeCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(uint8_t,<sp/>uint8_t,<sp/>uint8_t)&gt;<sp/>callback);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_climate_card_1ab95d86d1fc8f2d1f19324f1161afbcaf" kindref="member">registerSensorCallback</ref>(std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)&gt;<sp/>callback);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a15d887d1b211d461edd0835d0104f7c7" kindref="member">unregisterChangeCallback</ref>(uint8_t<sp/>handler);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_climate_card_1a13d422d72f933de45cde16477de623ad" kindref="member">unregisterSensorCallback</ref>(uint8_t<sp/>handler);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_climate_card_1a651b1cbd6da6281cfba68e5852e9a597" kindref="member">getType</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sensor<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>use<sp/>pointers<sp/>here<sp/>because<sp/>we<sp/>don&apos;t<sp/>know<sp/>which<sp/>sensor<sp/>will<sp/>be<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DHTNEW<sp/>*dht;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DS18B20<sp/>*ds18b20;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Callbacks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>callbacks_handler_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>sensor_callbacks_handler_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;uint8_t,std::function&lt;void(uint8_t,<sp/>uint8_t,<sp/>uint8_t)&gt;&gt;<sp/>callbacks;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;uint8_t,std::function&lt;void(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)&gt;&gt;<sp/>sensor_callbacks;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateSensor();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateAirConditioner();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IR<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>ir_pin;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Air<sp/>conditioner<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_air_conditioner" kindref="compound">AirConditioner</ref><sp/>ac;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_climate_card_data" kindref="compound">ClimateCardData</ref><sp/>state;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sensor<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>sensor_type;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>sensor_pin;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>humidity;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>room_temperature;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FRAM<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FRAM<sp/>*fram;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>fram_address;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fram_auto_save;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t*<sp/>getIrIndex(uint8_t<sp/>mode,<sp/>uint8_t<sp/>fan_speed,<sp/>uint8_t<sp/>temperature);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/siwat/ESPMegaPRO3-library/ClimateCard.hpp"/>
+  </compounddef>
+</doxygen>

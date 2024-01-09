@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__e_s_p_mega_web_server_8cpp" xml:lang="en-US">
+<title>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp File Reference</title>
+<indexterm><primary>/home/siwat/ESPMegaPRO3-library/ESPMegaWebServer.cpp</primary></indexterm>
+<para>
+
+<para>Implementation file for the <link linkend="_class_e_s_p_mega_web_server">ESPMegaWebServer</link> class. </para>
+ 
+</para>
+<programlisting>#include &lt;ESPMegaWebServer.hpp&gt;
+</programlisting>Include dependency graph for ESPMegaWebServer.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_e_s_p_mega_web_server_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Implementation file for the <link linkend="_class_e_s_p_mega_web_server">ESPMegaWebServer</link> class. </para>
+
+<para>This file contains the implementation of the <link linkend="_class_e_s_p_mega_web_server">ESPMegaWebServer</link> class, which is responsible for handling web server functionality for the <link linkend="_class_e_s_p_mega_p_r_o">ESPMegaPRO</link> firmware. The <link linkend="_class_e_s_p_mega_web_server">ESPMegaWebServer</link> class provides methods for starting the web server, handling HTTP requests, and managing credentials and configurations. </para>
+</section>
+</section>

@@ -1,0 +1,5 @@
+<map id="InternalDisplay::loop" name="InternalDisplay::loop">
+<area shape="rect" id="node1" title="The main loop of the Internal Display." alt="" coords="5,35,161,61"/>
+<area shape="rect" id="node2" href="$class_e_s_p_mega_io_t.html#acb0b6d3616f924ae793981f8653b142f" title="Check if the network is connected." alt="" coords="209,5,440,32"/>
+<area shape="rect" id="node3" href="$class_e_s_p_mega_display.html#ae442963a5ed99212bba46c41f3b7b215" title="Receives and processes serial commands from the display adapter." alt="" coords="213,57,436,98"/>
+</map>

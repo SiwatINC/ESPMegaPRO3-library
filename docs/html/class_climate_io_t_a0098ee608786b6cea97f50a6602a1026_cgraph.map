@@ -1,0 +1,10 @@
+<map id="ClimateIoT::handleStateChange" name="ClimateIoT::handleStateChange">
+<area shape="rect" id="node1" title="Handle Air Conditioner state change." alt="" coords="5,71,232,98"/>
+<area shape="rect" id="node2" href="$class_climate_io_t.html#aa47d6901ed1a95e41d93766a708ac1da" title="Publishes the climate data (temperature, mode, fan speed) to the MQTT broker." alt="" coords="280,71,479,98"/>
+<area shape="rect" id="node3" href="$class_climate_io_t.html#a5c3c09d45519d8b842a58848cd22dd46" title="Publishes the fan speed of the air conditioner to the MQTT broker." alt="" coords="545,5,743,47"/>
+<area shape="rect" id="node5" href="$class_climate_io_t.html#acc5a0774647d0c94d5a8d6eaec9fa23e" title="Publishes the mode of the air conditioner to the MQTT broker." alt="" coords="527,71,761,98"/>
+<area shape="rect" id="node7" href="$class_climate_io_t.html#af32cf1f2bad34f5c920a58ed23ecf876" title="Publishes the temperature of the air conditioner to the MQTT broker." alt="" coords="545,123,743,164"/>
+<area shape="rect" id="node4" href="$class_climate_card.html#ab300cdd889f3fc7bd9bc03857d137356" title="Get the name of the current fan speed." alt="" coords="809,13,1043,39"/>
+<area shape="rect" id="node6" href="$class_climate_card.html#a4eae69055d00724777be2b70ea99a6f3" title="Get the name of the current mode." alt="" coords="823,71,1029,98"/>
+<area shape="rect" id="node8" href="$class_climate_card.html#a0877f36123ed2fdfe41677bdbac320be" title="Get the temperature of the air conditioner." alt="" coords="819,130,1033,157"/>
+</map>

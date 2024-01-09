@@ -1,0 +1,4 @@
+<map id="DigitalOutputCard::setValue" name="DigitalOutputCard::setValue">
+<area shape="rect" id="node1" title="Set the pwm value of the specified pin." alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node2" href="$class_digital_output_card.html#a99ac93ac96289b95063d4d1e1e2b7893" title="Save a single pin value to FRAM." alt="" coords="200,5,361,47"/>
+</map>

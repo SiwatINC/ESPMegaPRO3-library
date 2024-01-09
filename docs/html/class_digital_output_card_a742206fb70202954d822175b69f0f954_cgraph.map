@@ -1,0 +1,4 @@
+<map id="DigitalOutputCard::setState" name="DigitalOutputCard::setState">
+<area shape="rect" id="node1" title="Set the state of the specified pin." alt="" coords="5,5,152,47"/>
+<area shape="rect" id="node2" href="$class_digital_output_card.html#a8d99e0805f6463fc886087e502efb12d" title="Save the states of all the pins to FRAM." alt="" coords="200,5,347,47"/>
+</map>

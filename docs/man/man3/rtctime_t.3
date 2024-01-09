@@ -1,0 +1,49 @@
+.TH "rtctime_t" 3 "Tue Jan 9 2024" "ESPMega PRO R3" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rtctime_t \- The \fBrtctime_t\fP struct is a structure for storing the time\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TimeStructure\&.hpp>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBhours\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBminutes\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBseconds\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBday\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBmonth\fP"
+.br
+.ti -1c
+.RI "uint16_t \fByear\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBrtctime_t\fP struct is a structure for storing the time\&. 
+
+This structure is used by the \fBESPMegaPRO\fP library to store the time\&.
+.PP
+\fBWarning\fP
+.RS 4
+This structure is not compatible with the Arduino Time library\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ESPMega PRO R3 from the source code\&.

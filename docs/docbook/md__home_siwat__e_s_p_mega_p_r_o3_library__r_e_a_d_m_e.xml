@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__home_siwat__e_s_p_mega_p_r_o3_library__r_e_a_d_m_e" xml:lang="en-US">
+
+<para>Example ``` #include &quot;ESPMegaPRO.h&quot;</para>
+
+<para>void setup() { ESPMega_begin(); // Must be called first in setup</para>
+
+<para>ESPMega_analogWrite(5,2048) // Write PWM value of 2048 to pin 5 }</para>
+
+<para>void loop() { ESPMega_loop(); //Must be called in loop</para>
+
+<para>bool pin9 = ESPMega_digitalRead(9) // Read Digital Input Pin 9 ESPMega_digitalWrite(9,pin9) // Mirror Input Pin 9 to Output Pin 9 } </para>
+</section>

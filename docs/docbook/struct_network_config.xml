@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_network_config" xml:lang="en-US">
+<title>NetworkConfig Struct Reference</title>
+<indexterm><primary>NetworkConfig</primary></indexterm>
+<para>
+
+<para>The network configuration struct. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ESPMegaIoT.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_network_config_1a0176904843001d1f2435ac52ca040ede"/>IPAddress <link linkend="_struct_network_config_1a0176904843001d1f2435ac52ca040ede">ip</link></para>
+
+<para>The IP address. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41"/>IPAddress <link linkend="_struct_network_config_1ab4e53b665582ae32752d5e5c22c7aa41">gateway</link></para>
+
+<para>The gateway address. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1a18dd746c622cb7a38da58ca94ff31657"/>IPAddress <link linkend="_struct_network_config_1a18dd746c622cb7a38da58ca94ff31657">subnet</link></para>
+
+<para>The subnet mask. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1a2706b2e04d704496b2202e476fa9635c"/>IPAddress <link linkend="_struct_network_config_1a2706b2e04d704496b2202e476fa9635c">dns1</link></para>
+
+<para>The primary DNS server. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1a393560e108d63338ae825bbab2c25e2c"/>IPAddress <link linkend="_struct_network_config_1a393560e108d63338ae825bbab2c25e2c">dns2</link></para>
+
+<para>The secondary DNS server. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1a450d89f26365aa8339be5b77682fbd91"/>char <link linkend="_struct_network_config_1a450d89f26365aa8339be5b77682fbd91">hostname</link> [32]</para>
+
+<para>The hostname. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1a9884b31dba672d1f24636fb64a55d38a"/>bool <link linkend="_struct_network_config_1a9884b31dba672d1f24636fb64a55d38a">useStaticIp</link></para>
+
+<para>Whether to use a static IP, if false, DHCP will be used. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b"/>bool <link linkend="_struct_network_config_1a0233b29fea3a45f59e21b824e2850f5b">useWifi</link></para>
+
+<para>Whether to use WiFi or Ethernet, if false, Ethernet will be used. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea"/>bool <link linkend="_struct_network_config_1ae4c0e464e09b9f8aa2c9321d7defd7ea">wifiUseAuth</link></para>
+
+<para>Whether to use WiFi authentication, if false, ssid and password will be ignored. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19"/>char <link linkend="_struct_network_config_1a7d4ea00f216ac189ef206b2ee979df19">ssid</link> [32]</para>
+
+<para>The WiFi SSID, even if wifiUseAuth is false, this should be set. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2"/>char <link linkend="_struct_network_config_1aa26399d81f1ca21f2094db5f0adc76d2">password</link> [32]</para>
+
+<para>The WiFi password, even if wifiUseAuth is false, this should be set. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The network configuration struct. </para>
+
+
+
+<para><note><title>Note</title>
+
+<para>This struct will be saved to FRAM when calling saveNetworkConfig </para>
+</note>
+</para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/siwat/ESPMegaPRO3-library/ESPMegaIoT.hpp</section>
+</section>

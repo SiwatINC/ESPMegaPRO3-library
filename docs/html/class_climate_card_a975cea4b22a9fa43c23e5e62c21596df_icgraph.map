@@ -1,0 +1,8 @@
+<map id="ClimateCard::getRoomTemperature" name="ClimateCard::getRoomTemperature">
+<area shape="rect" id="node1" title="Get the room temperature in degrees Celsius." alt="" coords="981,42,1233,69"/>
+<area shape="rect" id="node2" href="$class_climate_io_t.html#a0552877211038ed07b697af151d6dcec" title="Publishes the room temperature to the MQTT broker." alt="" coords="667,42,933,69"/>
+<area shape="rect" id="node3" href="$class_climate_io_t.html#a15060120ec8d458d023cf63174caf018" title="Publishes the temperature and humidity of the room to the MQTT broker." alt="" coords="428,42,619,69"/>
+<area shape="rect" id="node4" href="$class_climate_io_t.html#a2516d6d2a9e2be4365617a3c0577a8b6" title="This function is a callback function registered with the Climate card to be called when the sensor da..." alt="" coords="191,5,379,47"/>
+<area shape="rect" id="node6" href="$class_climate_io_t.html#aa418416d349122f67b5df4c980dd3526" title="Publishes the climate and sensor data to the MQTT broker." alt="" coords="189,71,380,98"/>
+<area shape="rect" id="node5" href="$class_climate_io_t.html#aad3d146120fb6390867d2900b7fe0f6b" title="Initializes the ClimateIoT component." alt="" coords="5,13,141,39"/>
+</map>

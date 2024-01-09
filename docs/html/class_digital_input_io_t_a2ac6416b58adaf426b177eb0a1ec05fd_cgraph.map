@@ -1,0 +1,5 @@
+<map id="DigitalInputIoT::handleValueChange" name="DigitalInputIoT::handleValueChange">
+<area shape="rect" id="node1" title="Handles a value change for a digital input." alt="" coords="5,5,211,47"/>
+<area shape="rect" id="node2" href="$class_digital_input_io_t.html#ad5079368dd7bb6ac31152feca4412cf5" title="Publish a digital input to the MQTT broker." alt="" coords="259,5,431,47"/>
+<area shape="rect" id="node3" href="$class_digital_input_card.html#a09416f14975c453bb7b9d1fdfc033fd9" title="Read the input from the specified pin, always refresh the input buffers." alt="" coords="479,13,689,39"/>
+</map>
