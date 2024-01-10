@@ -11,12 +11,15 @@
 /**
  * @brief Construct a new ClimateCard object.
  *
+ * @note RMT channel must be universally unique, this means that you can't use the same channel for multiple cards.
+ * 
  * @param ir_pin The GPIO pin number of the IR transmitter.
  * @param ac The AirConditioner object that represents the air conditioner.
  * @param sensor_type The type of the sensor connected to the card.
  * @param sensor_pin The GPIO pin number of the sensor.
+ * @param channel The RMT channel to use for IR transmission.
  */
-ClimateCard::ClimateCard(uint8_t ir_pin, AirConditioner ac, uint8_t sensor_type, uint8_t sensor_pin)
+ClimateCard::ClimateCard(uint8_t ir_pin, AirConditioner ac, uint8_t sensor_type, uint8_t sensor_pin, rmt_channel_t channel) : ir_blaster(ir_pin, channel)
 {
     this->ir_pin = ir_pin;
     this->ac = ac;
@@ -45,10 +48,13 @@ ClimateCard::ClimateCard(uint8_t ir_pin, AirConditioner ac, uint8_t sensor_type,
  *
  * @param ir_pin The GPIO pin number of the IR transmitter.
  * @param ac The AirConditioner object that represents the air conditioner.
+ * @param channel The RMT channel to use for IR transmission.
+ * 
+ * @note RMT channel must be universally unique, this means that you can't use the same channel for multiple cards.
  * 
  * @note This constructor can be used when no sensor is connected to the card.
  */
-ClimateCard::ClimateCard(uint8_t ir_pin, AirConditioner ac) : ClimateCard(ir_pin, ac, AC_SENSOR_TYPE_NONE, 0)
+ClimateCard::ClimateCard(uint8_t ir_pin, AirConditioner ac, rmt_channel_t channel) : ClimateCard(ir_pin, ac, AC_SENSOR_TYPE_NONE, 0, channel)
 {
 }
 
@@ -59,7 +65,6 @@ ClimateCard::~ClimateCard()
 {
     delete dht;
     delete ds18b20;
-    rmt_driver_uninstall(RMT_TX_CHANNEL);
 }
 
 /**
@@ -81,17 +86,7 @@ bool ClimateCard::begin()
         break;
     }
     updateAirConditioner();
-    // We are returning here because sending IR signals is not working yet
     return true;
-    if (sensor_pin != 0)
-    {
-        // Initialize RMT
-        gpio_num_t gpio_num = gpio_num_t(ir_pin);
-        rmt_config_t rmt_tx = RMT_DEFAULT_CONFIG_TX(gpio_num, RMT_TX_CHANNEL);
-        rmt_tx.clk_div = 80; // 1MHz clock
-        rmt_config(&rmt_tx);
-        rmt_driver_install(rmt_tx.channel, 0, 0);
-    }
 }
 
 /**
@@ -351,25 +346,15 @@ void ClimateCard::updateSensor()
 void ClimateCard::updateAirConditioner()
 {
     // // The IR Transmissions are not working yet so we just return
-    // const uint16_t* ir_code_ptr = nullptr;
-    // size_t itemCount = (*(this->ac.getInfraredCode))(this->state.ac_mode, this->state.ac_fan_speed, this->state.ac_temperature, &ir_code_ptr);
+    const uint16_t* ir_code_ptr = nullptr;
+    size_t itemCount = (*(this->ac.getInfraredCode))(this->state.ac_mode, this->state.ac_fan_speed, this->state.ac_temperature-this->ac.min_temperature, &ir_code_ptr);
 
-    // if (ir_code_ptr == nullptr)
-    //     return;
+    if (ir_code_ptr == nullptr)
+        return;
 
-    // rmt_item32_t items[itemCount];
-    // // Convert IR timing array to RMT items
-    // for (size_t i = 0; i < itemCount; i+=2)
-    // {
-    //     items[i].level0 = 1;
-    //     items[i].duration0 = ir_code_ptr[i];
-    //     items[i].level1 = 0;
-    //     items[i].duration1 = ir_code_ptr[i+1];
-    // }
-    // // Send IR signal
-    // rmt_write_items(RMT_TX_CHANNEL, items, itemCount, true);
-    // rmt_wait_tx_done(RMT_TX_CHANNEL, portMAX_DELAY);
-    // // Publish state
+    ir_blaster.send(ir_code_ptr, itemCount);
+
+    // Publish state
     for (const auto &callback : callbacks)
     {
         callback.second(this->state.ac_mode, this->state.ac_fan_speed, this->state.ac_temperature);

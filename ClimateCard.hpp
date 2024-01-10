@@ -1,13 +1,11 @@
 #pragma once
 #include <ExpansionCard.hpp>
-#include <driver/rmt.h>
+#include <IRBlaster.hpp>
 #include <FRAM.h>
 #include <OneWire.h>
 #include <DS18B20.h>
 #include <dhtnew.h>
 #include <map>
-
-#define RMT_TX_CHANNEL RMT_CHANNEL_0
 
 #define CARD_TYPE_CLIMATE 0x03
 
@@ -65,8 +63,8 @@ struct AirConditioner {
  */
 class ClimateCard : public ExpansionCard {
     public:
-        ClimateCard(uint8_t ir_pin, AirConditioner ac, uint8_t sensor_type, uint8_t sensor_pin);
-        ClimateCard(uint8_t ir_pin, AirConditioner ac);
+        ClimateCard(uint8_t ir_pin, AirConditioner ac, uint8_t sensor_type, uint8_t sensor_pin, rmt_channel_t channel);
+        ClimateCard(uint8_t ir_pin, AirConditioner ac, rmt_channel_t channel);
         ~ClimateCard();
         bool begin();
         void loop();
@@ -107,6 +105,7 @@ class ClimateCard : public ExpansionCard {
         void updateAirConditioner();
         // IR variables
         uint8_t ir_pin;
+        IRBlaster ir_blaster;
         // Air conditioner variables
         AirConditioner ac;
         ClimateCardData state;
