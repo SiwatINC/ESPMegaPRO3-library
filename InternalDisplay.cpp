@@ -872,3 +872,15 @@ void InternalDisplay::handleACStateChange(uint8_t mode, uint8_t fan_speed, uint8
     // Update the AC state
     this->refreshAC();
 }
+
+/**
+ * @brief Set the boot status text
+ * 
+ * @param text The text to set
+ */
+void InternalDisplay::setBootStatus(const char *text) {
+    this->displayAdapter->print("boot_state.txt=\"");
+    this->displayAdapter->print(text);
+    this->displayAdapter->print("\"");
+    this->sendStopBytes();
+}

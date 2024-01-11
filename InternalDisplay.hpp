@@ -121,6 +121,7 @@ class InternalDisplay : public ESPMegaDisplay {
         void refreshPWMAdjustmentId();
         void refreshNetworkConfig();
         void refreshMQTTConfig();
+        void setBootStatus(const char* status);
         void sendIpToDisplay(IPAddress ip);
         uint8_t pmwAdjustmentPin;
         // Touch handlers

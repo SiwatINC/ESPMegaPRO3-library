@@ -58,6 +58,15 @@ void ESPMegaDisplay::processSerialCommand()
     {
         processPageReportPayload();
     }
+    else {
+        // The payload does not match any of the expected payload types
+        // Pass the payload to the payload callbacks
+        // type, payload, length
+        for (auto const &callback : payload_callbacks)
+        {
+           callback.second(rx_buffer[0], reinterpret_cast<unsigned char*>(&rx_buffer[1]), rx_buffer_index - 4);;
+        }
+    }
     this->rx_buffer_index = 0;
 }
 
@@ -494,4 +503,25 @@ uint16_t ESPMegaDisplay::registerPageChangeCallback(std::function<void(uint8_t)>
 void ESPMegaDisplay::unregisterPageChangeCallback(uint16_t handle)
 {
     page_change_callbacks.erase(handle);
+}
+
+/**
+ * @brief Registers a callback function for payloads.
+ * @param callback The callback function.
+ * @return The handle of the callback function.
+ */
+uint16_t ESPMegaDisplay::registerPayloadCallback(std::function<void(uint8_t, uint8_t*, uint8_t)> callback)
+{
+    uint16_t handle = payload_callbacks.size();
+    payload_callbacks[handle] = callback;
+    return handle;
+}
+
+/**
+ * @brief Unregisters a callback function for payloads.
+ * @param handle The handle of the callback function.
+ */
+void ESPMegaDisplay::unregisterPayloadCallback(uint16_t handle)
+{
+    payload_callbacks.erase(handle);
 }

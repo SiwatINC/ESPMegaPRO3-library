@@ -30,6 +30,8 @@ class ESPMegaDisplay
         void unregisterTouchCallback(uint16_t handle);
         uint16_t registerPageChangeCallback(std::function<void(uint8_t)> callback);
         void unregisterPageChangeCallback(uint16_t handle);
+        uint16_t registerPayloadCallback(std::function<void(uint8_t, uint8_t*, uint8_t)> callback);
+        void unregisterPayloadCallback(uint16_t handle);
         
     protected:
         uint8_t currentPage;
@@ -48,4 +50,5 @@ class ESPMegaDisplay
         HardwareSerial *displayAdapter;
         std::map<uint16_t, std::function<void(uint8_t, uint8_t, uint8_t)>> touch_callbacks;
         std::map<uint16_t, std::function<void(uint8_t)>> page_change_callbacks;
+        std::map<uint16_t, std::function<void(uint8_t, uint8_t*, uint8_t)>> payload_callbacks;
 };
