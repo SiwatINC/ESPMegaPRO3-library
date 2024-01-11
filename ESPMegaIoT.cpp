@@ -45,7 +45,7 @@ void ESPMegaIoT::mqttCallback(char *topic, byte *payload, unsigned int length)
     char *topic_without_base = topic + strlen(this->mqtt_config.base_topic) + 1;
     for (const auto &callback : mqtt_relative_callbacks)
     {
-        callback.second(topic_without_base + 3, payload_buffer);
+        callback.second(topic_without_base, payload_buffer);
     }
     for (const auto &callback : mqtt_callbacks)
     {
