@@ -439,7 +439,6 @@ ESPMegaDisplay::ESPMegaDisplay(HardwareSerial *displayAdapter)
  */
 void ESPMegaDisplay::begin()
 {
-    this->displayAdapter->begin(115200);
     this->displayAdapter->setTimeout(100);
     this->displayAdapter->flush();
     this->reset();

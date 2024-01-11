@@ -84,6 +84,10 @@ void ESPMega_analogWrite(int id, int value)
 
 void ESPMega_digitalWrite(int id, bool value)
 {
+    if (id >= 0 && id <= 7)
+        id += 8;
+    else if (id >= 8 && id <= 15)
+        id -= 8;
     if (value)
         pwmBank.setPin(id, 4095);
     else

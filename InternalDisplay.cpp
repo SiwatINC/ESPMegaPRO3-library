@@ -81,13 +81,15 @@ void InternalDisplay::handlePwmStateChange(uint8_t pin, bool state, uint16_t val
 {
     // If the output card is binded to the display and the current page is the output page
     // then update the respective output component
-    if (this->outputCard != nullptr || this->currentPage != INTERNAL_DISPLAY_OUTPUT_PAGE)
+    if (this->outputCard != nullptr)
         return;
+    if(this->currentPage == INTERNAL_DISPLAY_OUTPUT_PAGE) {
     // Update the output state
     this->setOutputBar(pin, value);
     this->setOutputStateColor(pin, state);
+    }
     // Refresh the PWM Adjustment page if the current page is the PWM Adjustment page and the pin is the same
-    if (this->currentPage == INTERNAL_DISPLAY_PWM_ADJUSTMENT_PAGE && this->pmwAdjustmentPin == pin)
+    else if (this->currentPage == INTERNAL_DISPLAY_PWM_ADJUSTMENT_PAGE && this->pmwAdjustmentPin == pin)
     {
         this->refreshPWMAdjustment();
     }
