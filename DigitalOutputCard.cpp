@@ -146,7 +146,7 @@ uint8_t DigitalOutputCard::getType() {
  */
 void DigitalOutputCard::setState(uint8_t pin, bool state) {
     this-> state_buffer[pin] = state;
-    this->pwm.setPin(pin, state*value_buffer[pin]);
+    this->pwm.setPin(virtualPinMap[pin], state*value_buffer[pin]);
     if(this->framAutoSave) {
         this->saveStateToFRAM();
     }
@@ -165,7 +165,7 @@ void DigitalOutputCard::setValue(uint8_t pin, uint16_t value) {
     // If value is greater than 4095, set it to 4095
     if (value > 4095) value = 4095;
     this-> value_buffer[pin] = value;
-    this->pwm.setPin(pin, state_buffer[pin]*value);
+    this->pwm.setPin(virtualPinMap[pin], state_buffer[pin]*value);
     if (this->framAutoSave) {
         this->savePinValueToFRAM(pin);
     }
