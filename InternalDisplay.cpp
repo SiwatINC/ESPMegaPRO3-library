@@ -64,7 +64,7 @@ void InternalDisplay::handleInputStateChange(uint8_t pin, bool state)
 {
     // If the input card is binded to the display and the current page is the input page
     // then update the respective input component
-    if (this->inputCard != nullptr || this->currentPage != INTERNAL_DISPLAY_INPUT_PAGE)
+    if (this->inputCard == nullptr || this->currentPage != INTERNAL_DISPLAY_INPUT_PAGE)
         return;
     // Update the input state
     this->setInputMarker(pin, state);
@@ -81,7 +81,7 @@ void InternalDisplay::handlePwmStateChange(uint8_t pin, bool state, uint16_t val
 {
     // If the output card is binded to the display and the current page is the output page
     // then update the respective output component
-    if (this->outputCard != nullptr)
+    if (this->outputCard == nullptr)
         return;
     if(this->currentPage == INTERNAL_DISPLAY_OUTPUT_PAGE) {
     // Update the output state
