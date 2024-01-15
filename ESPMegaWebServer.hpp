@@ -34,6 +34,7 @@ class ESPMegaWebServer
         void loadCredentialsFromFRAM();
         void saveCredentialsToFRAM();
         AsyncWebServer* getServer();
+        bool checkAuthentication(AsyncWebServerRequest *request);
     private:
         // FRAM
         FRAM *fram;

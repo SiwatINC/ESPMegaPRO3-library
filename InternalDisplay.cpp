@@ -2,9 +2,9 @@
 
 /**
  * @brief Initialize the Internal Display
- * 
+ *
  * @note You should not call this function directly, instead use ESPMegaIoT::enableInternalDisplay()
- * 
+ *
  * @param iot The ESPMegaIoT object
  * @param getRtcTime A function that returns the current time
  */
@@ -20,9 +20,11 @@ void InternalDisplay::begin(ESPMegaIoT *iot, std::function<rtctime_t()> getRtcTi
     auto bindedTouchCallback = std::bind(&InternalDisplay::handleTouch, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
     this->registerTouchCallback(bindedTouchCallback);
     // Initialize the display
+    if(!this->takeSerialMutex()) return;
     this->displayAdapter->begin(115200);
     this->displayAdapter->setTimeout(100);
     this->displayAdapter->flush();
+    this->giveSerialMutex();
     this->reset();
     delay(500);
     this->jumpToPage(1);
@@ -30,7 +32,7 @@ void InternalDisplay::begin(ESPMegaIoT *iot, std::function<rtctime_t()> getRtcTi
 
 /**
  * @brief The main loop of the Internal Display
- * 
+ *
  * @note You should not call this function directly, instead use ESPMega::loop()
  */
 void InternalDisplay::loop()
@@ -56,7 +58,7 @@ void InternalDisplay::loop()
 
 /**
  * @brief Update the display in response to a change in the input state
- * 
+ *
  * @param pin The pin that changed
  * @param state The new state of the pin
  */
@@ -72,7 +74,7 @@ void InternalDisplay::handleInputStateChange(uint8_t pin, bool state)
 
 /**
  * @brief Update the display in response to a change in the PWM state
- * 
+ *
  * @param pin The pin that changed
  * @param state The new state of the pin
  * @param value The new value of the pin
@@ -83,10 +85,11 @@ void InternalDisplay::handlePwmStateChange(uint8_t pin, bool state, uint16_t val
     // then update the respective output component
     if (this->outputCard == nullptr)
         return;
-    if(this->currentPage == INTERNAL_DISPLAY_OUTPUT_PAGE) {
-    // Update the output state
-    this->setOutputBar(pin, value);
-    this->setOutputStateColor(pin, state);
+    if (this->currentPage == INTERNAL_DISPLAY_OUTPUT_PAGE)
+    {
+        // Update the output state
+        this->setOutputBar(pin, value);
+        this->setOutputStateColor(pin, state);
     }
     // Refresh the PWM Adjustment page if the current page is the PWM Adjustment page and the pin is the same
     else if (this->currentPage == INTERNAL_DISPLAY_PWM_ADJUSTMENT_PAGE && this->pmwAdjustmentPin == pin)
@@ -97,7 +100,7 @@ void InternalDisplay::handlePwmStateChange(uint8_t pin, bool state, uint16_t val
 
 /**
  * @brief Update the display in response to page change
- * 
+ *
  * @param page The new page
  */
 void InternalDisplay::handlePageChange(uint8_t page)
@@ -122,46 +125,51 @@ void InternalDisplay::saveNetworkConfig()
     IPAddress ip;
     // 000.000.000.000, 16 characters, 3 dots, 3 characters per octet, 1 null terminator
     char ip_buffer[30];
-    if(!this->getStringToBuffer("ip_set.txt", ip_buffer, 30))
+    if (!this->getStringToBuffer("ip_set.txt", ip_buffer, 30))
     {
         return;
     }
 
     // Validate the ip address
-    if (!ip.fromString(ip_buffer)) {
+    if (!ip.fromString(ip_buffer))
+    {
         return;
     }
-    
+
     // Save the netmask
     IPAddress netmask;
-    if (!this->getStringToBuffer("netmask_set.txt", ip_buffer, 30)) {
+    if (!this->getStringToBuffer("netmask_set.txt", ip_buffer, 30))
+    {
         return;
     }
     // Validate the netmask
-    if (!netmask.fromString(ip_buffer)) {
+    if (!netmask.fromString(ip_buffer))
+    {
         return;
     }
-    
+
     // Save the gateway
     IPAddress gateway;
-    if (!this->getStringToBuffer("gateway_set.txt", ip_buffer, 30)) {
+    if (!this->getStringToBuffer("gateway_set.txt", ip_buffer, 30))
+    {
         return;
     }
     // Validate the gateway
-    if (!gateway.fromString(ip_buffer)) {
+    if (!gateway.fromString(ip_buffer))
+    {
         return;
     }
 
     // Save the dns
     IPAddress dns;
-    if(!this->getStringToBuffer("dns_set.txt", ip_buffer, 30))
+    if (!this->getStringToBuffer("dns_set.txt", ip_buffer, 30))
         return;
     // Validate the dns
     if (!dns.fromString(ip_buffer))
         return;
-    
+
     // Save the hostname
-    if(!this->getStringToBuffer("host_set.txt", this->networkConfig->hostname, 32))
+    if (!this->getStringToBuffer("host_set.txt", this->networkConfig->hostname, 32))
         return;
 
     // Write the ip address, netmask and gateway to the network config
@@ -189,39 +197,39 @@ void InternalDisplay::saveMQTTConfig()
     // user_set -> a text input to set the mqtt username
     // password_set -> a text input to set the mqtt password
     // topic_set -> a text input to set the mqtt base topic
-    
+
     // Send the stop bytes to flush the serial buffer
     this->sendStopBytes();
 
     // Save the mqtt server
-    if(!this->getStringToBuffer("mqttsv_set.txt", this->mqttConfig->mqtt_server, 16))
+    if (!this->getStringToBuffer("mqttsv_set.txt", this->mqttConfig->mqtt_server, 16))
         return;
-    
+
     // Save the mqtt port
     this->mqttConfig->mqtt_port = this->getNumber("port_set.val");
-    
+
     // Save the mqtt username
-    if(!this->getStringToBuffer("user_set.txt", this->mqttConfig->mqtt_user, 16))
+    if (!this->getStringToBuffer("user_set.txt", this->mqttConfig->mqtt_user, 16))
         return;
-    
+
     // Save the mqtt password
-    if(!this->getStringToBuffer("password_set.txt", this->mqttConfig->mqtt_password, 16))
+    if (!this->getStringToBuffer("password_set.txt", this->mqttConfig->mqtt_password, 16))
         return;
-    
+
     // Save the mqtt base topic
-    if(!this->getStringToBuffer("topic_set.txt", this->mqttConfig->base_topic, 16))
+    if (!this->getStringToBuffer("topic_set.txt", this->mqttConfig->base_topic, 16))
         return;
-    
+
     // Save the mqtt use auth
     uint8_t use_auth = this->getNumber("use_auth.val");
-    this->mqttConfig->mqtt_useauth = use_auth  == 1 ? true : false;
+    this->mqttConfig->mqtt_useauth = use_auth == 1 ? true : false;
     this->iot->saveMqttConfig();
     ESP.restart();
 }
 
 /**
  * @brief Update the status icons on the Internal Display's top bar
- * 
+ *
  * @param networkStatus The network status
  * @param mqttStatus The MQTT status
  */
@@ -237,8 +245,10 @@ void InternalDisplay::updateStatusIcons(bool networkStatus, bool mqttStatus)
 void InternalDisplay::updateClock()
 {
     rtctime_t time = this->getRtcTime();
+    if(!this->takeSerialMutex()) return;
     this->displayAdapter->printf("time.txt=\"%02d:%02d %s\"", time.hours % 12, time.minutes, time.hours / 12 ? "PM" : "AM");
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**
@@ -251,9 +261,9 @@ void InternalDisplay::refreshPage()
 
 /**
  * @brief Send data to display element on the specified page
- * 
+ *
  * @note The current page must be the specified page
- * 
+ *
  * @param page The page to refresh
  */
 void InternalDisplay::refreshPage(uint8_t page)
@@ -317,10 +327,12 @@ void InternalDisplay::refreshDashboard()
     sprintf(ip_address, "%d.%d.%d.%d", this->networkConfig->ip[0], this->networkConfig->ip[1], this->networkConfig->ip[2], this->networkConfig->ip[3]);
     this->setString("ip_address.txt", ip_address);
     // Send the MQTT server and port
+    if(!this->takeSerialMutex()) return;
     this->displayAdapter->print("server_address.txt=\"");
     this->displayAdapter->print(this->mqttConfig->mqtt_server);
     this->displayAdapter->print("\"");
     this->sendStopBytes();
+    this->giveSerialMutex();
     // Send the MQTT connection status
     this->setString("status_txt.txt", this->iot->mqttConnected() ? MSG_MQTT_CONNECTED : MSG_MQTT_DISCONNECTED);
 }
@@ -353,6 +365,7 @@ void InternalDisplay::refreshOutput()
  */
 void InternalDisplay::refreshAC()
 {
+    if(!this->takeSerialMutex()) return;
     this->displayAdapter->print("temp.txt=\"");
     this->displayAdapter->print(this->climateCard->getTemperature());
     this->displayAdapter->print("C\"");
@@ -378,8 +391,10 @@ void InternalDisplay::refreshAC()
     this->displayAdapter->print("mode_cool.pic=");
     this->displayAdapter->print(this->climateCard->getMode() == AC_MODE_COOL ? PIC_AC_MODE_COOL_ACTIVE : PIC_AC_MODE_COOL_INACTIVE);
     this->sendStopBytes();
+    this->giveSerialMutex();
     if (this->climateCard->getSensorType() == AC_SENSOR_TYPE_DHT22)
     {
+        if(!this->takeSerialMutex()) return;
         this->displayAdapter->print("roomtemp.txt=\"");
         this->displayAdapter->print(this->climateCard->getRoomTemperature());
         this->displayAdapter->print("C\"");
@@ -388,13 +403,16 @@ void InternalDisplay::refreshAC()
         this->displayAdapter->print(this->climateCard->getHumidity());
         this->displayAdapter->print("%\"");
         this->sendStopBytes();
+        this->giveSerialMutex();
     }
     else if (this->climateCard->getSensorType() == AC_SENSOR_TYPE_DS18B20)
     {
+        if(!this->takeSerialMutex()) return;
         this->displayAdapter->print("roomtemp.txt=\"");
         this->displayAdapter->print(this->climateCard->getRoomTemperature());
         this->displayAdapter->print("C\"");
         this->sendStopBytes();
+        this->giveSerialMutex();
         this->setString("roomhumid.txt", "N/A");
     }
     else
@@ -406,53 +424,59 @@ void InternalDisplay::refreshAC()
 
 /**
  * @brief Set the PWM status output bar value (Fullness of the bar)
- * 
+ *
  * @param pin The pin of the PWM
  * @param value The value of the PWM (0 - 4095)
  */
 void InternalDisplay::setOutputBar(uint8_t pin, uint16_t value)
 {
+    if(!this->takeSerialMutex()) return;
     // Write the value to the output bar
     this->displayAdapter->print("j");
     this->displayAdapter->print(pin);
     this->displayAdapter->print(".val=");
     this->displayAdapter->print((int)(value * 100 / 4095));
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**
  * @brief Set the PWM status output bar color to match the PWM state
- * 
+ *
  * @param pin The pin of the PWM
  * @param state The state of the PWM
  */
 void InternalDisplay::setOutputStateColor(uint8_t pin, bool state)
 {
+    if(!this->takeSerialMutex()) return;
     this->displayAdapter->print("j");
     this->displayAdapter->print(pin);
     this->displayAdapter->print(".ppic=");
     this->displayAdapter->print(state ? PIC_PWM_BAR_ON : PIC_PWM_BAR_OFF);
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**
  * @brief Set Input Marker to match the input state
- * 
+ *
  * @param pin The pin of the input
  * @param state The state of the input
  */
 void InternalDisplay::setInputMarker(uint8_t pin, bool state)
 {
+    if(!this->takeSerialMutex()) return;
     this->displayAdapter->print("I");
     this->displayAdapter->print(pin);
     this->displayAdapter->print(".val=");
     this->displayAdapter->print(state ? 1 : 0);
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**
  * @brief Create a new Internal Display object
- * 
+ *
  * @param displayAdapter The HardwareSerial object that is connected to the display
  */
 InternalDisplay::InternalDisplay(HardwareSerial *displayAdapter) : ESPMegaDisplay(displayAdapter)
@@ -467,7 +491,7 @@ InternalDisplay::InternalDisplay(HardwareSerial *displayAdapter) : ESPMegaDispla
 
 /**
  * @brief Set the input card to be be shown on the input page
- * 
+ *
  * @param inputCard The input card object to be shown
  */
 void InternalDisplay::bindInputCard(DigitalInputCard *inputCard)
@@ -497,7 +521,7 @@ void InternalDisplay::unbindInputCard()
 
 /**
  * @brief Set the output card to be be shown on the output page
- * 
+ *
  * @param outputCard The output card object to be shown
  */
 void InternalDisplay::bindOutputCard(DigitalOutputCard *outputCard)
@@ -525,15 +549,15 @@ void InternalDisplay::unbindOutputCard()
 
 /**
  * @brief Set the climate card to be be shown on the AC page
- * 
+ *
  * This assume that your ClimeateCard has the mode and fan speed names in the following order:
  * mode: [off, fan_only, cool]
  * fan_speed: [auto, low, medium, high]
- * 
+ *
  * @param climateCard The climate card object to be shown
  */
 void InternalDisplay::bindClimateCard(ClimateCard *climateCard)
-{   
+{
     // Check if the climate card is already binded
     // If it is, then unbind it first
     if (this->climateCard != nullptr)
@@ -578,6 +602,7 @@ void InternalDisplay::refreshPWMAdjustment()
  */
 void InternalDisplay::refreshPWMAdjustmentId()
 {
+    if(!this->takeSerialMutex()) return;
     // Send the PWM pin
     this->displayAdapter->print("pwm_id.txt=\"P");
     this->displayAdapter->print(pmwAdjustmentPin);
@@ -590,10 +615,12 @@ void InternalDisplay::refreshPWMAdjustmentId()
  */
 void InternalDisplay::refreshPWMAdjustmentSlider()
 {
+    if(!this->takeSerialMutex()) return;
     // Send the PWM value
     this->displayAdapter->print("pwm_value.val=");
     this->displayAdapter->print(this->outputCard->getValue(this->pmwAdjustmentPin));
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**
@@ -601,16 +628,18 @@ void InternalDisplay::refreshPWMAdjustmentSlider()
  */
 void InternalDisplay::refreshPWMAdjustmentState()
 {
+    if(!this->takeSerialMutex()) return;
     // Send the PWM state
     this->displayAdapter->print("pwm_state.txt=\"");
     this->displayAdapter->print(this->outputCard->getState(this->pmwAdjustmentPin) ? MSG_PWM_ADJUSTMENT_STATE_ON : MSG_PWM_ADJUSTMENT_STATE_OFF);
     this->displayAdapter->print("\"");
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**
  * @brief Handle the touch event on the display
- * 
+ *
  * @param page The page that the touch event occured
  * @param component The component that the touch event occured
  * @param type The type of the touch event
@@ -641,7 +670,7 @@ void InternalDisplay::handleTouch(uint8_t page, uint8_t component, uint8_t type)
 
 /**
  * @brief Handle the touch event on the AC page
- * 
+ *
  * @param type The type of the touch event
  * @param component The component that the touch event occured
  */
@@ -710,7 +739,7 @@ void InternalDisplay::handleACTouch(uint8_t type, uint8_t component)
 
 /**
  * @brief Handle the touch event on the PWM Adjustment page
- * 
+ *
  * @param type The type of the touch event
  * @param component The component that the touch event occured
  */
@@ -757,13 +786,13 @@ void InternalDisplay::handlePWMAdjustmentTouch(uint8_t type, uint8_t component)
  */
 void InternalDisplay::refreshNetworkConfig()
 {
+    if(!this->takeSerialMutex()) return;
     // The network config page have the following components:
     // ip_set -> a text input to set the ip address
     // netmask_set -> a text input to set the netmask
     // gateway_set -> a text input to set the gateway
     // dns_set -> a text input to set the dns
     // host_set -> a text input to set the hostname
-
     // Refresh the ip address
     this->displayAdapter->print("ip_set.txt=\"");
     this->sendIpToDisplay(this->networkConfig->ip);
@@ -789,6 +818,7 @@ void InternalDisplay::refreshNetworkConfig()
     this->displayAdapter->print(this->networkConfig->hostname);
     this->displayAdapter->print("\"");
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**
@@ -796,6 +826,7 @@ void InternalDisplay::refreshNetworkConfig()
  */
 void InternalDisplay::refreshMQTTConfig()
 {
+    if(!this->takeSerialMutex()) return;
     // The MQTT config page have the following components:
     // mqttsv_set -> a text input to set the mqtt server
     // port_set -> a text input to set the mqtt port
@@ -832,13 +863,15 @@ void InternalDisplay::refreshMQTTConfig()
     this->displayAdapter->print("use_auth.val=");
     this->displayAdapter->print(this->mqttConfig->mqtt_useauth ? 1 : 0);
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**
  * @brief Write an ip address to the display
- * 
+ *
  * @note This function only writes the ip address to the display, you need to send the prefix and suffix yourself
- * 
+ * @warning This function does not take the serial mutex, you need to take it yourself
+ *
  * @param ip The ip address to send
  */
 void InternalDisplay::sendIpToDisplay(IPAddress ip)
@@ -855,9 +888,9 @@ void InternalDisplay::sendIpToDisplay(IPAddress ip)
 
 /**
  * @brief Handle the AC state change
- * 
+ *
  * @note This function is registered as a callback to the ClimateCard
- * 
+ *
  * @param mode The new mode
  * @param fan_speed The new fan speed
  * @param temperature The new temperature
@@ -875,12 +908,15 @@ void InternalDisplay::handleACStateChange(uint8_t mode, uint8_t fan_speed, uint8
 
 /**
  * @brief Set the boot status text
- * 
+ *
  * @param text The text to set
  */
-void InternalDisplay::setBootStatus(const char *text) {
+void InternalDisplay::setBootStatus(const char *text)
+{
+    if(!this->takeSerialMutex()) return;
     this->displayAdapter->print("boot_state.txt=\"");
     this->displayAdapter->print(text);
     this->displayAdapter->print("\"");
     this->sendStopBytes();
+    this->giveSerialMutex();
 }

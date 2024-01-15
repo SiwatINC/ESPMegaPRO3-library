@@ -514,3 +514,19 @@ void ESPMegaWebServer::saveConfigJSONHandler(AsyncWebServerRequest *request, Jso
 AsyncWebServer *ESPMegaWebServer::getServer() {
     return this->server;
 }
+
+/**
+ * @brief Request authentication from the client
+ * 
+ * This method requests authentication from the client.
+ * 
+ * @param request The AsyncWebServerRequest object
+ */
+bool ESPMegaWebServer::checkAuthentication(AsyncWebServerRequest *request) {
+    if (!request->authenticate(this->webUsername, this->webPassword))
+    {
+        request->requestAuthentication();
+        return false;
+    }
+    return true;
+}

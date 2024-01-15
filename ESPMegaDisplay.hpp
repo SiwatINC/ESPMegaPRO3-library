@@ -2,6 +2,9 @@
 #include <Arduino.h>
 #include <map>
 
+#define DISPLAY_MUTEX_TAKE_TIMEOUT 1000 // ms
+#define OTA_WAIT_TIMEOUT 1000 // ms
+
 #define DISPLAY_FETCH_TIMEOUT 100 // ms
 #define DISPLAY_FETCH_RETRY_COUNT 5
 
@@ -32,8 +35,15 @@ class ESPMegaDisplay
         void unregisterPageChangeCallback(uint16_t handle);
         uint16_t registerPayloadCallback(std::function<void(uint8_t, uint8_t*, uint8_t)> callback);
         void unregisterPayloadCallback(uint16_t handle);
-        
+        bool takeSerialMutex();
+        void giveSerialMutex();
+        SemaphoreHandle_t serialMutex;
+        bool beginUpdate(size_t size);
+        bool writeUpdate(uint8_t* data, size_t size);
+        void endUpdate();
+        size_t getOtaBytesWritten();
     protected:
+        size_t otaBytesWritten;
         uint8_t currentPage;
         uint8_t rx_buffer_index;
         char rx_buffer[256];

@@ -8,10 +8,17 @@
 bool ESPMegaDisplay::recieveSerialCommand(bool process)
 {
     bool dataRecieved = false;
-    // Read the serial buffer if available
+
     while (displayAdapter->available())
     {
+        // Read the serial buffer if available
+        if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+        {
+            ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+            return false;
+        }
         rx_buffer[rx_buffer_index] = displayAdapter->read();
+        xSemaphoreGive(this->serialMutex);
         rx_buffer_index++;
         // Check for overflow
         if (rx_buffer_index >= 256)
@@ -58,13 +65,15 @@ void ESPMegaDisplay::processSerialCommand()
     {
         processPageReportPayload();
     }
-    else {
+    else
+    {
         // The payload does not match any of the expected payload types
         // Pass the payload to the payload callbacks
         // type, payload, length
         for (auto const &callback : payload_callbacks)
         {
-           callback.second(rx_buffer[0], reinterpret_cast<unsigned char*>(&rx_buffer[1]), rx_buffer_index - 4);;
+            callback.second(rx_buffer[0], reinterpret_cast<unsigned char *>(&rx_buffer[1]), rx_buffer_index - 4);
+            ;
         }
     }
     this->rx_buffer_index = 0;
@@ -115,6 +124,8 @@ void ESPMegaDisplay::processPageReportPayload()
 
 /**
  * @brief Sends stop bytes to the display adapter.
+ *
+ * @note This function does not take the serial mutex, it is assumed that the caller has already taken the mutex.
  */
 void ESPMegaDisplay::sendStopBytes()
 {
@@ -129,8 +140,14 @@ void ESPMegaDisplay::sendStopBytes()
  */
 void ESPMegaDisplay::sendCommand(char *command)
 {
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return;
+    }
     displayAdapter->print(command);
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
 }
 
 /**
@@ -139,9 +156,15 @@ void ESPMegaDisplay::sendCommand(char *command)
  */
 void ESPMegaDisplay::jumpToPage(int page)
 {
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return;
+    }
     this->displayAdapter->print("page ");
     this->displayAdapter->print(page);
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
 }
 
 /**
@@ -151,10 +174,16 @@ void ESPMegaDisplay::jumpToPage(int page)
  */
 void ESPMegaDisplay::setNumber(const char *component, int value)
 {
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return;
+    }
     this->displayAdapter->print(component);
     this->displayAdapter->print("=");
     this->displayAdapter->print(value);
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
 }
 
 /**
@@ -164,11 +193,17 @@ void ESPMegaDisplay::setNumber(const char *component, int value)
  */
 void ESPMegaDisplay::setString(const char *component, const char *value)
 {
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return;
+    }
     this->displayAdapter->print(component);
     this->displayAdapter->print("=\"");
     this->displayAdapter->print(value);
     this->displayAdapter->print("\"");
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
 }
 
 /**
@@ -185,9 +220,15 @@ uint32_t ESPMegaDisplay::getNumber(const char *component)
     this->rx_buffer_index = 0;
     uint32_t start = millis();
     // Send the get command
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return 0;
+    }
     this->displayAdapter->print("get ");
     this->displayAdapter->print(component);
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
     // Try to get a valid payload DISPLAY_FETCH_RETRY_COUNT times
     // Wait for the response
     bool validPayload = false;
@@ -246,9 +287,15 @@ const char *ESPMegaDisplay::getString(const char *component)
     this->rx_buffer_index = 0;
     uint32_t start = millis();
     // Send the get command
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return nullptr;
+    }
     this->displayAdapter->print("get ");
     this->displayAdapter->print(component);
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
     // Wait for the response
     // Try to get a valid payload DISPLAY_FETCH_RETRY_COUNT times
     // Wait for the response
@@ -307,9 +354,15 @@ bool ESPMegaDisplay::getStringToBuffer(const char *component, char *buffer, uint
     this->rx_buffer_index = 0;
     uint32_t start = millis();
     // Send the get command
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return false;
+    }
     this->displayAdapter->print("get ");
     this->displayAdapter->print(component);
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
     // Wait for the response
     // Try to get a valid payload DISPLAY_FETCH_RETRY_COUNT times
     // Wait for the response
@@ -404,9 +457,15 @@ bool ESPMegaDisplay::payloadIsValid()
  */
 void ESPMegaDisplay::setBrightness(int value)
 {
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return;
+    }
     this->displayAdapter->print("dim=");
     this->displayAdapter->print(value);
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
 }
 
 /**
@@ -415,9 +474,15 @@ void ESPMegaDisplay::setBrightness(int value)
  */
 void ESPMegaDisplay::setVolume(int value)
 {
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return;
+    }
     this->displayAdapter->print("vol=");
     this->displayAdapter->print(value);
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
 }
 
 /**
@@ -427,9 +492,15 @@ void ESPMegaDisplay::reset()
 {
     // First we send a stop bytes to clear the serial buffer
     // This ensures that the display is ready to receive the reset command
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return;
+    }
     sendStopBytes();
     this->displayAdapter->print("rest");
     sendStopBytes();
+    xSemaphoreGive(this->serialMutex);
 }
 
 /**
@@ -438,6 +509,8 @@ void ESPMegaDisplay::reset()
  */
 ESPMegaDisplay::ESPMegaDisplay(HardwareSerial *displayAdapter)
 {
+    this->serialMutex = xSemaphoreCreateMutex();
+    this->otaBytesWritten = 0;
     this->displayAdapter = displayAdapter;
     this->currentPage = 0;
     this->rx_buffer_index = 0;
@@ -448,8 +521,14 @@ ESPMegaDisplay::ESPMegaDisplay(HardwareSerial *displayAdapter)
  */
 void ESPMegaDisplay::begin()
 {
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGE("ESPMegaDisplay", "Failed to take serial mutex");
+        return;
+    }
     this->displayAdapter->setTimeout(100);
     this->displayAdapter->flush();
+    xSemaphoreGive(this->serialMutex);
     this->reset();
 }
 
@@ -510,7 +589,7 @@ void ESPMegaDisplay::unregisterPageChangeCallback(uint16_t handle)
  * @param callback The callback function.
  * @return The handle of the callback function.
  */
-uint16_t ESPMegaDisplay::registerPayloadCallback(std::function<void(uint8_t, uint8_t*, uint8_t)> callback)
+uint16_t ESPMegaDisplay::registerPayloadCallback(std::function<void(uint8_t, uint8_t *, uint8_t)> callback)
 {
     uint16_t handle = payload_callbacks.size();
     payload_callbacks[handle] = callback;
@@ -524,4 +603,149 @@ uint16_t ESPMegaDisplay::registerPayloadCallback(std::function<void(uint8_t, uin
 void ESPMegaDisplay::unregisterPayloadCallback(uint16_t handle)
 {
     payload_callbacks.erase(handle);
+}
+
+/**
+ * @brief Takes the serial mutex.
+ * 
+ * @note only neccessary if you are using the display adapter directly, otherwise the mutex is taken by the helper functions.
+ */
+bool ESPMegaDisplay::takeSerialMutex()
+{
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return false;
+    }
+    return true;
+}
+
+/**
+ * @brief Gives the serial mutex.
+ */
+void ESPMegaDisplay::giveSerialMutex()
+{
+    ESP_LOGD("ESPMegaDisplay", "Giving serial mutex");
+    xSemaphoreGive(this->serialMutex);
+}
+
+/**
+ * @brief Starts an OTA update.
+ * @param size The size of the update.
+ * @return True if the OTA update is started, false otherwise.
+ */
+bool ESPMegaDisplay::beginUpdate(size_t size)
+{
+    if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
+    {
+        ESP_LOGI("ESPMegaDisplay", "Failed to take serial mutex");
+        return false;
+    }
+    ESP_LOGD("ESPMegaDisplay", "LCD OTA Subroutine has taken the serial mutex, all other tasks will be blocked until the OTA update is complete.");
+    // We have taken the serial mutex, all helper functions will be blocked until the OTA update is complete
+    // Thus, we have to interact directly with the display adapter
+    this->sendStopBytes();
+    this->displayAdapter->print("rest");
+    this->sendStopBytes();
+    delay(500);
+    this->displayAdapter->print("connect");
+    this->sendStopBytes();
+    delay(1000);
+    // Flush the serial recieve buffer
+    while (this->displayAdapter->available())
+        this->displayAdapter->read();
+    this->displayAdapter->print("whmi-wri ");
+    this->displayAdapter->print(size);
+    this->displayAdapter->print(",921600,res0");
+    this->sendStopBytes();
+    this->displayAdapter->begin(921600);
+    delay(1000);
+    // If the display is ready, it will send a 0x05 byte
+    // If it does, return true, otherwise return false
+    unsigned long startTime = millis();
+    while (millis() - startTime < OTA_WAIT_TIMEOUT)
+    {
+        if (this->displayAdapter->available())
+        {
+            if (this->displayAdapter->read() == 0x05)
+            {
+                ESP_LOGV("ESPMegaDisplay", "LCD Update Subroutine is ready to receive data.");
+                return true;
+            }
+        }
+    }
+    // FLush the serial recieve buffer
+    while (this->displayAdapter->available())
+        this->displayAdapter->read();
+    ESP_LOGE("ESPMegaDisplay", "LCD Update Subroutine failed to initialize.");
+    return false;
+}
+
+/**
+ * @brief Writes data to the display during an update.
+ * @param data The data to write.
+ * @param size The size of the data.
+ * @return True if the data is written, false otherwise.
+ */
+bool ESPMegaDisplay::writeUpdate(uint8_t *data, size_t size)
+{
+    // Check if the data size is too large
+    if (size > 4096)
+    {
+        ESP_LOGE("ESPMegaDisplay", "LCD Update Subroutine failed to write data, data size is too large.");
+        return false;
+    }
+    // Flush the serial recieve buffer
+    while (this->displayAdapter->available())
+        this->displayAdapter->read();
+    // Write the data
+    for (int i = 0; i < size; i++)
+    {
+        this->displayAdapter->write(data[i]);
+        // After every 4096 bytes, we have to wait for the display to send a 0x05 byte
+        // If it doesn't, return false
+        otaBytesWritten ++;
+        if (otaBytesWritten % 4096 == 0)
+        {
+            unsigned long startTime = millis();
+            bool ready = false;
+            while (millis() - startTime < OTA_WAIT_TIMEOUT)
+            {
+                if (this->displayAdapter->available())
+                {
+                    if (this->displayAdapter->read() == 0x05)
+                    {
+                        ready = true;
+                        break;
+                    }
+                }
+            }
+            if (!ready)
+            {
+                ESP_LOGE("ESPMegaDisplay", "LCD Update Subroutine failed to write data, display is not ready.");
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+/**
+ * @brief Ends an LCD update.
+ */
+void ESPMegaDisplay::endUpdate()
+{
+    xSemaphoreGive(this->serialMutex);
+    this->reset();
+    delay(500);
+    this->begin();
+}
+
+/**
+ * @brief Gets the number of bytes written during an OTA update.
+ * @return The number of bytes written.
+ */
+size_t ESPMegaDisplay::getOtaBytesWritten()
+{
+    return this->otaBytesWritten;
 }
