@@ -28,6 +28,8 @@ bool ESPMegaPRO::begin()
     Serial.begin(115200);
     this->installCard(1, &outputs);
     outputs.bindFRAM(&fram, 0);
+    uint8_t outputPinMap[16] = {8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7};
+    outputs.loadPinMap(outputPinMap);
     outputs.loadFromFRAM();
     outputs.setAutoSaveToFRAM(true);
     if (!this->installCard(0, &inputs))
@@ -38,8 +40,6 @@ bool ESPMegaPRO::begin()
     }
     uint8_t inputPinMap[16] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 14, 13, 12};
     inputs.loadPinMap(inputPinMap);
-    uint8_t outputPinMap[16] = {8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7};
-    outputs.loadPinMap(outputPinMap);
     return true;
 }
 

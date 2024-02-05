@@ -507,8 +507,12 @@ void ESPMegaDisplay::reset()
  * @brief Constructor for the ESPMegaDisplay class.
  * @param displayAdapter The serial adapter connected to the display.
  */
-ESPMegaDisplay::ESPMegaDisplay(HardwareSerial *displayAdapter)
+ESPMegaDisplay::ESPMegaDisplay(HardwareSerial *displayAdapter, uint16_t baudRate, uint16_t uploadBaudRate, uint8_t txPin, uint8_t rxPin)
 {
+    this->baudRate = baudRate;
+    this->uploadBaudRate = uploadBaudRate;
+    this->txPin = txPin;
+    this->rxPin = rxPin;
     this->serialMutex = xSemaphoreCreateMutex();
     this->otaBytesWritten = 0;
     this->displayAdapter = displayAdapter;
@@ -526,6 +530,7 @@ void ESPMegaDisplay::begin()
         ESP_LOGE("ESPMegaDisplay", "Failed to take serial mutex");
         return;
     }
+    this->displayAdapter->begin(this->baudRate, SERIAL_8N1, this->rxPin, this->txPin);
     this->displayAdapter->setTimeout(100);
     this->displayAdapter->flush();
     xSemaphoreGive(this->serialMutex);
@@ -629,12 +634,30 @@ void ESPMegaDisplay::giveSerialMutex()
     xSemaphoreGive(this->serialMutex);
 }
 
+bool ESPMegaDisplay::beginUpdate(size_t size)
+{
+    // The display's baudrate might be stuck at 9600 if the display is not initialized
+    // We try to initiate the display at the user specified baud rate first, if it fails, we try again at 9600
+    if (!beginUpdate(size, uploadBaudRate))
+    {
+        ESP_LOGW("ESPMegaDisplay", "Failed to initiate LCD update at %d baud, retrying at 9600 baud.", uploadBaudRate);
+        if (!beginUpdate(size, 9600))
+        {
+            ESP_LOGE("ESPMegaDisplay", "Failed to initiate LCD update at 9600 baud.");
+            return false;
+        }
+    }
+    return true;
+}
+
 /**
  * @brief Starts an OTA update.
  * @param size The size of the update.
+ * @param baudRate The baud rate use to connect to the display to initiate the update.
+ * @note The baud rate that is used to transfer the data is defined by the uploadBaudRate parameter in the constructor.
  * @return True if the OTA update is started, false otherwise.
  */
-bool ESPMegaDisplay::beginUpdate(size_t size)
+bool ESPMegaDisplay::beginUpdate(size_t size, uint16_t baudRate)
 {
     if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
     {
@@ -644,6 +667,7 @@ bool ESPMegaDisplay::beginUpdate(size_t size)
     ESP_LOGD("ESPMegaDisplay", "LCD OTA Subroutine has taken the serial mutex, all other tasks will be blocked until the OTA update is complete.");
     // We have taken the serial mutex, all helper functions will be blocked until the OTA update is complete
     // Thus, we have to interact directly with the display adapter
+    this->displayAdapter->begin(baudRate, SERIAL_8N1, this->rxPin, this->txPin);
     this->sendStopBytes();
     this->displayAdapter->print("rest");
     this->sendStopBytes();
@@ -656,9 +680,11 @@ bool ESPMegaDisplay::beginUpdate(size_t size)
         this->displayAdapter->read();
     this->displayAdapter->print("whmi-wri ");
     this->displayAdapter->print(size);
-    this->displayAdapter->print(",921600,res0");
+    this->displayAdapter->print(",");
+    this->displayAdapter->print(uploadBaudRate);
+    this->displayAdapter->print(",res0");
     this->sendStopBytes();
-    this->displayAdapter->begin(921600);
+    this->displayAdapter->begin(uploadBaudRate, SERIAL_8N1, this->rxPin, this->txPin);
     delay(1000);
     // If the display is ready, it will send a 0x05 byte
     // If it does, return true, otherwise return false
@@ -678,6 +704,7 @@ bool ESPMegaDisplay::beginUpdate(size_t size)
     while (this->displayAdapter->available())
         this->displayAdapter->read();
     ESP_LOGE("ESPMegaDisplay", "LCD Update Subroutine failed to initialize.");
+    xSemaphoreGive(this->serialMutex);
     return false;
 }
 
@@ -745,7 +772,7 @@ void ESPMegaDisplay::endUpdate()
  * @brief Gets the number of bytes written during an OTA update.
  * @return The number of bytes written.
  */
-size_t ESPMegaDisplay::getOtaBytesWritten()
+size_t ESPMegaDisplay::getUpdateBytesWritten()
 {
     return this->otaBytesWritten;
 }

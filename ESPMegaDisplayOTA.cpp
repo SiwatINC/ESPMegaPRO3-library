@@ -86,7 +86,7 @@ void ESPMegaDisplayOTA::otaUpdateWriteHandler(AsyncWebServerRequest *request, Js
     }
     // Write the data to the display
     display->writeUpdate(data_array, size);
-    request->send(200, "application/json", "{\"status\": \"success\",\"bytes_written\": "+String(this->display->getOtaBytesWritten())+"}");
+    request->send(200, "application/json", "{\"status\": \"success\",\"bytes_written\": "+String(this->display->getUpdateBytesWritten())+"}");
 }
 void ESPMegaDisplayOTA::otaUpdateEndHandler(AsyncWebServerRequest *request, JsonVariant &json) {
     this->webServer->checkAuthentication(request);

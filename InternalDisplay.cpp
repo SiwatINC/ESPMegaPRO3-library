@@ -479,7 +479,7 @@ void InternalDisplay::setInputMarker(uint8_t pin, bool state)
  *
  * @param displayAdapter The HardwareSerial object that is connected to the display
  */
-InternalDisplay::InternalDisplay(HardwareSerial *displayAdapter) : ESPMegaDisplay(displayAdapter)
+InternalDisplay::InternalDisplay(HardwareSerial *displayAdapter) : ESPMegaDisplay(displayAdapter, 115200, 921600, 1, 3)
 {
     this->currentPage = INTERNAL_DISPLAY_DASHBOARD_PAGE;
     this->iot = nullptr;
