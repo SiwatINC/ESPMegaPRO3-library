@@ -27,7 +27,7 @@ void RemoteVariable::begin(size_t size, char* topic, ESPMegaIoT* iot) {
 void RemoteVariable::subscribe() {
     this->iot->subscribe(this->topic);
     if(this->useValueRequest) {
-        this->publish_value_request();
+        this->requestValue();
     }
 }
 char* RemoteVariable::getValue() {
