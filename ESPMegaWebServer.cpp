@@ -51,6 +51,7 @@ void ESPMegaWebServer::begin()
     auto bindedOtaRequestHandler = std::bind(&ESPMegaWebServer::otaRequestHandler, this, std::placeholders::_1);
     auto bindedOtaUploadHandler = std::bind(&ESPMegaWebServer::otaUploadHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6);
     this->server->on("/ota_update", HTTP_POST, bindedOtaRequestHandler, bindedOtaUploadHandler);
+    this->server->on("/reboot", HTTP_GET, std::bind(&ESPMegaWebServer::rebootHandler, this, std::placeholders::_1));
 }
 
 /**
@@ -529,4 +530,19 @@ bool ESPMegaWebServer::checkAuthentication(AsyncWebServerRequest *request) {
         return false;
     }
     return true;
+}
+
+/**
+ * @brief Handle HTTP requests to the reboot (/reboot) page
+ * 
+ * @param request The AsyncWebServerRequest object
+ */
+void ESPMegaWebServer::rebootHandler(AsyncWebServerRequest *request)
+{
+    if (!request->authenticate(this->webUsername, this->webPassword))
+    {
+        return request->requestAuthentication();
+    }
+    request->send(200, "text/plain", "Rebooting ESPMega PRO...");
+    esp_restart();
 }

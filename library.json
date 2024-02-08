@@ -1,6 +1,6 @@
 {
   "name": "ESPMegaPROR3",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Hardware Library for Siwat INC ESPMegaPRO R3",
   "keywords": "espmega,espmegapro",
   "repository": {

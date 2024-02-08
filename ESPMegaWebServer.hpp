@@ -56,4 +56,5 @@ class ESPMegaWebServer
         void otaRequestHandler(AsyncWebServerRequest *request);
         void otaUploadHandler(AsyncWebServerRequest *request, String filename, size_t index, uint8_t *data, size_t len, bool final);
         void restAPIHandler(AsyncWebServerRequest *request);
+        void rebootHandler(AsyncWebServerRequest *request);
 };
