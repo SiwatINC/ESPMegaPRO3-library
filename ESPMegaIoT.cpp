@@ -206,7 +206,7 @@ void ESPMegaIoT::publishCard(uint8_t card_id)
  * 
  * @param topic The topic to subscribe to
  */
-void ESPMegaIoT::subscribe(char *topic)
+void ESPMegaIoT::subscribe(const char *topic)
 {
     mqtt.subscribe(topic);
 }
@@ -216,7 +216,7 @@ void ESPMegaIoT::subscribe(char *topic)
  * 
  * @param topic The topic to unsubscribe from
  */
-void ESPMegaIoT::unsubscribeFromTopic(char *topic)
+void ESPMegaIoT::unsubscribeFromTopic(const char *topic)
 {
     mqtt.unsubscribe(topic);
 }
@@ -227,7 +227,7 @@ void ESPMegaIoT::unsubscribeFromTopic(char *topic)
  * @param ssid The SSID of the wifi network
  * @param password The password of the wifi network
  */
-void ESPMegaIoT::connectToWifi(char *ssid, char *password)
+void ESPMegaIoT::connectToWifi(const char *ssid, const char *password)
 {
     WiFi.begin(ssid, password);
 }
@@ -237,7 +237,7 @@ void ESPMegaIoT::connectToWifi(char *ssid, char *password)
  * 
  * @param ssid The SSID of the wifi network
  */
-void ESPMegaIoT::connectToWifi(char *ssid)
+void ESPMegaIoT::connectToWifi(const char *ssid)
 {
     WiFi.begin(ssid);
 }
@@ -488,7 +488,7 @@ void ESPMegaIoT::unregisterRelativeMqttCallback(uint8_t handler)
  * @param topic The topic to publish to
  * @param payload The payload to publish
  */
-void ESPMegaIoT::publishRelative(char *topic, char *payload)
+void ESPMegaIoT::publishRelative(const char *topic, const char *payload)
 {
     char absolute_topic[100];
     sprintf(absolute_topic, "%s/%s", this->mqtt_config.base_topic, topic);
@@ -501,7 +501,7 @@ void ESPMegaIoT::publishRelative(char *topic, char *payload)
  * 
  * @param topic The topic to subscribe to
  */
-void ESPMegaIoT::subscribeRelative(char *topic)
+void ESPMegaIoT::subscribeRelative(const char *topic)
 {
     char absolute_topic[100];
     sprintf(absolute_topic, "%s/%s", this->mqtt_config.base_topic, topic);

@@ -78,13 +78,13 @@ public:
     void unregisterCard(uint8_t card_id);
     void publishCard(uint8_t card_id);
     // Publish topic appended with base topic
-    void publishRelative(char *topic, char *payload);
+    void publishRelative(const char *topic, const char *payload);
     // Subscribe topic appended with base topic
-    void subscribeRelative(char *topic);
-    void subscribe(char *topic);
-    void unsubscribeFromTopic(char *topic);
-    void connectToWifi(char *ssid, char *password);
-    void connectToWifi(char *ssid);
+    void subscribeRelative(const char *topic);
+    void subscribe(const char *topic);
+    void unsubscribeFromTopic(const char *topic);
+    void connectToWifi(const char *ssid, const char *password);
+    void connectToWifi(const char *ssid);
     void disconnectFromWifi();
     bool wifiConnected();
     void ethernetBegin();
