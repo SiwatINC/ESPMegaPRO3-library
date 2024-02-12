@@ -20,6 +20,12 @@ class RemoteVariable
         void subscribe();
         void requestValue();
         char* getValue();
+        int getValueAsInt();
+        long getValueAsLong();
+        double getValueAsDouble();
+        void setIntValue(int value);
+        void setLongValue(long value);
+        void setDoubleValue(double value);
         uint8_t registerCallback(std::function<void(char*)>);
         void unregisterCallback(uint8_t handler);
         

@@ -154,3 +154,66 @@ uint8_t RemoteVariable::registerCallback(std::function<void(char*)> callback) {
 void RemoteVariable::unregisterCallback(uint8_t handler) {
     this->valueChangeCallback.erase(handler);
 }
+
+/**
+ * @brief Get the value of the variable as an integer
+ * This method is used to get the value of the variable as an integer
+ * @return int The value of the variable as an integer
+ * @note If the value is not a valid integer, it will return 0
+*/
+int RemoteVariable::getValueAsInt() {
+    return atoi(this->value);
+}
+
+/**
+ * @brief Get the value of the variable as a long
+ * This method is used to get the value of the variable as a long
+ * @return long The value of the variable as a long
+ * @note If the value is not a valid long, it will return 0
+*/
+long RemoteVariable::getValueAsLong() {
+    return atol(this->value);
+}
+
+/**
+ * @brief Get the value of the variable as a double
+ * This method is used to get the value of the variable as a double
+ * @return double The value of the variable as a double
+ * @note If the value is not a valid double, it will return 0
+*/
+double RemoteVariable::getValueAsDouble() {
+    return atof(this->value);
+}
+
+/**
+ * @brief Set the value of the variable as an integer
+ * This method is used to set the value of the variable as an integer
+ * @param value The value to set
+*/
+void RemoteVariable::setIntValue(int value) {
+    char buffer[this->size];
+    itoa(value, buffer, DEC);
+    this->setValue(buffer);
+}
+
+/**
+ * @brief Set the value of the variable as a long
+ * This method is used to set the value of the variable as a long
+ * @param value The value to set
+*/
+void RemoteVariable::setLongValue(long value) {
+    char buffer[this->size];
+    ltoa(value, buffer, DEC);
+    this->setValue(buffer);
+}
+
+/**
+ * @brief Set the value of the variable as a double
+ * This method is used to set the value of the variable as a double
+ * @param value The value to set
+*/
+void RemoteVariable::setDoubleValue(double value) {
+    char buffer[this->size];
+    snprintf(buffer, this->size, "%f", value);
+    this->setValue(buffer);
+}
