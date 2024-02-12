@@ -8,6 +8,8 @@
 #include <DigitalOutputIoT.hpp>
 #include <ClimateCard.hpp>
 #include <ClimateIoT.hpp>
+#include <CurrentTransformerCard.hpp>
+#include <CurrentTransformerIoT.hpp>
 #include <IoTComponent.hpp>
 #include <PubSubClient.h>
 #include <ETH.h>

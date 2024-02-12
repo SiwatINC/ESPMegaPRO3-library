@@ -1,5 +1,13 @@
 #pragma once
 #include <ESPMegaIoT.hpp>
+#include <map>
+/**
+ * @brief A class that create a variable that exists on other devices and can be accessed remotely
+ * 
+ * This class is used to create a variable that exists on other devices and can be accessed remotely.
+ * Supports setting and getting values from the variable.
+ * Also support value request. 
+*/
 class RemoteVariable
 {
     public:
@@ -12,6 +20,9 @@ class RemoteVariable
         void subscribe();
         void requestValue();
         char* getValue();
+        uint8_t registerCallback(std::function<void(char*)>);
+        void unregisterCallback(uint8_t handler);
+        
     private:
         void mqtt_callback(char* topic, char* payload);
         ESPMegaIoT* iot;
@@ -22,4 +33,6 @@ class RemoteVariable
         const char* valueRequestTopic;
         bool useSetValue;
         const char* setValueTopic;
+        uint8_t valueChangeCallbackCount;
+        std::map<uint8_t,std::function<void(char*)>> valueChangeCallback;
 };

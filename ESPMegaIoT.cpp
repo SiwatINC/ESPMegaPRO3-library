@@ -164,6 +164,14 @@ void ESPMegaIoT::registerCard(uint8_t card_id)
             components[card_id]->publishReport();
         }
         break;
+    case CARD_TYPE_CT:
+        components[card_id] = new CurrentTransformerIoT();
+        components[card_id]->begin(card_id, cards[card_id], &mqtt, this->mqtt_config.base_topic);
+        if (mqtt_connected)
+        {
+            components[card_id]->subscribe();
+            components[card_id]->publishReport();
+        }
     default:
         ESP_LOGE("ESPMegaIoT", "Registering card %d failed: Unknown card", card_id);
         return;
