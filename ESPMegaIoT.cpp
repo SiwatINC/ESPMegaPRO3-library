@@ -377,7 +377,7 @@ void ESPMegaIoT::publish(const char *topic, const char *payload)
  * @param callback The callback function
  * @return The handler for the callback
  */
-uint8_t ESPMegaIoT::registerMqttCallback(std::function<void(char *, char *)> callback)
+uint16_t ESPMegaIoT::registerMqttCallback(std::function<void(char *, char *)> callback)
 {
     mqtt_callbacks[mqtt_callbacks_handler_index] = callback;
     return mqtt_callbacks_handler_index++;
@@ -388,7 +388,7 @@ uint8_t ESPMegaIoT::registerMqttCallback(std::function<void(char *, char *)> cal
  * 
  * @param handler The handler of the callback
  */
-void ESPMegaIoT::unregisterMqttCallback(uint8_t handler)
+void ESPMegaIoT::unregisterMqttCallback(uint16_t handler)
 {
     mqtt_callbacks.erase(handler);
 }
@@ -479,7 +479,7 @@ void ESPMegaIoT::sessionKeepAlive()
  * @param callback The callback function
  * @return The handler for the callback
  */
-uint8_t ESPMegaIoT::registerRelativeMqttCallback(std::function<void(char *, char *)> callback)
+uint16_t ESPMegaIoT::registerRelativeMqttCallback(std::function<void(char *, char *)> callback)
 {
     mqtt_relative_callbacks[mqtt_relative_callbacks_handler_index] = callback;
     return mqtt_relative_callbacks_handler_index++;
@@ -490,7 +490,7 @@ uint8_t ESPMegaIoT::registerRelativeMqttCallback(std::function<void(char *, char
  * 
  * @param handler The handler of the callback
  */
-void ESPMegaIoT::unregisterRelativeMqttCallback(uint8_t handler)
+void ESPMegaIoT::unregisterRelativeMqttCallback(uint16_t handler)
 {
     mqtt_relative_callbacks.erase(handler);
 }
@@ -528,7 +528,7 @@ void ESPMegaIoT::subscribeRelative(const char *topic)
  * @param callback The callback function
  * @return The handler for the callback
  */
-uint8_t ESPMegaIoT::registerSubscribeCallback(std::function<void(void)> callback)
+uint16_t ESPMegaIoT::registerSubscribeCallback(std::function<void(void)> callback)
 {
     subscribe_callbacks[subscribe_callbacks_handler_index] = callback;
     return subscribe_callbacks_handler_index++;
@@ -539,7 +539,7 @@ uint8_t ESPMegaIoT::registerSubscribeCallback(std::function<void(void)> callback
  * 
  * @param handler The handler of the callback
  */
-void ESPMegaIoT::unregisterSubscribeCallback(uint8_t handler)
+void ESPMegaIoT::unregisterSubscribeCallback(uint16_t handler)
 {
     subscribe_callbacks.erase(handler);
 }
