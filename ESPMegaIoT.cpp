@@ -41,15 +41,20 @@ void ESPMegaIoT::mqttCallback(char *topic, byte *payload, unsigned int length)
     // Create a null terminated string from the payload
     memcpy(payload_buffer, payload, length);
     payload_buffer[length] = '\0';
+    // If the topic is not appended with the base topic, call only the absolute callbacks
+    if (strncmp(topic, this->mqtt_config.base_topic, base_topic_length) != 0)
+    {
+        for (const auto &callback : mqtt_callbacks)
+        {
+            callback.second(topic, payload_buffer);
+        }
+        return;
+    }
     // Remove the base topic from the topic
     char *topic_without_base = topic + strlen(this->mqtt_config.base_topic) + 1;
     for (const auto &callback : mqtt_relative_callbacks)
     {
         callback.second(topic_without_base, payload_buffer);
-    }
-    for (const auto &callback : mqtt_callbacks)
-    {
-        callback.second(topic, payload_buffer);
     }
     // Call the respective card's mqtt callback
     // Note that after the base topic, there should be the card id
