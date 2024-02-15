@@ -17,7 +17,7 @@
 class ESPMegaDisplay
 {
     public:
-        ESPMegaDisplay(HardwareSerial *displayAdapter, uint16_t baudRate, uint16_t uploadBaudRate, uint8_t txPin, uint8_t rxPin);
+        ESPMegaDisplay(HardwareSerial *displayAdapter, uint32_t baudRate, uint32_t uploadBaudRate, uint8_t txPin, uint8_t rxPin);
         void begin();
         void loop();
         void reset();
@@ -39,13 +39,13 @@ class ESPMegaDisplay
         void giveSerialMutex();
         SemaphoreHandle_t serialMutex;
         bool beginUpdate(size_t size);
-        bool beginUpdate(size_t size, uint16_t baudRate);
+        bool beginUpdate(size_t size, uint32_t baudRate);
         bool writeUpdate(uint8_t* data, size_t size);
         void endUpdate();
         size_t getUpdateBytesWritten();
     protected:
-        uint16_t baudRate;
-        uint16_t uploadBaudRate;
+        uint32_t baudRate;
+        uint32_t uploadBaudRate;
         uint8_t txPin;
         uint8_t rxPin;
         size_t otaBytesWritten;

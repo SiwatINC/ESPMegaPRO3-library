@@ -608,6 +608,7 @@ void InternalDisplay::refreshPWMAdjustmentId()
     this->displayAdapter->print(pmwAdjustmentPin);
     this->displayAdapter->print("\"");
     this->sendStopBytes();
+    this->giveSerialMutex();
 }
 
 /**

@@ -507,7 +507,7 @@ void ESPMegaDisplay::reset()
  * @brief Constructor for the ESPMegaDisplay class.
  * @param displayAdapter The serial adapter connected to the display.
  */
-ESPMegaDisplay::ESPMegaDisplay(HardwareSerial *displayAdapter, uint16_t baudRate, uint16_t uploadBaudRate, uint8_t txPin, uint8_t rxPin)
+ESPMegaDisplay::ESPMegaDisplay(HardwareSerial *displayAdapter, uint32_t baudRate, uint32_t uploadBaudRate, uint8_t txPin, uint8_t rxPin)
 {
     this->baudRate = baudRate;
     this->uploadBaudRate = uploadBaudRate;
@@ -657,7 +657,7 @@ bool ESPMegaDisplay::beginUpdate(size_t size)
  * @note The baud rate that is used to transfer the data is defined by the uploadBaudRate parameter in the constructor.
  * @return True if the OTA update is started, false otherwise.
  */
-bool ESPMegaDisplay::beginUpdate(size_t size, uint16_t baudRate)
+bool ESPMegaDisplay::beginUpdate(size_t size, uint32_t baudRate)
 {
     if (xSemaphoreTake(this->serialMutex, DISPLAY_MUTEX_TAKE_TIMEOUT) == pdFALSE)
     {
