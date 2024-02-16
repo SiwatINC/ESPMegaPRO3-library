@@ -345,7 +345,6 @@ void ClimateCard::updateSensor()
  */
 void ClimateCard::updateAirConditioner()
 {
-    // // The IR Transmissions are not working yet so we just return
     const uint16_t* ir_code_ptr = nullptr;
     size_t itemCount = (*(this->ac.getInfraredCode))(this->state.ac_mode, this->state.ac_fan_speed, this->state.ac_temperature-this->ac.min_temperature, &ir_code_ptr);
 
@@ -452,4 +451,14 @@ void ClimateCard::unregisterChangeCallback(uint8_t handler)
 void ClimateCard::unregisterSensorCallback(uint8_t handler)
 {
     sensor_callbacks.erase(handler);
+}
+
+void ClimateCard::setState(uint8_t mode, uint8_t fan_speed, uint8_t temperature)
+{
+    this->state.ac_mode = mode;
+    this->state.ac_fan_speed = fan_speed;
+    this->state.ac_temperature = temperature;
+    updateAirConditioner();
+    if (fram_auto_save)
+        saveStateToFRAM();
 }

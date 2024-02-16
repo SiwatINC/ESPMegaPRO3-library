@@ -32,7 +32,7 @@ void IRBlaster::send(const uint16_t *data, const size_t size)
             items[j].duration1 = 0;
         }
     }
-    ESP_ERROR_CHECK(rmt_write_items(channel, items, size / 2 + size % 2, true));
+    ESP_ERROR_CHECK(rmt_write_items(channel, items, size / 2 + size % 2, false));
     delete[] items;
 }
 

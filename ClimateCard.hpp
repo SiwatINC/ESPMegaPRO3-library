@@ -81,6 +81,7 @@ class ClimateCard : public ExpansionCard {
         void setFanSpeed(uint8_t fan_speed);
         void setFanSpeedByName(const char* fan_speed_name);
         uint8_t getFanSpeed();
+        void setState(uint8_t mode, uint8_t fan_speed, uint8_t temperature);
         char* getFanSpeedName();
         float getRoomTemperature();
         float getHumidity();
