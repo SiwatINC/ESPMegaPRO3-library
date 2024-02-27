@@ -1,5 +1,6 @@
 #pragma once
 #include <AnalogCard.hpp>
+#include <ExpansionCard.hpp>
 #include <FRAM.h>
 #include <map>
 
@@ -10,12 +11,12 @@
  * Also supports storing energy to FRAM.
  */
 
-class CurrentTransformerCard
+class CurrentTransformerCard : public ExpansionCard
 {
     public:
         CurrentTransformerCard(AnalogCard* analogCard, uint8_t pin, float *voltage, std::function<float(uint16_t)> adcToCurrent, uint32_t conversionInterval);
         void bindFRAM(FRAM *fram, uint32_t framAddress); // Takes 16 bytes of FRAM (long double energy)
-        void begin();
+        bool begin();
         void loop();
         void beginConversion();
         void setEnergy(float energy);

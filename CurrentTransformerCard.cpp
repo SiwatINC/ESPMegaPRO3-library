@@ -14,9 +14,14 @@ void CurrentTransformerCard::bindFRAM(FRAM *fram, uint32_t framAddress)
     this->framAddress = framAddress;
 }
 
-void CurrentTransformerCard::begin()
+bool CurrentTransformerCard::begin()
 {
+    // Is analogCard a nullptr?
+    if (this->analogCard == nullptr) {
+        return false;
+    }
     this->beginConversion();
+    return true;
 }
 
 void CurrentTransformerCard::loop()
