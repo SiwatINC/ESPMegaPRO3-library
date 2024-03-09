@@ -133,37 +133,38 @@ uint16_t AnalogCard::analogRead(uint8_t pin)
  */
 bool AnalogCard::begin()
 {
+    bool success = true;
     if (!this->dac0.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install DAC0");
-        return false;
+        success = false;
     }
     if (!this->dac1.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install DAC1");
-        return false;
+        success = false;
     }
     if (!this->dac2.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install DAC2");
-        return false;
+        success = false;
     }
     if (!this->dac3.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install DAC3");
-        return false;
+        success = false;
     }
     if (!this->analogInputBankA.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install analog input bank A");
-        return false;
+        success = false;
     }
     if (!this->analogInputBankB.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install analog input bank B");
-        return false;
+        success = false;
     }
-    return true;
+    return success;
 }
 
 /**
