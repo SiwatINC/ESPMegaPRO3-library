@@ -6,6 +6,9 @@
 #include <DigitalOutputCard.hpp>
 #include <ClimateCard.hpp>
 
+// Password Obfuscation
+#define PASSWORD_OBFUSCATION_STRING "********"
+
 // Page IDs
 #define INTERNAL_DISPLAY_BOOT_PAGE 0
 #define INTERNAL_DISPLAY_DASHBOARD_PAGE 1

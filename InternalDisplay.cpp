@@ -212,9 +212,17 @@ void InternalDisplay::saveMQTTConfig()
     if (!this->getStringToBuffer("user_set.txt", this->mqttConfig->mqtt_user, 16))
         return;
 
-    // Save the mqtt password
-    if (!this->getStringToBuffer("password_set.txt", this->mqttConfig->mqtt_password, 16))
+    // Check if the password should be 
+    char password_temp[32];
+    // Get the passwords
+    if (!this->getStringToBuffer("password_set.txt", password_temp, 16))
         return;
+    
+    // Check if the password should be updated
+    if (strcmp(password_temp, PASSWORD_OBFUSCATION_STRING))
+    {
+        strcpy(this->mqttConfig->mqtt_password, password_temp);
+    }
 
     // Save the mqtt base topic
     if (!this->getStringToBuffer("topic_set.txt", this->mqttConfig->base_topic, 16))
@@ -852,7 +860,7 @@ void InternalDisplay::refreshMQTTConfig()
     this->sendStopBytes();
     // Refresh the mqtt password
     this->displayAdapter->print("password_set.txt=\"");
-    this->displayAdapter->print(this->mqttConfig->mqtt_password);
+    this->displayAdapter->print(PASSWORD_OBFUSCATION_STRING);
     this->displayAdapter->print("\"");
     this->sendStopBytes();
     // Refresh the mqtt base topic
