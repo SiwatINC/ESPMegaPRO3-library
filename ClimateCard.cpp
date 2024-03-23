@@ -152,6 +152,10 @@ void ClimateCard::loadStateFromFRAM()
 {
     if (fram == nullptr)
         return;
+    // Retrieve state from FRAM
+    state.ac_temperature = fram->read8(fram_address);
+    state.ac_mode = fram->read8(fram_address + 1);
+    state.ac_fan_speed = fram->read8(fram_address + 2);
     if (state.ac_temperature > ac.max_temperature)
         state.ac_temperature = ac.max_temperature;
     else if (state.ac_temperature < ac.min_temperature)
