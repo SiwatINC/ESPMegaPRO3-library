@@ -105,7 +105,7 @@ void SmartVariable::setValueAutoSave(bool autoSave)
     this->autoSave = autoSave;
 }
 
-uint16_t SmartVariable::registerCallback(void (*callback)(char *))
+uint16_t SmartVariable::registerCallback(std::function<void(char *)> callback)
 {
     this->valueChangeCallbacks[this->currentHandlerId] = callback;
     return this->currentHandlerId++;

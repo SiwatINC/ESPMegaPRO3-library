@@ -23,7 +23,7 @@ public:
     void loadValue();
     void saveValue();
     void setValueAutoSave(bool autoSave);
-    uint16_t registerCallback(void (*callback)(char*));
+    uint16_t registerCallback(std::function<void(char*)> callback);
     void unregisterCallback(uint16_t handlerId);
     int32_t getIntValue();
     void setIntValue(int32_t value);
@@ -46,5 +46,5 @@ protected:
     void subscribeMqtt();
     // Value Change Callback
     uint16_t currentHandlerId;
-    std::map<uint16_t, void (*)(char*)> valueChangeCallbacks;
+    std::map<uint16_t, std::function<void(char*)>> valueChangeCallbacks;
 };
