@@ -46,6 +46,11 @@ void SmartVariable::setValue(const char *value)
         this->saveValue();
     if (this->iotEnabled)
         this->publishValue();
+    // Call Callbacks
+    for (auto const &callback : this->valueChangeCallbacks)
+    {
+        callback.second(this->value);
+    }
 }
 
 char *SmartVariable::getValue()
