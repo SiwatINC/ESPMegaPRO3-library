@@ -3,7 +3,7 @@
 
 /**
  * @brief Create a new ESPMegaIoT object
- * 
+ *
  * @note You shold not create this object directly, Instead, you should use the ESPMegaPRO::iot object
  */
 ESPMegaIoT::ESPMegaIoT() : mqtt(tcpClient)
@@ -27,11 +27,11 @@ ESPMegaIoT::~ESPMegaIoT()
 
 /**
  * @brief The mqtt callback function, This function is called when a message is received on a subscribed topic
- * 
+ *
  *  This function is called when a message is received on a subscribed topic
  *  The payload is copied to a buffer and a null terminator is added
  *  The payload is then passed to the respective card's mqtt callback
- * 
+ *
  * @param topic The topic of the message
  * @param payload The payload of the message in byte form
  * @param length The length of the payload
@@ -42,12 +42,12 @@ void ESPMegaIoT::mqttCallback(char *topic, byte *payload, unsigned int length)
     memcpy(payload_buffer, payload, length);
     payload_buffer[length] = '\0';
     // If the topic is not appended with the base topic, call only the absolute callbacks
+    for (const auto &callback : mqtt_callbacks)
+    {
+        callback.second(topic, payload_buffer);
+    }
     if (strncmp(topic, this->mqtt_config.base_topic, base_topic_length) != 0)
     {
-        for (const auto &callback : mqtt_callbacks)
-        {
-            callback.second(topic, payload_buffer);
-        }
         return;
     }
     // Remove the base topic from the topic
@@ -72,7 +72,7 @@ void ESPMegaIoT::mqttCallback(char *topic, byte *payload, unsigned int length)
 
 /**
  * @brief Set the base topic for the IoT
- * 
+ *
  * @param base_topic The base topic
  */
 void ESPMegaIoT::setBaseTopic(char *base_topic)
@@ -83,7 +83,7 @@ void ESPMegaIoT::setBaseTopic(char *base_topic)
 
 /**
  * @brief Begin the ESPMegaIoT object
- * 
+ *
  * @param cards The array of ExpansionCard objects
  */
 void ESPMegaIoT::intr_begin(ExpansionCard *cards[])
@@ -94,7 +94,7 @@ void ESPMegaIoT::intr_begin(ExpansionCard *cards[])
 
 /**
  * @brief The main loop for the ESPMegaIoT object
- * 
+ *
  * @note Normally you should not call this function, Instead, you should call ESPMegaPRO::loop()
  */
 void ESPMegaIoT::loop()
@@ -115,10 +115,10 @@ void ESPMegaIoT::loop()
 
 /**
  * @brief Register an existing card for use with IoT
- * 
+ *
  * This function registers an existing card for use with IoT
  * The card should be installed using ESPMegaPRO::installCard() before calling this function
- * 
+ *
  * @param card_id The id of the card
  */
 void ESPMegaIoT::registerCard(uint8_t card_id)
@@ -185,7 +185,7 @@ void ESPMegaIoT::registerCard(uint8_t card_id)
 
 /**
  * @brief Unregister a card
- * 
+ *
  * @param card_id The id of the card
  */
 void ESPMegaIoT::unregisterCard(uint8_t card_id)
@@ -216,7 +216,7 @@ void ESPMegaIoT::publishCard(uint8_t card_id)
 
 /**
  * @brief Subscribe to a topic
- * 
+ *
  * @param topic The topic to subscribe to
  */
 void ESPMegaIoT::subscribe(const char *topic)
@@ -226,7 +226,7 @@ void ESPMegaIoT::subscribe(const char *topic)
 
 /**
  * @brief Unsubscribe from a topic
- * 
+ *
  * @param topic The topic to unsubscribe from
  */
 void ESPMegaIoT::unsubscribeFromTopic(const char *topic)
@@ -236,7 +236,7 @@ void ESPMegaIoT::unsubscribeFromTopic(const char *topic)
 
 /**
  * @brief Connect to a wifi network
- * 
+ *
  * @param ssid The SSID of the wifi network
  * @param password The password of the wifi network
  */
@@ -247,7 +247,7 @@ void ESPMegaIoT::connectToWifi(const char *ssid, const char *password)
 
 /**
  * @brief Connect to a unsecured wifi network
- * 
+ *
  * @param ssid The SSID of the wifi network
  */
 void ESPMegaIoT::connectToWifi(const char *ssid)
@@ -265,7 +265,7 @@ void ESPMegaIoT::disconnectFromWifi()
 
 /**
  * @brief Check if the wifi is connected
- * 
+ *
  * @return True if the wifi is connected, false otherwise
  */
 bool ESPMegaIoT::wifiConnected()
@@ -275,7 +275,7 @@ bool ESPMegaIoT::wifiConnected()
 
 /**
  * @brief Connect to a MQTT broker with authentication
- * 
+ *
  * @param client_id The client id to use
  * @param mqtt_server The MQTT server to connect to
  * @param mqtt_port The MQTT port to connect to
@@ -315,7 +315,7 @@ bool ESPMegaIoT::connectToMqtt(char *client_id, char *mqtt_server, uint16_t mqtt
 
 /**
  * @brief Connect to a MQTT broker without authentication
- * 
+ *
  * @param client_id The client id to use
  * @param mqtt_server The MQTT server to connect to
  * @param mqtt_port The MQTT port to connect to
@@ -362,7 +362,7 @@ void ESPMegaIoT::disconnectFromMqtt()
 
 /**
  * @brief Publish a message to a topic
- * 
+ *
  * @param topic The topic to publish to
  * @param payload The payload to publish
  */
@@ -373,7 +373,7 @@ void ESPMegaIoT::publish(const char *topic, const char *payload)
 
 /**
  * @brief Register a callback for MQTT messages
- * 
+ *
  * @param callback The callback function
  * @return The handler for the callback
  */
@@ -385,7 +385,7 @@ uint16_t ESPMegaIoT::registerMqttCallback(std::function<void(char *, char *)> ca
 
 /**
  * @brief Unregister a callback
- * 
+ *
  * @param handler The handler of the callback
  */
 void ESPMegaIoT::unregisterMqttCallback(uint16_t handler)
@@ -409,7 +409,7 @@ void ESPMegaIoT::mqttSubscribe()
     {
         if (components[i] != NULL)
         {
-            ESP_LOGD("ESPMegaIoT","Subscribing component %d", i);
+            ESP_LOGD("ESPMegaIoT", "Subscribing component %d", i);
             components[i]->subscribe();
             mqtt.loop();
         }
@@ -473,9 +473,9 @@ void ESPMegaIoT::sessionKeepAlive()
 
 /**
  * @brief Register a callback for MQTT messages relative to the base topic
- * 
+ *
  * The message's base topic will be removed before calling the callback
- * 
+ *
  * @param callback The callback function
  * @return The handler for the callback
  */
@@ -487,7 +487,7 @@ uint16_t ESPMegaIoT::registerRelativeMqttCallback(std::function<void(char *, cha
 
 /**
  * @brief Unregister a relative MQTT callback
- * 
+ *
  * @param handler The handler of the callback
  */
 void ESPMegaIoT::unregisterRelativeMqttCallback(uint16_t handler)
@@ -497,7 +497,7 @@ void ESPMegaIoT::unregisterRelativeMqttCallback(uint16_t handler)
 
 /**
  * @brief Publish a message relative to the base topic
- * 
+ *
  * @param topic The topic to publish to
  * @param payload The payload to publish
  */
@@ -511,7 +511,7 @@ void ESPMegaIoT::publishRelative(const char *topic, const char *payload)
 
 /**
  * @brief Subscribe to a topic relative to the base topic
- * 
+ *
  * @param topic The topic to subscribe to
  */
 void ESPMegaIoT::subscribeRelative(const char *topic)
@@ -524,7 +524,7 @@ void ESPMegaIoT::subscribeRelative(const char *topic)
 
 /**
  * @brief Register a function to be called when the ESPMegaIoT object is subscribing to topics
- * 
+ *
  * @param callback The callback function
  * @return The handler for the callback
  */
@@ -536,7 +536,7 @@ uint16_t ESPMegaIoT::registerSubscribeCallback(std::function<void(void)> callbac
 
 /**
  * @brief Unregister a subscribe callback
- * 
+ *
  * @param handler The handler of the callback
  */
 void ESPMegaIoT::unregisterSubscribeCallback(uint16_t handler)
@@ -546,7 +546,7 @@ void ESPMegaIoT::unregisterSubscribeCallback(uint16_t handler)
 
 /**
  * @brief Set the network config
- * 
+ *
  * @param network_config The network config struct
  */
 void ESPMegaIoT::setNetworkConfig(NetworkConfig network_config)
@@ -672,7 +672,7 @@ void ESPMegaIoT::connectNetwork()
 
 /**
  * @brief Set the MQTT config
- * 
+ *
  * @param mqtt_config The MQTT config struct
  */
 void ESPMegaIoT::setMqttConfig(MqttConfig mqtt_config)
@@ -683,7 +683,7 @@ void ESPMegaIoT::setMqttConfig(MqttConfig mqtt_config)
 
 /**
  * @brief Bind an ethernet interface to the ESPMegaIoT object
- * 
+ *
  * @param ethernetIface The ethernet interface to bind (ETH for ESPMegaPRO R3)
  */
 void ESPMegaIoT::bindEthernetInterface(ETHClass *ethernetIface)
@@ -693,7 +693,7 @@ void ESPMegaIoT::bindEthernetInterface(ETHClass *ethernetIface)
 
 /**
  * @brief Get the IoTComponent object for a card
- * 
+ *
  * @param card_id The id of the card
  * @return The IoTComponent object for the card
  */
@@ -704,9 +704,9 @@ IoTComponent *ESPMegaIoT::getComponent(uint8_t card_id)
 
 /**
  * @brief Get the network config
- * 
+ *
  * @warning You should not modify the returned struct directly
- * 
+ *
  * @return The network config struct
  */
 NetworkConfig *ESPMegaIoT::getNetworkConfig()
@@ -716,9 +716,9 @@ NetworkConfig *ESPMegaIoT::getNetworkConfig()
 
 /**
  * @brief Get the MQTT config
- * 
+ *
  * @warning You should not modify the returned struct directly
- * 
+ *
  * @return The MQTT config struct
  */
 MqttConfig *ESPMegaIoT::getMqttConfig()
@@ -728,18 +728,18 @@ MqttConfig *ESPMegaIoT::getMqttConfig()
 
 /**
  * @brief Check if the MQTT is connected
- * 
+ *
  * @return True if the MQTT is connected, false otherwise
  */
 bool ESPMegaIoT::mqttConnected()
 {
-    //return mqtt_connected;
+    // return mqtt_connected;
     return mqtt.connected();
 }
 
 /**
  * @brief Check if the network is connected
- * 
+ *
  * @return True if the network is connected, false otherwise
  */
 bool ESPMegaIoT::networkConnected()
@@ -753,7 +753,7 @@ bool ESPMegaIoT::networkConnected()
 /**
  * @brief Bind a FRAM object to the ESPMegaIoT object
  * @note This class is hardcode to use the FRAM address 34-300
- * 
+ *
  * @param fram The FRAM object to bind
  */
 void ESPMegaIoT::bindFRAM(FRAM *fram)
@@ -766,25 +766,28 @@ void ESPMegaIoT::bindFRAM(FRAM *fram)
  *
  * @return The Wifi IP address
  */
-IPAddress ESPMegaIoT::getWifiIp() {
+IPAddress ESPMegaIoT::getWifiIp()
+{
     return WiFi.localIP();
 }
 
 /**
  * @brief Get the Ethernet IP Address
- * 
+ *
  * @return The Ethernet IP Address
  */
-IPAddress ESPMegaIoT::getETHIp() {
+IPAddress ESPMegaIoT::getETHIp()
+{
     return ETH.localIP();
 }
 
 /**
  * @brief Get the IP address of the currently active network interface
- * 
+ *
  * @return The IP address of the currently active network interface
  */
-IPAddress ESPMegaIoT::getIp() {
+IPAddress ESPMegaIoT::getIp()
+{
     if (network_config.useWifi)
         return this->getWifiIp();
     else
@@ -793,28 +796,31 @@ IPAddress ESPMegaIoT::getIp() {
 
 /**
  * @brief Get the MAC Address of the Ethernet interface
- * 
+ *
  * @return The MAC Address of the Ethernet interface
  */
-String ESPMegaIoT::getETHMac() {
+String ESPMegaIoT::getETHMac()
+{
     return ETH.macAddress();
 }
 
 /**
  * @brief Get the MAC Address of the Wifi interface
- * 
+ *
  * @return The MAC Address of the Wifi interface
  */
-String ESPMegaIoT::getWifiMac() {
+String ESPMegaIoT::getWifiMac()
+{
     return WiFi.macAddress();
 }
 
 /**
  * @brief Get the MAC Address of the currently active network interface
- * 
+ *
  * @return The MAC Address of the currently active network interface
  */
-String ESPMegaIoT::getMac() {
+String ESPMegaIoT::getMac()
+{
     if (network_config.useWifi)
         return this->getWifiMac();
     else
