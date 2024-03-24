@@ -294,7 +294,10 @@ bool ESPMegaIoT::connectToMqtt(char *client_id, char *mqtt_server, uint16_t mqtt
         ESP_LOGE("ESPMegaIoT", "MQTT Connection failed: Username or password not set but MQTT use_auth is true");
         return false;
     }
-    if (mqtt.connect(client_id, mqtt_user, mqtt_password))
+    // Create availability topic
+    char availability_topic[base_topic_length + 15];
+    sprintf(availability_topic, "%s/availability", this->mqtt_config.base_topic);
+    if (mqtt.connect(client_id, mqtt_user, mqtt_password, availability_topic, 0, true, "offline"))
     {
         sessionKeepAlive();
         mqttSubscribe();
@@ -307,6 +310,7 @@ bool ESPMegaIoT::connectToMqtt(char *client_id, char *mqtt_server, uint16_t mqtt
             }
         }
         mqtt_connected = true;
+        mqtt.publish(availability_topic, "online", true);
         return true;
     }
     mqtt_connected = false;
@@ -328,7 +332,10 @@ bool ESPMegaIoT::connectToMqtt(char *client_id, char *mqtt_server, uint16_t mqtt
     auto boundCallback = std::bind(&ESPMegaIoT::mqttCallback, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
     ESP_LOGD("ESPMegaIoT", "Binding MQTT callback");
     mqtt.setCallback(boundCallback);
-    if (mqtt.connect(client_id))
+    // Create availability topic
+    char availability_topic[base_topic_length + 15];
+    sprintf(availability_topic, "%s/availability", this->mqtt_config.base_topic);
+    if (mqtt.connect(client_id, availability_topic, 0, true, "offline"))
     {
         ESP_LOGD("ESPMegaIoT", "MQTT Connected, Calling session keep alive");
         sessionKeepAlive();
@@ -345,6 +352,7 @@ bool ESPMegaIoT::connectToMqtt(char *client_id, char *mqtt_server, uint16_t mqtt
         }
         ESP_LOGI("ESPMegaIoT", "MQTT Connected OK.");
         mqtt_connected = true;
+        mqtt.publish(availability_topic, "online", true);
         return true;
     }
     ESP_LOGW("ESPMegaIoT", "MQTT Connection failed: %d", mqtt.state());
