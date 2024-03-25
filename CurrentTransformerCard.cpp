@@ -6,6 +6,7 @@ CurrentTransformerCard::CurrentTransformerCard(AnalogCard* analogCard, uint8_t p
     this->pin = pin;
     this->voltage = voltage;
     this->adcToCurrent = adcToCurrent;
+    this->conversionInterval = conversionInterval;
 }
 
 void CurrentTransformerCard::bindFRAM(FRAM *fram, uint32_t framAddress)
