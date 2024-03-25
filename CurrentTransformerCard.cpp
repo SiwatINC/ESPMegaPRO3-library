@@ -30,7 +30,7 @@ void CurrentTransformerCard::loop()
     if (this->lastConversionTime == 0) {
         this->lastConversionTime = millis();
     }
-    static uint32_t lastConversionLoopTime = 0;
+
     if (millis() - lastConversionLoopTime > this->conversionInterval) {
         this->beginConversion();
         lastConversionLoopTime = millis();

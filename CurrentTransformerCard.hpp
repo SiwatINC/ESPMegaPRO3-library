@@ -46,5 +46,6 @@ class CurrentTransformerCard : public ExpansionCard
         std::function<float(uint16_t)> adcToCurrent; // std::function that convert adc value to current in amps
         uint8_t handler_count = 0;
         std::map<uint8_t,std::function<void(float, double)>> callbacks;
+        uint32_t lastConversionLoopTime;
 };
 
