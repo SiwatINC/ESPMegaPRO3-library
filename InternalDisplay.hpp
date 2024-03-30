@@ -104,6 +104,7 @@ class InternalDisplay : public ESPMegaDisplay {
         void handleInputStateChange(uint8_t pin, bool state);
         void handlePwmStateChange(uint8_t pin, bool state, uint16_t value);
         void handlePageChange(uint8_t page);
+        void handlePayload(uint8_t type, uint8_t *payload, uint8_t length);
         void setOutputBar(uint8_t pin, uint16_t value);
         void setOutputStateColor(uint8_t pin, bool state);
         void setInputMarker(uint8_t pin, bool state);

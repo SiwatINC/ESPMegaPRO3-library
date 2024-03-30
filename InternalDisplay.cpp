@@ -929,3 +929,13 @@ void InternalDisplay::setBootStatus(const char *text)
     this->sendStopBytes();
     this->giveSerialMutex();
 }
+
+
+void InternalDisplay::handlePayload(uint8_t type, uint8_t *payload, uint8_t length) {
+    // If payload of type 0x92 is received
+    // Send the display to page 1
+    if (type == 0x92)
+    {
+        this->jumpToPage(1);
+    }
+}
