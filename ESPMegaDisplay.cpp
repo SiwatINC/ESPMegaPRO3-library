@@ -765,7 +765,7 @@ void ESPMegaDisplay::endUpdate()
     xSemaphoreGive(this->serialMutex);
     this->reset();
     delay(500);
-    this->begin();
+    esp_restart();
 }
 
 /**
