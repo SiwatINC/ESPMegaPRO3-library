@@ -638,7 +638,7 @@ bool ESPMegaDisplay::beginUpdate(size_t size)
 {
     // The display's baudrate might be stuck at 9600 if the display is not initialized
     // We try to initiate the display at the user specified baud rate first, if it fails, we try again at 9600
-    if (!beginUpdate(size, uploadBaudRate))
+    if (!beginUpdate(size, baudRate))
     {
         ESP_LOGW("ESPMegaDisplay", "Failed to initiate LCD update at %d baud, retrying at 9600 baud.", uploadBaudRate);
         if (!beginUpdate(size, 9600))
