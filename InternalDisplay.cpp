@@ -17,6 +17,8 @@ void InternalDisplay::begin(ESPMegaIoT *iot, std::function<rtctime_t()> getRtcTi
     // Register callbacks
     auto bindedPageChangeCallback = std::bind(&InternalDisplay::handlePageChange, this, std::placeholders::_1);
     this->registerPageChangeCallback(bindedPageChangeCallback);
+    auto bindedPayloadCallback = std::bind(&InternalDisplay::handlePayload, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+    this->registerPayloadCallback(bindedPayloadCallback);
     auto bindedTouchCallback = std::bind(&InternalDisplay::handleTouch, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
     this->registerTouchCallback(bindedTouchCallback);
     // Initialize the display
