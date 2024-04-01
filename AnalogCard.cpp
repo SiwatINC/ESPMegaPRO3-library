@@ -137,29 +137,29 @@ bool AnalogCard::begin()
     if (!this->dac0.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install DAC0");
-        success = false;
+        // success = false;
     }
     if (!this->dac1.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install DAC1");
-        success = false;
+        // success = false;
     }
     if (!this->dac2.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install DAC2");
-        success = false;
+        // success = false;
     }
     if (!this->dac3.begin())
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install DAC3");
-        success = false;
+        // success = false;
     }
-    if (!this->analogInputBankA.begin())
+    if (!this->analogInputBankA.begin(ANALOG_INPUT_BANK_A_ADDRESS))
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install analog input bank A");
         success = false;
     }
-    if (!this->analogInputBankB.begin())
+    if (!this->analogInputBankB.begin(ANALOG_INPUT_BANK_B_ADDRESS))
     {
         ESP_LOGE("AnalogCard", "Card Analog ERROR: Failed to install analog input bank B");
         success = false;
