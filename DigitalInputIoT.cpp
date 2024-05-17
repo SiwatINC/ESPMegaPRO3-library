@@ -31,6 +31,7 @@ bool DigitalInputIoT::begin(uint8_t card_id, ExpansionCard *card, PubSubClient *
  */
 void DigitalInputIoT::subscribe() {
     this->subscribeRelative(PUBLISH_ENABLE_TOPIC);
+    this->subscribeRelative(INPUT_REQUEST_STATE_TOPIC);
 }
 
 /**
@@ -40,14 +41,18 @@ void DigitalInputIoT::subscribe() {
  * @param payload The null-terminated payload of the MQTT message.
  */
 void DigitalInputIoT::handleMqttMessage(char *topic, char *payload) {
+    if (!strcmp(topic, INPUT_REQUEST_STATE_TOPIC)) {
+        this->publishDigitalInputs();
+    }
     // payload is char '0' or '1'
-    if (!strcmp(topic, PUBLISH_ENABLE_TOPIC)) {
+    else if (!strcmp(topic, PUBLISH_ENABLE_TOPIC)) {
         if (payload[0] == '1') {
             this->setDigitalInputsPublishEnabled(true);
         } else {
             this->setDigitalInputsPublishEnabled(false);
         }
     }
+
 }
 
 /**

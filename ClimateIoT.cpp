@@ -148,6 +148,7 @@ void ClimateIoT::subscribe() {
     this->subscribeRelative(AC_TEMPERATURE_SET_TOPIC);
     this->subscribeRelative(AC_MODE_SET_TOPIC);
     this->subscribeRelative(AC_FAN_SPEED_SET_TOPIC);
+    this->subscribeRelative(AC_REQUEST_STATE_TOPIC);
     ESP_LOGD("ClimateIoT", "Subscribed to topics");
 }
 

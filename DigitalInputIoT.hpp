@@ -6,6 +6,7 @@
 
 // MQTT Topics
 #define PUBLISH_ENABLE_TOPIC "publish_enable"
+#define INPUT_REQUEST_STATE_TOPIC "requeststate"
 
 /**
  * @brief The DigitalInputIoT class is a class for connecting the Digital Input Card to the IoT module.

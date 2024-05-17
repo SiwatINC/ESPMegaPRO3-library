@@ -12,7 +12,7 @@
 #define AC_FAN_SPEED_SET_TOPIC "set/fan_speed"
 #define AC_ROOM_TEMPERATURE_REPORT_TOPIC "room_temperature"
 #define AC_HUMIDITY_REPORT_TOPIC "humidity"
-#define AC_REQUEST_STATE_TOPIC "request_state"
+#define AC_REQUEST_STATE_TOPIC "requeststate"
 
 /**
  * @brief The ClimateIoT class is a class for connecting the Climate Card to the IoT module.
