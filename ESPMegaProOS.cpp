@@ -27,7 +27,7 @@ bool ESPMegaPRO::begin()
     fram.begin(FRAM_ADDRESS);
     Serial.begin(115200);
     this->installCard(1, &outputs);
-    outputs.bindFRAM(&fram, 0);    
+    outputs.bindFRAM(&fram, 0);
     uint8_t outputPinMap[16] = {8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7};
     outputs.loadPinMap(outputPinMap);
     outputs.loadFromFRAM();
@@ -40,6 +40,40 @@ bool ESPMegaPRO::begin()
     }
     uint8_t inputPinMap[16] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 14, 13, 12};
     inputs.loadPinMap(inputPinMap);
+    // Detect GPIO2 Reset
+    gpio_num_t buttonPin = GPIO_NUM_2;
+    gpio_pad_select_gpio(buttonPin);
+    gpio_set_direction(buttonPin, GPIO_MODE_INPUT);
+    gpio_set_pull_mode(buttonPin, GPIO_PULLUP_ONLY);
+    if (gpio_get_level(buttonPin) == 0)
+    {
+        ESP_LOGW("ESPMegaPRO", "GPIO2 is low, if this condition persists for 5 more seconds, the device will factory reset");
+        bool shouldReset = true;
+        for (int i = 0; i < 50; i++)
+        {
+            vTaskDelay(100 / portTICK_PERIOD_MS);
+            if (gpio_get_level(buttonPin) == 1)
+            {
+                ESP_LOGI("ESPMegaPRO", "Reset condition cleared, Continuing boot process");
+                shouldReset = false;
+                break;
+            }
+        }
+        if (shouldReset)
+        {
+            ESP_LOGW("ESPMegaPRO", "Reset condition met, Factory Resetting device");
+            for (int i = 0; i < fram.getSizeBytes(); i++)
+            {
+                if (i % 1024 == 0)
+                    ESP_LOGV("ESPMegaPRO", "Clearing FRAM Address %d", i);
+                fram.write8(i, 0);
+            }
+            ESP_LOGI("ESPMegaPRO", "Factory Reset Complete");
+            ESP_LOGI("ESPMegaPRO", "Rebooting device");
+            esp_restart();
+        }
+    }
+
     return true;
 }
 
