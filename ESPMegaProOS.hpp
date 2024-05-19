@@ -15,6 +15,7 @@
 #include <ESPMegaDisplay.hpp>
 #include <InternalDisplay.hpp>
 #include <ESPMegaWebServer.hpp>
+#include <ESPMegaRecovery.hpp>
 
 // ESPMega Pro R3 Board Address
 #define FRAM_ADDRESS 0x56
@@ -82,6 +83,11 @@ class ESPMegaPRO {
          * @note You must call enableWebServer() before using this component.
          */
         ESPMegaWebServer *webServer;
+        /**
+         * @brief This component is used to enter recovery mode when the ESPMegaPRO board is in a bootloop.
+         * @typedef ESPMegaRecovery
+         */
+        ESPMegaRecovery recovery;
     private:
         bool iotEnabled = false;
         bool internalDisplayEnabled = false;

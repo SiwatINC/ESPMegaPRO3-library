@@ -35,17 +35,6 @@ class ESPMegaWebServer
         void saveCredentialsToFRAM();
         AsyncWebServer* getServer();
         bool checkAuthentication(AsyncWebServerRequest *request);
-    private:
-        // FRAM
-        FRAM *fram;
-        // Credentials
-        char webUsername[32];
-        char webPassword[32];
-        // Web Server
-        AsyncWebServer *server;
-        uint16_t port;
-        // ESPMegaIoT
-        ESPMegaIoT *iot;
         // Endpoints Handlers
         void dashboardHandler(AsyncWebServerRequest *request);
         void configHandler(AsyncWebServerRequest *request);
@@ -57,4 +46,15 @@ class ESPMegaWebServer
         void otaUploadHandler(AsyncWebServerRequest *request, String filename, size_t index, uint8_t *data, size_t len, bool final);
         void restAPIHandler(AsyncWebServerRequest *request);
         void rebootHandler(AsyncWebServerRequest *request);
+    private:
+        // FRAM
+        FRAM *fram;
+        // Credentials
+        char webUsername[32];
+        char webPassword[32];
+        // Web Server
+        AsyncWebServer *server;
+        uint16_t port;
+        // ESPMegaIoT
+        ESPMegaIoT *iot;
 };

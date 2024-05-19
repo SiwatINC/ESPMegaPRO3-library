@@ -73,7 +73,9 @@ bool ESPMegaPRO::begin()
             esp_restart();
         }
     }
-
+    // Recovery Mode
+    recovery.bindFRAM(&fram, 600);
+    recovery.begin();
     return true;
 }
 
@@ -89,6 +91,7 @@ void ESPMegaPRO::loop()
 {
     inputs.loop();
     outputs.loop();
+    recovery.loop();
     for (int i = 0; i < 255; i++)
     {
         if (cardInstalled[i])
