@@ -52,6 +52,10 @@ void ESPMegaWebServer::begin()
     auto bindedOtaUploadHandler = std::bind(&ESPMegaWebServer::otaUploadHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4, std::placeholders::_5, std::placeholders::_6);
     this->server->on("/ota_update", HTTP_POST, bindedOtaRequestHandler, bindedOtaUploadHandler);
     this->server->on("/reboot", HTTP_GET, std::bind(&ESPMegaWebServer::rebootHandler, this, std::placeholders::_1));
+    auto bindedGetConfigHandler = std::bind(&ESPMegaWebServer::getConfigHandler, this, std::placeholders::_1);  
+    this->server->on("/get_config", HTTP_GET, bindedGetConfigHandler);
+    auto bindedGetDeviceInfoHandler = std::bind(&ESPMegaWebServer::getDeviceInfoHandler, this, std::placeholders::_1);
+    this->server->on("/get_device_info", HTTP_GET, bindedGetDeviceInfoHandler);
 }
 
 /**
@@ -205,52 +209,7 @@ void ESPMegaWebServer::dashboardHandler(AsyncWebServerRequest *request)
     {
         return request->requestAuthentication();
     }
-    auto bindedDashboardProcessor = std::bind(&ESPMegaWebServer::dashboardProcessor, this, std::placeholders::_1);
-    request->send_P(200, "text/html", ota_html, bindedDashboardProcessor);
-}
-
-/**
- * @brief Replace placeholders in the dashboard HTML with values
- * 
- * @param var The placeholder name
- * @return The value to replace the placeholder with
- */
-String ESPMegaWebServer::dashboardProcessor(const String &var)
-{
-    if (var == "hostname")
-    {
-        return String(this->iot->getNetworkConfig()->hostname);
-    }
-    else if (var == "ip_address")
-    {
-        return this->iot->getIp().toString();
-    }
-    else if (var == "mac_address")
-    {
-        return this->iot->getMac();
-    }
-    else if (var == "model")
-    {
-        return String("ESPMega PRO R3.3c");
-    }
-    else if (var == "mqtt_connection_string")
-    {
-        MqttConfig *mqttConfig = this->iot->getMqttConfig();
-        String connectionString;
-        connectionString += mqttConfig->mqtt_server;
-        connectionString += ":";
-        connectionString += mqttConfig->mqtt_port;
-        return connectionString;
-    }
-    else if (var == "base_topic")
-    {
-        return String(this->iot->getMqttConfig()->base_topic);
-    }
-    else if (var == "mqtt_connected")
-    {
-        return this->iot->mqttConnected() ? "Connected" : "Standalone";
-    }
-    return "";
+    request->send_P(200, "text/html", ota_html);
 }
 
 /**
@@ -264,74 +223,7 @@ void ESPMegaWebServer::configHandler(AsyncWebServerRequest *request)
     {
         return request->requestAuthentication();
     }
-    auto bindedConfigProcessor = std::bind(&ESPMegaWebServer::configProcessor, this, std::placeholders::_1);
-    request->send_P(200, "text/html", config_html, bindedConfigProcessor);
-}
-
-/**
- * @brief Replace placeholders in the config HTML with values
- * 
- * @param var The placeholder name
- * 
- * @return The value to replace the placeholder with
- */
-String ESPMegaWebServer::configProcessor(const String &var)
-{
-    MqttConfig *mqttConfig = this->iot->getMqttConfig();
-    NetworkConfig *networkConfig = this->iot->getNetworkConfig();
-    if (var == "ip_address")
-    {
-        return networkConfig->ip.toString();
-    }
-    else if (var == "netmask")
-    {
-        return networkConfig->subnet.toString();
-    }
-    else if (var == "gateway")
-    {
-        return networkConfig->gateway.toString();
-    }
-    else if (var == "dns")
-    {
-        return networkConfig->dns1.toString();
-    }
-    else if (var == "hostname")
-    {
-        return String(networkConfig->hostname);
-    }
-    else if (var == "bms_ip")
-    {
-        return String(mqttConfig->mqtt_server);
-    }
-    else if (var == "bms_port")
-    {
-        return String(mqttConfig->mqtt_port);
-    }
-    else if (var == "bms_useauth")
-    {
-        return mqttConfig->mqtt_useauth ? "checked=\"checked\"" : "";
-    }
-    else if (var == "bms_username")
-    {
-        return String(mqttConfig->mqtt_user);
-    }
-    else if (var == "bms_password")
-    {
-        return String(mqttConfig->mqtt_password);
-    }
-    else if (var == "bms_endpoint")
-    {
-        return String(mqttConfig->base_topic);
-    }
-    else if (var == "web_username")
-    {
-        return String(this->webUsername);
-    }
-    else if (var == "web_password")
-    {
-        return String(this->webPassword);
-    }
-    return "";
+    request->send_P(200, "text/html", config_html);
 }
 
 /**
@@ -545,4 +437,52 @@ void ESPMegaWebServer::rebootHandler(AsyncWebServerRequest *request)
     }
     request->send(200, "text/plain", "Rebooting ESPMega PRO...");
     esp_restart();
+}
+
+void ESPMegaWebServer::getConfigHandler(AsyncWebServerRequest *request) {
+    if (!request->authenticate(this->webUsername, this->webPassword))
+    {
+        return request->requestAuthentication();
+    }
+    StaticJsonDocument<512> doc;
+    NetworkConfig *networkConfig = this->iot->getNetworkConfig();
+    MqttConfig *mqttConfig = this->iot->getMqttConfig();
+    doc["ip_address"] = networkConfig->ip.toString();
+    doc["netmask"] = networkConfig->subnet.toString();
+    doc["gateway"] = networkConfig->gateway.toString();
+    doc["dns"] = networkConfig->dns1.toString();
+    doc["hostname"] = networkConfig->hostname;
+    doc["bms_ip"] = mqttConfig->mqtt_server;
+    doc["bms_port"] = mqttConfig->mqtt_port;
+    doc["bms_useauth"] = mqttConfig->mqtt_useauth;
+    doc["bms_username"] = mqttConfig->mqtt_user;
+    doc["bms_password"] = mqttConfig->mqtt_password;
+    doc["bms_endpoint"] = mqttConfig->base_topic;
+    doc["web_username"] = this->webUsername;
+    doc["web_password"] = this->webPassword;
+    char buffer[512];
+    serializeJson(doc, buffer);
+    request->send(200, "application/json", buffer);
+}
+
+void ESPMegaWebServer::getDeviceInfoHandler(AsyncWebServerRequest *request) {
+    if (!request->authenticate(this->webUsername, this->webPassword))
+    {
+        return request->requestAuthentication();
+    }
+    StaticJsonDocument<512> doc;
+    doc["hostname"] = this->iot->getNetworkConfig()->hostname;
+    doc["ip_address"] = this->iot->getIp().toString();
+    doc["mac_address"] = this->iot->getMac();
+    doc["model"] = BOARD_MODEL;
+    doc["mqtt_server"] = this->iot->getMqttConfig()->mqtt_server;
+    doc["mqtt_port"] = this->iot->getMqttConfig()->mqtt_port;
+    doc["base_topic"] = this->iot->getMqttConfig()->base_topic;
+    doc["mqtt_connected"] = this->iot->mqttConnected() ? "Connected" : "Standalone";
+    doc["software_version"] = SW_VERSION;
+    doc["sdk_version"] = SDK_VESRION;
+    doc["idf_version"] = IDF_VER;
+    char buffer[512];
+    serializeJson(doc, buffer);
+    request->send(200, "application/json", buffer);
 }

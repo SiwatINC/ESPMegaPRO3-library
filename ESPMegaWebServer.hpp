@@ -7,7 +7,7 @@
 #include <ArduinoJson.h>
 #include <AsyncJson.h>
 #include <all_html.h>
-
+#include <ESPMegaCommon.hpp>
 
 /**
  * @brief Provides a web server for ESPMegaPRO
@@ -48,11 +48,11 @@ class ESPMegaWebServer
         ESPMegaIoT *iot;
         // Endpoints Handlers
         void dashboardHandler(AsyncWebServerRequest *request);
-        String dashboardProcessor(const String& var);
         void configHandler(AsyncWebServerRequest *request);
-        String configProcessor(const String& var);
         AsyncCallbackJsonWebHandler *saveConfigHandler;
         void saveConfigJSONHandler(AsyncWebServerRequest *request, JsonVariant &json);
+        void getConfigHandler(AsyncWebServerRequest *request);
+        void getDeviceInfoHandler(AsyncWebServerRequest *request);
         void otaRequestHandler(AsyncWebServerRequest *request);
         void otaUploadHandler(AsyncWebServerRequest *request, String filename, size_t index, uint8_t *data, size_t len, bool final);
         void restAPIHandler(AsyncWebServerRequest *request);
