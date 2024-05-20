@@ -16,6 +16,8 @@
 #include <WiFi.h>
 #include <FRAM.h>
 #include <map>
+#include <ArduinoJson.h>
+#include <ESPMegaCommon.hpp>
 
 // MQTT Connection Parameters
 #define TCP_TIMEOUT_SEC 5
@@ -81,6 +83,7 @@ public:
     void publishCard(uint8_t card_id);
     // Publish topic appended with base topic
     void publishRelative(const char *topic, const char *payload);
+    void publishRelative(const char *topic, const char *payload, unsigned int length);
     // Subscribe topic appended with base topic
     void subscribeRelative(const char *topic);
     void subscribe(const char *topic);
@@ -105,6 +108,7 @@ public:
     bool mqttConnected();
     void disconnectFromMqtt();
     void publish(const char *topic, const char *payload);
+    void publish(const char *topic, const char *payload, unsigned int length);
     uint16_t registerMqttCallback(std::function<void(char *, char *)> callback);
     void unregisterMqttCallback(uint16_t handler);
     uint16_t registerRelativeMqttCallback(std::function<void(char *, char *)> callback);
@@ -115,6 +119,7 @@ public:
     void bindEthernetInterface(ETHClass *ethernetIface);
     bool networkConnected();
     void bindFRAM(FRAM *fram);
+    void publishSystemSummary();
 
     IoTComponent* getComponent(uint8_t card_id);
     IPAddress getETHIp();

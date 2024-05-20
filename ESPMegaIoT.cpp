@@ -56,6 +56,22 @@ void ESPMegaIoT::mqttCallback(char *topic, byte *payload, unsigned int length)
     {
         callback.second(topic_without_base, payload_buffer);
     }
+    // Check for global state request
+    if (!strcmp(topic_without_base,"requeststate")) {
+        for (int i = 0; i < 255; i++)
+        {
+            if (components[i] != NULL)
+            {
+                components[i]->publishReport();
+            }
+        }
+        return;
+    }
+    // Check for global summary request
+    if (!strcmp(topic_without_base,"requestinfo")) {
+        this->publishSystemSummary();
+        return;
+    }
     // Call the respective card's mqtt callback
     // Note that after the base topic, there should be the card id
     // /base_topic/card_id/...
@@ -380,6 +396,18 @@ void ESPMegaIoT::publish(const char *topic, const char *payload)
 }
 
 /**
+ * @brief Publish a message to a topic
+ *
+ * @param topic The topic to publish to
+ * @param payload The payload to publish
+ * @param length The length of the payload
+ */
+void ESPMegaIoT::publish(const char *topic, const char *payload, unsigned int length)
+{
+    mqtt.publish(topic, (const uint8_t *)payload, length);
+}
+
+/**
  * @brief Register a callback for MQTT messages
  *
  * @param callback The callback function
@@ -402,7 +430,7 @@ void ESPMegaIoT::unregisterMqttCallback(uint16_t handler)
 }
 
 /**
- * @brief Subscribe to all components's topics
+ * @brief Subscribe to all components's topics and all other topics
  */
 void ESPMegaIoT::mqttSubscribe()
 {
@@ -422,6 +450,9 @@ void ESPMegaIoT::mqttSubscribe()
             mqtt.loop();
         }
     }
+    // Global topics
+    this->subscribeRelative("requeststate");
+    this->subscribeRelative("requestinfo");
 }
 
 /**
@@ -514,6 +545,21 @@ void ESPMegaIoT::publishRelative(const char *topic, const char *payload)
     char absolute_topic[100];
     sprintf(absolute_topic, "%s/%s", this->mqtt_config.base_topic, topic);
     mqtt.publish(absolute_topic, payload);
+    mqtt.loop();
+}
+
+/**
+ * @brief Publish a message relative to the base topic
+ *
+ * @param topic The topic to publish to
+ * @param payload The payload to publish
+ * @param length The length of the payload
+ */
+void ESPMegaIoT::publishRelative(const char *topic, const char *payload, unsigned int length)
+{
+    char absolute_topic[100];
+    sprintf(absolute_topic, "%s/%s", this->mqtt_config.base_topic, topic);
+    mqtt.publish(absolute_topic, (const uint8_t *)payload, length);
     mqtt.loop();
 }
 
@@ -833,4 +879,31 @@ String ESPMegaIoT::getMac()
         return this->getWifiMac();
     else
         return this->getETHMac();
+}
+
+/**
+ * @brief Publish a json object containing the system summary
+ */
+void ESPMegaIoT::publishSystemSummary() {
+    char payload[1024];
+    StaticJsonDocument<1024> doc;
+    JsonObject root = doc.to<JsonObject>();
+    root["ip"] = this->getIp().toString();
+    root["firmware"] = SW_VERSION;
+    root["sdk_version"] = SDK_VESRION;
+    root["board_model"] = BOARD_MODEL;
+    JsonArray cards = root.createNestedArray("cards");
+    for (int i = 0; i < 255; i++)
+    {
+        if (components[i] != NULL)
+        {
+            JsonObject card = cards.createNestedObject();
+            card["id"] = i;
+            card["type"] = components[i]->getType();
+        }
+    }
+    serializeJson(doc, payload);
+    ESP_LOGD("ESPMegaIoT", "Publishing system summary: %s", payload);
+    mqtt.loop();
+    this->publishRelative("info", payload, strlen(payload));
 }
