@@ -24,6 +24,11 @@
 #define PWM_BANK_ADDRESS 0x5F
 #define RTC_ADDRESS 0x68
 
+// Constants
+#define NTP_TIMEOUT_MS 5000
+#define NTP_UPDATE_INTERVAL_MS 60000
+#define NTP_INITIAL_SYNC_DELAY_MS 15000
+
 /**
  * @brief The ESPMegaPRO class is the main class for the ESPMegaPRO library.
  * 
@@ -47,6 +52,7 @@ class ESPMegaPRO {
         void enableIotModule();
         void enableInternalDisplay(HardwareSerial *serial);
         void enableWebServer(uint16_t port);
+        void setTimezone(const char* offset);
         rtctime_t getTime();
         void dumpFRAMtoSerial(uint16_t start, uint16_t end);
         void dumpFRAMtoSerialASCII(uint16_t start, uint16_t end);

@@ -1,4 +1,5 @@
 #include <ESPMegaProOS.hpp>
+#include "esp_sntp.h"
 
 // Reserve FRAM address 0 - 1000 for ESPMegaPRO Internal Use
 // (34 Bytes) Address 0-33 for Built-in Digital Output Card
@@ -11,6 +12,7 @@
  */
 ESPMegaPRO::ESPMegaPRO()
 {
+
 }
 
 /**
@@ -102,6 +104,13 @@ void ESPMegaPRO::loop()
     if (iotEnabled)
     {
         iot->loop();
+        static int64_t lastNTPUpdate = (esp_timer_get_time() / 1000) - NTP_UPDATE_INTERVAL_MS + NTP_INITIAL_SYNC_DELAY_MS;
+        if ((esp_timer_get_time() / 1000) - lastNTPUpdate > NTP_UPDATE_INTERVAL_MS)
+        {
+            ESP_LOGV("ESPMegaPRO", "Updating time from NTP");
+            lastNTPUpdate = esp_timer_get_time() / 1000;
+            this->updateTimeFromNTP();
+        }
     }
     if (internalDisplayEnabled)
     {
@@ -153,19 +162,35 @@ bool ESPMegaPRO::installCard(uint8_t slot, ExpansionCard *card)
 bool ESPMegaPRO::updateTimeFromNTP()
 {
     struct tm timeinfo;
-    if (getLocalTime(&timeinfo))
+    uint32_t start = esp_timer_get_time() / 1000;
+    time_t now;
+    time(&now);
+    localtime_r(&now, &timeinfo);
+    if (!(timeinfo.tm_year > (2016 - 1900)))
     {
-        rtctime_t rtctime = this->getTime();
-        if (rtctime.hours != timeinfo.tm_hour || rtctime.minutes != timeinfo.tm_min ||
-            rtctime.seconds != timeinfo.tm_sec || rtctime.day != timeinfo.tm_mday ||
-            rtctime.month != timeinfo.tm_mon + 1 || rtctime.year != timeinfo.tm_year + 1900)
-        {
-            this->setTime(timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec,
-                          timeinfo.tm_mday, timeinfo.tm_mon + 1, timeinfo.tm_year + 1900);
-        }
-        return true;
+        ESP_LOGI("ESPMegaPRO", "NTP is not ready yet!");
+        return false;   
     }
-    return false;
+    rtctime_t rtctime = this->getTime();
+    if (rtctime.hours != timeinfo.tm_hour || rtctime.minutes != timeinfo.tm_min ||
+        rtctime.seconds != timeinfo.tm_sec || rtctime.day != timeinfo.tm_mday ||
+        rtctime.month != timeinfo.tm_mon + 1 || rtctime.year != timeinfo.tm_year + 1900)
+    {
+        this->setTime(timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec,
+                      timeinfo.tm_mday, timeinfo.tm_mon + 1, timeinfo.tm_year + 1900);
+    }
+    ESP_LOGV("ESPMegaPRO", "Time updated from NTP: %s", asctime(&timeinfo));
+    return true;
+}
+
+/**
+ * @brief Sets the timezone for the internal RTC.
+ * 
+ * @note This function takes POSIX timezone strings (e.g. "EST5EDT,M3.2.0,M11.1.0").
+*/
+void ESPMegaPRO::setTimezone(const char* offset)
+{
+    setenv("TZ", offset, 1);
 }
 
 /**
@@ -222,6 +247,10 @@ void ESPMegaPRO::enableIotModule()
     this->iot->bindFRAM(&fram);
     this->iot->intr_begin(cards);
     iotEnabled = true;
+    sntp_setoperatingmode(SNTP_OPMODE_POLL);
+    sntp_setservername(0, this->iot->getMqttConfig()->mqtt_server);
+    sntp_setservername(1, "pool.ntp.org");
+    sntp_init();
 }
 
 /**
