@@ -3,8 +3,8 @@
 /**
  * @brief Create a new Digital Input Card object with the specified address
  * @note If you are using the ESPMegaI/O board, you should use the dip switch constructor
- * 
- * @param address_a The ESPMegaI/O address of bank A 
+ *
+ * @param address_a The ESPMegaI/O address of bank A
  * @param address_b The ESPMegaI/O address of bank B
  */
 DigitalInputCard::DigitalInputCard(uint8_t address_a, uint8_t address_b) : callbacks()
@@ -16,11 +16,11 @@ DigitalInputCard::DigitalInputCard(uint8_t address_a, uint8_t address_b) : callb
 
 /**
  * @brief Create a new Digital Input Card object with the specified position on the dip switch
- * 
+ *
  * @note The bit 0 are at the left of the dip switch
- * 
+ *
  * @warning There are 6 switches on the dip switch, 3 for bank A and 3 for bank B, They should be unique for each bank accross all the cards
- * 
+ *
  * @param bit0 The position of the first switch on the dip switch
  * @param bit1 The position of the second switch on the dip switch
  * @param bit2 The position of the third switch on the dip switch
@@ -50,18 +50,20 @@ DigitalInputCard::DigitalInputCard(bool bit0, bool bit1, bool bit2, bool bit3, b
 
 /**
  * @brief Initialize the Digital Input Card
- * 
+ *
  * @return True if the initialization is successful, false otherwise
  */
 bool DigitalInputCard::begin()
 {
     this->inputBankA = PCF8574(this->address_a);
     this->inputBankB = PCF8574(this->address_b);
-    if (!this->inputBankA.begin()) {
+    if (!this->inputBankA.begin())
+    {
         ESP_LOGE("DigitalInputCard", "Input Card ERROR: Failed to install input bank A");
         return false;
     }
-    if (!this->inputBankB.begin()) {
+    if (!this->inputBankB.begin())
+    {
         ESP_LOGE("DigitalInputCard", "Input Card ERROR: Failed to install input bank B");
         return false;
     }
@@ -82,7 +84,7 @@ bool DigitalInputCard::begin()
 
 /**
  * @brief Read the input from the specified pin, always refresh the input buffers
- * 
+ *
  * @param pin The pin to read from
  * @return True if the pin is HIGH, false if the pin is LOW
  */
@@ -93,7 +95,7 @@ bool DigitalInputCard::digitalRead(uint8_t pin)
 
 /**
  * @brief Read the input from the specified pin, also refresh the input buffers if refresh is true
- * 
+ *
  * @param pin The pin to read from
  * @param refresh If true, the input buffers will be refreshed before reading the pin
  * @return True if the pin is HIGH, false if the pin is LOW
@@ -123,9 +125,9 @@ bool DigitalInputCard::digitalRead(uint8_t pin, bool refresh)
 
 /**
  * @brief Check if the specified pin changed since the last call to this function
- * 
+ *
  * @note This function compares the current input buffer with the previous input buffer to detect changes
- * 
+ *
  * @param pin The pin to check
  * @param currentBuffer The current input buffer
  * @param previousBuffer The previous input buffer
@@ -134,44 +136,89 @@ void DigitalInputCard::handlePinChange(int pin, uint8_t &currentBuffer, uint8_t 
 {
     // Get the index of the pin in the pin map
     uint8_t virtualPin = virtualPinMap[pin];
-    // Handle Bank A
-    if (((previousBuffer >> (7 - pin)) & 1) != ((currentBuffer >> (7 - pin)) & 1))
+    if (pin < 8)
     {
-        if (!pinChanged[pin]) {
-            lastDebounceTime[pin] = millis();
-            pinChanged[pin] = true;
-        } else {
-            if (millis() - lastDebounceTime[pin] > debounceTime[pin])
+        // Handle Bank A
+        if (((previousBuffer >> (7 - pin)) & 1) != ((currentBuffer >> (7 - pin)) & 1))
+        {
+            // When the pin first change, store the time
+            if (!pinChanged[virtualPin])
             {
-                previousBuffer ^= (-((currentBuffer >> (7 - pin)) & 1) ^ previousBuffer) & (1UL << (7 - pin));
-                for (const auto& callback : callbacks)
-                    callback.second(virtualPin, ((currentBuffer >> (7 - pin)) & 1));
-                pinChanged[pin] = false;
+                ESP_LOGD("DigitalInputCard", "Pin %d changed", virtualPin);
+                pinChanged[virtualPin] = true;
+                lastDebounceTime[virtualPin] = millis();
+            }
+            else
+            {
+                ESP_LOGD("DigitalInputCard", "Pin %d (%d>%d) debounce time: %d", virtualPin, ((previousBuffer >> (7 - pin)) & 1), ((currentBuffer >> (7 - pin)) & 1), millis() - lastDebounceTime[virtualPin]);
+                // If the pin was already changed, check if the debounce time has passed
+                if ((millis() - lastDebounceTime[virtualPin]) > debounceTime[virtualPin])
+                {
+                    ESP_LOGD("DigitalInputCard", "Pin %d triggered", virtualPin);
+                    // Call the callback function
+                    for (auto const &callback : callbacks)
+                    {
+                        callback.second(virtualPin, ((currentBuffer >> (7 - pin)) & 1));
+                    }
+                    // Store the previous buffer at the specified pin (bitwise operation)
+                    // new value : (currentBuffer >> (7 - pin)) & 1)
+                    previousBuffer = (previousBuffer & ~(1 << (7 - pin))) | (((currentBuffer >> (7 - pin)) & 1) << (7 - pin));
+                    // Reset the pin changed flag
+                    pinChanged[virtualPin] = false;
+                }
             }
         }
-    }
-    // Handle Bank B
-    if (((previousBuffer >> (15 - pin)) & 1) != ((currentBuffer >> (15 - pin)) & 1))
-    {
-        if (!pinChanged[pin]) {
-            lastDebounceTime[pin] = millis();
-            pinChanged[pin] = true;
-        } else {
-            if (millis() - lastDebounceTime[pin] > debounceTime[pin])
-            {
-                previousBuffer ^= (-((currentBuffer >> (15 - pin)) & 1) ^ previousBuffer) & (1UL << (15 - pin));
-                for (const auto& callback : callbacks)
-                    callback.second(virtualPin, ((currentBuffer >> (15 - pin)) & 1));
-                pinChanged[pin] = false;
-            }
+        else
+        {
+            // Pin bounce back to previous state, reset the debounce time
+            lastDebounceTime[virtualPin] = millis();
+            pinChanged[virtualPin] = false;
         }
     }
-    
+    else
+    {
+        // Handle Bank B
+        if (((previousBuffer >> (15 - pin)) & 1) != ((currentBuffer >> (15 - pin)) & 1))
+        {
+            // When the pin first change, store the time
+            if (!pinChanged[virtualPin])
+            {
+                ESP_LOGD("DigitalInputCard", "Pin %d changed", virtualPin);
+                pinChanged[virtualPin] = true;
+                lastDebounceTime[virtualPin] = millis();
+            }
+            else
+            {
+                ESP_LOGD("DigitalInputCard", "Pin %d (%d>%d) debounce time: %d", virtualPin, ((previousBuffer >> (15 - pin)) & 1), ((currentBuffer >> (15 - pin)) & 1), millis() - lastDebounceTime[virtualPin]);
+                // If the pin was already changed, check if the debounce time has passed
+                if ((millis() - lastDebounceTime[virtualPin]) > debounceTime[virtualPin])
+                {
+                    ESP_LOGD("DigitalInputCard", "Pin %d triggered", virtualPin);
+                    // Call the callback function
+                    for (auto const &callback : callbacks)
+                    {
+                        callback.second(virtualPin, ((currentBuffer >> (15 - pin)) & 1));
+                    }
+                    // Store the previous buffer at the specified pin (bitwise operation)
+                    // new value : (currentBuffer >> (15 - pin)) & 1)
+                    previousBuffer = (previousBuffer & ~(1 << (15 - pin))) | (((currentBuffer >> (15 - pin)) & 1) << (15 - pin));
+                    // Reset the pin changed flag
+                    pinChanged[virtualPin] = false;
+                }
+            }
+        }
+        else
+        {
+            // Pin bounce back to previous state, reset the debounce time
+            lastDebounceTime[virtualPin] = millis();
+            pinChanged[virtualPin] = false;
+        }
+    }
 }
 
 /**
- * @brief A loop to refresh the input buffers and check for pin changes 
- * 
+ * @brief A loop to refresh the input buffers and check for pin changes
+ *
  * @note Although this function can be called in the main loop, it is recommended install the card in ESPMega to automatically manage the loop
  */
 // Preform a loop to refresh the input buffers
@@ -197,7 +244,7 @@ void DigitalInputCard::loop()
 
 /**
  * @brief Get the input buffer for bank A (the first 8 pins)
- * 
+ *
  * @return The input buffer for bank A where the first bit is the first pin and the last bit is the last pin
  */
 uint8_t DigitalInputCard::getInputBufferA()
@@ -213,7 +260,7 @@ uint8_t DigitalInputCard::getInputBufferA()
 
 /**
  * @brief Get the input buffer for bank B (the last 8 pins)
- * 
+ *
  * @return The input buffer for bank B where the first bit is the first pin and the last bit is the last pin
  */
 uint8_t DigitalInputCard::getInputBufferB()
@@ -229,7 +276,7 @@ uint8_t DigitalInputCard::getInputBufferB()
 
 /**
  * @brief Register a callback function to be called when a pin changes
- * 
+ *
  * @param callback The callback function to be called
  * @return The handler of the callback function
  */
@@ -257,11 +304,11 @@ void DigitalInputCard::refreshInputBankB()
 
 /**
  * @brief Set the debounce time for the specified pin
- * 
+ *
  * Debounce is the time in milliseconds that the pin should be stable before the callback function is called
  * This is useful to prevent false triggers when the input is noisy
  * An example of this is when the input is connected to a mechanical switch
- * 
+ *
  * @param pin The pin to set the debounce time for
  * @param debounceTime The debounce time in milliseconds
  */
@@ -273,7 +320,7 @@ void DigitalInputCard::setDebounceTime(uint8_t pin, uint32_t debounceTime)
 
 /**
  * @brief Unregister a callback function
- * 
+ *
  * @param handler The handler of the callback function to unregister
  */
 void DigitalInputCard::unregisterCallback(uint8_t handler)
@@ -283,12 +330,12 @@ void DigitalInputCard::unregisterCallback(uint8_t handler)
 
 /**
  * @brief Load the pin map for the card
- * 
+ *
  * A pin map is an array of 16 elements that maps the physical pins to virtual pins
  * The virtual pins are the pins that are used in the callback functions and are used for all the functions in this class
  * The physical pins are the pins on the Input IC, This can be found on the schematic of the ESPMegaI/O board
  * This function is useful if you want to change the number identification of the pins to match your project needs
- * 
+ *
  * @param pinMap The pin map to load
  */
 void DigitalInputCard::loadPinMap(uint8_t pinMap[16])
@@ -304,7 +351,7 @@ void DigitalInputCard::loadPinMap(uint8_t pinMap[16])
 
 /**
  * @brief Get the type of the card
- * 
+ *
  * @return The type of the card
  */
 uint8_t DigitalInputCard::getType()
@@ -314,10 +361,11 @@ uint8_t DigitalInputCard::getType()
 
 /**
  * @brief Preload the previous input buffer and the input buffer
- * 
+ *
  * @note This function is useful if you want to preload the input buffers with a run-time value
  */
-void DigitalInputCard::preloadInputBuffer() {
+void DigitalInputCard::preloadInputBuffer()
+{
     refreshInputBankA();
     refreshInputBankB();
     previousInputBufferA = inputBufferA;
