@@ -311,3 +311,15 @@ uint8_t DigitalInputCard::getType()
 {
     return CARD_TYPE_DIGITAL_INPUT;
 }
+
+/**
+ * @brief Preload the previous input buffer and the input buffer
+ * 
+ * @note This function is useful if you want to preload the input buffers with a run-time value
+ */
+void DigitalInputCard::preloadInputBuffer() {
+    refreshInputBankA();
+    refreshInputBankB();
+    previousInputBufferA = inputBufferA;
+    previousInputBufferB = inputBufferB;
+}

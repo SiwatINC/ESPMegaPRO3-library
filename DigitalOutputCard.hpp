@@ -58,6 +58,8 @@ public:
     void setValue(uint8_t pin, uint16_t value);
     // Get the state of the specified pin
     bool getState(uint8_t pin);
+    // Toggle the state of the specified pin
+    void toggleState(uint8_t pin);
     // Get the pwm value of the specified pin
     uint16_t getValue(uint8_t pin);
     // Register a callback function that will be called when the state of a pin changes

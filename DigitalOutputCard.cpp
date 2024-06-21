@@ -307,3 +307,12 @@ void DigitalOutputCard::saveStateToFRAM() {
     uint16_t packed = packStates();
     this->fram->write16(framAddress, packed);
 }
+
+/**
+ * @brief Toggle the state of the specified pin
+ *
+ * @param pin The pin to toggle
+ */
+void DigitalOutputCard::toggleState(uint8_t pin) {
+    this->setState(pin, !this->state_buffer[pin]);
+}

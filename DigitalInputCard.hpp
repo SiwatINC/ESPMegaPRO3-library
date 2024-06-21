@@ -41,6 +41,8 @@ class DigitalInputCard : public ExpansionCard {
         void unregisterCallback(uint8_t handler);
         // Load a new pin map
         void loadPinMap(uint8_t pinMap[16]);
+        // Preload previousInputBuffer and inputBuffer
+        void preloadInputBuffer();
         // Get type of card
         uint8_t getType();
     private:
