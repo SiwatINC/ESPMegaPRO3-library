@@ -54,6 +54,7 @@ class DigitalInputCard : public ExpansionCard {
         uint8_t previousInputBufferB;
         uint32_t debounceTime[16];
         uint32_t lastDebounceTime[16];
+        bool pinChanged[16];
         // A map of the physical pin to the virtual pin
         uint8_t pinMap[16];
         // A map of the virtual pin to the physical pin

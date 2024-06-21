@@ -137,25 +137,36 @@ void DigitalInputCard::handlePinChange(int pin, uint8_t &currentBuffer, uint8_t 
     // Handle Bank A
     if (((previousBuffer >> (7 - pin)) & 1) != ((currentBuffer >> (7 - pin)) & 1))
     {
-        if (millis() - lastDebounceTime[pin] > debounceTime[pin])
-        {
+        if (!pinChanged[pin]) {
             lastDebounceTime[pin] = millis();
-            previousBuffer ^= (-((currentBuffer >> (7 - pin)) & 1) ^ previousBuffer) & (1UL << (7 - pin));
-            for(const auto& callback : callbacks)
-                callback.second(virtualPin, ((currentBuffer >> (7 - pin)) & 1));
+            pinChanged[pin] = true;
+        } else {
+            if (millis() - lastDebounceTime[pin] > debounceTime[pin])
+            {
+                previousBuffer ^= (-((currentBuffer >> (7 - pin)) & 1) ^ previousBuffer) & (1UL << (7 - pin));
+                for (const auto& callback : callbacks)
+                    callback.second(virtualPin, ((currentBuffer >> (7 - pin)) & 1));
+                pinChanged[pin] = false;
+            }
         }
     }
     // Handle Bank B
     if (((previousBuffer >> (15 - pin)) & 1) != ((currentBuffer >> (15 - pin)) & 1))
     {
-        if (millis() - lastDebounceTime[pin] > debounceTime[pin])
-        {
+        if (!pinChanged[pin]) {
             lastDebounceTime[pin] = millis();
-            previousBuffer ^= (-((currentBuffer >> (15 - pin)) & 1) ^ previousBuffer) & (1UL << (15 - pin));
-            for (const auto& callback : callbacks)
-                callback.second(virtualPin, ((currentBuffer >> (15 - pin)) & 1));
+            pinChanged[pin] = true;
+        } else {
+            if (millis() - lastDebounceTime[pin] > debounceTime[pin])
+            {
+                previousBuffer ^= (-((currentBuffer >> (15 - pin)) & 1) ^ previousBuffer) & (1UL << (15 - pin));
+                for (const auto& callback : callbacks)
+                    callback.second(virtualPin, ((currentBuffer >> (15 - pin)) & 1));
+                pinChanged[pin] = false;
+            }
         }
     }
+    
 }
 
 /**
