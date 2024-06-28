@@ -84,6 +84,9 @@ void CurrentTransformerCard::saveEnergy(){
 }
 void CurrentTransformerCard::loadEnergy(){
     this->fram->read(this->framAddress, (uint8_t*)&this->energy, sizeof(this->energy));
+    if (this->energy < 0 || isnan(this->energy)) {
+        this->energy = 0;
+    }
 }
 
 void CurrentTransformerCard::setEnergyAutoSave(bool autoSave){
