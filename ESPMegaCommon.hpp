@@ -1,3 +1,3 @@
 #pragma once
 
-#define SDK_VESRION "2.9.4"
+#define SDK_VESRION "2.9.5"

@@ -482,6 +482,7 @@ void ESPMegaWebServer::getDeviceInfoHandler(AsyncWebServerRequest *request) {
     doc["software_version"] = SW_VERSION;
     doc["sdk_version"] = SDK_VESRION;
     doc["idf_version"] = IDF_VER;
+    doc["uptime"] = esp_timer_get_time() / 1000000; // Uptime in seconds
     char buffer[512];
     serializeJson(doc, buffer);
     request->send(200, "application/json", buffer);
