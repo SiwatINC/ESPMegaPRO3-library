@@ -625,6 +625,21 @@ void ESPMegaIoT::loadNetworkConfig()
     network_config.wifiUseAuth = fram->read8(IOT_FRAM_ADDRESS + 54);
     fram->read(IOT_FRAM_ADDRESS + 55, (uint8_t *)network_config.ssid, 32);
     fram->read(IOT_FRAM_ADDRESS + 87, (uint8_t *)network_config.password, 32);
+
+    // If ip,gateway,subnet,dns1,dns2 is 0, the device is not configured
+    // set to default values
+    // ip: 192.168.0.99
+    // gateway: 192.168.0.1
+    // subnet: 255.255.255.0
+    // dns1: 1.1.1.1
+    // dns2: 9.9.9.9
+    if (network_config.ip == 0 && network_config.gateway == 0 && network_config.subnet == 0 && network_config.dns1 == 0 && network_config.dns2 == 0)
+    {
+        network_config.ip = IPAddress(192, 168, 0, 99);
+        network_config.gateway = IPAddress(192, 168, 0, 1);
+        network_config.subnet = IPAddress(255, 255, 255, 0);
+        network_config.dns1 = IPAddress(1, 1, 1, 1);
+    }
 }
 
 /**
