@@ -633,7 +633,7 @@ void ESPMegaIoT::loadNetworkConfig()
     // subnet: 255.255.255.0
     // dns1: 1.1.1.1
     // dns2: 9.9.9.9
-    if (network_config.ip == 0 && network_config.gateway == 0 && network_config.subnet == 0 && network_config.dns1 == 0 && network_config.dns2 == 0)
+    if ((uint32_t)network_config.ip == 0 && (uint32_t)network_config.gateway == 0 && (uint32_t)network_config.subnet == 0 && (uint32_t)network_config.dns1 == 0 && (uint32_t)network_config.dns2 == 0)
     {
         network_config.ip = IPAddress(192, 168, 0, 99);
         network_config.gateway = IPAddress(192, 168, 0, 1);
