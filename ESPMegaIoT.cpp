@@ -639,6 +639,7 @@ void ESPMegaIoT::loadNetworkConfig()
         network_config.gateway = IPAddress(192, 168, 0, 1);
         network_config.subnet = IPAddress(255, 255, 255, 0);
         network_config.dns1 = IPAddress(1, 1, 1, 1);
+        network_config.useStaticIp = true;
     }
 }
 
