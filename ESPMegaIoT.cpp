@@ -144,6 +144,12 @@ void ESPMegaIoT::registerCard(uint8_t card_id)
     {
         return;
     }
+    // Check if the physical card is installed
+    if (cards[card_id] == NULL)
+    {
+        ESP_LOGE("ESPMegaIoT", "Registering card %d failed: Card not installed", card_id);
+        return;
+    }
     // Get the card type
     uint8_t card_type = cards[card_id]->getType();
     // Create the respective IoT component

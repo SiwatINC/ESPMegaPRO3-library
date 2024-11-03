@@ -32,7 +32,7 @@ DigitalOutputCard::DigitalOutputCard(uint8_t address) : change_callbacks(){
  * @param bit4 The position of the fifth switch on the dip switch
  */
 DigitalOutputCard::DigitalOutputCard(bool bit0, bool bit1, bool bit2, bool bit3, bool bit4) :
-    DigitalOutputCard(0x20+bit0+bit1*2+bit2*4+bit3*8+bit4*16)
+    DigitalOutputCard(0x40+bit0+bit1*2+bit2*4+bit3*8+bit4*16)
 {
 
     

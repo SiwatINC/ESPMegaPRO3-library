@@ -60,11 +60,13 @@ bool DigitalInputCard::begin()
     if (!this->inputBankA.begin())
     {
         ESP_LOGE("DigitalInputCard", "Input Card ERROR: Failed to install input bank A");
+        this->initOk = false;
         return false;
     }
     if (!this->inputBankB.begin())
     {
         ESP_LOGE("DigitalInputCard", "Input Card ERROR: Failed to install input bank B");
+        this->initOk = false;
         return false;
     }
     // Set the debounce time for all pins to 50ms
@@ -79,6 +81,7 @@ bool DigitalInputCard::begin()
         this->pinMap[i] = i;
         this->virtualPinMap[i] = i;
     }
+    this->initOk = true;
     return true;
 }
 
@@ -102,6 +105,11 @@ bool DigitalInputCard::digitalRead(uint8_t pin)
  */
 bool DigitalInputCard::digitalRead(uint8_t pin, bool refresh)
 {
+    if(!this->initOk)
+    {
+        ESP_LOGE("DigitalInputCard", "Input Card ERROR: Card not initialized");
+        return false;
+    }
     pin = pinMap[pin];
     // First check if the pin is in bank A or B
     if (pin >= 0 && pin <= 7)
@@ -120,7 +128,7 @@ bool DigitalInputCard::digitalRead(uint8_t pin, bool refresh)
         // Extract the bit from the buffer
         return ((inputBufferB >> (15 - pin)) & 1);
     }
-    return 255;
+    return false;
 }
 
 /**
@@ -291,6 +299,11 @@ uint8_t DigitalInputCard::registerCallback(std::function<void(uint8_t, bool)> ca
  */
 void DigitalInputCard::refreshInputBankA()
 {
+    if(!this->initOk)
+    {
+        ESP_LOGE("DigitalInputCard", "Input Card ERROR: Card not initialized");
+        return;
+    }
     inputBufferA = inputBankA.read8();
 }
 
@@ -299,6 +312,11 @@ void DigitalInputCard::refreshInputBankA()
  */
 void DigitalInputCard::refreshInputBankB()
 {
+    if(!this->initOk)
+    {
+        ESP_LOGE("DigitalInputCard", "Input Card ERROR: Card not initialized");
+        return;
+    }
     inputBufferB = inputBankB.read8();
 }
 
@@ -370,4 +388,14 @@ void DigitalInputCard::preloadInputBuffer()
     refreshInputBankB();
     previousInputBufferA = inputBufferA;
     previousInputBufferB = inputBufferB;
+}
+
+/**
+ * @brief Get the status of the card
+ *
+ * @return True if the card is initialized, false otherwise
+ */
+bool DigitalInputCard::getStatus()
+{
+    return this->initOk;
 }

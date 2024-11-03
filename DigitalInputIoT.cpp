@@ -17,6 +17,9 @@
  */
 bool DigitalInputIoT::begin(uint8_t card_id, ExpansionCard *card, PubSubClient *mqtt, char *base_topic) {
     this->card = (DigitalInputCard *)card;
+    if(!this->card->getStatus()) {
+        return false;
+    }
     this->card_id = card_id;
     this->mqtt = mqtt;
     this->base_topic = base_topic;

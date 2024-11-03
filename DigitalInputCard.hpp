@@ -43,9 +43,12 @@ class DigitalInputCard : public ExpansionCard {
         void loadPinMap(uint8_t pinMap[16]);
         // Preload previousInputBuffer and inputBuffer
         void preloadInputBuffer();
+        // Status of card
+        bool getStatus();
         // Get type of card
         uint8_t getType();
     private:
+        bool initOk = false;
         PCF8574 inputBankA;
         PCF8574 inputBankB;
         uint8_t address_a;
