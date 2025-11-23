@@ -1,0 +1,696 @@
+/**
+ * @file custom_endpoints.ino
+ * @brief Custom Endpoints Example for ESPMegaWebServer
+ *
+ * This example demonstrates how to add custom web pages and endpoints to the
+ * ESPMegaPRO web server. It shows:
+ * - Creating custom HTML pages
+ * - Adding GET and POST endpoints
+ * - Handling URL parameters
+ * - Serving static content
+ * - JavaScript integration
+ * - Real-time I/O control via web interface
+ *
+ * Custom Endpoints Created:
+ * - GET  /control       - Custom control panel page
+ * - GET  /status        - Device status page with auto-refresh
+ * - GET  /api/output    - Control outputs via URL parameters
+ * - GET  /api/inputs    - Get all input states as JSON
+ * - GET  /api/outputs   - Get all output states as JSON
+ * - POST /api/set_output- Set output state via POST
+ *
+ * Hardware Required:
+ * - ESPMegaPRO R3 board
+ * - Ethernet connection
+ * - Optional: LEDs/relays on outputs, switches on inputs for testing
+ *
+ * Created: 2024
+ * Author: SiwatINC
+ * License: MIT
+ */
+
+#include <ESPMegaProOS.hpp>
+
+// Create ESPMegaPRO object
+ESPMegaPRO espmega;
+
+// Web server port
+#define WEB_SERVER_PORT 80
+
+// Custom HTML page for output control
+// This page provides a simple interface to control the digital outputs
+const char control_page_html[] PROGMEM = R"rawliteral(
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPMega Control Panel</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .section h2 {
+            color: #495057;
+            margin-top: 0;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-on {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+        .btn-off {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+            color: white;
+        }
+        .btn-refresh {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .status-indicator {
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .status-high {
+            background: #38ef7d;
+            color: white;
+        }
+        .status-low {
+            background: #dee2e6;
+            color: #495057;
+        }
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: none;
+        }
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ESPMega PRO Control Panel</h1>
+
+        <div id="message" class="message"></div>
+
+        <!-- Output Control Section -->
+        <div class="section">
+            <h2>Digital Outputs (16 channels)</h2>
+            <div class="button-grid" id="outputControls">
+                <!-- Buttons will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Input Status Section -->
+        <div class="section">
+            <h2>Digital Inputs (16 channels)</h2>
+            <button class="btn-refresh" onclick="refreshInputs()">Refresh Inputs</button>
+            <div class="status-grid" id="inputStatus">
+                <!-- Status indicators will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Output Status Section -->
+        <div class="section">
+            <h2>Output Status</h2>
+            <button class="btn-refresh" onclick="refreshOutputs()">Refresh Outputs</button>
+            <div class="status-grid" id="outputStatus">
+                <!-- Status indicators will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>ESPMegaPRO R3 | Web Interface v2.10.0</p>
+            <p><a href="/">OTA Update</a> | <a href="/config">Configuration</a> | <a href="/status">Device Status</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize output control buttons
+        function initOutputControls() {
+            const container = document.getElementById('outputControls');
+            for (let i = 0; i < 16; i++) {
+                const btnOn = document.createElement('button');
+                btnOn.className = 'btn-on';
+                btnOn.textContent = `O${i} ON`;
+                btnOn.onclick = () => setOutput(i, 1);
+
+                const btnOff = document.createElement('button');
+                btnOff.className = 'btn-off';
+                btnOff.textContent = `O${i} OFF`;
+                btnOff.onclick = () => setOutput(i, 0);
+
+                container.appendChild(btnOn);
+                container.appendChild(btnOff);
+            }
+        }
+
+        // Initialize input status indicators
+        function initInputStatus() {
+            const container = document.getElementById('inputStatus');
+            for (let i = 0; i < 16; i++) {
+                const indicator = document.createElement('div');
+                indicator.id = `input-${i}`;
+                indicator.className = 'status-indicator status-low';
+                indicator.textContent = `I${i}: LOW`;
+                container.appendChild(indicator);
+            }
+        }
+
+        // Initialize output status indicators
+        function initOutputStatus() {
+            const container = document.getElementById('outputStatus');
+            for (let i = 0; i < 16; i++) {
+                const indicator = document.createElement('div');
+                indicator.id = `output-${i}`;
+                indicator.className = 'status-indicator status-low';
+                indicator.textContent = `O${i}: LOW`;
+                container.appendChild(indicator);
+            }
+        }
+
+        // Set output state
+        function setOutput(pin, state) {
+            showMessage('Setting output...', 'success');
+            fetch(`/api/output?pin=${pin}&state=${state}`)
+                .then(response => response.text())
+                .then(data => {
+                    if (data === 'OK') {
+                        showMessage(`Output ${pin} set to ${state ? 'HIGH' : 'LOW'}`, 'success');
+                        refreshOutputs();
+                    } else {
+                        showMessage('Failed to set output', 'error');
+                    }
+                })
+                .catch(error => {
+                    showMessage('Error: ' + error, 'error');
+                });
+        }
+
+        // Refresh input states
+        function refreshInputs() {
+            fetch('/api/inputs')
+                .then(response => response.json())
+                .then(data => {
+                    data.inputs.forEach(input => {
+                        const indicator = document.getElementById(`input-${input.pin}`);
+                        if (indicator) {
+                            indicator.className = input.state ? 'status-indicator status-high' : 'status-indicator status-low';
+                            indicator.textContent = `I${input.pin}: ${input.state ? 'HIGH' : 'LOW'}`;
+                        }
+                    });
+                    showMessage('Input states refreshed', 'success');
+                })
+                .catch(error => {
+                    showMessage('Error refreshing inputs: ' + error, 'error');
+                });
+        }
+
+        // Refresh output states
+        function refreshOutputs() {
+            fetch('/api/outputs')
+                .then(response => response.json())
+                .then(data => {
+                    data.outputs.forEach(output => {
+                        const indicator = document.getElementById(`output-${output.pin}`);
+                        if (indicator) {
+                            indicator.className = output.state ? 'status-indicator status-high' : 'status-indicator status-low';
+                            indicator.textContent = `O${output.pin}: ${output.state ? 'HIGH' : 'LOW'}`;
+                        }
+                    });
+                    showMessage('Output states refreshed', 'success');
+                })
+                .catch(error => {
+                    showMessage('Error refreshing outputs: ' + error, 'error');
+                });
+        }
+
+        // Show message to user
+        function showMessage(text, type) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type}`;
+            messageDiv.style.display = 'block';
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 3000);
+        }
+
+        // Initialize page
+        initOutputControls();
+        initInputStatus();
+        initOutputStatus();
+
+        // Auto-refresh inputs and outputs every 2 seconds
+        setInterval(() => {
+            refreshInputs();
+            refreshOutputs();
+        }, 2000);
+
+        // Initial load
+        refreshInputs();
+        refreshOutputs();
+    </script>
+</body>
+</html>
+)rawliteral";
+
+// Device status page with real-time information
+const char status_page_html[] PROGMEM = R"rawliteral(
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESPMega Device Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .label {
+            font-weight: bold;
+            color: #666;
+        }
+        .value {
+            color: #333;
+            font-family: monospace;
+        }
+        .status-connected {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .status-disconnected {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .refresh-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        .refresh-btn:hover {
+            background: #0056b3;
+        }
+        .auto-refresh {
+            text-align: center;
+            color: #666;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Device Status</h1>
+        <button class="refresh-btn" onclick="loadDeviceInfo()">Refresh Now</button>
+        <div class="auto-refresh">Auto-refresh every 5 seconds</div>
+        <div class="info-grid" id="deviceInfo">
+            <div class="label">Loading...</div>
+            <div class="value">Please wait...</div>
+        </div>
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="/">Home</a> | <a href="/control">Control Panel</a> | <a href="/config">Configuration</a>
+        </p>
+    </div>
+
+    <script>
+        function loadDeviceInfo() {
+            fetch('/get_device_info')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('deviceInfo');
+                    container.innerHTML = '';
+
+                    const fields = [
+                        ['Hostname', data.hostname],
+                        ['IP Address', data.ip_address],
+                        ['MAC Address', data.mac_address],
+                        ['Model', data.model],
+                        ['Software Version', data.software_version],
+                        ['SDK Version', data.sdk_version],
+                        ['IDF Version', data.idf_version],
+                        ['Uptime', formatUptime(data.uptime)],
+                        ['MQTT Server', data.mqtt_server + ':' + data.mqtt_port],
+                        ['MQTT Topic', data.base_topic],
+                        ['MQTT Status', data.mqtt_connected]
+                    ];
+
+                    fields.forEach(([label, value]) => {
+                        const labelDiv = document.createElement('div');
+                        labelDiv.className = 'label';
+                        labelDiv.textContent = label + ':';
+                        container.appendChild(labelDiv);
+
+                        const valueDiv = document.createElement('div');
+                        valueDiv.className = 'value';
+                        if (label === 'MQTT Status') {
+                            valueDiv.className += value === 'Connected' ? ' status-connected' : ' status-disconnected';
+                        }
+                        valueDiv.textContent = value;
+                        container.appendChild(valueDiv);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading device info:', error);
+                });
+        }
+
+        function formatUptime(seconds) {
+            const days = Math.floor(seconds / 86400);
+            const hours = Math.floor((seconds % 86400) / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            return `${days}d ${hours}h ${minutes}m ${secs}s`;
+        }
+
+        // Load device info on page load
+        loadDeviceInfo();
+
+        // Auto-refresh every 5 seconds
+        setInterval(loadDeviceInfo, 5000);
+    </script>
+</body>
+</html>
+)rawliteral";
+
+// Function to set up custom endpoints
+void setupCustomEndpoints() {
+    // Get the AsyncWebServer instance
+    AsyncWebServer* server = espmega.webServer->getServer();
+
+    // ===== Custom Web Pages =====
+
+    // Custom control panel page
+    server->on("/control", HTTP_GET, [](AsyncWebServerRequest *request) {
+        // Always check authentication first
+        if (!espmega.webServer->checkAuthentication(request)) {
+            return;
+        }
+        // Serve the custom HTML page
+        request->send_P(200, "text/html", control_page_html);
+    });
+
+    // Device status page
+    server->on("/status", HTTP_GET, [](AsyncWebServerRequest *request) {
+        if (!espmega.webServer->checkAuthentication(request)) {
+            return;
+        }
+        request->send_P(200, "text/html", status_page_html);
+    });
+
+    // ===== API Endpoints =====
+
+    // GET /api/output?pin=X&state=Y - Control a single output
+    server->on("/api/output", HTTP_GET, [](AsyncWebServerRequest *request) {
+        if (!espmega.webServer->checkAuthentication(request)) {
+            return;
+        }
+
+        // Check if required parameters are present
+        if (request->hasParam("pin") && request->hasParam("state")) {
+            int pin = request->getParam("pin")->value().toInt();
+            int state = request->getParam("state")->value().toInt();
+
+            // Validate pin number
+            if (pin >= 0 && pin < 16) {
+                // Set the output
+                espmega.outputs.digitalWrite(pin, state);
+                request->send(200, "text/plain", "OK");
+
+                // Log to serial
+                Serial.print("Output ");
+                Serial.print(pin);
+                Serial.print(" set to ");
+                Serial.println(state ? "HIGH" : "LOW");
+            } else {
+                request->send(400, "text/plain", "Invalid pin number (0-15)");
+            }
+        } else {
+            request->send(400, "text/plain", "Missing parameters: pin, state");
+        }
+    });
+
+    // GET /api/inputs - Get all input states as JSON
+    server->on("/api/inputs", HTTP_GET, [](AsyncWebServerRequest *request) {
+        if (!espmega.webServer->checkAuthentication(request)) {
+            return;
+        }
+
+        // Create JSON document
+        StaticJsonDocument<512> doc;
+        JsonArray inputs = doc.createNestedArray("inputs");
+
+        // Read all 16 inputs
+        for (int i = 0; i < 16; i++) {
+            JsonObject input = inputs.createNestedObject();
+            input["pin"] = i;
+            input["state"] = espmega.inputs.digitalRead(i);
+        }
+
+        // Serialize and send
+        String response;
+        serializeJson(doc, response);
+        request->send(200, "application/json", response);
+    });
+
+    // GET /api/outputs - Get all output states as JSON
+    server->on("/api/outputs", HTTP_GET, [](AsyncWebServerRequest *request) {
+        if (!espmega.webServer->checkAuthentication(request)) {
+            return;
+        }
+
+        // Create JSON document
+        StaticJsonDocument<512> doc;
+        JsonArray outputs = doc.createNestedArray("outputs");
+
+        // Read all 16 outputs
+        for (int i = 0; i < 16; i++) {
+            JsonObject output = outputs.createNestedObject();
+            output["pin"] = i;
+            output["state"] = espmega.outputs.digitalRead(i);
+        }
+
+        // Serialize and send
+        String response;
+        serializeJson(doc, response);
+        request->send(200, "application/json", response);
+    });
+
+    // POST /api/set_output - Set output via POST with JSON body
+    AsyncCallbackJsonWebHandler* setOutputHandler = new AsyncCallbackJsonWebHandler(
+        "/api/set_output",
+        [](AsyncWebServerRequest *request, JsonVariant &json) {
+            if (!espmega.webServer->checkAuthentication(request)) {
+                return;
+            }
+
+            JsonObject obj = json.as<JsonObject>();
+
+            if (obj.containsKey("pin") && obj.containsKey("state")) {
+                int pin = obj["pin"].as<int>();
+                int state = obj["state"].as<int>();
+
+                if (pin >= 0 && pin < 16) {
+                    espmega.outputs.digitalWrite(pin, state);
+                    request->send(200, "application/json", "{\"status\":\"ok\"}");
+
+                    Serial.print("Output ");
+                    Serial.print(pin);
+                    Serial.print(" set to ");
+                    Serial.println(state ? "HIGH" : "LOW");
+                } else {
+                    request->send(400, "application/json", "{\"status\":\"error\",\"message\":\"Invalid pin\"}");
+                }
+            } else {
+                request->send(400, "application/json", "{\"status\":\"error\",\"message\":\"Missing fields\"}");
+            }
+        }
+    );
+    server->addHandler(setOutputHandler);
+
+    Serial.println("\nCustom endpoints registered:");
+    Serial.println("  GET  /control          - Custom control panel");
+    Serial.println("  GET  /status           - Device status page");
+    Serial.println("  GET  /api/output       - Control output (params: pin, state)");
+    Serial.println("  GET  /api/inputs       - Get all input states (JSON)");
+    Serial.println("  GET  /api/outputs      - Get all output states (JSON)");
+    Serial.println("  POST /api/set_output   - Set output (JSON body)");
+}
+
+void setup() {
+    Serial.begin(115200);
+    Serial.println("ESPMegaPRO Custom Endpoints Example");
+    Serial.println("====================================");
+
+    // Initialize ESPMegaPRO
+    if (!espmega.begin()) {
+        Serial.println("ERROR: Failed to initialize ESPMegaPRO!");
+        while (1) delay(1000);
+    }
+
+    // Enable IoT module
+    espmega.enableIotModule();
+
+    // Wait for network
+    Serial.println("Waiting for network connection...");
+    while (!espmega.iot->networkConnected()) {
+        delay(100);
+    }
+    Serial.println("Network connected!");
+
+    // Enable web server
+    espmega.enableWebServer(WEB_SERVER_PORT);
+
+    // Set up custom endpoints
+    setupCustomEndpoints();
+
+    // Display access information
+    Serial.println("\n====================================");
+    Serial.println("Custom Web Interface Ready!");
+    Serial.println("====================================");
+    Serial.print("Control Panel: http://");
+    Serial.print(espmega.iot->getIp());
+    Serial.println("/control");
+    Serial.print("Device Status: http://");
+    Serial.print(espmega.iot->getIp());
+    Serial.println("/status");
+    Serial.println("====================================\n");
+}
+
+void loop() {
+    espmega.loop();
+}
+
+/**
+ * TESTING THE CUSTOM ENDPOINTS:
+ * ==============================
+ *
+ * 1. WEB BROWSER TESTING:
+ *    - Navigate to http://<ip>/control for the control panel
+ *    - Navigate to http://<ip>/status for device status
+ *    - Click buttons to control outputs
+ *    - Watch input/output status update in real-time
+ *
+ * 2. API TESTING WITH CURL:
+ *    # Get all input states
+ *    curl -u admin:admin http://<ip>/api/inputs
+ *
+ *    # Get all output states
+ *    curl -u admin:admin http://<ip>/api/outputs
+ *
+ *    # Set output 5 to HIGH
+ *    curl -u admin:admin "http://<ip>/api/output?pin=5&state=1"
+ *
+ *    # Set output 5 to LOW
+ *    curl -u admin:admin "http://<ip>/api/output?pin=5&state=0"
+ *
+ *    # Set output via POST
+ *    curl -u admin:admin -X POST -H "Content-Type: application/json" \
+ *         -d '{"pin":5,"state":1}' http://<ip>/api/set_output
+ *
+ * 3. JAVASCRIPT TESTING:
+ *    fetch('http://<ip>/api/inputs', {
+ *        headers: {
+ *            'Authorization': 'Basic ' + btoa('admin:admin')
+ *        }
+ *    })
+ *    .then(r => r.json())
+ *    .then(d => console.log(d));
+ */
