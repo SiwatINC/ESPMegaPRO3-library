@@ -1,5 +1,6 @@
 #include <ESPMegaProOS.hpp>
 #include "esp_sntp.h"
+#include "esp_task_wdt.h"
 
 // Reserve FRAM address 0 - 1000 for ESPMegaPRO Internal Use
 // (34 Bytes) Address 0-33 for Built-in Digital Output Card
@@ -25,7 +26,12 @@ ESPMegaPRO::ESPMegaPRO()
  */
 bool ESPMegaPRO::begin()
 {
-    Wire.begin(14, 33);
+    // Unstick the I2C bus if a slave came up holding SDA low (e.g. after a brownout/reset).
+    // Must run before Wire.begin() takes over the pins.
+    this->recoverI2CBus();
+    Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
+    Wire.setClock(I2C_CLOCK_HZ);     // 100kHz for noise immunity on long sensor runs
+    Wire.setTimeOut(I2C_TIMEOUT_MS); // ms; a wedged slave returns an error instead of hanging Wire forever
     fram.begin(FRAM_ADDRESS);
     Serial.begin(115200);
     this->installCard(1, &outputs);
@@ -78,7 +84,54 @@ bool ESPMegaPRO::begin()
     // Recovery Mode
     recovery.bindFRAM(&fram, 600);
     recovery.begin();
+    // Arm the loop-task watchdog LAST: a frozen loop() (e.g. a wedged I2C transaction) now
+    // auto-reboots instead of hanging until a manual power cycle. The Arduino loopTask feeds
+    // this watchdog once per iteration, so no manual feed is needed in loop().
+    // NOTE: the GPIO2-detection and factory-reset FRAM-clear loops above run BEFORE this point
+    // on purpose, so their long blocking sections cannot false-trip the watchdog. Do not move
+    // this arming earlier without adding esp_task_wdt_reset() inside those loops.
+    enableLoopWDT();
+    esp_task_wdt_init(LOOP_WDT_TIMEOUT_S, true); // re-arm default 5s timeout to 10s, panic->reboot on timeout
     return true;
+}
+
+/**
+ * @brief Recover a wedged I2C bus by clocking out a slave holding SDA low.
+ *
+ * @note See declaration in ESPMegaProOS.hpp. Called once at the start of begin() before Wire.begin().
+ */
+void ESPMegaPRO::recoverI2CBus()
+{
+    // Drive SCL as open-drain output, read SDA with pull-up.
+    pinMode(I2C_SCL_PIN, OUTPUT_OPEN_DRAIN);
+    pinMode(I2C_SDA_PIN, INPUT_PULLUP);
+    digitalWrite(I2C_SCL_PIN, HIGH);
+    delayMicroseconds(5);
+    // If SDA is already released (high), the bus is not stuck; nothing to do.
+    if (digitalRead(I2C_SDA_PIN) == HIGH)
+        return;
+    ESP_LOGW("ESPMegaPRO", "I2C bus stuck (SDA low), attempting recovery");
+    // Clock up to 9 pulses to push the stuck slave through its byte until it releases SDA.
+    for (int i = 0; i < 9; i++)
+    {
+        digitalWrite(I2C_SCL_PIN, LOW);
+        delayMicroseconds(5);
+        digitalWrite(I2C_SCL_PIN, HIGH);
+        delayMicroseconds(5);
+        if (digitalRead(I2C_SDA_PIN) == HIGH)
+            break;
+    }
+    // Generate a STOP condition: SDA low->high while SCL is high.
+    pinMode(I2C_SDA_PIN, OUTPUT_OPEN_DRAIN);
+    digitalWrite(I2C_SDA_PIN, LOW);
+    delayMicroseconds(5);
+    digitalWrite(I2C_SCL_PIN, HIGH);
+    delayMicroseconds(5);
+    digitalWrite(I2C_SDA_PIN, HIGH);
+    delayMicroseconds(5);
+    // Release pins back to inputs; the following Wire.begin() re-inits the peripheral.
+    pinMode(I2C_SDA_PIN, INPUT_PULLUP);
+    pinMode(I2C_SCL_PIN, INPUT_PULLUP);
 }
 
 /**

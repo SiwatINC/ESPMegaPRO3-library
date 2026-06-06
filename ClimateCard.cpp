@@ -319,7 +319,10 @@ void ClimateCard::updateSensor()
     case AC_SENSOR_TYPE_DHT22:
         if (millis() - dht->lastRead() < AC_SENSOR_READ_INTERVAL)
             return;
-        dht->read();
+        // Only trust the values on a successful read; a failed/garbled read must not poison
+        // the published temperature/humidity (DHTLIB_OK == 0).
+        if (dht->read() != DHTLIB_OK)
+            return;
         room_temperature = dht->getTemperature();
         humidity = dht->getHumidity();
         break;

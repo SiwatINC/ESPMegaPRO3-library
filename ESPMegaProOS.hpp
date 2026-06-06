@@ -24,6 +24,15 @@
 #define PWM_BANK_ADDRESS 0x5F
 #define RTC_ADDRESS 0x68
 
+// I2C bus pins (ESPMegaPRO R3)
+#define I2C_SDA_PIN 14
+#define I2C_SCL_PIN 33
+// I2C bus robustness
+#define I2C_CLOCK_HZ 100000  // 100kHz for noise immunity / long-cable tolerance
+#define I2C_TIMEOUT_MS 50     // bound every transaction so a wedged slave returns instead of hanging
+// Loop task watchdog: turns a frozen loop() into an auto-reboot instead of a permanent hang
+#define LOOP_WDT_TIMEOUT_S 10
+
 // Constants
 #define NTP_TIMEOUT_MS 5000
 #define NTP_UPDATE_INTERVAL_MS 60000
@@ -101,4 +110,14 @@ class ESPMegaPRO {
         ExpansionCard* cards[255];
         bool cardInstalled[255];
         uint8_t cardCount = 0;
+        /**
+         * @brief Recover a wedged I2C bus by clocking out a slave that is holding SDA low.
+         *
+         * A slave reset mid-transfer can latch SDA low, which no Wire timeout can clear because
+         * the master never regains the bus. This bit-bangs up to 9 SCL pulses to clock the stuck
+         * slave through its byte until it releases SDA, then issues a STOP. Called once at the
+         * start of begin() before Wire.begin(), so a bus that came up wedged from a brownout/reset
+         * is cleared without a manual power cycle.
+         */
+        void recoverI2CBus();
 };
