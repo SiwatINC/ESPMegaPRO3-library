@@ -7,6 +7,14 @@
  */
 #include <ESPMegaWebServer.hpp>
 
+// Bounded copy into a fixed-size char[N], always null-terminated
+template <size_t N>
+static void copyToFixed(char (&dst)[N], const char *src)
+{
+    strncpy(dst, src, N - 1);
+    dst[N - 1] = '\0';
+}
+
 /**
  * @brief Construct a new ESPMegaWebServer::ESPMegaWebServer objecy
  * 
@@ -185,7 +193,7 @@ char *ESPMegaWebServer::getWebPassword()
  */
 void ESPMegaWebServer::setWebUsername(const char *username)
 {
-    strcpy(this->webUsername, username);
+    copyToFixed(this->webUsername, username);
 }
 
 /**
@@ -195,7 +203,7 @@ void ESPMegaWebServer::setWebUsername(const char *username)
  */
 void ESPMegaWebServer::setWebPassword(const char *password)
 {
-    strcpy(this->webPassword, password);
+    copyToFixed(this->webPassword, password);
 }
 
 /**
@@ -357,11 +365,11 @@ void ESPMegaWebServer::saveConfigJSONHandler(AsyncWebServerRequest *request, Jso
     }
     networkConfig.dns1 = ip;
     ESP_LOGD("ESPMegaWebServer", "Setting Hostname");
-    strcpy(networkConfig.hostname, root["hostname"].as<String>().c_str());
+    copyToFixed(networkConfig.hostname, root["hostname"].as<String>().c_str());
     // MQTT Config
     MqttConfig mqttConfig;
     ESP_LOGD("ESPMegaWebServer", "Setting MQTT Server");
-    strcpy(mqttConfig.mqtt_server, root["bms_ip"].as<String>().c_str());
+    copyToFixed(mqttConfig.mqtt_server, root["bms_ip"].as<String>().c_str());
     ESP_LOGD("ESPMegaWebServer", "Checking MQTT Port");
     uint16_t mqttPort = root["bms_port"].as<int>();
     if (mqttConfig.mqtt_port <= 0 || mqttConfig.mqtt_port > 65535)
@@ -374,16 +382,16 @@ void ESPMegaWebServer::saveConfigJSONHandler(AsyncWebServerRequest *request, Jso
     ESP_LOGD("ESPMegaWebServer", "Checking MQTT Use Auth");
     mqttConfig.mqtt_useauth = root["bms_useauth"].as<bool>();
     ESP_LOGD("ESPMegaWebServer", "Setting MQTT Username");
-    strcpy(mqttConfig.mqtt_user, root["bms_username"].as<String>().c_str());
+    copyToFixed(mqttConfig.mqtt_user, root["bms_username"].as<String>().c_str());
     ESP_LOGD("ESPMegaWebServer", "Setting MQTT Password");
-    strcpy(mqttConfig.mqtt_password, root["bms_password"].as<String>().c_str());
+    copyToFixed(mqttConfig.mqtt_password, root["bms_password"].as<String>().c_str());
     ESP_LOGD("ESPMegaWebServer", "Setting MQTT Base Topic");
-    strcpy(mqttConfig.base_topic, root["bms_endpoint"].as<String>().c_str());
+    copyToFixed(mqttConfig.base_topic, root["bms_endpoint"].as<String>().c_str());
     // Web Server Config
     ESP_LOGD("ESPMegaWebServer", "Setting Web Username");
-    strcpy(this->webUsername, root["web_username"].as<String>().c_str());
+    copyToFixed(this->webUsername, root["web_username"].as<String>().c_str());
     ESP_LOGD("ESPMegaWebServer", "Setting Web Password");
-    strcpy(this->webPassword, root["web_password"].as<String>().c_str());
+    copyToFixed(this->webPassword, root["web_password"].as<String>().c_str());
     // Commit changes to FRAM
     ESP_LOGD("ESPMegaWebServer", "Committing Network Config to FRAM");
     this->iot->setNetworkConfig(networkConfig);

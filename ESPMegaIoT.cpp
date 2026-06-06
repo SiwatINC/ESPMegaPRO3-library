@@ -38,7 +38,9 @@ ESPMegaIoT::~ESPMegaIoT()
  */
 void ESPMegaIoT::mqttCallback(char *topic, byte *payload, unsigned int length)
 {
-    // Create a null terminated string from the payload
+    // Create a null terminated string from the payload, clamped to the buffer size
+    if (length >= sizeof(payload_buffer))
+        length = sizeof(payload_buffer) - 1;
     memcpy(payload_buffer, payload, length);
     payload_buffer[length] = '\0';
     // If the topic is not appended with the base topic, call only the absolute callbacks

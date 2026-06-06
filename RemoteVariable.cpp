@@ -94,7 +94,8 @@ char* RemoteVariable::getValue() {
 void RemoteVariable::mqtt_callback(char* topic, char* payload) {
     if (strcmp(topic, this->topic) == 0) {
         ESP_LOGD("RemoteVariable", "Received MQTT message from %s", topic);
-        strcpy(this->value, payload);
+        strncpy(this->value, payload, this->size - 1);
+        this->value[this->size - 1] = '\0';
         for (auto& callback : this->valueChangeCallback) {
             callback.second(this->value);
         }
